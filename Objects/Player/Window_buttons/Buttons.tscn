@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Objects/Player/Window_buttons/Buttons.gd" type="Script" id=1]
+[ext_resource path="res://Graphics/Fonts/pixel_1.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Objects/Player/Window_buttons/Button.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 2 )
+
+[node name="Buttons" type="HBoxContainer"]
+margin_right = 1920.0
+margin_bottom = 61.0
+custom_constants/separation = 0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_right = 240.0
+margin_bottom = 61.0
+custom_fonts/font = SubResource( 1 )
+text = "Производство"
+script = ExtResource( 3 )
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 240.0
+margin_right = 346.0
+margin_bottom = 61.0
+custom_fonts/font = SubResource( 1 )
+text = "Рынки"
+script = ExtResource( 3 )
+
+[node name="Button3" type="Button" parent="."]
+margin_left = 346.0
+margin_right = 620.0
+margin_bottom = 61.0
+custom_fonts/font = SubResource( 1 )
+text = "Экспорт/Импорт"
+script = ExtResource( 3 )
+
+[node name="Button4" type="Button" parent="."]
+margin_left = 620.0
+margin_right = 744.0
+margin_bottom = 61.0
+custom_fonts/font = SubResource( 1 )
+text = "Налоги"
+script = ExtResource( 3 )
+
+[node name="Button5" type="Button" parent="."]
+margin_left = 744.0
+margin_right = 886.0
+margin_bottom = 61.0
+custom_fonts/font = SubResource( 1 )
+text = "Реформы"
+script = ExtResource( 3 )
+
+[node name="Button6" type="Button" parent="."]
+margin_left = 886.0
+margin_right = 1064.0
+margin_bottom = 61.0
+custom_fonts/font = SubResource( 1 )
+text = "Парламент"
+script = ExtResource( 3 )
