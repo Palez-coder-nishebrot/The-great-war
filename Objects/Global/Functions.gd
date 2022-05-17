@@ -45,14 +45,9 @@ func find_factories_with_good(good, list):
 func get_price_of_good_on_local_market(good):
 	var perc = 5
 	
-#	if GlobalMarket.min_price_of_good.has(good):
-#		perc = 30
-#	elif not find_factories_with_good(good, province.list_of_buildings) is Label:
-#		perc = 20
-	
 	var price = GlobalMarket.prices_of_goods[good]
-	
-	return price - int((float(price) / 100.0 * float(perc)))
+	price = price - int((float(price) / 100.0 * float(perc)) + 1)
+	return price
 
 
 func get_price_of_good_on_global_market(good, tariff, quanity):
@@ -75,7 +70,7 @@ func buy_good_on_global_market(good, quanity, list, player):
 
 func buy_good_on_local_market(object, good, quanity, local_market, price):
 	local_market[good] -= quanity
-	object.money -= price
+	object.money -= price * quanity
 
 
 func check_good_on_local_market(good, quanity, local_market):

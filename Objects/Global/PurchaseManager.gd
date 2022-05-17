@@ -18,17 +18,28 @@ func meet_the_needs(player, list_of_soc_classes):
 			var list = Functions.check_good_on_global_market(good, quanity_of_good)
 			var price_on_local_market = Functions.get_price_of_good_on_local_market(good)
 			
-			if Functions.check_good_on_local_market(good, quanity_of_good, player.local_market
-			) and soc_class.money >= quanity_of_good * price_on_local_market:
-				
-				Functions.buy_good_on_local_market(soc_class, good, quanity_of_good, 
-				player.local_market, price_on_local_market)
-					
-			elif list is Dictionary and soc_class.money >= Functions.get_price_of_good_on_global_market(
-			good, player.economy["Пошлины"], quanity_of_good):
-				soc_class.money -= Functions.buy_good_on_global_market(good, quanity_of_good, list, player)
-			
-			else: 
-				soc_class.lack += 1
+			if buy_good_from_local_market(good, quanity_of_good, player, soc_class, price_on_local_market) == false:
+				if buy_good_from_global_market(list, soc_class, good, player, quanity_of_good) == false:
+					soc_class.lack += 1
 
-
+func buy_good_from_local_market(good, quanity_of_good, player, soc_class, price_on_local_market):
+	
+	if Functions.check_good_on_local_market(good, quanity_of_good, player.local_market
+	) and soc_class.money >= quanity_of_good * price_on_local_market:
+		Functions.buy_good_on_local_market(soc_class, good, quanity_of_good, 
+		player.local_market, price_on_local_market)
+		
+		return true
+	
+	else:
+		return false
+	
+func buy_good_from_global_market(list, soc_class, good, player, quanity_of_good):
+	if list is Dictionary and soc_class.money >= Functions.get_price_of_good_on_global_market(
+	good, player.economy["Пошлины"], quanity_of_good):
+		soc_class.money -= Functions.buy_good_on_global_market(good, quanity_of_good, list, player)
+		
+		return true
+	
+	else:
+		return false

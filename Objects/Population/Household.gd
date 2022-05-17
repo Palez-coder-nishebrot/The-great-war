@@ -40,12 +40,12 @@ var demand:               Dictionary = {
 	"Спиртное":     1,
 	"Мебель":       0.5,
 	"Табак":        0.5,
-	"Консервы":     1,
+	"Консервы":     0.3,
 	"Тракторы":     0.5,
-	"Радио":        1,
-	"Телефоны":     1,
+	"Радио":        0.5,
+	"Телефоны":     0.5,
 	"Автомобили":   0.5,
-	"Топливо":      0.5
+	"Топливо":      0.3,
 }
 
 var quanity: int = 8
@@ -55,7 +55,7 @@ var lack = 0
 
 var province: Object
 
-var rent:    int = 5
+var rent:    int = 0
 
 
 func start_resourse_extraction():
@@ -133,25 +133,25 @@ func get_job(factory):
 	factory.object_of_worker = self
 
 
-func meet_the_needs():
-	for i in need:
-		if buy_goods(i, need[i] * quanity) == false:
-			return
-
-
-func buy_goods(good, quanity_of_good):
-	
-	var list = Functions.check_good_on_global_market(good, quanity_of_good)
-	
-	if Functions.check_good_on_local_market(good, quanity_of_good, 
-	province.player.local_market) and money >= Functions.get_price_of_good_on_local_market(good):
-		var price_on_local_market = Functions.get_price_of_good_on_local_market(good)
-		Functions.buy_good_on_local_market(self, good, quanity, province.player.local_market, price_on_local_market)
-		
-	elif list is Dictionary and money >= Functions.get_price_of_good_on_global_market(
-		good, province.player.economy["Пошлины"], quanity):
-		money -= Functions.buy_good_on_global_market(good, quanity_of_good, list, province.player)
-		
-	else:
-		return false
+#func meet_the_needs():
+#	for i in need:
+#		if buy_goods(i, need[i] * quanity) == false:
+#			return
+#
+#
+#func buy_goods(good, quanity_of_good):
+#
+#	var list = Functions.check_good_on_global_market(good, quanity_of_good)
+#
+#	if Functions.check_good_on_local_market(good, quanity_of_good, 
+#	province.player.local_market) and money >= Functions.get_price_of_good_on_local_market(good):
+#		var price_on_local_market = Functions.get_price_of_good_on_local_market(good)
+#		Functions.buy_good_on_local_market(self, good, quanity, province.player.local_market, price_on_local_market)
+#
+#	elif list is Dictionary and money >= Functions.get_price_of_good_on_global_market(
+#		good, province.player.economy["Пошлины"], quanity):
+#		money -= Functions.buy_good_on_global_market(good, quanity_of_good, list, province.player)
+#
+#	else:
+#		return false
 

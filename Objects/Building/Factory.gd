@@ -38,16 +38,18 @@ func check_reserve():
 
 func buy_purchase():
 	var local_market = province.player.local_market
-	for i in purchase:
-		var list = Functions.check_good_on_global_market(good, purchase[i])
+	for resourse in purchase:
+		var list = Functions.check_good_on_global_market(resourse, purchase[resourse])
 		
-		if Functions.check_good_on_local_market(i, purchase[i], 
+		if Functions.check_good_on_local_market(resourse, purchase[resourse], 
 		local_market):
-			Functions.buy_good_on_local_market(self, good, purchase[i], local_market, Functions.get_price_of_good_on_local_market(good))
+			Functions.buy_good_on_local_market(self, resourse, purchase[resourse], local_market, Functions.get_price_of_good_on_local_market(resourse))
+			print("Покупаю ", resourse, " тут", Functions.get_price_of_good_on_local_market(resourse))
+			
 			
 		elif list is Dictionary:
-			money -= Functions.buy_good_on_global_market(good, 
-			purchase[i], list, province.player)
+			money -= Functions.buy_good_on_global_market(resourse, 
+			purchase[resourse], list, province.player)
 			
 	check_bankrupt()
 

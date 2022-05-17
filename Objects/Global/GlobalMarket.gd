@@ -3,14 +3,14 @@ extends Node
 var quanity_of_goods: Dictionary = {}
 
 var prices_of_goods:  Dictionary = {
-	"Уголь":     20,
-	"Железо":    20,
-	"Нефть":     25,
-	"Резина":    20,
+	"Уголь":     15,
+	"Железо":    15,
+	"Нефть":     15,
+	"Резина":    15,
 	"Хлопок":    15,
-	"Зерно":     10,
-	"Скот":      10,
-	"Селитра":   20,
+	"Зерно":     15,
+	"Скот":      15,
+	"Селитра":   15,
 	"Древесина": 15,
 	
 	"Сталь":     50,
@@ -50,28 +50,28 @@ var prices_of_goods:  Dictionary = {
 
 const min_and_max_prices_of_goods: Dictionary = {
 	"Уголь":     {
-		min_ = 20,
-		max_ = 30
-	},
-	"Железо":    {
-		min_ = 20,
-		max_ = 30
-	},
-	"Нефть":     {
-		min_ = 25,
-		max_ = 35
-	},
-	"Резина":    {
-		min_ = 20,
-		max_ = 30
-	},
-	"Хлопок":    {
 		min_ = 15,
 		max_ = 25
 	},
+	"Железо":    {
+		min_ = 15,
+		max_ = 25
+	},
+	"Нефть":     {
+		min_ = 20,
+		max_ = 30
+	},
+	"Резина":    {
+		min_ = 15,
+		max_ = 20
+	},
+	"Хлопок":    {
+		min_ = 10,
+		max_ = 15
+	},
 	"Зерно":     {
 		min_ = 10,
-		max_ = 20
+		max_ = 15
 	},
 	"Скот":      {
 		min_ = 10,
@@ -87,94 +87,94 @@ const min_and_max_prices_of_goods: Dictionary = {
 	},
 	
 	"Сталь":     {
-		min_ = 45,
-		max_ = 55
+		min_ = 30,
+		max_ = 40
 	},
 	"Стекло":    {
-		min_ = 24,
-		max_ = 32
-	},
-	"Ткань":     {
-		min_ = 18,
-		max_ = 24
-	},
-	"Электрозапчасти": {
-		min_ = 70,
-		max_ = 80
-	},
-	"Автозапчасти":    {
-		min_ = 68,
-		max_ = 75
-	},
-	"Удобрения":       {
-		min_ = 24,
-		max_ = 30
-	},
-	"Пиломатериалы":   {
 		min_ = 20,
 		max_ = 30
 	},
+	"Ткань":     {
+		min_ = 10,
+		max_ = 20
+	},
+	"Электрозапчасти": {
+		min_ = 60,
+		max_ = 70
+	},
+	"Автозапчасти":    {
+		min_ = 60,
+		max_ = 70
+	},
+	"Удобрения":       {
+		min_ = 20,
+		max_ = 30
+	},
+	"Пиломатериалы":   {
+		min_ = 10,
+		max_ = 20
+	},
 	"Динамит":         {
-		min_ = 24,
-		max_ = 28
+		min_ = 20,
+		max_ = 30
 	},
 	
 	"Автомобили":      {
-		min_ = 370,
-		max_ = 420
+		min_ = 360,
+		max_ = 400
 	},
 	"Тракторы":        {
-		min_ = 300,
-		max_ = 350
+		min_ = 290,
+		max_ = 340
 	},
 	"Телеграфы":       {
-		min_ = 90,
-		max_ = 110
+		min_ = 80,
+		max_ = 100
 	},
 	"Телефоны":        {
 		min_ = 90,
-		max_ = 125
+		max_ = 110
 	},
 	"Радио":           {
-		min_ = 120,
-		max_ = 130
+		min_ = 110,
+		max_ = 120
 	},
 	"Миксеры":         {
-		min_ = 165,
-		max_ = 180
-	},
-	"Электропечи":     {
 		min_ = 160,
 		max_ = 170
 	},
+	"Электропечи":     {
+		min_ = 150,
+		max_ = 160
+	},
 	"Холодильники":    {
-		min_ = 230,
-		max_ = 250
+		min_ = 220,
+		max_ = 240
 	},
 	
 	"Мебель":          {
-		min_ = 55,
-		max_ = 70
+		min_ = 40,
+		max_ = 60
 	},
 	"Спиртное":        {
-		min_ = 35,
-		max_ = 50
+		min_ = 25,
+		max_ = 40
 	},
 	"Одежда":          {
-		min_ = 35,
-		max_ = 50
+		min_ = 25,
+		max_ = 40
 	},
 	"Обогреватели":    {
-		min_ = 90,
-		max_ = 110
+		min_ = 80,
+		max_ = 100
 	},
 	"Хлеб":            {
-		min_ = 15,
-		max_ = 30
+		min_ = 10,
+		max_ = 20
 	},
 	"Консервы":        {
-		min_ = 45,
-		max_ = 60
+		min_ = 30,
+		max_ = 40
 	},
 	"Топливо":         {
 		min_ = 55,
@@ -355,6 +355,19 @@ const goods: Dictionary = {
 }
 
 
+const list_of_resourses: Array = [
+	"Уголь",
+	"Железо",
+	"Нефть",
+	"Резина",
+	"Хлопок",
+	"Зерно",
+	"Скот",
+	"Селитра",
+	"Древесина",
+	"Табак",
+	]
+
 func append_dictionary(players):
 	for i in prices_of_goods:
 		quanity_of_goods[i] = {}
@@ -373,7 +386,10 @@ func clear_supply_and_demand():
 	for i in supply:
 		supply[i] = 0
 	for i in demand:
-		demand[i] = 5
+		if list_of_resourses.has(i):
+			demand[i] = 0
+		else:
+			demand[i] = 5
 
 
 func clear_export_and_import():
@@ -394,18 +410,6 @@ func update_prices():
 			prices_of_goods[good] = min_and_max_prices_of_goods[good].max_
 		elif prices_of_goods[good] < min_and_max_prices_of_goods[good].min_:
 			prices_of_goods[good] = min_and_max_prices_of_goods[good].min_
-#		if not min_price_of_good.has(good):
-#			prices_of_goods[good] = get_price_of_good(good)
-#                     | Тут использование функции!!! Функцию не удалять!
-#                     |
-func get_price_of_good(name_of_good):
-	#Цена = себестоимость + прибыль на единицу товара (10%)
-	var price: int = 0
-	var cost = goods[name_of_good]
-	for good in cost:
-		price = price + (cost[good] * prices_of_goods[good])
-		
-	return price + int((float(price) / 100.0 * 5.0))
 
 
 func export_goods_from_local_markets():

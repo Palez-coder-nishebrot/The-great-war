@@ -1,16 +1,20 @@
 extends Node
 
+var need:                 Dictionary = {
+	"Хлеб":         0.5,
+	"Скот":         1,
+	"Одежда":       1,
+	"Обогреватели": 0.5,
+}
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var demand:               Dictionary = {
+	"Спиртное":     1,
+	"Мебель":       1,
+	"Табак":        1,
+	"Консервы":     1,
+	"Радио":        1,
+	"Телефоны":     1,
+	"Автомобили":   1,
+	"Топливо":      1,
+}
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
