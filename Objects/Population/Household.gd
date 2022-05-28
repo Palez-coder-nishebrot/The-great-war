@@ -69,8 +69,6 @@ func start_resourse_extraction():
 			
 			else:
 				sale_goods(resourse, quanity_of_good)
-	
-	pay_taxes()
 
 
 func bake_bread(quanity_of_good):
@@ -99,17 +97,6 @@ func check_reserve(good):
 	return 0
 
 
-func pay_taxes():
-	money -= rent #квартплата, общественный транспорт и тд
-	var expences = (need["Хлеб"] * quanity) * GlobalMarket.prices_of_goods["Хлеб"]
-	var perc = province.player.economy["Налоги_на_бедных"]
-	var tax: int = int((float(money) / 100.0 * float(perc)) * float(quanity))
-	
-	if money - tax >= expences:
-		money -= tax
-		province.player.economy["Кроны"] += tax
-
-
 func get_free_population():
 	var free = quanity
 	for i in quanity_on_factories:
@@ -133,25 +120,4 @@ func get_job(factory):
 	factory.object_of_worker = self
 
 
-#func meet_the_needs():
-#	for i in need:
-#		if buy_goods(i, need[i] * quanity) == false:
-#			return
-#
-#
-#func buy_goods(good, quanity_of_good):
-#
-#	var list = Functions.check_good_on_global_market(good, quanity_of_good)
-#
-#	if Functions.check_good_on_local_market(good, quanity_of_good, 
-#	province.player.local_market) and money >= Functions.get_price_of_good_on_local_market(good):
-#		var price_on_local_market = Functions.get_price_of_good_on_local_market(good)
-#		Functions.buy_good_on_local_market(self, good, quanity, province.player.local_market, price_on_local_market)
-#
-#	elif list is Dictionary and money >= Functions.get_price_of_good_on_global_market(
-#		good, province.player.economy["Пошлины"], quanity):
-#		money -= Functions.buy_good_on_global_market(good, quanity_of_good, list, province.player)
-#
-#	else:
-#		return false
 

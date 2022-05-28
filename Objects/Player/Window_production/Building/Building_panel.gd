@@ -1,5 +1,10 @@
 extends Control
 
+const subsidization_list: Dictionary = {
+	true: "ДА",
+	false: "НЕТ",
+}
+
 var building
 
 func update_information(list):
@@ -19,6 +24,7 @@ func update_information_of_factory():
 	if building.closed == false:
 		$VBoxContainer/Label.text = building.good
 		$VBoxContainer/Label5.text = str(building.money)
+		$VBoxContainer/Label6.text = "Субсидирование: " + subsidization_list[building.subsidization]
 		$VBoxContainer/Label2.text= (
 			"Рабочие:" + str(building.employed_number)+ "/" +str(building.max_employed_number))
 		show_resourses()
@@ -36,5 +42,11 @@ func show_resourses():
 		$VBoxContainer/Label4.text += i + ": " + str(building.purchase[i]) + "\n"
 
 
+func update_subsidization():
+	building.subsidization = not building.subsidization
+	$VBoxContainer/Label6.text = "Субсидирование: " + subsidization_list[building.subsidization]
+
+
 func update_information_of_procces():
 	$VBoxContainer/Label.text = "строительство"
+

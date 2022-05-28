@@ -5,7 +5,7 @@ onready var list_of_buttons: Dictionary = {
 	"Производство":   "window_production",
 	"Экспорт/Импорт": "window_export_import",
 	"Налоги":         "window_taxes",
-	"Реформы":        "window_markets",
+	"Реформы":        "window_reform",
 	"Парламент":      "window_parties",
 	"Рынки":          "window_markets",
 }

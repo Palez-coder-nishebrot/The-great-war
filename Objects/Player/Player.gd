@@ -28,6 +28,7 @@ onready var window_production:    Panel = $CanvasLayer/Production
 onready var window_export_import: Panel = $CanvasLayer/Export_import
 onready var window_parties:       Panel = $CanvasLayer/Parties
 onready var window_taxes:         Panel = $CanvasLayer/Taxes
+onready var window_reform:        Panel = $CanvasLayer/Reform
 onready var information:          Panel = $CanvasLayer/Information
 
 

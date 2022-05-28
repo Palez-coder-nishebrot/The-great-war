@@ -214,18 +214,18 @@ const min_and_max_prices_of_goods: Dictionary = {
 var demand: Dictionary = prices_of_goods.duplicate()
 var supply: Dictionary = prices_of_goods.duplicate()
 
-const min_price_of_good: Dictionary = {
-	"Уголь":     20,
-	"Железо":    20,
-	"Нефть":     25,
-	"Резина":    20,
-	"Хлопок":    15,
-	"Зерно":     10,
-	"Скот":      10,
-	"Селитра":   20,
-	"Древесина": 15,
-	"Табак":     15,
-}
+#const min_price_of_good: Dictionary = {
+#	"Уголь":     20,
+#	"Железо":    20,
+#	"Нефть":     25,
+#	"Резина":    20,
+#	"Хлопок":    15,
+#	"Зерно":     10,
+#	"Скот":      10,
+#	"Селитра":   20,
+#	"Древесина": 15,
+#	"Табак":     15,
+#}
 
 const goods: Dictionary = {
 	"Резина":    {

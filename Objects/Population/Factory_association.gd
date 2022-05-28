@@ -18,3 +18,38 @@ var demand:               Dictionary = {
 	"Топливо":      1,
 }
 
+
+var quanity: int = 8
+var money:   int = 1500
+
+var lack = 0
+
+var province: Object
+
+var rent:    int = 5
+
+
+func build_factory(good):
+	pass
+	
+
+func chose_good():
+	var good = ["Сталь", -100]
+	for i in GlobalMarket.goods:
+		var price = check_good(i)
+		if price > good[1]:
+			good[0] = i
+			good[1] = price
+	
+	if good[1] > 0:
+		build_factory(good)
+	
+	
+
+func check_good(good):
+	var cost = 0
+	
+	for i in GlobalMarket.goods[good]:
+		cost = cost + (GlobalMarket.prices_of_goods[good] * GlobalMarket.goods[good][i])
+	
+	return GlobalMarket.prices_of_goods[good] - cost

@@ -18,6 +18,8 @@ func meet_the_needs(player, list_of_soc_classes):
 			var list = Functions.check_good_on_global_market(good, quanity_of_good)
 			var price_on_local_market = Functions.get_price_of_good_on_local_market(good)
 			
+			pay_taxes(soc_class, player)
+			
 			if buy_good_from_local_market(good, quanity_of_good, player, soc_class, price_on_local_market) == false:
 				if buy_good_from_global_market(list, soc_class, good, player, quanity_of_good) == false:
 					soc_class.lack += 1
@@ -43,3 +45,14 @@ func buy_good_from_global_market(list, soc_class, good, player, quanity_of_good)
 	
 	else:
 		return false
+
+
+func pay_taxes(pop, player):
+	pop.money -= pop.rent #квартплата, общественный транспорт и тд
+	var expences = (pop.need["Хлеб"] * pop.quanity) * GlobalMarket.prices_of_goods["Хлеб"]
+	var perc = player.economy["Налоги_на_бедных"]
+	var tax: int = int((float(pop.money) / 100.0 * float(perc)) * float(pop.quanity))
+	
+	if pop.money - tax >= expences:
+		pop.money -= tax
+		player.economy["Кроны"] += tax

@@ -120,3 +120,5 @@ margin_right = 240.0
 margin_bottom = 219.0
 custom_fonts/font = SubResource( 7 )
 text = "Субсидирование"
+
+[connection signal="pressed" from="VBoxContainer/Label6" to="." method="update_subsidization"]
