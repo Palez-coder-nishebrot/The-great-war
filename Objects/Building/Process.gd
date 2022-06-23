@@ -5,7 +5,7 @@ const tipe = "process"
 var building: Object
 var game:     Object
 
-func start(list):
+func start_build_factory(list):
 	var time = 0
 	
 	while time != building.time:
@@ -16,3 +16,4 @@ func start(list):
 	
 	list.erase(self)
 	queue_free()
+

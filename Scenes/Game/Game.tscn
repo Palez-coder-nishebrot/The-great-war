@@ -4,6 +4,7 @@
 [ext_resource path="res://Scenes/Game/Game.gd" type="Script" id=3]
 
 [node name="Game" type="Node2D"]
+position = Vector2( 34, 345 )
 script = ExtResource( 3 )
 
 [node name="TileMap" parent="." instance=ExtResource( 1 )]

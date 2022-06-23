@@ -54,6 +54,7 @@ func set_names_of_tiles():
 			i.sprite.modulate = Players.list_of_players_on_start[i.player.name_of_country]["Цвет"]
 			i.label.text = i.name_of_tile
 			i.resources = resourses[i.name_of_tile].duplicate()
+			i.panel_resources.update_information()
 			set_factories_on_start_of_game(fatories, i)
 			
 			i.player.list_of_soc_classes.append(i.household)

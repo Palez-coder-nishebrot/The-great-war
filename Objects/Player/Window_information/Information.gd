@@ -2,6 +2,8 @@ extends Panel
 
 var show_resourses: bool = false
 
+onready var game = get_parent().get_parent().get_parent()
+
 const day_of_week: Dictionary = {
 	1: "Понедельник",
 	2: "Вторник",
@@ -32,13 +34,19 @@ const pause_of_game: Dictionary = {
 	false: "Пауза"
 }
 
+const speed_of_game: Dictionary = {
+	1.5: 1.0,
+	1.0: 0.8,
+	0.8: 0.5,
+	0.5: 1.5,
+}
 
 func _ready():
 	$VBoxContainer/Label.text = Players.player.name_of_country
 
 
 func check_data(day, month, year):
-	$VBoxContainer/Label2.text = str(day)+" "+month_of_year[month]+" "+str(year)+" год"
+	$VBoxContainer/Label2.text = str(day) + " " + month_of_year[month] + " " + str(year) + " год"
 	$VBoxContainer/Label3.text = "Казна: " + str(Players.player.economy["Кроны"])
 
 
@@ -57,7 +65,6 @@ func check_resourses():
 
 
 func update_pause():
-	var game = get_parent().get_parent().get_parent()
 	game.pause = not game.pause
 	$VBoxContainer/Button_pause.text = pause_of_game[game.pause]
 
@@ -74,3 +81,8 @@ func hide_resourses():
 	for player in Players.list_of_players:
 		for tile in player.list_of_tiles:
 			tile.hide_resourses()
+
+
+func change_speed_of_game():
+	game.speed_of_game = speed_of_game[game.speed_of_game]
+	$VBoxContainer/Button_speed.text = "Скорость: " + str(game.speed_of_game)

@@ -23,7 +23,7 @@ func update_information(list):
 func update_information_of_factory():
 	if building.closed == false:
 		$VBoxContainer/Label.text = building.good
-		$VBoxContainer/Label5.text = str(building.money)
+		$VBoxContainer/Label5.text = "+" + str(building.income) #str(building.money)
 		$VBoxContainer/Label6.text = "Субсидирование: " + subsidization_list[building.subsidization]
 		$VBoxContainer/Label2.text= (
 			"Рабочие:" + str(building.employed_number)+ "/" +str(building.max_employed_number))

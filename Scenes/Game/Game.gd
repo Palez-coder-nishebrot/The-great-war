@@ -32,6 +32,7 @@ func create_players():
 	var _player_: Object
 	
 	player = load("res://Objects/Player/Player.tscn").instance()
+	player.position = Vector2(2318, 2000)
 	player.name_of_country = Players.country_to_start
 	Players.player = player
 	create_parties(player)

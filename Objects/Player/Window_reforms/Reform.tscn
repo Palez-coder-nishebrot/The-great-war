@@ -192,7 +192,7 @@ margin_top = 59.0
 margin_right = 376.0
 margin_bottom = 118.0
 custom_fonts/font = SubResource( 2 )
-text = "Нет минимума"
+text = "Нет максимума"
 
 [node name="Button2" type="Button" parent="HBoxContainer/VBoxContainer5"]
 margin_top = 118.0
@@ -271,6 +271,7 @@ margin_right = 420.0
 margin_bottom = 59.0
 custom_fonts/font = SubResource( 1 )
 text = "Здравохранение"
+align = 1
 
 [node name="Button" type="Button" parent="HBoxContainer2/VBoxContainer7"]
 margin_top = 59.0
@@ -299,3 +300,85 @@ margin_right = 420.0
 margin_bottom = 295.0
 custom_fonts/font = SubResource( 2 )
 text = "Крупное финансирование"
+
+[node name="VBoxContainer8" type="VBoxContainer" parent="HBoxContainer2"]
+margin_left = 827.0
+margin_right = 1247.0
+margin_bottom = 295.0
+custom_constants/separation = 0
+
+[node name="Label" type="Label" parent="HBoxContainer2/VBoxContainer8"]
+margin_right = 420.0
+margin_bottom = 59.0
+custom_fonts/font = SubResource( 1 )
+text = "Гос. образование"
+align = 1
+
+[node name="Button" type="Button" parent="HBoxContainer2/VBoxContainer8"]
+margin_top = 59.0
+margin_right = 420.0
+margin_bottom = 118.0
+custom_fonts/font = SubResource( 2 )
+text = "Нет финансирования"
+
+[node name="Button2" type="Button" parent="HBoxContainer2/VBoxContainer8"]
+margin_top = 118.0
+margin_right = 420.0
+margin_bottom = 177.0
+custom_fonts/font = SubResource( 2 )
+text = "Малое финансирование"
+
+[node name="Button3" type="Button" parent="HBoxContainer2/VBoxContainer8"]
+margin_top = 177.0
+margin_right = 420.0
+margin_bottom = 236.0
+custom_fonts/font = SubResource( 2 )
+text = "Среднее финансирование"
+
+[node name="Button4" type="Button" parent="HBoxContainer2/VBoxContainer8"]
+margin_top = 236.0
+margin_right = 420.0
+margin_bottom = 295.0
+custom_fonts/font = SubResource( 2 )
+text = "Крупное финансирование"
+
+[node name="VBoxContainer9" type="VBoxContainer" parent="HBoxContainer2"]
+margin_left = 1247.0
+margin_right = 1613.0
+margin_bottom = 295.0
+custom_constants/separation = 0
+
+[node name="Label" type="Label" parent="HBoxContainer2/VBoxContainer9"]
+margin_right = 366.0
+margin_bottom = 59.0
+custom_fonts/font = SubResource( 1 )
+text = "Помощь инвалидам"
+align = 1
+
+[node name="Button" type="Button" parent="HBoxContainer2/VBoxContainer9"]
+margin_top = 59.0
+margin_right = 366.0
+margin_bottom = 118.0
+custom_fonts/font = SubResource( 2 )
+text = "Нет помощи"
+
+[node name="Button2" type="Button" parent="HBoxContainer2/VBoxContainer9"]
+margin_top = 118.0
+margin_right = 366.0
+margin_bottom = 177.0
+custom_fonts/font = SubResource( 2 )
+text = "Малая помощь"
+
+[node name="Button3" type="Button" parent="HBoxContainer2/VBoxContainer9"]
+margin_top = 177.0
+margin_right = 366.0
+margin_bottom = 236.0
+custom_fonts/font = SubResource( 2 )
+text = "Специальные приюты"
+
+[node name="Button4" type="Button" parent="HBoxContainer2/VBoxContainer9"]
+margin_top = 236.0
+margin_right = 366.0
+margin_bottom = 295.0
+custom_fonts/font = SubResource( 2 )
+text = "Комитеты для помощи"

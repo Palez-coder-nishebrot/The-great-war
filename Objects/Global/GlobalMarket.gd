@@ -12,6 +12,7 @@ var prices_of_goods:  Dictionary = {
 	"Скот":      15,
 	"Селитра":   15,
 	"Древесина": 15,
+	"Лекарственные_растения": 0,
 	
 	"Сталь":     50,
 	"Стекло":    50,
@@ -39,6 +40,7 @@ var prices_of_goods:  Dictionary = {
 	"Консервы":        45,
 	"Топливо":         45,
 	"Табак":           45,
+	"Лекарства":        0,
 	
 	"Снаряды":             45,
 	"Боеприпасы":          45,
@@ -84,6 +86,11 @@ const min_and_max_prices_of_goods: Dictionary = {
 	"Древесина": {
 		min_ = 15,
 		max_ = 25
+	},
+	
+	"Лекарственные_растения": {
+		min_ = 5,
+		max_ = 10
 	},
 	
 	"Сталь":     {
@@ -185,6 +192,11 @@ const min_and_max_prices_of_goods: Dictionary = {
 		max_ = 30
 	},
 	
+	"Лекарства":           {
+		min_ = 10,
+		max_ = 20
+	},    
+	
 	"Снаряды":             {
 		min_ = 90,
 		max_ = 110
@@ -213,19 +225,6 @@ const min_and_max_prices_of_goods: Dictionary = {
 
 var demand: Dictionary = prices_of_goods.duplicate()
 var supply: Dictionary = prices_of_goods.duplicate()
-
-#const min_price_of_good: Dictionary = {
-#	"Уголь":     20,
-#	"Железо":    20,
-#	"Нефть":     25,
-#	"Резина":    20,
-#	"Хлопок":    15,
-#	"Зерно":     10,
-#	"Скот":      10,
-#	"Селитра":   20,
-#	"Древесина": 15,
-#	"Табак":     15,
-#}
 
 const goods: Dictionary = {
 	"Резина":    {
@@ -325,6 +324,10 @@ const goods: Dictionary = {
 		"Нефть":    2,
 	},
 	
+	"Лекарства":       {
+		"Лекарственные_растения": 1,
+	},
+	
 	"Снаряды":         {
 		"Железо":   2,
 		"Селитра":  2
@@ -397,6 +400,8 @@ func clear_export_and_import():
 		for good in player.export_of_goods:
 			player.export_of_goods[good] = 0
 			player.import_of_goods[good] = 0
+		for good in player.output:
+			player.output[good] = 0
 
 
 func update_prices():

@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Graphics/Sprites/Tile/HEX-removebg-preview (1).png" type="Texture" id=1]
+[ext_resource path="res://Graphics/Sprites/Tile/HEX no line.png" type="Texture" id=1]
 [ext_resource path="res://Objects/Tile/tile.gd" type="Script" id=2]
 [ext_resource path="res://Graphics/Fonts/pixel_2.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Objects/Tile/Panel_resources.tscn" type="PackedScene" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 110
@@ -43,5 +44,8 @@ collision_mask = 3
 position = Vector2( 0, -265.309 )
 scale = Vector2( 1, 2.60458 )
 polygon = PoolVector2Array( 1, 41.2001, 132, 70.3794, 132, 129.122, 0, 158.301, -132, 129.122, -132, 70.3794 )
+
+[node name="Panel_resources" parent="." instance=ExtResource( 4 )]
+visible = false
 
 [connection signal="input_event" from="Area2D" to="." method="input"]

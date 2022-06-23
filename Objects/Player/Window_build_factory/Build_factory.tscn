@@ -23,9 +23,6 @@ margin_top = 126.0
 margin_right = 1295.0
 margin_bottom = 901.0
 script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 margin_right = 374.0

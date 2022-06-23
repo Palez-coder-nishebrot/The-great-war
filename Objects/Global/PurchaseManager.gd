@@ -48,11 +48,12 @@ func buy_good_from_global_market(list, soc_class, good, player, quanity_of_good)
 
 
 func pay_taxes(pop, player):
-	pop.money -= pop.rent #квартплата, общественный транспорт и тд
-	var expences = (pop.need["Хлеб"] * pop.quanity) * GlobalMarket.prices_of_goods["Хлеб"]
-	var perc = player.economy["Налоги_на_бедных"]
-	var tax: int = int((float(pop.money) / 100.0 * float(perc)) * float(pop.quanity))
-	
-	if pop.money - tax >= expences:
-		pop.money -= tax
-		player.economy["Кроны"] += tax
+	if pop.money >= pop.rent:
+		pop.money -= pop.rent #квартплата, общественный транспорт и тд
+		var expences = (pop.need["Хлеб"] * pop.quanity) * GlobalMarket.prices_of_goods["Хлеб"]
+		var perc = player.economy["Налоги_на_бедных"]
+		var tax: int = int((float(pop.money) / 100.0 * float(perc)) * float(pop.quanity))
+		
+		if pop.money - tax >= expences:
+			pop.money -= tax
+			player.economy["Кроны"] += tax

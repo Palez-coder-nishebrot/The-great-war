@@ -1,10 +1,11 @@
 extends StaticBody2D
 
-const max_of_buildings: int = 8
+const max_of_buildings: int = 5
 
-var list_of_neighbors_tiles: Array      = []
-var list_of_buildings: Array            = []
-var units: Array                        = []
+var list_of_neighbors_tiles:    Array      = []
+var list_of_buildings:          Array      = []
+var list_of_military_factories: Array      = []
+var units:                      Array      = []
 
 var name_of_tile: String
 var capital: bool = false
@@ -16,8 +17,9 @@ var infrastructure:      Object = load("res://Objects/Building/Infrastructure.gd
 var household:           Object = load("res://Objects/Population/Household.gd").new()
 var factory_association: Object = load("res://Objects/Population/Factory_association.gd").new()
 
-onready var label:  Label = $Label
-onready var sprite: Sprite = $Sprite
+onready var label:  Label          = $Label
+onready var sprite: Sprite         = $Sprite
+onready var panel_resources: Panel = $Panel_resources
 
 func _ready():
 	household.province = self
@@ -26,7 +28,7 @@ func input(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.is_pressed():
 		if event.button_index == BUTTON_LEFT:
 			Players.player.window_province.update_information(self)
-			print(household.lack, " Деньги: ", household.money)#'"', name_of_tile, '"', ": ", '"Сталь"', ",")
+			#print(household.lack, " Деньги: ", household.money)#'"', name_of_tile, '"', ": ", '"Сталь"', ",")
 
 
 func build_building(name_of_building):
@@ -39,9 +41,21 @@ func build_building(name_of_building):
 	var process = load("res://Objects/Building/Process.gd").new()
 	process.building = factory
 	process.game = get_parent()
-	process.start(list_of_buildings)
+	process.start_build_factory(list_of_buildings)
 	list_of_buildings.append(process)
 	
+
+func build_military_factory(name_of_building):
+	var factory = load("res://Objects/Building/Military_factory.gd").new()
+	factory.name_of_factory = name_of_building
+	factory.province = self
+	
+	var process = load("res://Objects/Building/Process.gd").new()
+	process.building = factory
+	process.game = get_parent()
+	process.start_build_factory(list_of_military_factories)
+	list_of_buildings.append(process)
+
 
 func get_bonus_of_production():
 	var production_of_factory = 0.0
@@ -99,10 +113,12 @@ func get_bonus_of_production():
 
 
 func show_resourses():
+	panel_resources.visible = true
 	label.text = ""
-	for i in resources:
-		label.text += i + ": " + str(resources[i]) + "\n"
+#	for i in resources:
+#		label.text += i + ": " + str(resources[i]) + "\n"
 
 
 func hide_resourses():
+	panel_resources.visible = false
 	label.text = name_of_tile
