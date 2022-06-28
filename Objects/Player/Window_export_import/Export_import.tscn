@@ -284,32 +284,10 @@ valign = 1
 
 [node name="Good6" type="Label" parent="VBoxContainer/Tech_container"]
 margin_left = 947.0
-margin_right = 1048.0
+margin_right = 1264.0
 margin_bottom = 114.0
 custom_fonts/font = SubResource( 1 )
-text = "Миксеры
-Импорт:
-Выпуск:"
-align = 1
-valign = 1
-
-[node name="Good7" type="Label" parent="VBoxContainer/Tech_container"]
-margin_left = 1118.0
-margin_right = 1275.0
-margin_bottom = 114.0
-custom_fonts/font = SubResource( 1 )
-text = "Электропечи
-Импорт:
-Выпуск:"
-align = 1
-valign = 1
-
-[node name="Good8" type="Label" parent="VBoxContainer/Tech_container"]
-margin_left = 1345.0
-margin_right = 1516.0
-margin_bottom = 114.0
-custom_fonts/font = SubResource( 1 )
-text = "Холодильники
+text = "Лекарственные_растения
 Импорт:
 Выпуск:"
 align = 1
@@ -474,32 +452,21 @@ valign = 1
 
 [node name="Good5" type="Label" parent="VBoxContainer/Military_container"]
 margin_left = 782.0
-margin_right = 911.0
+margin_right = 897.0
 margin_bottom = 114.0
 custom_fonts/font = SubResource( 1 )
-text = "Аэропланы
+text = "Аэроплан
 Импорт:
 Выпуск:"
 align = 1
 valign = 1
 
 [node name="Good6" type="Label" parent="VBoxContainer/Military_container"]
-margin_left = 981.0
-margin_right = 1259.0
+margin_left = 967.0
+margin_right = 1245.0
 margin_bottom = 114.0
 custom_fonts/font = SubResource( 1 )
 text = "Магазинные_винтовки
-Импорт:
-Выпуск:"
-align = 1
-valign = 1
-
-[node name="Good10" type="Label" parent="VBoxContainer/Military_container"]
-margin_left = 1329.0
-margin_right = 1646.0
-margin_bottom = 114.0
-custom_fonts/font = SubResource( 1 )
-text = "Лекарственные_растения
 Импорт:
 Выпуск:"
 align = 1

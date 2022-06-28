@@ -17,12 +17,12 @@ func _visible():
 func check_building_limit():
 	if province.max_of_buildings == province.list_of_buildings.size() + province.list_of_military_factories.size():
 		$Button.disabled = true
-		return true
+		return false
 	else: 
 		$Button.disabled = false
-		return false
-		
-		
+		return true
+
+
 func check_factory(name_of_factory):
 	check_building_limit()
 	$VBoxContainer/Label.text = name_of_factory

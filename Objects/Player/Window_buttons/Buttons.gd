@@ -9,6 +9,8 @@ onready var list_of_buttons: Dictionary = {
 	"Реформы":          "window_reform",
 	"Предпарламент":    "window_parties",
 	"Военные заказы":   "window_parties",
+	"Население":        "window_population",
+	"Технологии":       "window_research",
 }
 
 

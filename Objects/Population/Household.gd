@@ -14,6 +14,7 @@ var tipes_of_DP: Dictionary = {
 	"Селитра":   "production_of_mines",
 	"Древесина": "production_of_farms",
 	"Табак":     "production_of_farms",
+	"Лекарственные_растения": "production_of_farms",
 }
 
 var reserves_of_DP_s: Dictionary = {
@@ -27,17 +28,17 @@ var reserves_of_DP_s: Dictionary = {
 	"Селитра":   0.0,
 	"Древесина": 0.0,
 	"Табак":     0.0,
-}
+	"Лекарственные_растения": 0.0}
 
 var need:                 Dictionary = {
-	"Хлеб":         0.3,
-	"Скот":         0.5,
+	"Хлеб":         0.7,
+	"Скот":         0.7,
 	"Одежда":       0.5,
-	"Обогреватели": 0.3,
+	"Обогреватели": 0.5,
 }
 
 var demand:               Dictionary = {
-	"Спиртное":     1,
+	"Спиртное":     0.5,
 	"Мебель":       0.5,
 	"Табак":        0.5,
 	"Консервы":     0.3,
@@ -72,12 +73,12 @@ func start_resourse_extraction():
 
 
 func bake_bread(quanity_of_good):
-	if quanity_of_good == 1:
-		sale_goods("Хлеб", quanity_of_good)
+#	if quanity_of_good == 1:
+	sale_goods("Хлеб", quanity_of_good)
 		
-	else:
-		sale_goods("Хлеб", quanity_of_good / 2)
-		sale_goods("Зерно", quanity_of_good / 2)
+#	else:
+#		sale_goods("Хлеб", int(quanity_of_good / 2))
+#		sale_goods("Зерно", int(quanity_of_good / 2))
 
 
 func sale_goods(good, quanity_of_good):

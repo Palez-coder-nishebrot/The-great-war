@@ -13,9 +13,6 @@ margin_top = 61.0
 margin_right = 1920.0
 margin_bottom = 1080.0
 script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="VBoxContainer" type="HBoxContainer" parent="."]
 margin_right = 1761.0
@@ -320,30 +317,6 @@ custom_fonts/font = SubResource( 2 )
 text = "Радио"
 script = ExtResource( 2 )
 
-[node name="Button6" type="Button" parent="VBoxContainer/Tech_container"]
-margin_top = 276.0
-margin_right = 315.0
-margin_bottom = 323.0
-custom_fonts/font = SubResource( 2 )
-text = "Миксеры"
-script = ExtResource( 2 )
-
-[node name="Button7" type="Button" parent="VBoxContainer/Tech_container"]
-margin_top = 323.0
-margin_right = 315.0
-margin_bottom = 370.0
-custom_fonts/font = SubResource( 2 )
-text = "Электропечи"
-script = ExtResource( 2 )
-
-[node name="Button8" type="Button" parent="VBoxContainer/Tech_container"]
-margin_top = 370.0
-margin_right = 315.0
-margin_bottom = 417.0
-custom_fonts/font = SubResource( 2 )
-text = "Холодильники"
-script = ExtResource( 2 )
-
 [node name="VBoxContainer4" type="VBoxContainer" parent="VBoxContainer"]
 margin_left = 1369.0
 margin_right = 1761.0
@@ -397,7 +370,7 @@ margin_top = 229.0
 margin_right = 392.0
 margin_bottom = 276.0
 custom_fonts/font = SubResource( 2 )
-text = "Аэропланы"
+text = "Аэроплан"
 script = ExtResource( 2 )
 
 [node name="Button6" type="Button" parent="VBoxContainer/VBoxContainer4"]

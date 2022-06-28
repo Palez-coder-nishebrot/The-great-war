@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scenes/TileMap/TileMap.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/TileMap/Map.jpg" type="Texture" id=2]
-[ext_resource path="res://Scenes/TileMap/area_of_country.gd" type="Script" id=3]
+[ext_resource path="res://Objects/Tile/Point.tscn" type="PackedScene" id=4]
 
 [node name="TileMap" type="Node2D"]
 script = ExtResource( 1 )
@@ -12,135 +12,230 @@ position = Vector2( 2344, 1712 )
 z_index = -10
 texture = ExtResource( 2 )
 
-[node name="Адамантия" type="Area2D" parent="."]
-position = Vector2( 0, 686.612 )
-script = ExtResource( 3 )
+[node name="Броды" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2953, 1448 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Адамантия"]
-position = Vector2( 212, -451.612 )
-polygon = PoolVector2Array( 1714, 135, 1783, -10, 1187, -63, 910, 131, 1012, 293, 1220, 135, 1621, 222 )
+[node name="Кременец" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2311, 1507 )
 
-[node name="Баскония" type="Area2D" parent="."]
-position = Vector2( 0, 686.612 )
-script = ExtResource( 3 )
+[node name="Тарнополь" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1964, 1654 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Баскония"]
-position = Vector2( -573, 1206.39 )
-polygon = PoolVector2Array( 1620, -20.002, 1510, 209.998, 1263, 317.998, 1103, 71.998, 1151, -128.002, 1527, -430.002 )
+[node name="Черновицы" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1988, 1849 )
 
-[node name="Ртутия" type="Area2D" parent="."]
-position = Vector2( 0, 686.612 )
-script = ExtResource( 3 )
+[node name="Станислав" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2233, 1955 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ртутия"]
-position = Vector2( -469.788, 0 )
-polygon = PoolVector2Array( 1623.79, 300.388, 1462.79, 538.388, 1573.79, 1131.39, 1811.79, 1003.39, 1889.79, 1087.39, 2183.79, 636.388, 1842.79, 329.388 )
+[node name="Лодзь" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2280, 1751 )
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Ртутия"]
-position = Vector2( -469.788, 0 )
-polygon = PoolVector2Array( 2008.79, 1529.39, 1998.79, 1497.39, 1972.79, 1529.39 )
+[node name="Черновцы" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2720, 1711 )
 
-[node name="Горния" type="Area2D" parent="."]
-script = ExtResource( 3 )
+[node name="Галич" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2848, 1898 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Горния"]
-position = Vector2( 708, -1010 )
-polygon = PoolVector2Array( 1266, 1955, 1114, 2117, 1031, 2344, 632, 1959, 851, 1590, 937, 1507, 1177, 1485, 1654, 1739 )
+[node name="Калуш" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3161, 2015 )
 
-[node name="Корния" type="Area2D" parent="."]
-script = ExtResource( 3 )
+[node name="Луцк" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3023, 2394 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Корния"]
-position = Vector2( 2016, -2000 )
-polygon = PoolVector2Array( 1138, 2589, 531, 2587, 115, 2473, 160, 2285, 1442, 2186, 1639, 2380 )
+[node name="Познань" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3248, 2462 )
 
-[node name="Кракожия" type="Area2D" parent="."]
-script = ExtResource( 3 )
+[node name="Ровно" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3034, 2685 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Кракожия"]
-position = Vector2( 1554.45, -1587.42 )
-polygon = PoolVector2Array( -934.45, 3767.42, -808.45, 3931.42, -396.45, 4386.42, -221.45, 4271.42, -243.45, 4420.42, -506.45, 4408.42, -838.45, 4014.42, -1123.45, 3910.42 )
+[node name="Коломыя" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3155, 2906 )
 
-[node name="Иллирия" type="Area2D" parent="."]
-script = ExtResource( 3 )
+[node name="Проскуров" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2877, 3094 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Иллирия"]
-position = Vector2( 1654, -1736 )
-polygon = PoolVector2Array( -327, 4580, -93, 4462, 357, 4547, 229, 4770 )
+[node name="Стрый" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2770, 2947 )
 
-[node name="Словиния" type="Area2D" parent="."]
-script = ExtResource( 3 )
+[node name="Ковель" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2594, 2840 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Словиния"]
-position = Vector2( 1623, -1583 )
-polygon = PoolVector2Array( 833, 4452, 951, 4755, 1480, 4670, 1801, 4390, 1132, 4412, 1103, 4324 )
+[node name="Волынский" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2304, 2933 )
 
-[node name="Тувинь" type="Area2D" parent="."]
-script = ExtResource( 3 )
+[node name="Щепеткова" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2513, 3040 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Тувинь"]
-position = Vector2( 1558.45, -1583.42 )
-polygon = PoolVector2Array( 2671.55, 4057.42, 2522.55, 3931.42, 2088.55, 4016.42, 1911.55, 4246.42, 2025.55, 4414.42, 2426.55, 4293.42 )
+[node name="Львов" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1987, 2913 )
 
-[node name="Хорезм" type="Area2D" parent="."]
-script = ExtResource( 3 )
+[node name="Болехов" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1778, 2906 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Хорезм"]
-position = Vector2( 1560, -1584 )
-polygon = PoolVector2Array( 2350, 3785, 2789, 3635, 1941, 3668, 2146, 3881 )
+[node name="Борка" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1845, 2738 )
 
-[node name="Лужичия" type="Area2D" parent="."]
-script = ExtResource( 3 )
+[node name="Звижень" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1541, 2671 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Лужичия"]
-position = Vector2( 1929, -1876 )
-polygon = PoolVector2Array( 2276, 3642, 1677, 3424, 1537, 3587, 1618, 3715 )
+[node name="Гримайлов" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1509, 2866 )
 
-[node name="Поляния" type="Area2D" parent="."]
-script = ExtResource( 3 )
+[node name="Ивано-Франковск" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1258, 2821 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Поляния"]
-position = Vector2( 1464, -2229 )
-polygon = PoolVector2Array( 1690, 4971, 1939, 4775, 1982, 4588, 1840, 4204, 1793, 3865, 1249, 3790, 742, 3892, 701, 4201, 1529, 4154, 1612, 4543, 1407, 4913 )
+[node name="Хмельницкий" parent="." instance=ExtResource( 4 )]
+position = Vector2( 945, 2644 )
 
-[node name="Теверция" type="Area2D" parent="."]
-script = ExtResource( 3 )
+[node name="Ужгород" parent="." instance=ExtResource( 4 )]
+position = Vector2( 866, 2873 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Теверция"]
-position = Vector2( 1560, -1584 )
-polygon = PoolVector2Array( 2271, 2186, 2153, 2066, 1661, 2333, 1634, 2511, 1519, 2589, 1710, 2737, 1779, 2998, 1862, 3066 )
+[node name="Каменец-Подольск" parent="." instance=ExtResource( 4 )]
+position = Vector2( 679, 2597 )
 
-[node name="Хорватия" type="Area2D" parent="."]
-script = ExtResource( 3 )
+[node name="Дубно" parent="." instance=ExtResource( 4 )]
+position = Vector2( 558, 2259 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Хорватия"]
-position = Vector2( 1389, -1570 )
-polygon = PoolVector2Array( 747, 3215, 717, 3510, 785, 3215, 1806, 3105, 1800, 3062 )
+[node name="Старокостантинов" parent="." instance=ExtResource( 4 )]
+position = Vector2( 736, 2111 )
 
-[node name="Сулеция" type="Area2D" parent="."]
-script = ExtResource( 3 )
+[node name="Дрогобыч" parent="." instance=ExtResource( 4 )]
+position = Vector2( 933, 1993 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Сулеция"]
-position = Vector2( 1560, -1584 )
-polygon = PoolVector2Array( -474, 1932, -373, 2143, -528, 2708, -999, 3319, -1293, 2623, -1008, 2190 )
+[node name="Нетешин" parent="." instance=ExtResource( 4 )]
+position = Vector2( 684, 1906 )
 
-[node name="Смольно" type="Area2D" parent="."]
-script = ExtResource( 3 )
+[node name="Мукачево" parent="." instance=ExtResource( 4 )]
+position = Vector2( 861, 1699 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Смольно"]
-position = Vector2( 1560, -1584 )
-polygon = PoolVector2Array( -187, 2154, -38, 2175, -235, 2504, -493, 2379 )
+[node name="Берегово" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1113, 1583 )
 
-[node name="Житичия" type="Area2D" parent="."]
-script = ExtResource( 3 )
+[node name="Буковина" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1135, 1760 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Житичия"]
-position = Vector2( 1560, -1584 )
-polygon = PoolVector2Array( 2286, 2199, 2589, 2681, 2504, 3103, 2112, 2898 )
+[node name="Катовице" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1076, 1234 )
 
-[node name="Зличания" type="Area2D" parent="."]
-script = ExtResource( 3 )
+[node name="Ченстохова" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1291, 1436 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Зличания"]
-position = Vector2( 1560, -1584 )
-polygon = PoolVector2Array( -853, 4043, -449, 4494, -576, 4590, -765, 4558, -1082, 4049 )
+[node name="Пшемысль" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1494, 1658 )
+
+[node name="Севастополь" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1374, 2118 )
+
+[node name="Закопане" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1591, 2228 )
+
+[node name="Донецк" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1508, 1270 )
+
+[node name="Николаев" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1256, 1014 )
+
+[node name="Винница" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1290, 777 )
+
+[node name="Симферополь" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1381, 546 )
+
+[node name="Херсон" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1309, 345 )
+
+[node name="Полтава" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1726, 301 )
+
+[node name="Белая Церковь" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1023, 549 )
+
+[node name="Пмлица" parent="." instance=ExtResource( 4 )]
+position = Vector2( 769, 746 )
+
+[node name="Мелитополь" parent="." instance=ExtResource( 4 )]
+position = Vector2( 551, 1047 )
+
+[node name="Павлоград" parent="." instance=ExtResource( 4 )]
+position = Vector2( 903, 1106 )
+
+[node name="Лисичанск" parent="." instance=ExtResource( 4 )]
+position = Vector2( 629, 1471 )
+
+[node name="Бердичев" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1790, 777 )
+
+[node name="Константиновка" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1654, 523 )
+
+[node name="Измаил" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1533, 918 )
+
+[node name="Новомосковск" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1787, 1184 )
+
+[node name="Коростень" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2044, 1244 )
+
+[node name="Должанск" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2158, 789 )
+
+[node name="Покровск" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2014, 414 )
+
+[node name="Изюм" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2180, 280 )
+
+[node name="Черкасс" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2253, 497 )
+
+[node name="Житомир" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2409, 643 )
+
+[node name="Сумы" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2575, 322 )
+
+[node name="Горловка" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2720, 536 )
+
+[node name="Макеевка" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2863, 800 )
+
+[node name="Желув" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3071, 612 )
+
+[node name="Тулов" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3081, 350 )
+
+[node name="Вручий" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3409, 470 )
+
+[node name="Любич" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3651, 702 )
+
+[node name="Подолье" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3359, 756 )
+
+[node name="Теребовль" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3403, 1006 )
+
+[node name="Пинск" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2929, 946 )
+
+[node name="Гродно" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3365, 1346 )
+
+[node name="Витебск" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3863, 1358 )
+
+[node name="Коломна" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3897, 984 )
+
+[node name="Рутивль" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3594, 1715 )
+
+[node name="Перемышль" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3675, 2153 )
+
+[node name="Батые" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3771, 2519 )

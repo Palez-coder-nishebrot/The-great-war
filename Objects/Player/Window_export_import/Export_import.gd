@@ -11,7 +11,7 @@ onready var goods: Dictionary = {
 	"Скот":      $VBoxContainer/Resourses_container/Good7,
 	"Селитра":   $VBoxContainer/Resourses_container/Good8,
 	"Древесина": $VBoxContainer/Resourses_container/Good9,
-	"Лекарственные_растения": $VBoxContainer/Military_container/Good10,#$VBoxContainer/Resourses_container/Good10,
+	"Лекарственные_растения": $VBoxContainer/Tech_container/Good6,
 	
 	"Сталь":           $VBoxContainer/Factory_goods_container/Good,
 	"Стекло":          $VBoxContainer/Factory_goods_container/Good2,
@@ -27,9 +27,6 @@ onready var goods: Dictionary = {
 	"Телеграфы":       $VBoxContainer/Tech_container/Good3,
 	"Телефоны":        $VBoxContainer/Tech_container/Good4,
 	"Радио":           $VBoxContainer/Tech_container/Good5,
-	"Миксеры":         $VBoxContainer/Tech_container/Good6,
-	"Электропечи":     $VBoxContainer/Tech_container/Good7,
-	"Холодильники":    $VBoxContainer/Tech_container/Good8,
 	
 	"Мебель":          $VBoxContainer/Civilian_container/Good,
 	"Спиртное":        $VBoxContainer/Civilian_container/Good2,
@@ -45,7 +42,7 @@ onready var goods: Dictionary = {
 	"Боеприпасы":           $VBoxContainer/Military_container/Good2,
 	"Пулеметы":             $VBoxContainer/Military_container/Good3,
 	"Артиллерия":           $VBoxContainer/Military_container/Good4,
-	"Аэропланы":            $VBoxContainer/Military_container/Good5,
+	"Аэроплан":             $VBoxContainer/Military_container/Good5,
 	"Магазинные_винтовки":  $VBoxContainer/Military_container/Good6,
 }
 

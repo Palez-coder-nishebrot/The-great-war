@@ -1,6 +1,6 @@
 extends Panel
 
-signal update_province_panel(list)
+signal update_province_panel(_list_)
 
 var list_of_panels: Array = []
 

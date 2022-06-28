@@ -44,7 +44,6 @@ func show_resourses():
 
 func update_subsidization():
 	building.subsidization = not building.subsidization
-	$VBoxContainer/Label6.text = "Субсидирование: " + subsidization_list[building.subsidization]
 
 
 func update_information_of_procces():

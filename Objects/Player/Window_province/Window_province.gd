@@ -3,14 +3,30 @@ extends Panel
 var province: Object
 
 func update_information(province_):
+	lock_or_open_buttons(false)
+	show_info_about_province(province_)
 	if province_.player == Players.player:
-		visible = true
-		province = province_
-		show_resourses()
-		$VBoxContainer/Name.text =           province.name_of_tile
-		$VBoxContainer/Country.text =        province.player.name_of_country
 		$VBoxContainer/Railways.text =       "Железные дороги: " + str(province.railways.level)
 		$VBoxContainer/Infrastructure.text = "Инфраструктура: "  + str(province.infrastructure.level)
+
+	else:
+		lock_or_open_buttons(true)
+		
+
+func show_info_about_province(province_):
+	visible = true
+	province = province_
+	show_resourses()
+	$VBoxContainer/Name.text =    province.name_of_tile
+	$VBoxContainer/Country.text = province.player.name_of_country
+
+
+func lock_or_open_buttons(bool_):
+	$VBoxContainer/Button.disabled  = bool_
+	$VBoxContainer/Button2.disabled = bool_
+	$VBoxContainer/Button3.disabled = bool_
+	$VBoxContainer/Railways.visible =       not bool_
+	$VBoxContainer/Infrastructure.visible = not bool_
 
 
 func show_resourses():

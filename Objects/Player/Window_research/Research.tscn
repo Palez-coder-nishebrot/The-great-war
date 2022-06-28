@@ -1,0 +1,472 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Graphics/Fonts/pixel_1.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Objects/Player/Window_research/Research.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 35
+extra_spacing_top = 10
+extra_spacing_char = -1
+font_data = ExtResource( 1 )
+
+[node name="Research" type="Panel"]
+margin_top = 61.0
+margin_right = 1920.0
+margin_bottom = 1078.0
+script = ExtResource( 2 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_right = 1920.0
+margin_bottom = 358.0
+custom_constants/separation = 50
+
+[node name="Army" type="VBoxContainer" parent="HBoxContainer"]
+margin_right = 442.0
+margin_bottom = 358.0
+size_flags_horizontal = 3
+size_flags_vertical = 5
+custom_constants/separation = 0
+
+[node name="Label" type="Label" parent="HBoxContainer/Army"]
+margin_right = 442.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 1 )
+text = "Управление армией"
+align = 1
+
+[node name="Button0" type="Button" parent="HBoxContainer/Army"]
+margin_top = 46.0
+margin_right = 442.0
+margin_bottom = 98.0
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "Маневренная война"
+
+[node name="Button2" type="Button" parent="HBoxContainer/Army"]
+margin_top = 98.0
+margin_right = 442.0
+margin_bottom = 150.0
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "Позиционная война"
+
+[node name="Button3" type="Button" parent="HBoxContainer/Army"]
+margin_top = 150.0
+margin_right = 442.0
+margin_bottom = 202.0
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "Концентрация сил"
+
+[node name="Button4" type="Button" parent="HBoxContainer/Army"]
+margin_top = 202.0
+margin_right = 442.0
+margin_bottom = 254.0
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "Прорыв линии фронта "
+
+[node name="Button5" type="Button" parent="HBoxContainer/Army"]
+margin_top = 254.0
+margin_right = 442.0
+margin_bottom = 306.0
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "Мобильная армия"
+
+[node name="Tech" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 492.0
+margin_right = 935.0
+margin_bottom = 358.0
+size_flags_horizontal = 3
+size_flags_vertical = 5
+custom_constants/separation = 0
+
+[node name="Label" type="Label" parent="HBoxContainer/Tech"]
+margin_right = 443.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 1 )
+text = "Техника"
+align = 1
+
+[node name="Button0" type="Button" parent="HBoxContainer/Tech"]
+margin_top = 46.0
+margin_right = 443.0
+margin_bottom = 98.0
+custom_fonts/font = SubResource( 1 )
+text = "Легкая бронетехника"
+
+[node name="Button2" type="Button" parent="HBoxContainer/Tech"]
+margin_top = 98.0
+margin_right = 443.0
+margin_bottom = 150.0
+custom_fonts/font = SubResource( 1 )
+text = "Воздушный флот"
+
+[node name="Button3" type="Button" parent="HBoxContainer/Tech"]
+margin_top = 150.0
+margin_right = 443.0
+margin_bottom = 202.0
+custom_fonts/font = SubResource( 1 )
+text = "Стратегия бронемашин"
+
+[node name="Button4" type="Button" parent="HBoxContainer/Tech"]
+margin_top = 202.0
+margin_right = 443.0
+margin_bottom = 254.0
+custom_fonts/font = SubResource( 1 )
+text = "Наземный флот"
+
+[node name="Button5" type="Button" parent="HBoxContainer/Tech"]
+margin_top = 254.0
+margin_right = 443.0
+margin_bottom = 306.0
+custom_fonts/font = SubResource( 1 )
+text = "Штурмовая техника"
+
+[node name="Button6" type="Button" parent="HBoxContainer/Tech"]
+margin_top = 306.0
+margin_right = 443.0
+margin_bottom = 358.0
+custom_fonts/font = SubResource( 1 )
+text = "Мобильная техника"
+
+[node name="Heavy_weapon" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 985.0
+margin_right = 1427.0
+margin_bottom = 358.0
+size_flags_horizontal = 3
+size_flags_vertical = 5
+custom_constants/separation = 0
+
+[node name="Label" type="Label" parent="HBoxContainer/Heavy_weapon"]
+margin_right = 442.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 1 )
+text = "Тяжелое вооружение"
+align = 1
+
+[node name="Button0" type="Button" parent="HBoxContainer/Heavy_weapon"]
+margin_top = 46.0
+margin_right = 442.0
+margin_bottom = 98.0
+custom_fonts/font = SubResource( 1 )
+text = "Бронепоезда"
+
+[node name="Button2" type="Button" parent="HBoxContainer/Heavy_weapon"]
+margin_top = 98.0
+margin_right = 442.0
+margin_bottom = 150.0
+custom_fonts/font = SubResource( 1 )
+text = "Тяжелая артиллерия"
+
+[node name="Button3" type="Button" parent="HBoxContainer/Heavy_weapon"]
+margin_top = 150.0
+margin_right = 442.0
+margin_bottom = 202.0
+custom_fonts/font = SubResource( 1 )
+text = "Зенитные пулеметы"
+
+[node name="Button4" type="Button" parent="HBoxContainer/Heavy_weapon"]
+margin_top = 202.0
+margin_right = 442.0
+margin_bottom = 254.0
+custom_fonts/font = SubResource( 1 )
+text = "Рельсовые пушки"
+
+[node name="Button5" type="Button" parent="HBoxContainer/Heavy_weapon"]
+margin_top = 254.0
+margin_right = 442.0
+margin_bottom = 306.0
+custom_fonts/font = SubResource( 1 )
+text = "Зенитная артиллерия"
+
+[node name="Button6" type="Button" parent="HBoxContainer/Heavy_weapon"]
+margin_top = 306.0
+margin_right = 442.0
+margin_bottom = 358.0
+custom_fonts/font = SubResource( 1 )
+text = "Средняя артиллерия"
+
+[node name="Light_weapon" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 1477.0
+margin_right = 1920.0
+margin_bottom = 358.0
+size_flags_horizontal = 3
+size_flags_vertical = 5
+custom_constants/separation = 0
+
+[node name="Label" type="Label" parent="HBoxContainer/Light_weapon"]
+margin_right = 443.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 1 )
+text = "Легкое вооружение"
+align = 1
+
+[node name="Button0" type="Button" parent="HBoxContainer/Light_weapon"]
+margin_top = 46.0
+margin_right = 443.0
+margin_bottom = 98.0
+custom_fonts/font = SubResource( 1 )
+text = "Легкое снаряжение"
+
+[node name="Button2" type="Button" parent="HBoxContainer/Light_weapon"]
+margin_top = 98.0
+margin_right = 443.0
+margin_bottom = 150.0
+custom_fonts/font = SubResource( 1 )
+text = "Защитное снаряжение"
+
+[node name="Button3" type="Button" parent="HBoxContainer/Light_weapon"]
+margin_top = 150.0
+margin_right = 443.0
+margin_bottom = 202.0
+custom_fonts/font = SubResource( 1 )
+text = "Окопное вооружение"
+
+[node name="Button4" type="Button" parent="HBoxContainer/Light_weapon"]
+margin_top = 202.0
+margin_right = 443.0
+margin_bottom = 254.0
+custom_fonts/font = SubResource( 1 )
+text = "Штурмовое вооружение"
+
+[node name="Button5" type="Button" parent="HBoxContainer/Light_weapon"]
+margin_top = 254.0
+margin_right = 443.0
+margin_bottom = 306.0
+custom_fonts/font = SubResource( 1 )
+text = "Современное вооружение"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+margin_top = 358.0
+margin_right = 1920.0
+margin_bottom = 716.0
+custom_constants/separation = 50
+
+[node name="Factory_production" type="VBoxContainer" parent="HBoxContainer2"]
+margin_right = 442.0
+margin_bottom = 358.0
+size_flags_horizontal = 3
+size_flags_vertical = 5
+custom_constants/separation = 0
+
+[node name="Label" type="Label" parent="HBoxContainer2/Factory_production"]
+margin_right = 442.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 1 )
+text = "Фабричное производство"
+align = 1
+
+[node name="Button0" type="Button" parent="HBoxContainer2/Factory_production"]
+margin_top = 46.0
+margin_right = 442.0
+margin_bottom = 98.0
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "Плавильные печи"
+
+[node name="Button2" type="Button" parent="HBoxContainer2/Factory_production"]
+margin_top = 98.0
+margin_right = 442.0
+margin_bottom = 150.0
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "Поточное производство"
+
+[node name="Button3" type="Button" parent="HBoxContainer2/Factory_production"]
+margin_top = 150.0
+margin_right = 442.0
+margin_bottom = 202.0
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "Искусственная резина"
+
+[node name="Button4" type="Button" parent="HBoxContainer2/Factory_production"]
+margin_top = 202.0
+margin_right = 442.0
+margin_bottom = 254.0
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "Сборочные конвейеры"
+
+[node name="Button5" type="Button" parent="HBoxContainer2/Factory_production"]
+margin_top = 254.0
+margin_right = 442.0
+margin_bottom = 306.0
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "Военная экономика"
+
+[node name="Button6" type="Button" parent="HBoxContainer2/Factory_production"]
+margin_top = 306.0
+margin_right = 442.0
+margin_bottom = 358.0
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "Полимеры"
+
+[node name="Farm_production" type="VBoxContainer" parent="HBoxContainer2"]
+margin_left = 492.0
+margin_right = 935.0
+margin_bottom = 358.0
+size_flags_horizontal = 3
+size_flags_vertical = 5
+custom_constants/separation = 0
+
+[node name="Label" type="Label" parent="HBoxContainer2/Farm_production"]
+margin_right = 443.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 1 )
+text = "Фермерское производство"
+align = 1
+
+[node name="Button0" type="Button" parent="HBoxContainer2/Farm_production"]
+margin_top = 46.0
+margin_right = 443.0
+margin_bottom = 98.0
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "Гос. субсидии"
+
+[node name="Button2" type="Button" parent="HBoxContainer2/Farm_production"]
+margin_top = 98.0
+margin_right = 443.0
+margin_bottom = 150.0
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = " Гусеничные машины"
+
+[node name="Button3" type="Button" parent="HBoxContainer2/Farm_production"]
+margin_top = 150.0
+margin_right = 443.0
+margin_bottom = 202.0
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "Фермерские тракторы"
+
+[node name="Button4" type="Button" parent="HBoxContainer2/Farm_production"]
+margin_top = 202.0
+margin_right = 443.0
+margin_bottom = 254.0
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "Введение тракторов"
+
+[node name="Button5" type="Button" parent="HBoxContainer2/Farm_production"]
+margin_top = 254.0
+margin_right = 443.0
+margin_bottom = 306.0
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "Частичная механизация"
+
+[node name="Resourses_production" type="VBoxContainer" parent="HBoxContainer2"]
+margin_left = 985.0
+margin_right = 1427.0
+margin_bottom = 358.0
+size_flags_horizontal = 3
+size_flags_vertical = 5
+custom_constants/separation = 0
+
+[node name="Label" type="Label" parent="HBoxContainer2/Resourses_production"]
+margin_right = 442.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 1 )
+text = "Добыча"
+align = 1
+
+[node name="Button0" type="Button" parent="HBoxContainer2/Resourses_production"]
+margin_top = 46.0
+margin_right = 442.0
+margin_bottom = 98.0
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "Электропечи"
+
+[node name="Button2" type="Button" parent="HBoxContainer2/Resourses_production"]
+margin_top = 98.0
+margin_right = 442.0
+margin_bottom = 150.0
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "Частичная механизация"
+
+[node name="Button3" type="Button" parent="HBoxContainer2/Resourses_production"]
+margin_top = 150.0
+margin_right = 442.0
+margin_bottom = 202.0
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "Нержавеющая сталь"
+
+[node name="Button4" type="Button" parent="HBoxContainer2/Resourses_production"]
+margin_top = 202.0
+margin_right = 442.0
+margin_bottom = 254.0
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "Переработка нефти"
+
+[node name="Button5" type="Button" parent="HBoxContainer2/Resourses_production"]
+margin_top = 254.0
+margin_right = 442.0
+margin_bottom = 306.0
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "Механизация шахт"
+
+[node name="Railways" type="VBoxContainer" parent="HBoxContainer2"]
+margin_left = 1477.0
+margin_right = 1920.0
+margin_bottom = 358.0
+size_flags_horizontal = 3
+size_flags_vertical = 5
+custom_constants/separation = 0
+
+[node name="Label" type="Label" parent="HBoxContainer2/Railways"]
+margin_right = 443.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 1 )
+text = "Инфраструктура"
+align = 1
+
+[node name="Button0" type="Button" parent="HBoxContainer2/Railways"]
+margin_top = 46.0
+margin_right = 443.0
+margin_bottom = 98.0
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "Электростанции"
+
+[node name="Button2" type="Button" parent="HBoxContainer2/Railways"]
+margin_top = 98.0
+margin_right = 443.0
+margin_bottom = 150.0
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "Рельсы узкой колеи"
+
+[node name="Button3" type="Button" parent="HBoxContainer2/Railways"]
+margin_top = 150.0
+margin_right = 443.0
+margin_bottom = 202.0
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "Рельсы для фабрик"
+
+[node name="Button4" type="Button" parent="HBoxContainer2/Railways"]
+margin_top = 202.0
+margin_right = 443.0
+margin_bottom = 254.0
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "Автобаны"
+
+[node name="Button5" type="Button" parent="HBoxContainer2/Railways"]
+margin_top = 254.0
+margin_right = 443.0
+margin_bottom = 306.0
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "Система автобанов"

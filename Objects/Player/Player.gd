@@ -23,7 +23,10 @@ var list_of_soc_classes: Array        = []
 const speed_of_camera: int            = 50
 const speed_of_zoom:   float          = 0.1
 const MAX_zoom:        float          = 2.5
-const MIN_zoom:        float          = 2.0
+const MIN_zoom:        float          = 1.0
+
+var national_flag: Sprite 
+var national_color: Color
 
 onready var window_province:      Panel = $CanvasLayer/Province
 onready var window_markets:       Panel = $CanvasLayer/Markets
@@ -33,21 +36,23 @@ onready var window_export_import: Panel = $CanvasLayer/Export_import
 onready var window_parties:       Panel = $CanvasLayer/Parties
 onready var window_taxes:         Panel = $CanvasLayer/Taxes
 onready var window_reform:        Panel = $CanvasLayer/Reform
+onready var window_population:    Panel = $CanvasLayer/Population
+onready var window_research:      Panel = $CanvasLayer/Research
 onready var information:          Panel = $CanvasLayer/Information
 
 
 func _process(delta):
 	
-	if Input.is_action_pressed("W") and position.y >= 1300:
+	if Input.is_action_pressed("W"):# and position.y >= 1300:
 		position.y -= speed_of_camera
 
-	if Input.is_action_pressed("A") and position.x >= 1500:
+	if Input.is_action_pressed("A"):# and position.x >= 1500:
 		position.x -= speed_of_camera
 		
-	if Input.is_action_pressed("S") and position.y <= 2090:
+	if Input.is_action_pressed("S"):# and position.y <= 2090:
 		position.y += speed_of_camera
 		
-	if Input.is_action_pressed("D") and position.x <= 2318:
+	if Input.is_action_pressed("D"):# and position.x <= 2318:
 		position.x += speed_of_camera
 	
 

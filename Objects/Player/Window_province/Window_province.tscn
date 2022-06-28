@@ -9,7 +9,7 @@ extra_spacing_top = 10
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 30
+size = 28
 extra_spacing_top = 10
 font_data = ExtResource( 1 )
 
@@ -43,64 +43,64 @@ valign = 1
 [node name="Country" type="Label" parent="VBoxContainer"]
 margin_top = 50.0
 margin_right = 468.0
-margin_bottom = 91.0
+margin_bottom = 88.0
 custom_fonts/font = SubResource( 2 )
 text = "Государство"
 align = 1
 valign = 1
 
 [node name="Resourses" type="Label" parent="VBoxContainer"]
-margin_top = 91.0
+margin_top = 88.0
 margin_right = 468.0
-margin_bottom = 132.0
+margin_bottom = 126.0
 custom_fonts/font = SubResource( 2 )
 text = "Ресурсы"
 align = 1
 valign = 1
 
 [node name="Railways" type="Label" parent="VBoxContainer"]
-margin_top = 132.0
+margin_top = 126.0
 margin_right = 468.0
-margin_bottom = 173.0
+margin_bottom = 164.0
 custom_fonts/font = SubResource( 2 )
 text = "Железные дороги"
 align = 1
 valign = 1
 
 [node name="Infrastructure" type="Label" parent="VBoxContainer"]
-margin_top = 173.0
+margin_top = 164.0
 margin_right = 468.0
-margin_bottom = 214.0
+margin_bottom = 202.0
 custom_fonts/font = SubResource( 2 )
 text = "Инфраструктура"
 align = 1
 valign = 1
 
 [node name="Button" type="Button" parent="VBoxContainer"]
-margin_top = 214.0
+margin_top = 202.0
 margin_right = 468.0
-margin_bottom = 261.0
+margin_bottom = 249.0
 custom_fonts/font = SubResource( 3 )
 text = "Построить здание"
 
 [node name="Button2" type="Button" parent="VBoxContainer"]
-margin_top = 261.0
+margin_top = 249.0
 margin_right = 468.0
-margin_bottom = 308.0
+margin_bottom = 296.0
 custom_fonts/font = SubResource( 3 )
 text = "Расширить ЖД"
 
 [node name="Button3" type="Button" parent="VBoxContainer"]
-margin_top = 308.0
+margin_top = 296.0
 margin_right = 468.0
-margin_bottom = 355.0
+margin_bottom = 343.0
 custom_fonts/font = SubResource( 3 )
 text = "Расширить Инфраструктуру"
 
 [node name="Button4" type="Button" parent="VBoxContainer"]
-margin_top = 355.0
+margin_top = 343.0
 margin_right = 468.0
-margin_bottom = 402.0
+margin_bottom = 390.0
 custom_fonts/font = SubResource( 3 )
 text = "Закрыть"
 

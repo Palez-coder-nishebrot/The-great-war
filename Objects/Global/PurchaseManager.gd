@@ -14,7 +14,7 @@ func meet_the_needs(player, list_of_soc_classes):
 		soc_class.lack = 0
 		for good in need_of_poor_classes:
 			
-			var quanity_of_good = need_of_poor_classes[good] * soc_class.quanity
+			var quanity_of_good = int(need_of_poor_classes[good] * soc_class.quanity)
 			var list = Functions.check_good_on_global_market(good, quanity_of_good)
 			var price_on_local_market = Functions.get_price_of_good_on_local_market(good)
 			
@@ -23,6 +23,7 @@ func meet_the_needs(player, list_of_soc_classes):
 			if buy_good_from_local_market(good, quanity_of_good, player, soc_class, price_on_local_market) == false:
 				if buy_good_from_global_market(list, soc_class, good, player, quanity_of_good) == false:
 					soc_class.lack += 1
+
 
 func buy_good_from_local_market(good, quanity_of_good, player, soc_class, price_on_local_market):
 	

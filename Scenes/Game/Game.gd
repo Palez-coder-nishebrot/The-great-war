@@ -34,6 +34,7 @@ func create_players():
 	player = load("res://Objects/Player/Player.tscn").instance()
 	player.position = Vector2(2318, 2000)
 	player.name_of_country = Players.country_to_start
+	player.national_color  = Players.list_of_players_on_start[player.name_of_country]["Цвет"]
 	Players.player = player
 	create_parties(player)
 	Players.list_of_players.append(player)
@@ -44,6 +45,7 @@ func create_players():
 		if name_of_country != _player_.name_of_country:
 			player = load("res://Objects/AI/AI.gd").new()
 			player.name_of_country = name_of_country
+			player.national_color  = Players.list_of_players_on_start[name_of_country]["Цвет"]
 			Players.list_of_players.append(player)
 			
 			create_parties(player)
@@ -108,6 +110,8 @@ func circle_of_game():
 	Players.player.window_markets.update_information()
 	
 	Players.player.window_production.update_information()
+	Players.player.window_population.update_information()
+	
 	
 	Players.player.window_export_import.update_information()
 	GlobalMarket.clear_export_and_import()
@@ -116,6 +120,7 @@ func circle_of_game():
 func clear_GDP():
 	for player in Players.list_of_players:
 		player.economy["ВВП"] = 0
+
 
 func start_resourse_extraction():
 	for i in list_of_privinces:
@@ -128,7 +133,7 @@ func make_goods():
 		for y in i.list_of_buildings:
 			if y.tipe == "factory" and y.closed == false:
 				y.make_goods()
-		
+
 
 func buy_goods_for_factory():
 	for i in list_of_privinces:
@@ -140,4 +145,3 @@ func buy_goods_for_factory():
 func meet_the_needs_of_population():
 	for i in Players.list_of_players:
 		purchase_manager.meet_the_needs(i, i.list_of_soc_classes)
-	pass
