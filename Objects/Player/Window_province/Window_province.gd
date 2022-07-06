@@ -48,3 +48,11 @@ func exit():
 func build_factory():
 	Players.player.window_build_factory.province = province
 	Players.player.window_build_factory.visible  = true
+
+
+func train_army():
+	Players.player.window_train_army.update_information(province)
+
+
+func show_units():
+	Players.player.window_list_of_units.show_units(province.list_of_units)

@@ -2,7 +2,7 @@ extends Node
 
 
 const graph: Dictionary = {
-	
+	"Черновцы": ["Лодзь", "Станислав", "Галич", "Калуш"],
 }
 
 

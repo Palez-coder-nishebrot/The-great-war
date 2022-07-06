@@ -19,6 +19,8 @@ config/icon="res://icon.png"
 Players="*res://Objects/Global/Players.gd"
 GlobalMarket="*res://Objects/Global/GlobalMarket.gd"
 Functions="*res://Objects/Global/Functions.gd"
+Research="*res://Objects/Global/Research.gd"
+Units="*res://Objects/Global/Units.gd"
 
 [display]
 

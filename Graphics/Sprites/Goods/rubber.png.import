@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/rubber.png-eea0e66642f396a53d190a40f18560d0.stex"
+path="res://.import/Rubber.png-79269acaa8f760037affd5ed3ffe2bff.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphics/Sprites/Goods/rubber.png"
-dest_files=[ "res://.import/rubber.png-eea0e66642f396a53d190a40f18560d0.stex" ]
+source_file="res://Graphics/Sprites/Goods/Rubber.png"
+dest_files=[ "res://.import/Rubber.png-79269acaa8f760037affd5ed3ffe2bff.stex" ]
 
 [params]
 

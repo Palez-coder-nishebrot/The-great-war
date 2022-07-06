@@ -7,7 +7,7 @@ var list_of_lines:              Array      = []
 var list_of_neighbors_tiles:    Array      = []
 var list_of_buildings:          Array      = []
 var list_of_military_factories: Array      = []
-var units:                      Array      = []
+var list_of_units:              Array      = []
 
 var name_of_tile:        String
 var capital:             bool = false

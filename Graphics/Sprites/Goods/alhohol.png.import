@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/alhohol.png-101be2f48b9168fe6997f22aa0b37ed2.stex"
+path="res://.import/Alhohol.png-5763262870b89562d5b91ee09e7b65c3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphics/Sprites/Goods/alhohol.png"
-dest_files=[ "res://.import/alhohol.png-101be2f48b9168fe6997f22aa0b37ed2.stex" ]
+source_file="res://Graphics/Sprites/Goods/Alhohol.png"
+dest_files=[ "res://.import/Alhohol.png-5763262870b89562d5b91ee09e7b65c3.stex" ]
 
 [params]
 

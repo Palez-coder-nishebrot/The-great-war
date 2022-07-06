@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/iron.png-0b2e7166263a06b85215dd6f3d295167.stex"
+path="res://.import/Iron.png-4b907f2e27014b6589ba02b13bd4bc7e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphics/Sprites/Goods/iron.png"
-dest_files=[ "res://.import/iron.png-0b2e7166263a06b85215dd6f3d295167.stex" ]
+source_file="res://Graphics/Sprites/Goods/Iron.png"
+dest_files=[ "res://.import/Iron.png-4b907f2e27014b6589ba02b13bd4bc7e.stex" ]
 
 [params]
 
