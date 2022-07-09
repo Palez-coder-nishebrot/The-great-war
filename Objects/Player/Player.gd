@@ -34,9 +34,10 @@ var buildings:         Dictionary     = Players.buildings_on_start.duplicate()
 
 var name_of_country: String           = ""
 
-var units_for_training:  Array        = Players.units_for_training
-var list_of_tiles:       Array        = []
-var list_of_soc_classes: Array        = []
+var units_for_training:   Array        = Players.units_for_training
+var list_of_tiles:        Array        = []
+var list_of_soc_classes:  Array        = []
+var list_of_active_units: Array        = []
 
 const speed_of_camera: int            = 50
 const speed_of_zoom:   float          = 0.1
@@ -62,7 +63,7 @@ onready var window_research_end:  Panel = $CanvasLayer/Research_end
 onready var information:          Panel = $CanvasLayer/Information
 onready var window_train_army:    Panel = $CanvasLayer/Train_army
 onready var window_list_of_units: ScrollContainer = $CanvasLayer/List_of_units
-onready var game:                Node2D = get_parent()
+onready var game:                 Node2D          = get_parent()
 
 
 func _process(delta):

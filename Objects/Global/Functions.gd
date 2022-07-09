@@ -79,3 +79,8 @@ func check_good_on_local_market(good, quanity, local_market):
 
 func change_GDP(good, quanity, player): # ВВП
 	player.economy["ВВП"] += GlobalMarket.prices_of_goods[good] * quanity
+
+
+func set_point_of_units(point, list):
+	for i in list:
+		i.set_path(point)

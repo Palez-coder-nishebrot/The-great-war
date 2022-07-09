@@ -27,13 +27,19 @@ collision_mask = 3
 position = Vector2( 41, -44 )
 shape = SubResource( 1 )
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Button" parent="."]
 margin_left = -43.0
 margin_right = 127.0
 margin_bottom = 40.0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
+flat = true
 
 [connection signal="input_event" from="Area2D" to="." method="input"]
 [connection signal="mouse_entered" from="Area2D" to="." method="mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="mouse_exited"]
+[connection signal="pressed" from="Label" to="." method="choose_units"]

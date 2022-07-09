@@ -33,7 +33,7 @@ const chars_of_units: Dictionary = {
 		"Атака":    2,
 		"Скорость": 3,
 	}, 
-	"Гвардейцы":        {
+	"Гренадеры":        {
 		"Оборона":  2,
 		"Атака":    6,
 		"Скорость": 3,
@@ -104,7 +104,7 @@ const cost_of_units: Dictionary = {
 		"Пулеметы":            1,
 		"Боеприпасы":          2,
 	}, 
-	"Гвардейцы":        {
+	"Гренадеры":        {
 		"Магазинные_винтовки": 3,
 		"Боеприпасы":          6,
 		"Пулеметы":            2,
@@ -155,12 +155,20 @@ const food_for_training: Dictionary = {
 }
 
 
-func create_division(province, list_of_battalions):
+func create_division(province, list_of_battalions, player):
 	var division = load("res://Objects/Division/Division.gd").new()
+	var list_of_battalions_object = []
 	
 	for i in list_of_battalions:
 		var battalion = load("res://Objects/Division/Battalion.gd").new()
 		battalion.tipe_of_battalion = i
 		battalion.set_chars()
+		list_of_battalions_object.append(battalion)
 	
+	division.list_of_battalions.append_array(list_of_battalions_object)
+	division.player =   player
+	division.province = province
+	division.game =     player.game
 	
+	division.set_chars()
+	division.start_training()

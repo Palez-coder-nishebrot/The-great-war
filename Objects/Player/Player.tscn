@@ -32,6 +32,7 @@ margin_left = 415.0
 [node name="Information" parent="CanvasLayer" instance=ExtResource( 4 )]
 
 [node name="Province" parent="CanvasLayer" instance=ExtResource( 2 )]
+visible = false
 margin_top = 688.0
 margin_bottom = 1080.0
 

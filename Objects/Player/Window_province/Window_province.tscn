@@ -123,16 +123,8 @@ custom_constants/separation = 0
 margin_right = 124.0
 margin_bottom = 46.0
 custom_fonts/font = SubResource( 4 )
-text = "Дивизии"
-
-[node name="Button2" type="Button" parent="VBoxContainer2"]
-margin_top = 46.0
-margin_right = 124.0
-margin_bottom = 92.0
-custom_fonts/font = SubResource( 4 )
 text = "Склады"
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="build_factory"]
 [connection signal="pressed" from="VBoxContainer/Button4" to="." method="train_army"]
 [connection signal="pressed" from="VBoxContainer/Button5" to="." method="exit"]
-[connection signal="pressed" from="VBoxContainer2/Button" to="." method="show_units"]

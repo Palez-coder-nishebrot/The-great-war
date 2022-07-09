@@ -107,6 +107,9 @@ func give_tiles_to_players(provinces_of_countries):
 			player.list_of_soc_classes.append(list_of_tiles[y].household)
 			list_of_tiles[y].player = player
 			list_of_tiles[y].get_node("Sprite").modulate = player.national_color
+			
+			list_of_tiles[y].start()
+			
 			set_factories_on_start_of_game(factories, list_of_tiles[y])
 
 

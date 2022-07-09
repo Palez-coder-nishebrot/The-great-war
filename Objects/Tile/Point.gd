@@ -12,6 +12,7 @@ var list_of_units:              Array      = []
 var name_of_tile:        String
 var capital:             bool = false
 var player:              Object
+var training_units:      Object
 
 var resources:           Dictionary = {}
 var railways:            Object = load("res://Objects/Building/Railways.gd").new()
@@ -20,8 +21,9 @@ var household:           Object = load("res://Objects/Population/Household.gd").
 var factory_association: Object = load("res://Objects/Population/Factory_association.gd").new()
 
 
-func _ready():
-	$Label.text = name
+func start():
+	name_of_tile = name
+	update_text_on_label()
 	household.province = self
 
 
@@ -30,7 +32,10 @@ func input(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.is_pressed():
 		if event.button_index == BUTTON_LEFT:
 			Players.player.window_province.update_information(self)
-
+		
+		elif event.button_index == BUTTON_RIGHT:
+			Functions.set_point_of_units(self, Players.player.list_of_active_units)
+			pass
 
 func new_owner(new_owner):
 	player.list_of_tiles.erase(self)
@@ -91,6 +96,29 @@ func build_military_factory(name_of_building):
 	process.game = get_parent().get_parent()
 	process.start_build_factory(list_of_military_factories)
 	list_of_buildings.append(process)
+
+
+func division_entered_in_province(division):
+	list_of_units.append(division)
+	update_text_on_label()
+
+
+func division_exited_in_province(division):
+	list_of_units.erase(division)
+	update_text_on_label()
+
+
+func update_text_on_label():
+	if player == Players.player:
+		$Label.text = name_of_tile + "(" + str(list_of_units.size()) + ")"
+	else:
+		$Label.text = name_of_tile + "(?)"
+	
+
+func choose_units():
+	Players.player.list_of_active_units.clear()
+	Players.player.list_of_active_units.append_array(list_of_units)
+	Players.player.window_list_of_units.show_units()
 
 
 func get_bonus_of_production():
