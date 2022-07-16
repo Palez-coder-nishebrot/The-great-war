@@ -2,12 +2,16 @@ extends Panel
 
 var province: Object
 
-func update_information(province_):
+func update_information(province_, tipe):
 	lock_or_open_buttons(false)
 	show_info_about_province(province_)
 	if province_.player == Players.player:
 		$VBoxContainer/Railways.text =       "Железные дороги: " + str(province.railways.level)
 		$VBoxContainer/Infrastructure.text = "Инфраструктура: "  + str(province.infrastructure.level)
+		
+		if tipe == "village":
+			$VBoxContainer/Button.disabled  = true
+			$VBoxContainer/Button4.disabled = true
 
 	else:
 		lock_or_open_buttons(true)

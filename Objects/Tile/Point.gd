@@ -8,6 +8,7 @@ var list_of_neighbors_tiles:    Array      = []
 var list_of_buildings:          Array      = []
 var list_of_military_factories: Array      = []
 var list_of_units:              Array      = []
+var list_of_villages:           Array      = []
 
 var name_of_tile:        String
 var capital:             bool = false
@@ -31,7 +32,7 @@ func input(viewport, event, shape_idx):
 	
 	if event is InputEventMouseButton and event.is_pressed():
 		if event.button_index == BUTTON_LEFT:
-			Players.player.window_province.update_information(self)
+			Players.player.window_province.update_information(self, "province")
 		
 		elif event.button_index == BUTTON_RIGHT:
 			Functions.set_point_of_units(self, Players.player.list_of_active_units)
@@ -174,3 +175,16 @@ func get_bonus_of_production():
 		production_of_mines   = production_of_mines,
 		production_of_farms   = production_of_farms,
 	}
+
+
+func get_goods_of_factories_in_province(good):
+	var list = []
+	for i in list_of_buildings:
+		if i.good != good:
+			list.append(i.good)
+	
+	for i in resources:
+		if i != good:
+			list.append(i)
+	return list
+	

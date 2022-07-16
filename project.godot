@@ -21,6 +21,7 @@ GlobalMarket="*res://Objects/Global/GlobalMarket.gd"
 Functions="*res://Objects/Global/Functions.gd"
 Research="*res://Objects/Global/Research.gd"
 Units="*res://Objects/Global/Units.gd"
+Reforms="*res://Objects/Global/Reforms.gd"
 
 [display]
 

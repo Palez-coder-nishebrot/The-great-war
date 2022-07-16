@@ -14,7 +14,7 @@ func update_information(list, parent):
 		update()
 
 func update():
-	$Label.text = province.name_of_tile
+	$Label.text = province.name_of_tile + "(" + str(province.household.quanity) + ")"
 	emit_signal("update_info", list_of_panels)
 
 	for i in province.list_of_buildings:

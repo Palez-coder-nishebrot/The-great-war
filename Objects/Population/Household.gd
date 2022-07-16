@@ -31,23 +31,42 @@ var reserves_of_DP_s: Dictionary = {
 	"Лекарственные_растения": 0.0}
 
 var need:                 Dictionary = {
-	"Хлеб":         0.7,
-	"Скот":         0.7,
-	"Одежда":       0.5,
-	"Обогреватели": 0.5,
+	"Хлеб":         1,
+	"Скот":         1,
+	"Одежда":       1,
+	"Обогреватели": 1,
 }
 
 var demand:               Dictionary = {
-	"Спиртное":     0.5,
-	"Мебель":       0.5,
-	"Табак":        0.5,
-	"Консервы":     0.3,
-	"Тракторы":     0.5,
-	"Радио":        0.5,
-	"Телефоны":     0.5,
-	"Автомобили":   0.5,
-	"Топливо":      0.3,
+	"Спиртное":     1,
+	"Мебель":       1,
+	"Табак":        1,
+	"Консервы":     1,
+	"Радио":        1,
+	"Чай":          1,
+	"Кофе":         1,
+	"Телефоны":     1,
+	"Автомобили":   1,
+	"Топливо":      1,
 }
+
+var needs_of_not_working_population: Array = [
+	"Зерно",
+	"Одежда",
+	"Спиртное",
+]
+
+var demands_of_not_working_population: Array = [
+	"Мебель",
+	"Спиртное",
+	"Хлеб",
+	"Консервы",
+	"Топливо",
+	"Табак",
+	"Лекарства",
+	"Чай",
+	"Кофе",
+]
 
 var quanity: int = 8
 var money:   int = 300
@@ -60,16 +79,13 @@ var rent:    int = 0
 
 
 func start_resourse_extraction():
-	for i in get_free_population():
-		for resourse in province.resources:
-			
-			var quanity_of_good = province.resources[resourse] + check_reserve(resourse)
-			
-			if resourse == "Зерно":
-				bake_bread(quanity_of_good)
-			
-			else:
-				sale_goods(resourse, quanity_of_good)
+	var free_pop = get_free_population()
+	
+	for resourse in province.resources:
+		
+		var quanity_of_good = (province.resources[resourse] + check_reserve(resourse)) * free_pop
+		
+		sale_goods(resourse, free_pop)
 
 
 func bake_bread(quanity_of_good):
@@ -90,10 +106,10 @@ func sale_goods(good, quanity_of_good):
 
 
 func check_reserve(good):
-	reserves_of_DP_s[good] += province.get_bonus_of_production()[tipes_of_DP[good]]
+	reserves_of_DP_s[good] += province.get_bonus_of_production()[tipes_of_DP[good]] + province.player.bonuses_in_production[good]
 	
 	if reserves_of_DP_s[good] >= 100.0:
-		reserves_of_DP_s[good] = 0.0
+		reserves_of_DP_s[good] = reserves_of_DP_s[good] - 100.0
 		return 1
 	return 0
 
@@ -109,7 +125,7 @@ func find_work():
 	var free_pop = get_free_population()
 	
 	for i in province.list_of_buildings:
-		if i.tipe == "factory" and i.closed == false and i.max_employed_number > i.employed_number:
+		if i.tipe == "factory" and i.closed == false and i.max_employed_number > i.employed_number and get_free_population() > 0:
 			get_job(i)
 
 func get_job(factory):

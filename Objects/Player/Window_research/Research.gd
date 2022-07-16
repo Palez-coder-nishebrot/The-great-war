@@ -106,7 +106,7 @@ func clear_scroll_containers():
 
 
 func start_research():
-	$Button_start.disabled           = true
+	$Button_start.disabled     = true
 	technology.button.disabled = true
 	$Label.text = technology.technology + ": " + "0%"
 	
@@ -115,6 +115,7 @@ func start_research():
 	player.researching_object.technology.button             = technology.button
 	player.researching_object.technology.technology         = technology.technology
 	player.researching_object.technology.tipe_of_technology = technology.tipe_of_technology
+	
 	player.researching_object.player                        = player
 	player.researching_object.game                          = game
 	

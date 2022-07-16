@@ -171,7 +171,7 @@ custom_constants/separation = 0
 margin_right = 454.0
 margin_bottom = 38.0
 custom_fonts/font = SubResource( 1 )
-text = "Инфраструктура"
+text = "Инфраструктура и снабжение"
 align = 1
 
 [node name="Button_start" type="Button" parent="."]

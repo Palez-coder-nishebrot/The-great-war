@@ -46,7 +46,7 @@ func _ready():
 
 
 func check_data(day, month, year):
-	$VBoxContainer/Label2.text = str(day) + " " + month_of_year[month] + " " + str(year) + " год"
+	$Label2.text = str(day) + " " + month_of_year[month] + " " + str(year) + " год"
 	$VBoxContainer/Label3.text = "Казна: " + str(Players.player.economy["Кроны"])
 
 

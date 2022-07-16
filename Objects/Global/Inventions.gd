@@ -1,11 +1,6 @@
 extends Node
 
 
-var factory_production_inventions: Dictionary = {
-	"Плавильные печи": ["Электропечи", "Мартеновская печь"],
-	"Полимеры":        ["Ограниченное стекло"],
-	
-}
 
 
 const military_inventions: Dictionary = {
@@ -17,6 +12,7 @@ const military_inventions: Dictionary = {
 	"/Штурмовые танки":       0,
 	"/Танкетки":             0,
 	
+	"/Увеличенный состав батарей":   1,
 	"/Ранняя самоходная артиллерия": 1,
 	"/Cамоходная артиллерия": 1,
 	

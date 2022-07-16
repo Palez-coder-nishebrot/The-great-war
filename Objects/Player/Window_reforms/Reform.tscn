@@ -1,14 +1,16 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Graphics/Fonts/pixel_1.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Objects/Player/Window_reforms/Reform.gd" type="Script" id=2]
+[ext_resource path="res://Objects/Player/Window_reforms/Reform_button.gd" type="Script" id=3]
 
-[sub_resource type="DynamicFont" id=1]
-size = 45
+[sub_resource type="DynamicFont" id=3]
+size = 30
 extra_spacing_top = 13
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 40
+size = 30
 extra_spacing_top = 13
 font_data = ExtResource( 1 )
 
@@ -16,369 +18,107 @@ font_data = ExtResource( 1 )
 margin_top = 61.0
 margin_right = 1920.0
 margin_bottom = 1080.0
+script = ExtResource( 2 )
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-margin_right = 1958.0
-margin_bottom = 311.0
-custom_constants/separation = 0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+[node name="Label" type="Label" parent="."]
+margin_top = -120.0
 margin_right = 182.0
-margin_bottom = 311.0
-custom_constants/separation = 0
-
-[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer"]
-margin_right = 182.0
-margin_bottom = 59.0
-custom_fonts/font = SubResource( 1 )
+margin_bottom = -61.0
+custom_fonts/font = SubResource( 3 )
 text = "Выходные"
+align = 1
+valign = 1
 
-[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer"]
-margin_top = 59.0
-margin_right = 182.0
-margin_bottom = 118.0
-custom_fonts/font = SubResource( 2 )
-text = "Нет"
-
-[node name="Button2" type="Button" parent="HBoxContainer/VBoxContainer"]
-margin_top = 118.0
-margin_right = 182.0
-margin_bottom = 177.0
-custom_fonts/font = SubResource( 2 )
-text = "Один день"
-
-[node name="Button3" type="Button" parent="HBoxContainer/VBoxContainer"]
-margin_top = 177.0
-margin_right = 182.0
-margin_bottom = 236.0
-custom_fonts/font = SubResource( 2 )
-text = "Два дня"
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+[node name="Button" type="Button" parent="."]
 margin_left = 182.0
-margin_right = 551.0
-margin_bottom = 311.0
-custom_constants/separation = 0
-
-[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer2"]
-margin_right = 369.0
-margin_bottom = 59.0
-custom_fonts/font = SubResource( 1 )
-text = "Выплаты ветеранам"
-
-[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer2"]
-margin_top = 59.0
-margin_right = 369.0
-margin_bottom = 118.0
+margin_top = -120.0
+margin_right = 364.0
+margin_bottom = -61.0
 custom_fonts/font = SubResource( 2 )
 text = "Нет"
+script = ExtResource( 3 )
 
-[node name="Button2" type="Button" parent="HBoxContainer/VBoxContainer2"]
-margin_top = 118.0
-margin_right = 369.0
-margin_bottom = 177.0
-custom_fonts/font = SubResource( 2 )
-text = "Малые выплаты"
-
-[node name="Button3" type="Button" parent="HBoxContainer/VBoxContainer2"]
-margin_top = 177.0
-margin_right = 369.0
-margin_bottom = 236.0
-custom_fonts/font = SubResource( 2 )
-text = "Средние выплаты"
-
-[node name="Button4" type="Button" parent="HBoxContainer/VBoxContainer2"]
-margin_top = 236.0
-margin_right = 369.0
-margin_bottom = 295.0
-custom_fonts/font = SubResource( 2 )
-text = "Большие выплаыты"
-
-[node name="VBoxContainer3" type="VBoxContainer" parent="HBoxContainer"]
-margin_left = 551.0
-margin_right = 863.0
-margin_bottom = 311.0
-custom_constants/separation = 0
-
-[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer3"]
-margin_right = 312.0
-margin_bottom = 59.0
-custom_fonts/font = SubResource( 1 )
-text = "Пенсии"
-align = 1
-
-[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer3"]
-margin_top = 59.0
-margin_right = 312.0
-margin_bottom = 118.0
-custom_fonts/font = SubResource( 2 )
-text = "Нет"
-
-[node name="Button2" type="Button" parent="HBoxContainer/VBoxContainer3"]
-margin_top = 118.0
-margin_right = 312.0
-margin_bottom = 177.0
-custom_fonts/font = SubResource( 2 )
-text = "Малые выплаты"
-
-[node name="Button3" type="Button" parent="HBoxContainer/VBoxContainer3"]
-margin_top = 177.0
-margin_right = 312.0
-margin_bottom = 236.0
-custom_fonts/font = SubResource( 2 )
-text = "Средние выплаты"
-
-[node name="Button4" type="Button" parent="HBoxContainer/VBoxContainer3"]
-margin_top = 236.0
-margin_right = 312.0
-margin_bottom = 295.0
-custom_fonts/font = SubResource( 2 )
-text = "Большие выплаыты"
-
-[node name="VBoxContainer4" type="VBoxContainer" parent="HBoxContainer"]
-margin_left = 863.0
-margin_right = 1175.0
-margin_bottom = 311.0
-custom_constants/separation = 0
-
-[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer4"]
-margin_right = 312.0
-margin_bottom = 59.0
-custom_fonts/font = SubResource( 1 )
-text = "Мин. зарплата"
-
-[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer4"]
-margin_top = 59.0
-margin_right = 312.0
-margin_bottom = 118.0
-custom_fonts/font = SubResource( 2 )
-text = "Нет"
-
-[node name="Button2" type="Button" parent="HBoxContainer/VBoxContainer4"]
-margin_top = 118.0
-margin_right = 312.0
-margin_bottom = 177.0
-custom_fonts/font = SubResource( 2 )
-text = "Малые выплаты"
-
-[node name="Button3" type="Button" parent="HBoxContainer/VBoxContainer4"]
-margin_top = 177.0
-margin_right = 312.0
-margin_bottom = 236.0
-custom_fonts/font = SubResource( 2 )
-text = "Средние выплаты"
-
-[node name="Button4" type="Button" parent="HBoxContainer/VBoxContainer4"]
-margin_top = 236.0
-margin_right = 312.0
-margin_bottom = 295.0
-custom_fonts/font = SubResource( 2 )
-text = "Большие выплаыты"
-
-[node name="VBoxContainer5" type="VBoxContainer" parent="HBoxContainer"]
-margin_left = 1175.0
-margin_right = 1551.0
-margin_bottom = 311.0
-custom_constants/separation = 0
-
-[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer5"]
-margin_right = 376.0
-margin_bottom = 59.0
-custom_fonts/font = SubResource( 1 )
-text = "Макс. рабочий день"
-
-[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer5"]
-margin_top = 59.0
-margin_right = 376.0
-margin_bottom = 118.0
-custom_fonts/font = SubResource( 2 )
-text = "Нет максимума"
-
-[node name="Button2" type="Button" parent="HBoxContainer/VBoxContainer5"]
-margin_top = 118.0
-margin_right = 376.0
-margin_bottom = 177.0
-custom_fonts/font = SubResource( 2 )
-text = "12-часовой"
-
-[node name="Button3" type="Button" parent="HBoxContainer/VBoxContainer5"]
-margin_top = 177.0
-margin_right = 376.0
-margin_bottom = 236.0
-custom_fonts/font = SubResource( 2 )
-text = "10-часовой"
-
-[node name="Button4" type="Button" parent="HBoxContainer/VBoxContainer5"]
-margin_top = 236.0
-margin_right = 376.0
-margin_bottom = 295.0
-custom_fonts/font = SubResource( 2 )
-text = "8-часовой"
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="."]
-margin_top = 295.0
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_right = 1920.0
-margin_bottom = 590.0
+margin_bottom = 1019.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 1920.0
+margin_bottom = 507.0
+size_flags_vertical = 3
 custom_constants/separation = 0
 
-[node name="VBoxContainer6" type="VBoxContainer" parent="HBoxContainer2"]
-margin_right = 407.0
-margin_bottom = 295.0
+[node name="Налоги на бедных" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+margin_right = 384.0
+margin_bottom = 507.0
+size_flags_horizontal = 3
 custom_constants/separation = 0
 
-[node name="Label" type="Label" parent="HBoxContainer2/VBoxContainer6"]
-margin_right = 407.0
-margin_bottom = 59.0
-custom_fonts/font = SubResource( 1 )
-text = "Выплаты безработным"
-
-[node name="Button" type="Button" parent="HBoxContainer2/VBoxContainer6"]
-margin_top = 59.0
-margin_right = 407.0
-margin_bottom = 118.0
-custom_fonts/font = SubResource( 2 )
-text = "Нет"
-
-[node name="Button2" type="Button" parent="HBoxContainer2/VBoxContainer6"]
-margin_top = 118.0
-margin_right = 407.0
-margin_bottom = 177.0
-custom_fonts/font = SubResource( 2 )
-text = "Малые выплаты"
-
-[node name="Button3" type="Button" parent="HBoxContainer2/VBoxContainer6"]
-margin_top = 177.0
-margin_right = 407.0
-margin_bottom = 236.0
-custom_fonts/font = SubResource( 2 )
-text = "Средние выплаты"
-
-[node name="Button4" type="Button" parent="HBoxContainer2/VBoxContainer6"]
-margin_top = 236.0
-margin_right = 407.0
-margin_bottom = 295.0
-custom_fonts/font = SubResource( 2 )
-text = "Большие выплаыты"
-
-[node name="VBoxContainer7" type="VBoxContainer" parent="HBoxContainer2"]
-margin_left = 407.0
-margin_right = 733.0
-margin_bottom = 295.0
+[node name="Налоги на богатых" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+margin_left = 384.0
+margin_right = 768.0
+margin_bottom = 507.0
+size_flags_horizontal = 3
 custom_constants/separation = 0
 
-[node name="Label" type="Label" parent="HBoxContainer2/VBoxContainer7"]
-margin_right = 326.0
-margin_bottom = 59.0
-custom_fonts/font = SubResource( 1 )
-text = "Здравохранение"
-align = 1
-
-[node name="Button" type="Button" parent="HBoxContainer2/VBoxContainer7"]
-margin_top = 59.0
-margin_right = 326.0
-margin_bottom = 118.0
-custom_fonts/font = SubResource( 2 )
-text = "Нет поддержки"
-
-[node name="Button2" type="Button" parent="HBoxContainer2/VBoxContainer7"]
-margin_top = 118.0
-margin_right = 326.0
-margin_bottom = 177.0
-custom_fonts/font = SubResource( 2 )
-text = "Малая поддержка"
-
-[node name="Button3" type="Button" parent="HBoxContainer2/VBoxContainer7"]
-margin_top = 177.0
-margin_right = 326.0
-margin_bottom = 236.0
-custom_fonts/font = SubResource( 2 )
-text = "Средняя поддержка"
-
-[node name="Button4" type="Button" parent="HBoxContainer2/VBoxContainer7"]
-margin_top = 236.0
-margin_right = 326.0
-margin_bottom = 295.0
-custom_fonts/font = SubResource( 2 )
-text = "Крупная поддержка"
-
-[node name="VBoxContainer8" type="VBoxContainer" parent="HBoxContainer2"]
-margin_left = 733.0
-margin_right = 1067.0
-margin_bottom = 295.0
+[node name="Пошлины" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+margin_left = 768.0
+margin_right = 1152.0
+margin_bottom = 507.0
+size_flags_horizontal = 3
 custom_constants/separation = 0
 
-[node name="Label" type="Label" parent="HBoxContainer2/VBoxContainer8"]
-margin_right = 334.0
-margin_bottom = 59.0
-custom_fonts/font = SubResource( 1 )
-text = "Гос. образование"
-align = 1
-
-[node name="Button" type="Button" parent="HBoxContainer2/VBoxContainer8"]
-margin_top = 59.0
-margin_right = 334.0
-margin_bottom = 118.0
-custom_fonts/font = SubResource( 2 )
-text = "Нет поддержки"
-
-[node name="Button2" type="Button" parent="HBoxContainer2/VBoxContainer8"]
-margin_top = 118.0
-margin_right = 334.0
-margin_bottom = 177.0
-custom_fonts/font = SubResource( 2 )
-text = "Малая поддержка"
-
-[node name="Button3" type="Button" parent="HBoxContainer2/VBoxContainer8"]
-margin_top = 177.0
-margin_right = 334.0
-margin_bottom = 236.0
-custom_fonts/font = SubResource( 2 )
-text = "Средняя поддержка"
-
-[node name="Button4" type="Button" parent="HBoxContainer2/VBoxContainer8"]
-margin_top = 236.0
-margin_right = 334.0
-margin_bottom = 295.0
-custom_fonts/font = SubResource( 2 )
-text = "Крупная поддержка"
-
-[node name="VBoxContainer9" type="VBoxContainer" parent="HBoxContainer2"]
-margin_left = 1067.0
-margin_right = 1415.0
-margin_bottom = 295.0
+[node name="Снабжение армии" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+margin_left = 1152.0
+margin_right = 1536.0
+margin_bottom = 507.0
+size_flags_horizontal = 3
 custom_constants/separation = 0
 
-[node name="Label" type="Label" parent="HBoxContainer2/VBoxContainer9"]
-margin_right = 348.0
-margin_bottom = 59.0
-custom_fonts/font = SubResource( 1 )
-text = "Помощь инвалидам"
-align = 1
+[node name="Государственное образование" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+margin_left = 1536.0
+margin_right = 1920.0
+margin_bottom = 507.0
+size_flags_horizontal = 3
+custom_constants/separation = 0
 
-[node name="Button" type="Button" parent="HBoxContainer2/VBoxContainer9"]
-margin_top = 59.0
-margin_right = 348.0
-margin_bottom = 118.0
-custom_fonts/font = SubResource( 2 )
-text = "Нет поддержки"
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 511.0
+margin_right = 1920.0
+margin_bottom = 1019.0
+size_flags_vertical = 3
+custom_constants/separation = 0
 
-[node name="Button2" type="Button" parent="HBoxContainer2/VBoxContainer9"]
-margin_top = 118.0
-margin_right = 348.0
-margin_bottom = 177.0
-custom_fonts/font = SubResource( 2 )
-text = "Малая поддержка"
+[node name="Здравохранение" type="VBoxContainer" parent="VBoxContainer/HBoxContainer2"]
+margin_right = 384.0
+margin_bottom = 508.0
+size_flags_horizontal = 3
+custom_constants/separation = 0
 
-[node name="Button3" type="Button" parent="HBoxContainer2/VBoxContainer9"]
-margin_top = 177.0
-margin_right = 348.0
-margin_bottom = 236.0
-custom_fonts/font = SubResource( 2 )
-text = "Средняя поддержка"
+[node name="Выплаты безработным" type="VBoxContainer" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 384.0
+margin_right = 768.0
+margin_bottom = 508.0
+size_flags_horizontal = 3
+custom_constants/separation = 0
 
-[node name="Button4" type="Button" parent="HBoxContainer2/VBoxContainer9"]
-margin_top = 236.0
-margin_right = 348.0
-margin_bottom = 295.0
-custom_fonts/font = SubResource( 2 )
-text = "Крупная поддержка"
+[node name="Пенсии" type="VBoxContainer" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 768.0
+margin_right = 1152.0
+margin_bottom = 508.0
+size_flags_horizontal = 3
+custom_constants/separation = 0
+
+[node name="Минимальная зарплата" type="VBoxContainer" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 1152.0
+margin_right = 1536.0
+margin_bottom = 508.0
+size_flags_horizontal = 3
+custom_constants/separation = 0
+
+[node name="Максимальный рабочий день" type="VBoxContainer" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 1536.0
+margin_right = 1920.0
+margin_bottom = 508.0
+size_flags_horizontal = 3
+custom_constants/separation = 0

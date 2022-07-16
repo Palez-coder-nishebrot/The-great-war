@@ -9,30 +9,30 @@ const military_technologies: Array = [
 ]
 
 var max_levels: Dictionary = {
-	"Фабричное производство":  6,
-	"Фермерское производство": 5,
-	"Добыча":                  5,
-	"Инфраструктура":          5,
+	"Фабричное производство":     6,
+	"Фермерское производство":    5,
+	"Добыча":                     5,
+	"Инфраструктура и снабжение": 5,
 	
-	"Управление армией":       5,
-	"Техника":                 6,
-	"Тяжелое вооружение":      6,
-	"Легкое вооружение":       5,
-	"Флот":                    5,
+	"Управление армией":          5,
+	"Техника":                    6,
+	"Тяжелое вооружение":         6,
+	"Легкое вооружение":          5,
+	"Флот":                       5,
 }
 
 
 var research: Dictionary = {
-	"Фабричное производство":  "factory_production",
-	"Фермерское производство": "farm_production",
-	"Добыча":                  "resourses_production",
-	"Инфраструктура":          "railways",
+	"Фабричное производство":   "factory_production",
+	"Фермерское производство":  "farm_production",
+	"Добыча":                   "resourses_production",
+	"Инфраструктура и снабжение":"railways",
 	
-	"Управление армией":       "ruling_of_army",
-	"Техника":                 "armored_vehicles",
-	"Тяжелое вооружение":      "heavy_weapon",
-	"Легкое вооружение":       "light_weapon",
-	"Флот":                    "fleet",
+	"Управление армией":        "ruling_of_army",
+	"Техника":                  "armored_vehicles",
+	"Тяжелое вооружение":       "heavy_weapon",
+	"Легкое вооружение":        "light_weapon",
+	"Флот":                     "fleet",
 }
 
 
@@ -166,11 +166,12 @@ const heavy_weapon: Dictionary = {
 	},
 	"Зенитные пулеметы":  {
 		">Артиллерия":           1,
-		"$Потребление_снарядов": 1
+		"$Потребление_снарядов": 1,
 	},
 	"Рельсовые пушки":    {
 		">Артиллерия":           1,
-		"$Потребление_снарядов": 1
+		"$Потребление_снарядов": 1,
+		"/Увеличенный состав батарей":   1,
 	},
 	"Зенитная артиллерия":{
 		">Артиллерия":           1,
@@ -273,7 +274,7 @@ const factory_production: Dictionary = {
 
 
 const farm_production: Dictionary = {
-	"Углеродные удобрения": {
+	"Применение удобрений": {
 		"-Зерно": 5,
 		"-Хлопок":5,
 		"-Чай":   5,
@@ -283,24 +284,23 @@ const farm_production: Dictionary = {
 	
 	"Гос. субсидии":         {
 		"-Зерно": 10,
-		"-Скот":  10,
+		"-Скот":  15,
 		"-Хлопок":10,
 		"-Лекарственные_растения": 10,
 	},
-	"Метод орошения полей": {
+	"Углеродные удобрения": {
 		"-Зерно": 5,
 		"-Хлопок":5,
 		"-Чай":   5,
 		"-Кофе":  5,
 		"-Лекарственные_растения": 5,
 	},
-	
-	"Гусеничные машины":     {
+	"Теплицы":     {
 		"-Зерно": 5,
-		"-Скот":  5,
 		"-Хлопок":5,
 		"-Чай":   5,
 		"-Кофе":  5,
+		"-Лекарственные_растения": 5,
 	},
 	"Фермерские тракторы":   {
 		"-Зерно": 10,
@@ -318,6 +318,7 @@ const farm_production: Dictionary = {
 		"-Зерно": 10,
 		"-Чай":   10,
 		"-Кофе":  10,
+		"-Скот":  10,
 		"-Хлопок": 5,
 		"-Лекарственные_растения": 5,
 	},
@@ -325,9 +326,16 @@ const farm_production: Dictionary = {
 
 
 const resourses_production: Dictionary = {
-	"Электрические лифты": {
+	"Нержавеющая сталь":     {
+		"-Железо":    10,
+		"-Уголь":   10,
+		"-Сталь":   20
+		},
+	
+	"Нефтяные хранилища": {
 		"-Железо":    15,
 		"-Селитра":   15,
+		"-Нефть":     15,
 	},
 	
 	"Электропечи":           {
@@ -340,12 +348,6 @@ const resourses_production: Dictionary = {
 		"-Уголь":   10,
 		"-Сталь":   5,
 		"-Селитра": 5,
-		},
-		
-	"Нержавеющая сталь":     {
-		"-Железо":    10,
-		"-Уголь":   10,
-		"-Сталь":   20
 		},
 		
 	"Новый метод добычи руды": {
@@ -383,12 +385,19 @@ const railways: Dictionary = {
 		"-Уголь":           5,
 		"-Железо":          5,
 	},
+	"Прифронтовые склады":     {
+		"+Железная дорога": 1,
+		"$Снабжение":       1,
+	},
 	"Рельсы для фабрик":       {
 		"+Инфраструктура":  1,
 		"+Железная дорога": 1,
 		"-Сталь":           5,
 		"-Стекло":          5,
 		"-Удобрения":       5,
+	},
+	"Выброска припасов":     {
+		"$Снабжение":       1,
 	},
 	"Автобаны":                {
 		"+Инфраструктура":  1,
@@ -415,18 +424,18 @@ func research_completed(dict, player):
 	
 	player.levels_of_technologies[dict.tipe_of_technology] += 1
 	
-	if player.get_groups()[1] == "Human":
+	if player.get_groups().has("Human") == true:
 		player.window_research_end.update_information(results_of_technology, dict.technology)
 		player.window_research.update_information()
 
 
 func _research_completed(technology, dict, player):
-	for i in dict:
+	var list = get(research[dict.tipe_of_technology])[technology]
+	for i in list:
 		#var unit = i.erase(i[0], "!", ">", "*")
-		var number = dict[i]
+		var number = list[i]
 		var action = check_action_with_unit(i)
 		i.erase(0, 1)
-		
 		match action:
 			"Новый тип войск":
 				player.units_for_training.append(i)
@@ -444,7 +453,7 @@ func _research_completed(technology, dict, player):
 				pass
 				
 			"Выпуск продукции":
-				player.speed_production[i] += dict[i]
+				player.bonuses_in_production[i] += number
 				
 			"Инфраструктура":
 				pass
@@ -474,6 +483,8 @@ func check_action_with_unit(i):
 		
 		"/":
 			return "Изобретение"
+	
+	return "Ничего не найдено!"
 
 
 func return_results_of_research(dict):

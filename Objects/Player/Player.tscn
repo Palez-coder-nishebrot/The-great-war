@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Objects/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Objects/Player/Window_province/Window_province.tscn" type="PackedScene" id=2]
@@ -8,7 +8,6 @@
 [ext_resource path="res://Objects/Player/Window_production/Production.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Objects/Player/Window_build_factory/Build_factory.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Objects/Player/Window_parties/Parties.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Objects/Player/Window_export_import/Export_import.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Objects/Player/Window_reforms/Reform.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Objects/Player/Window_taxes/Taxes.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Objects/Player/Window_population/Population.tscn" type="PackedScene" id=12]
@@ -38,11 +37,6 @@ margin_bottom = 1080.0
 
 [node name="Markets" parent="CanvasLayer" instance=ExtResource( 5 )]
 visible = false
-
-[node name="Export_import" parent="CanvasLayer" instance=ExtResource( 9 )]
-visible = false
-margin_bottom = 1131.0
-rect_scale = Vector2( 1, 0.95 )
 
 [node name="Build_factory" parent="CanvasLayer" instance=ExtResource( 7 )]
 visible = false

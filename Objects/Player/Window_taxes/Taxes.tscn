@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Graphics/Fonts/pixel_1.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Objects/Player/Window_taxes/Taxes.gd" type="Script" id=2]
@@ -11,6 +11,11 @@ font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 25
+extra_spacing_top = 5
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 34
 extra_spacing_top = 5
 font_data = ExtResource( 1 )
 
@@ -32,7 +37,7 @@ margin_bottom = 730.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
 margin_right = 410.0
-margin_bottom = 744.0
+margin_bottom = 1001.0
 custom_constants/separation = 0
 
 [node name="Label" type="Label" parent="ScrollContainer/VBoxContainer"]
@@ -54,6 +59,7 @@ margin_bottom = 37.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 2 )
+disabled = true
 text = "0%"
 script = ExtResource( 3 )
 
@@ -137,6 +143,7 @@ margin_bottom = 37.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 2 )
+disabled = true
 text = "0%"
 script = ExtResource( 3 )
 
@@ -230,6 +237,7 @@ margin_bottom = 37.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 2 )
+disabled = true
 text = "0%"
 script = ExtResource( 3 )
 
@@ -313,6 +321,7 @@ margin_bottom = 37.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 2 )
+disabled = true
 text = "10%"
 script = ExtResource( 3 )
 
@@ -376,98 +385,222 @@ custom_fonts/font = SubResource( 2 )
 text = "100%"
 script = ExtResource( 3 )
 
-[node name="Label4" type="Label" parent="ScrollContainer/VBoxContainer"]
+[node name="Label17" type="Label" parent="ScrollContainer/VBoxContainer"]
 margin_top = 312.0
 margin_right = 410.0
-margin_bottom = 348.0
+margin_bottom = 352.0
+custom_fonts/font = SubResource( 4 )
+text = "Финансирование школ"
+align = 1
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+margin_top = 352.0
+margin_right = 410.0
+margin_bottom = 389.0
+custom_constants/separation = 0
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer5"]
+margin_right = 57.0
+margin_bottom = 37.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+disabled = true
+text = "5R"
+script = ExtResource( 3 )
+
+[node name="Button2" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer5"]
+margin_left = 57.0
+margin_right = 114.0
+margin_bottom = 37.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+text = "20R"
+script = ExtResource( 3 )
+
+[node name="Button3" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer5"]
+margin_left = 114.0
+margin_right = 171.0
+margin_bottom = 37.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+text = "40R"
+script = ExtResource( 3 )
+
+[node name="Button4" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer5"]
+margin_left = 171.0
+margin_right = 228.0
+margin_bottom = 37.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+text = "50R"
+script = ExtResource( 3 )
+
+[node name="Button5" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer5"]
+margin_left = 228.0
+margin_right = 285.0
+margin_bottom = 37.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+text = "60R"
+script = ExtResource( 3 )
+
+[node name="Button6" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer5"]
+margin_left = 285.0
+margin_right = 342.0
+margin_bottom = 37.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+text = "80R"
+script = ExtResource( 3 )
+
+[node name="Button7" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer5"]
+margin_left = 342.0
+margin_right = 410.0
+margin_bottom = 37.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+text = "100R"
+script = ExtResource( 3 )
+
+[node name="Label4" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 389.0
+margin_right = 410.0
+margin_bottom = 425.0
 custom_fonts/font = SubResource( 3 )
 text = "Модель экономики"
 align = 1
 
 [node name="Label5" type="Label" parent="ScrollContainer/VBoxContainer"]
-margin_top = 348.0
+margin_top = 425.0
 margin_right = 410.0
-margin_bottom = 384.0
+margin_bottom = 461.0
 custom_fonts/font = SubResource( 3 )
 text = "Торговая_политика"
 align = 1
 
 [node name="Label6" type="Label" parent="ScrollContainer/VBoxContainer"]
-margin_top = 384.0
+margin_top = 461.0
 margin_right = 410.0
-margin_bottom = 420.0
+margin_bottom = 497.0
 custom_fonts/font = SubResource( 3 )
 text = "Цена_на_фабрики"
 align = 1
 
 [node name="Label7" type="Label" parent="ScrollContainer/VBoxContainer"]
-margin_top = 420.0
+margin_top = 497.0
 margin_right = 410.0
-margin_bottom = 456.0
+margin_bottom = 533.0
 custom_fonts/font = SubResource( 3 )
 text = "Субсидирование"
 align = 1
 
 [node name="Label8" type="Label" parent="ScrollContainer/VBoxContainer"]
-margin_top = 456.0
+margin_top = 533.0
 margin_right = 410.0
-margin_bottom = 492.0
+margin_bottom = 569.0
 custom_fonts/font = SubResource( 3 )
 text = "Доходы_фабрикантов"
 align = 1
 
 [node name="Label9" type="Label" parent="ScrollContainer/VBoxContainer"]
-margin_top = 492.0
+margin_top = 569.0
 margin_right = 410.0
-margin_bottom = 528.0
+margin_bottom = 605.0
 custom_fonts/font = SubResource( 3 )
 text = "Детские приюты"
 align = 1
 
 [node name="Label10" type="Label" parent="ScrollContainer/VBoxContainer"]
-margin_top = 528.0
+margin_top = 605.0
 margin_right = 410.0
-margin_bottom = 564.0
+margin_bottom = 641.0
 custom_fonts/font = SubResource( 3 )
 text = "Жалование солдатам"
 align = 1
 
 [node name="Label11" type="Label" parent="ScrollContainer/VBoxContainer"]
-margin_top = 564.0
+margin_top = 641.0
 margin_right = 410.0
-margin_bottom = 600.0
+margin_bottom = 677.0
 custom_fonts/font = SubResource( 3 )
 text = "Здравохранение"
 align = 1
 
 [node name="Label12" type="Label" parent="ScrollContainer/VBoxContainer"]
-margin_top = 600.0
+margin_top = 677.0
 margin_right = 410.0
-margin_bottom = 636.0
+margin_bottom = 713.0
 custom_fonts/font = SubResource( 3 )
 text = "Образование"
 align = 1
 
 [node name="Label13" type="Label" parent="ScrollContainer/VBoxContainer"]
-margin_top = 636.0
+margin_top = 713.0
 margin_right = 410.0
-margin_bottom = 672.0
+margin_bottom = 749.0
 custom_fonts/font = SubResource( 3 )
 text = "Пенсии"
 align = 1
 
 [node name="Label14" type="Label" parent="ScrollContainer/VBoxContainer"]
-margin_top = 672.0
+margin_top = 749.0
 margin_right = 410.0
-margin_bottom = 708.0
+margin_bottom = 785.0
 custom_fonts/font = SubResource( 3 )
 text = "Выплаты безработным"
 align = 1
 
 [node name="Label15" type="Label" parent="ScrollContainer/VBoxContainer"]
-margin_top = 708.0
+margin_top = 785.0
 margin_right = 410.0
-margin_bottom = 744.0
+margin_bottom = 821.0
 custom_fonts/font = SubResource( 3 )
 text = "Помощь инвалидам"
+align = 1
+
+[node name="Label18" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 821.0
+margin_right = 410.0
+margin_bottom = 857.0
+custom_fonts/font = SubResource( 3 )
+text = "Финансирование школ"
+align = 1
+
+[node name="Label19" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 857.0
+margin_right = 410.0
+margin_bottom = 893.0
+custom_fonts/font = SubResource( 3 )
+text = "Снабжение армии"
+align = 1
+
+[node name="Label20" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 893.0
+margin_right = 410.0
+margin_bottom = 929.0
+custom_fonts/font = SubResource( 3 )
+text = "Пошлины"
+align = 1
+
+[node name="Label21" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 929.0
+margin_right = 410.0
+margin_bottom = 965.0
+custom_fonts/font = SubResource( 3 )
+text = "Налоги на бедных"
+align = 1
+
+[node name="Label22" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 965.0
+margin_right = 410.0
+margin_bottom = 1001.0
+custom_fonts/font = SubResource( 3 )
+text = "Налоги на богатых"
 align = 1

@@ -4,8 +4,7 @@ extends HBoxContainer
 onready var list_of_buttons: Dictionary = {
 	"Производство":     "window_production",
 	"Рынки":            "window_markets",
-	"Экспорт/Импорт":   "window_export_import",
-	"Налоги":           "window_taxes",
+	"Бюджет":           "window_taxes",
 	"Реформы":          "window_reform",
 	"Предпарламент":    "window_parties",
 	"Военные заказы":   "window_parties",

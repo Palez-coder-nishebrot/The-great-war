@@ -28,9 +28,10 @@ position = Vector2( 41, -44 )
 shape = SubResource( 1 )
 
 [node name="Label" type="Button" parent="."]
-margin_left = -43.0
+margin_left = -129.0
 margin_right = 127.0
-margin_bottom = 40.0
+margin_bottom = 46.0
+rect_pivot_offset = Vector2( 617, -176 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )

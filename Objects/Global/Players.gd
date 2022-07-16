@@ -76,10 +76,14 @@ const economy: Dictionary = {
 	
 	"Налоги_на_бедных":     0,
 	"Налоги_на_богатых":    0,
+	"Финансирование_школ":  0,
 	"ВВП":                  0,
-	"Кроны":                0,
+	"Кроны":                15000,
+	"Очки_исследования":    0,
 	
-	"Снабжение_армии":      0,
+	"Снабжение_армии":      10,
+	
+	"Минимальная_зарплата": 0,
 }
 
 
@@ -195,7 +199,7 @@ const buildings_on_start: Dictionary = {
 		"Электрозапчасти": 1,
 		"Автозапчасти":    1,
 	},
-	"Хлебозавод": {
+	"Пекарня": {
 		"Миксеры":         1,
 		"Электропечи":     1,
 		"Автозапчасти":    1,
@@ -215,55 +219,79 @@ const buildings_on_start: Dictionary = {
 }
 
 const goods_to_factory: Dictionary = {
-"Сталь":           "Сталелитейный_завод",
-"Ткань":           "Текстильная_фабрика",
-"Стекло":          "Стеклозавод",
-"Электрозапчасти": "Завод_электрозапчастей",
-"Автозапчасти":    "Завод_автозапчастей",
-"Удобрения":       "Завод_удобрений",
-"Пиломатериалы":   "Завод_пиломатериалов",
-"Динамит":         "Завод_динамита",
-"Автомобили":      "Автозавод",
-"Тракторы":        "Тракторный_завод",
-"Телеграфы":       "Телеграфный_завод",
-"Телефоны":        "Телефонный_завод",
-"Радио":           "Радиозавод",
-"Мебель":          "Мебельная_фабрика",
-"Спиртное":        "Спиртзавод",
-"Одежда":          "Фабрика_одежды",
-"Обогреватели":    "Фабрика_обогревателей",
-"Хлеб":            "Хлебозавод",
-"Консервы":        "Консервзавод",
-"Топливо":         "Топливный_завод",
-"Аэроплан":        "Авиазавод",
+	"Лекарства":       "Фабрика медикаментов",
+	"Сталь":           "Сталелитейный_завод",
+	"Ткань":           "Текстильная_фабрика",
+	"Стекло":          "Стеклозавод",
+	"Электрозапчасти": "Завод_электрозапчастей",
+	"Автозапчасти":    "Завод_автозапчастей",
+	"Удобрения":       "Завод_удобрений",
+	"Пиломатериалы":   "Завод_пиломатериалов",
+	"Динамит":         "Завод_динамита",
+	"Автомобили":      "Автозавод",
+	"Тракторы":        "Тракторный_завод",
+	"Телеграфы":       "Телеграфный_завод",
+	"Телефоны":        "Телефонный_завод",
+	"Радио":           "Радиозавод",
+	"Мебель":          "Мебельная_фабрика",
+	"Спиртное":        "Спиртзавод",
+	"Одежда":          "Фабрика_одежды",
+	"Обогреватели":    "Фабрика_обогревателей",
+	"Хлеб":            "Пекарня",
+	"Консервы":        "Консервзавод",
+	"Топливо":         "Топливный_завод",
+	"Аэроплан":        "Авиазавод",
 
 }
 
-const bonuses_in_production: Dictionary = {
-	"Уголь":           0,
-	"Железо":          0,
-	"Нефть":           0,
-	"Резина":          0,
-	"Селитра":         0,
-	"Зерно":           0,
-	"Скот":            0,
-	"Лекарственные_растения": 0,
+
+const sprites_of_goods: Dictionary = {
+	"Уголь":     "res://Graphics/Sprites/Goods/Coal.png",
+	"Железо":    "res://Graphics/Sprites/Goods/Iron.png",
+	"Нефть":     "res://Graphics/Sprites/Goods/Oil.png",
+	"Резина":    "res://Graphics/Sprites/Goods/Rubber.png",
+	"Хлопок":    "res://Graphics/Sprites/Goods/Cotton.png",
+	"Зерно":     "res://Graphics/Sprites/Goods/Seed.png",
+	"Скот":      "res://Graphics/Sprites/Goods/Cattle.png",
+	"Селитра":   "res://Graphics/Sprites/Goods/Nitrate.png",
+	"Древесина": "res://Graphics/Sprites/Goods/Wood.png",
+	"Лекарственные_растения": "res://Graphics/Sprites/Goods/Wood.png",
 	
-	"Сталь":           0,
-	"Электрозапчасти": 0,
-	"Автозапчасти":    0,
-	"Автомобили":      0,
-	"Тракторы":        0,
-	"Телефоны":        0,
-	"Радио":           0,
+	"Сталь":           "res://Graphics/Sprites/Goods/Steel.png",
+	"Стекло":          "res://Graphics/Sprites/Goods/Glass.png",
+	"Ткань":           "res://Graphics/Sprites/Goods/Fabric.png",
+	"Электрозапчасти": "res://Graphics/Sprites/Goods/Electric parts.png",
+	"Автозапчасти":    "res://Graphics/Sprites/Goods/Electric parts.png",
+	"Удобрения":       "res://Graphics/Sprites/Goods/Fertilizer.png",
+	"Пиломатериалы":   "res://Graphics/Sprites/Goods/Nitrate.png",
+	"Динамит":         "res://Graphics/Sprites/Goods/Nitrate.png",
 	
-	"Хлеб":            0,
-	"Консервы":        0,
-	"Топливо":         0,
-	"Лекарства":       0,
+	"Автомобили":      "res://Graphics/Sprites/Goods/Car.png",
+	"Тракторы":        "res://Graphics/Sprites/Goods/Car.png",
+	"Телеграфы":       "res://Graphics/Sprites/Goods/Telegraph.png",
+	"Телефоны":        "res://Graphics/Sprites/Goods/Phone.png",
+	"Радио":           "res://Graphics/Sprites/Goods/Radio.png",
 	
+	"Мебель":          "res://Graphics/Sprites/Goods/Furniture.png",
+	"Спиртное":        "res://Graphics/Sprites/Goods/Alhohol.png",
+	"Одежда":          "res://Graphics/Sprites/Goods/Clothes.png",
+	"Обогреватели":    "res://Graphics/Sprites/Goods/Heater.png",
+	"Хлеб":            "res://Graphics/Sprites/Goods/Bread.png",
+	"Консервы":        "res://Graphics/Sprites/Goods/Canned food.png",
+	"Топливо":         "res://Graphics/Sprites/Goods/Gas.png",
+	"Табак":           "res://Graphics/Sprites/Goods/Tabaco.png",
+	"Лекарства":       "res://Graphics/Sprites/Goods/Nitrate.png",
+	"Чай":             "res://Graphics/Sprites/Goods/Tea.png",
+	"Кофе":            "res://Graphics/Sprites/Goods/Coffee.png", 
 	
+	"Снаряды":             "res://Graphics/Sprites/Goods/Shells.png",
+	"Боеприпасы":          "res://Graphics/Sprites/Goods/Ammunition.png",
+	"Пулеметы":            "res://Graphics/Sprites/Goods/Machine gun.png",
+	"Артиллерия":          "res://Graphics/Sprites/Goods/Artillery.png",
+	"Аэроплан":            "res://Graphics/Sprites/Goods/Airplane.png",
+	"Магазинные_винтовки": "res://Graphics/Sprites/Goods/Bolt-action rifle.png",
 }
+
 
 const output: Dictionary = {
 	"Уголь":     0,
@@ -358,16 +386,16 @@ const units_for_training: Array = [
 
 
 const levels_of_technologies: Dictionary = {
-	"Фабричное производство":  0,
-	"Фермерское производство": 0,
-	"Добыча":                  0,
-	"Инфраструктура":          0,
+	"Фабричное производство":    0,
+	"Фермерское производство":   0,
+	"Добыча":                    0,
+	"Инфраструктура и снабжение":0,
 	
-	"Управление армией":       0,
-	"Техника":                 0,
-	"Тяжелое вооружение":      0,
-	"Легкое вооружение":       0,
-	"Флот":                    0,
+	"Управление армией":         0,
+	"Техника":                   0,
+	"Тяжелое вооружение":        0,
+	"Легкое вооружение":         0,
+	"Флот":                      0,
 }
 
 

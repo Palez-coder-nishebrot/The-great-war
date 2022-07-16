@@ -43,11 +43,11 @@ func find_factories_with_good(good, list):
 
 
 func get_price_of_good_on_local_market(good):
-	var perc = 5
-	
-	var price = GlobalMarket.prices_of_goods[good]
-	price = price - int((float(price) / 100.0 * float(perc)) + 1)
-	return price
+#	var perc = 5
+#
+#	var price = GlobalMarket.prices_of_goods[good]
+#	price = price - int((float(price) / 100.0 * float(perc)) + 1)
+	return GlobalMarket.prices_of_goods[good]
 
 
 func get_price_of_good_on_global_market(good, tariff, quanity):
@@ -60,11 +60,13 @@ func check_good_on_global_market(good, quanity):
 	for player in list:
 		if list[player] >= quanity:
 			return list
+	return false
 	
 	
 func buy_good_on_global_market(good, quanity, list, player):
 	list[player] -= quanity
 	GlobalMarket.demand[good] += quanity
+	player.import_of_goods[good] += quanity
 	return get_price_of_good_on_global_market(good, player.economy["Пошлины"], quanity)
 	
 

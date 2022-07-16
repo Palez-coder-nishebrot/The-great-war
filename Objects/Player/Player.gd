@@ -4,10 +4,9 @@ var warhouse_of_goods:     Dictionary     = GlobalMarket.prices_of_goods.duplica
 var local_market:          Dictionary     = GlobalMarket.prices_of_goods.duplicate()
 var export_of_goods:       Dictionary     = GlobalMarket.prices_of_goods.duplicate()
 var import_of_goods:       Dictionary     = GlobalMarket.prices_of_goods.duplicate()
-var bonuses_in_production: Dictionary     = Players.bonuses_in_production.duplicate()
 
+var bonuses_in_production: Dictionary     = Players.output.duplicate()
 var output:                Dictionary     = Players.output.duplicate()
-var speed_production:      Dictionary     = Players.output.duplicate()
 var economy:               Dictionary     = Players.economy.duplicate()
 var policy:                Dictionary     = {
 	"Правящая_партия": null,
@@ -49,11 +48,12 @@ var national_color:     Color
 var researching_object: Object
 var capitalists:        Object = (load("res://Objects/Population/Capitalists.gd").new()).start()
 
+var points_of_research: int = 0
+
 onready var window_province:      Panel = $CanvasLayer/Province
 onready var window_markets:       Panel = $CanvasLayer/Markets
 onready var window_build_factory: Panel = $CanvasLayer/Build_factory
 onready var window_production:    Panel = $CanvasLayer/Production
-onready var window_export_import: Panel = $CanvasLayer/Export_import
 onready var window_parties:       Panel = $CanvasLayer/Parties
 onready var window_taxes:         Panel = $CanvasLayer/Taxes
 onready var window_reform:        Panel = $CanvasLayer/Reform
@@ -68,16 +68,16 @@ onready var game:                 Node2D          = get_parent()
 
 func _process(delta):
 	
-	if Input.is_action_pressed("W") and position.y >= 1200:
+	if Input.is_action_pressed("W"):# and position.y >= 1200:
 		position.y -= speed_of_camera
 
-	if Input.is_action_pressed("A") and position.x >= 1600:
+	if Input.is_action_pressed("A"):# and position.x >= 1600:
 		position.x -= speed_of_camera
 		
-	if Input.is_action_pressed("S") and position.y <= 2100:
+	if Input.is_action_pressed("S"):# and position.y <= 2100:
 		position.y += speed_of_camera
 		
-	if Input.is_action_pressed("D") and position.x <= 2400:
+	if Input.is_action_pressed("D"):# and position.x <= 2400:
 		position.x += speed_of_camera
 	
 

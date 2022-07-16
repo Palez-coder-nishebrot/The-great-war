@@ -11,9 +11,9 @@ var game
 var player
 
 var max_day = 3
+var day = 0
 
 func start():
-	var day = 0
 	
 	while day != max_day:
 		yield(game, "new_day")
@@ -22,10 +22,9 @@ func start():
 	
 	player.researching_object = null
 	Research.research_completed(technology, Players.player)
-	
 	queue_free()
 
 
 func send_info(day):
 	if player.get_groups()[1] == "Human":
-		player.window_research.get_node("Label").text = technology.technology + ": " + str((max_day / 100) * day) + "%"
+		player.window_research.get_node("Label").text = technology.technology + "(ост. " + str(max_day - day) + "дн.)"

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/TileMap/TileMap.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/TileMap/Map.jpg" type="Texture" id=2]
+[ext_resource path="res://Objects/Tile/Village.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Objects/Tile/Point.tscn" type="PackedScene" id=4]
 
 [node name="TileMap" type="Node2D"]
@@ -239,3 +240,84 @@ position = Vector2( 3675, 2153 )
 
 [node name="Батые" parent="." instance=ExtResource( 4 )]
 position = Vector2( 3771, 2519 )
+
+[node name="Снина" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2190, 1517 )
+
+[node name="Гуменне" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2059, 1411 )
+
+[node name="Свидник" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1873, 1711 )
+
+[node name="Замосць" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2059, 1944 )
+
+[node name="Нароль" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2470, 1971 )
+
+[node name="Раковчик" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2635, 1340 )
+
+[node name="Пядичи" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3504, 2120 )
+
+[node name="Нырков" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2820, 1314 )
+
+[node name="Залещики" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2850, 1482 )
+
+[node name="Заставна" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3343, 1404 )
+
+[node name="Мигово" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3176, 1487 )
+
+[node name="Вижница" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2500, 1810 )
+
+[node name="Богородчаны" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3004, 1723 )
+
+[node name="Угринов" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3214, 1774 )
+
+[node name="Тлумач" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3241, 2199 )
+
+[node name="Отыния" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3492, 1802 )
+
+[node name="Заболотов" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3492, 1802 )
+
+[node name="Делятин" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3492, 1802 )
+
+[node name="Надворная" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3492, 1802 )
+
+[node name="Поляница" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3492, 1802 )
+
+[node name="Ворохта" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3492, 1802 )
+
+[node name="Рахов" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3492, 1802 )
+
+[node name="Жешув" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3492, 1802 )
+
+[node name="Кросно" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3492, 1802 )
+
+[node name="Яремче" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3492, 1802 )
+
+[node name="Червоноград" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3492, 1802 )
+
+[node name="Трускавец" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3492, 1802 )

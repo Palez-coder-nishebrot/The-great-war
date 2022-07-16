@@ -4,8 +4,8 @@ var warhouse_of_goods:     Dictionary     = GlobalMarket.prices_of_goods.duplica
 var local_market:          Dictionary     = GlobalMarket.prices_of_goods.duplicate()
 var export_of_goods:       Dictionary     = GlobalMarket.prices_of_goods.duplicate()
 var import_of_goods:       Dictionary     = GlobalMarket.prices_of_goods.duplicate()
-var bonuses_in_production: Dictionary     = Players.bonuses_in_production.duplicate()
 
+var bonuses_in_production: Dictionary     = Players.output.duplicate()
 var output:                Dictionary     = Players.output.duplicate()
 var speed_production:      Dictionary     = Players.output.duplicate()
 var economy:               Dictionary     = Players.economy.duplicate()
@@ -41,3 +41,5 @@ var national_flag:      Sprite
 var national_color:     Color
 var researching_object: Object
 var capitalists:        Object = (load("res://Objects/Population/Capitalists.gd").new()).start()
+
+var points_of_research: int = 0

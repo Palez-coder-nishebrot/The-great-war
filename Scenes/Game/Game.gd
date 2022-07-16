@@ -90,6 +90,8 @@ func update_data():
 
 func circle_of_game():
 	
+	school_funding() #Финансирование школ
+	
 	start_resourse_extraction()
 	
 	make_goods()
@@ -112,8 +114,6 @@ func circle_of_game():
 	Players.player.window_production.update_information()
 	Players.player.window_population.update_information()
 	
-	
-	Players.player.window_export_import.update_information()
 	GlobalMarket.clear_export_and_import()
 
 
@@ -145,3 +145,11 @@ func buy_goods_for_factory():
 func meet_the_needs_of_population():
 	for i in Players.list_of_players:
 		purchase_manager.meet_the_needs(i, i.list_of_soc_classes)
+
+
+func school_funding():
+	for i in Players.list_of_players:
+		var cost = i.economy["Финансирование_школ"]
+		cost = cost * (i.list_of_tiles.size() * 8)
+		i.economy["Кроны"] = i.economy["Кроны"] - cost
+
