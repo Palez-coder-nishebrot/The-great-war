@@ -19,8 +19,10 @@ var list_of_speed_of_game: Dictionary = {
 var speed_of_game: float = 1.0
 var pause:         bool  = false
 var list_of_privinces: Array = []
+var list_of_soc_classes: Array = []
 
-var purchase_manager: Object = load("res://Objects/Global/PurchaseManager.gd").new()
+var purchase_manager: Object = load("res://Objects/Global/ManagerPurchase.gd").new()
+var factory_manager: Object = load("res://Objects/Global/ManagerFactory.gd").new()
 
 func _ready():
 	#GlobalMarket.update_prices()
@@ -49,8 +51,6 @@ func create_players():
 			Players.list_of_players.append(player)
 			
 			create_parties(player)
-			
-	GlobalMarket.append_dictionary(Players.list_of_players)
 	
 	$TileMap.create_map()
 	Players.player.window_parties.update()
@@ -90,20 +90,19 @@ func update_data():
 
 func circle_of_game():
 	
-	school_funding() #Финансирование школ
+	#school_funding() #Финансирование школ
 	
 	start_resourse_extraction()
-	
-	make_goods()
-	
-	buy_goods_for_factory()
-	
-	meet_the_needs_of_population()
-	
-	GlobalMarket.update_prices()
-	GlobalMarket.clear_supply_and_demand()
+
+	factory_manager.make_goods() # Производство товаров фабриками
+
+	factory_manager.buy_purchase() # Купить сырье для фабрик
+
+	purchase_manager.meet_the_needs() # Купить товары для населения
 	
 	GlobalMarket.export_goods_from_local_markets()
+	
+	GlobalMarket.update_prices()
 	
 	Players.player.information.check_GDP()
 	
@@ -112,9 +111,10 @@ func circle_of_game():
 	Players.player.window_markets.update_information()
 	
 	Players.player.window_production.update_information()
-	Players.player.window_population.update_information()
+	#Players.player.window_population.update_information()
 	
 	GlobalMarket.clear_export_and_import()
+	GlobalMarket.clear_supply_and_demand()
 
 
 func clear_GDP():
@@ -123,9 +123,7 @@ func clear_GDP():
 
 
 func start_resourse_extraction():
-	for i in list_of_privinces:
-		i.household.start_resourse_extraction()
-		i.household.find_work()
+	purchase_manager.resourse_extraction(self)
 		
 		
 func make_goods():
@@ -142,14 +140,14 @@ func buy_goods_for_factory():
 				y.buy_purchase()
 
 
-func meet_the_needs_of_population():
-	for i in Players.list_of_players:
-		purchase_manager.meet_the_needs(i, i.list_of_soc_classes)
-
-
 func school_funding():
 	for i in Players.list_of_players:
-		var cost = i.economy["Финансирование_школ"]
-		cost = cost * (i.list_of_tiles.size() * 8)
-		i.economy["Кроны"] = i.economy["Кроны"] - cost
+		#var cost = i.economy["Финансирование_школ"]
+		#cost = cost * (i.list_of_tiles.size() * 8)
+		#i.economy["Кроны"] = i.economy["Кроны"] - cost
+		
+		increase_literate_population(i)
 
+func increase_literate_population(player):
+	
+	pass

@@ -14,7 +14,7 @@ func update_information(list, parent):
 		update()
 
 func update():
-	$Label.text = province.name_of_tile + "(" + str(province.household.quanity) + ")"
+	$HBoxContainer2/Label.text = province.name_of_tile + "(" + str(province.list_of_households.size()) + ")"
 	emit_signal("update_info", list_of_panels)
 
 	for i in province.list_of_buildings:
@@ -27,4 +27,8 @@ func update():
 			connect("update_info", panel, "update_information")
 			
 			$HBoxContainer.add_child(panel)
-			pass
+
+
+func open_building_window():
+	get_parent().get_parent().get_parent().get_parent().get_parent().window_build_factory.province = province
+	get_parent().get_parent().get_parent().get_parent().get_parent().window_build_factory.visible = true

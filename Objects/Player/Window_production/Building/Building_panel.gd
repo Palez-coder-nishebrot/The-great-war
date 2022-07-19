@@ -47,7 +47,7 @@ func update_information_of_factory():
 	$Button2.text = "Субсидирование: " + subsidization_list[building.subsidization]
 	$VBoxContainer/Label4.text = "Выпуск продукции:" + str(get_speed_production())
 	$VBoxContainer/Label2.text= (
-		"Рабочие:" + str(building.employed_number)+ "/" +str(building.max_employed_number))
+		"Рабочие:" + str(building.list_of_workers.size())+ "/" +str(building.max_employed_number))
 	
 	show_expansion_of_factory()
 	
@@ -62,7 +62,7 @@ func show_expansion_of_factory():
 	
 
 func get_speed_production():
-	return building.employed_number * building.check_bonuses_for_production()
+	return building.list_of_workers.size() * building.province.player.get_parent().factory_manager.check_bonuses_for_production(building.good)
 	
 	
 func show_resourses():
@@ -86,8 +86,9 @@ func update_subsidization():
 
 
 func update_information_of_procces():
-	$Label.text = "Строительство"
-
+	$Label.text = building.building.good
+	$VBoxContainer/Label4.text = "Строительство(ост." + str(building.building.time - building.time) + "дн)"
+	
 
 func open_information():
 	window.info_about_factory_window.factory = building
@@ -97,9 +98,7 @@ func open_information():
 func start_expansion_of_factory():
 	building.start_expansion_of_factory()
 	$Button3.disabled = true
-	pass
 
 
 func open_factory():
 	building.open_factory()
-	pass # Replace with function body.

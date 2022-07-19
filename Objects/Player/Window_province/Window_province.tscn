@@ -1,16 +1,15 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
+[ext_resource path="res://Graphics/Sprites/Goods/Airplane.png" type="Texture" id=1]
 [ext_resource path="res://Objects/Player/Window_province/Window_province.gd" type="Script" id=2]
 [ext_resource path="res://Graphics/Fonts/pixel_2.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=5]
-size = 48
-extra_spacing_top = 10
+size = 32
 font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 32
-extra_spacing_top = 10
 font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=3]
@@ -29,86 +28,79 @@ margin_right = 312.0
 margin_bottom = 677.0
 script = ExtResource( 2 )
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_right = 396.0
-margin_bottom = 467.0
-rect_scale = Vector2( 0.6, 0.6 )
-custom_constants/separation = 0
-
-[node name="Name" type="Label" parent="VBoxContainer"]
-margin_right = 396.0
-margin_bottom = 58.0
+[node name="Name" type="Label" parent="."]
+margin_right = 340.0
+margin_bottom = 32.0
+rect_scale = Vector2( 0.7, 0.7 )
 custom_fonts/font = SubResource( 5 )
 text = "Провинция"
 align = 1
 valign = 1
 
-[node name="Country" type="Label" parent="VBoxContainer"]
-margin_top = 58.0
-margin_right = 396.0
-margin_bottom = 100.0
-custom_fonts/font = SubResource( 2 )
+[node name="Country" type="Label" parent="."]
+margin_top = 22.0
+margin_right = 366.0
+margin_bottom = 54.0
+rect_scale = Vector2( 0.65, 0.65 )
+custom_fonts/font = SubResource( 5 )
 text = "Государство"
 align = 1
 valign = 1
 
-[node name="Resourses" type="Label" parent="VBoxContainer"]
-margin_top = 100.0
-margin_right = 396.0
-margin_bottom = 142.0
-custom_fonts/font = SubResource( 2 )
-text = "Ресурсы"
-align = 1
-valign = 1
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_top = 96.0
+margin_right = 520.0
+margin_bottom = 586.0
+rect_scale = Vector2( 0.6, 0.6 )
+custom_constants/separation = 0
 
 [node name="Railways" type="Label" parent="VBoxContainer"]
-margin_top = 142.0
-margin_right = 396.0
-margin_bottom = 184.0
+margin_right = 520.0
+margin_bottom = 32.0
 custom_fonts/font = SubResource( 2 )
 text = "Железные дороги"
 valign = 1
 
 [node name="Infrastructure" type="Label" parent="VBoxContainer"]
-margin_top = 184.0
-margin_right = 396.0
-margin_bottom = 226.0
+margin_top = 32.0
+margin_right = 520.0
+margin_bottom = 64.0
 custom_fonts/font = SubResource( 2 )
 text = "Инфраструктура"
 valign = 1
 
 [node name="Button" type="Button" parent="VBoxContainer"]
-margin_top = 226.0
-margin_right = 396.0
-margin_bottom = 274.0
+margin_top = 64.0
+margin_right = 520.0
+margin_bottom = 112.0
 custom_fonts/font = SubResource( 3 )
 text = "Построить здание"
 
 [node name="Button2" type="Button" parent="VBoxContainer"]
-margin_top = 274.0
-margin_right = 396.0
-margin_bottom = 322.0
+margin_top = 112.0
+margin_right = 520.0
+margin_bottom = 160.0
 custom_fonts/font = SubResource( 3 )
 text = "Расширить ЖД"
 
 [node name="Button3" type="Button" parent="VBoxContainer"]
-margin_top = 322.0
-margin_right = 396.0
-margin_bottom = 370.0
+margin_top = 160.0
+margin_right = 520.0
+margin_bottom = 208.0
 custom_fonts/font = SubResource( 3 )
 text = "Расширить Инфраструктуру"
 
 [node name="Button4" type="Button" parent="VBoxContainer"]
-margin_top = 370.0
-margin_right = 396.0
-margin_bottom = 418.0
+margin_top = 208.0
+margin_right = 520.0
+margin_bottom = 256.0
 custom_fonts/font = SubResource( 3 )
 text = "Обучить войска"
 
 [node name="Button5" type="Button" parent="VBoxContainer"]
-margin_top = 418.0
-margin_right = 396.0
-margin_bottom = 466.0
+margin_top = 256.0
+margin_right = 520.0
+margin_bottom = 304.0
 custom_fonts/font = SubResource( 3 )
 text = "Закрыть"
 
@@ -124,6 +116,57 @@ margin_right = 124.0
 margin_bottom = 46.0
 custom_fonts/font = SubResource( 4 )
 text = "Склады"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_top = 43.0
+margin_right = 624.0
+margin_bottom = 149.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_constants/separation = 0
+
+[node name="Button" type="Button" parent="HBoxContainer"]
+margin_right = 124.0
+margin_bottom = 106.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+icon = ExtResource( 1 )
+expand_icon = true
+
+[node name="Button2" type="Button" parent="HBoxContainer"]
+margin_left = 124.0
+margin_right = 249.0
+margin_bottom = 106.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+icon = ExtResource( 1 )
+expand_icon = true
+
+[node name="Button3" type="Button" parent="HBoxContainer"]
+margin_left = 249.0
+margin_right = 374.0
+margin_bottom = 106.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+icon = ExtResource( 1 )
+expand_icon = true
+
+[node name="Button4" type="Button" parent="HBoxContainer"]
+margin_left = 374.0
+margin_right = 499.0
+margin_bottom = 106.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+icon = ExtResource( 1 )
+expand_icon = true
+
+[node name="Button5" type="Button" parent="HBoxContainer"]
+margin_left = 499.0
+margin_right = 624.0
+margin_bottom = 106.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+icon = ExtResource( 1 )
+expand_icon = true
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="build_factory"]
 [connection signal="pressed" from="VBoxContainer/Button4" to="." method="train_army"]

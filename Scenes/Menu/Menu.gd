@@ -12,4 +12,20 @@ func ChangeScene(name_of_country):
 	get_tree().change_scene("res://Scenes/Game/Game.tscn")
 	
 
+func one_player():
+	hide()
+	$ScrollContainer.visible = true
+	$VBoxContainer2.visible = true
 
+func multiplayer_():
+	hide()
+	
+
+func developer_guide():
+	get_tree().change_scene("res://Scenes/DeveloperGuide/DeveloperGuide.tscn")
+	
+	
+func hide():
+	$VBoxContainer.visible = false
+	$Label2.visible        = false
+	pass

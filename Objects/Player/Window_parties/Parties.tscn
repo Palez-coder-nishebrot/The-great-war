@@ -1,26 +1,53 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Objects/Player/Window_parties/Parties.gd" type="Script" id=1]
+[ext_resource path="res://Graphics/Fonts/pixel_2.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+font_data = ExtResource( 2 )
 
 [node name="Parties" type="Panel"]
 margin_top = 61.0
 margin_right = 1920.0
 margin_bottom = 1080.0
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
-margin_right = 557.0
+margin_top = 62.0
+margin_right = 623.0
 margin_bottom = 1019.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
-margin_right = 557.0
+margin_right = 623.0
+margin_bottom = 957.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 260
+
+[node name="ScrollContainer2" type="ScrollContainer" parent="."]
+margin_left = 1377.0
+margin_right = 1919.0
+margin_bottom = 1019.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer2"]
+margin_right = 542.0
 margin_bottom = 1019.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 260
+
+[node name="Label" type="Label" parent="."]
+margin_right = 611.0
+margin_bottom = 48.0
+custom_fonts/font = SubResource( 1 )
+text = "Список партий"
+align = 1
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 1377.0
+margin_right = 1922.0
+margin_bottom = 48.0
+custom_fonts/font = SubResource( 1 )
+text = "Общественные движения"
+align = 1

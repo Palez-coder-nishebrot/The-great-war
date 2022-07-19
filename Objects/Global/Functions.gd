@@ -42,45 +42,36 @@ func find_factories_with_good(good, list):
 	return Label
 
 
-func get_price_of_good_on_local_market(good):
-#	var perc = 5
+#func get_price_of_good_on_local_market(good):
+#	return GlobalMarket.prices_of_goods[good]
 #
-#	var price = GlobalMarket.prices_of_goods[good]
-#	price = price - int((float(price) / 100.0 * float(perc)) + 1)
-	return GlobalMarket.prices_of_goods[good]
-
-
-func get_price_of_good_on_global_market(good, tariff, quanity):
-	var price = GlobalMarket.prices_of_goods[good]
-	return (price + (price / 100 * tariff)) * quanity
+#
+#func get_price_of_good_on_global_market(good, quanity):
+#	return GlobalMarket.prices_of_goods[good]
 
 
 func check_good_on_global_market(good, quanity):
-	var list = GlobalMarket.quanity_of_goods[good]
-	for player in list:
-		if list[player] >= quanity:
-			return list
-	return false
+	return quanity <= GlobalMarket.quanity_of_goods[good]
 	
-	
-func buy_good_on_global_market(good, quanity, list, player):
-	list[player] -= quanity
-	GlobalMarket.demand[good] += quanity
-	player.import_of_goods[good] += quanity
-	return get_price_of_good_on_global_market(good, player.economy["Пошлины"], quanity)
-	
-
-func buy_good_on_local_market(object, good, quanity, local_market, price):
-	local_market[good] -= quanity
-	object.money -= price * quanity
-
-
 func check_good_on_local_market(good, quanity, local_market):
 	return quanity <= local_market[good] 
+	
+	
+func buy_good_on_global_market(good, quanity, player):
+	GlobalMarket.quanity_of_goods[good] -= quanity
+	GlobalMarket.demand[good] += quanity
+	player.import_of_goods[good] += quanity
+	return GlobalMarket.prices_of_goods[good]
+	
+
+func buy_good_on_local_market(object, good, quanity, local_market):
+	local_market[good] = local_market[good] - quanity
+	object.money -= GlobalMarket.prices_of_goods[good] * quanity
 
 
 func change_GDP(good, quanity, player): # ВВП
 	player.economy["ВВП"] += GlobalMarket.prices_of_goods[good] * quanity
+	player.output[good] += quanity
 
 
 func set_point_of_units(point, list):

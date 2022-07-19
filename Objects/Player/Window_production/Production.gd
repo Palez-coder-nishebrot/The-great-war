@@ -10,11 +10,12 @@ var list
 
 
 func spawn_empty_panel():
-	if list.size() > 4:
+	if list.size() >= 4:
 		var province = load("res://Objects/Player/Window_production/Province/Province_panel.tscn").instance()
 		$ScrollContainer/VBoxContainer.add_child(province)
 		province.get_node("HBoxContainer").add_child(load("res://Objects/Player/Window_production/Building/Building_panel.tscn").instance())
 		empty_panel = province
+
 
 func update_information():
 	list = update_list()

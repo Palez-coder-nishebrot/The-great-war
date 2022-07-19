@@ -18,16 +18,15 @@ margin_bottom = 258.0
 script = ExtResource( 2 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_right = 557.0
-margin_bottom = 134.0
+margin_right = 577.0
+margin_bottom = 207.0
 custom_constants/separation = 0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Button" type="Button" parent="VBoxContainer"]
-margin_right = 557.0
+margin_right = 577.0
 margin_bottom = 42.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 custom_fonts/font = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -35,7 +34,7 @@ __meta__ = {
 
 [node name="Label6" type="Label" parent="VBoxContainer"]
 margin_top = 42.0
-margin_right = 557.0
+margin_right = 577.0
 margin_bottom = 75.0
 custom_fonts/font = SubResource( 2 )
 text = "Идеология"
@@ -43,7 +42,7 @@ align = 1
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 margin_top = 75.0
-margin_right = 557.0
+margin_right = 577.0
 margin_bottom = 108.0
 custom_fonts/font = SubResource( 2 )
 text = "Экономическая модель"
@@ -51,7 +50,7 @@ align = 1
 
 [node name="Label2" type="Label" parent="VBoxContainer"]
 margin_top = 108.0
-margin_right = 557.0
+margin_right = 577.0
 margin_bottom = 141.0
 custom_fonts/font = SubResource( 2 )
 text = "Торговая политика"
@@ -59,7 +58,7 @@ align = 1
 
 [node name="Label3" type="Label" parent="VBoxContainer"]
 margin_top = 141.0
-margin_right = 557.0
+margin_right = 577.0
 margin_bottom = 174.0
 custom_fonts/font = SubResource( 2 )
 text = "Внешняя политика"
@@ -67,16 +66,8 @@ align = 1
 
 [node name="Label4" type="Label" parent="VBoxContainer"]
 margin_top = 174.0
-margin_right = 557.0
+margin_right = 577.0
 margin_bottom = 207.0
 custom_fonts/font = SubResource( 2 )
 text = "Популярность"
-align = 1
-
-[node name="Label5" type="Label" parent="VBoxContainer"]
-margin_top = 207.0
-margin_right = 557.0
-margin_bottom = 240.0
-custom_fonts/font = SubResource( 2 )
-text = "Агрессивность"
 align = 1

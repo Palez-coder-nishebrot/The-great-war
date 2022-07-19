@@ -166,6 +166,9 @@ position = Vector2( 629, 1471 )
 [node name="Бердичев" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1790, 777 )
 
+[node name="Горлица" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2104, 645 )
+
 [node name="Константиновка" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1654, 523 )
 
@@ -290,34 +293,34 @@ position = Vector2( 3241, 2199 )
 position = Vector2( 3492, 1802 )
 
 [node name="Заболотов" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3492, 1802 )
+position = Vector2( 3890, 1687 )
 
 [node name="Делятин" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3492, 1802 )
+position = Vector2( 4044, 1450 )
 
 [node name="Надворная" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3492, 1802 )
+position = Vector2( 3928, 1088 )
 
 [node name="Поляница" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3492, 1802 )
+position = Vector2( 3692, 835 )
 
 [node name="Ворохта" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3492, 1802 )
+position = Vector2( 3466, 543 )
 
 [node name="Рахов" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3492, 1802 )
+position = Vector2( 2037, 548 )
 
 [node name="Жешув" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3492, 1802 )
+position = Vector2( 2044, 802 )
 
 [node name="Кросно" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3492, 1802 )
+position = Vector2( 1778, 948 )
 
 [node name="Яремче" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3492, 1802 )
+position = Vector2( 1929, 1244 )
 
 [node name="Червоноград" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3492, 1802 )
+position = Vector2( 1436, 992 )
 
 [node name="Трускавец" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3492, 1802 )
+position = Vector2( 1574, 660 )

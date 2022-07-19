@@ -5,20 +5,20 @@ var list_of_lines:              Array      = []
 
 var list_of_neighbors_tiles:    Array      = []
 var list_of_units:              Array      = []
+var list_of_households:         Array      = []
 
 var name_of_tile:        String
 var player:              Object
 
-var resources:           Dictionary = {}
-var railways:            Object = load("res://Objects/Building/Railways.gd").new()
-var infrastructure:      Object = load("res://Objects/Building/Infrastructure.gd").new()
-var household:           Object = load("res://Objects/Population/Household.gd").new()
+var resources:              Dictionary = {}
+var railways:               Object = load("res://Objects/Building/Railways.gd").new()
+var infrastructure:         Object = load("res://Objects/Building/Infrastructure.gd").new()
+var population_manager:     Object
 
 
 func start():
 	name_of_tile = name
 	update_text_on_label()
-	household.province = self
 
 
 func input(viewport, event, shape_idx):
@@ -29,15 +29,18 @@ func input(viewport, event, shape_idx):
 		
 		elif event.button_index == BUTTON_RIGHT:
 			Functions.set_point_of_units(self, Players.player.list_of_active_units)
-			pass
+
 
 func new_owner(new_owner):
 	player.list_of_tiles.erase(self)
-	player.list_of_soc_classes.erase(household)
+	for i in list_of_households:
+		player.list_of_soc_classes.erase(i)
 	
 	player = new_owner
 	player.list_of_tiles.append(self)
-	player.list_of_soc_classes.append(household)
+	
+	for i in list_of_households:
+		player.list_of_soc_classes.append(i)
 	
 	$Sprite.modulate = player.national_color
 	
@@ -87,3 +90,11 @@ func choose_units():
 	Players.player.list_of_active_units.clear()
 	Players.player.list_of_active_units.append_array(list_of_units)
 	Players.player.window_list_of_units.show_units()
+
+
+func get_bonus_of_production():
+	return {
+		production_of_factory = 0,
+		production_of_mines   = 0,
+		production_of_farms   = 0,
+	}

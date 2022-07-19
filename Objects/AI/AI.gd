@@ -41,5 +41,3 @@ var national_flag:      Sprite
 var national_color:     Color
 var researching_object: Object
 var capitalists:        Object = (load("res://Objects/Population/Capitalists.gd").new()).start()
-
-var points_of_research: int = 0

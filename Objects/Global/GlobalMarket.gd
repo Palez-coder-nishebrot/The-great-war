@@ -1,6 +1,52 @@
 extends Node
 
-var quanity_of_goods: Dictionary = {}
+var quanity_of_goods: Dictionary = {
+	"Уголь":     15,
+	"Железо":    15,
+	"Нефть":     15,
+	"Резина":    15,
+	"Хлопок":    15,
+	"Зерно":     15,
+	"Скот":      15,
+	"Селитра":   15,
+	"Древесина": 15,
+	"Лекарственные_растения": 10,
+	
+	"Сталь":     50,
+	"Стекло":    50,
+	"Ткань":     50,
+	"Электрозапчасти": 50,
+	"Автозапчасти":    50,
+	"Удобрения":       50,
+	"Пиломатериалы":   50,
+	"Динамит":         50,
+	
+	"Автомобили":      300,
+	"Тракторы":        200,
+	"Телеграфы":       100,
+	"Телефоны":        100,
+	"Радио":           100,
+	
+	"Мебель":          15,
+	"Спиртное":        15,
+	"Одежда":          15,
+	"Обогреватели":    0,
+	"Хлеб":            30,
+	"Консервы":        15,
+	"Топливо":         15,
+	"Табак":           15,
+	"Лекарства":       10,
+	"Чай":             10,
+	"Кофе":            10,
+	
+	"Снаряды":             45,
+	"Боеприпасы":          45,
+	"Пулеметы":            45,
+	"Артиллерия":          45,
+	"Аэроплан":            45,
+	"Магазинные_винтовки": 45,
+	"Бронемашины":         45,
+	"Танки":               45,}
 
 var prices_of_goods:  Dictionary = {
 	"Уголь":     15,
@@ -23,16 +69,16 @@ var prices_of_goods:  Dictionary = {
 	"Пиломатериалы":   50,
 	"Динамит":         50,
 	
-	"Автомобили":      100,
-	"Тракторы":        15,
-	"Телеграфы":       15,
-	"Телефоны":        15,
-	"Радио":           15,
+	"Автомобили":      300,
+	"Тракторы":        200,
+	"Телеграфы":       100,
+	"Телефоны":        100,
+	"Радио":           100,
 	
 	"Мебель":          15,
 	"Спиртное":        15,
 	"Одежда":          15,
-	"Обогреватели":    15,
+	"Обогреватели":    0,
 	"Хлеб":            30,
 	"Консервы":        15,
 	"Топливо":         15,
@@ -56,11 +102,11 @@ const min_and_max_prices_of_goods: Dictionary = {
 	"Железо":    {min_ = 10, max_ = 30},
 	"Нефть":     {min_ = 10, max_ = 30},
 	"Резина":    {min_ = 10, max_ = 30},
-	"Хлопок":    {min_ = 10, max_ = 30},
-	"Зерно":     {min_ = 10, max_ = 20},
+	"Хлопок":    {min_ = 5, max_ = 30},
+	"Зерно":     {min_ = 5, max_ = 20},
 	"Скот":      {min_ = 10, max_ = 20},
 	"Селитра":   {min_ = 10, max_ = 30},
-	"Древесина": {min_ = 10, max_ = 30},
+	"Древесина": {min_ = 5, max_ = 30},
 	"Лекарственные_растения": {min_ = 10, max_ = 30},
 	
 	"Сталь":                  {min_ = 20, max_ = 50},
@@ -168,7 +214,7 @@ const goods: Dictionary = {
 		"Зерно":    1,
 	},
 	"Консервы":        {
-		"Железо":   1,
+		"Сталь":    1,
 		"Зерно":    1,
 		"Скот":     1,
 	},
@@ -186,6 +232,7 @@ const goods: Dictionary = {
 	},
 	"Боеприпасы":         {
 		"Железо":  1,
+		"Уголь":   1,
 		"Ткань":   1,
 		"Селитра": 1,
 		"Пиломатериалы": 1,
@@ -250,14 +297,9 @@ const bonuses_for_production_of_civilian_goods: Dictionary = {
 	"Топливо":       2,
 	"Лекарства":     2,
 	"Пиломатериалы": 3,
+	"Боеприпасы":    3,
+	"Снаряды":       2,
 }
-
-func append_dictionary(players):
-	for i in prices_of_goods:
-		quanity_of_goods[i] = {}
-		
-		for player in players:
-			quanity_of_goods[i][player] = 0
 			
 
 func find_building_in_list(name_of_building):
@@ -302,8 +344,10 @@ func export_goods_from_local_markets():
 	#{"Уголь": {player_1: 12, player_2: 3 ...},
 	for player in Players.list_of_players:
 		for good in player.local_market:
-			quanity_of_goods[good][player] += player.local_market[good]
+			quanity_of_goods[good] += player.local_market[good]
 			player.export_of_goods[good] += player.local_market[good]
 			GlobalMarket.supply[good] += player.local_market[good]
+#			if player.local_market["Обогреватели"] > 0:
+#				pass
 			player.local_market[good] = 0
 

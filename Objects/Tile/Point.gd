@@ -9,23 +9,24 @@ var list_of_buildings:          Array      = []
 var list_of_military_factories: Array      = []
 var list_of_units:              Array      = []
 var list_of_villages:           Array      = []
+var list_of_households:         Array      = []
+var goods_of_factories_in_province: Array  = []
 
 var name_of_tile:        String
 var capital:             bool = false
 var player:              Object
 var training_units:      Object
 
-var resources:           Dictionary = {}
-var railways:            Object = load("res://Objects/Building/Railways.gd").new()
-var infrastructure:      Object = load("res://Objects/Building/Infrastructure.gd").new()
-var household:           Object = load("res://Objects/Population/Household.gd").new()
-var factory_association: Object = load("res://Objects/Population/Factory_association.gd").new()
+var resources:              Dictionary = {}
+var railways:               Object = load("res://Objects/Building/Railways.gd").new()
+var infrastructure:         Object = load("res://Objects/Building/Infrastructure.gd").new()
+var factory_association:    Object = load("res://Objects/Population/Factory_association.gd").new()
+var population_manager: Object
 
 
 func start():
 	name_of_tile = name
 	update_text_on_label()
-	household.province = self
 
 
 func input(viewport, event, shape_idx):
@@ -40,11 +41,16 @@ func input(viewport, event, shape_idx):
 
 func new_owner(new_owner):
 	player.list_of_tiles.erase(self)
-	player.list_of_soc_classes.erase(household)
+	for i in list_of_households:
+		player.list_of_soc_classes.erase(i)
 	
 	player = new_owner
 	player.list_of_tiles.append(self)
-	player.list_of_soc_classes.append(household)
+	
+	for i in list_of_households:
+		player.list_of_soc_classes.append(i)
+	
+	population_manager.player = player
 	
 	$Sprite.modulate = player.national_color
 	
@@ -177,14 +183,13 @@ func get_bonus_of_production():
 	}
 
 
-func get_goods_of_factories_in_province(good):
-	var list = []
+func get_goods_in_province():
+	goods_of_factories_in_province.clear()
 	for i in list_of_buildings:
-		if i.good != good:
-			list.append(i.good)
+		if i.tipe == "factory" and not goods_of_factories_in_province.has(i):
+			goods_of_factories_in_province.append(i)
 	
 	for i in resources:
-		if i != good:
-			list.append(i)
-	return list
+		if not goods_of_factories_in_province.has(i):
+			goods_of_factories_in_province.append(i)
 	

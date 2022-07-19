@@ -21,8 +21,8 @@ func show_info_about_province(province_):
 	visible = true
 	province = province_
 	show_resourses()
-	$VBoxContainer/Name.text =    province.name_of_tile
-	$VBoxContainer/Country.text = province.player.name_of_country
+	$Name.text =    province.name_of_tile
+	$Country.text = province.player.name_of_country
 
 
 func lock_or_open_buttons(bool_):
@@ -34,15 +34,14 @@ func lock_or_open_buttons(bool_):
 
 
 func show_resourses():
-	$VBoxContainer/Resourses.text = ""
-	var token = 1
-	for i in province.resources:
-		
-		if token != province.resources.size():
-			$VBoxContainer/Resourses.text += i + ": " + str(province.resources[i]) + "\n"
-		else:
-			$VBoxContainer/Resourses.text += i + ": " + str(province.resources[i])
-		token += 1
+	var res = province.resources.keys()
+	for i in $HBoxContainer.get_children():
+		i.icon = load("res://Graphics/Sprites/Goods/kREST.png")
+	
+	for i in $HBoxContainer.get_children():
+		if res.size() > 0:
+			i.icon = load(Players.sprites_of_goods[res[0]])
+			res.erase(res[0])
 
 
 func exit():

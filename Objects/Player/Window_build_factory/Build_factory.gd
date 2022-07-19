@@ -55,6 +55,8 @@ func start_build():
 			province.build_building(factory)
 		else:
 			province.build_military_factory(factory)
+		
+		visible = false
 
 
 func exit():

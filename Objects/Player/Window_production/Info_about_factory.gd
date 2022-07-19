@@ -13,7 +13,7 @@ func update_information():
 			$VBoxContainer/Label2.text = "Бюджет: " + str(factory.money)
 			$VBoxContainer/Label3.text = "Доходы: " + str(factory.income)
 			show_resourses()
-			$VBoxContainer/Label5.text = "Рабочие: " + str(factory.employed_number) + "/" + str(factory.max_employed_number)
+			$VBoxContainer/Label5.text = "Рабочие: " + str(factory.list_of_workers.size()) + "/" + str(factory.max_employed_number)
 			show_bonuses_for_production()
 	
 func show_resourses():
@@ -28,8 +28,9 @@ func show_resourses():
 
 
 func show_bonuses_for_production():
+	var manager = factory.province.player.get_parent().factory_manager
 	$VBoxContainer/Label6.text = "Бонус к выпуску продукции от: \n"
-	$VBoxContainer/Label6.text += "*Сырье, производимое в провинции: +" + str(factory.get_bonuses_for_production_from_province()) + "% \n"
+	$VBoxContainer/Label6.text += "*Сырье, производимое в провинции: +" + str(manager.get_bonuses_for_production_from_province(factory.province, factory.purchase, factory.good)) + "% \n"
 	$VBoxContainer/Label6.text += "*Базовый бонус: x" + str(factory.check_bonuses_for_production()) + "\n"
 	$VBoxContainer/Label6.text += "*Бонус от технологий: +" + str(factory.province.player.bonuses_in_production[factory.good]) + "%"
 

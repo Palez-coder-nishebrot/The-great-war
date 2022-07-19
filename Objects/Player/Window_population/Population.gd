@@ -6,10 +6,11 @@ var list_of_soc_classes: Array = []
 
 
 func update_information():
-	var list = Players.player.list_of_soc_classes
-	
-	emit_signal("update_household_panels")
-	spawn_panels(list)
+#	var list = Players.player.list_of_soc_classes
+#
+#	emit_signal("update_household_panels")
+#	spawn_panels(list)
+	pass
 
 
 func spawn_panels(list):
@@ -24,5 +25,5 @@ func spawn_panel(soc_class):
 	panel.province = soc_class.province
 	panel.household = soc_class
 	panel.update()
-	$VBoxContainer.add_child(panel)
+	$ScrollContainer/VBoxContainer.add_child(panel)
 	list_of_soc_classes.append(soc_class)

@@ -40,6 +40,8 @@ custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
 flat = true
 
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+
 [connection signal="input_event" from="Area2D" to="." method="input"]
 [connection signal="mouse_entered" from="Area2D" to="." method="mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="mouse_exited"]

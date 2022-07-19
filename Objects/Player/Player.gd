@@ -48,8 +48,6 @@ var national_color:     Color
 var researching_object: Object
 var capitalists:        Object = (load("res://Objects/Population/Capitalists.gd").new()).start()
 
-var points_of_research: int = 0
-
 onready var window_province:      Panel = $CanvasLayer/Province
 onready var window_markets:       Panel = $CanvasLayer/Markets
 onready var window_build_factory: Panel = $CanvasLayer/Build_factory
