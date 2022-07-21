@@ -14,10 +14,10 @@ z_index = -10
 texture = ExtResource( 2 )
 
 [node name="Броды" parent="." instance=ExtResource( 4 )]
-position = Vector2( 2953, 1448 )
+position = Vector2( 2797, 1445 )
 
 [node name="Кременец" parent="." instance=ExtResource( 4 )]
-position = Vector2( 2311, 1507 )
+position = Vector2( 2480, 1517 )
 
 [node name="Тарнополь" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1964, 1654 )
@@ -32,13 +32,13 @@ position = Vector2( 2233, 1955 )
 position = Vector2( 2280, 1751 )
 
 [node name="Черновцы" parent="." instance=ExtResource( 4 )]
-position = Vector2( 2720, 1711 )
+position = Vector2( 2670, 1750 )
 
 [node name="Галич" parent="." instance=ExtResource( 4 )]
-position = Vector2( 2848, 1898 )
+position = Vector2( 2873, 1911 )
 
 [node name="Калуш" parent="." instance=ExtResource( 4 )]
-position = Vector2( 3161, 2015 )
+position = Vector2( 3171, 2039 )
 
 [node name="Луцк" parent="." instance=ExtResource( 4 )]
 position = Vector2( 3023, 2394 )
@@ -227,13 +227,13 @@ position = Vector2( 3403, 1006 )
 position = Vector2( 2929, 946 )
 
 [node name="Гродно" parent="." instance=ExtResource( 4 )]
-position = Vector2( 3365, 1346 )
+position = Vector2( 3365, 1314 )
 
 [node name="Витебск" parent="." instance=ExtResource( 4 )]
-position = Vector2( 3863, 1358 )
+position = Vector2( 3675, 1314 )
 
 [node name="Коломна" parent="." instance=ExtResource( 4 )]
-position = Vector2( 3897, 984 )
+position = Vector2( 3716, 1018 )
 
 [node name="Рутивль" parent="." instance=ExtResource( 4 )]
 position = Vector2( 3594, 1715 )
@@ -251,7 +251,7 @@ position = Vector2( 2190, 1517 )
 position = Vector2( 2059, 1411 )
 
 [node name="Свидник" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1873, 1711 )
+position = Vector2( 1868, 1759 )
 
 [node name="Замосць" parent="." instance=ExtResource( 3 )]
 position = Vector2( 2059, 1944 )
@@ -269,7 +269,7 @@ position = Vector2( 3504, 2120 )
 position = Vector2( 2820, 1314 )
 
 [node name="Залещики" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2850, 1482 )
+position = Vector2( 2905, 1504 )
 
 [node name="Заставна" parent="." instance=ExtResource( 3 )]
 position = Vector2( 3343, 1404 )
@@ -281,13 +281,13 @@ position = Vector2( 3176, 1487 )
 position = Vector2( 2500, 1810 )
 
 [node name="Богородчаны" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3004, 1723 )
+position = Vector2( 2873, 1725 )
 
 [node name="Угринов" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3214, 1774 )
+position = Vector2( 3176, 1849 )
 
 [node name="Тлумач" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3241, 2199 )
+position = Vector2( 3176, 2165 )
 
 [node name="Отыния" parent="." instance=ExtResource( 3 )]
 position = Vector2( 3492, 1802 )
@@ -324,3 +324,42 @@ position = Vector2( 1436, 992 )
 
 [node name="Трускавец" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1574, 660 )
+
+[node name="Огиевцы" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1180, 922 )
+
+[node name="Громовка" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1518, 257 )
+
+[node name="Хуторы" parent="." instance=ExtResource( 3 )]
+position = Vector2( 762, 902 )
+
+[node name="Радковцы" parent="." instance=ExtResource( 3 )]
+position = Vector2( 669, 1244 )
+
+[node name="Жабче" parent="." instance=ExtResource( 3 )]
+position = Vector2( 607, 1617 )
+
+[node name="Стецки" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1087, 1370 )
+
+[node name="Круча" parent="." instance=ExtResource( 3 )]
+position = Vector2( 851, 1851 )
+
+[node name="Иршики" parent="." instance=ExtResource( 3 )]
+position = Vector2( 568, 2404 )
+
+[node name="Белецкое" parent="." instance=ExtResource( 3 )]
+position = Vector2( 746, 2731 )
+
+[node name="Верхняки" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1695, 2765 )
+
+[node name="Берегели" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2858, 2748 )
+
+[node name="Деркачи" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3564, 2627 )
+
+[node name="Самчинцы" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3635, 2334 )

@@ -33,10 +33,10 @@ func create_map():
 	
 	for i in list_of_tiles:
 		if list_of_provinces.has(i):
-			set_resourses_of_tiles(list_of_tiles[i], resourses_of_province)
+			set_resourses_of_tiles(list_of_tiles[i], resourses_of_province, null)
 			get_parent().list_of_privinces.append(list_of_tiles[i])
 		else:
-			set_resourses_of_tiles(list_of_tiles[i], resourses_of_villages)
+			set_resourses_of_tiles(list_of_tiles[i], resourses_of_villages, "Хлеб")
 			
 	for i in list_of_provinces:
 		for y in list_of_provinces[i].list_of_villages:
@@ -59,7 +59,10 @@ func set_graph(tile, tile_point):
 	list_of_tiles[tile_point].list_of_neighbors_tiles.append(tile)
 
 	
-func set_resourses_of_tiles(province, resourses):
+func set_resourses_of_tiles(province, resourses, resourse):
+	if resourse != null:
+		province.resources[resourse] = 1
+	
 	for i in resourses[province.name_of_tile]:
 		if i[0] == "+":
 			i.erase(0, 1)
@@ -106,6 +109,8 @@ func give_to_tiles(player, tile, pop):
 			factory  =  null,
 			province = null,
 			tipe     = "",
+			education = false,
+			ideology = "Либералы",
 			population_manager = tile.population_manager,
 		}
 		population_manager.list_of_soc_classes.append(household)
@@ -120,9 +125,6 @@ func give_to_tiles(player, tile, pop):
 		tile.list_of_households.append(household)
 		player.list_of_soc_classes.append(household)
 	
-#	tile.household.province = tile
-#	tile.household.check_province()
-#	tile.household.quanity = pop
 	tile.player = player
 	tile.get_node("Sprite").modulate = player.national_color
 	tile.start()

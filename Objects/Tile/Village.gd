@@ -8,6 +8,7 @@ var list_of_units:              Array      = []
 var list_of_households:         Array      = []
 
 var name_of_tile:        String
+var landscape:           String = "Степь"
 var player:              Object
 
 var resources:              Dictionary = {}
@@ -28,7 +29,10 @@ func input(viewport, event, shape_idx):
 			Players.player.window_province.update_information(self, "village")
 		
 		elif event.button_index == BUTTON_RIGHT:
-			Functions.set_point_of_units(self, Players.player.list_of_active_units)
+			if Players.player.get_groups().has("Human"):
+				Functions.set_point_of_units(self, Players.player.list_of_active_units)
+			else:
+				Players.player.window_province.set_path(self)
 
 
 func new_owner(new_owner):

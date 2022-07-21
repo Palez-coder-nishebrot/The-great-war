@@ -25,8 +25,10 @@ var purchase_manager: Object = load("res://Objects/Global/ManagerPurchase.gd").n
 var factory_manager: Object = load("res://Objects/Global/ManagerFactory.gd").new()
 
 func _ready():
-	#GlobalMarket.update_prices()
-	create_players()
+	if Players.country_to_start == "Редактор_провинций":
+		create_province_editor()
+	else:
+		create_players()
 	
 
 func create_players():
@@ -148,6 +150,21 @@ func school_funding():
 		
 		increase_literate_population(i)
 
+
 func increase_literate_population(player):
 	
+	pass
+
+
+func create_province_editor():
+	var human = load("res://Objects/ProvinceEditor/ProvinceEditor.tscn").instance()
+	add_child(human)
+	Players.player = human
+	set_provinces()
+
+
+func set_provinces():
+	for i in $TileMap.get_children():
+		if i.get_class() == "Node2D":
+			i.start()
 	pass

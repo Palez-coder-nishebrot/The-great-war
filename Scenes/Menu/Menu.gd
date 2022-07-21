@@ -28,4 +28,7 @@ func developer_guide():
 func hide():
 	$VBoxContainer.visible = false
 	$Label2.visible        = false
-	pass
+
+
+func path_editor():
+	ChangeScene("Редактор_провинций")

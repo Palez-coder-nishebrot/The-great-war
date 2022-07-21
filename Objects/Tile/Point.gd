@@ -13,6 +13,7 @@ var list_of_households:         Array      = []
 var goods_of_factories_in_province: Array  = []
 
 var name_of_tile:        String
+var landscape:           String = "Степь"
 var capital:             bool = false
 var player:              Object
 var training_units:      Object
@@ -36,8 +37,11 @@ func input(viewport, event, shape_idx):
 			Players.player.window_province.update_information(self, "province")
 		
 		elif event.button_index == BUTTON_RIGHT:
-			Functions.set_point_of_units(self, Players.player.list_of_active_units)
-			pass
+			if Players.player.get_groups().has("Human"):
+				Functions.set_point_of_units(self, Players.player.list_of_active_units)
+			else:
+				Players.player.window_province.set_path(self)
+
 
 func new_owner(new_owner):
 	player.list_of_tiles.erase(self)
@@ -123,9 +127,10 @@ func update_text_on_label():
 	
 
 func choose_units():
-	Players.player.list_of_active_units.clear()
-	Players.player.list_of_active_units.append_array(list_of_units)
-	Players.player.window_list_of_units.show_units()
+	if Players.player.get_groups().has("Human"):
+		Players.player.list_of_active_units.clear()
+		Players.player.list_of_active_units.append_array(list_of_units)
+		Players.player.window_list_of_units.show_units()
 
 
 func get_bonus_of_production():

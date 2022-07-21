@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Resource",
+"class": "Prov_saver",
+"language": "GDScript",
+"path": "res://Objects/Provinces/Paths_of_provinces.gd"
+} ]
+_global_script_class_icons={
+"Prov_saver": ""
+}
+
 [application]
 
 config/name="The great war (1905 - 1930)"
@@ -29,6 +39,10 @@ window/size/width=1920
 window/size/height=1080
 window/dpi/allow_hidpi=true
 window/stretch/mode="2d"
+
+[global]
+
+mouse=false
 
 [input]
 
