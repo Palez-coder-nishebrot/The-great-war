@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Resources/StatesOnStartGame/State.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+name_of_state = "Polany"
+list_of_regions = PoolStringArray( "Херсон", "Полтава" )
+form_of_goverment = "monarchy"
+ideology = "populists"
+national_color = Color( 0.25098, 0.6, 0.623529, 1 )
+national_id = ""

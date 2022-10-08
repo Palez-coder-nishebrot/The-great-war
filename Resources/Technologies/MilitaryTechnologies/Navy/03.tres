@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://Resources/Technologies/Technology.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectDefense.gd" type="Script" id=2]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 2 )
+name_of_effect = "Оборона"
+power = 1
+target = "fleet"
+
+[resource]
+script = ExtResource( 1 )
+cotegory = ""
+name_of_technology = "Бронепалубные корабли"
+list_of_effects = [ SubResource( 1 ) ]

@@ -1,0 +1,35 @@
+[gd_resource type="Resource" load_steps=8 format=2]
+
+[ext_resource path="res://Resources/Reforms/Reform.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Reforms/ReformEffect.gd" type="Script" id=2]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 2 )
+value = 0
+target = "tax_on_poor_class"
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 2 )
+value = 20
+target = "tax_on_poor_class"
+
+[sub_resource type="Resource" id=3]
+script = ExtResource( 2 )
+value = 40
+target = "tax_on_poor_class"
+
+[sub_resource type="Resource" id=4]
+script = ExtResource( 2 )
+value = 60
+target = "tax_on_poor_class"
+
+[sub_resource type="Resource" id=5]
+script = ExtResource( 2 )
+value = 80
+target = "tax_on_poor_class"
+
+[resource]
+script = ExtResource( 1 )
+effects = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ]
+target = "tax_on_poor_class"
+reform = ""

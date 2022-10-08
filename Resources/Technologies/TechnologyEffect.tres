@@ -1,0 +1,42 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Resources/Technologies/TechnologyEffect.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+attack_of_fleet = 0
+attack_of_tanks = 0
+attack_of_armored_car = 0
+attack_of_combat_airplane = 0
+attack_of_fighter_airplane = 0
+attack_of_bomber_airplane = 0
+attack_of_infantry = 0
+attack_of_artillery = 0
+attack_of_cavalry = 0
+attack_of_stormtroopers = 0
+defense_of_fleet = 0
+defense_of_tanks = 0
+defense_of_armored_car = 0
+defense_of_combat_airplane = 0
+defense_of_fighter_airplane = 0
+defense_of_bomber_airplane = 0
+defense_of_infantry = 0
+defense_of_artillery = 0
+defense_of_cavalry = 0
+adefense_of_stormtroopers = 0
+projectile_supply = 0
+ammo_supply = 0
+new_unit = "0"
+production_of_military_factories = 0
+production_of_factories = 0
+production_of_farms = 0
+production_of_mines = 0
+production_of_iron = 0
+production_of_coal = 0
+production_of_rubber = 0
+production_of_oil = 0
+production_of_steel = 0
+production_of_glass = 0
+production_of_gas = 0
+production_of_electronics = 0
+new_factory = "0"

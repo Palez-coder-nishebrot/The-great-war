@@ -1,0 +1,1933 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Objects/Provinces/Paths_of_provinces.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+list_of_path_of_provinces = {
+}
+list_of_resources_of_provinces = {
+"Алитус": {
+"coal": 1,
+"wood": 1
+},
+"Батые": {
+"oil": 1,
+"wood": 1
+},
+"Белая Церковь": {
+"beasts": 1,
+"cotton": 1
+},
+"Белецкое": {
+"coal": 1,
+"rubber": 1
+},
+"Белжеца": {
+"grain": 1,
+"tabaco": 1
+},
+"Бердичев": {
+"coal": 1,
+"cotton": 1
+},
+"Берегово": {
+"iron": 1,
+"oil": 1
+},
+"Богородчаны": {
+"beasts": 1,
+"iron": 1
+},
+"Болехов": {
+"coal": 1,
+"saltpeter": 1
+},
+"Борка": {
+"grain": 1,
+"rubber": 1
+},
+"Брзежаны": {
+"beasts": 1,
+"wood": 1
+},
+"Броды": {
+"coal": 1,
+"iron": 1
+},
+"Буковина": {
+"beasts": 1,
+"grain": 1
+},
+"Вилькомир": {
+"iron": 1,
+"oil": 1
+},
+"Вильянди": {
+"beasts": 1,
+"grain": 1
+},
+"Винница": {
+"coal": 1,
+"saltpeter": 1
+},
+"Витебск": {
+"cotton": 1,
+"wood": 1
+},
+"Волынский": {
+"grain": 1,
+"tea": 1
+},
+"Вручий": {
+"coal": 1,
+"cotton": 1
+},
+"Галич": {
+"beasts": 1,
+"grain": 1
+},
+"Горлица": {
+"coal": 1,
+"rubber": 1
+},
+"Горловка": {
+"cotton": 1,
+"wood": 1
+},
+"Гримайлов": {
+"coal": 1,
+"cotton": 1
+},
+"Гродно": {
+"grain": 1,
+"rubber": 1
+},
+"Грубешов": {
+"grain": 1,
+"wood": 1
+},
+"Днестр": {
+"coal": 1,
+"cotton": 1
+},
+"Должанск": {
+"beasts": 1,
+"grain": 1
+},
+"Донецк": {
+"cotton": 1,
+"saltpeter": 1
+},
+"Дрогобыч": {
+"beasts": 1,
+"grain": 1
+},
+"Дубно": {
+"coal": 1,
+"cotton": 1
+},
+"Дукшты": {
+"beasts": 1,
+"grain": 1
+},
+"Желув": {
+"beasts": 1,
+"grain": 1
+},
+"Житомир": {
+"grain": 1,
+"rubber": 1
+},
+"Заболотов": {
+"cotton": 1,
+"wood": 1
+},
+"Закопане": {
+"cotton": 1,
+"grain": 1
+},
+"Зборов": {
+"grain": 1,
+"rubber": 1
+},
+"Звижень": {
+"beasts": 1,
+"grain": 1
+},
+"Ивано-Франковск": {
+"coal": 1,
+"grain": 1
+},
+"Измаил": {
+"coal": 1,
+"wood": 1
+},
+"Изюм": {
+"beasts": 1,
+"coal": 1
+},
+"Иршики": {
+"beasts": 1,
+"oil": 1
+},
+"Калуш": {
+"coal": 1,
+"wood": 1
+},
+"Каменец-Подольск": {
+"tabaco": 1,
+"wood": 1
+},
+"Катовице": {
+"grain": 1,
+"wood": 1
+},
+"Каунас": {
+"beasts": 1,
+"coal": 1
+},
+"Клайпеда": {
+"beasts": 1,
+"coal": 1
+},
+"Ковель": {
+"beasts": 1,
+"iron": 1
+},
+"Коломыя": {
+"coal": 1,
+"oil": 1
+},
+"Константиновка": {
+"saltpeter": 1,
+"wood": 1
+},
+"Коростень": {
+"coal": 1,
+"grain": 1
+},
+"Красник": {
+"coal": 1,
+"rubber": 1
+},
+"Кременец": {
+"beasts": 1,
+"saltpeter": 1
+},
+"Курессааре": {
+"grain": 1,
+"wood": 1
+},
+"Лисичанск": {
+"beasts": 1,
+"coal": 1
+},
+"Лодзь": {
+"coal": 1,
+"oil": 1
+},
+"Луцк": {
+"coal": 1,
+"grain": 1
+},
+"Львов": {
+"tabaco": 1,
+"wood": 1
+},
+"Любич": {
+"beasts": 1,
+"wood": 1
+},
+"Люблин": {
+"grain": 1,
+"rubber": 1
+},
+"Макеевка": {
+"grain": 1,
+"tea": 1
+},
+"Мелитополь": {
+"iron": 1,
+"saltpeter": 1
+},
+"Митава": {
+"coal": 1,
+"saltpeter": 1
+},
+"Мукачево": {
+"cotton": 1,
+"rubber": 1
+},
+"Надворная": {
+"coal": 1,
+"grain": 1
+},
+"Нетешин": {
+"coal": 1,
+"saltpeter": 1
+},
+"Николаев": {
+"coal": 1,
+"cotton": 1
+},
+"Новомосковск": {
+"coal": 1,
+"wood": 1
+},
+"Павлоград": {
+"iron": 1,
+"wood": 1
+},
+"Паневежис": {
+"beasts": 1,
+"wood": 1
+},
+"Перемышль": {
+"iron": 1,
+"saltpeter": 1
+},
+"Пинск": {
+"beasts": 1,
+"grain": 1
+},
+"Пмлица": {
+"coal": 1,
+"grain": 1
+},
+"Подолье": {
+"beasts": 1,
+"cotton": 1
+},
+"Познань": {
+"coal": 1,
+"rubber": 1
+},
+"Покровск": {
+"iron": 1,
+"saltpeter": 1
+},
+"Полтава": {
+"coal": 1,
+"grain": 1
+},
+"Проскуров": {
+"rubber": 1,
+"wood": 1
+},
+"Пшемысль": {
+"beasts": 1,
+"grain": 1
+},
+"Пядичи": {
+"coal": 1,
+"rubber": 1
+},
+"Пярну": {
+"coal": 1,
+"saltpeter": 1
+},
+"Раквере": {
+"grain": 1,
+"iron": 1
+},
+"Ровно": {
+"coal": 1,
+"saltpeter": 1
+},
+"Рутивль": {
+"beasts": 1,
+"saltpeter": 1
+},
+"Севастополь": {
+"cotton": 1,
+"tea": 1
+},
+"Силламяэ": {
+"coal": 1,
+"grain": 1
+},
+"Симферополь": {
+"cotton": 1,
+"oil": 1
+},
+"Станислав": {
+"beasts": 1,
+"grain": 1
+},
+"Старокостантинов": {
+"grain": 1,
+"tabaco": 1
+},
+"Стецки": {
+"beasts": 1,
+"grain": 1
+},
+"Стрый": {
+"iron": 1,
+"saltpeter": 1
+},
+"Сумы": {
+"coal": 1,
+"wood": 1
+},
+"Тарнополь": {
+"cotton": 1,
+"grain": 1
+},
+"Тарту": {
+"beasts": 1,
+"wood": 1
+},
+"Теребовль": {
+"coal": 1,
+"saltpeter": 1
+},
+"Тлумач": {
+"grain": 1,
+"iron": 1
+},
+"Тулов": {
+"coal": 1,
+"iron": 1
+},
+"Ужгород": {
+"grain": 1,
+"iron": 1
+},
+"Хаапсалу": {
+"beasts": 1,
+"cotton": 1
+},
+"Херсон": {
+"beasts": 1,
+"iron": 1
+},
+"Хмельницкий": {
+"beasts": 1,
+"cotton": 1
+},
+"Ченстохова": {
+"coal": 1,
+"iron": 1
+},
+"Черкасс": {
+"grain": 1,
+"saltpeter": 1
+},
+"Черновцы": {
+"rubber": 1,
+"wood": 1
+},
+"Щепеткова": {
+"cotton": 1,
+"tabaco": 1
+},
+"Яремче": {
+"beasts": 1,
+"grain": 1
+}
+}
+list_of_factories_of_provinces = {
+"Алитус": [ "lumber", "furniture" ],
+"Батые": [ "lumber" ],
+"Белая Церковь": [  ],
+"Белецкое": [  ],
+"Белжеца": [  ],
+"Бердичев": [ "textile", "clothes", "glass" ],
+"Берегово": [  ],
+"Богородчаны": [  ],
+"Болехов": [  ],
+"Борка": [  ],
+"Брзежаны": [ "lumber" ],
+"Броды": [  ],
+"Буковина": [  ],
+"Вилькомир": [  ],
+"Вильянди": [  ],
+"Винница": [ "glass" ],
+"Витебск": [ "textile", "clothes" ],
+"Волынский": [  ],
+"Вручий": [ "glass", "textile" ],
+"Галич": [  ],
+"Горлица": [  ],
+"Горловка": [ "textile", "clothes" ],
+"Гримайлов": [  ],
+"Гродно": [  ],
+"Грубешов": [ "furniture" ],
+"Днестр": [ "textile", "clothes" ],
+"Должанск": [  ],
+"Донецк": [  ],
+"Дрогобыч": [  ],
+"Дубно": [  ],
+"Дукшты": [  ],
+"Желув": [ "alcohol" ],
+"Житомир": [  ],
+"Заболотов": [  ],
+"Закопане": [  ],
+"Зборов": [  ],
+"Звижень": [  ],
+"Ивано-Франковск": [  ],
+"Измаил": [  ],
+"Изюм": [ "glass" ],
+"Иршики": [  ],
+"Калуш": [  ],
+"Каменец-Подольск": [ "furniture" ],
+"Катовице": [  ],
+"Каунас": [  ],
+"Клайпеда": [ "glass" ],
+"Ковель": [  ],
+"Коломыя": [ "gas" ],
+"Константиновка": [  ],
+"Коростень": [  ],
+"Красник": [  ],
+"Кременец": [  ],
+"Курессааре": [  ],
+"Лисичанск": [  ],
+"Лодзь": [ "steel" ],
+"Луцк": [ "alcohol" ],
+"Львов": [ "lumber" ],
+"Любич": [  ],
+"Люблин": [  ],
+"Макеевка": [  ],
+"Мелитополь": [  ],
+"Митава": [  ],
+"Мукачево": [ "textile", "clothes" ],
+"Надворная": [  ],
+"Нетешин": [  ],
+"Николаев": [  ],
+"Новомосковск": [  ],
+"Павлоград": [  ],
+"Паневежис": [  ],
+"Перемышль": [  ],
+"Пинск": [  ],
+"Пмлица": [  ],
+"Подолье": [  ],
+"Познань": [ "glass" ],
+"Покровск": [  ],
+"Полтава": [  ],
+"Проскуров": [  ],
+"Пшемысль": [  ],
+"Пядичи": [ "steel" ],
+"Пярну": [  ],
+"Раквере": [  ],
+"Ровно": [  ],
+"Рутивль": [  ],
+"Севастополь": [  ],
+"Силламяэ": [  ],
+"Симферополь": [ "gas" ],
+"Станислав": [  ],
+"Старокостантинов": [  ],
+"Стецки": [  ],
+"Стрый": [  ],
+"Сумы": [  ],
+"Тарнополь": [  ],
+"Тарту": [ "lumber", "furniture" ],
+"Теребовль": [  ],
+"Тлумач": [  ],
+"Тулов": [ "steel" ],
+"Ужгород": [  ],
+"Хаапсалу": [ "textile", "clothes" ],
+"Херсон": [  ],
+"Хмельницкий": [  ],
+"Ченстохова": [  ],
+"Черкасс": [ "gas" ],
+"Черновцы": [ "lumber", "furniture" ],
+"Щепеткова": [ "textile" ],
+"Яремче": [  ]
+}
+list_of_household_of_provinces = {
+"Алитус": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": true,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": true,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+} ],
+"Батые": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": true,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+} ],
+"Белая Церковь": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Белецкое": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Белжеца": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Бердичев": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": true,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": true,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": true,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+} ],
+"Берегово": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Богородчаны": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Болехов": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Борка": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Брзежаны": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Броды": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Буковина": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Вилькомир": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Вильянди": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Винница": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": true,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+} ],
+"Витебск": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": true,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": true,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+} ],
+"Волынский": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Вручий": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": true,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": true,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+} ],
+"Галич": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Горлица": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Горловка": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": true,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": true,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+} ],
+"Гримайлов": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Гродно": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Грубешов": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": true,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+} ],
+"Днестр": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": true,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": true,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+} ],
+"Должанск": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Донецк": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Дрогобыч": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Дубно": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Дукшты": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Желув": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": true,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+} ],
+"Житомир": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Заболотов": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Закопане": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Зборов": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Звижень": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Ивано-Франковск": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Измаил": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Изюм": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": true,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+} ],
+"Иршики": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Калуш": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Каменец-Подольск": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": true,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+} ],
+"Катовице": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Каунас": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Клайпеда": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Ковель": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Коломыя": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+} ],
+"Константиновка": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Коростень": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Красник": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Кременец": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Курессааре": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Лисичанск": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Лодзь": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": true,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+} ],
+"Луцк": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": true,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Львов": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": true,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+} ],
+"Любич": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Люблин": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Макеевка": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Мелитополь": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Митава": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Мукачево": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": true,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": true,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+} ],
+"Надворная": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Нетешин": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Николаев": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Новомосковск": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Павлоград": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Паневежис": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Перемышль": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Пинск": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Пмлица": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Подолье": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Познань": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": true,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+} ],
+"Покровск": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Полтава": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Проскуров": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Пшемысль": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Пядичи": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": true,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+} ],
+"Пярну": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Раквере": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Ровно": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Рутивль": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Севастополь": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Силламяэ": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Симферополь": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": true,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+} ],
+"Станислав": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Старокостантинов": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Стецки": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Стрый": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Сумы": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Тарнополь": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Тарту": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": true,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": true,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+} ],
+"Теребовль": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Тлумач": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Тулов": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": true,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+} ],
+"Ужгород": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Хаапсалу": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": true,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": true,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+} ],
+"Херсон": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Хмельницкий": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Ченстохова": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Черкасс": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": true,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+} ],
+"Черновцы": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": true,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": true,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+} ],
+"Щепеткова": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": true,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+} ],
+"Яремче": [ {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": false,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ]
+}
+list_of_landscape_of_provinces = {
+}
+list_of_villages_of_provinces = {
+}

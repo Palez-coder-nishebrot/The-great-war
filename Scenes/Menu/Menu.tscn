@@ -1,0 +1,161 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Scenes/Menu/Menu.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Menu/ListOfCountries.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Menu/country_button.gd" type="Script" id=3]
+[ext_resource path="res://Graphics/Fonts/pixel_2.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="DynamicFont" id=8]
+size = 80
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 139
+extra_spacing_char = -15
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 32
+extra_spacing_top = 3
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 48
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 42
+font_data = ExtResource( 5 )
+
+[node name="Menu" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_top = 855.0
+margin_right = 1500.0
+margin_bottom = 1267.0
+rect_scale = Vector2( 0.55, 0.55 )
+custom_fonts/font = SubResource( 8 )
+text = "Выход из программы: Esc
+Код: Kerensky,
+Графика: Kyle и Mr Protoss,
+Карта: Semkay,
+Помощь со скриптами: Question."
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="."]
+margin_right = 1920.0
+margin_bottom = 137.0
+custom_fonts/font = SubResource( 3 )
+text = "-\\_(-_-)_/-"
+align = 1
+valign = 1
+
+[node name="Label3" type="Button" parent="."]
+margin_left = 1402.0
+margin_top = 1014.0
+margin_right = 2340.0
+margin_bottom = 1131.0
+rect_scale = Vector2( 0.55, 0.55 )
+custom_fonts/font = SubResource( 8 )
+text = "KEY_HELLO"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+visible = false
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 1456.0
+margin_right = 1920.0
+margin_bottom = 697.0
+script = ExtResource( 2 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+margin_right = 464.0
+margin_bottom = 697.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer"]
+visible = false
+margin_right = 464.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 7 )
+text = "Хорезм"
+script = ExtResource( 3 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 737.0
+margin_top = 246.0
+margin_right = 1253.0
+margin_bottom = 511.0
+custom_constants/separation = 0
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+margin_right = 516.0
+margin_bottom = 54.0
+custom_fonts/font = SubResource( 9 )
+text = "Одиночная игра"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+margin_top = 54.0
+margin_right = 516.0
+margin_bottom = 108.0
+custom_fonts/font = SubResource( 9 )
+text = "Мультиплеер"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+margin_top = 108.0
+margin_right = 516.0
+margin_bottom = 162.0
+custom_fonts/font = SubResource( 9 )
+text = "Настройки"
+
+[node name="Button4" type="Button" parent="VBoxContainer"]
+margin_top = 162.0
+margin_right = 516.0
+margin_bottom = 211.0
+custom_fonts/font = SubResource( 10 )
+text = "Руководство разработчика"
+
+[node name="Button5" type="Button" parent="VBoxContainer"]
+margin_top = 211.0
+margin_right = 516.0
+margin_bottom = 265.0
+custom_fonts/font = SubResource( 9 )
+text = "Выход"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+visible = false
+margin_top = 246.0
+margin_right = 516.0
+margin_bottom = 300.0
+custom_constants/separation = 0
+
+[node name="Button" type="Button" parent="VBoxContainer2"]
+margin_right = 516.0
+margin_bottom = 54.0
+custom_fonts/font = SubResource( 9 )
+text = "Загрузить игру"
+
+[node name="Button2" type="Button" parent="VBoxContainer2"]
+margin_top = 54.0
+margin_right = 516.0
+margin_bottom = 108.0
+custom_fonts/font = SubResource( 9 )
+text = "Настройки ИИ"
+
+[node name="Button3" type="Button" parent="VBoxContainer2"]
+margin_top = 108.0
+margin_right = 516.0
+margin_bottom = 162.0
+custom_fonts/font = SubResource( 9 )
+text = "Редактор карты"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="one_player"]
+[connection signal="pressed" from="VBoxContainer/Button4" to="." method="developer_guide"]
+[connection signal="pressed" from="VBoxContainer2/Button3" to="." method="path_editor"]

@@ -1,0 +1,32 @@
+[gd_resource type="Resource" load_steps=8 format=2]
+
+[ext_resource path="res://Resources/Technologies/Technology.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectDefense.gd" type="Script" id=2]
+[ext_resource path="res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectSupply.gd" type="Script" id=3]
+[ext_resource path="res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectAttack.gd" type="Script" id=4]
+
+[sub_resource type="Resource" id=1]
+resource_name = "Defence"
+script = ExtResource( 2 )
+TIPE = "EffectDefense"
+power = 1
+target = "artillery"
+
+[sub_resource type="Resource" id=2]
+resource_name = "Supply"
+script = ExtResource( 3 )
+TIPE = "Supply"
+power = 1
+target = "projectile_supply"
+
+[sub_resource type="Resource" id=3]
+script = ExtResource( 4 )
+TIPE = "EffectAttack"
+power = 1
+target = "bomber_airplane"
+
+[resource]
+script = ExtResource( 1 )
+cotegory = ""
+name_of_technology = "Средняя артиллерия"
+list_of_effects = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ]

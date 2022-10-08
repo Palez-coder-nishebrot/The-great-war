@@ -1,0 +1,22 @@
+[gd_resource type="Resource" load_steps=5 format=2]
+
+[ext_resource path="res://Resources/Technologies/Technology.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectProductionGoods.gd" type="Script" id=2]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 2 )
+name_of_effect = "Выпуск продукции"
+power = 10
+target = "iron"
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 2 )
+name_of_effect = "Выпуск продукции"
+power = 10
+target = "coal"
+
+[resource]
+script = ExtResource( 1 )
+cotegory = ""
+name_of_technology = "Новый метод добычи руды"
+list_of_effects = [ SubResource( 1 ), SubResource( 2 ) ]

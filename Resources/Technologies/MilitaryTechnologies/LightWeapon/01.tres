@@ -1,0 +1,32 @@
+[gd_resource type="Resource" load_steps=7 format=2]
+
+[ext_resource path="res://Resources/Technologies/Technology.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectDefense.gd" type="Script" id=2]
+[ext_resource path="res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectSupply.gd" type="Script" id=3]
+
+[sub_resource type="Resource" id=1]
+resource_name = "Defense"
+script = ExtResource( 2 )
+TIPE = "EffectDefense"
+power = 1
+target = "infantry"
+
+[sub_resource type="Resource" id=2]
+resource_name = "Defense"
+script = ExtResource( 2 )
+TIPE = "EffectDefense"
+power = 1
+target = "cavalry"
+
+[sub_resource type="Resource" id=3]
+resource_name = "Supply"
+script = ExtResource( 3 )
+TIPE = "Supply"
+power = 1
+target = "ammo_supply"
+
+[resource]
+script = ExtResource( 1 )
+cotegory = ""
+name_of_technology = "Пулеметы и винтовки"
+list_of_effects = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ]

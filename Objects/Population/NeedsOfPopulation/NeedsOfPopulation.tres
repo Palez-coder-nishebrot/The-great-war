@@ -1,0 +1,48 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Objects/Population/NeedsOfPopulation/NeedsOfPopulation.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+needs_of_workers = {
+"alcohol": 0.01,
+"beasts": 0.01,
+"cars": 0.01,
+"clothes": 0.01,
+"el_appliances": 0.01,
+"furniture": 0.02,
+"gas": 0.01,
+"glass": 0.02,
+"grain": 0.01,
+"phone": 0.02,
+"radio": 0.02,
+"tabaco": 0.01
+}
+needs_of_factory_workers = {
+"alcohol": 0.01,
+"beasts": 0.03,
+"cars": 0.01,
+"clothes": 0.02,
+"el_appliances": 0.01,
+"furniture": 0.01,
+"gas": 0.01,
+"glass": 0.0,
+"grain": 0.04,
+"phone": 0.02,
+"radio": 0.02,
+"tabaco": 0.0
+}
+needs_of_craftsmen = {
+"alcohol": 0.0,
+"beasts": 0.03,
+"cars": 0.01,
+"clothes": 0.0,
+"el_appliances": 0.01,
+"furniture": 0.0,
+"gas": 0.01,
+"glass": 0.0,
+"grain": 0.03,
+"phone": 0.02,
+"radio": 0.02,
+"tabaco": 0.03
+}

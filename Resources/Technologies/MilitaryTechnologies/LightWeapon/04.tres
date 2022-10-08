@@ -1,0 +1,29 @@
+[gd_resource type="Resource" load_steps=7 format=2]
+
+[ext_resource path="res://Resources/Technologies/Technology.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectAttack.gd" type="Script" id=2]
+[ext_resource path="res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectSupply.gd" type="Script" id=3]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 2 )
+name_of_effect = "Атака"
+power = 1
+target = "infantry"
+
+[sub_resource type="Resource" id=3]
+script = ExtResource( 3 )
+name_of_effect = "Потребление"
+power = 1
+target = "ammo_supply"
+
+[sub_resource type="Resource" id=4]
+script = ExtResource( 2 )
+name_of_effect = "Атака"
+power = 1
+target = "stormtroopers"
+
+[resource]
+script = ExtResource( 1 )
+cotegory = ""
+name_of_technology = "Модернизированное вооружение"
+list_of_effects = [ SubResource( 1 ), SubResource( 3 ), SubResource( 4 ) ]

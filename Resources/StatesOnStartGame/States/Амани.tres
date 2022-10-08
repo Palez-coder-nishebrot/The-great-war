@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Resources/StatesOnStartGame/State.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+name_of_state = "Amany"
+list_of_regions = PoolStringArray( "Симферополь", "Винница" )
+form_of_goverment = "monarchy"
+ideology = "populists"
+national_color = Color( 0.431373, 0.556863, 0.505882, 1 )
+national_id = ""

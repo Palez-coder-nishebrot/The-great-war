@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://Resources/Technologies/Technology.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectAttack.gd" type="Script" id=2]
+
+[sub_resource type="Resource" id=1]
+resource_name = "Attack"
+script = ExtResource( 2 )
+name_of_effect = "Атака"
+power = 1
+target = "infantry"
+
+[resource]
+script = ExtResource( 1 )
+cotegory = ""
+name_of_technology = "Манёвренная война"
+list_of_effects = [ SubResource( 1 ) ]

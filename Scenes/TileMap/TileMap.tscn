@@ -1,0 +1,554 @@
+[gd_scene load_steps=109 format=2]
+
+[ext_resource path="res://Scenes/TileMap/TileMap.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/TileMap/Карта региона.png" type="Texture" id=2]
+[ext_resource path="res://Graphics/Sprites/Provinces/Горния/Тарнополь.png" type="Texture" id=3]
+[ext_resource path="res://Objects/Tile/Point.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Graphics/Sprites/Provinces/Горния/Кременец.png" type="Texture" id=5]
+[ext_resource path="res://Graphics/Sprites/Provinces/Горния/Люблин.png" type="Texture" id=6]
+[ext_resource path="res://Graphics/Sprites/Provinces/Горния/Броды.png" type="Texture" id=7]
+[ext_resource path="res://Graphics/Sprites/Provinces/Горния/Красник.png" type="Texture" id=8]
+[ext_resource path="res://Graphics/Sprites/Provinces/Хорезм/Лодзь.png" type="Texture" id=9]
+[ext_resource path="res://Graphics/Sprites/Provinces/Хорезм/Черновцы.png" type="Texture" id=10]
+[ext_resource path="res://Graphics/Sprites/Provinces/Хорезм/Познань.png" type="Texture" id=11]
+[ext_resource path="res://Graphics/Sprites/Provinces/Хорезм/Калуш.png" type="Texture" id=12]
+[ext_resource path="res://Graphics/Sprites/Provinces/Хорезм/Ровно.png" type="Texture" id=13]
+[ext_resource path="res://Graphics/Sprites/Provinces/СЗ/Луцк.png" type="Texture" id=14]
+[ext_resource path="res://Graphics/Sprites/Provinces/Хорезм/Галич.png" type="Texture" id=15]
+[ext_resource path="res://Graphics/Sprites/Provinces/Хорезм/Днестр.png" type="Texture" id=16]
+[ext_resource path="res://Graphics/Sprites/Provinces/Баскония/Перемышль.png" type="Texture" id=17]
+[ext_resource path="res://Graphics/Sprites/Provinces/Баскония/Пядичи.png" type="Texture" id=18]
+[ext_resource path="res://Graphics/Sprites/Provinces/Баскония/Батые.png" type="Texture" id=19]
+[ext_resource path="res://Graphics/Sprites/Provinces/Баскония/Заболотов.png" type="Texture" id=20]
+[ext_resource path="res://Graphics/Sprites/Provinces/Баскония/Рутивль.png" type="Texture" id=21]
+[ext_resource path="res://Graphics/Sprites/Provinces/Хорезм/Белжеца.png" type="Texture" id=22]
+[ext_resource path="res://Graphics/Sprites/Provinces/Хорезм/Станислав.png" type="Texture" id=23]
+[ext_resource path="res://Graphics/Sprites/Provinces/Хорезм/Богородчаны.png" type="Texture" id=24]
+[ext_resource path="res://Graphics/Sprites/Provinces/Хорезм/Тлумач.png" type="Texture" id=25]
+[ext_resource path="res://Graphics/Sprites/Provinces/Кракожия/Витебск.png" type="Texture" id=26]
+[ext_resource path="res://Graphics/Sprites/Provinces/Кракожия/Надворная.png" type="Texture" id=27]
+[ext_resource path="res://Graphics/Sprites/Provinces/Баскакия/Черкасс.png" type="Texture" id=28]
+[ext_resource path="res://Graphics/Sprites/Provinces/Баскакия/Тулов.png" type="Texture" id=29]
+[ext_resource path="res://Graphics/Sprites/Provinces/Баскакия/Макеевка.png" type="Texture" id=30]
+[ext_resource path="res://Graphics/Sprites/Provinces/Баскакия/Сумы.png" type="Texture" id=31]
+[ext_resource path="res://Graphics/Sprites/Provinces/Баскакия/Вручий.png" type="Texture" id=32]
+[ext_resource path="res://Graphics/Sprites/Provinces/Баскакия/Покровск.png" type="Texture" id=33]
+[ext_resource path="res://Graphics/Sprites/Provinces/Баскакия/Желув.png" type="Texture" id=34]
+[ext_resource path="res://Graphics/Sprites/Provinces/Баскакия/Изюм.png" type="Texture" id=35]
+[ext_resource path="res://Graphics/Sprites/Provinces/Теверция/Павлоград.png" type="Texture" id=36]
+[ext_resource path="res://Graphics/Sprites/Provinces/Поляния/Херсон.png" type="Texture" id=37]
+[ext_resource path="res://Graphics/Sprites/Provinces/Амани/Симферополь.png" type="Texture" id=38]
+[ext_resource path="res://Graphics/Sprites/Provinces/Теверция/Лисичанск.png" type="Texture" id=39]
+[ext_resource path="res://Graphics/Sprites/Provinces/Теверция/Мелитополь.png" type="Texture" id=40]
+[ext_resource path="res://Graphics/Sprites/Provinces/Амани/Винница.png" type="Texture" id=41]
+[ext_resource path="res://Graphics/Sprites/Provinces/Теверция/Белая Церковь.png" type="Texture" id=42]
+[ext_resource path="res://Graphics/Sprites/Provinces/Поляния/Полтава.png" type="Texture" id=43]
+[ext_resource path="res://Graphics/Sprites/Provinces/Теверция/Пмлица.png" type="Texture" id=44]
+[ext_resource path="res://Graphics/Sprites/Provinces/Баскакия/Горловка.png" type="Texture" id=45]
+[ext_resource path="res://Graphics/Sprites/Provinces/Кавардация/Зборов.png" type="Texture" id=46]
+[ext_resource path="res://Graphics/Sprites/Provinces/Кавардация/Хмельницкий.png" type="Texture" id=47]
+[ext_resource path="res://Graphics/Sprites/Provinces/Кавардация/Каменец-Подольск.png" type="Texture" id=48]
+[ext_resource path="res://Graphics/Sprites/Provinces/Кавардация/Севастополь.png" type="Texture" id=49]
+[ext_resource path="res://Graphics/Sprites/Provinces/Кавардация/Закопане.png" type="Texture" id=50]
+[ext_resource path="res://Graphics/Sprites/Provinces/Тернокат/Ужгород.png" type="Texture" id=51]
+[ext_resource path="res://Graphics/Sprites/Provinces/Тернокат/Дубно.png" type="Texture" id=52]
+[ext_resource path="res://Graphics/Sprites/Provinces/Тернокат/Иршики.png" type="Texture" id=53]
+[ext_resource path="res://Graphics/Sprites/Provinces/Тернокат/Белецкое.png" type="Texture" id=54]
+[ext_resource path="res://Graphics/Sprites/Provinces/Зличания/Нетешин.png" type="Texture" id=55]
+[ext_resource path="res://Graphics/Sprites/Provinces/Зличания/Дрогобыч.png" type="Texture" id=56]
+[ext_resource path="res://Graphics/Sprites/Provinces/Зличания/Староконстантинов.png" type="Texture" id=57]
+[ext_resource path="res://Graphics/Sprites/Provinces/Насардия/Пшемысль.png" type="Texture" id=58]
+[ext_resource path="res://Graphics/Sprites/Provinces/Насардия/Стецки.png" type="Texture" id=59]
+[ext_resource path="res://Graphics/Sprites/Provinces/Насардия/Ченстохова.png" type="Texture" id=60]
+[ext_resource path="res://Graphics/Sprites/Provinces/Насардия/Берегово.png" type="Texture" id=61]
+[ext_resource path="res://Graphics/Sprites/Provinces/Насардия/Буковина.png" type="Texture" id=62]
+[ext_resource path="res://Graphics/Sprites/Provinces/Насардия/Донецк.png" type="Texture" id=63]
+[ext_resource path="res://Graphics/Sprites/Provinces/Адамантия/Новомосковск.png" type="Texture" id=64]
+[ext_resource path="res://Graphics/Sprites/Provinces/Адамантия/Коростень.png" type="Texture" id=65]
+[ext_resource path="res://Graphics/Sprites/Provinces/Адамантия/Яремче.png" type="Texture" id=66]
+[ext_resource path="res://Graphics/Sprites/Provinces/Адамантия/Бердичев.png" type="Texture" id=67]
+[ext_resource path="res://Graphics/Sprites/Provinces/Адамантия/Должанск.png" type="Texture" id=68]
+[ext_resource path="res://Graphics/Sprites/Provinces/Адамантия/Горлица.png" type="Texture" id=69]
+[ext_resource path="res://Graphics/Sprites/Provinces/Адамантия/Константиновка.png" type="Texture" id=70]
+[ext_resource path="res://Graphics/Sprites/Provinces/Адамантия/Измаил.png" type="Texture" id=71]
+[ext_resource path="res://Graphics/Sprites/Provinces/Насардия/Катовице.png" type="Texture" id=72]
+[ext_resource path="res://Graphics/Sprites/Provinces/Зличания/Мукачево.png" type="Texture" id=73]
+[ext_resource path="res://Graphics/Sprites/Provinces/Иллирия/Львов.png" type="Texture" id=74]
+[ext_resource path="res://Graphics/Sprites/Provinces/Иллирия/Звижень.png" type="Texture" id=75]
+[ext_resource path="res://Graphics/Sprites/Provinces/Иллирия/Болехов.png" type="Texture" id=76]
+[ext_resource path="res://Graphics/Sprites/Provinces/Кавардация/Ивано-Франковск.png" type="Texture" id=77]
+[ext_resource path="res://Graphics/Sprites/Provinces/Иллирия/Гримайлов.png" type="Texture" id=78]
+[ext_resource path="res://Graphics/Sprites/Provinces/Иллирия/Борка.png" type="Texture" id=79]
+[ext_resource path="res://Graphics/Sprites/Provinces/Баскакия/Житомир.png" type="Texture" id=80]
+[ext_resource path="res://Graphics/Sprites/Provinces/Насардия/Николаев.png" type="Texture" id=81]
+[ext_resource path="res://Graphics/Sprites/Provinces/БТК/Гродно.png" type="Texture" id=82]
+[ext_resource path="res://Graphics/Sprites/Provinces/БТК/Теребовль.png" type="Texture" id=83]
+[ext_resource path="res://Graphics/Sprites/Provinces/БТК/Подолье.png" type="Texture" id=84]
+[ext_resource path="res://Graphics/Sprites/Provinces/БТК/Любич.png" type="Texture" id=85]
+[ext_resource path="res://Graphics/Sprites/Provinces/БТК/Пинск.png" type="Texture" id=86]
+[ext_resource path="res://Graphics/Sprites/Provinces/Кривечия/Ковель.png" type="Texture" id=87]
+[ext_resource path="res://Graphics/Sprites/Provinces/Кривечия/Проскуров.png" type="Texture" id=88]
+[ext_resource path="res://Graphics/Sprites/Provinces/Кривечия/Волынский.png" type="Texture" id=89]
+[ext_resource path="res://Graphics/Sprites/Provinces/Кривечия/Стрый.png" type="Texture" id=90]
+[ext_resource path="res://Graphics/Sprites/Provinces/Кривечия/Щепеткова.png" type="Texture" id=91]
+[ext_resource path="res://Graphics/Sprites/Provinces/Кривечия/Коломыя.png" type="Texture" id=92]
+[ext_resource path="res://Graphics/Sprites/Provinces/Хорезм/Митава.png" type="Texture" id=93]
+[ext_resource path="res://Graphics/Sprites/Provinces/Баскония/Брзежаны.png" type="Texture" id=94]
+[ext_resource path="res://Graphics/Sprites/Provinces/Кракожия/Дукшты.png" type="Texture" id=95]
+[ext_resource path="res://Graphics/Sprites/Provinces/Теверция/Вилькомир.png" type="Texture" id=96]
+[ext_resource path="res://Graphics/Sprites/Provinces/Теверция/Грубешов.png" type="Texture" id=97]
+[ext_resource path="res://Graphics/Sprites/Provinces/Роксолания/Вильянди.png" type="Texture" id=98]
+[ext_resource path="res://Graphics/Sprites/Provinces/Роксолания/Пярну.png" type="Texture" id=99]
+[ext_resource path="res://Graphics/Sprites/Provinces/Роксолания/Раквере.png" type="Texture" id=100]
+[ext_resource path="res://Graphics/Sprites/Provinces/Роксолания/Силламяэ.png" type="Texture" id=101]
+[ext_resource path="res://Graphics/Sprites/Provinces/Роксолания/Тарту.png" type="Texture" id=102]
+[ext_resource path="res://Graphics/Sprites/Provinces/Роксолания/Курессааре.png" type="Texture" id=103]
+[ext_resource path="res://Graphics/Sprites/Provinces/Роксолания/Хаапсалу.png" type="Texture" id=104]
+[ext_resource path="res://Graphics/Sprites/Provinces/Суеция/Алитус.png" type="Texture" id=105]
+[ext_resource path="res://Graphics/Sprites/Provinces/Суеция/Паневежис.png" type="Texture" id=106]
+[ext_resource path="res://Graphics/Sprites/Provinces/Суеция/Клайпеда.png" type="Texture" id=107]
+[ext_resource path="res://Graphics/Sprites/Provinces/Суеция/Каунас.png" type="Texture" id=108]
+
+[node name="TileMap" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Map" type="Sprite" parent="."]
+position = Vector2( 2758, 1709 )
+scale = Vector2( 0.995, 0.995 )
+z_index = -10
+texture = ExtResource( 2 )
+
+[node name="Броды" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2936, 1447 )
+texture = ExtResource( 7 )
+
+[node name="Кременец" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2468, 1476 )
+texture = ExtResource( 5 )
+
+[node name="Люблин" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2073, 1517 )
+texture = ExtResource( 6 )
+
+[node name="Тарнополь" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1981, 1691 )
+texture = ExtResource( 3 )
+
+[node name="Красник" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1993, 1821 )
+texture = ExtResource( 8 )
+
+[node name="Станислав" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2187, 1905 )
+texture = ExtResource( 23 )
+
+[node name="Белжеца" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2430, 1933 )
+texture = ExtResource( 22 )
+
+[node name="Лодзь" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2171, 1722 )
+texture = ExtResource( 9 )
+
+[node name="Митава" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2406, 1711 )
+texture = ExtResource( 93 )
+
+[node name="Черновцы" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2680, 1704 )
+texture = ExtResource( 10 )
+
+[node name="Богородчаны" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2853, 1669 )
+texture = ExtResource( 24 )
+
+[node name="Днестр" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3003, 1799 )
+texture = ExtResource( 16 )
+
+[node name="Галич" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2732, 1898 )
+texture = ExtResource( 15 )
+
+[node name="Калуш" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3151, 1797 )
+texture = ExtResource( 12 )
+
+[node name="Луцк" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3046, 2365 )
+texture = ExtResource( 14 )
+
+[node name="Познань" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3260, 2454 )
+texture = ExtResource( 11 )
+
+[node name="Ровно" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3009, 2656 )
+texture = ExtResource( 13 )
+
+[node name="Коломыя" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3214, 2899 )
+texture = ExtResource( 92 )
+
+[node name="Проскуров" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2873, 3062 )
+texture = ExtResource( 88 )
+
+[node name="Стрый" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2752, 2917 )
+texture = ExtResource( 90 )
+
+[node name="Ковель" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2605, 2824 )
+texture = ExtResource( 87 )
+
+[node name="Волынский" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2311, 2937 )
+texture = ExtResource( 89 )
+
+[node name="Щепеткова" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2506, 3065 )
+texture = ExtResource( 91 )
+
+[node name="Львов" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1996, 2907 )
+texture = ExtResource( 74 )
+
+[node name="Болехов" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1784, 2878 )
+texture = ExtResource( 76 )
+
+[node name="Борка" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1840, 2712 )
+texture = ExtResource( 79 )
+
+[node name="Звижень" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1561, 2661 )
+texture = ExtResource( 75 )
+
+[node name="Гримайлов" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1501, 2873 )
+texture = ExtResource( 78 )
+
+[node name="Хмельницкий" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1029, 2709 )
+texture = ExtResource( 47 )
+
+[node name="Ивано-Франковск" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1256, 2776 )
+texture = ExtResource( 77 )
+
+[node name="Ужгород" parent="." instance=ExtResource( 4 )]
+position = Vector2( 746, 2828 )
+texture = ExtResource( 51 )
+
+[node name="Белецкое" parent="." instance=ExtResource( 4 )]
+position = Vector2( 999, 2852 )
+texture = ExtResource( 54 )
+
+[node name="Каменец-Подольск" parent="." instance=ExtResource( 4 )]
+position = Vector2( 559, 2204 )
+texture = ExtResource( 48 )
+
+[node name="Дубно" parent="." instance=ExtResource( 4 )]
+position = Vector2( 592, 2569 )
+texture = ExtResource( 52 )
+
+[node name="Иршики" parent="." instance=ExtResource( 4 )]
+position = Vector2( 778, 2576 )
+texture = ExtResource( 53 )
+
+[node name="Зборов" parent="." instance=ExtResource( 4 )]
+position = Vector2( 831, 2486 )
+texture = ExtResource( 46 )
+
+[node name="Старокостантинов" parent="." instance=ExtResource( 4 )]
+position = Vector2( 762, 2117 )
+texture = ExtResource( 57 )
+
+[node name="Дрогобыч" parent="." instance=ExtResource( 4 )]
+position = Vector2( 946, 1956 )
+texture = ExtResource( 56 )
+
+[node name="Нетешин" parent="." instance=ExtResource( 4 )]
+position = Vector2( 719, 1875 )
+texture = ExtResource( 55 )
+
+[node name="Мукачево" parent="." instance=ExtResource( 4 )]
+position = Vector2( 858, 1691 )
+texture = ExtResource( 73 )
+
+[node name="Берегово" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1141, 1551 )
+texture = ExtResource( 61 )
+
+[node name="Буковина" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1154, 1766 )
+texture = ExtResource( 62 )
+
+[node name="Катовице" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1098, 1257 )
+texture = ExtResource( 72 )
+
+[node name="Ченстохова" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1305, 1538 )
+texture = ExtResource( 60 )
+
+[node name="Пшемысль" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1477, 1684 )
+texture = ExtResource( 58 )
+
+[node name="Севастополь" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1482, 2210 )
+texture = ExtResource( 49 )
+
+[node name="Закопане" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1602, 2193 )
+texture = ExtResource( 50 )
+
+[node name="Донецк" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1485, 1278 )
+texture = ExtResource( 63 )
+
+[node name="Стецки" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1299, 1307 )
+texture = ExtResource( 59 )
+
+[node name="Николаев" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1266, 1008 )
+texture = ExtResource( 81 )
+
+[node name="Винница" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1327, 802 )
+texture = ExtResource( 41 )
+
+[node name="Симферополь" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1393, 514 )
+texture = ExtResource( 38 )
+
+[node name="Херсон" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1336, 361 )
+texture = ExtResource( 37 )
+
+[node name="Полтава" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1725, 287 )
+texture = ExtResource( 43 )
+
+[node name="Белая Церковь" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1010, 573 )
+texture = ExtResource( 42 )
+
+[node name="Пмлица" parent="." instance=ExtResource( 4 )]
+position = Vector2( 753, 721 )
+texture = ExtResource( 44 )
+
+[node name="Мелитополь" parent="." instance=ExtResource( 4 )]
+position = Vector2( 518, 986 )
+texture = ExtResource( 40 )
+
+[node name="Грубешов" parent="." instance=ExtResource( 4 )]
+position = Vector2( 566, 1117 )
+texture = ExtResource( 97 )
+
+[node name="Павлоград" parent="." instance=ExtResource( 4 )]
+position = Vector2( 884, 1375 )
+texture = ExtResource( 36 )
+
+[node name="Вилькомир" parent="." instance=ExtResource( 4 )]
+position = Vector2( 964, 1023 )
+texture = ExtResource( 96 )
+
+[node name="Лисичанск" parent="." instance=ExtResource( 4 )]
+position = Vector2( 635, 1503 )
+texture = ExtResource( 39 )
+
+[node name="Бердичев" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1760, 770 )
+texture = ExtResource( 67 )
+
+[node name="Горлица" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2055, 566 )
+texture = ExtResource( 69 )
+
+[node name="Константиновка" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1650, 492 )
+texture = ExtResource( 70 )
+
+[node name="Измаил" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1518, 898 )
+texture = ExtResource( 71 )
+
+[node name="Новомосковск" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1719, 1152 )
+texture = ExtResource( 64 )
+
+[node name="Яремче" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1940, 1043 )
+texture = ExtResource( 66 )
+
+[node name="Label" parent="Яремче" index="0"]
+margin_left = -662.0
+margin_top = 105.0
+margin_right = 103.0
+margin_bottom = 241.0
+rect_rotation = -77.0
+
+[node name="Area2D" parent="Яремче" index="1"]
+rotation = -1.3439
+
+[node name="Коростень" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1905, 1294 )
+texture = ExtResource( 65 )
+
+[node name="Должанск" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2163, 787 )
+texture = ExtResource( 68 )
+
+[node name="Покровск" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2047, 379 )
+texture = ExtResource( 33 )
+
+[node name="Изюм" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2199, 266 )
+texture = ExtResource( 35 )
+
+[node name="Черкасс" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2257, 451 )
+texture = ExtResource( 28 )
+
+[node name="Житомир" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2402, 648 )
+texture = ExtResource( 80 )
+
+[node name="Сумы" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2590, 334 )
+texture = ExtResource( 31 )
+
+[node name="Горловка" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2678, 520 )
+texture = ExtResource( 45 )
+
+[node name="Макеевка" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2738, 698 )
+texture = ExtResource( 30 )
+
+[node name="Желув" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3019, 601 )
+texture = ExtResource( 34 )
+
+[node name="Тулов" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3058, 354 )
+texture = ExtResource( 29 )
+
+[node name="Вручий" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3416, 450 )
+texture = ExtResource( 32 )
+
+[node name="Любич" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3653, 752 )
+texture = ExtResource( 85 )
+
+[node name="Подолье" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3348, 771 )
+texture = ExtResource( 84 )
+
+[node name="Теребовль" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3386, 1017 )
+texture = ExtResource( 83 )
+
+[node name="Пинск" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3041, 995 )
+texture = ExtResource( 86 )
+
+[node name="Гродно" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3371, 1385 )
+texture = ExtResource( 82 )
+
+[node name="Витебск" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3696, 1309 )
+texture = ExtResource( 26 )
+
+[node name="Дукшты" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3977, 1429 )
+texture = ExtResource( 95 )
+
+[node name="Надворная" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3859, 921 )
+texture = ExtResource( 27 )
+
+[node name="Рутивль" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3436, 1647 )
+texture = ExtResource( 21 )
+
+[node name="Заболотов" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3778, 1689 )
+texture = ExtResource( 20 )
+
+[node name="Тлумач" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3171, 2128 )
+texture = ExtResource( 25 )
+
+[node name="Пядичи" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3468, 2067 )
+texture = ExtResource( 18 )
+
+[node name="Перемышль" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3721, 2111 )
+texture = ExtResource( 17 )
+
+[node name="Батые" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3485, 2577 )
+texture = ExtResource( 19 )
+
+[node name="Брзежаны" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3968, 2490 )
+texture = ExtResource( 94 )
+
+[node name="Вильянди" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4775, 1797 )
+texture = ExtResource( 98 )
+
+[node name="Курессааре" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4648, 2283 )
+texture = ExtResource( 103 )
+
+[node name="Пярну" parent="." instance=ExtResource( 4 )]
+position = Vector2( 5200, 1697 )
+texture = ExtResource( 99 )
+
+[node name="Раквере" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4991, 2088 )
+texture = ExtResource( 100 )
+
+[node name="Силламяэ" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4518, 2037 )
+texture = ExtResource( 101 )
+
+[node name="Тарту" parent="." instance=ExtResource( 4 )]
+position = Vector2( 5311, 1426 )
+texture = ExtResource( 102 )
+
+[node name="Хаапсалу" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4829, 2686 )
+texture = ExtResource( 104 )
+
+[node name="Алитус" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4442, 232 )
+texture = ExtResource( 105 )
+
+[node name="Каунас" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4396, 498 )
+texture = ExtResource( 108 )
+
+[node name="Клайпеда" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4541, 672 )
+texture = ExtResource( 107 )
+
+[node name="Паневежис" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4773, 437 )
+texture = ExtResource( 106 )
+
+[connection signal="mouse_entered" from="Яремче/Area2D" to="Яремче" method="mouse_entered"]
+[connection signal="mouse_exited" from="Яремче/Area2D" to="Яремче" method="mouse_exited"]
+
+[editable path="Яремче"]

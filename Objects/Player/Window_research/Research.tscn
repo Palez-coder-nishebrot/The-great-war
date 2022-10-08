@@ -1,0 +1,207 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Objects/Player/Window_research/Research.gd" type="Script" id=2]
+[ext_resource path="res://Objects/Player/Window_research/Research_button.gd" type="Script" id=3]
+[ext_resource path="res://Graphics/Fonts/pixel_2.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+extra_spacing_top = 5
+extra_spacing_bottom = 5
+extra_spacing_char = -2
+extra_spacing_space = -4
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 76
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 50
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 32
+extra_spacing_char = -2
+extra_spacing_space = -5
+font_data = ExtResource( 4 )
+
+[node name="Research" type="Panel"]
+margin_top = 61.0
+margin_right = 1920.0
+margin_bottom = 1078.0
+script = ExtResource( 2 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_right = 1920.0
+margin_bottom = 358.0
+custom_constants/separation = 20
+
+[node name="ArmyManagerement" type="VBoxContainer" parent="HBoxContainer"]
+margin_right = 465.0
+margin_bottom = 358.0
+size_flags_horizontal = 3
+size_flags_vertical = 5
+custom_constants/separation = 0
+
+[node name="Label" type="Label" parent="HBoxContainer/ArmyManagerement"]
+margin_right = 465.0
+margin_bottom = 42.0
+custom_fonts/font = SubResource( 1 )
+text = "Управление армией"
+align = 1
+
+[node name="HeavyWeapon" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 485.0
+margin_right = 950.0
+margin_bottom = 358.0
+size_flags_horizontal = 3
+size_flags_vertical = 5
+custom_constants/separation = 0
+
+[node name="Label" type="Label" parent="HBoxContainer/HeavyWeapon"]
+margin_right = 465.0
+margin_bottom = 42.0
+custom_fonts/font = SubResource( 1 )
+text = "Тяжелое вооружение"
+align = 1
+
+[node name="LightWeapon" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 970.0
+margin_right = 1435.0
+margin_bottom = 358.0
+size_flags_horizontal = 3
+size_flags_vertical = 5
+custom_constants/separation = 0
+
+[node name="Label" type="Label" parent="HBoxContainer/LightWeapon"]
+margin_right = 465.0
+margin_bottom = 42.0
+custom_fonts/font = SubResource( 1 )
+text = "Легкое вооружение"
+align = 1
+
+[node name="Navy" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 1455.0
+margin_right = 1920.0
+margin_bottom = 358.0
+size_flags_horizontal = 3
+size_flags_vertical = 5
+custom_constants/separation = 0
+
+[node name="Label" type="Label" parent="HBoxContainer/Navy"]
+margin_right = 465.0
+margin_bottom = 42.0
+custom_fonts/font = SubResource( 1 )
+text = "Флот"
+align = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+margin_top = 358.0
+margin_right = 1920.0
+margin_bottom = 629.0
+custom_constants/separation = 35
+
+[node name="FarmProduction" type="VBoxContainer" parent="HBoxContainer2"]
+margin_right = 453.0
+margin_bottom = 271.0
+size_flags_horizontal = 3
+size_flags_vertical = 5
+custom_constants/separation = 0
+
+[node name="Label" type="Label" parent="HBoxContainer2/FarmProduction"]
+margin_right = 453.0
+margin_bottom = 42.0
+custom_fonts/font = SubResource( 1 )
+text = "Фермерское производство"
+align = 1
+
+[node name="FactoryProduction" type="VBoxContainer" parent="HBoxContainer2"]
+margin_left = 488.0
+margin_right = 942.0
+margin_bottom = 271.0
+size_flags_horizontal = 3
+size_flags_vertical = 5
+custom_constants/separation = 0
+
+[node name="Label" type="Label" parent="HBoxContainer2/FactoryProduction"]
+margin_right = 454.0
+margin_bottom = 42.0
+custom_fonts/font = SubResource( 1 )
+text = "Фабричное производство"
+align = 1
+
+[node name="MinesProduction" type="VBoxContainer" parent="HBoxContainer2"]
+margin_left = 977.0
+margin_right = 1431.0
+margin_bottom = 271.0
+size_flags_horizontal = 3
+size_flags_vertical = 5
+custom_constants/separation = 0
+
+[node name="Label" type="Label" parent="HBoxContainer2/MinesProduction"]
+margin_right = 454.0
+margin_bottom = 42.0
+custom_fonts/font = SubResource( 1 )
+text = "Добыча"
+align = 1
+
+[node name="Supply" type="VBoxContainer" parent="HBoxContainer2"]
+margin_left = 1466.0
+margin_right = 1920.0
+margin_bottom = 271.0
+size_flags_horizontal = 3
+size_flags_vertical = 5
+custom_constants/separation = 0
+
+[node name="Label" type="Label" parent="HBoxContainer2/Supply"]
+margin_right = 454.0
+margin_bottom = 42.0
+custom_fonts/font = SubResource( 1 )
+text = "Инфраструктура и снабжение"
+align = 1
+
+[node name="Effects" type="VBoxContainer" parent="."]
+margin_top = 758.0
+margin_right = 488.0
+margin_bottom = 1016.0
+
+[node name="StartResearch" type="Button" parent="."]
+margin_left = 1477.0
+margin_top = 918.0
+margin_right = 1920.0
+margin_bottom = 1019.0
+custom_fonts/font = SubResource( 2 )
+disabled = true
+text = "Исследовать"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 867.0
+margin_top = 918.0
+margin_right = 1477.0
+margin_bottom = 1016.0
+custom_fonts/font = SubResource( 3 )
+text = "Исследование: 0%"
+align = 1
+valign = 1
+
+[node name="ButtonExample" type="Button" parent="."]
+margin_top = -108.0
+margin_right = 248.0
+margin_bottom = -60.0
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "Маневренная война"
+script = ExtResource( 3 )
+
+[node name="LabelExample" type="Label" parent="."]
+margin_left = 248.0
+margin_top = -108.0
+margin_right = 483.0
+margin_bottom = -60.0
+custom_fonts/font = SubResource( 4 )
+text = "Маневренная война"
+align = 1
+valign = 1
+
+[connection signal="pressed" from="StartResearch" to="." method="start_research"]

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Resources/StatesOnStartGame/State.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+name_of_state = "Nasardy"
+list_of_regions = PoolStringArray( "Донецк", "Ченстохова", "Катовице", "Николаев", "Берегово", "Буковина", "Пшемысль", "Николаев", "Стецки" )
+form_of_goverment = "monarchy"
+ideology = "populists"
+national_color = Color( 0.588235, 0.572549, 0.301961, 1 )
+national_id = ""

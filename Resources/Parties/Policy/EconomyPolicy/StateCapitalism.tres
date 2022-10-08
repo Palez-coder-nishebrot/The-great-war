@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Resources/Parties/EconomyPolicy.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+name_of_policy = "free_economy"
+cost_of_factories = 250
+cost_of_infrastructure = 250
+subsidization = true
+income_of_capitalists = 50
