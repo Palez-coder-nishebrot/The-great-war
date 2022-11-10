@@ -5,32 +5,30 @@
 [resource]
 script = ExtResource( 1 )
 needs_of_workers = {
-"alcohol": 0.01,
-"beasts": 0.01,
-"cars": 0.01,
-"clothes": 0.01,
-"el_appliances": 0.01,
-"furniture": 0.02,
-"gas": 0.01,
-"glass": 0.02,
-"grain": 0.01,
-"phone": 0.02,
-"radio": 0.02,
-"tabaco": 0.01
+"alcohol": 0.2,
+"beasts": 0.0,
+"cars": 0.1,
+"clothes": 0.1,
+"el_appliances": 0.1,
+"furniture": 0.1,
+"gas": 0.2,
+"glass": 0.1,
+"grain": 0.0,
+"phone": 0.1,
+"radio": 0.1
 }
 needs_of_factory_workers = {
-"alcohol": 0.01,
-"beasts": 0.03,
-"cars": 0.01,
-"clothes": 0.02,
-"el_appliances": 0.01,
-"furniture": 0.01,
-"gas": 0.01,
-"glass": 0.0,
-"grain": 0.04,
-"phone": 0.02,
-"radio": 0.02,
-"tabaco": 0.0
+"alcohol": 0.2,
+"beasts": 0.1,
+"cars": 0.1,
+"clothes": 0.1,
+"el_appliances": 0.1,
+"furniture": 0.1,
+"gas": 0.1,
+"glass": 0.1,
+"grain": 0.1,
+"phone": 0.1,
+"radio": 0.1
 }
 needs_of_craftsmen = {
 "alcohol": 0.0,
@@ -40,9 +38,20 @@ needs_of_craftsmen = {
 "el_appliances": 0.01,
 "furniture": 0.0,
 "gas": 0.01,
-"glass": 0.0,
 "grain": 0.03,
 "phone": 0.02,
-"radio": 0.02,
-"tabaco": 0.03
+"radio": 0.02
+}
+needs_of_clerks = {
+"alcohol": 0.2,
+"beasts": 0.1,
+"cars": 0.1,
+"clothes": 0.2,
+"el_appliances": 0.1,
+"furniture": 0.2,
+"gas": 0.1,
+"glass": 0.1,
+"grain": 0.2,
+"phone": 0.1,
+"radio": 0.1
 }

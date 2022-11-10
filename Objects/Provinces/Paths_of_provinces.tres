@@ -1,6 +1,4130 @@
-[gd_resource type="Resource" load_steps=2 format=2]
+[gd_resource type="Resource" load_steps=648 format=2]
 
 [ext_resource path="res://Objects/Provinces/Paths_of_provinces.gd" type="Script" id=1]
+[ext_resource path="res://Objects/Provinces/SavedProvince/Household.gd" type="Script" id=2]
+[ext_resource path="res://Objects/Provinces/SavedProvince/Factory.gd" type="Script" id=3]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Lumber_plant"
+good = "lumber"
+money = 500
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Furniture_factory"
+good = "furniture"
+money = 500
+
+[sub_resource type="Resource" id=3]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=4]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=5]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=6]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=7]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=8]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=9]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=10]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=11]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Lumber_plant"
+good = "lumber"
+money = 500
+
+[sub_resource type="Resource" id=12]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=13]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=14]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=15]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=16]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=17]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=18]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=19]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=20]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Glass_factory"
+good = "glass"
+money = 500
+
+[sub_resource type="Resource" id=21]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=22]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=23]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=24]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=25]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=26]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=27]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=28]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=29]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=30]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=31]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=32]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=33]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Textile_factory"
+good = "textile"
+money = 500
+
+[sub_resource type="Resource" id=34]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Clothes_factory"
+good = "clothes"
+money = 500
+
+[sub_resource type="Resource" id=35]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Glass_factory"
+good = "glass"
+money = 500
+
+[sub_resource type="Resource" id=36]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=37]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=38]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=39]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=40]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=41]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=42]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=43]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=44]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Electrical_parts_factory"
+good = "el_parts"
+money = 500
+
+[sub_resource type="Resource" id=45]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=46]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=47]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=48]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=49]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=50]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=51]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=52]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=53]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=54]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=55]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=56]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=57]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=58]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=59]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=60]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=61]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=62]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Lumber_plant"
+good = "lumber"
+money = 500
+
+[sub_resource type="Resource" id=63]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=64]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=65]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=66]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=67]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=68]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=69]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Electrical_parts_factory"
+good = "el_parts"
+money = 500
+
+[sub_resource type="Resource" id=70]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Phone_factory"
+good = "phone"
+money = 500
+
+[sub_resource type="Resource" id=71]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=72]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=73]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=74]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=75]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=76]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=77]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=78]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=79]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=80]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=81]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=82]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=83]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=84]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=85]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Distillery"
+good = "alcohol"
+money = 500
+
+[sub_resource type="Resource" id=86]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=87]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=88]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=89]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=90]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Glass_factory"
+good = "glass"
+money = 500
+
+[sub_resource type="Resource" id=91]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=92]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=93]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=94]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=95]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Textile_factory"
+good = "textile"
+money = 500
+
+[sub_resource type="Resource" id=96]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Clothes_factory"
+good = "clothes"
+money = 500
+
+[sub_resource type="Resource" id=97]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=98]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=99]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=100]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=101]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=102]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=103]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=104]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=105]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=106]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=107]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=108]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=109]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Glass_factory"
+good = "glass"
+money = 500
+
+[sub_resource type="Resource" id=110]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Textile_factory"
+good = "textile"
+money = 500
+
+[sub_resource type="Resource" id=111]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=112]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=113]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=114]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=115]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=116]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=117]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=118]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=119]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=120]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=121]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=122]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=123]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=124]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=125]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=126]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=127]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=128]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Textile_factory"
+good = "textile"
+money = 500
+
+[sub_resource type="Resource" id=129]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Clothes_factory"
+good = "clothes"
+money = 500
+
+[sub_resource type="Resource" id=130]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=131]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=132]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=133]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=134]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=135]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=136]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=137]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=138]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=139]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=140]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=141]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=142]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=143]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=144]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Furniture_factory"
+good = "furniture"
+money = 500
+
+[sub_resource type="Resource" id=145]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=146]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=147]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=148]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=149]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=150]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=151]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=152]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Textile_factory"
+good = "textile"
+money = 500
+
+[sub_resource type="Resource" id=153]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Clothes_factory"
+good = "clothes"
+money = 500
+
+[sub_resource type="Resource" id=154]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=155]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=156]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=157]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=158]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=159]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=160]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=161]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=162]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=163]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=164]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=165]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=166]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=167]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=168]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Textile_factory"
+good = "textile"
+money = 500
+
+[sub_resource type="Resource" id=169]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Clothes_factory"
+good = "clothes"
+money = 500
+
+[sub_resource type="Resource" id=170]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=171]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=172]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=173]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=174]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=175]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=176]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=177]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=178]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=179]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=180]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=181]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=182]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=183]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=184]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Glass_factory"
+good = "glass"
+money = 500
+
+[sub_resource type="Resource" id=185]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Electrical_parts_factory"
+good = "el_parts"
+money = 500
+
+[sub_resource type="Resource" id=186]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=187]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=188]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=189]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=190]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=191]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=192]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=193]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=194]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=195]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=196]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=197]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=198]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=199]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Distillery"
+good = "alcohol"
+money = 500
+
+[sub_resource type="Resource" id=200]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=201]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=202]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=203]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=204]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Electrical_parts_factory"
+good = "el_parts"
+money = 500
+
+[sub_resource type="Resource" id=205]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=206]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=207]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=208]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=209]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=210]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=211]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=212]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=213]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=214]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=215]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=216]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=217]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=218]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=219]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=220]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=221]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=222]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=223]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=224]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=225]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=226]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=227]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=228]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=229]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=230]
+script = ExtResource( 2 )
+soc_class = "Craftsman"
+education = 0
+
+[sub_resource type="Resource" id=231]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=232]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=233]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=234]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=235]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=236]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Glass_factory"
+good = "glass"
+money = 500
+
+[sub_resource type="Resource" id=237]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=238]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=239]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=240]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=241]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=242]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=243]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=244]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=245]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=246]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=247]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=248]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=249]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=250]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=251]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=252]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Furniture_factory"
+good = "furniture"
+money = 500
+
+[sub_resource type="Resource" id=253]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=254]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=255]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=256]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=257]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=258]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=259]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Furniture_factory"
+good = "furniture"
+money = 500
+
+[sub_resource type="Resource" id=260]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Lumber_plant"
+good = "lumber"
+money = 500
+
+[sub_resource type="Resource" id=261]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=262]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=263]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=264]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=265]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=266]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Glass_factory"
+good = "glass"
+money = 500
+
+[sub_resource type="Resource" id=267]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Radio_factory"
+good = "radio"
+money = 500
+
+[sub_resource type="Resource" id=268]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=269]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=270]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=271]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=272]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=273]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=274]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Glass_factory"
+good = "glass"
+money = 500
+
+[sub_resource type="Resource" id=275]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Electrical_parts_factory"
+good = "el_parts"
+money = 500
+
+[sub_resource type="Resource" id=276]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=277]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=278]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=279]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=280]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=281]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=282]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Phone_factory"
+good = "phone"
+money = 500
+
+[sub_resource type="Resource" id=283]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=284]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=285]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=286]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=287]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=288]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=289]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Gas_factory"
+good = "gas"
+money = 500
+
+[sub_resource type="Resource" id=290]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=291]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=292]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=293]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=294]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=295]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=296]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=297]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=298]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=299]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=300]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=301]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=302]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=303]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=304]
+script = ExtResource( 2 )
+soc_class = "Craftsman"
+education = 0
+
+[sub_resource type="Resource" id=305]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=306]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=307]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=308]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=309]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=310]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Steel_plant"
+good = "steel"
+money = 500
+
+[sub_resource type="Resource" id=311]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=312]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=313]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=314]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=315]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=316]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Distillery"
+good = "alcohol"
+money = 500
+
+[sub_resource type="Resource" id=317]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=318]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=319]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=320]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=321]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=322]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=323]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=324]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=325]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=326]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Steel_plant"
+good = "steel"
+money = 500
+
+[sub_resource type="Resource" id=327]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=328]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=329]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=330]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=331]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=332]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=333]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=334]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Distillery"
+good = "alcohol"
+money = 500
+
+[sub_resource type="Resource" id=335]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=336]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=337]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=338]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Lumber_plant"
+good = "lumber"
+money = 500
+
+[sub_resource type="Resource" id=339]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=340]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=341]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=342]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=343]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=344]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=345]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=346]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=347]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=348]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=349]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=350]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=351]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=352]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=353]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=354]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=355]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=356]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=357]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Electrical_appliance_factory"
+good = "el_appliances"
+money = 500
+
+[sub_resource type="Resource" id=358]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Electrical_parts_factory"
+good = "el_parts"
+money = 500
+
+[sub_resource type="Resource" id=359]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=360]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=361]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=362]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=363]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=364]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=365]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=366]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=367]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=368]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=369]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=370]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=371]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Textile_factory"
+good = "textile"
+money = 500
+
+[sub_resource type="Resource" id=372]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Clothes_factory"
+good = "clothes"
+money = 500
+
+[sub_resource type="Resource" id=373]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=374]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=375]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=376]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=377]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=378]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=379]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Steel_plant"
+good = "steel"
+money = 500
+
+[sub_resource type="Resource" id=380]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=381]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=382]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=383]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=384]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=385]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=386]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Glass_factory"
+good = "glass"
+money = 500
+
+[sub_resource type="Resource" id=387]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=388]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=389]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=390]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=391]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=392]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=393]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=394]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=395]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Clothes_factory"
+good = "clothes"
+money = 500
+
+[sub_resource type="Resource" id=396]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Textile_factory"
+good = "textile"
+money = 500
+
+[sub_resource type="Resource" id=397]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=398]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=399]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=400]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=401]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=402]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=403]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=404]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=405]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=406]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=407]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=408]
+script = ExtResource( 2 )
+soc_class = "Craftsman"
+education = 0
+
+[sub_resource type="Resource" id=409]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=410]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=411]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=412]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=413]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=414]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Steel_plant"
+good = "steel"
+money = 500
+
+[sub_resource type="Resource" id=415]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=416]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=417]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=418]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=419]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=420]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=421]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=422]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=423]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=424]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=425]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=426]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Distillery"
+good = "alcohol"
+money = 500
+
+[sub_resource type="Resource" id=427]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=428]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=429]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=430]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=431]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=432]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=433]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=434]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=435]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=436]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Glass_factory"
+good = "glass"
+money = 500
+
+[sub_resource type="Resource" id=437]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=438]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=439]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=440]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=441]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=442]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=443]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=444]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=445]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=446]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Glass_factory"
+good = "glass"
+money = 500
+
+[sub_resource type="Resource" id=447]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=448]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=449]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=450]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=451]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=452]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=453]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=454]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=455]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Electrical_appliance_factory"
+good = "el_appliances"
+money = 500
+
+[sub_resource type="Resource" id=456]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Glass_factory"
+good = "glass"
+money = 500
+
+[sub_resource type="Resource" id=457]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=458]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=459]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=460]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=461]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=462]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=463]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=464]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=465]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=466]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=467]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=468]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Electrical_parts_factory"
+good = "el_parts"
+money = 500
+
+[sub_resource type="Resource" id=469]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=470]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=471]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=472]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=473]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=474]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=475]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=476]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=477]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Steel_plant"
+good = "steel"
+money = 500
+
+[sub_resource type="Resource" id=478]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=479]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=480]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=481]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=482]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=483]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=484]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Glass_factory"
+good = "glass"
+money = 500
+
+[sub_resource type="Resource" id=485]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=486]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=487]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=488]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=489]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Steel_plant"
+good = "steel"
+money = 500
+
+[sub_resource type="Resource" id=490]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=491]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=492]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=493]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=494]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=495]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=496]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=497]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=498]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=499]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=500]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=501]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=502]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=503]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=504]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=505]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=506]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=507]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=508]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=509]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Electrical_parts_factory"
+good = "el_parts"
+money = 500
+
+[sub_resource type="Resource" id=510]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Phone_factory"
+good = "phone"
+money = 500
+
+[sub_resource type="Resource" id=511]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=512]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=513]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=514]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=515]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=516]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=517]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=518]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Gas_factory"
+good = "gas"
+money = 500
+
+[sub_resource type="Resource" id=519]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=520]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=521]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=522]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=523]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=524]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=525]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=526]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=527]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=528]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=529]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=530]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=531]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=532]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=533]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=534]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=535]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Steel_plant"
+good = "steel"
+money = 500
+
+[sub_resource type="Resource" id=536]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=537]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=538]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=539]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=540]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=541]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=542]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Glass_factory"
+good = "glass"
+money = 500
+
+[sub_resource type="Resource" id=543]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Lumber_plant"
+good = "lumber"
+money = 500
+
+[sub_resource type="Resource" id=544]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Furniture_factory"
+good = "furniture"
+money = 500
+
+[sub_resource type="Resource" id=545]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=546]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=547]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=548]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=549]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=550]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=551]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=552]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=553]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=554]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=555]
+script = ExtResource( 2 )
+soc_class = "Craftsman"
+education = 0
+
+[sub_resource type="Resource" id=556]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Textile_factory"
+good = "textile"
+money = 500
+
+[sub_resource type="Resource" id=557]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Clothes_factory"
+good = "clothes"
+money = 500
+
+[sub_resource type="Resource" id=558]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=559]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=560]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=561]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=562]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Lumber_plant"
+good = "lumber"
+money = 500
+
+[sub_resource type="Resource" id=563]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Furniture_factory"
+good = "furniture"
+money = 500
+
+[sub_resource type="Resource" id=564]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=565]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=566]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=567]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=568]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=569]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=570]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=571]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=572]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=573]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=574]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=575]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=576]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=577]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=578]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=579]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=580]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=581]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=582]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=583]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=584]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=585]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Textile_factory"
+good = "textile"
+money = 500
+
+[sub_resource type="Resource" id=586]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Clothes_factory"
+good = "clothes"
+money = 500
+
+[sub_resource type="Resource" id=587]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=588]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=589]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=590]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=591]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=592]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=593]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Steel_plant"
+good = "steel"
+money = 500
+
+[sub_resource type="Resource" id=594]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Electrical_parts_factory"
+good = "el_parts"
+money = 500
+
+[sub_resource type="Resource" id=595]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=596]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=597]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=598]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=599]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=600]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=601]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=602]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=603]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=604]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=605]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=606]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=607]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Electrical_parts_factory"
+good = "el_parts"
+money = 500
+
+[sub_resource type="Resource" id=608]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Electrical_appliance_factory"
+good = "el_appliances"
+money = 500
+
+[sub_resource type="Resource" id=609]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=610]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=611]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=612]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=613]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=614]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=615]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Gas_factory"
+good = "gas"
+money = 500
+
+[sub_resource type="Resource" id=616]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=617]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=618]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=619]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=620]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=621]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Lumber_plant"
+good = "lumber"
+money = 500
+
+[sub_resource type="Resource" id=622]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Furniture_factory"
+good = "furniture"
+money = 500
+
+[sub_resource type="Resource" id=623]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=624]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=625]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=626]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=627]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=628]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=629]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=630]
+script = ExtResource( 3 )
+time_of_construction = 0
+income = 0
+expenses_workers = 0
+expenses_purchase = 0
+expenses_mechanisms = 0
+max_employed_number = 2
+quantity_of_workers = 0.0
+subsidization = false
+closed = false
+in_construction = false
+name_of_factory = "Textile_factory"
+good = "textile"
+money = 500
+
+[sub_resource type="Resource" id=631]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=632]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=633]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=634]
+script = ExtResource( 2 )
+soc_class = "Proletarian"
+education = 0
+
+[sub_resource type="Resource" id=635]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=636]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=637]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=638]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=639]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=640]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=641]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=642]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=643]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
+
+[sub_resource type="Resource" id=644]
+script = ExtResource( 2 )
+soc_class = "Worker"
+education = 0
 
 [resource]
 script = ExtResource( 1 )
@@ -8,8 +4132,11 @@ list_of_path_of_provinces = {
 }
 list_of_resources_of_provinces = {
 "Алитус": {
-"coal": 1,
+"grain": 1,
 "wood": 1
+},
+"Ахалкалаки": {
+"saltpeter": 1
 },
 "Батые": {
 "oil": 1,
@@ -25,7 +4152,7 @@ list_of_resources_of_provinces = {
 },
 "Белжеца": {
 "grain": 1,
-"tabaco": 1
+"iron": 1
 },
 "Бердичев": {
 "coal": 1,
@@ -69,6 +4196,7 @@ list_of_resources_of_provinces = {
 },
 "Винница": {
 "coal": 1,
+"grain": 1,
 "saltpeter": 1
 },
 "Витебск": {
@@ -77,7 +4205,7 @@ list_of_resources_of_provinces = {
 },
 "Волынский": {
 "grain": 1,
-"tea": 1
+"saltpeter": 1
 },
 "Вручий": {
 "coal": 1,
@@ -141,7 +4269,7 @@ list_of_resources_of_provinces = {
 },
 "Заболотов": {
 "cotton": 1,
-"wood": 1
+"grain": 1
 },
 "Закопане": {
 "cotton": 1,
@@ -160,7 +4288,7 @@ list_of_resources_of_provinces = {
 "grain": 1
 },
 "Измаил": {
-"coal": 1,
+"oil": 1,
 "wood": 1
 },
 "Изюм": {
@@ -176,7 +4304,7 @@ list_of_resources_of_provinces = {
 "wood": 1
 },
 "Каменец-Подольск": {
-"tabaco": 1,
+"rubber": 1,
 "wood": 1
 },
 "Катовице": {
@@ -232,7 +4360,7 @@ list_of_resources_of_provinces = {
 "grain": 1
 },
 "Львов": {
-"tabaco": 1,
+"beasts": 1,
 "wood": 1
 },
 "Любич": {
@@ -245,7 +4373,7 @@ list_of_resources_of_provinces = {
 },
 "Макеевка": {
 "grain": 1,
-"tea": 1
+"iron": 1
 },
 "Мелитополь": {
 "iron": 1,
@@ -268,11 +4396,15 @@ list_of_resources_of_provinces = {
 "saltpeter": 1
 },
 "Николаев": {
-"coal": 1,
-"cotton": 1
+"cotton": 1,
+"oil": 1
+},
+"Нови-Сад": {
+"grain": 1,
+"iron": 1
 },
 "Новомосковск": {
-"coal": 1,
+"oil": 1,
 "wood": 1
 },
 "Павлоград": {
@@ -281,11 +4413,11 @@ list_of_resources_of_provinces = {
 },
 "Паневежис": {
 "beasts": 1,
-"wood": 1
+"grain": 1
 },
 "Перемышль": {
-"iron": 1,
-"saltpeter": 1
+"coal": 1,
+"grain": 1
 },
 "Пинск": {
 "beasts": 1,
@@ -310,6 +4442,10 @@ list_of_resources_of_provinces = {
 "Полтава": {
 "coal": 1,
 "grain": 1
+},
+"Приштина": {
+"grain": 1,
+"oil": 1
 },
 "Проскуров": {
 "rubber": 1,
@@ -337,18 +4473,21 @@ list_of_resources_of_provinces = {
 },
 "Рутивль": {
 "beasts": 1,
-"saltpeter": 1
+"grain": 1
 },
 "Севастополь": {
 "cotton": 1,
-"tea": 1
+"rubber": 1
+},
+"Сегед": {
+"grain": 1
 },
 "Силламяэ": {
 "coal": 1,
 "grain": 1
 },
 "Симферополь": {
-"cotton": 1,
+"grain": 1,
 "oil": 1
 },
 "Станислав": {
@@ -357,7 +4496,7 @@ list_of_resources_of_provinces = {
 },
 "Старокостантинов": {
 "grain": 1,
-"tabaco": 1
+"oil": 1
 },
 "Стецки": {
 "beasts": 1,
@@ -371,20 +4510,27 @@ list_of_resources_of_provinces = {
 "coal": 1,
 "wood": 1
 },
+"Тамань": {
+"iron": 1,
+"wood": 1
+},
 "Тарнополь": {
 "cotton": 1,
 "grain": 1
 },
 "Тарту": {
-"beasts": 1,
+"grain": 1,
 "wood": 1
 },
 "Теребовль": {
 "coal": 1,
-"saltpeter": 1
+"grain": 1
 },
 "Тлумач": {
 "grain": 1,
+"iron": 1
+},
+"Трускавец": {
 "iron": 1
 },
 "Тулов": {
@@ -420,8 +4566,7 @@ list_of_resources_of_provinces = {
 "wood": 1
 },
 "Щепеткова": {
-"cotton": 1,
-"tabaco": 1
+"cotton": 1
 },
 "Яремче": {
 "beasts": 1,
@@ -430,20 +4575,21 @@ list_of_resources_of_provinces = {
 }
 list_of_factories_of_provinces = {
 "Алитус": [ "lumber", "furniture" ],
+"Ахалкалаки": [  ],
 "Батые": [ "lumber" ],
 "Белая Церковь": [  ],
-"Белецкое": [  ],
+"Белецкое": [ "glass" ],
 "Белжеца": [  ],
 "Бердичев": [ "textile", "clothes", "glass" ],
-"Берегово": [  ],
+"Берегово": [ "el_parts" ],
 "Богородчаны": [  ],
 "Болехов": [  ],
 "Борка": [  ],
 "Брзежаны": [ "lumber" ],
-"Броды": [  ],
+"Броды": [ "el_parts", "phone" ],
 "Буковина": [  ],
 "Вилькомир": [  ],
-"Вильянди": [  ],
+"Вильянди": [ "alcohol" ],
 "Винница": [ "glass" ],
 "Витебск": [ "textile", "clothes" ],
 "Волынский": [  ],
@@ -456,12 +4602,12 @@ list_of_factories_of_provinces = {
 "Грубешов": [ "furniture" ],
 "Днестр": [ "textile", "clothes" ],
 "Должанск": [  ],
-"Донецк": [  ],
+"Донецк": [ "textile", "clothes" ],
 "Дрогобыч": [  ],
-"Дубно": [  ],
+"Дубно": [ "glass", "el_parts" ],
 "Дукшты": [  ],
 "Желув": [ "alcohol" ],
-"Житомир": [  ],
+"Житомир": [ "el_parts" ],
 "Заболотов": [  ],
 "Закопане": [  ],
 "Зборов": [  ],
@@ -472,16 +4618,16 @@ list_of_factories_of_provinces = {
 "Иршики": [  ],
 "Калуш": [  ],
 "Каменец-Подольск": [ "furniture" ],
-"Катовице": [  ],
-"Каунас": [  ],
-"Клайпеда": [ "glass" ],
-"Ковель": [  ],
+"Катовице": [ "furniture", "lumber" ],
+"Каунас": [ "glass", "radio" ],
+"Клайпеда": [ "glass", "el_parts" ],
+"Ковель": [ "phone" ],
 "Коломыя": [ "gas" ],
 "Константиновка": [  ],
 "Коростень": [  ],
-"Красник": [  ],
+"Красник": [ "steel" ],
 "Кременец": [  ],
-"Курессааре": [  ],
+"Курессааре": [ "alcohol" ],
 "Лисичанск": [  ],
 "Лодзь": [ "steel" ],
 "Луцк": [ "alcohol" ],
@@ -489,47 +4635,52 @@ list_of_factories_of_provinces = {
 "Любич": [  ],
 "Люблин": [  ],
 "Макеевка": [  ],
-"Мелитополь": [  ],
+"Мелитополь": [ "el_appliances", "el_parts" ],
 "Митава": [  ],
 "Мукачево": [ "textile", "clothes" ],
-"Надворная": [  ],
-"Нетешин": [  ],
-"Николаев": [  ],
+"Надворная": [ "steel" ],
+"Нетешин": [ "glass" ],
+"Николаев": [ "clothes", "textile" ],
+"Нови-Сад": [  ],
 "Новомосковск": [  ],
-"Павлоград": [  ],
+"Павлоград": [ "steel" ],
 "Паневежис": [  ],
-"Перемышль": [  ],
+"Перемышль": [ "alcohol" ],
 "Пинск": [  ],
-"Пмлица": [  ],
+"Пмлица": [ "glass" ],
 "Подолье": [  ],
 "Познань": [ "glass" ],
 "Покровск": [  ],
-"Полтава": [  ],
-"Проскуров": [  ],
+"Полтава": [ "el_appliances", "glass" ],
+"Приштина": [  ],
+"Проскуров": [ "el_parts" ],
 "Пшемысль": [  ],
 "Пядичи": [ "steel" ],
-"Пярну": [  ],
-"Раквере": [  ],
+"Пярну": [ "glass" ],
+"Раквере": [ "steel" ],
 "Ровно": [  ],
 "Рутивль": [  ],
 "Севастополь": [  ],
-"Силламяэ": [  ],
+"Сегед": [  ],
+"Силламяэ": [ "el_parts", "phone" ],
 "Симферополь": [ "gas" ],
 "Станислав": [  ],
 "Старокостантинов": [  ],
 "Стецки": [  ],
-"Стрый": [  ],
-"Сумы": [  ],
-"Тарнополь": [  ],
+"Стрый": [ "steel" ],
+"Сумы": [ "glass", "lumber", "furniture" ],
+"Тамань": [  ],
+"Тарнополь": [ "textile", "clothes" ],
 "Тарту": [ "lumber", "furniture" ],
 "Теребовль": [  ],
 "Тлумач": [  ],
-"Тулов": [ "steel" ],
+"Трускавец": [  ],
+"Тулов": [  ],
 "Ужгород": [  ],
 "Хаапсалу": [ "textile", "clothes" ],
-"Херсон": [  ],
+"Херсон": [ "steel", "el_parts" ],
 "Хмельницкий": [  ],
-"Ченстохова": [  ],
+"Ченстохова": [ "el_parts", "el_appliances" ],
 "Черкасс": [ "gas" ],
 "Черновцы": [ "lumber", "furniture" ],
 "Щепеткова": [ "textile" ],
@@ -537,1391 +4688,2922 @@ list_of_factories_of_provinces = {
 }
 list_of_household_of_provinces = {
 "Алитус": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": true,
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Фабричный рабочий"
 }, {
-"education": true,
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Фабричный рабочий"
+} ],
+"Ахалкалаки": [ {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
 } ],
 "Батые": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": true,
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Фабричный рабочий"
-} ],
-"Белая Церковь": [ {
-"education": false,
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Белая Церковь": [ {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Белецкое": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Белжеца": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Бердичев": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": true,
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Фабричный рабочий"
 }, {
-"education": true,
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Фабричный рабочий"
 }, {
-"education": true,
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Фабричный рабочий"
 } ],
 "Берегово": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
 } ],
 "Богородчаны": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Болехов": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Борка": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Брзежаны": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Броды": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
 } ],
 "Буковина": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Вилькомир": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Вильянди": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
+}, {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
 } ],
 "Винница": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": true,
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Фабричный рабочий"
 } ],
 "Витебск": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": true,
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Фабричный рабочий"
 }, {
-"education": true,
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
 } ],
 "Волынский": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Вручий": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": true,
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Фабричный рабочий"
 }, {
-"education": true,
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Фабричный рабочий"
 } ],
 "Галич": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Горлица": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Горловка": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": true,
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Фабричный рабочий"
 }, {
-"education": true,
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Фабричный рабочий"
 } ],
 "Гримайлов": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Гродно": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Грубешов": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": true,
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
 } ],
 "Днестр": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": true,
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Фабричный рабочий"
 }, {
-"education": true,
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Фабричный рабочий"
 } ],
 "Должанск": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Донецк": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
 } ],
 "Дрогобыч": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Дубно": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Дукшты": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Желув": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": true,
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Фабричный рабочий"
 } ],
 "Житомир": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
-"soc_class": "Рабочий"
+"soc_class": "Фабричный рабочий"
 } ],
 "Заболотов": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Закопане": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Зборов": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Звижень": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Ивано-Франковск": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Измаил": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 80,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Ремесленник"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Изюм": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": true,
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
 } ],
 "Иршики": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Калуш": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Каменец-Подольск": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": true,
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
 } ],
 "Катовице": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
-"ideology": "Популисты",
-"religion": "",
-"soc_class": "Рабочий"
-} ],
-"Каунас": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
-"ideology": "Популисты",
-"religion": "",
-"soc_class": "Рабочий"
-} ],
-"Клайпеда": [ {
-"education": false,
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Фабричный рабочий"
 }, {
-"education": false,
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+} ],
+"Каунас": [ {
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+} ],
+"Клайпеда": [ {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
 } ],
 "Ковель": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Коломыя": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Фабричный рабочий"
-} ],
-"Константиновка": [ {
-"education": false,
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Константиновка": [ {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Коростень": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 80,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Ремесленник"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Красник": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
 } ],
 "Кременец": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Курессааре": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
 } ],
 "Лисичанск": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Лодзь": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": true,
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
 } ],
 "Луцк": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": true,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Львов": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": true,
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Фабричный рабочий"
-} ],
-"Любич": [ {
-"education": false,
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Любич": [ {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Люблин": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Макеевка": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Мелитополь": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
 } ],
 "Митава": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Мукачево": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": true,
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Фабричный рабочий"
 }, {
-"education": true,
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Фабричный рабочий"
 } ],
 "Надворная": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Нетешин": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Николаев": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+} ],
+"Нови-Сад": [ {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Новомосковск": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 80,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Ремесленник"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Павлоград": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Паневежис": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Перемышль": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Пинск": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Пмлица": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
 } ],
 "Подолье": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Познань": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": true,
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Фабричный рабочий"
 } ],
 "Покровск": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Полтава": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+} ],
+"Приштина": [ {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Проскуров": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Пшемысль": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Пядичи": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": true,
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Пярну": [ {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Фабричный рабочий"
 } ],
-"Пярну": [ {
-"education": false,
-"ideology": "Популисты",
-"religion": "",
-"soc_class": "Рабочий"
-}, {
-"education": false,
-"ideology": "Популисты",
-"religion": "",
-"soc_class": "Рабочий"
-} ],
 "Раквере": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
 } ],
 "Ровно": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Рутивль": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Севастополь": [ {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Сегед": [ {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Силламяэ": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
-"ideology": "Популисты",
-"religion": "",
-"soc_class": "Рабочий"
-} ],
-"Симферополь": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
-"soc_class": "Рабочий"
+"soc_class": "Фабричный рабочий"
 }, {
-"education": true,
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Фабричный рабочий"
 } ],
+"Симферополь": [ {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
 "Станислав": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Старокостантинов": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Стецки": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Стрый": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Сумы": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
-"ideology": "Популисты",
-"religion": "",
-"soc_class": "Рабочий"
-}, {
-"education": false,
-"ideology": "Популисты",
-"religion": "",
-"soc_class": "Рабочий"
-} ],
-"Тарнополь": [ {
-"education": false,
-"ideology": "Популисты",
-"religion": "",
-"soc_class": "Рабочий"
-}, {
-"education": false,
-"ideology": "Популисты",
-"religion": "",
-"soc_class": "Рабочий"
-} ],
-"Тарту": [ {
-"education": false,
-"ideology": "Популисты",
-"religion": "",
-"soc_class": "Рабочий"
-}, {
-"education": false,
-"ideology": "Популисты",
-"religion": "",
-"soc_class": "Рабочий"
-}, {
-"education": true,
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Фабричный рабочий"
 }, {
-"education": true,
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+} ],
+"Тамань": [ {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 80,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Ремесленник"
+} ],
+"Тарнополь": [ {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+} ],
+"Тарту": [ {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Фабричный рабочий"
 } ],
 "Теребовль": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Тлумач": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Трускавец": [ {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Тулов": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": true,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
-"soc_class": "Фабричный рабочий"
+"soc_class": "Рабочий"
+}, {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
 } ],
 "Ужгород": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Хаапсалу": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": true,
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Фабричный рабочий"
 }, {
-"education": true,
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Фабричный рабочий"
 } ],
 "Херсон": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
 } ],
 "Хмельницкий": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 } ],
 "Ченстохова": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
 } ],
 "Черкасс": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": true,
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Фабричный рабочий"
 } ],
 "Черновцы": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": true,
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Фабричный рабочий"
 }, {
-"education": true,
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
 } ],
 "Щепеткова": [ {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 20,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": true,
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Фабричный рабочий"
-} ],
-"Яремче": [ {
-"education": false,
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Фабричный рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
 }, {
-"education": false,
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+} ],
+"Яремче": [ {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 20,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
+"ideology": "Популисты",
+"religion": "",
+"soc_class": "Рабочий"
+}, {
+"education": 50,
 "ideology": "Популисты",
 "religion": "",
 "soc_class": "Рабочий"
@@ -1931,3 +7613,889 @@ list_of_landscape_of_provinces = {
 }
 list_of_villages_of_provinces = {
 }
+provinces = [ {
+"factories": [ SubResource( 1 ), SubResource( 2 ) ],
+"households": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
+"name_of_province": "Алитус",
+"resources": {
+"grain": 1,
+"wood": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
+"name_of_province": "Ахалкалаки",
+"resources": {
+"saltpeter": 1
+}
+}, {
+"factories": [ SubResource( 11 ) ],
+"households": [ SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
+"name_of_province": "Батые",
+"resources": {
+"oil": 1,
+"wood": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 18 ), SubResource( 19 ) ],
+"name_of_province": "Белая Церковь",
+"resources": {
+"beasts": 1,
+"cotton": 1
+}
+}, {
+"factories": [ SubResource( 20 ) ],
+"households": [ SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ) ],
+"name_of_province": "Белецкое",
+"resources": {
+"coal": 1,
+"rubber": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ) ],
+"name_of_province": "Белжеца",
+"resources": {
+"grain": 1,
+"iron": 1
+}
+}, {
+"factories": [ SubResource( 33 ), SubResource( 34 ), SubResource( 35 ) ],
+"households": [ SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ) ],
+"name_of_province": "Бердичев",
+"resources": {
+"coal": 1,
+"cotton": 1
+}
+}, {
+"factories": [ SubResource( 44 ) ],
+"households": [ SubResource( 45 ), SubResource( 46 ), SubResource( 47 ) ],
+"name_of_province": "Берегово",
+"resources": {
+"iron": 1,
+"oil": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ) ],
+"name_of_province": "Богородчаны",
+"resources": {
+"beasts": 1,
+"iron": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ) ],
+"name_of_province": "Болехов",
+"resources": {
+"coal": 1,
+"saltpeter": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 58 ), SubResource( 59 ), SubResource( 60 ), SubResource( 61 ) ],
+"name_of_province": "Борка",
+"resources": {
+"grain": 1,
+"rubber": 1
+}
+}, {
+"factories": [ SubResource( 62 ) ],
+"households": [ SubResource( 63 ), SubResource( 64 ), SubResource( 65 ), SubResource( 66 ), SubResource( 67 ), SubResource( 68 ) ],
+"name_of_province": "Брзежаны",
+"resources": {
+"beasts": 1,
+"wood": 1
+}
+}, {
+"factories": [ SubResource( 69 ), SubResource( 70 ) ],
+"households": [ SubResource( 71 ), SubResource( 72 ), SubResource( 73 ), SubResource( 74 ), SubResource( 75 ), SubResource( 76 ) ],
+"name_of_province": "Броды",
+"resources": {
+"coal": 1,
+"iron": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 77 ), SubResource( 78 ) ],
+"name_of_province": "Буковина",
+"resources": {
+"beasts": 1,
+"grain": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 79 ), SubResource( 80 ), SubResource( 81 ), SubResource( 82 ), SubResource( 83 ), SubResource( 84 ) ],
+"name_of_province": "Вилькомир",
+"resources": {
+"iron": 1,
+"oil": 1
+}
+}, {
+"factories": [ SubResource( 85 ) ],
+"households": [ SubResource( 86 ), SubResource( 87 ), SubResource( 88 ), SubResource( 89 ) ],
+"name_of_province": "Вильянди",
+"resources": {
+"beasts": 1,
+"grain": 1
+}
+}, {
+"factories": [ SubResource( 90 ) ],
+"households": [ SubResource( 91 ), SubResource( 92 ), SubResource( 93 ), SubResource( 94 ) ],
+"name_of_province": "Винница",
+"resources": {
+"coal": 1,
+"grain": 1,
+"saltpeter": 1
+}
+}, {
+"factories": [ SubResource( 95 ), SubResource( 96 ) ],
+"households": [ SubResource( 97 ), SubResource( 98 ), SubResource( 99 ), SubResource( 100 ), SubResource( 101 ), SubResource( 102 ), SubResource( 103 ), SubResource( 104 ) ],
+"name_of_province": "Витебск",
+"resources": {
+"cotton": 1,
+"wood": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 105 ), SubResource( 106 ), SubResource( 107 ), SubResource( 108 ) ],
+"name_of_province": "Волынский",
+"resources": {
+"grain": 1,
+"saltpeter": 1
+}
+}, {
+"factories": [ SubResource( 109 ), SubResource( 110 ) ],
+"households": [ SubResource( 111 ), SubResource( 112 ), SubResource( 113 ), SubResource( 114 ), SubResource( 115 ), SubResource( 116 ) ],
+"name_of_province": "Вручий",
+"resources": {
+"coal": 1,
+"cotton": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 117 ), SubResource( 118 ), SubResource( 119 ) ],
+"name_of_province": "Галич",
+"resources": {
+"beasts": 1,
+"grain": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 120 ), SubResource( 121 ), SubResource( 122 ), SubResource( 123 ), SubResource( 124 ), SubResource( 125 ), SubResource( 126 ), SubResource( 127 ) ],
+"name_of_province": "Горлица",
+"resources": {
+"coal": 1,
+"rubber": 1
+}
+}, {
+"factories": [ SubResource( 128 ), SubResource( 129 ) ],
+"households": [ SubResource( 130 ), SubResource( 131 ), SubResource( 132 ), SubResource( 133 ), SubResource( 134 ), SubResource( 135 ) ],
+"name_of_province": "Горловка",
+"resources": {
+"cotton": 1,
+"wood": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 136 ), SubResource( 137 ), SubResource( 138 ), SubResource( 139 ), SubResource( 140 ) ],
+"name_of_province": "Гримайлов",
+"resources": {
+"coal": 1,
+"cotton": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 141 ), SubResource( 142 ), SubResource( 143 ) ],
+"name_of_province": "Гродно",
+"resources": {
+"grain": 1,
+"rubber": 1
+}
+}, {
+"factories": [ SubResource( 144 ) ],
+"households": [ SubResource( 145 ), SubResource( 146 ), SubResource( 147 ), SubResource( 148 ), SubResource( 149 ), SubResource( 150 ), SubResource( 151 ) ],
+"name_of_province": "Грубешов",
+"resources": {
+"grain": 1,
+"wood": 1
+}
+}, {
+"factories": [ SubResource( 152 ), SubResource( 153 ) ],
+"households": [ SubResource( 154 ), SubResource( 155 ), SubResource( 156 ), SubResource( 157 ), SubResource( 158 ), SubResource( 159 ) ],
+"name_of_province": "Днестр",
+"resources": {
+"coal": 1,
+"cotton": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 160 ), SubResource( 161 ), SubResource( 162 ), SubResource( 163 ), SubResource( 164 ), SubResource( 165 ), SubResource( 166 ), SubResource( 167 ) ],
+"name_of_province": "Должанск",
+"resources": {
+"beasts": 1,
+"grain": 1
+}
+}, {
+"factories": [ SubResource( 168 ), SubResource( 169 ) ],
+"households": [ SubResource( 170 ), SubResource( 171 ), SubResource( 172 ), SubResource( 173 ), SubResource( 174 ), SubResource( 175 ), SubResource( 176 ) ],
+"name_of_province": "Донецк",
+"resources": {
+"cotton": 1,
+"saltpeter": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 177 ), SubResource( 178 ), SubResource( 179 ), SubResource( 180 ), SubResource( 181 ), SubResource( 182 ), SubResource( 183 ) ],
+"name_of_province": "Дрогобыч",
+"resources": {
+"beasts": 1,
+"grain": 1
+}
+}, {
+"factories": [ SubResource( 184 ), SubResource( 185 ) ],
+"households": [ SubResource( 186 ), SubResource( 187 ), SubResource( 188 ), SubResource( 189 ), SubResource( 190 ), SubResource( 191 ), SubResource( 192 ), SubResource( 193 ) ],
+"name_of_province": "Дубно",
+"resources": {
+"coal": 1,
+"cotton": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 194 ), SubResource( 195 ), SubResource( 196 ), SubResource( 197 ), SubResource( 198 ) ],
+"name_of_province": "Дукшты",
+"resources": {
+"beasts": 1,
+"grain": 1
+}
+}, {
+"factories": [ SubResource( 199 ) ],
+"households": [ SubResource( 200 ), SubResource( 201 ), SubResource( 202 ), SubResource( 203 ) ],
+"name_of_province": "Желув",
+"resources": {
+"beasts": 1,
+"grain": 1
+}
+}, {
+"factories": [ SubResource( 204 ) ],
+"households": [ SubResource( 205 ), SubResource( 206 ) ],
+"name_of_province": "Житомир",
+"resources": {
+"grain": 1,
+"rubber": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 207 ), SubResource( 208 ), SubResource( 209 ), SubResource( 210 ) ],
+"name_of_province": "Заболотов",
+"resources": {
+"cotton": 1,
+"grain": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 211 ) ],
+"name_of_province": "Закопане",
+"resources": {
+"cotton": 1,
+"grain": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 212 ), SubResource( 213 ), SubResource( 214 ), SubResource( 215 ), SubResource( 216 ), SubResource( 217 ), SubResource( 218 ) ],
+"name_of_province": "Зборов",
+"resources": {
+"grain": 1,
+"rubber": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 219 ), SubResource( 220 ), SubResource( 221 ), SubResource( 222 ) ],
+"name_of_province": "Звижень",
+"resources": {
+"beasts": 1,
+"grain": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 223 ), SubResource( 224 ), SubResource( 225 ), SubResource( 226 ), SubResource( 227 ) ],
+"name_of_province": "Ивано-Франковск",
+"resources": {
+"coal": 1,
+"grain": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 228 ), SubResource( 229 ), SubResource( 230 ), SubResource( 231 ), SubResource( 232 ), SubResource( 233 ), SubResource( 234 ), SubResource( 235 ) ],
+"name_of_province": "Измаил",
+"resources": {
+"oil": 1,
+"wood": 1
+}
+}, {
+"factories": [ SubResource( 236 ) ],
+"households": [ SubResource( 237 ), SubResource( 238 ), SubResource( 239 ), SubResource( 240 ), SubResource( 241 ) ],
+"name_of_province": "Изюм",
+"resources": {
+"beasts": 1,
+"coal": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 242 ), SubResource( 243 ), SubResource( 244 ), SubResource( 245 ), SubResource( 246 ) ],
+"name_of_province": "Иршики",
+"resources": {
+"beasts": 1,
+"oil": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 247 ), SubResource( 248 ), SubResource( 249 ), SubResource( 250 ), SubResource( 251 ) ],
+"name_of_province": "Калуш",
+"resources": {
+"coal": 1,
+"wood": 1
+}
+}, {
+"factories": [ SubResource( 252 ) ],
+"households": [ SubResource( 253 ), SubResource( 254 ), SubResource( 255 ), SubResource( 256 ), SubResource( 257 ), SubResource( 258 ) ],
+"name_of_province": "Каменец-Подольск",
+"resources": {
+"rubber": 1,
+"wood": 1
+}
+}, {
+"factories": [ SubResource( 259 ), SubResource( 260 ) ],
+"households": [ SubResource( 261 ), SubResource( 262 ), SubResource( 263 ), SubResource( 264 ), SubResource( 265 ) ],
+"name_of_province": "Катовице",
+"resources": {
+"grain": 1,
+"wood": 1
+}
+}, {
+"factories": [ SubResource( 266 ), SubResource( 267 ) ],
+"households": [ SubResource( 268 ), SubResource( 269 ), SubResource( 270 ), SubResource( 271 ), SubResource( 272 ), SubResource( 273 ) ],
+"name_of_province": "Каунас",
+"resources": {
+"beasts": 1,
+"coal": 1
+}
+}, {
+"factories": [ SubResource( 274 ), SubResource( 275 ) ],
+"households": [ SubResource( 276 ), SubResource( 277 ), SubResource( 278 ), SubResource( 279 ), SubResource( 280 ), SubResource( 281 ) ],
+"name_of_province": "Клайпеда",
+"resources": {
+"beasts": 1,
+"coal": 1
+}
+}, {
+"factories": [ SubResource( 282 ) ],
+"households": [ SubResource( 283 ), SubResource( 284 ), SubResource( 285 ), SubResource( 286 ), SubResource( 287 ), SubResource( 288 ) ],
+"name_of_province": "Ковель",
+"resources": {
+"beasts": 1,
+"iron": 1
+}
+}, {
+"factories": [ SubResource( 289 ) ],
+"households": [ SubResource( 290 ), SubResource( 291 ), SubResource( 292 ), SubResource( 293 ), SubResource( 294 ), SubResource( 295 ) ],
+"name_of_province": "Коломыя",
+"resources": {
+"coal": 1,
+"oil": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 296 ), SubResource( 297 ), SubResource( 298 ), SubResource( 299 ), SubResource( 300 ), SubResource( 301 ) ],
+"name_of_province": "Константиновка",
+"resources": {
+"saltpeter": 1,
+"wood": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 302 ), SubResource( 303 ), SubResource( 304 ), SubResource( 305 ), SubResource( 306 ), SubResource( 307 ), SubResource( 308 ), SubResource( 309 ) ],
+"name_of_province": "Коростень",
+"resources": {
+"coal": 1,
+"grain": 1
+}
+}, {
+"factories": [ SubResource( 310 ) ],
+"households": [ SubResource( 311 ), SubResource( 312 ), SubResource( 313 ) ],
+"name_of_province": "Красник",
+"resources": {
+"coal": 1,
+"rubber": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 314 ), SubResource( 315 ) ],
+"name_of_province": "Кременец",
+"resources": {
+"beasts": 1,
+"saltpeter": 1
+}
+}, {
+"factories": [ SubResource( 316 ) ],
+"households": [ SubResource( 317 ), SubResource( 318 ), SubResource( 319 ) ],
+"name_of_province": "Курессааре",
+"resources": {
+"grain": 1,
+"wood": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 320 ), SubResource( 321 ), SubResource( 322 ), SubResource( 323 ), SubResource( 324 ), SubResource( 325 ) ],
+"name_of_province": "Лисичанск",
+"resources": {
+"beasts": 1,
+"coal": 1
+}
+}, {
+"factories": [ SubResource( 326 ) ],
+"households": [ SubResource( 327 ), SubResource( 328 ), SubResource( 329 ), SubResource( 330 ), SubResource( 331 ), SubResource( 332 ), SubResource( 333 ) ],
+"name_of_province": "Лодзь",
+"resources": {
+"coal": 1,
+"oil": 1
+}
+}, {
+"factories": [ SubResource( 334 ) ],
+"households": [ SubResource( 335 ), SubResource( 336 ), SubResource( 337 ) ],
+"name_of_province": "Луцк",
+"resources": {
+"coal": 1,
+"grain": 1
+}
+}, {
+"factories": [ SubResource( 338 ) ],
+"households": [ SubResource( 339 ), SubResource( 340 ), SubResource( 341 ), SubResource( 342 ), SubResource( 343 ), SubResource( 344 ), SubResource( 345 ), SubResource( 346 ) ],
+"name_of_province": "Львов",
+"resources": {
+"beasts": 1,
+"wood": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 347 ), SubResource( 348 ), SubResource( 349 ) ],
+"name_of_province": "Любич",
+"resources": {
+"beasts": 1,
+"wood": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 350 ), SubResource( 351 ) ],
+"name_of_province": "Люблин",
+"resources": {
+"grain": 1,
+"rubber": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 352 ), SubResource( 353 ), SubResource( 354 ), SubResource( 355 ), SubResource( 356 ) ],
+"name_of_province": "Макеевка",
+"resources": {
+"grain": 1,
+"iron": 1
+}
+}, {
+"factories": [ SubResource( 357 ), SubResource( 358 ) ],
+"households": [ SubResource( 359 ), SubResource( 360 ), SubResource( 361 ), SubResource( 362 ), SubResource( 363 ), SubResource( 364 ) ],
+"name_of_province": "Мелитополь",
+"resources": {
+"iron": 1,
+"saltpeter": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 365 ), SubResource( 366 ), SubResource( 367 ), SubResource( 368 ), SubResource( 369 ), SubResource( 370 ) ],
+"name_of_province": "Митава",
+"resources": {
+"coal": 1,
+"saltpeter": 1
+}
+}, {
+"factories": [ SubResource( 371 ), SubResource( 372 ) ],
+"households": [ SubResource( 373 ), SubResource( 374 ), SubResource( 375 ), SubResource( 376 ), SubResource( 377 ), SubResource( 378 ) ],
+"name_of_province": "Мукачево",
+"resources": {
+"cotton": 1,
+"rubber": 1
+}
+}, {
+"factories": [ SubResource( 379 ) ],
+"households": [ SubResource( 380 ), SubResource( 381 ), SubResource( 382 ), SubResource( 383 ), SubResource( 384 ), SubResource( 385 ) ],
+"name_of_province": "Надворная",
+"resources": {
+"coal": 1,
+"grain": 1
+}
+}, {
+"factories": [ SubResource( 386 ) ],
+"households": [ SubResource( 387 ), SubResource( 388 ), SubResource( 389 ), SubResource( 390 ), SubResource( 391 ), SubResource( 392 ), SubResource( 393 ), SubResource( 394 ) ],
+"name_of_province": "Нетешин",
+"resources": {
+"coal": 1,
+"saltpeter": 1
+}
+}, {
+"factories": [ SubResource( 395 ), SubResource( 396 ) ],
+"households": [ SubResource( 397 ), SubResource( 398 ), SubResource( 399 ), SubResource( 400 ), SubResource( 401 ) ],
+"name_of_province": "Николаев",
+"resources": {
+"cotton": 1,
+"oil": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 402 ), SubResource( 403 ), SubResource( 404 ), SubResource( 405 ) ],
+"name_of_province": "Нови-Сад",
+"resources": {
+"grain": 1,
+"iron": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 406 ), SubResource( 407 ), SubResource( 408 ), SubResource( 409 ), SubResource( 410 ), SubResource( 411 ), SubResource( 412 ), SubResource( 413 ) ],
+"name_of_province": "Новомосковск",
+"resources": {
+"oil": 1,
+"wood": 1
+}
+}, {
+"factories": [ SubResource( 414 ) ],
+"households": [ SubResource( 415 ), SubResource( 416 ), SubResource( 417 ), SubResource( 418 ), SubResource( 419 ), SubResource( 420 ), SubResource( 421 ), SubResource( 422 ) ],
+"name_of_province": "Павлоград",
+"resources": {
+"iron": 1,
+"wood": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 423 ), SubResource( 424 ), SubResource( 425 ) ],
+"name_of_province": "Паневежис",
+"resources": {
+"beasts": 1,
+"grain": 1
+}
+}, {
+"factories": [ SubResource( 426 ) ],
+"households": [ SubResource( 427 ), SubResource( 428 ), SubResource( 429 ), SubResource( 430 ), SubResource( 431 ), SubResource( 432 ) ],
+"name_of_province": "Перемышль",
+"resources": {
+"coal": 1,
+"grain": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 433 ), SubResource( 434 ), SubResource( 435 ) ],
+"name_of_province": "Пинск",
+"resources": {
+"beasts": 1,
+"grain": 1
+}
+}, {
+"factories": [ SubResource( 436 ) ],
+"households": [ SubResource( 437 ), SubResource( 438 ), SubResource( 439 ), SubResource( 440 ), SubResource( 441 ), SubResource( 442 ) ],
+"name_of_province": "Пмлица",
+"resources": {
+"coal": 1,
+"grain": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 443 ), SubResource( 444 ), SubResource( 445 ) ],
+"name_of_province": "Подолье",
+"resources": {
+"beasts": 1,
+"cotton": 1
+}
+}, {
+"factories": [ SubResource( 446 ) ],
+"households": [ SubResource( 447 ), SubResource( 448 ), SubResource( 449 ), SubResource( 450 ) ],
+"name_of_province": "Познань",
+"resources": {
+"coal": 1,
+"rubber": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 451 ), SubResource( 452 ), SubResource( 453 ), SubResource( 454 ) ],
+"name_of_province": "Покровск",
+"resources": {
+"iron": 1,
+"saltpeter": 1
+}
+}, {
+"factories": [ SubResource( 455 ), SubResource( 456 ) ],
+"households": [ SubResource( 457 ), SubResource( 458 ), SubResource( 459 ), SubResource( 460 ), SubResource( 461 ), SubResource( 462 ), SubResource( 463 ) ],
+"name_of_province": "Полтава",
+"resources": {
+"coal": 1,
+"grain": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 464 ), SubResource( 465 ), SubResource( 466 ), SubResource( 467 ) ],
+"name_of_province": "Приштина",
+"resources": {
+"grain": 1,
+"oil": 1
+}
+}, {
+"factories": [ SubResource( 468 ) ],
+"households": [ SubResource( 469 ), SubResource( 470 ), SubResource( 471 ), SubResource( 472 ), SubResource( 473 ), SubResource( 474 ) ],
+"name_of_province": "Проскуров",
+"resources": {
+"rubber": 1,
+"wood": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 475 ), SubResource( 476 ) ],
+"name_of_province": "Пшемысль",
+"resources": {
+"beasts": 1,
+"grain": 1
+}
+}, {
+"factories": [ SubResource( 477 ) ],
+"households": [ SubResource( 478 ), SubResource( 479 ), SubResource( 480 ), SubResource( 481 ), SubResource( 482 ), SubResource( 483 ) ],
+"name_of_province": "Пядичи",
+"resources": {
+"coal": 1,
+"rubber": 1
+}
+}, {
+"factories": [ SubResource( 484 ) ],
+"households": [ SubResource( 485 ), SubResource( 486 ), SubResource( 487 ), SubResource( 488 ) ],
+"name_of_province": "Пярну",
+"resources": {
+"coal": 1,
+"saltpeter": 1
+}
+}, {
+"factories": [ SubResource( 489 ) ],
+"households": [ SubResource( 490 ), SubResource( 491 ), SubResource( 492 ), SubResource( 493 ) ],
+"name_of_province": "Раквере",
+"resources": {
+"grain": 1,
+"iron": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 494 ), SubResource( 495 ), SubResource( 496 ), SubResource( 497 ), SubResource( 498 ) ],
+"name_of_province": "Ровно",
+"resources": {
+"coal": 1,
+"saltpeter": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 499 ), SubResource( 500 ), SubResource( 501 ), SubResource( 502 ), SubResource( 503 ), SubResource( 504 ) ],
+"name_of_province": "Рутивль",
+"resources": {
+"beasts": 1,
+"grain": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 505 ) ],
+"name_of_province": "Севастополь",
+"resources": {
+"cotton": 1,
+"rubber": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 506 ), SubResource( 507 ), SubResource( 508 ) ],
+"name_of_province": "Сегед",
+"resources": {
+"grain": 1
+}
+}, {
+"factories": [ SubResource( 509 ), SubResource( 510 ) ],
+"households": [ SubResource( 511 ), SubResource( 512 ), SubResource( 513 ), SubResource( 514 ), SubResource( 515 ), SubResource( 516 ), SubResource( 517 ) ],
+"name_of_province": "Силламяэ",
+"resources": {
+"coal": 1,
+"grain": 1
+}
+}, {
+"factories": [ SubResource( 518 ) ],
+"households": [ SubResource( 519 ), SubResource( 520 ), SubResource( 521 ), SubResource( 522 ), SubResource( 523 ), SubResource( 524 ) ],
+"name_of_province": "Симферополь",
+"resources": {
+"grain": 1,
+"oil": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 525 ), SubResource( 526 ), SubResource( 527 ), SubResource( 528 ) ],
+"name_of_province": "Станислав",
+"resources": {
+"beasts": 1,
+"grain": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 529 ), SubResource( 530 ), SubResource( 531 ), SubResource( 532 ) ],
+"name_of_province": "Старокостантинов",
+"resources": {
+"grain": 1,
+"oil": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 533 ), SubResource( 534 ) ],
+"name_of_province": "Стецки",
+"resources": {
+"beasts": 1,
+"grain": 1
+}
+}, {
+"factories": [ SubResource( 535 ) ],
+"households": [ SubResource( 536 ), SubResource( 537 ), SubResource( 538 ), SubResource( 539 ), SubResource( 540 ), SubResource( 541 ) ],
+"name_of_province": "Стрый",
+"resources": {
+"iron": 1,
+"saltpeter": 1
+}
+}, {
+"factories": [ SubResource( 542 ), SubResource( 543 ), SubResource( 544 ) ],
+"households": [ SubResource( 545 ), SubResource( 546 ), SubResource( 547 ), SubResource( 548 ), SubResource( 549 ), SubResource( 550 ), SubResource( 551 ) ],
+"name_of_province": "Сумы",
+"resources": {
+"coal": 1,
+"wood": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 552 ), SubResource( 553 ), SubResource( 554 ), SubResource( 555 ) ],
+"name_of_province": "Тамань",
+"resources": {
+"iron": 1,
+"wood": 1
+}
+}, {
+"factories": [ SubResource( 556 ), SubResource( 557 ) ],
+"households": [ SubResource( 558 ), SubResource( 559 ), SubResource( 560 ), SubResource( 561 ) ],
+"name_of_province": "Тарнополь",
+"resources": {
+"cotton": 1,
+"grain": 1
+}
+}, {
+"factories": [ SubResource( 562 ), SubResource( 563 ) ],
+"households": [ SubResource( 564 ), SubResource( 565 ), SubResource( 566 ), SubResource( 567 ) ],
+"name_of_province": "Тарту",
+"resources": {
+"grain": 1,
+"wood": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 568 ), SubResource( 569 ), SubResource( 570 ) ],
+"name_of_province": "Теребовль",
+"resources": {
+"coal": 1,
+"grain": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 571 ), SubResource( 572 ), SubResource( 573 ) ],
+"name_of_province": "Тлумач",
+"resources": {
+"grain": 1,
+"iron": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 574 ), SubResource( 575 ) ],
+"name_of_province": "Трускавец",
+"resources": {
+"iron": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 576 ), SubResource( 577 ), SubResource( 578 ), SubResource( 579 ) ],
+"name_of_province": "Тулов",
+"resources": {
+"coal": 1,
+"iron": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 580 ), SubResource( 581 ), SubResource( 582 ), SubResource( 583 ), SubResource( 584 ) ],
+"name_of_province": "Ужгород",
+"resources": {
+"grain": 1,
+"iron": 1
+}
+}, {
+"factories": [ SubResource( 585 ), SubResource( 586 ) ],
+"households": [ SubResource( 587 ), SubResource( 588 ), SubResource( 589 ), SubResource( 590 ), SubResource( 591 ), SubResource( 592 ) ],
+"name_of_province": "Хаапсалу",
+"resources": {
+"beasts": 1,
+"cotton": 1
+}
+}, {
+"factories": [ SubResource( 593 ), SubResource( 594 ) ],
+"households": [ SubResource( 595 ), SubResource( 596 ), SubResource( 597 ), SubResource( 598 ), SubResource( 599 ), SubResource( 600 ), SubResource( 601 ) ],
+"name_of_province": "Херсон",
+"resources": {
+"beasts": 1,
+"iron": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 602 ), SubResource( 603 ), SubResource( 604 ), SubResource( 605 ), SubResource( 606 ) ],
+"name_of_province": "Хмельницкий",
+"resources": {
+"beasts": 1,
+"cotton": 1
+}
+}, {
+"factories": [ SubResource( 607 ), SubResource( 608 ) ],
+"households": [ SubResource( 609 ), SubResource( 610 ), SubResource( 611 ), SubResource( 612 ), SubResource( 613 ), SubResource( 614 ) ],
+"name_of_province": "Ченстохова",
+"resources": {
+"coal": 1,
+"iron": 1
+}
+}, {
+"factories": [ SubResource( 615 ) ],
+"households": [ SubResource( 616 ), SubResource( 617 ), SubResource( 618 ), SubResource( 619 ), SubResource( 620 ) ],
+"name_of_province": "Черкасс",
+"resources": {
+"grain": 1,
+"saltpeter": 1
+}
+}, {
+"factories": [ SubResource( 621 ), SubResource( 622 ) ],
+"households": [ SubResource( 623 ), SubResource( 624 ), SubResource( 625 ), SubResource( 626 ), SubResource( 627 ), SubResource( 628 ), SubResource( 629 ) ],
+"name_of_province": "Черновцы",
+"resources": {
+"rubber": 1,
+"wood": 1
+}
+}, {
+"factories": [ SubResource( 630 ) ],
+"households": [ SubResource( 631 ), SubResource( 632 ), SubResource( 633 ), SubResource( 634 ), SubResource( 635 ), SubResource( 636 ) ],
+"name_of_province": "Щепеткова",
+"resources": {
+"cotton": 1
+}
+}, {
+"factories": [  ],
+"households": [ SubResource( 637 ), SubResource( 638 ), SubResource( 639 ), SubResource( 640 ), SubResource( 641 ), SubResource( 642 ), SubResource( 643 ), SubResource( 644 ) ],
+"name_of_province": "Яремче",
+"resources": {
+"beasts": 1,
+"grain": 1
+}
+} ]

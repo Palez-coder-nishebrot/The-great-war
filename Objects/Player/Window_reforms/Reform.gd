@@ -3,57 +3,63 @@ extends Panel
 
 onready var player = get_parent().get_parent()
 
+onready var economy_reforms_container = $Reforms/EconomicReforms
+onready var social_reforms_container = $Reforms/SocialReforms
+onready var political_reforms_container = $Reforms/PoliticalReforms
+
+var activing_buttons: Array = []
+var buttons_for_changing_text: Array = []
 
 func _ready():
-#	clear_container($VBoxContainer/HBoxContainer)
-#	clear_container($VBoxContainer/HBoxContainer2)
-#
+	set_buttons(economy_reforms_container)
+	set_buttons(social_reforms_container)
+	set_buttons(political_reforms_container)
 	
-	set_buttons($VBoxContainer/EconomyReforms)
-	set_buttons($VBoxContainer/SocialReforms)
-	set_buttons($VBoxContainer/PolicyReforms)
-
+	check_available_reform("political_reform")
+	check_available_reform("social_reform")
 
 func set_buttons(container):
 	for i in container.get_children():
 		i.spawn_buttons()
+#ягей
 
 
-func clear_container(container):
-	for i in container.get_children():
-		if i.get_class() == "Button":
-			i.queue_free()
-
-
-func clear_buttons(container, button):
-	for i in container.get_children():
-		if i.get_class() == "Button":
-			i.disabled = false
+func check_available_reform(tipe_of_reform):
+	if tipe_of_reform == "political_reform":
+		check_cotegories("political_reforms_container")
 	
-	button.disabled = true
-
-
-func update_buttons(container):
-	for i in container.get_children():
-		for y in i.get_children():
-			if y.get_class() == "Button":
-				y.disabled = true
-
-
-func check_available_reform():
-	#breakpoint
-	if Players.player.policy["Реформы"]["Принятие_соц_реформ"] == true:
-		open_available_reform($VBoxContainer/SocialReforms)
-	
-	elif Players.player.policy["Реформы"]["Принятие_пол_реформ"] == true:
-		open_available_reform($VBoxContainer/PolicyReforms)
-
-
-func open_available_reform(container):
-	for i in container.get_children():
-		var button = i.list_of_buttons_ntb[Players.player.adopted_reforms[i.cotegory] + 1]
-		button.disabled = false
-		button.update_text_for_active_reform_buttons()
+	if tipe_of_reform == "social_reform":
+		check_cotegories("social_reforms_container")
 		
-	#breakpoint
 
+func check_cotegories(target):
+	var reforms_container = get(target)
+	var reform = player.reforms_manager.get(reforms_container.get_children()[1].reform.target).activing_reform
+	var cotegory
+	var children_of_cot
+	var button 
+	#breakpoint
+	for i in reforms_container.get_children():
+		reform = player.reforms_manager.get(i.reform.target).activing_reform
+		get_button(i, i.get_children(), reform)
+
+
+func get_button(cotegory, children_of_cot, effect):
+	var button 
+	for i in children_of_cot:
+		if i.get_class() != "Label":
+			if i.effect == effect:
+				button = i
+				break
+				
+	var count = children_of_cot.find(button) + 1
+	
+	if count == children_of_cot.size():
+		button.disabled = true
+		
+	else:
+		buttons_for_changing_text.append(button)
+		#button.update_text_for_not_active_buttons()
+		children_of_cot[count].update_text_for_active_reform_buttons()
+		children_of_cot[count].disabled = false
+		activing_buttons.append(children_of_cot[count])

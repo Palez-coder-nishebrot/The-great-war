@@ -1,5 +1,28 @@
 extends Node2D
 
+const factories: Dictionary = {
+	"Steel_plant":             "res://Resources/Factories/TipesOfFactories/SteelPlant.tres",
+	"Textile_factory":         "res://Resources/Factories/TipesOfFactories/TextileFactory.tres",
+	"Glass_factory":           "res://Resources/Factories/TipesOfFactories/GlassFactory.tres",
+	"Electrical_appliance_factory": "res://Resources/Factories/TipesOfFactories/ElectricalApplianceFactory.tres",
+	"Electrical_parts_factory": "res://Resources/Factories/TipesOfFactories/ElectricalPartsFactory.tres",
+	"Lumber_plant": "res://Resources/Factories/TipesOfFactories/LumberPlant.tres",
+	"Cars_factory": "res://Resources/Factories/TipesOfFactories/CarsFactory.tres",
+	"Telegraph_factory": "res://Resources/Factories/TipesOfFactories/TelegraphFactory.tres",
+	"Phone_factory": "res://Resources/Factories/TipesOfFactories/PhoneFactory.tres",
+	"Radio_factory": "res://Resources/Factories/TipesOfFactories/RadioFactory.tres",
+	"Furniture_factory": "res://Resources/Factories/TipesOfFactories/FurnitureFactory.tres",
+	"Distillery": "res://Resources/Factories/TipesOfFactories/Distillery.tres",
+	"Clothes_factory": "res://Resources/Factories/TipesOfFactories/ClothesFactory.tres",
+	"Canning_factory": "res://Resources/Factories/TipesOfFactories/CanningFactory.tres",
+	"Gas_factory": "res://Resources/Factories/TipesOfFactories/GasFactory.tres",
+	"Airplane_factory": "res://Resources/Factories/TipesOfFactories/AirplaneFactory.tres",
+	
+	"Rubber_factory": "res://Resources/Factories/TipesOfFactories/RubberFactory.tres",
+	"Oil_factory": "res://Resources/Factories/TipesOfFactories/OilFactory.tres",
+	"Senthetic_textile_factory": "res://Resources/Factories/TipesOfFactories/SentheticTextileFactory.tres",
+}
+
 onready var game: Node2D = get_parent()
 
 
@@ -21,31 +44,33 @@ var exper: Array = []
 
 
 func create_map():
-	var file = ResourceLoader.load("res://Objects/Provinces/Paths_of_provinces.tres")
-	
-	resourses_of_province  = file.list_of_resources_of_provinces
-	factories_of_province  = file.list_of_factories_of_provinces
-	villages_of_province   = file.list_of_villages_of_provinces
-	households_of_province = file.list_of_household_of_provinces
-	paths_of_province      = file.list_of_path_of_provinces
+#	var file = ResourceLoader.load("res://Objects/Provinces/Paths_of_provinces.tres")
+#
+#	resourses_of_province  = file.list_of_resources_of_provinces
+#	factories_of_province  = file.list_of_factories_of_provinces
+#	villages_of_province   = file.list_of_villages_of_provinces
+#	households_of_province = file.list_of_household_of_provinces
+#	paths_of_province      = file.list_of_path_of_provinces
 	
 	append_tiles_in_list()
 	
 	set_collision_of_provinces()
-	for i in list_of_tiles:
-		set_resourses_of_tiles(list_of_tiles[i], resourses_of_province[i])
-		set_paths(list_of_tiles[i])
-	
-	for i in list_of_tiles:
-		list_of_tiles[i].population_manager = load("res://Objects/Population/PopulationManager.gd").new()
-		list_of_tiles[i].population_manager.province = list_of_tiles[i]
-		set_households_of_provinces(list_of_tiles[i], households_of_province[i])
-		if factories_of_province.has(i):
-			set_factories_of_tiles(list_of_tiles[i], factories_of_province[i])
-		
-		get_parent().list_of_provinces.append(list_of_tiles[i])
-	
 	give_tiles_to_players()
+	ProvinceLoader.create_map(list_of_tiles)
+#	for i in list_of_tiles:
+#		set_resourses_of_tiles(list_of_tiles[i], resourses_of_province[i])
+#		set_paths(list_of_tiles[i])
+#
+#	for i in list_of_tiles:
+#		list_of_tiles[i].population_manager = load("res://Objects/Population/PopulationManager.gd").new()
+#		list_of_tiles[i].population_manager.province = list_of_tiles[i]
+#		set_households_of_provinces(list_of_tiles[i], households_of_province[i])
+#		if factories_of_province.has(i):
+#			set_factories_of_tiles(list_of_tiles[i], factories_of_province[i])
+#
+#		get_parent().list_of_provinces.append(list_of_tiles[i])
+#
+#	give_tiles_to_players()
 
 
 func set_collision_of_provinces():
@@ -74,7 +99,7 @@ func set_villages_of_tiles(tile):
 func set_resourses_of_tiles(province, resources):
 	for i in resources:
 		province.resources[i] = 1
-		province.goods_of_factories_in_province.append(i)
+		province.production_of_goods_in_province.append(i)
 	
 
 func set_factories_of_tiles(province, goods):
@@ -82,7 +107,7 @@ func set_factories_of_tiles(province, goods):
 		if i == "Боеприпасы":
 			create_military_factory(i, province)
 		else:
-			create_factory(i, province, 1)
+			create_factory(i, province, 2)
 	#province.get_goods_in_province()
 	
 
@@ -104,9 +129,6 @@ func set_households_of_provinces(province, households):
 			province.population_manager.list_of_factory_workers.append(household)
 		else:
 			province.population_manager.list_of_craftsmen.append(household)
-			
-		if household.education == true:
-			province.population_manager.list_of_households_with_education.append(household)
 		
 		get_parent().purchase_manager.list_of_population_managers.append(province.population_manager)
 		get_parent().list_of_soc_classes.append(household)
@@ -131,18 +153,9 @@ func give_tiles_to_players():
 		
 		for i in file.list_of_regions:
 			var tile = list_of_tiles[i]
-			tile.population_manager.player = client
 			tile.player = client
 			tile.start()
 			
-			for household in tile.population_manager.list_of_soc_classes:
-				client.list_of_soc_classes.append(household)
-				
-				if household.soc_class == "Ремесленник":
-					client.list_of_craftsmen.append(household)
-			
-			for factory in tile.list_of_buildings:
-				client.list_of_factories.append(factory)
 		folder_name = folder.get_next()
 	get_parent().new_day()
 
@@ -172,10 +185,9 @@ func create_factory(good, province, level):
 	factory.money = 250
 	factory.max_employed_number = level
 	province.list_of_buildings.append(factory)
-	province.goods_of_factories_in_province.append(good)
 	
 	get_parent().factory_manager.list_of_factories.append(factory)
-	province.goods_of_factories_in_province.append(good)
+	province.production_of_goods_in_province.append(good)
 
 
 func create_military_factory(good, province):
@@ -187,7 +199,7 @@ func create_military_factory(good, province):
 	province.list_of_buildings.append(factory)
 	
 	get_parent().factory_manager.list_of_factories.append(factory)
-	province.goods_of_factories_in_province.append(good)
+	province.production_of_goods_in_province.append(good)
 
 
 #func build_collision_from_sprite(province, file_to_save):

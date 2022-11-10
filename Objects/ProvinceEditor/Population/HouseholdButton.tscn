@@ -12,16 +12,8 @@ margin_bottom = 22.0
 custom_constants/separation = 0
 script = ExtResource( 2 )
 
-[node name="Education" type="Button" parent="."]
-margin_right = 91.0
-margin_bottom = 22.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_fonts/font = SubResource( 3 )
-
 [node name="SocClass" type="Button" parent="."]
-margin_left = 91.0
-margin_right = 182.0
+margin_right = 137.0
 margin_bottom = 22.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -29,7 +21,7 @@ custom_fonts/font = SubResource( 3 )
 text = "Рабо"
 
 [node name="Delete" type="Button" parent="."]
-margin_left = 182.0
+margin_left = 137.0
 margin_right = 274.0
 margin_bottom = 22.0
 size_flags_horizontal = 3
@@ -37,6 +29,5 @@ size_flags_vertical = 3
 custom_fonts/font = SubResource( 3 )
 text = "Уд-ть"
 
-[connection signal="pressed" from="Education" to="." method="change_education"]
 [connection signal="pressed" from="SocClass" to="." method="set_soc_class"]
 [connection signal="pressed" from="Delete" to="." method="erase_household"]

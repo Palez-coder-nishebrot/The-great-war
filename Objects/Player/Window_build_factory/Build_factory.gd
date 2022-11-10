@@ -14,7 +14,7 @@ func _visible():
 	clear()
 	for i in player.economic_bonuses.list_of_buildings:
 		var button = load("res://Objects/Player/Window_build_factory/Button_factory.tscn").instance()
-		button.text = i
+		button.text = i.name_of_factory
 		button.parent = self
 		#button.cost = Players.buildings_on_start[i]
 		$ScrollContainer/VBoxContainer.add_child(button)

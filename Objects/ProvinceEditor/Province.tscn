@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://Graphics/Fonts/pixel_2.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Objects/ProvinceEditor/Province.gd" type="Script" id=2]
@@ -38,6 +38,8 @@
 [ext_resource path="res://Objects/ProvinceEditor/Resource/ListOfResourcesInRegion.gd" type="Script" id=36]
 [ext_resource path="res://Objects/ProvinceEditor/Factories/ListOfFactoriesInRegion.gd" type="Script" id=37]
 [ext_resource path="res://Objects/ProvinceEditor/Factories/ListOfFactoryGoods.gd" type="Script" id=38]
+[ext_resource path="res://Graphics/Sprites/Goods/Lumber.png" type="Texture" id=39]
+[ext_resource path="res://Graphics/Sprites/Goods/El-appliances.png" type="Texture" id=40]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
@@ -203,7 +205,7 @@ margin_bottom = 373.0
 [node name="ListOfFactoryGoods" type="HBoxContainer" parent="."]
 margin_left = 275.0
 margin_top = 266.0
-margin_right = 1843.0
+margin_right = 1920.0
 margin_bottom = 372.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -211,115 +213,168 @@ custom_constants/separation = 0
 script = ExtResource( 38 )
 
 [node name="Factory_good" type="Button" parent="ListOfFactoryGoods"]
-margin_right = 112.0
+margin_right = 109.0
 margin_bottom = 106.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 icon = ExtResource( 19 )
+expand_icon = true
 script = ExtResource( 24 )
 good = "steel"
 
 [node name="Factory_good2" type="Button" parent="ListOfFactoryGoods"]
-margin_left = 112.0
-margin_right = 224.0
+margin_left = 109.0
+margin_right = 219.0
 margin_bottom = 106.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 icon = ExtResource( 23 )
+expand_icon = true
 script = ExtResource( 24 )
 good = "glass"
 
 [node name="Factory_good3" type="Button" parent="ListOfFactoryGoods"]
-margin_left = 224.0
-margin_right = 336.0
+margin_left = 219.0
+margin_right = 328.0
 margin_bottom = 106.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 icon = ExtResource( 21 )
+expand_icon = true
 script = ExtResource( 24 )
 good = "textile"
 
 [node name="Factory_good4" type="Button" parent="ListOfFactoryGoods"]
-margin_left = 336.0
-margin_right = 448.0
+margin_left = 328.0
+margin_right = 438.0
 margin_bottom = 106.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 icon = ExtResource( 20 )
+expand_icon = true
 script = ExtResource( 24 )
 good = "el_parts"
 
 [node name="Factory_good6" type="Button" parent="ListOfFactoryGoods"]
-margin_left = 448.0
-margin_right = 560.0
+margin_left = 438.0
+margin_right = 548.0
 margin_bottom = 106.0
-icon = ExtResource( 13 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+icon = ExtResource( 39 )
+expand_icon = true
 script = ExtResource( 24 )
 good = "lumber"
 
 [node name="Factory_good7" type="Button" parent="ListOfFactoryGoods"]
-margin_left = 560.0
-margin_right = 672.0
+margin_left = 548.0
+margin_right = 657.0
 margin_bottom = 106.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 icon = ExtResource( 15 )
+expand_icon = true
 script = ExtResource( 24 )
 good = "cars"
 
 [node name="Factory_good9" type="Button" parent="ListOfFactoryGoods"]
-margin_left = 672.0
-margin_right = 784.0
+margin_left = 657.0
+margin_right = 767.0
 margin_bottom = 106.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 icon = ExtResource( 30 )
+expand_icon = true
 script = ExtResource( 24 )
 good = "telegraphs"
 
 [node name="Factory_good11" type="Button" parent="ListOfFactoryGoods"]
-margin_left = 784.0
-margin_right = 896.0
+margin_left = 767.0
+margin_right = 877.0
 margin_bottom = 106.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 icon = ExtResource( 14 )
+expand_icon = true
 script = ExtResource( 24 )
 good = "phone"
 
 [node name="Factory_good12" type="Button" parent="ListOfFactoryGoods"]
-margin_left = 896.0
-margin_right = 1008.0
+margin_left = 877.0
+margin_right = 986.0
 margin_bottom = 106.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 icon = ExtResource( 34 )
+expand_icon = true
 script = ExtResource( 24 )
 good = "radio"
 
 [node name="Factory_good13" type="Button" parent="ListOfFactoryGoods"]
-margin_left = 1008.0
-margin_right = 1120.0
+margin_left = 986.0
+margin_right = 1096.0
 margin_bottom = 106.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 icon = ExtResource( 33 )
+expand_icon = true
 script = ExtResource( 24 )
 good = "furniture"
 
 [node name="Factory_good14" type="Button" parent="ListOfFactoryGoods"]
-margin_left = 1120.0
-margin_right = 1232.0
+margin_left = 1096.0
+margin_right = 1206.0
 margin_bottom = 106.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 icon = ExtResource( 22 )
+expand_icon = true
 script = ExtResource( 24 )
 good = "alcohol"
 
 [node name="Factory_good15" type="Button" parent="ListOfFactoryGoods"]
-margin_left = 1232.0
-margin_right = 1344.0
+margin_left = 1206.0
+margin_right = 1315.0
 margin_bottom = 106.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 icon = ExtResource( 31 )
+expand_icon = true
 script = ExtResource( 24 )
 good = "clothes"
 
 [node name="Factory_good16" type="Button" parent="ListOfFactoryGoods"]
-margin_left = 1344.0
-margin_right = 1456.0
+margin_left = 1315.0
+margin_right = 1425.0
 margin_bottom = 106.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 icon = ExtResource( 29 )
+expand_icon = true
 script = ExtResource( 24 )
 good = "canned_food"
 
 [node name="Factory_good17" type="Button" parent="ListOfFactoryGoods"]
-margin_left = 1456.0
-margin_right = 1568.0
+margin_left = 1425.0
+margin_right = 1535.0
 margin_bottom = 106.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 icon = ExtResource( 32 )
+expand_icon = true
 script = ExtResource( 24 )
 good = "gas"
+
+[node name="Factory_good18" type="Button" parent="ListOfFactoryGoods"]
+margin_left = 1535.0
+margin_right = 1645.0
+margin_bottom = 106.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+icon = ExtResource( 40 )
+expand_icon = true
+script = ExtResource( 24 )
+good = "el_appliances"
 
 [node name="ListOfResources" type="HBoxContainer" parent="."]
 margin_left = 274.0

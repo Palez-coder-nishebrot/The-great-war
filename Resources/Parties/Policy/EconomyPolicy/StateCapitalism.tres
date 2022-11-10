@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource( 1 )
-name_of_policy = "free_economy"
+name_of_policy = "state_capitalism"
 cost_of_factories = 250
 cost_of_infrastructure = 250
 subsidization = true

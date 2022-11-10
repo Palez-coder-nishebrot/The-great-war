@@ -6,9 +6,11 @@ export(String) var name_of_effect = "Максимум инфраструктур
 
 export(String, "max_railways", "max_infrastructure") var target = "max_railways"
 
+export(int) var value = 1
+
 
 func get_effect():
-	return "Максимальный уровень " + list_of_points_of_effect[target] + ": +1"
+	return "Максимальный уровень " + list_of_points_of_effect[target] + ": +" + str(value)
 
 
 func activate_effects(client):

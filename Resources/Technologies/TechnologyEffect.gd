@@ -21,6 +21,7 @@ const list_of_points_of_effect: Dictionary = {
 	
 	"Rubber_factory": "Завод резины", 
 	"Oil_factory": "Завод искусственной нефти", 
+	"Senthetic_textile_factory": "Завод синтетической ткани",
 	
 	"projectile_supply": "снарядов", 
 	"ammo_supply": "боеприпасов", 

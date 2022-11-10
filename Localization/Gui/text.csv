@@ -26,13 +26,13 @@ Adamanty,Адамантия
 Amany,Амани
 Baskaky,Баскакия
 Baskaky Trading Company,Баскакская Торговая Компания
-Bascony,Баскония
+Balkary,Балкария
 Gorny,Горния
 Zlichany,Зличания
 Illiry,Иллирия
 Kavardatsy,Кавардация
 Krakojy,Кракожия
-Krivechy,Кривечия
+Truhmenia,Трухмения
 Nasardy,Насардия
 Polany,Поляния
 Roscolany,Роксолания
@@ -45,4 +45,69 @@ liberals,Либералы
 socialists,Социалисты
 communists,Коммунисты
 fascists,Фашисты
-populists,Популисты
+libertarians,Либертарианцы
+conservators,Консерваторы
+free_trade,Свободная торговля
+protectionism,Протекционизм
+pacifism,Пацифизм
+conservatism,Консерватизм
+militarism,Милитаризм
+monarchy,Монархия
+republic,Республика
+soviet_republic,Советская республика
+fascist_dictatorship,Фашистская диктатура
+military_dictatorship,Военная диктатура
+free_economy,Рыночная экономика
+interventionism,Частичное вмешательство
+state_capitalism,Гос. регулирование
+planned_economy,Плановая экономика
+coal,Уголь
+iron,Железо
+oil,Нефть
+rubber,Резина
+cotton,Хлопок
+grain,Зерно
+beasts,Скот
+saltpeter,Селитра
+wood,Древесина
+steel,Сталь
+glass,Стекло
+textile,Ткань
+el_parts,Электрозапчасти
+lumber,Пиломатериалы
+el_appliances,Электроприборы
+cars,Автомобили
+telegraphs,Телеграфы
+phone,Телефоны
+radio,Радио
+furniture,Мебель
+alcohol,Спиртное
+clothes,Одежда
+canned_food,Консервы
+gas,Топливо
+tabaco,Табак
+tea,Чай
+projectiles,Снаряды
+ammo,Боеприпасы
+machine_guns,Пулеметы
+artillery,Артиллерия
+plane,Аэропланы
+rifles,Винтовки
+tanks,Танки
+TaxOnRichClass,Налоги на богатых
+TaxOnPoorClass,Налоги на бедных
+Education,Образование
+Tarrifs,Пошлины
+Pensions,Пенсии
+DayWorking,Макс. раб. день
+Healthcare,Здравохранение
+UnemploymentBenefit,Пособия по безработице
+MinSalary,Мин. зарплата
+MassMedia,Пресса
+PoliticalParties,Партии
+PublicMeetings,Публичные собрания
+Unions,Профсоюзы
+Worker,Рабочие
+Proletarian,Фабричные рабочие
+Craftsman,Ремесленники
+Clerk,Служащие

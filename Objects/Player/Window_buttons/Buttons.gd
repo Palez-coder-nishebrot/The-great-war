@@ -5,7 +5,7 @@ const form_of_goverment_sprite: Dictionary = {
 	"socialists":"res://Graphics/Sprites/GUI/Icons of windows/01.png",
 	"communists":"res://Graphics/Sprites/GUI/Icons of windows/02.png",
 	"fascists":"res://Graphics/Sprites/GUI/Icons of windows/05.png",
-	"populists": "res://Graphics/Sprites/GUI/Icons of windows/04.png",
+	"conservators": "res://Graphics/Sprites/GUI/Icons of windows/04.png",
 }
 
 #onready var list_of_buttons: Dictionary = {
@@ -34,15 +34,31 @@ var windows: Array = [
 	"window_diplomacy",
 ]
 
-onready var budget_label: Button = $VBoxContainer/BudgetLabel
-onready var research_label: Button = $VBoxContainer/ResearchLabel
-onready var ideology_label: Button = $VBoxContainer/PartiesLabel
-onready var population_label: Button = $VBoxContainer/PopulationLabel
-onready var stability_label: Button = $VBoxContainer/StabilityLabel
-onready var unemployed_label: Button = $VBoxContainer/UnemployedLabel
-onready var pluralism_label: Button = $VBoxContainer/Pluralism
-onready var radio_net_label: Button = $VBoxContainer/RadioNetLabel
+#const labels: Array = [
+#	"construction_label",
+#	"budget_label",
+#	"research_label",
+#	"ideology_label",
+#	"population_label",
+#	"stability_label",
+#	"unemployed_label",
+#	"pluralism_label",
+#	"radio_net_label",
+#]
+onready var education_label: Label = $VBoxContainer/EducationLabel/Label
+onready var construction_label: Label = $VBoxContainer/ConstructionLabel/Label
+onready var factory_label: Label = $VBoxContainer/FactoriesLabel/Label
+onready var budget_label: Label = $VBoxContainer/BudgetLabel/Label
+onready var research_label: Label = $VBoxContainer/ResearchLabel/Label
+onready var ideology_label: Object = $VBoxContainer/PartiesLabel
+onready var population_label: Label = $VBoxContainer/PopulationLabel/Label
+onready var stability_label: Label = $VBoxContainer/StabilityLabel/Label
+onready var unemployed_label: Label = $VBoxContainer/UnemployedLabel/Label
+onready var reform_icon: TextureRect = $VBoxContainer/ReformIcon
 
+#
+#func _ready():
+#	construction_label.add_image(load("res://Graphics/Sprites/GUI/Icons of windows/01.png"), 20, 20)
 
 func on_button_pressed(window):
 	
@@ -58,14 +74,26 @@ func on_button_pressed(window):
 
 
 func update_information():
+	check_reform()
+	education_label.text = str(Players.player.middle_value_education) + "%"
+	factory_label.text = str(Players.player.list_of_factories.size())
 	budget_label.text = str(Players.player.budget)
+	stability_label.text = str(Players.player.stability)
 	research_label.text = str(Players.player.researching_points)
 	
-	ideology_label.icon = load(form_of_goverment_sprite[Players.player.ideology])
-	ideology_label.text = Players.player.ideology
+	
+	ideology_label.get_node("TextureRect").texture = load(form_of_goverment_sprite[Players.player.ideology])
+	ideology_label.get_node("Label").text = Players.player.ideology
 	
 	population_label.text = str(Players.player.welfare)
 #	stability_label.text = str(Players.player.policy["Стабильность"])
 	unemployed_label.text = str(Players.player.quantity_of_unemployed)
-	pluralism_label.text = str(Players.player.pluralism)
-	radio_net_label.text = str(Players.player.radio_net)
+
+
+func check_reform():
+	if Players.player.reforms_manager.social_reform or Players.player.reforms_manager.political_reform:
+		reform_icon.visible = true
+	else:
+		reform_icon.visible = false
+	
+	pass

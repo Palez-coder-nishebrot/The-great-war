@@ -15,13 +15,12 @@ func create_players(game_):
 	
 	while folder_name != "":
 		var file = load("res://Resources/StatesOnStartGame/States/" + folder_name)
-		var client 
 		
 		if file.name_of_state == Players.country_to_start:
-			client = set_player()
+			set_player(file)
 		else:
-			client = AI.new()
-		set_client(client, file)
+			var client = AI.new()
+			set_client(client, file)
 		
 		folder_name = folder.get_next()
 	
@@ -48,24 +47,27 @@ func set_client(client, file):
 	client.name_of_country = file.name_of_state
 	client.national_color = file.national_color
 	
+	client.form_of_goverment = file.form_of_goverment
 	client.ideology = file.ideology
 	client.capitalists_manager.player = client
 	client.game = game
 	client.technologies.client = client
 	Players.list_of_players.append(client)
 	
-	client.technologies.set_technologies()
+	#client.technologies.set_technologies()
 	client.military_bonuses.set_object_of_units()
-	client.parties_manager.set_parties(client)
+	client.economic_bonuses.set_list_of_buildings()
+	#client.parties_manager.set_parties(client)
 
 
-func set_player():
+func set_player(file):
 	var player: Object = load("res://Objects/Player/Player.tscn").instance()
+	player.parties_manager = PartiesManager.new(player, file.ideology)
+	set_client(player, file)
 	
 	player.position = Vector2(2318, 2000)
 	Players.player = player
 	game.add_child(player)
-	return player
 
 
 func set_gui():

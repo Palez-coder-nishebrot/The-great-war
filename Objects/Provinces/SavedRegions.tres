@@ -1,0 +1,791 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Objects/Provinces/SavedRegions.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+regions = [ {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Броды",
+"railways": 0,
+"resources": [ "beasts", "wood" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Кременец",
+"railways": 1,
+"resources": [ "beasts", "iron" ],
+"workers": 12
+}, {
+"factories": [ "Clothes_factory" ],
+"factory_workers": 8,
+"name_of_province": "Люблин",
+"railways": 2,
+"resources": [ "wood", "cotton" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Тарнополь",
+"railways": 0,
+"resources": [ "grain", "iron" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Красник",
+"railways": 0,
+"resources": [ "grain", "rubber" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Станислав",
+"railways": 0,
+"resources": [ "grain", "beasts" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Белжеца",
+"railways": 0,
+"resources": [ "grain", "coal" ],
+"workers": 12
+}, {
+"factories": [ "Gas_factory" ],
+"factory_workers": 8,
+"name_of_province": "Лодзь",
+"railways": 1,
+"resources": [ "oil", "iron" ],
+"workers": 10
+}, {
+"factories": [ "Lumber_plant", "Furniture_factory" ],
+"factory_workers": 16,
+"name_of_province": "Митава",
+"railways": 1,
+"resources": [ "iron", "wood" ],
+"workers": 12
+}, {
+"factories": [ "Distillery" ],
+"factory_workers": 8,
+"name_of_province": "Черновцы",
+"railways": 1,
+"resources": [ "coal", "beasts" ],
+"workers": 12
+}, {
+"factories": [ "Furniture_factory" ],
+"factory_workers": 8,
+"name_of_province": "Богородчаны",
+"railways": 1,
+"resources": [ "coal", "wood" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Днестр",
+"railways": 0,
+"resources": [ "iron", "cotton" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Галич",
+"railways": 0,
+"resources": [ "grain", "coal" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Калуш",
+"railways": 0,
+"resources": [ "cotton", "saltpeter" ],
+"workers": 12
+}, {
+"factories": [ "Distillery", "Gas_factory" ],
+"factory_workers": 16,
+"name_of_province": "Луцк",
+"railways": 0,
+"resources": [ "grain", "oil" ],
+"workers": 12
+}, {
+"factories": [ "Lumber_plant" ],
+"factory_workers": 8,
+"name_of_province": "Познань",
+"railways": 1,
+"resources": [ "wood", "grain" ],
+"workers": 12
+}, {
+"factories": [ "Glass_factory" ],
+"factory_workers": 4,
+"name_of_province": "Ровно",
+"railways": 1,
+"resources": [ "coal", "rubber" ],
+"workers": 12
+}, {
+"factories": [ "Gas_factory" ],
+"factory_workers": 8,
+"name_of_province": "Коломыя",
+"railways": 1,
+"resources": [ "oil", "grain" ],
+"workers": 12
+}, {
+"factories": [ "Distillery" ],
+"factory_workers": 8,
+"name_of_province": "Проскуров",
+"railways": 0,
+"resources": [ "coal", "wood" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Стрый",
+"railways": 0,
+"resources": [ "iron", "wood" ],
+"workers": 12
+}, {
+"factories": [ "Textile_factory", "Clothes_factory" ],
+"factory_workers": 0,
+"name_of_province": "Ковель",
+"railways": 2,
+"resources": [ "grain", "cotton" ],
+"workers": 28
+}, {
+"factories": [ "Textile_factory", "Clothes_factory" ],
+"factory_workers": 0,
+"name_of_province": "Волынский",
+"railways": 2,
+"resources": [ "grain", "cotton" ],
+"workers": 28
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Щепеткова",
+"railways": 0,
+"resources": [ "coal", "rubber" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Львов",
+"railways": 0,
+"resources": [ "grain", "coal" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Болехов",
+"railways": 0,
+"resources": [ "iron", "wood" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Борка",
+"railways": 0,
+"resources": [ "grain", "cotton" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Звижень",
+"railways": 0,
+"resources": [ "grain", "cotton" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Гримайлов",
+"railways": 0,
+"resources": [ "iron", "wood" ],
+"workers": 12
+}, {
+"factories": [ "Glass_factory" ],
+"factory_workers": 8,
+"name_of_province": "Хмельницкий",
+"railways": 1,
+"resources": [ "coal", "wood" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Ивано-Франковск",
+"railways": 0,
+"resources": [ "oil", "cotton" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Ужгород",
+"railways": 0,
+"resources": [ "beasts", "iron" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Белецкое",
+"railways": 0,
+"resources": [ "beasts", "wood" ],
+"workers": 12
+}, {
+"factories": [ "Distillery" ],
+"factory_workers": 8,
+"name_of_province": "Каменец-Подольск",
+"railways": 1,
+"resources": [ "grain", "coal" ],
+"workers": 12
+}, {
+"factories": [ "Textile_factory", "Clothes_factory" ],
+"factory_workers": 16,
+"name_of_province": "Дубно",
+"railways": 2,
+"resources": [ "grain", "cotton" ],
+"workers": 12
+}, {
+"factories": [ "Glass_factory", "Distillery" ],
+"factory_workers": 16,
+"name_of_province": "Иршики",
+"railways": 2,
+"resources": [ "grain", "coal" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Зборов",
+"railways": 1,
+"resources": [ "grain", "iron" ],
+"workers": 12
+}, {
+"factories": [ "Glass_factory", "Distillery" ],
+"factory_workers": 16,
+"name_of_province": "Старокостантинов",
+"railways": 0,
+"resources": [ "grain", "coal" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Дрогобыч",
+"railways": 0,
+"resources": [ "grain", "iron" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Нетешин",
+"railways": 0,
+"resources": [ "beasts", "wood" ],
+"workers": 12
+}, {
+"factories": [ "Gas_factory" ],
+"factory_workers": 8,
+"name_of_province": "Мукачево",
+"railways": 0,
+"resources": [ "beasts", "oil" ],
+"workers": 12
+}, {
+"factories": [ "Glass_factory", "Distillery" ],
+"factory_workers": 0,
+"name_of_province": "Берегово",
+"railways": 2,
+"resources": [ "beasts", "coal" ],
+"workers": 12
+}, {
+"factories": [ "Glass_factory", "Distillery" ],
+"factory_workers": 16,
+"name_of_province": "Буковина",
+"railways": 2,
+"resources": [ "grain", "iron" ],
+"workers": 12
+}, {
+"factories": [ "Textile_factory", "Clothes_factory" ],
+"factory_workers": 16,
+"name_of_province": "Катовице",
+"railways": 2,
+"resources": [ "coal", "cotton" ],
+"workers": 12
+}, {
+"factories": [ "Steel_plant", "Mech_parts_factory" ],
+"factory_workers": 16,
+"name_of_province": "Ченстохова",
+"railways": 3,
+"resources": [ "iron", "wood" ],
+"workers": 12
+}, {
+"factories": [ "Textile_factory", "Clothes_factory" ],
+"factory_workers": 16,
+"name_of_province": "Пшемысль",
+"railways": 1,
+"resources": [ "grain", "cotton" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Севастополь",
+"railways": 0,
+"resources": [ "grain", "wood" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Закопане",
+"railways": 0,
+"resources": [ "grain", "wood" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Донецк",
+"railways": 0,
+"resources": [ "cotton", "coal" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Сегед",
+"railways": 2,
+"resources": [ "oil", "saltpeter" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Стецки",
+"railways": 0,
+"resources": [ "grain", "beasts" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Николаев",
+"railways": 0,
+"resources": [ "grain", "beasts" ],
+"workers": 12
+}, {
+"factories": [ "Glass_factory", "Distillery" ],
+"factory_workers": 16,
+"name_of_province": "Винница",
+"railways": 3,
+"resources": [ "grain", "coal" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Симферополь",
+"railways": 3,
+"resources": [ "grain", "beasts" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Херсон",
+"railways": 3,
+"resources": [ "grain", "beasts" ],
+"workers": 12
+}, {
+"factories": [ "Steel_plant" ],
+"factory_workers": 8,
+"name_of_province": "Полтава",
+"railways": 3,
+"resources": [ "grain", "iron" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Белая Церковь",
+"railways": 0,
+"resources": [ "beasts", "wood" ],
+"workers": 12
+}, {
+"factories": [ "Lumber_plant", "Furniture_factory" ],
+"factory_workers": 16,
+"name_of_province": "Пмлица",
+"railways": 3,
+"resources": [ "coal", "wood" ],
+"workers": 12
+}, {
+"factories": [ "Glass_factory", "Distillery" ],
+"factory_workers": 16,
+"name_of_province": "Мелитополь",
+"railways": 0,
+"resources": [ "grain", "saltpeter" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Грубешов",
+"railways": 0,
+"resources": [ "grain", "iron" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Павлоград",
+"railways": 0,
+"resources": [ "oil", "cotton" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Вилькомир",
+"railways": 0,
+"resources": [ "coal", "wood" ],
+"workers": 12
+}, {
+"factories": [ "Textile_factory", "Clothes_factory" ],
+"factory_workers": 16,
+"name_of_province": "Лисичанск",
+"railways": 3,
+"resources": [ "wood", "cotton" ],
+"workers": 12
+}, {
+"factories": [ "Glass_factory", "Distillery" ],
+"factory_workers": 16,
+"name_of_province": "Бердичев",
+"railways": 3,
+"resources": [ "grain", "beasts" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Тамань",
+"railways": 0,
+"resources": [ "grain", "iron" ],
+"workers": 12
+}, {
+"factories": [ "Glass_factory" ],
+"factory_workers": 8,
+"name_of_province": "Горлица",
+"railways": 2,
+"resources": [ "beasts", "coal" ],
+"workers": 12
+}, {
+"factories": [ "Steel_plant", "Mech_parts_factory" ],
+"factory_workers": 12,
+"name_of_province": "Константиновка",
+"railways": 0,
+"resources": [ "beasts", "iron" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Измаил",
+"railways": 0,
+"resources": [ "wood", "saltpeter" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Новомосковск",
+"railways": 0,
+"resources": [ "oil", "saltpeter" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Яремче",
+"railways": 0,
+"resources": [ "grain", "cotton" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Коростень",
+"railways": 0,
+"resources": [ "grain", "cotton" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Должанск",
+"railways": 0,
+"resources": [ "coal", "cotton" ],
+"workers": 12
+}, {
+"factories": [ "Glass_factory" ],
+"factory_workers": 8,
+"name_of_province": "Покровск",
+"railways": 1,
+"resources": [ "beasts", "coal" ],
+"workers": 12
+}, {
+"factories": [ "Glass_factory" ],
+"factory_workers": 8,
+"name_of_province": "Изюм",
+"railways": 1,
+"resources": [ "beasts", "coal" ],
+"workers": 12
+}, {
+"factories": [ "Glass_factory" ],
+"factory_workers": 8,
+"name_of_province": "Черкасс",
+"railways": 0,
+"resources": [ "coal", "wood" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Житомир",
+"railways": 0,
+"resources": [ "coal", "grain" ],
+"workers": 12
+}, {
+"factories": [ "Steel_plant" ],
+"factory_workers": 8,
+"name_of_province": "Сумы",
+"railways": 0,
+"resources": [ "iron", "wood" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Горловка",
+"railways": 0,
+"resources": [ "grain", "oil" ],
+"workers": 12
+}, {
+"factories": [ "Distillery" ],
+"factory_workers": 8,
+"name_of_province": "Макеевка",
+"railways": 2,
+"resources": [ "grain", "coal" ],
+"workers": 12
+}, {
+"factories": [ "Distillery" ],
+"factory_workers": 8,
+"name_of_province": "Желув",
+"railways": 2,
+"resources": [ "grain", "cotton" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Тулов",
+"railways": 0,
+"resources": [ "wood", "saltpeter" ],
+"workers": 12
+}, {
+"factories": [ "Distillery" ],
+"factory_workers": 8,
+"name_of_province": "Вручий",
+"railways": 2,
+"resources": [ "grain", "coal" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Трускавец",
+"railways": 0,
+"resources": [ "beasts", "wood" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Любич",
+"railways": 0,
+"resources": [ "grain", "wood" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Подолье",
+"railways": 0,
+"resources": [ "grain", "wood" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Теребовль",
+"railways": 0,
+"resources": [ "beasts", "grain" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Пинск",
+"railways": 0,
+"resources": [ "grain" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Гродно",
+"railways": 0,
+"resources": [ "beasts", "coal" ],
+"workers": 12
+}, {
+"factories": [ "Steel_plant" ],
+"factory_workers": 8,
+"name_of_province": "Витебск",
+"railways": 0,
+"resources": [ "beasts", "coal" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Дукшты",
+"railways": 0,
+"resources": [ "grain", "wood" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Надворная",
+"railways": 0,
+"resources": [ "beasts", "coal" ],
+"workers": 12
+}, {
+"factories": [ "Mech_parts_factory" ],
+"factory_workers": 8,
+"name_of_province": "Нови-Сад",
+"railways": 3,
+"resources": [ "grain", "iron" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Приштина",
+"railways": 0,
+"resources": [ "grain", "saltpeter" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Рутивль",
+"railways": 0,
+"resources": [ "beasts", "wood" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Заболотов",
+"railways": 1,
+"resources": [ "oil", "wood" ],
+"workers": 12
+}, {
+"factories": [ "Textile_factory", "Clothes_factory" ],
+"factory_workers": 16,
+"name_of_province": "Тлумач",
+"railways": 1,
+"resources": [ "cotton", "rubber" ],
+"workers": 12
+}, {
+"factories": [ "Gas_factory" ],
+"factory_workers": 8,
+"name_of_province": "Пядичи",
+"railways": 3,
+"resources": [ "oil", "saltpeter" ],
+"workers": 12
+}, {
+"factories": [ "Steel_plant", "Mech_parts_factory" ],
+"factory_workers": 16,
+"name_of_province": "Перемышль",
+"railways": 1,
+"resources": [ "iron", "wood" ],
+"workers": 12
+}, {
+"factories": [ "Glass_factory", "Distillery" ],
+"factory_workers": 16,
+"name_of_province": "Ахалкалаки",
+"railways": 0,
+"resources": [ "grain", "coal" ],
+"workers": 12
+}, {
+"factories": [ "Glass_factory" ],
+"factory_workers": 8,
+"name_of_province": "Батые",
+"railways": 0,
+"resources": [ "coal", "wood" ],
+"workers": 12
+}, {
+"factories": [ "Textile_factory", "Clothes_factory" ],
+"factory_workers": 16,
+"name_of_province": "Брзежаны",
+"railways": 3,
+"resources": [ "beasts", "cotton" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Вильянди",
+"railways": 0,
+"resources": [ "grain", "iron" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Курессааре",
+"railways": 0,
+"resources": [ "grain", "coal" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Пярну",
+"railways": 0,
+"resources": [ "beasts", "grain" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Раквере",
+"railways": 0,
+"resources": [ "coal", "wood" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Силламяэ",
+"railways": 0,
+"resources": [ "cotton", "oil" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Тарту",
+"railways": 0,
+"resources": [ "beasts", "wood" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Хаапсалу",
+"railways": 0,
+"resources": [ "cotton", "grain" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Алитус",
+"railways": 0,
+"resources": [ "beasts", "wood" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Каунас",
+"railways": 0,
+"resources": [ "oil", "iron" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Клайпеда",
+"railways": 0,
+"resources": [ "grain", "coal" ],
+"workers": 12
+}, {
+"factories": [  ],
+"factory_workers": 0,
+"name_of_province": "Паневежис",
+"railways": 0,
+"resources": [ "cotton", "grain" ],
+"workers": 12
+}, {
+"factories": [ "Distillery" ],
+"factory_workers": 4,
+"name_of_province": "Батуми",
+"railways": 1,
+"resources": [ "grain", "rubber" ],
+"workers": 12
+} ]

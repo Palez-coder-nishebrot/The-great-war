@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Objects/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Objects/Player/Window_province/Window_province.tscn" type="PackedScene" id=2]
@@ -10,11 +10,10 @@
 [ext_resource path="res://Objects/Player/Window_parties/Parties.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Objects/Player/Window_diplomacy/Diplomacy.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Objects/Player/Window_reforms/Reform.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Objects/Player/Window_taxes/Taxes.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Objects/Player/Accounting/Taxes.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Objects/Player/Window_population/Population.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Objects/Player/Window_research/Research.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Objects/Player/Window_train_army/Train_army.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Objects/Player/Window_research/Research_end.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Objects/Player/List_of_units/List_of_units.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Graphics/Fonts/pixel_2.ttf" type="DynamicFontData" id=17]
 [ext_resource path="res://Objects/Player/Borders/Border.gd" type="Script" id=18]
@@ -47,8 +46,8 @@ zoom = Vector2( 2.5, 2.5 )
 mouse_filter = 2
 
 [node name="Information" parent="CanvasLayer" instance=ExtResource( 4 )]
-margin_top = 78.0
-margin_bottom = 257.0
+margin_top = 70.0
+margin_bottom = 249.0
 
 [node name="Province" parent="CanvasLayer" instance=ExtResource( 2 )]
 visible = false
@@ -57,12 +56,15 @@ margin_bottom = 1080.0
 
 [node name="Markets" parent="CanvasLayer" instance=ExtResource( 5 )]
 visible = false
+margin_top = 78.0
 
 [node name="Production" parent="CanvasLayer" instance=ExtResource( 6 )]
 visible = false
+margin_top = 78.0
 
 [node name="Parties" parent="CanvasLayer" instance=ExtResource( 8 )]
 visible = false
+margin_top = 78.0
 
 [node name="Taxes" parent="CanvasLayer" instance=ExtResource( 11 )]
 visible = false
@@ -71,25 +73,26 @@ margin_bottom = 1080.0
 
 [node name="Reform" parent="CanvasLayer" instance=ExtResource( 10 )]
 visible = false
+margin_top = 78.0
 
 [node name="Population" parent="CanvasLayer" instance=ExtResource( 12 )]
 visible = false
+margin_top = 78.0
 
 [node name="Research" parent="CanvasLayer" instance=ExtResource( 13 )]
 visible = false
-
-[node name="Research_end" parent="CanvasLayer" instance=ExtResource( 15 )]
-visible = false
+margin_top = 80.0
 
 [node name="Train_army" parent="CanvasLayer" instance=ExtResource( 14 )]
 visible = false
 
 [node name="Build_factory" parent="CanvasLayer" instance=ExtResource( 7 )]
 visible = false
-margin_top = 321.0
+margin_top = 248.0
 
 [node name="Diplomacy" parent="CanvasLayer" instance=ExtResource( 9 )]
 visible = false
+margin_top = 80.0
 
 [node name="List_of_units" parent="CanvasLayer" instance=ExtResource( 16 )]
 visible = false

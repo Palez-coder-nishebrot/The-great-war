@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=5 format=2]
+
+[ext_resource path="res://Resources/Factories/Factory.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Factories/Raw.gd" type="Script" id=2]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 2 )
+good = "coal"
+quantity = 0.1
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 2 )
+good = "iron"
+quantity = 0.1
+
+[resource]
+script = ExtResource( 1 )
+name_of_factory = "Steel_plant"
+raw = [ SubResource( 1 ), SubResource( 2 ) ]
+good = "steel"

@@ -1,48 +1,8 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Graphics/Fonts/pixel_2.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Objects/Player/Window_markets/Good_button.gd" type="Script" id=2]
 [ext_resource path="res://Objects/Player/Window_markets/Markets.gd" type="Script" id=3]
-[ext_resource path="res://Graphics/Sprites/Goods/Coal.png" type="Texture" id=4]
-[ext_resource path="res://Graphics/Sprites/Goods/Iron.png" type="Texture" id=5]
-[ext_resource path="res://Graphics/Sprites/Goods/Rubber.png" type="Texture" id=6]
-[ext_resource path="res://Graphics/Sprites/Goods/Cotton.png" type="Texture" id=7]
-[ext_resource path="res://Graphics/Sprites/Goods/Oil.png" type="Texture" id=8]
-[ext_resource path="res://Graphics/Sprites/Goods/Radio.png" type="Texture" id=9]
-[ext_resource path="res://Graphics/Sprites/Goods/Gas.png" type="Texture" id=10]
-[ext_resource path="res://Graphics/Sprites/Goods/Alhohol.png" type="Texture" id=11]
-[ext_resource path="res://Graphics/Sprites/Goods/Car.png" type="Texture" id=12]
-[ext_resource path="res://Graphics/Sprites/Goods/Phone.png" type="Texture" id=13]
-[ext_resource path="res://Graphics/Sprites/Goods/Electric parts.png" type="Texture" id=14]
-[ext_resource path="res://Graphics/Sprites/Goods/Seed.png" type="Texture" id=15]
-[ext_resource path="res://Graphics/Sprites/Goods/Wood.png" type="Texture" id=16]
-[ext_resource path="res://Graphics/Sprites/Goods/Steel.png" type="Texture" id=17]
-[ext_resource path="res://Graphics/Sprites/Goods/Glass.png" type="Texture" id=18]
-[ext_resource path="res://Graphics/Sprites/Goods/Tea.png" type="Texture" id=19]
-[ext_resource path="res://Graphics/Sprites/Goods/Armored car.png" type="Texture" id=20]
-[ext_resource path="res://Graphics/Sprites/Goods/Tank.png" type="Texture" id=21]
-[ext_resource path="res://Graphics/Sprites/Goods/Canned food.png" type="Texture" id=22]
-[ext_resource path="res://Graphics/Sprites/Goods/Lumber.png" type="Texture" id=23]
-[ext_resource path="res://Graphics/Sprites/Goods/Airplane.png" type="Texture" id=24]
-[ext_resource path="res://Graphics/Sprites/Goods/Furniture.png" type="Texture" id=25]
-[ext_resource path="res://Graphics/Sprites/Goods/Nitrate.png" type="Texture" id=26]
-[ext_resource path="res://Objects/Player/Window_markets/Output_button.gd" type="Script" id=27]
-[ext_resource path="res://Graphics/Sprites/Goods/Clothes.png" type="Texture" id=28]
-[ext_resource path="res://Graphics/Sprites/Goods/Artillery.png" type="Texture" id=29]
-[ext_resource path="res://Graphics/Sprites/Goods/Shells.png" type="Texture" id=30]
-[ext_resource path="res://Graphics/Sprites/Goods/Tabaco.png" type="Texture" id=31]
-[ext_resource path="res://Graphics/Sprites/Goods/Fabric.png" type="Texture" id=32]
-[ext_resource path="res://Graphics/Sprites/Goods/Bolt-action rifle.png" type="Texture" id=33]
-[ext_resource path="res://Graphics/Sprites/Goods/Machine gun.png" type="Texture" id=34]
-[ext_resource path="res://Graphics/Sprites/Goods/Telegraph.png" type="Texture" id=35]
-[ext_resource path="res://Objects/Player/Window_markets/Warhouse_button.gd" type="Script" id=36]
-[ext_resource path="res://Graphics/Sprites/Goods/Ammunition.png" type="Texture" id=37]
-[ext_resource path="res://Graphics/Sprites/Goods/Cattle.png" type="Texture" id=38]
-[ext_resource path="res://Graphics/Sprites/Goods/El-appliances.png" type="Texture" id=39]
-
-[sub_resource type="DynamicFont" id=2]
-size = 34
-font_data = ExtResource( 1 )
+[ext_resource path="res://Objects/Player/Window_markets/GoodButton.tscn" type="PackedScene" id=20]
 
 [sub_resource type="DynamicFont" id=3]
 size = 48
@@ -53,352 +13,6 @@ margin_top = 61.0
 margin_right = 1920.0
 margin_bottom = 1080.0
 script = ExtResource( 3 )
-
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_right = 1120.0
-margin_bottom = 530.0
-custom_constants/separation = 0
-
-[node name="Resourses_container" type="HBoxContainer" parent="VBoxContainer"]
-margin_right = 1120.0
-margin_bottom = 106.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_constants/separation = 0
-
-[node name="Уголь" type="Button" parent="VBoxContainer/Resourses_container"]
-margin_right = 112.0
-margin_bottom = 106.0
-custom_fonts/font = SubResource( 2 )
-icon = ExtResource( 4 )
-script = ExtResource( 2 )
-good = "coal"
-
-[node name="Железо" type="Button" parent="VBoxContainer/Resourses_container"]
-margin_left = 112.0
-margin_right = 224.0
-margin_bottom = 106.0
-custom_fonts/font = SubResource( 2 )
-icon = ExtResource( 5 )
-script = ExtResource( 2 )
-good = "iron"
-
-[node name="Нефть" type="Button" parent="VBoxContainer/Resourses_container"]
-margin_left = 224.0
-margin_right = 336.0
-margin_bottom = 106.0
-custom_fonts/font = SubResource( 2 )
-icon = ExtResource( 8 )
-script = ExtResource( 2 )
-good = "oil"
-
-[node name="Резина" type="Button" parent="VBoxContainer/Resourses_container"]
-margin_left = 336.0
-margin_right = 448.0
-margin_bottom = 106.0
-custom_fonts/font = SubResource( 2 )
-icon = ExtResource( 6 )
-script = ExtResource( 2 )
-good = "rubber"
-
-[node name="Хлопок" type="Button" parent="VBoxContainer/Resourses_container"]
-margin_left = 448.0
-margin_right = 560.0
-margin_bottom = 106.0
-custom_fonts/font = SubResource( 2 )
-icon = ExtResource( 7 )
-script = ExtResource( 2 )
-good = "cotton"
-
-[node name="Зерно" type="Button" parent="VBoxContainer/Resourses_container"]
-margin_left = 560.0
-margin_right = 672.0
-margin_bottom = 106.0
-custom_fonts/font = SubResource( 2 )
-icon = ExtResource( 15 )
-script = ExtResource( 2 )
-good = "grain"
-
-[node name="Скот" type="Button" parent="VBoxContainer/Resourses_container"]
-margin_left = 672.0
-margin_right = 784.0
-margin_bottom = 106.0
-custom_fonts/font = SubResource( 2 )
-icon = ExtResource( 38 )
-script = ExtResource( 2 )
-good = "beasts"
-
-[node name="Древесина" type="Button" parent="VBoxContainer/Resourses_container"]
-margin_left = 784.0
-margin_right = 896.0
-margin_bottom = 106.0
-custom_fonts/font = SubResource( 2 )
-icon = ExtResource( 16 )
-script = ExtResource( 2 )
-good = "wood"
-
-[node name="Factory_goods_container" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 106.0
-margin_right = 1120.0
-margin_bottom = 212.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_constants/separation = 0
-
-[node name="Сталь" type="Button" parent="VBoxContainer/Factory_goods_container"]
-margin_right = 112.0
-margin_bottom = 106.0
-custom_fonts/font = SubResource( 2 )
-icon = ExtResource( 17 )
-script = ExtResource( 2 )
-good = "steel"
-
-[node name="Стекло" type="Button" parent="VBoxContainer/Factory_goods_container"]
-margin_left = 112.0
-margin_right = 224.0
-margin_bottom = 106.0
-custom_fonts/font = SubResource( 2 )
-icon = ExtResource( 18 )
-script = ExtResource( 2 )
-good = "glass"
-
-[node name="Ткань" type="Button" parent="VBoxContainer/Factory_goods_container"]
-margin_left = 224.0
-margin_right = 336.0
-margin_bottom = 106.0
-custom_fonts/font = SubResource( 2 )
-icon = ExtResource( 32 )
-script = ExtResource( 2 )
-good = "textile"
-
-[node name="Электрозапчасти" type="Button" parent="VBoxContainer/Factory_goods_container"]
-margin_left = 336.0
-margin_right = 448.0
-margin_bottom = 106.0
-custom_fonts/font = SubResource( 2 )
-icon = ExtResource( 14 )
-script = ExtResource( 2 )
-good = "el_parts"
-
-[node name="Пиломатериалы" type="Button" parent="VBoxContainer/Factory_goods_container"]
-margin_left = 448.0
-margin_right = 560.0
-margin_bottom = 106.0
-custom_fonts/font = SubResource( 2 )
-icon = ExtResource( 23 )
-script = ExtResource( 2 )
-good = "lumber"
-
-[node name="Селитра" type="Button" parent="VBoxContainer/Factory_goods_container"]
-margin_left = 560.0
-margin_right = 672.0
-margin_bottom = 106.0
-custom_fonts/font = SubResource( 2 )
-icon = ExtResource( 26 )
-script = ExtResource( 2 )
-good = "saltpeter"
-
-[node name="Civilian_container" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 212.0
-margin_right = 1120.0
-margin_bottom = 318.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_constants/separation = 0
-
-[node name="Мебель" type="Button" parent="VBoxContainer/Civilian_container"]
-margin_right = 112.0
-margin_bottom = 106.0
-custom_fonts/font = SubResource( 2 )
-icon = ExtResource( 25 )
-script = ExtResource( 2 )
-good = "furniture"
-
-[node name="Спиртное" type="Button" parent="VBoxContainer/Civilian_container"]
-margin_left = 112.0
-margin_right = 224.0
-margin_bottom = 106.0
-custom_fonts/font = SubResource( 2 )
-icon = ExtResource( 11 )
-script = ExtResource( 2 )
-good = "alcohol"
-
-[node name="Одежда" type="Button" parent="VBoxContainer/Civilian_container"]
-margin_left = 224.0
-margin_right = 336.0
-margin_bottom = 106.0
-rect_pivot_offset = Vector2( 336, 183 )
-custom_fonts/font = SubResource( 2 )
-icon = ExtResource( 28 )
-script = ExtResource( 2 )
-good = "clothes"
-
-[node name="Консервы" type="Button" parent="VBoxContainer/Civilian_container"]
-margin_left = 336.0
-margin_right = 448.0
-margin_bottom = 106.0
-custom_fonts/font = SubResource( 2 )
-icon = ExtResource( 22 )
-script = ExtResource( 2 )
-good = "canned_food"
-
-[node name="Топливо" type="Button" parent="VBoxContainer/Civilian_container"]
-margin_left = 448.0
-margin_right = 560.0
-margin_bottom = 106.0
-custom_fonts/font = SubResource( 2 )
-icon = ExtResource( 10 )
-script = ExtResource( 2 )
-good = "gas"
-
-[node name="Чай" type="Button" parent="VBoxContainer/Civilian_container"]
-margin_left = 560.0
-margin_right = 672.0
-margin_bottom = 106.0
-custom_fonts/font = SubResource( 2 )
-icon = ExtResource( 19 )
-script = ExtResource( 2 )
-good = "tea"
-
-[node name="Табак" type="Button" parent="VBoxContainer/Civilian_container"]
-margin_left = 672.0
-margin_right = 784.0
-margin_bottom = 106.0
-custom_fonts/font = SubResource( 2 )
-icon = ExtResource( 31 )
-script = ExtResource( 2 )
-good = "tabaco"
-
-[node name="Tech_container" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 318.0
-margin_right = 1120.0
-margin_bottom = 424.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_constants/separation = 0
-
-[node name="Автомобили" type="Button" parent="VBoxContainer/Tech_container"]
-margin_right = 112.0
-margin_bottom = 106.0
-custom_fonts/font = SubResource( 2 )
-icon = ExtResource( 12 )
-script = ExtResource( 2 )
-good = "cars"
-
-[node name="Телеграфы" type="Button" parent="VBoxContainer/Tech_container"]
-margin_left = 112.0
-margin_right = 224.0
-margin_bottom = 106.0
-custom_fonts/font = SubResource( 2 )
-icon = ExtResource( 35 )
-script = ExtResource( 2 )
-good = "telegraphs"
-
-[node name="Телефоны" type="Button" parent="VBoxContainer/Tech_container"]
-margin_left = 224.0
-margin_right = 336.0
-margin_bottom = 106.0
-custom_fonts/font = SubResource( 2 )
-icon = ExtResource( 13 )
-script = ExtResource( 2 )
-good = "phone"
-
-[node name="Радио" type="Button" parent="VBoxContainer/Tech_container"]
-margin_left = 336.0
-margin_right = 448.0
-margin_bottom = 106.0
-custom_fonts/font = SubResource( 2 )
-icon = ExtResource( 9 )
-script = ExtResource( 2 )
-good = "radio"
-
-[node name="Радио2" type="Button" parent="VBoxContainer/Tech_container"]
-margin_left = 448.0
-margin_right = 560.0
-margin_bottom = 106.0
-custom_fonts/font = SubResource( 2 )
-icon = ExtResource( 39 )
-script = ExtResource( 2 )
-good = "el_appliances"
-
-[node name="VBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 424.0
-margin_right = 1120.0
-margin_bottom = 530.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_constants/separation = 0
-
-[node name="Снаряды" type="Button" parent="VBoxContainer/VBoxContainer4"]
-margin_right = 112.0
-margin_bottom = 106.0
-custom_fonts/font = SubResource( 2 )
-icon = ExtResource( 30 )
-script = ExtResource( 2 )
-good = "projectiles"
-
-[node name="Боеприпасы" type="Button" parent="VBoxContainer/VBoxContainer4"]
-margin_left = 112.0
-margin_right = 224.0
-margin_bottom = 106.0
-custom_fonts/font = SubResource( 2 )
-icon = ExtResource( 37 )
-script = ExtResource( 2 )
-good = "ammo"
-
-[node name="Пулеметы" type="Button" parent="VBoxContainer/VBoxContainer4"]
-margin_left = 224.0
-margin_right = 336.0
-margin_bottom = 106.0
-custom_fonts/font = SubResource( 2 )
-icon = ExtResource( 34 )
-script = ExtResource( 2 )
-good = "machine_guns"
-
-[node name="Артиллерия" type="Button" parent="VBoxContainer/VBoxContainer4"]
-margin_left = 336.0
-margin_right = 448.0
-margin_bottom = 106.0
-custom_fonts/font = SubResource( 2 )
-icon = ExtResource( 29 )
-script = ExtResource( 2 )
-good = "artillery"
-
-[node name="Аэроплан" type="Button" parent="VBoxContainer/VBoxContainer4"]
-margin_left = 448.0
-margin_right = 560.0
-margin_bottom = 106.0
-custom_fonts/font = SubResource( 2 )
-icon = ExtResource( 24 )
-script = ExtResource( 2 )
-good = "plane"
-
-[node name="Магазинные_винтовки" type="Button" parent="VBoxContainer/VBoxContainer4"]
-margin_left = 560.0
-margin_right = 672.0
-margin_bottom = 106.0
-custom_fonts/font = SubResource( 2 )
-icon = ExtResource( 33 )
-script = ExtResource( 2 )
-good = "rifles"
-
-[node name="Бронемашины" type="Button" parent="VBoxContainer/VBoxContainer4"]
-margin_left = 672.0
-margin_right = 784.0
-margin_bottom = 106.0
-custom_fonts/font = SubResource( 2 )
-icon = ExtResource( 20 )
-script = ExtResource( 2 )
-good = "armored_cars"
-
-[node name="Танки" type="Button" parent="VBoxContainer/VBoxContainer4"]
-margin_left = 784.0
-margin_right = 896.0
-margin_bottom = 106.0
-custom_fonts/font = SubResource( 2 )
-icon = ExtResource( 21 )
-script = ExtResource( 2 )
-good = "tanks"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
 margin_top = 530.0
@@ -447,62 +61,275 @@ margin_bottom = 308.0
 custom_fonts/font = SubResource( 3 )
 align = 1
 
-[node name="ScrollContainer" type="ScrollContainer" parent="."]
-margin_left = 1706.0
-margin_right = 2134.0
-margin_bottom = 2038.0
+[node name="Control" type="Control" parent="."]
+margin_right = 2922.0
+margin_bottom = 1086.0
 rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
-margin_right = 428.0
-margin_bottom = 2038.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+margin_right = 2662.0
+margin_bottom = 214.0
+mouse_filter = 2
 custom_constants/separation = 0
 
-[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer"]
-margin_right = 428.0
-margin_bottom = 48.0
-custom_fonts/font = SubResource( 3 )
-text = "Выпуск продукции"
-align = 1
-
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer"]
-visible = false
-margin_top = 48.0
-margin_right = 428.0
-margin_bottom = 154.0
-custom_fonts/font = SubResource( 3 )
-text = "Уголь"
-icon = ExtResource( 24 )
-script = ExtResource( 27 )
-
-[node name="ScrollContainer2" type="ScrollContainer" parent="."]
-margin_left = 1492.0
-margin_right = 1920.0
-margin_bottom = 2038.0
-rect_scale = Vector2( 0.5, 0.5 )
-
-[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer2"]
-margin_right = 428.0
-margin_bottom = 2038.0
+[node name="GoodButton" parent="Control/HBoxContainer" instance=ExtResource( 20 )]
+margin_right = 380.0
+margin_bottom = 214.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+good = "coal"
+
+[node name="GoodButton2" parent="Control/HBoxContainer" instance=ExtResource( 20 )]
+margin_left = 380.0
+margin_right = 760.0
+margin_bottom = 214.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+good = "iron"
+
+[node name="GoodButton3" parent="Control/HBoxContainer" instance=ExtResource( 20 )]
+margin_left = 760.0
+margin_right = 1140.0
+margin_bottom = 214.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+good = "oil"
+
+[node name="GoodButton4" parent="Control/HBoxContainer" instance=ExtResource( 20 )]
+margin_left = 1140.0
+margin_right = 1521.0
+margin_bottom = 214.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+good = "rubber"
+
+[node name="GoodButton5" parent="Control/HBoxContainer" instance=ExtResource( 20 )]
+margin_left = 1521.0
+margin_right = 1901.0
+margin_bottom = 214.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+good = "cotton"
+
+[node name="GoodButton6" parent="Control/HBoxContainer" instance=ExtResource( 20 )]
+margin_left = 1901.0
+margin_right = 2281.0
+margin_bottom = 214.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+good = "saltpeter"
+
+[node name="GoodButton7" parent="Control/HBoxContainer" instance=ExtResource( 20 )]
+margin_left = 2281.0
+margin_right = 2662.0
+margin_bottom = 214.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+good = "wood"
+
+[node name="HBoxContainer2" type="GridContainer" parent="Control"]
+margin_top = 412.0
+margin_right = 2660.0
+margin_bottom = 820.0
+custom_constants/vseparation = -22
+custom_constants/hseparation = 0
+columns = 7
+
+[node name="GoodButton13" parent="Control/HBoxContainer2" instance=ExtResource( 20 )]
+margin_right = 380.0
+margin_bottom = 215.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+good = "grain"
+
+[node name="GoodButton14" parent="Control/HBoxContainer2" instance=ExtResource( 20 )]
+margin_left = 380.0
+margin_right = 760.0
+margin_bottom = 215.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+good = "beasts"
+
+[node name="GoodButton15" parent="Control/HBoxContainer2" instance=ExtResource( 20 )]
+margin_left = 760.0
+margin_right = 1140.0
+margin_bottom = 215.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+good = "furniture"
+
+[node name="GoodButton16" parent="Control/HBoxContainer2" instance=ExtResource( 20 )]
+margin_left = 1140.0
+margin_right = 1520.0
+margin_bottom = 215.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+good = "alcohol"
+
+[node name="GoodButton17" parent="Control/HBoxContainer2" instance=ExtResource( 20 )]
+margin_left = 1520.0
+margin_right = 1900.0
+margin_bottom = 215.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+good = "clothes"
+
+[node name="GoodButton19" parent="Control/HBoxContainer2" instance=ExtResource( 20 )]
+margin_left = 1900.0
+margin_right = 2280.0
+margin_bottom = 215.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+good = "gas"
+
+[node name="GoodButton20" parent="Control/HBoxContainer2" instance=ExtResource( 20 )]
+margin_left = 2280.0
+margin_right = 2660.0
+margin_bottom = 215.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+good = "el_appliances"
+
+[node name="GoodButton21" parent="Control/HBoxContainer2" instance=ExtResource( 20 )]
+margin_top = 193.0
+margin_right = 380.0
+margin_bottom = 408.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+good = "cars"
+
+[node name="GoodButton22" parent="Control/HBoxContainer2" instance=ExtResource( 20 )]
+visible = false
+margin_left = 760.0
+margin_top = 210.0
+margin_right = 1140.0
+margin_bottom = 420.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+good = "telegraphs"
+
+[node name="GoodButton23" parent="Control/HBoxContainer2" instance=ExtResource( 20 )]
+margin_left = 380.0
+margin_top = 193.0
+margin_right = 760.0
+margin_bottom = 408.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+good = "phone"
+
+[node name="GoodButton24" parent="Control/HBoxContainer2" instance=ExtResource( 20 )]
+margin_left = 760.0
+margin_top = 193.0
+margin_right = 1140.0
+margin_bottom = 408.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+good = "radio"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Control"]
+margin_top = 198.0
+margin_right = 2282.0
+margin_bottom = 412.0
 custom_constants/separation = 0
 
-[node name="Label" type="Label" parent="ScrollContainer2/VBoxContainer"]
-margin_right = 428.0
-margin_bottom = 48.0
-custom_fonts/font = SubResource( 3 )
-text = "Запасы"
-align = 1
+[node name="GoodButton8" parent="Control/HBoxContainer3" instance=ExtResource( 20 )]
+margin_right = 380.0
+margin_bottom = 214.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+good = "steel"
 
-[node name="Button" type="Button" parent="ScrollContainer2/VBoxContainer"]
-visible = false
-margin_top = 48.0
-margin_right = 428.0
-margin_bottom = 154.0
-custom_fonts/font = SubResource( 3 )
-text = "Уголь"
-icon = ExtResource( 24 )
-script = ExtResource( 36 )
+[node name="GoodButton9" parent="Control/HBoxContainer3" instance=ExtResource( 20 )]
+margin_left = 380.0
+margin_right = 760.0
+margin_bottom = 214.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+good = "glass"
+
+[node name="GoodButton10" parent="Control/HBoxContainer3" instance=ExtResource( 20 )]
+margin_left = 760.0
+margin_right = 1141.0
+margin_bottom = 214.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+good = "textile"
+
+[node name="GoodButton11" parent="Control/HBoxContainer3" instance=ExtResource( 20 )]
+margin_left = 1141.0
+margin_right = 1521.0
+margin_bottom = 214.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+good = "el_parts"
+
+[node name="GoodButton12" parent="Control/HBoxContainer3" instance=ExtResource( 20 )]
+margin_left = 1521.0
+margin_right = 1901.0
+margin_bottom = 214.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+good = "lumber"
+
+[node name="GoodButton13" parent="Control/HBoxContainer3" instance=ExtResource( 20 )]
+margin_left = 1901.0
+margin_right = 2282.0
+margin_bottom = 214.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+good = "mech_parts"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="Control"]
+margin_left = -2.0
+margin_top = 820.0
+margin_right = 2282.0
+margin_bottom = 1034.0
+custom_constants/separation = 0
+
+[node name="GoodButton18" parent="Control/HBoxContainer5" instance=ExtResource( 20 )]
+margin_right = 380.0
+margin_bottom = 214.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+good = "canned_food"
+
+[node name="GoodButton25" parent="Control/HBoxContainer5" instance=ExtResource( 20 )]
+margin_left = 380.0
+margin_right = 761.0
+margin_bottom = 214.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+good = "rifles"
+
+[node name="GoodButton26" parent="Control/HBoxContainer5" instance=ExtResource( 20 )]
+margin_left = 761.0
+margin_right = 1141.0
+margin_bottom = 214.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+good = "ammo"
+
+[node name="GoodButton27" parent="Control/HBoxContainer5" instance=ExtResource( 20 )]
+margin_left = 1141.0
+margin_right = 1522.0
+margin_bottom = 214.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+good = "artillery"
+
+[node name="GoodButton28" parent="Control/HBoxContainer5" instance=ExtResource( 20 )]
+margin_left = 1522.0
+margin_right = 1903.0
+margin_bottom = 214.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+good = "plane"
+
+[node name="GoodButton29" parent="Control/HBoxContainer5" instance=ExtResource( 20 )]
+margin_left = 1903.0
+margin_right = 2284.0
+margin_bottom = 214.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+good = "tanks"

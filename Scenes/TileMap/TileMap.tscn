@@ -1,4 +1,4 @@
-[gd_scene load_steps=109 format=2]
+[gd_scene load_steps=116 format=2]
 
 [ext_resource path="res://Scenes/TileMap/TileMap.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/TileMap/Карта региона.png" type="Texture" id=2]
@@ -108,6 +108,13 @@
 [ext_resource path="res://Graphics/Sprites/Provinces/Суеция/Паневежис.png" type="Texture" id=106]
 [ext_resource path="res://Graphics/Sprites/Provinces/Суеция/Клайпеда.png" type="Texture" id=107]
 [ext_resource path="res://Graphics/Sprites/Provinces/Суеция/Каунас.png" type="Texture" id=108]
+[ext_resource path="res://Graphics/Sprites/Provinces/Адамантия/Тамань.png" type="Texture" id=109]
+[ext_resource path="res://Graphics/Sprites/Provinces/Насардия/Сегед.png" type="Texture" id=110]
+[ext_resource path="res://Graphics/Sprites/Provinces/Кракожия/Нови-Сад.png" type="Texture" id=111]
+[ext_resource path="res://Graphics/Sprites/Provinces/Кракожия/Приштина.png" type="Texture" id=112]
+[ext_resource path="res://Graphics/Sprites/Provinces/Баскакия/Трускавец.png" type="Texture" id=113]
+[ext_resource path="res://Graphics/Sprites/Provinces/Баскония/Ахалкалаки.png" type="Texture" id=114]
+[ext_resource path="res://Graphics/Sprites/Provinces/Баскония/Батуми.png" type="Texture" id=115]
 
 [node name="TileMap" type="Node2D"]
 script = ExtResource( 1 )
@@ -206,9 +213,21 @@ texture = ExtResource( 87 )
 position = Vector2( 2311, 2937 )
 texture = ExtResource( 89 )
 
+[node name="Label" parent="Волынский" index="0"]
+margin_left = -416.0
+margin_top = -81.0
+margin_right = 349.0
+margin_bottom = 55.0
+
 [node name="Щепеткова" parent="." instance=ExtResource( 4 )]
 position = Vector2( 2506, 3065 )
 texture = ExtResource( 91 )
+
+[node name="Label" parent="Щепеткова" index="0"]
+margin_left = -347.0
+margin_top = -89.0
+margin_right = 418.0
+margin_bottom = 47.0
 
 [node name="Львов" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1996, 2907 )
@@ -234,9 +253,23 @@ texture = ExtResource( 78 )
 position = Vector2( 1029, 2709 )
 texture = ExtResource( 47 )
 
+[node name="Label" parent="Хмельницкий" index="0"]
+margin_left = -375.0
+margin_top = -56.0
+margin_right = 390.0
+margin_bottom = 80.0
+rect_rotation = 45.0248
+
 [node name="Ивано-Франковск" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1256, 2776 )
 texture = ExtResource( 77 )
+
+[node name="Label" parent="Ивано-Франковск" index="0"]
+margin_left = -375.0
+margin_top = -34.0
+margin_right = 390.0
+margin_bottom = 102.0
+rect_rotation = -41.8436
 
 [node name="Ужгород" parent="." instance=ExtResource( 4 )]
 position = Vector2( 746, 2828 )
@@ -261,6 +294,13 @@ texture = ExtResource( 53 )
 [node name="Зборов" parent="." instance=ExtResource( 4 )]
 position = Vector2( 831, 2486 )
 texture = ExtResource( 46 )
+
+[node name="Label" parent="Зборов" index="0"]
+margin_left = -376.0
+margin_top = -67.0
+margin_right = 389.0
+margin_bottom = 69.0
+rect_rotation = 47.5122
 
 [node name="Старокостантинов" parent="." instance=ExtResource( 4 )]
 position = Vector2( 762, 2117 )
@@ -290,6 +330,12 @@ texture = ExtResource( 62 )
 position = Vector2( 1098, 1257 )
 texture = ExtResource( 72 )
 
+[node name="Label" parent="Катовице" index="0"]
+margin_left = -420.0
+margin_top = -84.0
+margin_right = 345.0
+margin_bottom = 52.0
+
 [node name="Ченстохова" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1305, 1538 )
 texture = ExtResource( 60 )
@@ -307,8 +353,12 @@ position = Vector2( 1602, 2193 )
 texture = ExtResource( 50 )
 
 [node name="Донецк" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1485, 1278 )
+position = Vector2( 1589, 1300 )
 texture = ExtResource( 63 )
+
+[node name="Сегед" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1374, 1195 )
+texture = ExtResource( 110 )
 
 [node name="Стецки" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1299, 1307 )
@@ -350,9 +400,22 @@ texture = ExtResource( 40 )
 position = Vector2( 566, 1117 )
 texture = ExtResource( 97 )
 
+[node name="Label" parent="Грубешов" index="0"]
+margin_left = -342.0
+margin_top = 4.0
+margin_right = 423.0
+margin_bottom = 140.0
+
 [node name="Павлоград" parent="." instance=ExtResource( 4 )]
 position = Vector2( 884, 1375 )
 texture = ExtResource( 36 )
+
+[node name="Label" parent="Павлоград" index="0"]
+margin_left = -343.0
+margin_top = -54.0
+margin_right = 422.0
+margin_bottom = 82.0
+rect_rotation = -48.122
 
 [node name="Вилькомир" parent="." instance=ExtResource( 4 )]
 position = Vector2( 964, 1023 )
@@ -363,8 +426,12 @@ position = Vector2( 635, 1503 )
 texture = ExtResource( 39 )
 
 [node name="Бердичев" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1760, 770 )
+position = Vector2( 1744, 650 )
 texture = ExtResource( 67 )
+
+[node name="Тамань" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1818, 861 )
+texture = ExtResource( 109 )
 
 [node name="Горлица" parent="." instance=ExtResource( 4 )]
 position = Vector2( 2055, 566 )
@@ -387,10 +454,10 @@ position = Vector2( 1940, 1043 )
 texture = ExtResource( 66 )
 
 [node name="Label" parent="Яремче" index="0"]
-margin_left = -662.0
-margin_top = 105.0
-margin_right = 103.0
-margin_bottom = 241.0
+margin_left = -385.0
+margin_top = -50.0
+margin_right = 380.0
+margin_bottom = 86.0
 rect_rotation = -77.0
 
 [node name="Area2D" parent="Яремче" index="1"]
@@ -400,9 +467,21 @@ rotation = -1.3439
 position = Vector2( 1905, 1294 )
 texture = ExtResource( 65 )
 
+[node name="Label" parent="Коростень" index="0"]
+margin_left = -330.0
+margin_top = -42.0
+margin_right = 435.0
+margin_bottom = 94.0
+
 [node name="Должанск" parent="." instance=ExtResource( 4 )]
 position = Vector2( 2163, 787 )
 texture = ExtResource( 68 )
+
+[node name="Label" parent="Должанск" index="0"]
+margin_left = -415.0
+margin_top = -107.0
+margin_right = 350.0
+margin_bottom = 29.0
 
 [node name="Покровск" parent="." instance=ExtResource( 4 )]
 position = Vector2( 2047, 379 )
@@ -432,6 +511,12 @@ texture = ExtResource( 45 )
 position = Vector2( 2738, 698 )
 texture = ExtResource( 30 )
 
+[node name="Label" parent="Макеевка" index="0"]
+margin_left = -393.0
+margin_top = -108.0
+margin_right = 372.0
+margin_bottom = 28.0
+
 [node name="Желув" parent="." instance=ExtResource( 4 )]
 position = Vector2( 3019, 601 )
 texture = ExtResource( 34 )
@@ -441,15 +526,19 @@ position = Vector2( 3058, 354 )
 texture = ExtResource( 29 )
 
 [node name="Вручий" parent="." instance=ExtResource( 4 )]
-position = Vector2( 3416, 450 )
+position = Vector2( 3396, 574 )
 texture = ExtResource( 32 )
+
+[node name="Трускавец" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3475, 330 )
+texture = ExtResource( 113 )
 
 [node name="Любич" parent="." instance=ExtResource( 4 )]
 position = Vector2( 3653, 752 )
 texture = ExtResource( 85 )
 
 [node name="Подолье" parent="." instance=ExtResource( 4 )]
-position = Vector2( 3348, 771 )
+position = Vector2( 3349, 770 )
 texture = ExtResource( 84 )
 
 [node name="Теребовль" parent="." instance=ExtResource( 4 )]
@@ -473,8 +562,16 @@ position = Vector2( 3977, 1429 )
 texture = ExtResource( 95 )
 
 [node name="Надворная" parent="." instance=ExtResource( 4 )]
-position = Vector2( 3859, 921 )
+position = Vector2( 3748, 1046 )
 texture = ExtResource( 27 )
+
+[node name="Нови-Сад" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4001, 1085 )
+texture = ExtResource( 111 )
+
+[node name="Приштина" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3913, 785 )
+texture = ExtResource( 112 )
 
 [node name="Рутивль" parent="." instance=ExtResource( 4 )]
 position = Vector2( 3436, 1647 )
@@ -493,12 +590,20 @@ position = Vector2( 3468, 2067 )
 texture = ExtResource( 18 )
 
 [node name="Перемышль" parent="." instance=ExtResource( 4 )]
-position = Vector2( 3721, 2111 )
+position = Vector2( 3574, 2193 )
 texture = ExtResource( 17 )
 
+[node name="Ахалкалаки" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3851, 2095 )
+texture = ExtResource( 114 )
+
 [node name="Батые" parent="." instance=ExtResource( 4 )]
-position = Vector2( 3485, 2577 )
+position = Vector2( 3563, 2493 )
 texture = ExtResource( 19 )
+
+[node name="Батуми" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3476, 2701 )
+texture = ExtResource( 115 )
 
 [node name="Брзежаны" parent="." instance=ExtResource( 4 )]
 position = Vector2( 3968, 2490 )
@@ -551,4 +656,15 @@ texture = ExtResource( 106 )
 [connection signal="mouse_entered" from="Яремче/Area2D" to="Яремче" method="mouse_entered"]
 [connection signal="mouse_exited" from="Яремче/Area2D" to="Яремче" method="mouse_exited"]
 
+[editable path="Волынский"]
+[editable path="Щепеткова"]
+[editable path="Хмельницкий"]
+[editable path="Ивано-Франковск"]
+[editable path="Зборов"]
+[editable path="Катовице"]
+[editable path="Грубешов"]
+[editable path="Павлоград"]
 [editable path="Яремче"]
+[editable path="Коростень"]
+[editable path="Должанск"]
+[editable path="Макеевка"]

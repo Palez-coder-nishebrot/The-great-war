@@ -6,7 +6,7 @@
 [sub_resource type="Resource" id=1]
 script = ExtResource( 2 )
 name_of_effect = "Производительность"
-power = 10
+power = 5
 target = "military_factories"
 
 [sub_resource type="Resource" id=2]
@@ -18,5 +18,5 @@ target = "factories"
 [resource]
 script = ExtResource( 1 )
 cotegory = ""
-name_of_technology = "Военная промышленность"
+name_of_technology = "Массовое производство"
 list_of_effects = [ SubResource( 1 ), SubResource( 2 ) ]

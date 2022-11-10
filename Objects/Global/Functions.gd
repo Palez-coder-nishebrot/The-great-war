@@ -70,7 +70,7 @@ func create_party(player, ideology, ideologies_object):
 	
 
 func pay_taxes(player, object, rent, tipe_of_tax):
-	var perc: float = float(player.economy[tipe_of_tax]) / 100.0
+	var perc: float = float(player.get(tipe_of_tax) / 100.0)
 	var tax: float = float(object.income) * perc
 	#print(tax)
 	
@@ -100,12 +100,13 @@ func buy_good_on_global_market(good, quanity, player):
 	player.import_of_goods[good] += quanity
 	
 	player.budget += tariffs
-	player.accounting["Пошлины"] += tariffs
+	player.accounting["tariffs"] += tariffs
+	
 	return price + tariffs
 
 
 func check_tariffs(price, player):
-	return float(price) / 100.0 * player.economy["Пошлины"]
+	return price * (float(player.tariffs) / 100)
 
 
 func check_good_on_local_market(good, quanity, local_market):
@@ -114,7 +115,7 @@ func check_good_on_local_market(good, quanity, local_market):
 
 func buy_good_on_local_market(object, good, quanity, local_market):
 	if good == "radio":
-		object.province.player.radio_net += 1
+		object.province.player.radio_net += quanity
 	
 	local_market[good] = local_market[good] - quanity
 	object.money -= GlobalMarket.prices_of_goods[good] * quanity

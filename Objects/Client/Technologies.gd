@@ -31,6 +31,12 @@ var client: Object
 
 var research_time: int = 0
 
+
+func _init(client):
+	self.client = client
+	set_technologies()
+
+
 func set_technologies():
 	set_cotegories(MILITARY_TECHNOLOGIES_FILES, "MilitaryTechnologies")
 	set_cotegories(ECONOMIC_TECHNOLOGIES_FILES, "EconomyTechnologies")
@@ -62,12 +68,12 @@ func start_research(technology):
 
 
 func activate_effects():
+	client.emit_signal("research_completed", researching_technology)
+	
 	for effect in researching_technology.list_of_effects:
 		effect.activate_effects(client)
 	update_ready_technology(researching_technology)
 	
-	if Players.player == client:
-		client.window_research_end.update_information(researching_technology)
 	researching_technology = null
 
 
@@ -78,3 +84,12 @@ func update_ready_technology(technology):
 	if count + 1 != variable.size():
 		variable[count + 1].ready_for_researching = true
 	technology.ready_for_researching = false
+
+
+func update_middle_value_education_of_population():
+	var education = 0
+	for i in client.list_of_soc_classes:
+		education += i.education
+	education = education / client.population
+	client.middle_value_education = education
+	

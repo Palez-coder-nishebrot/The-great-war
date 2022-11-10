@@ -6,12 +6,6 @@ var list_of_values: Array = [
 	"economic_policy",
 	"trade_policy",
 	"foreign_policy",
-	"cost_of_factories",
-	"cost_of_infrastructure",
-	"subsidization",
-	"income_of_fabricants",
-	"max_of_tarrifs",
-	"min_of_tarrifs",
 ]
 
 var client
@@ -67,8 +61,16 @@ func set_party(ideology):
 	
 
 func change_country():
-	for i in list_of_values:
-		set(client, get(i))
+	client.economic_policy = economic_policy
+	client.trade_policy = trade_policy
+	client.foreign_policy = foreign_policy
+	
+	client.cost_of_factories      = cost_of_factories
+	client.cost_of_infrastructure = cost_of_infrastructure
+	client.subsidization          = subsidization
+	client.income_of_capitalists   = income_of_capitalists
+	client.max_tariffs            = max_tariffs
+	client.min_tariffs            = min_tariffs
 	check_subsidization()
 
 func check_subsidization():

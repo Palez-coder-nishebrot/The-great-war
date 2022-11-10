@@ -1,0 +1,30 @@
+[gd_resource type="Resource" load_steps=7 format=2]
+
+[ext_resource path="res://Resources/Factories/Factory.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Factories/Raw.gd" type="Script" id=2]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 2 )
+good = "coal"
+quantity = 0.2
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 2 )
+good = "iron"
+quantity = 0.4
+
+[sub_resource type="Resource" id=3]
+script = ExtResource( 2 )
+good = "el_appliances"
+quantity = 0.4
+
+[sub_resource type="Resource" id=4]
+script = ExtResource( 2 )
+good = "glass"
+quantity = 0.2
+
+[resource]
+script = ExtResource( 1 )
+name_of_factory = "Radio_factory"
+raw = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ]
+good = "radio"

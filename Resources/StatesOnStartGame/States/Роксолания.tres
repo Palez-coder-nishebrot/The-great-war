@@ -5,8 +5,24 @@
 [resource]
 script = ExtResource( 1 )
 name_of_state = "Roscolany"
-list_of_regions = PoolStringArray( "Пярну", "Тарту", "Пярну", "Раквере", "Вильянди", "Силламяэ", "Курессааре", "Хаапсалу" )
+list_of_regions = PoolStringArray( "Пярну", "Тарту", "Пярну", "Раквере", "Вильянди", "Силламяэ", "Курессааре", "Хаапсалу", "Алитус", "Каунас", "Клайпеда", "Паневежис" )
 form_of_goverment = "monarchy"
-ideology = "populists"
+ideology = "conservators"
 national_color = Color( 0.427451, 0.580392, 0.517647, 1 )
 national_id = ""
+popularity_of_parties = {
+"communists": 5,
+"conservators": 45,
+"fascists": 0,
+"liberals": 30,
+"libertarians": 5,
+"socialists": 15
+}
+names_of_parties = {
+"communists": "",
+"conservators": "",
+"fascists": "",
+"liberals": "",
+"libertarians": "",
+"socialists": ""
+}

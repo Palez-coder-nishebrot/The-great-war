@@ -21,15 +21,12 @@ func update_information():
 			factory = null
 			return
 		else:
-			if factory.tipe == "factory":
-				show_information_about_factory()
-			else:
-				show_information_about_military_factory()
+			show_information_about_factory()
 
 
 func show_information_about_factory():
 	
-	name_label.text = Players.goods_to_factory[factory.good]
+	name_label.text = factory.name_of_factory
 	budget_label.text = "Бюджет: " + str(factory.money)
 	income_label.text = "Доходы: " + str(factory.income)
 	show_resourses()
@@ -52,9 +49,10 @@ func show_quantity_of_workers():
 
 
 func show_expenses():
-	expenses_label.text = "Расходы(" + str(factory.expenses_workers + factory.expenses_purchase) + "):" + "\n"
+	expenses_label.text = "Расходы(" + str(factory.get_expenses()) + "):" + "\n"
 	expenses_label.text += "*Зарплаты рабочим:" + str(factory.expenses_workers) + "\n"
-	expenses_label.text += "*Закупка сырья:"    + str(factory.expenses_purchase)
+	expenses_label.text += "*Закупка сырья:"    + str(factory.expenses_purchase) + "\n"
+	expenses_label.text += "*Закупка товаров для завода:" + str(factory.expenses_mechanisms)
 
 
 func show_resourses():
@@ -71,12 +69,15 @@ func show_resourses():
 func show_bonuses_for_production():
 	#var manager = factory.province.player.get_parent().factory_manager
 	production_label.text = "Бонус к выпуску продукции от: \n"
-	production_label.text += "*Сырье, производимое в провинции: +" + str(factory.get_bonuses_for_production_from_province() * 10) + "% \n"
+	production_label.text += "*Сырье, производимое в провинции: +" + str((factory.get_bonuses_for_production_from_province() - 1) * 100) + "% \n"
 	#production_label.text += "*Базовый бонус: x" + str(factory.check_based_bonuses_for_production()) + "\n"
-	production_label.text += "*Промышленники: +" + str(factory.province.player.economic_bonuses.production_of_factories * 10) + "% \n"
+	production_label.text += "*Промышленники: +0%"  + "\n"#+ str(factory.province.player.economic_bonuses.production_of_factories * 10) + "% \n"
+	production_label.text += "*Производительность фабрик: +" + str((factory.province.player.economic_bonuses.production_of_factories - 1) * 100) + "% \n"
 	
 	if factory.province.player.economic_bonuses.goods_from_technologies.has(factory.good):
-		production_label.text += "*Технологии: +" + str(factory.province.player.economic_bonuses.goods_from_technologies[factory.good]) + "% \n"
-
+		production_label.text += "*Выпуск данной продукции: +" + str((factory.province.player.economic_bonuses.goods_from_technologies[factory.good] - 1) * 100) + "% \n"
+	production_label.text += "*Железные дороги: +" + str((factory.province.get_bonus_of_production().production_of_factory - 1) * 100) + "%"
+	
+	
 func exit():
 	visible = false

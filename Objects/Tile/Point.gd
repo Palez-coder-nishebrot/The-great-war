@@ -2,7 +2,7 @@ extends Sprite
 
 class_name Region
 
-const max_of_buildings: int = 5
+const max_of_buildings: int = 8
 
 var list_of_lines:              Array      = []
 
@@ -11,7 +11,7 @@ var list_of_buildings:          Array      = []
 var list_of_units:              Array      = []
 var list_of_villages:           Array      = []
 var list_of_households:         Array      = []
-var goods_of_factories_in_province: Array  = []
+var production_of_goods_in_province: Array  = []
 
 var name_of_tile:        String
 var landscape:           String = "Степь"
@@ -50,12 +50,15 @@ func input(viewport, event, shape_idx):
 				
 				elif Players.player.information.showing_map == 0 or Players.player.information.showing_map == 2:
 					Players.player.window_province.update_information(self, "province")
-					#print(population_manager.needs.list_of_needs[3].name_of_good)
+#					for i in population_manager.needs.list_of_needs:
+#						print(i.quantity)
+					#print(population_manager.needs.list_of_needs)
+					#print(production_of_goods_in_province)
 				
 				else:
 					choose_units()
-			else:
-				Players.player.window_province.update_information(self, "province")
+#			else:
+#				Players.player.window_province.update_information(self, "province")
 		
 		elif event.button_index == BUTTON_RIGHT:
 			if Players.player.get_groups().has("Human") and Players.player.information.showing_map == true:
@@ -110,14 +113,15 @@ func mouse_exited():
 func build_building(name_of_building, cost):
 	player.budget -= cost
 	
-	var factory = load("res://Objects/Building/Factory.gd").new()
-	factory.name_of_factory = name_of_building
-	factory.good = GlobalMarket.find_building_in_list(name_of_building)
-	factory.purchase = GlobalMarket.goods[factory.good]
+	var factory_ex = player.economic_bonuses.find_factory(name_of_building)
+	var factory = Factory.new()
+	factory.name_of_factory = factory_ex.name_of_factory
+	factory.good = factory_ex.good
+	factory.purchase = factory_ex.purchase
+	
 	factory.province = self
 	factory.in_construction = true
 	factory.start_build_factory()
-	factory.province.workplaces += 1
 	
 	list_of_buildings.append(factory)
 	
@@ -186,53 +190,10 @@ func show_units():
 
 
 func get_bonus_of_production():
-	var production_of_factory = 0.0
-	var production_of_mines   = 0.0
-	var production_of_farms   = 0.0
-	match railways.level:
-		1: 
-			production_of_factory += 0.1
-			production_of_mines   += 0.2
-			production_of_farms   += 0.1
-		2:
-			production_of_factory += 0.2
-			production_of_mines   += 0.4
-			production_of_farms   += 0.3
-		3:
-			production_of_factory += 0.3
-			production_of_mines   += 0.6
-			production_of_farms   += 4.5
-		4:
-			production_of_factory += 0.4
-			production_of_mines   += 0.8
-			production_of_farms   += 0.6
-		5:
-			production_of_factory += 5.0
-			production_of_mines   += 1.0
-			production_of_farms   += 0.6
-			
-	match infrastructure.level:
-		1: 
-			production_of_factory += 0.2
-			production_of_mines   += 0.4
-			production_of_farms   += 0.3
-		2:
-			production_of_factory += 0.4
-			production_of_mines   += 0.8
-			production_of_farms   += 0.6
-		3:
-			production_of_factory += 0.6
-			production_of_mines   += 0.1
-			production_of_farms   += 0.8
-		4:
-			production_of_factory += 0.8
-			production_of_mines   += 2.0
-			production_of_farms   += 1.0
-		5:
-			production_of_factory += 1.0
-			production_of_mines   += 0.2
-			production_of_farms   += 0.1
-			
+	var production_of_factory = (railways.level * 0.1) + 1.0
+	var production_of_mines   = (railways.level * 0.05) + 1.0
+	var production_of_farms   = (railways.level * 0.05) + 1.0
+	
 	return {
 		production_of_factory = production_of_factory,
 		production_of_mines   = production_of_mines,
@@ -241,18 +202,16 @@ func get_bonus_of_production():
 
 
 func get_goods_in_province():
-	goods_of_factories_in_province.clear()
+	production_of_goods_in_province.clear()
 	for i in list_of_buildings:
-		if i.tipe != "process":
-			goods_of_factories_in_province.append(i.good)
+		if i.in_construction == false:
+			production_of_goods_in_province.append(i.good)
 	
 	var res = resources.duplicate().keys()
-	for i in list_of_villages:
-		res.append_array(i.resources.keys())
 		
 	for i in res:
-		if not goods_of_factories_in_province.has(i):
-			goods_of_factories_in_province.append(i)
+		if not production_of_goods_in_province.has(i):
+			production_of_goods_in_province.append(i)
 
 
 func get_factories_in_province():
@@ -264,58 +223,39 @@ func get_factories_in_province():
 
 func allocate_workers_to_factories():
 	if list_of_buildings.size() != 0:
+		population_manager.quantity_of_unemployed = 0
 		var reserve_of_workers = 0.0 
-		var workers = stepify(float(population_manager.list_of_factory_workers.size()) / list_of_buildings.size(), 0.01) #0.66
-		for factory in list_of_buildings:
-			if factory.max_employed_number < workers:
-				reserve_of_workers += workers - factory.max_employed_number
-				factory.quantity_of_workers = factory.max_employed_number
-			
-			elif factory.max_employed_number > workers and reserve_of_workers > 0.0:
-				factory.quantity_of_workers = workers
-				var free_workplaces = factory.max_employed_number - factory.quantity_of_workers
-				reserve_of_workers -= free_workplaces
-				factory.quantity_of_workers += free_workplaces
-			
-			else:
-				factory.quantity_of_workers = workers
-		reserve_of_workers = check_first_factory(list_of_buildings[0], reserve_of_workers)
-		population_manager.quantity_of_unemployed = reserve_of_workers
+		var workers = population_manager.quantity_of_factory_workers
 		
+		var r =  stepify(population_manager.quantity_of_factory_workers / list_of_buildings.size(), 0.01)
+		var reserve = 0
+		#stepify(float(population_manager.list_of_factory_workers.size()) / list_of_buildings.size(), 0.01) #0.66
+		var list = check_factories()
+		for factory in list:
+			factory.quantity_of_workers = r + reserve
+			
+			if r > factory.max_employed_number:
+				factory.quantity_of_workers = factory.max_employed_number
+				reserve += r - factory.max_employed_number
+			elif reserve > factory.max_employed_number - factory.quantity_of_workers:
+				factory.quantity_of_workers = factory.max_employed_number
+				reserve -= factory.max_employed_number
+			else:
+				factory.quantity_of_workers += reserve
+				reserve = 0
+			workers -= factory.quantity_of_workers
+		population_manager.quantity_of_unemployed = workers
+
 	else:
 		population_manager.quantity_of_unemployed = population_manager.list_of_factory_workers.size()
 
 
-func check_first_factory(factory, reserve_of_workers):
-	var free_workplaces = factory.max_employed_number - factory.quantity_of_workers
-	
-	if reserve_of_workers > free_workplaces:
-		reserve_of_workers -= free_workplaces
-		factory.quantity_of_workers += free_workplaces
-	else:
-		factory.quantity_of_workers += reserve_of_workers
-		reserve_of_workers = 0
-	
-	return reserve_of_workers
-
-#func get_quantity_of_unemployed():
-#	if workplaces < population_manager.list_of_factory_workers.size():
-#		var quantity_of_unemployed = population_manager.list_of_factory_workers.size() - workplaces
-#		population_manager.quantity_of_unemployed = quantity_of_unemployed
-#		player.quantity_of_unemployed += quantity_of_unemployed
-#
-#	elif workplaces == population_manager.list_of_factory_workers.size():
-#		population_manager.quantity_of_unemployed = 0
-#
-#	elif workplaces > population_manager.list_of_factory_workers.size():
-#		population_manager.quantity_of_unemployed = 0
-#		free_workplaces = (workplaces - list_of_buildings.size()) - population_manager.list_of_factory_workers.size()
-#		#breakpoint
-#
-#	# get_workers_for_additional_jobs()
-#	var additional_jobs = workplaces - list_of_buildings.size()
-#	population_manager.workers_for_additional_jobs = additional_jobs
-#	# get_workers_for_additional_jobs()
+func check_factories():
+	var list = []
+	for i in list_of_buildings:
+		if i.closed == false:
+			list.append(i)
+	return list
 
 
 func set_collision_from_sprite(collisions):

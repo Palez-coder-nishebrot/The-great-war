@@ -118,26 +118,6 @@ const list_of_players_on_start: Dictionary = {
 
 
 
-const accounting: Dictionary = {
-	"Субсидии":             0,
-	"Военное_производство": 0,
-	
-	"Образование":          0,
-	"Здравохранение":       0,
-	"Пенсии":               0,
-	"Пособия_по_безработице":0,
-	"Снабжение_армии":       0,
-	
-	"Пошлины": 0,
-	"Налоги_на_бедных":     0,
-	"Налоги_на_богатых":    0,
-	"Продажа_драгметаллов": 0,
-	"Производство":         0,
-	"Закупка_сырья_для_ЖД": 0,
-}
-
-
-
 const goods_to_factory: Dictionary = {
 	"steel":           "Steel_plant",
 	"textile":           "Textile_factory",
@@ -163,36 +143,37 @@ const goods_to_factory: Dictionary = {
 
 
 const sprites_of_goods: Dictionary = {
-	"coal":     "res://Graphics/Sprites/Goods/Coal.png",
-	"iron":    "res://Graphics/Sprites/Goods/Iron.png",
-	"oil":     "res://Graphics/Sprites/Goods/Oil.png",
-	"rubber":    "res://Graphics/Sprites/Goods/Rubber.png",
-	"cotton":    "res://Graphics/Sprites/Goods/Cotton.png",
-	"grain":     "res://Graphics/Sprites/Goods/Seed.png",
-	"beasts":      "res://Graphics/Sprites/Goods/Cattle.png",
-	"saltpeter":   "res://Graphics/Sprites/Goods/Nitrate.png",
-	"wood": "res://Graphics/Sprites/Goods/Wood.png",
+	"coal":     "res://Graphics/Sprites/NewSpritesOfGoods/Coal.png",
+	"iron":    "res://Graphics/Sprites/NewSpritesOfGoods/Iron.png",
+	"oil":     "res://Graphics/Sprites/NewSpritesOfGoods/Oil.png",
+	"rubber":    "res://Graphics/Sprites/NewSpritesOfGoods/Rubber.png",
+	"cotton":   "res://Graphics/Sprites/NewSpritesOfGoods/Cotton.png",
+	"grain":    "res://Graphics/Sprites/NewSpritesOfGoods/Grain.png",
+	"beasts":      "res://Graphics/Sprites/NewSpritesOfGoods/Cattle.png",
+	"saltpeter":   "res://Graphics/Sprites/NewSpritesOfGoods/Nitrate.png",
+	"wood":"res://Graphics/Sprites/NewSpritesOfGoods/Wood.png",
 	
-	"steel":           "res://Graphics/Sprites/Goods/Steel.png",
-	"glass":          "res://Graphics/Sprites/Goods/Glass.png",
-	"textile":           "res://Graphics/Sprites/Goods/Fabric.png",
-	"el_parts": "res://Graphics/Sprites/Goods/Electric parts.png",
+	"steel":           "res://Graphics/Sprites/NewSpritesOfGoods/Steel.png",
+	"glass":          "res://Graphics/Sprites/NewSpritesOfGoods/Glass.png",
+	"textile":           "res://Graphics/Sprites/NewSpritesOfGoods/Fabric.png",
+	"el_parts": "res://Graphics/Sprites/NewSpritesOfGoods/Electric parts.png",
+	"mech_parts": "res://Graphics/Sprites/NewSpritesOfGoods/Mech parts.png",
 	#"Удобрения":       "res://Graphics/Sprites/Goods/Fertilizer.png",
-	"lumber":   "res://Graphics/Sprites/Goods/Lumber.png",
+	"lumber":   "res://Graphics/Sprites/NewSpritesOfGoods/Lumber.png",
 	
-	"cars":      "res://Graphics/Sprites/Goods/Car.png",
+	"cars":      "res://Graphics/Sprites/NewSpritesOfGoods/Cars.png",
 	"telegraphs":       "res://Graphics/Sprites/Goods/Telegraph.png",
-	"phone":        "res://Graphics/Sprites/Goods/Phone.png",
-	"radio":           "res://Graphics/Sprites/Goods/Radio.png",
-	"el_appliances":  "res://Graphics/Sprites/Goods/El-appliances.png",
+	"phone":        "res://Graphics/Sprites/NewSpritesOfGoods/Phone.png",
+	"radio":           "res://Graphics/Sprites/NewSpritesOfGoods/Radio.png",
+	"el_appliances":  "res://Graphics/Sprites/NewSpritesOfGoods/El_appliances.png",
 	
-	"furniture":          "res://Graphics/Sprites/Goods/Furniture.png",
-	"alcohol":        "res://Graphics/Sprites/Goods/Alhohol.png",
-	"clothes":          "res://Graphics/Sprites/Goods/Clothes.png",
-	"canned_food":        "res://Graphics/Sprites/Goods/Canned food.png",
-	"gas":         "res://Graphics/Sprites/Goods/Gas.png",
-	"tabaco":           "res://Graphics/Sprites/Goods/Tabaco.png",
-	"tea":             "res://Graphics/Sprites/Goods/Tea.png",
+	"furniture":          "res://Graphics/Sprites/NewSpritesOfGoods/Furniture.png",
+	"alcohol":       "res://Graphics/Sprites/NewSpritesOfGoods/Alcohol.tga",
+	"clothes":          "res://Graphics/Sprites/NewSpritesOfGoods/Clothes.png",
+	"canned_food":        "res://Graphics/Sprites/NewSpritesOfGoods/Canned food.png",
+	"gas":         "res://Graphics/Sprites/NewSpritesOfGoods/Gas.png",
+#	"tabaco":           "res://Graphics/Sprites/Goods/Tabaco.png",
+#	"tea":             "res://Graphics/Sprites/Goods/Tea.png",
 	#"Кофе":            "res://Graphics/Sprites/Goods/Coffee.png", 
 	#"Обогреватели":  "res://Graphics/Sprites/Goods/Coffee.png", 
 	
@@ -200,7 +181,7 @@ const sprites_of_goods: Dictionary = {
 	"ammo":          "res://Graphics/Sprites/Goods/Ammunition.png",
 	"machine_guns":            "res://Graphics/Sprites/Goods/Machine gun.png",
 	"artillery":          "res://Graphics/Sprites/Goods/Artillery.png",
-	"plane":            "res://Graphics/Sprites/Goods/Airplane.png",
+	"plane":            "res://Graphics/Sprites/NewSpritesOfGoods/Plane.png",
 	"rifles": "res://Graphics/Sprites/Goods/Bolt-action rifle.png",
 	"armored_cars":         "res://Graphics/Sprites/Goods/Armored car.png",
 	"tanks":               "res://Graphics/Sprites/Goods/Tank.png",
@@ -222,6 +203,7 @@ const output: Dictionary = {
 	"glass":          0,
 	"textile":           0,
 	"el_parts": 0,
+	"mech_parts": 0,
 	"lumber":   0,
 	
 	"cars":      0,

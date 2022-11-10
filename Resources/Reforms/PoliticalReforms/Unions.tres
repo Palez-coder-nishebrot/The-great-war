@@ -1,0 +1,35 @@
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://Resources/Reforms/Reform.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Reforms/ReformEffect.gd" type="Script" id=2]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 2 )
+effect = "Запрещены"
+value = 0
+target = "unions"
+additional_target = "pluralism_growth"
+additional_value = 0
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 2 )
+effect = "Контроллируемые"
+value = 0
+target = "unions"
+additional_target = "pluralism_growth"
+additional_value = 1
+
+[sub_resource type="Resource" id=3]
+script = ExtResource( 2 )
+effect = "Разрешены"
+value = 0
+target = "unions"
+additional_target = "pluralism_growth"
+additional_value = 2
+
+[resource]
+script = ExtResource( 1 )
+effects = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ]
+target = "unions"
+reform = "Профсоюзы"
+level_of_reform = 1

@@ -2,7 +2,11 @@ extends HBoxContainer
 
 var household
 
-var list_education = {false: "Не образованы", true: "Образованы"}
+var list_education = {
+	"Рабочий": 20,
+	"Фабричный рабочий": 50,
+	"Ремесленник": 80,
+}
 
 var list_of_soc_classes: Array = [
 	"Рабочий",
@@ -11,15 +15,8 @@ var list_of_soc_classes: Array = [
 ]
 
 func _ready():
-	$Education.text = list_education[household.education]
 	$SocClass.text = household.soc_class
-
-
-func change_education():
-	household.education = not household.education
 	
-	$Education.text = list_education[household.education]
-
 
 func set_soc_class():
 	var soc_class = household.soc_class
@@ -29,7 +26,7 @@ func set_soc_class():
 	if pos == 3: pos = 0
 	
 	household.soc_class = list_of_soc_classes[pos]
-	
+	household.education = list_education[household.soc_class]
 	_ready()
 
 

@@ -30,6 +30,11 @@ _global_script_classes=[ {
 "path": "res://Objects/Provinces/CollisionPolygons_of_provinces.gd"
 }, {
 "base": "Node",
+"class": "CotegoryReform",
+"language": "GDScript",
+"path": "res://Objects/Client/ReformsManager/CotegoryReform.gd"
+}, {
+"base": "Node",
 "class": "CreateClients",
 "language": "GDScript",
 "path": "res://Objects/Client/CreateClients.gd"
@@ -69,10 +74,20 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Objects/Client/PartiesManager.gd"
 }, {
+"base": "Resource",
+"class": "Party",
+"language": "GDScript",
+"path": "res://Resources/StatesOnStartGame/Party.gd"
+}, {
 "base": "Node",
 "class": "PoliticalParty",
 "language": "GDScript",
 "path": "res://Objects/Party/Party.gd"
+}, {
+"base": "Node",
+"class": "PopulationManager",
+"language": "GDScript",
+"path": "res://Objects/Client/PopulationManager.gd"
 }, {
 "base": "Resource",
 "class": "Prov_saver",
@@ -85,6 +100,11 @@ _global_script_classes=[ {
 "path": "res://Objects/Building/Railways.gd"
 }, {
 "base": "Resource",
+"class": "Raw",
+"language": "GDScript",
+"path": "res://Resources/Factories/Raw.gd"
+}, {
+"base": "Resource",
 "class": "Reform",
 "language": "GDScript",
 "path": "res://Resources/Reforms/Reform.gd"
@@ -94,15 +114,35 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Resources/Reforms/ReformEffect.gd"
 }, {
+"base": "Node",
+"class": "ReformsManager",
+"language": "GDScript",
+"path": "res://Objects/Client/ReformsManager/ReformsManager.gd"
+}, {
 "base": "Sprite",
 "class": "Region",
 "language": "GDScript",
 "path": "res://Objects/Tile/Point.gd"
 }, {
-"base": "Node",
-"class": "ResearchManager",
+"base": "Resource",
+"class": "SavedExpansion",
 "language": "GDScript",
-"path": "res://Objects/Client/ResearchesManager.gd"
+"path": "res://Objects/Provinces/SavedProvince/Expansion.gd"
+}, {
+"base": "Resource",
+"class": "SavedFactory",
+"language": "GDScript",
+"path": "res://Objects/Provinces/SavedProvince/Factory.gd"
+}, {
+"base": "Resource",
+"class": "SavedHousehold",
+"language": "GDScript",
+"path": "res://Objects/Provinces/SavedProvince/Household.gd"
+}, {
+"base": "Resource",
+"class": "SavedRegions",
+"language": "GDScript",
+"path": "res://Objects/Provinces/SavedRegions.gd"
 }, {
 "base": "Resource",
 "class": "StateOnStartGame",
@@ -179,6 +219,7 @@ _global_script_class_icons={
 "CharsOfUnit": "",
 "Client": "",
 "Coll_polygon_saver": "",
+"CotegoryReform": "",
 "CreateClients": "",
 "EconomicBonuses": "",
 "Factory": "",
@@ -187,13 +228,20 @@ _global_script_class_icons={
 "Infrastructure": "",
 "MilitaryBonuses": "",
 "PartiesManager": "",
+"Party": "",
 "PoliticalParty": "",
+"PopulationManager": "",
 "Prov_saver": "",
 "Railways": "",
+"Raw": "",
 "Reform": "",
 "ReformEffect": "",
+"ReformsManager": "",
 "Region": "",
-"ResearchManager": "",
+"SavedExpansion": "",
+"SavedFactory": "",
+"SavedHousehold": "",
+"SavedRegions": "",
 "StateOnStartGame": "",
 "Technologies": "",
 "Technology": "",
@@ -224,6 +272,7 @@ Research="*res://Objects/Global/Research.gd"
 Units="*res://Objects/Global/Units.gd"
 Reforms="*res://Objects/Global/Reforms.gd"
 ManagerDay="*res://Objects/Global/Managers/ManagerDay.gd"
+ProvinceLoader="*res://Objects/Global/ProvinceLoader.gd"
 
 [display]
 

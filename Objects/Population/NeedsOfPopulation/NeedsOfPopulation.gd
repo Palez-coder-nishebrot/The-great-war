@@ -47,10 +47,26 @@ export var needs_of_craftsmen: Dictionary = {
 }
 
 
+export var needs_of_clerks: Dictionary = {
+	"grain":         0.03,
+	"beasts":        0.03,
+	"clothes":       0.0,
+	"furniture":     0.0,
+	"glass":         0.0,
+	"alcohol":       0.0,
+	"el_appliances": 0.01,
+	"radio":         0.02,
+	"phone":         0.02,
+	"gas":           0.01,
+	"cars":          0.01
+}
+
 func return_needs_for_household(soc_class, good):
-	if soc_class == "Рабочий":
+	if soc_class == "Worker":
 		return needs_of_workers[good]
-	elif soc_class == "Фабричный рабочий":
+	elif soc_class == "Proletarian":
 		return needs_of_factory_workers[good]
+	elif soc_class == "Clerk":
+		return needs_of_clerks[good]
 	else:
 		return needs_of_craftsmen[good]

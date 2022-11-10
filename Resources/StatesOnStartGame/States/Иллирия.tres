@@ -7,6 +7,22 @@ script = ExtResource( 1 )
 name_of_state = "Illiry"
 list_of_regions = PoolStringArray( "Львов", "Борка", "Звижень", "Гримайлов", "Болехов" )
 form_of_goverment = "monarchy"
-ideology = "populists"
+ideology = "conservators"
 national_color = Color( 0.282353, 0.352941, 0.603922, 1 )
 national_id = ""
+popularity_of_parties = {
+"communists": 5,
+"conservators": 45,
+"fascists": 0,
+"liberals": 30,
+"libertarians": 5,
+"socialists": 15
+}
+names_of_parties = {
+"communists": "",
+"conservators": "",
+"fascists": "",
+"liberals": "",
+"libertarians": "",
+"socialists": ""
+}

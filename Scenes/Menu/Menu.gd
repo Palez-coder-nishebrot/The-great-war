@@ -2,6 +2,11 @@ extends Node2D
 
 
 func _ready():
+	var s = 120.0
+	var d = 100.0
+			
+	print(((s / d) * 100) - 100)
+	
 	TranslationServer.set_locale("en")
 	ReformEffect
 	
@@ -30,4 +35,4 @@ func hide():
 
 
 func path_editor():
-	ChangeScene("Редактор_провинций")
+	get_tree().change_scene("res://Scenes/MapEditor/MapEditor.tscn")

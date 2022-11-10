@@ -1,7 +1,7 @@
 extends Resource
 
 
-export(String, "liberals", "socialists", "communists", "fascists", "populists") var ideology = "liberals"
+export(String, "liberals", "libertarians", "socialists", "communists", "fascists", "conservators") var ideology = "liberals"
 
 export(Resource) var economic_policy = Resource
 export(Resource) var trade_policy = Resource

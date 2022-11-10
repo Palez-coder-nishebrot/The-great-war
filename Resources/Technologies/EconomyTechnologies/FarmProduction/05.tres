@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=7 format=2]
+[gd_resource type="Resource" load_steps=8 format=2]
 
 [ext_resource path="res://Resources/Technologies/Technology.gd" type="Script" id=1]
 [ext_resource path="res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectProductionFactories.gd" type="Script" id=2]
@@ -22,8 +22,14 @@ name_of_effect = "Производительность"
 power = 5
 target = "farms"
 
+[sub_resource type="Resource" id=4]
+script = ExtResource( 3 )
+name_of_effect = "Выпуск продукции"
+power = 5
+target = "rubber"
+
 [resource]
 script = ExtResource( 1 )
 cotegory = ""
 name_of_technology = "Агропромышленная структура"
-list_of_effects = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ]
+list_of_effects = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ]

@@ -1,0 +1,28 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Resources/StatesOnStartGame/State.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+name_of_state = "Truhmenia"
+list_of_regions = PoolStringArray( "Волынский", "Ковель", "Щепеткова", "Проскуров", "Коломыя", "Стрый" )
+form_of_goverment = "monarchy"
+ideology = "conservators"
+national_color = Color( 0.607843, 0.368627, 0.564706, 1 )
+national_id = ""
+popularity_of_parties = {
+"communists": 5,
+"conservators": 45,
+"fascists": 0,
+"liberals": 30,
+"libertarians": 5,
+"socialists": 15
+}
+names_of_parties = {
+"communists": "",
+"conservators": "",
+"fascists": "",
+"liberals": "",
+"libertarians": "",
+"socialists": ""
+}

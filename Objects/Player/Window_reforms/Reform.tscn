@@ -1,11 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Objects/Player/Window_reforms/ReformContainer.gd" type="Script" id=1]
 [ext_resource path="res://Objects/Player/Window_reforms/Reform.gd" type="Script" id=2]
 [ext_resource path="res://Objects/Player/Window_reforms/Reform_button.gd" type="Script" id=3]
 [ext_resource path="res://Graphics/Fonts/pixel_2.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Objects/Player/Window_reforms/ThemeOfButtonReform.tres" type="Theme" id=5]
-[ext_resource path="res://Objects/Player/Window_reforms/ButtonManager.gd" type="Script" id=6]
 
 [sub_resource type="DynamicFont" id=3]
 size = 32
@@ -44,162 +43,170 @@ custom_fonts/font = SubResource( 2 )
 text = "Нет"
 script = ExtResource( 3 )
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_right = 1072.0
+[node name="Reforms" type="VBoxContainer" parent="."]
+margin_right = 1920.0
 margin_bottom = 1019.0
 custom_constants/separation = 0
 
-[node name="EconomyReforms" type="HBoxContainer" parent="VBoxContainer"]
-margin_right = 1072.0
+[node name="EconomicReforms" type="HBoxContainer" parent="Reforms"]
+margin_right = 1920.0
 margin_bottom = 339.0
+size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_constants/separation = 3
+custom_constants/separation = 100
 
-[node name="EconomyReform" type="VBoxContainer" parent="VBoxContainer/EconomyReforms"]
-margin_right = 212.0
+[node name="EconomyReform" type="VBoxContainer" parent="Reforms/EconomicReforms"]
+margin_right = 405.0
 margin_bottom = 339.0
 size_flags_horizontal = 3
+size_flags_vertical = 3
 custom_constants/separation = 0
 script = ExtResource( 1 )
-cotegory = "Налоги_на_бедных"
+cotegory = "EconomicReforms"
+name_of_file = "TaxOnRichClass"
 
-[node name="EconomyReform2" type="VBoxContainer" parent="VBoxContainer/EconomyReforms"]
-margin_left = 215.0
-margin_right = 427.0
+[node name="EconomyReform2" type="VBoxContainer" parent="Reforms/EconomicReforms"]
+margin_left = 505.0
+margin_right = 910.0
 margin_bottom = 339.0
 size_flags_horizontal = 3
+size_flags_vertical = 3
 custom_constants/separation = 0
 script = ExtResource( 1 )
-cotegory = "Налоги_на_богатых"
+cotegory = "EconomicReforms"
+name_of_file = "TaxOnPoorClass"
 
-[node name="EconomyReform3" type="VBoxContainer" parent="VBoxContainer/EconomyReforms"]
-margin_left = 430.0
-margin_right = 642.0
+[node name="EconomyReform3" type="VBoxContainer" parent="Reforms/EconomicReforms"]
+margin_left = 1010.0
+margin_right = 1415.0
 margin_bottom = 339.0
 size_flags_horizontal = 3
+size_flags_vertical = 3
 custom_constants/separation = 0
 script = ExtResource( 1 )
-cotegory = "Пошлины"
+cotegory = "EconomicReforms"
+name_of_file = "Education"
 
-[node name="EconomyReform4" type="VBoxContainer" parent="VBoxContainer/EconomyReforms"]
-margin_left = 645.0
-margin_right = 857.0
+[node name="EconomyReform4" type="VBoxContainer" parent="Reforms/EconomicReforms"]
+margin_left = 1515.0
+margin_right = 1920.0
 margin_bottom = 339.0
 size_flags_horizontal = 3
+size_flags_vertical = 3
 custom_constants/separation = 0
 script = ExtResource( 1 )
-cotegory = "Снабжение_армии"
+cotegory = "EconomicReforms"
+name_of_file = "Tarrifs"
 
-[node name="EconomyReform5" type="VBoxContainer" parent="VBoxContainer/EconomyReforms"]
-margin_left = 860.0
-margin_right = 1072.0
-margin_bottom = 339.0
-size_flags_horizontal = 3
-custom_constants/separation = 0
-script = ExtResource( 1 )
-cotegory = "Образование"
-
-[node name="SocialReforms" type="HBoxContainer" parent="VBoxContainer"]
+[node name="SocialReforms" type="HBoxContainer" parent="Reforms"]
 margin_top = 339.0
-margin_right = 1072.0
+margin_right = 1920.0
 margin_bottom = 679.0
+size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_constants/separation = 3
-script = ExtResource( 6 )
+custom_constants/separation = 10
 
-[node name="SocialReform" type="VBoxContainer" parent="VBoxContainer/SocialReforms"]
-margin_right = 212.0
+[node name="SocialReform" type="VBoxContainer" parent="Reforms/SocialReforms"]
+margin_right = 376.0
 margin_bottom = 340.0
 size_flags_horizontal = 3
+size_flags_vertical = 3
 custom_constants/separation = 0
 script = ExtResource( 1 )
-cotegory = "Пенсии"
+cotegory = "SocialReforms"
+name_of_file = "Pensions"
 
-[node name="SocialReform2" type="VBoxContainer" parent="VBoxContainer/SocialReforms"]
-margin_left = 215.0
-margin_right = 427.0
+[node name="SocialReform2" type="VBoxContainer" parent="Reforms/SocialReforms"]
+margin_left = 386.0
+margin_right = 762.0
 margin_bottom = 340.0
 size_flags_horizontal = 3
+size_flags_vertical = 3
 custom_constants/separation = 0
 script = ExtResource( 1 )
-cotegory = "Минимальная_зарплата"
+cotegory = "SocialReforms"
+name_of_file = "DayWorking"
 
-[node name="SocialReform3" type="VBoxContainer" parent="VBoxContainer/SocialReforms"]
-margin_left = 430.0
-margin_right = 642.0
+[node name="SocialReform3" type="VBoxContainer" parent="Reforms/SocialReforms"]
+margin_left = 772.0
+margin_right = 1148.0
 margin_bottom = 340.0
 size_flags_horizontal = 3
+size_flags_vertical = 3
 custom_constants/separation = 0
 script = ExtResource( 1 )
-cotegory = "Максимальный_рабочий_день"
+cotegory = "SocialReforms"
+name_of_file = "Healthcare"
 
-[node name="SocialReform4" type="VBoxContainer" parent="VBoxContainer/SocialReforms"]
-margin_left = 645.0
-margin_right = 857.0
+[node name="SocialReform4" type="VBoxContainer" parent="Reforms/SocialReforms"]
+margin_left = 1158.0
+margin_right = 1534.0
 margin_bottom = 340.0
 size_flags_horizontal = 3
+size_flags_vertical = 3
 custom_constants/separation = 0
 script = ExtResource( 1 )
-cotegory = "Пособия_по_безработице"
+cotegory = "SocialReforms"
+name_of_file = "UnemploymentBenefit"
 
-[node name="SocialReform5" type="VBoxContainer" parent="VBoxContainer/SocialReforms"]
-margin_left = 860.0
-margin_right = 1072.0
+[node name="SocialReform5" type="VBoxContainer" parent="Reforms/SocialReforms"]
+margin_left = 1544.0
+margin_right = 1920.0
 margin_bottom = 340.0
 size_flags_horizontal = 3
+size_flags_vertical = 3
 custom_constants/separation = 0
 script = ExtResource( 1 )
-cotegory = "Здравохранение"
+cotegory = "SocialReforms"
+name_of_file = "MinSalary"
 
-[node name="PolicyReforms" type="HBoxContainer" parent="VBoxContainer"]
+[node name="PoliticalReforms" type="HBoxContainer" parent="Reforms"]
 margin_top = 679.0
-margin_right = 1072.0
+margin_right = 1920.0
 margin_bottom = 1019.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_constants/separation = 3
-script = ExtResource( 6 )
+custom_constants/separation = 180
 
-[node name="PolicyReform" type="VBoxContainer" parent="VBoxContainer/PolicyReforms"]
-margin_right = 212.0
+[node name="PoliticalReform" type="VBoxContainer" parent="Reforms/PoliticalReforms"]
+margin_right = 345.0
 margin_bottom = 340.0
 size_flags_horizontal = 3
+size_flags_vertical = 3
 custom_constants/separation = 0
 script = ExtResource( 1 )
-cotegory = "Политические_партии"
+cotegory = "PoliticalReforms"
+name_of_file = "MassMedia"
 
-[node name="PolicyReform2" type="VBoxContainer" parent="VBoxContainer/PolicyReforms"]
-margin_left = 215.0
-margin_right = 427.0
+[node name="PoliticalReform2" type="VBoxContainer" parent="Reforms/PoliticalReforms"]
+margin_left = 525.0
+margin_right = 870.0
 margin_bottom = 340.0
 size_flags_horizontal = 3
+size_flags_vertical = 3
 custom_constants/separation = 0
 script = ExtResource( 1 )
-cotegory = "Право_на_обучение"
+cotegory = "PoliticalReforms"
+name_of_file = "PoliticalParties"
 
-[node name="PolicyReform3" type="VBoxContainer" parent="VBoxContainer/PolicyReforms"]
-margin_left = 430.0
-margin_right = 642.0
+[node name="PoliticalReform3" type="VBoxContainer" parent="Reforms/PoliticalReforms"]
+margin_left = 1050.0
+margin_right = 1395.0
 margin_bottom = 340.0
 size_flags_horizontal = 3
+size_flags_vertical = 3
 custom_constants/separation = 0
 script = ExtResource( 1 )
-cotegory = "Общ_собрания"
+cotegory = "PoliticalReforms"
+name_of_file = "PublicMeetings"
 
-[node name="PolicyReform4" type="VBoxContainer" parent="VBoxContainer/PolicyReforms"]
-margin_left = 645.0
-margin_right = 857.0
+[node name="PoliticalReform4" type="VBoxContainer" parent="Reforms/PoliticalReforms"]
+margin_left = 1575.0
+margin_right = 1920.0
 margin_bottom = 340.0
 size_flags_horizontal = 3
+size_flags_vertical = 3
 custom_constants/separation = 0
 script = ExtResource( 1 )
-cotegory = "Профсоюзы"
-
-[node name="PolicyReform5" type="VBoxContainer" parent="VBoxContainer/PolicyReforms"]
-margin_left = 860.0
-margin_right = 1072.0
-margin_bottom = 340.0
-size_flags_horizontal = 3
-custom_constants/separation = 0
-script = ExtResource( 1 )
-cotegory = "Пресса"
+cotegory = "PoliticalReforms"
+name_of_file = "Unions"

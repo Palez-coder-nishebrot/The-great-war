@@ -15,7 +15,7 @@ var moneys_for_investing: int = 200
 
 func new_day():
 	check_capitalists()
-	Functions.pay_taxes(player, self, rent, "Налоги_на_богатых")
+	Functions.pay_taxes(player, self, rent, "tax_on_rich_class")
 
 
 func check_capitalists():

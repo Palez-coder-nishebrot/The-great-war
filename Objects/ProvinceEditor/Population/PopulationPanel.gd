@@ -22,9 +22,9 @@ func spawn_buttons():
 func append_household():
 	var province = get_parent().province
 	
-	if province.list_of_households.size() == 5: return
+	if province.list_of_households.size() == 8: return
 	var household = {
-		education = false,
+		education = 50,
 		ideology = "Популисты",
 		soc_class = "Рабочий",
 		religion = "",

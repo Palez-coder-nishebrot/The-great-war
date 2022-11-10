@@ -7,7 +7,6 @@ var quanity_of_military_goods: Dictionary = {
 	"artillery":          0,
 	"plane":            0,
 	"rifles": 0,
-	"armored_cars":         0,
 	"tanks":               0,}
 
 var prices_of_goods:  Dictionary = {
@@ -26,6 +25,7 @@ var prices_of_goods:  Dictionary = {
 	"textile":     30,
 	"el_parts": 70,
 	"lumber":   30,
+	"mech_parts": 30,
 	
 	"el_appliances": 80,
 	"cars":      300,
@@ -39,8 +39,8 @@ var prices_of_goods:  Dictionary = {
 	"canned_food":        40,
 	"gas":         40,
 	
-	"tabaco":           10,
-	"tea":             10,
+#	"tabaco":           10,
+#	"tea":             10,
 	
 	"projectiles":             45,
 	"ammo":          45,
@@ -48,144 +48,181 @@ var prices_of_goods:  Dictionary = {
 	"artillery":          45,
 	"plane":            45,
 	"rifles": 45,
-	"armored_cars":         500,
 	"tanks":               900,
 }
 
 var prices_of_goods_from_other_countries: Dictionary = prices_of_goods.duplicate()
 
 const min_and_max_prices_of_goods: Dictionary = {
-	"coal":                  {min_ = 10, max_ = 20},
-	"iron":                 {min_ = 20, max_ = 30},
-	"oil":                  {min_ = 20, max_ = 40},
-	"rubber":                 {min_ = 10, max_ = 20},
-	"cotton":                 {min_ = 10, max_ = 20},
-	"grain":                  {min_ = 10, max_ = 20},
-	"beasts":                   {min_ = 10, max_ = 20},
-	"saltpeter":                {min_ = 20, max_ = 30},
-	"wood":              {min_ = 10, max_ = 20},
+	"coal":                  {min_ = 5, max_ = 12},
+	"iron":                  {min_ = 5, max_ = 12},
+	"oil":                   {min_ = 5, max_ = 12},
+	"rubber":                {min_ = 5, max_ = 12},
+	"cotton":                {min_ = 5, max_ = 12},
+	"grain":                 {min_ = 5, max_ = 10},
+	"beasts":                {min_ = 5, max_ = 10},
+	"saltpeter":             {min_ = 5, max_ = 12},
+	"wood":                  {min_ = 5, max_ = 12},
 	
-	"steel":                  {min_ = 40, max_ = 60},
-	"glass":                 {min_ = 20, max_ = 50},
-	"textile":                  {min_ = 20, max_ = 40},
-	"el_parts":        {min_ = 60, max_ = 80},
-	"lumber":          {min_ = 20, max_ = 40},
+	"steel":                  {min_ = 15, max_ = 45},
+	"glass":                  {min_ = 15, max_ = 45},
+	"textile":                {min_ = 15, max_ = 45},
+	"el_parts":               {min_ = 25, max_ = 45},
+	"mech_parts":             {min_ = 10, max_ = 45},
+	"lumber":                 {min_ = 15, max_ = 45},
 	
-	"el_appliances":    {min_ = 60, max_ = 100},
-	"cars":             {min_ = 40, max_ = 400},
-	"telegraphs":              {min_ = 40, max_ = 150},
-	"phone":               {min_ = 40, max_ = 150},
-	"radio":                  {min_ = 40, max_ = 150},
+	"el_appliances":          {min_ = 30, max_ = 50},
+	"cars":                   {min_ = 30, max_ = 100},
+	"telegraphs":             {min_ = 30, max_ = 50},
+	"phone":                  {min_ = 30, max_ = 50},
+	"radio":                  {min_ = 30, max_ = 50},
 	
-	"furniture":              {min_ = 30, max_ = 60},
-	"alcohol":            {min_ = 20, max_ = 40},
-	"clothes":              {min_ = 30, max_ = 60},
-	"canned_food":            {min_ = 40, max_ = 60},
-	"gas":             {min_ = 20, max_ = 60},
+	"furniture":              {min_ = 20, max_ = 60},
+	"alcohol":                {min_ = 20, max_ = 60},
+	"clothes":                {min_ = 20, max_ = 60},
+	"canned_food":            {min_ = 30, max_ = 60},
+	"gas":                    {min_ = 30, max_ = 60},
 	
-	"tabaco":               {min_ = 20, max_ = 35},
-	"tea":                 {min_ = 20, max_ = 35},
+	"tabaco":                 {min_ = 20, max_ = 35},
+	"tea":                    {min_ = 20, max_ = 35},
 	
-	"projectiles":             {min_ = 30, max_ = 110},
-	"ammo":          {min_ = 30, max_ = 100},
-	"machine_guns":            {min_ = 30,max_ = 250},
-	"artillery":          {min_ = 30,max_ = 350},
-	"plane":            {min_ = 30,max_ = 300},
-	"rifles": {min_ = 30, max_ = 110},
-	"armored_cars":         {min_ = 30, max_ = 600},
-	"tanks":               {min_ = 30, max_ = 950},
+	"projectiles":            {min_ = 30, max_ = 110},
+	"ammo":                   {min_ = 30, max_ = 100},
+	"machine_guns":           {min_ = 30,max_ = 250},
+	"artillery":              {min_ = 30,max_ = 350},
+	"plane":                  {min_ = 30,max_ = 300},
+	"rifles":                 {min_ = 30, max_ = 110},
+	"tanks":                  {min_ = 30, max_ = 950},
 }
+
+
+const based_prices_of_goods = {
+	"coal":     5,
+	"iron":     5,
+	"oil":      10,
+	"rubber":   10,
+	"cotton":   10,
+	"grain":    5,
+	"beasts":   5,
+	"saltpeter":5,
+	"wood":     5,
+	
+	"steel":    30,
+	"glass":    20,
+	"textile":  20,
+	"el_parts": 30,
+	"lumber":   20,
+	"mech_parts": 30,
+	
+	"el_appliances": 50,
+	"cars":          300,
+	"telegraphs":    50,
+	"phone":         50,
+	"radio":         50,
+	
+	"furniture":     40,
+	"alcohol":       30,
+	"clothes":       30,
+	"canned_food":   30,
+	"gas":           30,
+	
+#	"tabaco":           10,
+#	"tea":             10,
+	
+	"projectiles":   45,
+	"ammo":          45,
+	"machine_guns":  45,
+	"artillery":     45,
+	"plane":         45,
+	"rifles":        45,
+	"tanks":         900,
+}
+
 
 var demand: Dictionary = Players.output.duplicate()
 var supply: Dictionary = Players.output.duplicate()
 
-const goods: Dictionary = {
-	"rubber": {"coal": 1},
-	"oil":  {"coal": 1},
-	"steel":  {"coal": 0.8, "iron": 1},
-	"glass": {"coal": 1},
-	"textile":  {"cotton": 0.5},
-	
-	"el_parts": {
-		"steel":     0.8,
-		"rubber":    0.5,
-		"glass":     0.8,
-	},
-	"lumber":   {
-		"wood": 1,
-	},
-	"el_appliances": {
-		"el_parts": 0.8,
-		"steel":    0.8
-	},
-	"cars":      {
-		"rubber":    1,
-		"steel":     2,
-		"glass":    0.8,
-	},
-	"telegraphs":       {
-		"steel":    0.8,
-		"el_parts":     1,
-	},
-	"phone":        {
-		"steel":               0.8,
-		"el_parts":     1,
-	},
-	"radio":           {
-		"steel":               0.8,
-		"glass":               0.8,
-		"el_parts":     1,
-	},
-	"furniture":          {
-		"lumber":       0.8,
-	},
-	"alcohol":        {"grain":    0.5, "coal": 0.5, "glass": 0.8,},
-	"clothes":          {"textile":    0.8,},
-	"canned_food":        {
-		"steel":    1,
-		"grain":    1,
-		"beasts":     1,
-	},
-	"gas":         {
-		"oil":    0.5,
-	},
-	
-	"projectiles":         {
-		"steel":   2,
-		"saltpeter":  2
-	},
-	"ammo":         {
-		"steel":   0.1,
-		"saltpeter": 0.1,
-		"coal":   0.3,
-		"lumber":   0.1,
-	},
-	"machine_guns":         {
-		"steel":   1,
-	},
-	"artillery":         {
-		"steel":   2,
-	},
-	"plane":         {
-		"lumber":   4,
-	},
-	"rifles":         {
-		"steel":   1,
-		"lumber":  2,
-	},
-	"armored_cars": {
-		"cars": 1,
-		"steel":      2,
-		"machine_guns":   2,
-		"artillery": 1,
-	},
-	"tanks": {
-		"cars": 1,
-		"steel":      6,
-		"machine_guns":   3,
-		"artillery": 1,
-	},
-}
+#const goods: Dictionary = {
+#	"rubber": {"coal": 1},
+#	"oil":  {"coal": 1},
+#	"steel":  {"coal": 0.3, "iron": 0.5},
+#	"glass": {"coal": 0.3},
+#	"textile":  {"cotton": 0.5},
+#
+#	"el_parts": {
+#		"steel":     0.5,
+#		"rubber":    0.1,
+#		"glass":     0.5,
+#	},
+#	"lumber":   {
+#		"wood": 1,
+#	},
+#	"el_appliances": {
+#		"el_parts": 0.5,
+#		"steel":    0.2
+#	},
+#	"cars":      {
+#		"rubber":    1,
+#		"steel":     2,
+#		"glass":   0.5,
+#	},
+#	"telegraphs":       {
+#		"steel":      0.1,
+#		"el_parts":   0.3,
+#	},
+#	"phone":        {
+#		"steel":        0.1,
+#		"el_parts":     0.5,
+#	},
+#	"radio":           {
+#		"steel":               0.1,
+#		"glass":               0.1,
+#		"el_parts":            0.5,
+#	},
+#	"furniture":          {
+#		"lumber":       0.5,
+#	},
+#	"alcohol":        {"grain":    0.5, "coal": 0.3},
+#	"clothes":          {"textile":    0.8,},
+#	"canned_food":        {
+#		"steel":    0.5,
+#		"grain":    0.3,
+#		"beasts":    0.3,
+#	},
+#	"gas":         {
+#		"oil":    0.3,
+#	},
+#
+#	"projectiles":         {
+#		"steel":   2,
+#		"saltpeter":  2
+#	},
+#	"ammo":         {
+#		"steel":   0.1,
+#		"saltpeter": 0.1,
+#		"coal":   0.3,
+#		"lumber":   0.1,
+#	},
+#	"machine_guns":         {
+#		"steel":   1,
+#	},
+#	"artillery":         {
+#		"steel":   2,
+#	},
+#	"plane":         {
+#		"lumber":   4,
+#	},
+#	"rifles":         {
+#		"steel":   1,
+#		"lumber":  2,
+#	},
+#	"tanks": {
+#		"cars": 1,
+#		"steel":      6,
+#		"machine_guns":   3,
+#		"artillery": 1,
+#	},
+#}
 
 
 const list_of_resourses: Array = [
@@ -249,21 +286,20 @@ const list_of_resourses: Array = [
 #	"artillery":          1,
 #	"plane":            1,
 #	"rifles": 1,
-#	"armored_cars":         1,
 #	"tanks":               1,
 #}
 
 
-const list_of_easy_jobs: Array = [
-	"textile",
-	#"steel",
-	"glass",
-	"lumber",
-	
-	"furniture",
-	"alcohol",
-	"clothes",
-]
+#const list_of_easy_jobs: Array = [
+#	"textile",
+#	#"steel",
+#	"glass",
+#	"lumber",
+#
+#	"furniture",
+#	"alcohol",
+#	"clothes",
+#]
 
 
 func find_building_in_list(name_of_building):
@@ -292,25 +328,35 @@ func clear_export_and_import():
 			player.output[good] = 0
 
 
-func update_prices():
-#	if fmod(day, 5) == 0.0:
-	for good in prices_of_goods:
-		if supply[good] > demand[good]:
-			prices_of_goods[good] -= 0.1
-		elif supply[good] < demand[good]:
-			prices_of_goods[good] += 0.1
-		
-		if prices_of_goods[good] > min_and_max_prices_of_goods[good].max_:
-			prices_of_goods[good] = min_and_max_prices_of_goods[good].max_
-		elif prices_of_goods[good] < min_and_max_prices_of_goods[good].min_:
-			prices_of_goods[good] = min_and_max_prices_of_goods[good].min_
-		
-		prices_of_goods_from_other_countries[good] = int(prices_of_goods[good] * 1.1)
+func update_prices(day):
+	if fmod(day, 5) == 0.0:
+		for good in prices_of_goods:
+			var s = float(supply[good]) + 1
+			var d = float(demand[good]) + 1
+			var based_price = based_prices_of_goods[good]
+			var price_of_good = prices_of_goods[good]
+			
+			var q = ((s / d) * 100) - 100
+			
+			var price = based_price - (based_price * 0.01) * q
+			
+			if price > price_of_good:
+				prices_of_goods[good] += 0.1 #based_price - (based_price * 0.01) * q
+			else:
+				prices_of_goods[good] -= 0.1
+			
+	#			if supply[good] > demand[good]:
+	#				prices_of_goods[good] -= 0.1
+	#			elif supply[good] < demand[good]:
+	#				prices_of_goods[good] += 0.1
+	#
+			if prices_of_goods[good] > min_and_max_prices_of_goods[good].max_:
+				prices_of_goods[good] = min_and_max_prices_of_goods[good].max_
+			elif prices_of_goods[good] < min_and_max_prices_of_goods[good].min_:
+				prices_of_goods[good] = min_and_max_prices_of_goods[good].min_
+#
+#			prices_of_goods_from_other_countries[good] = int(prices_of_goods[good] * 1.1)
 	clear_supply_and_demand()
-#else:
-#	for good in prices_of_goods:
-#		if not list_of_resourses.has(good):
-#			demand[good] += 2
 
 
 func export_goods_from_local_markets():

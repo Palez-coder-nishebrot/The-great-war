@@ -4,10 +4,10 @@ var party: Object
 
 func update():
 	if party != null:
-		var pop = str(Players.player.policy["Поддержка_партий"][party.ideology])
+		var pop = str(party.popularity)
 		
 		$NameOfParty.text = party.name_of_party + "(" + pop + ")"
-		$Ideology.text = "Идеология: "              + party.ideology
-		$Economy.text  = "Экономика: " + party.economic_model
-		$TradePolicy.text = "Торговля: "      + party.trade_policy
-		$ForeignPolicy.text = "Внешняя политика: "      + party.foreign_policy
+		$Ideology.text = tr(party.ideology)
+		$Economy.text  = "Эк. политика: " + tr(party.economic_policy)
+		$TradePolicy.text = "Торговая политика: " + tr(party.trade_policy)
+		$ForeignPolicy.text = "Внешняя политика: " + tr(party.foreign_policy)

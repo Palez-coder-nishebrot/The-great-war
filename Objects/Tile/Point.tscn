@@ -4,19 +4,20 @@
 [ext_resource path="res://Graphics/Fonts/times_new_roman.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=2]
-size = 100
+size = 32
+use_mipmaps = true
+use_filter = true
 font_data = ExtResource( 3 )
 
 [node name="Point" type="Sprite" groups=["Province"]]
 script = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = -558.0
-margin_top = 115.0
-margin_right = 207.0
-margin_bottom = 251.0
-rect_scale = Vector2( 0.25, 0.25 )
-rect_pivot_offset = Vector2( 617, -176 )
+margin_left = -378.0
+margin_top = -69.0
+margin_right = 387.0
+margin_bottom = 67.0
+rect_pivot_offset = Vector2( 380, 69 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Пример"

@@ -22,7 +22,6 @@ onready var window_taxes:         Panel = $CanvasLayer/Taxes
 onready var window_reform:        Panel = $CanvasLayer/Reform
 onready var window_population:    Panel = $CanvasLayer/Population
 onready var window_research:      Panel = $CanvasLayer/Research
-onready var window_research_end:  Panel = $CanvasLayer/Research_end
 onready var information:          Panel = $CanvasLayer/Information
 onready var window_train_army:    Panel = $CanvasLayer/Train_army
 onready var window_diplomacy:     Panel = $CanvasLayer/Diplomacy
@@ -31,6 +30,20 @@ onready var window_list_of_units: ScrollContainer = $CanvasLayer/List_of_units
 
 func _ready():
 	connect("check_available_reform", window_reform, "check_available_reform")
+	connect("research_completed", self, "research_completed")
+	#hold_debate()
+
+
+func research_completed(technology):
+	var message = load("res://Objects/Player/Message/Message/Message.tscn").instance()
+	message.set_title("research_completed", technology)
+	$CanvasLayer.add_child(message)
+
+
+func hold_debate():
+	var message = load("res://Objects/Player/Message/Debate/Debate.tscn").instance()
+	message.show_info(self)
+	$CanvasLayer.add_child(message)
 
 
 func _process(delta):

@@ -25,5 +25,5 @@ target = "factories"
 [resource]
 script = ExtResource( 1 )
 cotegory = ""
-name_of_technology = "Сентетические полимеры"
+name_of_technology = "Управление персоналом"
 list_of_effects = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ]

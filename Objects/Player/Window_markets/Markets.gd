@@ -7,9 +7,9 @@ signal update_info_about_warhouse(warhouse)
 var good: String = "coal"
 
 func update_information():
-	emit_signal("update", GlobalMarket.prices_of_goods)
-	emit_signal("update_info_about_output", Players.player.output)
-	emit_signal("update_info_about_warhouse", Players.player.warhouse_of_goods)
+	emit_signal("update")
+	#emit_signal("update_info_about_output", Players.player.output)
+	#emit_signal("update_info_about_warhouse", Players.player.warhouse_of_goods)
 	
 	update_information_about_good(good)
 
@@ -41,9 +41,9 @@ func update_information_about_good(_good):
 		$VBoxContainer2/Label6.text = ""
 
 
-func _ready():
-	spawn_buttons(GlobalMarket.prices_of_goods, $ScrollContainer/VBoxContainer)
-	spawn_buttons(Players.player.warhouse_of_goods, $ScrollContainer2/VBoxContainer)
+#func _ready():
+#	spawn_buttons(GlobalMarket.prices_of_goods, $ScrollContainer/VBoxContainer)
+#	spawn_buttons(Players.player.warhouse_of_goods, $ScrollContainer2/VBoxContainer)
 
 
 func spawn_buttons(market, container):

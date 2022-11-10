@@ -1,17 +1,17 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Objects/Player/Window_buttons/Buttons.gd" type="Script" id=1]
 [ext_resource path="res://Graphics/Fonts/pixel_2.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Objects/Player/Window_buttons/Button.gd" type="Script" id=3]
-[ext_resource path="res://Graphics/Sprites/GUI/Icons of windows/Cron.png" type="Texture" id=4]
-[ext_resource path="res://Graphics/Sprites/GUI/Icons of windows/Research.png" type="Texture" id=5]
-[ext_resource path="res://Graphics/Sprites/GUI/Icons of windows/Hammer.png" type="Texture" id=6]
-[ext_resource path="res://Graphics/Sprites/GUI/Icons of windows/Production.png" type="Texture" id=8]
+[ext_resource path="res://Objects/Player/Window_reforms/IconLabel.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Graphics/Sprites/GUI/Icons of windows/ResearchPoints.png" type="Texture" id=5]
+[ext_resource path="res://Graphics/Sprites/GUI/Icons of windows/Cron.png" type="Texture" id=8]
 [ext_resource path="res://Graphics/Sprites/GUI/Icons of windows/Stability.png" type="Texture" id=9]
-[ext_resource path="res://Graphics/Sprites/GUI/Icons of windows/Hammer no.png" type="Texture" id=10]
-[ext_resource path="res://Graphics/Sprites/GUI/Icons of windows/Welfare.png" type="Texture" id=11]
-[ext_resource path="res://Graphics/Sprites/GUI/Icons of windows/Pluralism.png" type="Texture" id=12]
-[ext_resource path="res://Graphics/Sprites/GUI/Icons of windows/Radion net.png" type="Texture" id=13]
+[ext_resource path="res://Graphics/Sprites/GUI/Icons of windows/Production.png" type="Texture" id=10]
+[ext_resource path="res://Graphics/Sprites/GUI/Icons of windows/Hammer no.png" type="Texture" id=11]
+[ext_resource path="res://Graphics/Sprites/GUI/Icons of windows/Welfare.png" type="Texture" id=12]
+[ext_resource path="res://Graphics/Sprites/GUI/Icons of windows/Reform.png" type="Texture" id=13]
+[ext_resource path="res://Graphics/Sprites/GUI/Icons of windows/Education.png" type="Texture" id=14]
 
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.192157, 0.0862745, 0.109804, 1 )
@@ -21,21 +21,16 @@ size = 32
 extra_spacing_char = -2
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=2]
-size = 26
-extra_spacing_char = -1
-font_data = ExtResource( 2 )
-
 [node name="Buttons" type="Panel"]
 margin_right = 1920.0
-margin_bottom = 78.0
+margin_bottom = 70.0
 custom_styles/panel = SubResource( 3 )
 script = ExtResource( 1 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-margin_top = 40.0
+margin_top = 32.0
 margin_right = 1920.0
-margin_bottom = 78.0
+margin_bottom = 70.0
 custom_constants/separation = 0
 
 [node name="Construction" type="Button" parent="HBoxContainer"]
@@ -138,115 +133,117 @@ script = ExtResource( 3 )
 window = "window_population"
 
 [node name="VBoxContainer" type="HBoxContainer" parent="."]
-margin_right = 1920.0
-margin_bottom = 40.0
-custom_constants/separation = 0
-
-[node name="ConstructionLabel" type="Button" parent="VBoxContainer"]
-margin_right = 192.0
-margin_bottom = 40.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_fonts/font = SubResource( 1 )
-icon = ExtResource( 6 )
-flat = true
-expand_icon = true
-
-[node name="UnemployedLabel" type="Button" parent="VBoxContainer"]
-margin_left = 192.0
-margin_right = 384.0
-margin_bottom = 40.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_fonts/font = SubResource( 1 )
-icon = ExtResource( 10 )
-flat = true
-expand_icon = true
-
-[node name="ProductionLabel" type="Button" parent="VBoxContainer"]
-margin_left = 384.0
-margin_right = 576.0
-margin_bottom = 40.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_fonts/font = SubResource( 1 )
-icon = ExtResource( 8 )
-flat = true
-expand_icon = true
-
-[node name="BudgetLabel" type="Button" parent="VBoxContainer"]
-margin_left = 576.0
-margin_right = 768.0
-margin_bottom = 40.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_fonts/font = SubResource( 1 )
-text = "142"
-icon = ExtResource( 4 )
-flat = true
-expand_icon = true
-
-[node name="RadioNetLabel" type="Button" parent="VBoxContainer"]
-margin_left = 768.0
 margin_right = 960.0
-margin_bottom = 40.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_fonts/font = SubResource( 1 )
-icon = ExtResource( 13 )
-flat = true
-expand_icon = true
+margin_bottom = 16.0
+rect_scale = Vector2( 2, 2 )
+custom_constants/separation = 23
 
-[node name="ResearchLabel" type="Button" parent="VBoxContainer"]
-margin_left = 960.0
-margin_right = 1152.0
-margin_bottom = 40.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_fonts/font = SubResource( 1 )
-icon = ExtResource( 5 )
-flat = true
-expand_icon = true
+[node name="ReformIcon" type="TextureRect" parent="VBoxContainer"]
+visible = false
+margin_right = 16.0
+margin_bottom = 16.0
+texture = ExtResource( 13 )
 
-[node name="PartiesLabel" type="Button" parent="VBoxContainer"]
-margin_left = 1152.0
-margin_right = 1344.0
-margin_bottom = 40.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_fonts/font = SubResource( 2 )
-flat = true
-expand_icon = true
+[node name="ConstructionLabel" parent="VBoxContainer" instance=ExtResource( 4 )]
+margin_left = 0.0
+margin_right = 86.0
 
-[node name="StabilityLabel" type="Button" parent="VBoxContainer"]
-margin_left = 1344.0
-margin_right = 1536.0
-margin_bottom = 40.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_fonts/font = SubResource( 1 )
-icon = ExtResource( 9 )
-flat = true
-expand_icon = true
+[node name="Label" parent="VBoxContainer/ConstructionLabel" index="1"]
+margin_left = 43.0
+margin_right = 86.0
+text = "0"
 
-[node name="Pluralism" type="Button" parent="VBoxContainer"]
-margin_left = 1536.0
-margin_right = 1728.0
-margin_bottom = 40.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_fonts/font = SubResource( 1 )
-icon = ExtResource( 12 )
-flat = true
-expand_icon = true
+[node name="FactoriesLabel" parent="VBoxContainer" instance=ExtResource( 4 )]
+margin_left = 109.0
+margin_right = 195.0
 
-[node name="PopulationLabel" type="Button" parent="VBoxContainer"]
-margin_left = 1728.0
-margin_right = 1920.0
-margin_bottom = 40.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_fonts/font = SubResource( 1 )
-icon = ExtResource( 11 )
-flat = true
-expand_icon = true
+[node name="TextureRect" parent="VBoxContainer/FactoriesLabel" index="0"]
+texture = ExtResource( 10 )
+
+[node name="Label" parent="VBoxContainer/FactoriesLabel" index="1"]
+margin_left = 43.0
+margin_right = 86.0
+
+[node name="BudgetLabel" parent="VBoxContainer" instance=ExtResource( 4 )]
+margin_left = 218.0
+margin_right = 304.0
+
+[node name="TextureRect" parent="VBoxContainer/BudgetLabel" index="0"]
+texture = ExtResource( 8 )
+
+[node name="Label" parent="VBoxContainer/BudgetLabel" index="1"]
+margin_left = 43.0
+margin_right = 86.0
+
+[node name="ResearchLabel" parent="VBoxContainer" instance=ExtResource( 4 )]
+margin_left = 327.0
+margin_right = 413.0
+
+[node name="TextureRect" parent="VBoxContainer/ResearchLabel" index="0"]
+texture = ExtResource( 5 )
+
+[node name="Label" parent="VBoxContainer/ResearchLabel" index="1"]
+margin_left = 43.0
+margin_right = 86.0
+
+[node name="PartiesLabel" parent="VBoxContainer" instance=ExtResource( 4 )]
+margin_left = 436.0
+margin_right = 523.0
+
+[node name="Label" parent="VBoxContainer/PartiesLabel" index="1"]
+margin_left = 43.0
+margin_right = 87.0
+
+[node name="PopulationLabel" parent="VBoxContainer" instance=ExtResource( 4 )]
+margin_left = 546.0
+margin_right = 632.0
+
+[node name="TextureRect" parent="VBoxContainer/PopulationLabel" index="0"]
+texture = ExtResource( 12 )
+
+[node name="Label" parent="VBoxContainer/PopulationLabel" index="1"]
+margin_left = 43.0
+margin_right = 86.0
+
+[node name="StabilityLabel" parent="VBoxContainer" instance=ExtResource( 4 )]
+margin_left = 655.0
+margin_right = 741.0
+
+[node name="TextureRect" parent="VBoxContainer/StabilityLabel" index="0"]
+texture = ExtResource( 9 )
+
+[node name="Label" parent="VBoxContainer/StabilityLabel" index="1"]
+margin_left = 43.0
+margin_right = 86.0
+
+[node name="UnemployedLabel" parent="VBoxContainer" instance=ExtResource( 4 )]
+margin_left = 764.0
+margin_right = 850.0
+
+[node name="TextureRect" parent="VBoxContainer/UnemployedLabel" index="0"]
+texture = ExtResource( 11 )
+
+[node name="Label" parent="VBoxContainer/UnemployedLabel" index="1"]
+margin_left = 43.0
+margin_right = 86.0
+
+[node name="EducationLabel" parent="VBoxContainer" instance=ExtResource( 4 )]
+margin_left = 873.0
+margin_right = 960.0
+
+[node name="TextureRect" parent="VBoxContainer/EducationLabel" index="0"]
+texture = ExtResource( 14 )
+
+[node name="Label" parent="VBoxContainer/EducationLabel" index="1"]
+margin_left = 43.0
+margin_right = 87.0
+
+[editable path="VBoxContainer/ConstructionLabel"]
+[editable path="VBoxContainer/FactoriesLabel"]
+[editable path="VBoxContainer/BudgetLabel"]
+[editable path="VBoxContainer/ResearchLabel"]
+[editable path="VBoxContainer/PartiesLabel"]
+[editable path="VBoxContainer/PopulationLabel"]
+[editable path="VBoxContainer/StabilityLabel"]
+[editable path="VBoxContainer/UnemployedLabel"]
+[editable path="VBoxContainer/EducationLabel"]

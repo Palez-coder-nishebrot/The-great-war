@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource( 1 )
-name_of_policy = "free_trade"
+name_of_policy = "protectionism"
 max_tariffs = 50
-min_tariffs = 0
+min_tariffs = 25

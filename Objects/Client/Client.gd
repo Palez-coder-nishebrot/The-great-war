@@ -2,13 +2,33 @@ extends Node
 
 class_name Client
 
-signal check_available_reform
+signal check_available_reform(tipe_of_reform)
+signal research_completed
+
+const income: Array = ["tariffs", "tax_on_poor_class", "tax_on_rich_class", "Продажа_драгметаллов", "Производство"]
 
 var warhouse_of_goods:     Dictionary     = GlobalMarket.quanity_of_military_goods.duplicate()
 var local_market:          Dictionary     = Players.output.duplicate()
 var export_of_goods:       Dictionary     = Players.output.duplicate()
 var import_of_goods:       Dictionary     = Players.output.duplicate()
-var accounting:            Dictionary     = Players.accounting.duplicate()
+var accounting:            Dictionary     = {
+	"Субсидии":             0,
+	"Военное_производство": 0,
+	"Выплаты_по_кредитам":  0,
+	
+	"education":          0,
+	"Здравохранение":       0,
+	"Пенсии":               0,
+	"Пособия_по_безработице":0,
+	"Снабжение_армии":       0,
+	
+	"tariffs": 0.0,
+	"tax_on_poor_class":     0,
+	"tax_on_rich_class":    0,
+	"Продажа_драгметаллов": 0,
+	"Производство":         0,
+	"Закупка_сырья_для_ЖД": 0,
+}
 
 #var production:            Dictionary     = GlobalMarket.production.duplicate()
 var output:                Dictionary     = Players.output.duplicate()
@@ -87,35 +107,64 @@ var adopted_reforms: Dictionary = {
 	"Помощь инвалидам":          1,
 }
 
+var tax_on_poor_class: int = 0
+var tax_on_rich_class: int = 0
+var tariffs:           int = 0
+var education:         int = 0
+var pensions:          int = 0
+
+var attracting_immigrants: int = 0
+var demand_of_good:    int = 0
+var population_growth: int = 0
+var pluralism_growth:  int = 0
+
 var ideology:           String = ""
-var form_of_government: String = ""
+var form_of_goverment:  String = ""
 var economic_policy:    String = ""
 var trade_policy:       String = ""
 var foreign_policy:     String = ""
-
 var satellite:            Object
 var elections:            bool = false
-var subsidization:        bool = false
-var income_of_capitalists: int = 0
-var max_of_tarrifs:       int = 0
-var min_of_tarrifs:       int = 0
 
-var revanchism:             int = 0
-var pluralism:              int = 0
-var budget:                 int = 0
+var subsidization:        bool = false
+var min_tariffs_label:    int = 0
+var max_tariffs_label:    int = 0
+var cost_of_factories:    int = 0
+var cost_of_infrastructure:int= 0
+var income_of_capitalists:int = 0
+var max_tariffs:       int = 0
+var min_tariffs:       int = 0
+
+var money_of_state_bank:    int = 0
+var budget:                 int = 5000
+var income_in_budget:       int = 0
+var spending_in_budget:     int = 0
+var balance:                int = 0
 var gdp:                    int = 0
+
 var researching_points:     int = 0
+var middle_value_education: int = 0
 var welfare:                int = 0
 var radio_net:              float = 0
 var quantity_of_unemployed: float = 0
+var stability:              float = 100
+
 var military_fatigue:       float = 0
+var revanchism:             int = 0
+var pluralism:              int = 0
 
 var economic_bonuses: EconomicBonuses = EconomicBonuses.new()
 var military_bonuses: MilitaryBonuses = MilitaryBonuses.new()
-var technologies:     Technologies    = Technologies.new()
-var parties_manager:  PartiesManager  = PartiesManager.new()
+var technologies:     Technologies    = Technologies.new(self)
+var parties_manager:  PartiesManager  #= PartiesManager.new(self)
+var reforms_manager:  ReformsManager  = ReformsManager.new(self)
+var population_manager: PopulationManager = PopulationManager.new(self)
 
-var name_of_country:        String     = ""
+
+var name_of_country:         String    = ""
+var path_to_file_of_country: String    = ""
+
+var population: int = 0
 
 var units_for_training:   Array        = Players.units_for_training
 var list_of_tiles:        Array        = []
@@ -130,19 +179,25 @@ var researching_object: Object
 var capitalists_manager:    Object = load("res://Objects/Population/Capitalists.gd").new()
 var manager_of_updating_popularity_of_parties: Object = load("res://Objects/Player/ManagerOfUpdatingPopularity.gd").new()
 onready var game:       Node2D
-
+	
 
 func update_expenses_on_railways():
-	var quantity_on_steel = 0.0
+	var quantity_on_steel  = 0.0
 	var quantity_on_lumber = 0.0
+	var quantity_on_gas    = 0.0
+	var quantity_on_el_parts = 0.0
 	for tile in list_of_tiles:
 		var railways = tile.railways
 		var quantity = railways.level * railways.quantity
-		quantity_on_steel  += quantity
+		quantity_on_steel  += quantity + 0.01
 		quantity_on_lumber += quantity
+		quantity_on_el_parts += quantity - 0.01
+		quantity_on_gas    += railways.level * 0.01
 	buy_goods_for_railways(quantity_on_steel, "steel")
 	buy_goods_for_railways(quantity_on_lumber, "lumber")
-	
+	buy_goods_for_railways(quantity_on_gas,    "gas")
+	buy_goods_for_railways(quantity_on_el_parts, "el_parts")
+
 
 func buy_goods_for_railways(quantity, good):
 	var old_budget = budget
@@ -162,31 +217,21 @@ func buy_goods_for_railways(quantity, good):
 	accounting["Закупка_сырья_для_ЖД"] += old_budget - budget
 
 
-func update_stability():
-#	var factors_of_change = (policy["Реваншизм"] + policy["Военная_усталость"] + (-welfare)) * 0.1
-#
-#	policy["Стабильность"] -= factors_of_change
-#
-#	if policy["Стабильность"] > 100:
-#		policy["Стабильность"] = 100
-#	elif policy["Стабильность"] < 0:
-#		policy["Стабильность"] = 0
-#
-#	update_popularity_of_parties()
-	pass
-
-func update_popularity_of_parties():
-	pass
-#	var ideology = manager_of_updating_popularity_of_parties.choose_party_for_updating_popularity(self)
-#
-#	var pop_with_new_ideology = 100 - policy["Стабильность"]
-#	pop_with_new_ideology = pop_with_new_ideology * 0.01
-#	policy["Поддержка_партий"][ideology] += pop_with_new_ideology
-#	policy["Поддержка_партий"][policy["Правящая_партия"].ideology] -= pop_with_new_ideology
+func update_balance():
+	balance = 0
+	income_in_budget = 0
+	spending_in_budget = 0
+	for i in accounting:
+		if income.has(i):
+			balance += accounting[i]
+			income_in_budget += accounting[i]
+		else:
+			balance -= accounting[i]
+			spending_in_budget += accounting[i]
 
 
 func update_welfare_of_population():
-	welfare = capitalists_manager.welfare * capitalists_manager.quantity
+	welfare = 0
 	for i in list_of_tiles:
 		welfare += i.population_manager.welfare
 		
@@ -199,74 +244,8 @@ func update_population_growth():
 		i.population_manager.new_generation += growth_of_new_generation
 		i.population_manager.growth_of_new_generation = growth_of_new_generation
 		
-		if i.population_manager.new_generation > 200:
+		if i.population_manager.new_generation > 100:
 			game.spawn_household(i)
 		elif i.population_manager.new_generation < 0:
 			i.population_manager.new_generation = 0
 			i.population_manager.growth_of_new_generation = 0
-
-
-func update_point_of_reforms():
-	pass
-#	var points_of_soc_reform = 0
-#	var points_of_pol_reform = 0
-#	var points_of_cancel_pol_reforms = 0
-#	var points_of_cancel_soc_reforms = 0
-#
-#	for i in policy["Партии"]:
-#		var popularity = policy["Поддержка_партий"][i.ideology]
-#
-#		if i.supporting_soc_reforms == 0:
-#			points_of_cancel_soc_reforms += popularity
-#		else:
-#			points_of_soc_reform += i.supporting_soc_reforms * popularity
-#
-#		if i.supporting_pol_reforms == 0:
-#			points_of_cancel_pol_reforms += popularity
-#		else:
-#			points_of_pol_reform += i.supporting_pol_reforms * popularity
-#
-#	policy["Реформы"]["Очки_соц_реформ"] += check_reforms(points_of_soc_reform, points_of_cancel_soc_reforms)
-#	policy["Реформы"]["Очки_пол_реформ"] += check_reforms(points_of_pol_reform, points_of_cancel_pol_reforms)
-#
-#	#print(policy["Реформы"])
-#
-#	update_supporting_reforms("Очки_соц_реформ", points_of_soc_reform)
-#	update_supporting_reforms("Очки_пол_реформ", points_of_pol_reform)
-#
-#	update_available_reform("Очки_пол_реформ", "Принятие_пол_реформ", "Откат_пол_реформ")
-#	update_available_reform("Очки_соц_реформ", "Принятие_соц_реформ", "Откат_соц_реформ")
-	
-	
-
-func check_reforms(points_of_reform, points_of_cancel_reforms):
-#	if points_of_cancel_reforms > points_of_reform:
-#		return 0
-#	else:
-#		return points_of_reform - points_of_cancel_reforms
-	pass
-
-
-func update_supporting_reforms(reform, points_of_reform):
-#	if points_of_reform > 0:
-#		policy["Реформы"][reform] += 1
-#	elif points_of_reform < 0:
-#		policy["Реформы"][reform] -= 1
-	pass
-
-
-func update_available_reform(reform, reform_adoption, reform_rollback):
-	pass
-#	if policy["Реформы"][reform] >= 10:
-#		policy["Реформы"][reform_adoption] = true
-#		policy["Реформы"][reform_rollback] = false
-#		emit_signal("check_available_reform")
-#
-#	elif policy["Реформы"][reform] <= -10:
-#		policy["Реформы"][reform_adoption] = false
-#		policy["Реформы"][reform_rollback] = true
-#		emit_signal("check_available_reform")
-#	else:
-#		policy["Реформы"][reform_adoption] = false
-#		policy["Реформы"][reform_rollback] = false
-

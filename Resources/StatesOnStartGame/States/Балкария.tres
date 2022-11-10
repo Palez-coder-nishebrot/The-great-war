@@ -1,0 +1,28 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Resources/StatesOnStartGame/State.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+name_of_state = "Balkary"
+list_of_regions = PoolStringArray( "Рутивль", "Перемышль", "Батые", "Пядичи", "Рутивль", "Заболотов", "Брзежаны", "Ахалкалаки", "Батуми" )
+form_of_goverment = "monarchy"
+ideology = "conservators"
+national_color = Color( 0.568627, 0.321569, 0.286275, 1 )
+national_id = ""
+popularity_of_parties = {
+"communists": 5,
+"conservators": 45,
+"fascists": 0,
+"liberals": 30,
+"libertarians": 5,
+"socialists": 15
+}
+names_of_parties = {
+"communists": "",
+"conservators": "",
+"fascists": "",
+"liberals": "",
+"libertarians": "",
+"socialists": ""
+}

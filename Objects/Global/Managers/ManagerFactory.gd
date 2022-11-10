@@ -2,7 +2,7 @@ extends Node
 
 var list_of_factories: Array = []
 
-var min_salary: int = 10
+var min_salary: int = 5
 func make_goods():
 	for factory in list_of_factories:
 		if factory.closed == false:
@@ -35,7 +35,9 @@ func make_good(factory, good, quanity):
 func buy_purchase():
 	for factory in list_of_factories:
 		if factory.closed == false:
-		
+			
+			factory.buy_based_goods()
+			
 			var good = factory.good
 			var purchase = factory.purchase
 			var quantity_of_workers = factory.quantity_of_workers
@@ -48,7 +50,6 @@ func buy_purchase():
 			
 			for resourse in purchase:
 				var quanity_of_good = purchase[resourse] * quantity_of_workers
-					
 				if Functions.check_good_on_local_market(resourse, quanity_of_good, local_market):
 					expenses_purchase_ll_mt += Functions.buy_good_on_local_market(factory, resourse, quanity_of_good, local_market)
 					
@@ -67,15 +68,14 @@ func buy_purchase():
 
 func check_income(factory, expenses):
 	#factory.province.player.capitalists_manager.income += factory.income
-	#breakpoint
-	if factory.income > 0:
-		var income_of_capitalist = (float(factory.income) / 100.0) * factory.province.player.economy["Доходы_фабрикантов"]
-		var income_of_country = factory.income - income_of_capitalist
-		factory.province.player.capitalists_manager.income += income_of_capitalist
-		
-		factory.province.player.accounting["Производство"] += income_of_country
-		factory.province.player.budget += income_of_country
-		factory.province.player.capitalists_manager.money += income_of_capitalist
+	var income_of_capitalist = (float(factory.income) / 100.0) * factory.province.player.economy["Доходы_фабрикантов"]
+	var income_of_country = factory.income - income_of_capitalist
+	factory.province.player.capitalists_manager.income += income_of_capitalist
+	
+	factory.province.player.accounting["Производство"] += income_of_country
+	factory.province.player.money_of_state_bank += income_of_country
+	factory.province.player.capitalists_manager.money += income_of_capitalist
+	factory.update_places_for_workers()
 	
 	
 func check_bankrupt(factory, province):
@@ -92,14 +92,14 @@ func check_bankrupt(factory, province):
 
 
 func set_accounting_of_subsidization(factory, player, subs):
-	if factory.tipe == "military_factory":
-		player.accounting["Военное_производство"] += factory.money
-		player.budget += factory.money
-		factory.money = 0
-	else:
-		player.budget -= subs
-		player.accounting["Субсидии"] += subs
-		factory.money = 170
+#	if factory.tipe == "military_factory":
+#		player.accounting["Военное_производство"] += factory.money
+#		player.budget += factory.money
+#		factory.money = 0
+#	else:
+	player.budget -= subs
+	player.accounting["Субсидии"] += subs
+	factory.money = 170
 
 
 func start_expansion_of_factory(factory, province):
@@ -114,8 +114,6 @@ func start_expansion_of_factory(factory, province):
 func pay_salary(list_of_workers, province, factory):
 	var salary = (min_salary + province.player.economy["Минимальная_зарплата"]) * list_of_workers
 	
-	if not GlobalMarket.list_of_easy_jobs.has(factory.good):
-		salary += 10
 	
 	factory.province.population_manager.money += salary
 	factory.province.population_manager.income += salary

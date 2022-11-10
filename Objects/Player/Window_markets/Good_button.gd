@@ -1,26 +1,33 @@
-extends Button
+extends Panel
 
 export var good: String = ""
 
 onready var parent = get_parent().get_parent().get_parent()
+onready var image = $TextureRect
+onready var cost = $Cost
+onready var import = $Import
+onready var production = $Production
 
 func _ready():
+	image.icon = load(Players.sprites_of_goods[good])
 	parent.connect("update", self, "update_information")
-
+	
 
 func _gui_input(event):
-	if pressed == true:
-		parent.update_information_about_good(good)
+	if event is InputEventMouseButton and image.pressed:
+		parent.good = good
+#	if pressed == true:
+#		parent.update_information_about_good(good)
 
 
-func update_information(market):
-	var price = market[good]
+func update_information():
+	cost.text = "Цена: " + str(GlobalMarket.prices_of_goods[good])
+	production.text = "Пр-во: " + str(Players.player.output[good])
 	
-	if price > 0 and price < 10:
-		text = str(price) + "  "
+	var im = Players.player.import_of_goods[good]
+	var ex = Players.player.export_of_goods[good]
 	
-	elif price > 9 and price < 100:
-		text = str(price) + " "
-	
+	if im > ex:
+		import.text = "Имп: " + str(im)
 	else:
-		text = str(price)
+		import.text = "Экс: " + str(ex)

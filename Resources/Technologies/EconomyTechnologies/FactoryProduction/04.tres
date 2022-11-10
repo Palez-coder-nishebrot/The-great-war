@@ -1,8 +1,9 @@
-[gd_resource type="Resource" load_steps=8 format=2]
+[gd_resource type="Resource" load_steps=9 format=2]
 
 [ext_resource path="res://Resources/Technologies/Technology.gd" type="Script" id=1]
 [ext_resource path="res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectProductionFactories.gd" type="Script" id=2]
 [ext_resource path="res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectProductionGoods.gd" type="Script" id=3]
+[ext_resource path="res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectNewFactory.gd" type="Script" id=4]
 
 [sub_resource type="Resource" id=1]
 script = ExtResource( 2 )
@@ -16,20 +17,19 @@ name_of_effect = "Выпуск продукции"
 power = 10
 target = "steel"
 
-[sub_resource type="Resource" id=3]
-script = ExtResource( 3 )
-name_of_effect = "Выпуск продукции"
-power = 10
-target = "gas"
-
 [sub_resource type="Resource" id=4]
 script = ExtResource( 3 )
 name_of_effect = "Выпуск продукции"
 power = 10
 target = "electronics"
 
+[sub_resource type="Resource" id=5]
+script = ExtResource( 4 )
+name_of_effect = "Новый тип завода"
+target = "Senthetic_textile_factory"
+
 [resource]
 script = ExtResource( 1 )
 cotegory = ""
 name_of_technology = "Посменная работа"
-list_of_effects = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ]
+list_of_effects = [ SubResource( 1 ), SubResource( 2 ), SubResource( 4 ), SubResource( 5 ) ]

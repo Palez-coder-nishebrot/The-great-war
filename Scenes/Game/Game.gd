@@ -19,7 +19,7 @@ var list_of_speed_of_game: Dictionary = {
 var speed_of_game: float = 1.0
 var pause:         bool  = false
 var list_of_provinces:   Array = []
-var list_of_soc_classes: Array = []
+#var list_of_soc_classes: Array = []
 
 var purchase_manager: Object = load("res://Objects/Global/Managers/ManagerPurchase.gd").new()
 var factory_manager: Object = load("res://Objects/Global/Managers/ManagerFactory.gd").new()
@@ -37,6 +37,7 @@ func _ready():
 		var manager = CreateClients.new()
 		manager.create_players(self)
 	craftsmen_manager.game = self
+	craftsmen_manager.set_purchase()
 
 
 func set_prices_of_goods():
@@ -44,7 +45,7 @@ func set_prices_of_goods():
 		if GlobalMarket.list_of_resourses.has(i):
 			GlobalMarket.prices_of_goods[i] = GlobalMarket.min_and_max_prices_of_goods[i].min_
 		else:
-			GlobalMarket.prices_of_goods[i] = int((GlobalMarket.min_and_max_prices_of_goods[i].max_ / 2))
+			GlobalMarket.prices_of_goods[i] = int((GlobalMarket.min_and_max_prices_of_goods[i].min_ * 1.5))
 
 
 func new_day():
@@ -81,30 +82,32 @@ func circle_of_game():
 	
 	ManagerDay.update_information_in_GUI()
 	
-	GlobalMarket.update_prices()#game.time_of_game.day)
+	GlobalMarket.update_prices(time_of_game.day)
 	
 	clear_GDP()
 
 
 func clear_GDP():
 	for player in Players.list_of_players:
-		player.economy["ВВП"] = 0
+		player.gdp = 0
 
 
 func spawn_household(province):
-	var household = Household.new()
-	household.province = province
-	household.education = false
-	household.soc_class = "Рабочий"
-	household.religion = ""
-	
-	province.player.list_of_soc_classes.append(household)
-	household.population_manager = province.population_manager
-	province.population_manager.list_of_soc_classes.append(household)
-	province.population_manager.list_of_workers.append(household)
 	province.population_manager.new_generation = 0
+	province.population_manager.quantity_of_workers += 1
+#	var household = Household.new()
+#	household.province = province
+#	household.education = 0
+#	household.soc_class = "Worker"
+#	household.religion = ""
+#
+#	province.player.list_of_soc_classes.append(household)
+#	household.population_manager = province.population_manager
+#	province.population_manager.list_of_soc_classes.append(household)
+#	province.population_manager.list_of_workers.append(household)
+#	province.population_manager.new_generation = 0
 	
-	province.population_manager.needs.set_needs(province.population_manager.list_of_soc_classes)
+	province.population_manager.needs.set_needs(province.population_manager)
 	
 	
 	

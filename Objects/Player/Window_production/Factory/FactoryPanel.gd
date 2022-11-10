@@ -26,18 +26,14 @@ func update():
 	$Name_of_province.disabled = false
 	if factory.closed == false:
 		update_information_about_factory()
-		
-		if factory.tipe == "factory":
-			update_information_about_income()
-		else:
-			$Income.text = ""
+		update_information_about_income()
 	
 	else:
 		update_information_about_closed_factory()
 
 
 func update_information_about_income():
-	var profit = factory.income - (factory.expenses_purchase + factory.expenses_workers)
+	var profit = factory.income - (factory.get_expenses())
 	if profit >= 0: 
 		$Income.text = "+" + str(profit)
 		$Income.add_color_override("font_color", Color(0.094118, 0.580392, 0))
@@ -50,7 +46,7 @@ func update_information_about_factory():
 	show_good()
 	$Name_of_province.text = province.name_of_tile + "(" + str(province.list_of_households.size()) + ")"
 	$Output.text = str(factory.output)
-	$Workers.text = str(factory.quantity_of_workers) + "/" + str(factory.max_employed_number)
+	$Workers.text = str(factory.quantity_of_workers) + "/" + str(factory.real_max_employed_number)
 	$Bonus_for_production.text = "+" + "?" + "%"
 	$Actions.update_information()
 
@@ -78,17 +74,7 @@ func show_good():
 
 func on_good_button_pressed(event):
 	if event is InputEventMouseButton and event.is_pressed():
-		if event.button_index == BUTTON_LEFT:
-			if factory.tipe == "military_factory":
-				var token = list_of_military_goods.find(factory.good) + 1
-				if token == list_of_military_goods.size():
-					token = 0
-				factory.good = list_of_military_goods[token]
-				factory.purchase = GlobalMarket.goods[list_of_military_goods[token]]
-				show_purchase()
-				show_good()
-			
-		elif event.button_index == BUTTON_RIGHT:
+		if event.button_index == BUTTON_RIGHT:
 			var player = Players.player.window_production.info_about_factory_window
 			player.factory = factory
 			player.visible = true

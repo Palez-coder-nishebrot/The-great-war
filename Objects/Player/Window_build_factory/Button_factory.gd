@@ -2,9 +2,7 @@ extends Button
 
 var parent: Object 
 
-func _ready():
-	connect("pressed", self, "on_button_pressed")
 
-
-func on_button_pressed():
-	parent.check_factory(text)
+func _gui_input(event):
+	if event is InputEventMouseButton and pressed:
+		parent.check_factory(text)

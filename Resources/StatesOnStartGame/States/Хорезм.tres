@@ -7,6 +7,22 @@ script = ExtResource( 1 )
 name_of_state = "Horesm"
 list_of_regions = PoolStringArray( "Лодзь", "Станислав", "Черновцы", "Галич", "Калуш", "Познань", "Ровно", "Богородчаны", "Днестр", "Тлумач", "Белжеца", "Митава" )
 form_of_goverment = "monarchy"
-ideology = "populists"
+ideology = "conservators"
 national_color = Color( 0.556863, 0.447059, 0.431373, 1 )
 national_id = ""
+popularity_of_parties = {
+"communists": 5,
+"conservators": 45,
+"fascists": 0,
+"liberals": 30,
+"libertarians": 5,
+"socialists": 15
+}
+names_of_parties = {
+"communists": "Партия защиты труда",
+"conservators": "Крестьянская партия",
+"fascists": "Национально-трудовая группа",
+"liberals": "Республиканская народная партия",
+"libertarians": "Федерально-демократическая партия",
+"socialists": "Социалистическая рабочая федерация"
+}

@@ -13,6 +13,8 @@ func start_expansion_of_factory():
 		time = time + 1
 	
 	building.max_employed_number += 1
+	building.real_max_employed_number += 1
+	
 	
 	building.expansion = null
 	

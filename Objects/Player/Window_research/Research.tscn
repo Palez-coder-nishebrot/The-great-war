@@ -186,9 +186,9 @@ align = 1
 valign = 1
 
 [node name="ButtonExample" type="Button" parent="."]
-margin_top = -108.0
+margin_top = -321.0
 margin_right = 248.0
-margin_bottom = -60.0
+margin_bottom = -273.0
 size_flags_vertical = 4
 custom_fonts/font = SubResource( 1 )
 text = "Маневренная война"
@@ -196,9 +196,9 @@ script = ExtResource( 3 )
 
 [node name="LabelExample" type="Label" parent="."]
 margin_left = 248.0
-margin_top = -108.0
+margin_top = -321.0
 margin_right = 483.0
-margin_bottom = -60.0
+margin_bottom = -273.0
 custom_fonts/font = SubResource( 4 )
 text = "Маневренная война"
 align = 1

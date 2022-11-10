@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=6 format=2]
+[gd_resource type="Resource" load_steps=7 format=2]
 
 [ext_resource path="res://Resources/Technologies/Technology.gd" type="Script" id=1]
 [ext_resource path="res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectNewFactory.gd" type="Script" id=2]
@@ -9,6 +9,11 @@ script = ExtResource( 2 )
 name_of_effect = "Новый тип завода"
 target = "Rubber_factory"
 
+[sub_resource type="Resource" id=3]
+script = ExtResource( 2 )
+name_of_effect = "Новый тип завода"
+target = "Oil_factory"
+
 [sub_resource type="Resource" id=2]
 script = ExtResource( 3 )
 name_of_effect = "Производительность"
@@ -18,5 +23,5 @@ target = "factories"
 [resource]
 script = ExtResource( 1 )
 cotegory = ""
-name_of_technology = "Синтетическая резина"
-list_of_effects = [ SubResource( 1 ), SubResource( 2 ) ]
+name_of_technology = "Импортозамещение"
+list_of_effects = [ SubResource( 1 ), SubResource( 3 ), SubResource( 2 ) ]
