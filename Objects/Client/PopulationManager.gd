@@ -3,9 +3,9 @@ extends Node
 class_name PopulationManager
 
 var client
-var manager_of_migration_workers      = load("res://Resources/SocialMigration/SocClasses/Worker.tres")
-var manager_of_migration_proletarians = load("res://Resources/SocialMigration/SocClasses/Proletarian.tres")
-var manager_of_migration_clerks       = load("res://Resources/SocialMigration/SocClasses/Clerk.tres")
+#var manager_of_migration_workers      = load("res://Resources/SocialMigration/SocClasses/Worker.tres")
+#var manager_of_migration_proletarians = load("res://Resources/SocialMigration/SocClasses/Proletarian.tres")
+#var manager_of_migration_clerks       = load("res://Resources/SocialMigration/SocClasses/Clerk.tres")
 
 
 func _init(client):
@@ -45,20 +45,20 @@ func update_research_points():
 	client.growth_of_researching_points = points
 
 
-func update_soc_migration():#client, data):
-	for region in client.list_of_tiles:
-		var migration_to_worker      = manager_of_migration_workers.check(region.population_manager)
-		var migration_to_proletarian = manager_of_migration_proletarians.check(region.population_manager)
-		var migration_to_clerk       = manager_of_migration_clerks.check(region.population_manager)
-		var pop_manager              = region.population_manager
-		
-		if migration_to_worker:
-			migrate_to_workers(pop_manager)
-		elif migration_to_proletarian:
-			migrate_to_workers(pop_manager)
-		
-		if migration_to_clerk:
-			migrate_to_workers(pop_manager)
+#func update_soc_migration():#client, data):
+#	for region in client.list_of_tiles:
+#		var migration_to_worker      = manager_of_migration_workers.check(region.population_manager)
+#		var migration_to_proletarian = manager_of_migration_proletarians.check(region.population_manager)
+#		var migration_to_clerk       = manager_of_migration_clerks.check(region.population_manager)
+#		var pop_manager              = region.population_manager
+#
+#		if migration_to_worker:
+#			migrate_to_workers(pop_manager)
+#		elif migration_to_proletarian:
+#			migrate_to_workers(pop_manager)
+#
+#		if migration_to_clerk:
+#			migrate_to_workers(pop_manager)
 		
 		#yield(client.game, "new_day")
 

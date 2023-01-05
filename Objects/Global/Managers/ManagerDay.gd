@@ -84,7 +84,7 @@ func update_clients():
 		#i.technologies.update_middle_value_education_of_population()
 		i.reforms_manager.update_points_of_reforms()
 		
-		i.population_manager.update_soc_migration()
+#		i.population_manager.update_soc_migration()
 		i.population_manager.update_research_points()
 		i.population_manager.update_expenses_education()
 		#game.craftsmen_manager.goods_production(i)

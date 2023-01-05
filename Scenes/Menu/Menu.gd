@@ -39,8 +39,3 @@ func hide():
 
 func path_editor():
 	get_tree().change_scene("res://Scenes/MapEditor/MapEditor.tscn")
-
-
-func _on_TextureButton_pressed():
-	print("pressed")
-	pass # Replace with function body.

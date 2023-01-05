@@ -759,9 +759,9 @@ margin_bottom = 244.0
 
 [node name="Тамань" parent="." instance=ExtResource( 4 )]
 margin_left = 1651.0
-margin_top = 654.0
-margin_right = 1985.0
-margin_bottom = 1068.0
+margin_top = 653.0
+margin_right = 1997.0
+margin_bottom = 1067.0
 texture_normal = ExtResource( 109 )
 
 [node name="Label" parent="Тамань" index="0"]
@@ -829,9 +829,6 @@ margin_top = 88.0
 margin_right = 433.0
 margin_bottom = 224.0
 rect_rotation = -77.0
-
-[node name="Area2D" parent="Яремче" index="1"]
-rotation = -1.3439
 
 [node name="Коростень" parent="." instance=ExtResource( 4 )]
 margin_left = 1756.0
@@ -1216,9 +1213,6 @@ margin_top = 245.0
 margin_right = 5032.0
 margin_bottom = 629.0
 texture_normal = ExtResource( 54 )
-
-[connection signal="mouse_entered" from="Яремче/Area2D" to="Яремче" method="mouse_entered"]
-[connection signal="mouse_exited" from="Яремче/Area2D" to="Яремче" method="mouse_exited"]
 
 [editable path="Красник"]
 [editable path="Луцк"]
