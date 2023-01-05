@@ -45,6 +45,6 @@ name_of_effect = "Потерянное поколение"
 
 [resource]
 script = ExtResource( 1 )
-cotegory = ""
+cost = 1800
 name_of_technology = "Общевойсковой бой"
 list_of_effects = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ]

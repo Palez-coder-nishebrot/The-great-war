@@ -11,6 +11,6 @@ value = 2
 
 [resource]
 script = ExtResource( 1 )
-cotegory = ""
+cost = 2000
 name_of_technology = "Автобаны"
 list_of_effects = [ SubResource( 1 ) ]

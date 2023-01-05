@@ -19,7 +19,7 @@ func new_day():
 
 
 func check_capitalists():
-	if player.economy["Экономическая_модель"] != "Плановая_экономика" and player.list_of_factories.size() > 0:
+	if player.economic_policy != "planned_economy" and player.list_of_factories.size() > 0:
 		quantity = 1
 	else:
 		quantity = 0
@@ -34,6 +34,6 @@ func invest_in_factories():
 	pass
 
 
-func set_bonus(num):
-	bonus_of_factories += 0.1 * num
-	player.economy["Производительность_фабрик"] += 0.1 * num
+#func set_bonus(num):
+#	bonus_of_factories += 0.1 * num
+#	player.economy["Производительность_фабрик"] += 0.1 * num

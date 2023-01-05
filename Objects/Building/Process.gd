@@ -18,6 +18,7 @@ func start_build_factory(list):
 	game.factory_manager.list_of_factories.append(building)
 	
 	building.province.get_goods_in_province()
+	building.closed = false
 	
 	list.erase(self)
 	queue_free()

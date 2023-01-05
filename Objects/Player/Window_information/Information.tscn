@@ -1,10 +1,8 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=19 format=2]
 
-[ext_resource path="res://Graphics/Sprites/Goods/Tea.png" type="Texture" id=1]
 [ext_resource path="res://Objects/Player/Window_information/Information.gd" type="Script" id=2]
 [ext_resource path="res://Graphics/Fonts/pixel_2.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Graphics/Styles/DefaultButton.tres" type="Theme" id=4]
-[ext_resource path="res://Graphics/Sprites/Goods/Tabaco.png" type="Texture" id=5]
 [ext_resource path="res://Graphics/Sprites/Goods/Coal.png" type="Texture" id=6]
 [ext_resource path="res://Graphics/Sprites/Goods/Rubber.png" type="Texture" id=7]
 [ext_resource path="res://Graphics/Sprites/Goods/Iron.png" type="Texture" id=8]
@@ -48,7 +46,7 @@ script = ExtResource( 2 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_right = 415.0
-margin_bottom = 196.0
+margin_bottom = 178.0
 custom_constants/separation = 0
 
 [node name="Label" type="Label" parent="VBoxContainer"]
@@ -217,30 +215,6 @@ icon = ExtResource( 10 )
 expand_icon = true
 script = ExtResource( 15 )
 good = "cotton"
-
-[node name="GoodButton10" type="Button" parent="Goods"]
-margin_left = 208.0
-margin_top = 66.0
-margin_right = 277.0
-margin_bottom = 131.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-icon = ExtResource( 1 )
-expand_icon = true
-script = ExtResource( 15 )
-good = "tea"
-
-[node name="GoodButton11" type="Button" parent="Goods"]
-margin_left = 277.0
-margin_top = 66.0
-margin_right = 346.0
-margin_bottom = 131.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-icon = ExtResource( 5 )
-expand_icon = true
-script = ExtResource( 15 )
-good = "tabaco"
 
 [connection signal="pressed" from="VBoxContainer/Button_speed" to="." method="change_speed_of_game"]
 [connection signal="pressed" from="VBoxContainer/Button_pause" to="." method="update_pause"]

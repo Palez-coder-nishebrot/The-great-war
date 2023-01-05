@@ -11,6 +11,6 @@ target = "fleet"
 
 [resource]
 script = ExtResource( 1 )
-cotegory = ""
+cost = 1100
 name_of_technology = "Дизельные корабли"
 list_of_effects = [ SubResource( 2 ) ]

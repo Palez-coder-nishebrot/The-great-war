@@ -10,7 +10,7 @@ func _ready():
 	create_map()
 	#set_d()
 	set_color_of_regions()
-	set_collisions_of_regions()
+	#set_collisions_of_regions()
 
 
 #func set_d():
@@ -39,7 +39,7 @@ func create_map():
 	
 	for i in map_children:
 		if i.name != "Map":
-			create_region(i)
+			create_region(i, map)
 
 
 func set_dict_of_regions():
@@ -51,13 +51,13 @@ func set_dict_of_regions():
 	#breakpoint
 
 
-func create_region(region_from_tilemap):
+func create_region(region_from_tilemap: TextureButton, map):
 	var region = load("res://Scenes/MapEditor/EditorTile/EditorTile.tscn").instance()
 	add_child(region)
-	region.texture = region_from_tilemap.texture
+	region.texture_normal = region_from_tilemap.texture_normal
 	region.name_of_region = region_from_tilemap.name
 	region.label.text = region_from_tilemap.name
-	region.position = region_from_tilemap.position
+	region.rect_position = region_from_tilemap.rect_position
 	
 	if not provinces.has(region.name_of_region):
 		provinces[region.name_of_region] = {
@@ -67,7 +67,7 @@ func create_region(region_from_tilemap):
 				#"households": [],
 				"factory_workers": 0,
 				"workers": 0,
-				#"clerks": 0,
+				"clerks": 0,
 				"railways": 0,
 				}
 	region.railways = provinces[region.name_of_region].railways
@@ -81,6 +81,11 @@ func create_region(region_from_tilemap):
 #		region.list_of_households.append(SavedHousehold.new())
 	
 	list_of_regions[region.name_of_region] = region
+	
+	var region_on_map = map.get_node(region.name_of_region).get_node("Label")#.name_of_region_label.rect_position
+	region.label.rect_position = region_on_map.rect_position
+	region.label.rect_rotation = region_on_map.rect_rotation
+	region.set_mask()
 	
 
 func set_color_of_regions():
@@ -99,12 +104,12 @@ func set_color_of_regions():
 		folder_name = folder.get_next()
 
 
-func set_collisions_of_regions():
-	var file = ResourceLoader.load("res://Objects/Provinces/CollisionPolygons_of_provinces.tres")
-	
-	for i in file.list_of_pol_of_provinces:
-		var region = list_of_regions[i]
-		region.collision.polygon = file.list_of_pol_of_provinces[i]
-	
-		region.collision.position.x -= region.get_rect().size.x / 2
-		region.collision.position.y -= region.get_rect().size.y / 2
+#func set_collisions_of_regions():
+#	var file = ResourceLoader.load("res://Objects/Provinces/CollisionPolygons_of_provinces.tres")
+#
+#	for i in file.list_of_pol_of_provinces:
+#		var region = list_of_regions[i]
+#		region.collision.polygon = file.list_of_pol_of_provinces[i]
+#
+#		region.collision.position.x -= region.get_rect().size.x / 2
+#		region.collision.position.y -= region.get_rect().size.y / 2

@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource( 1 )
 needs_of_workers = {
-"alcohol": 0.2,
+"alcohol": 0.1,
 "beasts": 0.0,
 "cars": 0.1,
 "clothes": 0.1,
@@ -15,10 +15,11 @@ needs_of_workers = {
 "glass": 0.1,
 "grain": 0.0,
 "phone": 0.1,
-"radio": 0.1
+"radio": 0.1,
+"textile": 0.1
 }
 needs_of_factory_workers = {
-"alcohol": 0.2,
+"alcohol": 0.1,
 "beasts": 0.1,
 "cars": 0.1,
 "clothes": 0.1,
@@ -28,7 +29,8 @@ needs_of_factory_workers = {
 "glass": 0.1,
 "grain": 0.1,
 "phone": 0.1,
-"radio": 0.1
+"radio": 0.1,
+"textile": 0.1
 }
 needs_of_craftsmen = {
 "alcohol": 0.0,
@@ -43,7 +45,7 @@ needs_of_craftsmen = {
 "radio": 0.02
 }
 needs_of_clerks = {
-"alcohol": 0.2,
+"alcohol": 0.1,
 "beasts": 0.1,
 "cars": 0.1,
 "clothes": 0.2,
@@ -53,5 +55,6 @@ needs_of_clerks = {
 "glass": 0.1,
 "grain": 0.2,
 "phone": 0.1,
-"radio": 0.1
+"radio": 0.1,
+"textile": 0.1
 }

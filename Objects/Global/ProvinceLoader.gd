@@ -45,17 +45,18 @@ var production_goods: Array = [
 	"lumber",
 ]
 
-func create_map(dict_of_regions):
+func create_map(dict_of_regions, game):
 	var file = ResourceLoader.load("res://Objects/Provinces/SavedRegions.tres")
 	
 	for i in file.regions:
 		var region = dict_of_regions[i.name_of_province]
 		var factories = []
+		var client = region.player
 		
-		region.player.list_of_tiles.append(region)
+		client.list_of_tiles.append(region)
 		region.population_manager = load("res://Objects/Population/PopulationManager.gd").new()
 		region.population_manager.province = region
-		region.population_manager.player = region.player
+		region.population_manager.player = client
 		region.get_parent().get_parent().purchase_manager.list_of_population_managers.append(region.population_manager)
 		
 		for factory in i.factories:
@@ -66,12 +67,14 @@ func create_map(dict_of_regions):
 		
 		var middle_education = create_household(i, region)
 		
-		region.population_manager.education = middle_education / region.population_manager.get_quantity_of_population()
+		region.population_manager.education = client.middle_value_education
 		
 		region.railways.level = i.railways
 		region.population_manager.needs.set_objects_of_goods()
 		region.population_manager.needs.set_needs(region.population_manager)
 		region.get_goods_in_province()
+		
+		game.list_of_provinces.append(region)
 	
 #	for i in Players.list_of_players:
 #		i.population_manager.new_day()
@@ -81,6 +84,7 @@ func create_map(dict_of_regions):
 func create_factory(factory_name, game, region):
 	var factory_object = load(factories[factory_name])
 	var factory = Factory.new()
+	factory.closed = false
 	factory.good = factory_object.good
 	factory.name_of_factory = factory_object.name_of_factory
 	factory.province = region
@@ -106,27 +110,3 @@ func create_household(obj, region):
 	
 	ed = ed / (obj.factory_workers + obj.workers)
 	return ed
-#	if household.soc_class == "Worker":
-#		region.population_manager.quantity_of_workers += household.workers
-#		ed += education[household.soc_class]
-#		pass
-#	elif household.soc_class == "Proletarian":
-#		region.population_manager.quantity_of_factory_workers += household.factory_workers
-#	else:
-#		region.population_manager.quantity_of_clerks += 1
-#		push_error("Служащие!")
-	
-#	var household = Household.new()
-#	household.soc_class = household_object.soc_class
-#	household.province = region
-#	household.population_manager = region.population_manager
-#	region.population_manager.list_of_soc_classes.append(household)
-#	region.player.list_of_soc_classes.append(household)
-#	if household.soc_class == "Craftsman": 
-#		region.player.list_of_craftsmen.append(household)
-#	region.population_manager.get(variables[household.soc_class]).append(household)
-#	region.get_parent().get_parent().list_of_provinces.append(region)
-	#region.get_parent().get_parent().list_of_provinces.append(region)
-	
-	
-	#household.education = education[household_object.soc_class]

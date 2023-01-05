@@ -10,7 +10,7 @@ var list_of_values: Array = [
 
 var client
 
-var popularity: int = 0
+#var popularity: int = 0
 
 var name_of_party: String      = ""
 var ideology:      String      = ""
@@ -23,8 +23,9 @@ var foreign_policy:     String = ""
 var cost_of_factories:      int = 0
 var cost_of_infrastructure: int = 0
 
-var elections:           bool   = false
-var subsidization:       bool   = false
+var elections:                     bool   = false
+var subsidization:                 bool   = false
+var building_not_profit_factories: bool   = false
 var income_of_capitalists: int   = 0
 var max_tariffs:       int   = 0
 var min_tariffs:       int   = 0
@@ -52,6 +53,7 @@ func set_party(ideology):
 	
 	elections = form_of_gov.elections
 	subsidization = economy.subsidization
+	building_not_profit_factories = economy.building_not_profit_factories
 	income_of_capitalists = economy.income_of_capitalists
 	max_tariffs = trade.max_tariffs
 	min_tariffs = trade.min_tariffs
@@ -65,6 +67,7 @@ func change_country():
 	client.trade_policy = trade_policy
 	client.foreign_policy = foreign_policy
 	
+	client.building_not_profit_factories = building_not_profit_factories
 	client.cost_of_factories      = cost_of_factories
 	client.cost_of_infrastructure = cost_of_infrastructure
 	client.subsidization          = subsidization

@@ -6,6 +6,10 @@ var province
 var factory: Object
 var list_of_military_goods: Array = GlobalMarket.quanity_of_military_goods.keys()
 
+onready var output_label = $Output
+onready var workers_label = $Workers
+onready var income_label = $Income
+
 func update_information():
 	if not is_instance_valid(factory):
 		get_parent().list_of_factories.erase(factory)
@@ -18,12 +22,11 @@ func update_information():
 
 func update_information_about_factory_in_construction():
 	show_good()
-	$Name_of_province.text = province.name_of_tile + "(" + str(province.list_of_households.size()) + ")"
 	$Output.text = str(factory.time_of_construction) + "/" + str(factory.time)
 
 
 func update():
-	$Name_of_province.disabled = false
+	#$Name_of_province.disabled = false
 	if factory.closed == false:
 		update_information_about_factory()
 		update_information_about_income()
@@ -44,7 +47,6 @@ func update_information_about_income():
 
 func update_information_about_factory():
 	show_good()
-	$Name_of_province.text = province.name_of_tile + "(" + str(province.list_of_households.size()) + ")"
 	$Output.text = str(factory.output)
 	$Workers.text = str(factory.quantity_of_workers) + "/" + str(factory.real_max_employed_number)
 	$Bonus_for_production.text = "+" + "?" + "%"
@@ -52,11 +54,9 @@ func update_information_about_factory():
 
 
 func update_information_about_closed_factory():
-	$Name_of_province.text = province.name_of_tile + "(" + str(province.list_of_households.size()) + ")"
 	$Output.text = "-"
 	$Workers.text = "0/" + str(factory.max_employed_number)
 	$Bonus_for_production.text = "+" + "?" + "%"
-	$Name_of_province.disabled = true
 	$Income.text = ""
 	
 
@@ -64,7 +64,7 @@ func show_purchase():
 	var list: Array = factory.purchase.keys()
 	for i in $HBoxContainer.get_children():
 		if not list.empty():
-			i.icon = load(Players.sprites_of_goods[list[0]])
+			i.texture = load(Players.sprites_of_goods[list[0]])
 			list.erase(list[0])
 	
 

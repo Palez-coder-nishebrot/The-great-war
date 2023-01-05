@@ -11,9 +11,10 @@ const MILITARY_TECHNOLOGIES_FILES: Dictionary = {
 
 const ECONOMIC_TECHNOLOGIES_FILES: Dictionary = {
 	"farm_production":    "FarmProduction",
-	"mines_production":   "MinesProduction",
+	"metallurgy":   "Metallurgy",
 	"factory_production": "FactoryProduction",
 	"supply":             "Supply",
+	"economic_structures":"EconomicStructures"
 }
 
 var army_managerment: Array = []
@@ -22,9 +23,10 @@ var light_weapon:     Array = []
 var navy:             Array = []
 
 var farm_production:    Array = []
-var mines_production:   Array = []
+var metallurgy:         Array = []
 var factory_production: Array = []
 var supply:             Array = []
+var economic_structures:Array = []
 
 var researching_technology: Technology
 var client: Object
@@ -52,18 +54,19 @@ func set_cotegories(TECHNOLOGIES_FILES, folder_name):
 		for y in range(5):
 			var name_of_file = folder.get_next()
 			var path_of_file: String = path + name_of_file
-			var file = load(path_of_file)
+			var file = load(path_of_file).duplicate()
 			file.cotegory = i
 			get(i).append(file)
 		get(i)[0].ready_for_researching = true
 
 
 func start_research(technology):
+	var pool_researching_points = technology.cost
 	researching_technology = technology
-	research_time = 0
-	while research_time < 3:
+	while pool_researching_points >= 0:
 		yield(Players.player.game, "new_day")
-		research_time = research_time + 1
+		pool_researching_points -= client.researching_points
+		client.researching_points = 0
 	activate_effects()
 
 
@@ -84,12 +87,3 @@ func update_ready_technology(technology):
 	if count + 1 != variable.size():
 		variable[count + 1].ready_for_researching = true
 	technology.ready_for_researching = false
-
-
-func update_middle_value_education_of_population():
-	var education = 0
-	for i in client.list_of_soc_classes:
-		education += i.education
-	education = education / client.population
-	client.middle_value_education = education
-	

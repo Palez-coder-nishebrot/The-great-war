@@ -2,13 +2,16 @@ extends Node2D
 
 
 func _ready():
-	var s = 120.0
-	var d = 100.0
-			
-	print(((s / d) * 100) - 100)
-	
 	TranslationServer.set_locale("en")
-	ReformEffect
+	#ReformEffect
+#	for i in range(120):
+#		var texture = load("res://Graphics/Sprites/Provinces/Адамантия/Бердичев.png")
+#		var data = texture.get_data()
+#
+#		var bitmap = BitMap.new()
+#		bitmap.create_from_image_alpha(data)
+#		$TextureButton.set_click_mask(bitmap)
+#		#create_from_image_alpha()
 	
 
 func ChangeScene(name_of_country):
@@ -36,3 +39,8 @@ func hide():
 
 func path_editor():
 	get_tree().change_scene("res://Scenes/MapEditor/MapEditor.tscn")
+
+
+func _on_TextureButton_pressed():
+	print("pressed")
+	pass # Replace with function body.

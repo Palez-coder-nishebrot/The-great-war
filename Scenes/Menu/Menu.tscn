@@ -3,7 +3,7 @@
 [ext_resource path="res://Scenes/Menu/Menu.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Menu/ListOfCountries.gd" type="Script" id=2]
 [ext_resource path="res://Scenes/Menu/country_button.gd" type="Script" id=3]
-[ext_resource path="res://Objects/Player/PieChart/PieChart.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Graphics/Sprites/Provinces/Адамантия/Бердичев.png" type="Texture" id=4]
 [ext_resource path="res://Graphics/Fonts/pixel_2.ttf" type="DynamicFontData" id=5]
 
 [sub_resource type="DynamicFont" id=8]
@@ -115,24 +115,31 @@ margin_bottom = 108.0
 custom_fonts/font = SubResource( 9 )
 text = "Мультиплеер"
 
-[node name="Button3" type="Button" parent="VBoxContainer"]
+[node name="Button6" type="Button" parent="VBoxContainer"]
 margin_top = 108.0
 margin_right = 516.0
 margin_bottom = 162.0
 custom_fonts/font = SubResource( 9 )
+text = "Обучение"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+margin_top = 162.0
+margin_right = 516.0
+margin_bottom = 216.0
+custom_fonts/font = SubResource( 9 )
 text = "Настройки"
 
 [node name="Button4" type="Button" parent="VBoxContainer"]
-margin_top = 162.0
+margin_top = 216.0
 margin_right = 516.0
-margin_bottom = 211.0
+margin_bottom = 265.0
 custom_fonts/font = SubResource( 10 )
 text = "Руководство разработчика"
 
 [node name="Button5" type="Button" parent="VBoxContainer"]
-margin_top = 211.0
+margin_top = 265.0
 margin_right = 516.0
-margin_bottom = 265.0
+margin_bottom = 319.0
 custom_fonts/font = SubResource( 9 )
 text = "Выход"
 
@@ -163,13 +170,14 @@ margin_bottom = 162.0
 custom_fonts/font = SubResource( 9 )
 text = "Редактор карты"
 
-[node name="Control" parent="." instance=ExtResource( 4 )]
-visible = false
-margin_left = 1595.0
-margin_top = 542.0
-margin_right = 1595.0
-margin_bottom = 542.0
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 967.0
+margin_top = 584.0
+margin_right = 1381.0
+margin_bottom = 944.0
+texture_normal = ExtResource( 4 )
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="one_player"]
 [connection signal="pressed" from="VBoxContainer/Button4" to="." method="developer_guide"]
 [connection signal="pressed" from="VBoxContainer2/Button3" to="." method="path_editor"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]

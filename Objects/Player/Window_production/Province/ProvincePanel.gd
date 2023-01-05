@@ -5,12 +5,20 @@ signal update_info_about_factory
 var list_of_factories: Dictionary = {}
 var province
 
+onready var name_of_tile = $Label
+
 func update_information():
+	$Label.text = province.name_of_tile
 	for i in province.list_of_buildings:
 		if not list_of_factories.has(i):
 			spawn_panel(i)
 	
 	emit_signal("update_info_about_factory")
+	
+	if list_of_factories.size() == 0:
+		visible = false
+	else:
+		visible = true
 
 
 func spawn_panel(factory):

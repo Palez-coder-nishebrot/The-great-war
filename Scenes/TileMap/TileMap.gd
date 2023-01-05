@@ -44,33 +44,11 @@ var exper: Array = []
 
 
 func create_map():
-#	var file = ResourceLoader.load("res://Objects/Provinces/Paths_of_provinces.tres")
-#
-#	resourses_of_province  = file.list_of_resources_of_provinces
-#	factories_of_province  = file.list_of_factories_of_provinces
-#	villages_of_province   = file.list_of_villages_of_provinces
-#	households_of_province = file.list_of_household_of_provinces
-#	paths_of_province      = file.list_of_path_of_provinces
-	
 	append_tiles_in_list()
 	
-	set_collision_of_provinces()
+	#set_collision_of_provinces()
 	give_tiles_to_players()
-	ProvinceLoader.create_map(list_of_tiles)
-#	for i in list_of_tiles:
-#		set_resourses_of_tiles(list_of_tiles[i], resourses_of_province[i])
-#		set_paths(list_of_tiles[i])
-#
-#	for i in list_of_tiles:
-#		list_of_tiles[i].population_manager = load("res://Objects/Population/PopulationManager.gd").new()
-#		list_of_tiles[i].population_manager.province = list_of_tiles[i]
-#		set_households_of_provinces(list_of_tiles[i], households_of_province[i])
-#		if factories_of_province.has(i):
-#			set_factories_of_tiles(list_of_tiles[i], factories_of_province[i])
-#
-#		get_parent().list_of_provinces.append(list_of_tiles[i])
-#
-#	give_tiles_to_players()
+	ProvinceLoader.create_map(list_of_tiles, get_parent())
 
 
 func set_collision_of_provinces():
@@ -157,7 +135,7 @@ func give_tiles_to_players():
 			tile.start()
 			
 		folder_name = folder.get_next()
-	get_parent().new_day()
+	#get_parent().new_day()
 
 
 func give_to_tiles(player, tile):
@@ -170,7 +148,7 @@ func give_to_tiles(player, tile):
 
 func append_tiles_in_list():
 	for i in get_children():
-		if i.get_class() == "Sprite" and i.name != "Map":
+		if i.get_class() == "TextureButton" and i.name != "Map":
 			list_of_tiles[i.name] = i
 			i.name_of_tile = i.name
 			list_of_provinces[i.name] = i

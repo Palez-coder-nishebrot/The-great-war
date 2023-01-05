@@ -18,6 +18,6 @@ target = "rubber"
 
 [resource]
 script = ExtResource( 1 )
-cotegory = ""
+cost = 1100
 name_of_technology = "Углеродные удобрения"
 list_of_effects = [ SubResource( 1 ), SubResource( 2 ) ]

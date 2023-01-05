@@ -26,6 +26,6 @@ target = "fighter_airplane"
 
 [resource]
 script = ExtResource( 1 )
-cotegory = ""
+cost = 1000
 name_of_technology = "Воздушный флот"
 list_of_effects = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ]

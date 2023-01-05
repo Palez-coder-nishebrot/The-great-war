@@ -8,4 +8,5 @@ name_of_policy = "free_economy"
 cost_of_factories = 0
 cost_of_infrastructure = 0
 subsidization = false
+building_not_profit_factories = false
 income_of_capitalists = 100

@@ -7,9 +7,10 @@
 script = ExtResource( 2 )
 name_of_effect = "Максимум инфраструктуры"
 target = "max_railways"
+value = 1
 
 [resource]
 script = ExtResource( 1 )
-cotegory = ""
-name_of_technology = "Прифронтовые склады"
+cost = 1200
+name_of_technology = "Национальная ЖД система"
 list_of_effects = [ SubResource( 1 ) ]

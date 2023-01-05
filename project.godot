@@ -64,6 +64,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Objects/Building/Infrastructure.gd"
 }, {
+"base": "Resource",
+"class": "Landscape",
+"language": "GDScript",
+"path": "res://Objects/Tile/Landscape.gd"
+}, {
 "base": "Node",
 "class": "MilitaryBonuses",
 "language": "GDScript",
@@ -119,7 +124,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Objects/Client/ReformsManager/ReformsManager.gd"
 }, {
-"base": "Sprite",
+"base": "TextureButton",
 "class": "Region",
 "language": "GDScript",
 "path": "res://Objects/Tile/Point.gd"
@@ -175,6 +180,16 @@ _global_script_classes=[ {
 "path": "res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectDefense.gd"
 }, {
 "base": "TechnologyEffect",
+"class": "TechnologyEffectEducationEfficiency",
+"language": "GDScript",
+"path": "res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectEducationEfficiency.gd"
+}, {
+"base": "TechnologyEffect",
+"class": "TechnologyEffectInflation",
+"language": "GDScript",
+"path": "res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectInflation.gd"
+}, {
+"base": "TechnologyEffect",
 "class": "TechnologyEffectLostGeneration",
 "language": "GDScript",
 "path": "res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectLostGeneration.gd"
@@ -226,6 +241,7 @@ _global_script_class_icons={
 "Good": "",
 "Household": "",
 "Infrastructure": "",
+"Landscape": "",
 "MilitaryBonuses": "",
 "PartiesManager": "",
 "Party": "",
@@ -248,6 +264,8 @@ _global_script_class_icons={
 "TechnologyEffect": "",
 "TechnologyEffectAttack": "",
 "TechnologyEffectDefense": "",
+"TechnologyEffectEducationEfficiency": "",
+"TechnologyEffectInflation": "",
 "TechnologyEffectLostGeneration": "",
 "TechnologyEffectMaxInfrastructure": "",
 "TechnologyEffectNewFactory": "",
@@ -279,7 +297,7 @@ ProvinceLoader="*res://Objects/Global/ProvinceLoader.gd"
 window/size/width=1920
 window/size/height=1080
 window/dpi/allow_hidpi=true
-window/stretch/mode="2d"
+window/stretch/mode="viewport"
 
 [global]
 

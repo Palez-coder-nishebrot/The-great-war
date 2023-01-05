@@ -1,7 +1,7 @@
 ,en
-KEY_HELLO,ЫЫЫЫ
+KEY_HELLO,Проверка
 KEY_PUSH,Нажми!
-show_name_of_region,Регионы
+set_default_region,Политическая карта
 show_units,Войска
 show_resources,Ресурсы
 Steel_plant,Сталелитейный завод
@@ -50,7 +50,7 @@ conservators,Консерваторы
 free_trade,Свободная торговля
 protectionism,Протекционизм
 pacifism,Пацифизм
-conservatism,Консерватизм
+conservatism,Невмешательство
 militarism,Милитаризм
 monarchy,Монархия
 republic,Республика
@@ -73,7 +73,7 @@ wood,Древесина
 steel,Сталь
 glass,Стекло
 textile,Ткань
-el_parts,Электрозапчасти
+el_parts,Электрооборудование
 lumber,Пиломатериалы
 el_appliances,Электроприборы
 cars,Автомобили
@@ -85,8 +85,6 @@ alcohol,Спиртное
 clothes,Одежда
 canned_food,Консервы
 gas,Топливо
-tabaco,Табак
-tea,Чай
 projectiles,Снаряды
 ammo,Боеприпасы
 machine_guns,Пулеметы

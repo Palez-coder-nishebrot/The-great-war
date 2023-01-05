@@ -38,6 +38,8 @@ func _ready():
 		manager.create_players(self)
 	craftsmen_manager.game = self
 	craftsmen_manager.set_purchase()
+	
+	new_day()
 
 
 func set_prices_of_goods():
@@ -49,6 +51,7 @@ func set_prices_of_goods():
 
 
 func new_day():
+	#breakpoint
 	yield(get_tree().create_timer(speed_of_game), "timeout")
 	
 	if pause == false:
@@ -90,25 +93,6 @@ func circle_of_game():
 func clear_GDP():
 	for player in Players.list_of_players:
 		player.gdp = 0
-
-
-func spawn_household(province):
-	province.population_manager.new_generation = 0
-	province.population_manager.quantity_of_workers += 1
-#	var household = Household.new()
-#	household.province = province
-#	household.education = 0
-#	household.soc_class = "Worker"
-#	household.religion = ""
-#
-#	province.player.list_of_soc_classes.append(household)
-#	household.population_manager = province.population_manager
-#	province.population_manager.list_of_soc_classes.append(household)
-#	province.population_manager.list_of_workers.append(household)
-#	province.population_manager.new_generation = 0
-	
-	province.population_manager.needs.set_needs(province.population_manager)
-	
 	
 	
 func create_province_editor():

@@ -73,10 +73,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button2" type="Button" parent="VBoxContainer"]
+[node name="Label4" type="Label" parent="VBoxContainer"]
 margin_top = 77.0
 margin_right = 413.0
-margin_bottom = 115.0
+margin_bottom = 104.0
+custom_fonts/font = SubResource( 3 )
+text = "Прибыль фабрики"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+margin_top = 101.0
+margin_right = 413.0
+margin_bottom = 139.0
 custom_fonts/font = SubResource( 4 )
 text = "Закрыть"
 

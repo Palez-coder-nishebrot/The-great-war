@@ -1,9 +1,32 @@
-[gd_resource type="Resource" load_steps=2 format=2]
+[gd_resource type="Resource" load_steps=9 format=2]
 
 [ext_resource path="res://Resources/Technologies/Technology.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectEducationEfficiency.gd" type="Script" id=2]
+[ext_resource path="res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectInflation.gd" type="Script" id=3]
+[ext_resource path="res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectNewFactory.gd" type="Script" id=4]
+
+[sub_resource type="Resource" id=3]
+script = ExtResource( 4 )
+name_of_effect = "Новый тип завода"
+target = "Oil_factory"
+
+[sub_resource type="Resource" id=4]
+script = ExtResource( 4 )
+name_of_effect = "Новый тип завода"
+target = "Rubber_factory"
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 2 )
+name_of_effect = "Эффективность обучения"
+power = 10
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 3 )
+name_of_effect = "Прирост инфляции"
+power = 10
 
 [resource]
 script = ExtResource( 1 )
-cotegory = ""
-name_of_technology = ""
-list_of_effects = [  ]
+cost = 1300
+name_of_technology = "Импортозамещение и индустриализация"
+list_of_effects = [ SubResource( 3 ), SubResource( 4 ), SubResource( 1 ), SubResource( 2 ) ]

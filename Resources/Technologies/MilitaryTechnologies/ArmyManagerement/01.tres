@@ -12,6 +12,6 @@ target = "infantry"
 
 [resource]
 script = ExtResource( 1 )
-cotegory = ""
+cost = 1000
 name_of_technology = "Манёвренная война"
 list_of_effects = [ SubResource( 1 ) ]

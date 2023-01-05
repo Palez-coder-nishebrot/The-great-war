@@ -6,24 +6,24 @@
 
 [sub_resource type="Resource" id=1]
 script = ExtResource( 2 )
-TIPE = "EffectDefense"
+name_of_effect = "Оборона"
 power = 1
 target = "infantry"
 
 [sub_resource type="Resource" id=2]
 script = ExtResource( 2 )
-TIPE = "EffectDefense"
+name_of_effect = "Оборона"
 power = 1
 target = "cavalry"
 
 [sub_resource type="Resource" id=3]
 script = ExtResource( 3 )
-TIPE = "Supply"
+name_of_effect = "Потребление"
 power = 1
 target = "ammo_supply"
 
 [resource]
 script = ExtResource( 1 )
-cotegory = ""
+cost = 1400
 name_of_technology = "Минометное вооружение"
 list_of_effects = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ]

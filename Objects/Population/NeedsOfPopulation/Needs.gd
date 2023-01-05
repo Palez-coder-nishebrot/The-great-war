@@ -7,6 +7,7 @@ const list_of_goods: Array = [
 	"alcohol",
 	"glass",
 	"clothes",
+	"textile",
 	"furniture",
 	"el_appliances",
 	"radio",

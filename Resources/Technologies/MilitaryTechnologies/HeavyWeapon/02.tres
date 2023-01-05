@@ -33,6 +33,6 @@ target = "armored_car"
 
 [resource]
 script = ExtResource( 1 )
-cotegory = ""
+cost = 1200
 name_of_technology = "Тяжелая артиллерия"
 list_of_effects = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ]

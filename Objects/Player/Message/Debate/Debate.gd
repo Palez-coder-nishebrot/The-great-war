@@ -22,7 +22,9 @@ func button_pressed(ideology):
 
 func get_party_with_best_support():
 	var party = client.parties_manager.list_of_parties[0]
+	var dict  = client.parties_manager.popularity_of_parties
+	
 	for i in client.parties_manager.list_of_parties:
-		if i.popularity > party.popularity:
+		if dict[i.ideology] > dict[party.ideology]:
 			party = i
 	return party

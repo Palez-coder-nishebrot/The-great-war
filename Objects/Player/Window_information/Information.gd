@@ -6,7 +6,7 @@ var showing_good: String = "coal"
 onready var game = get_parent().get_parent().get_parent()
 
 const showing_map_list: Dictionary = {
-	0: "show_name_of_region",
+	0: "set_default_region",
 	1: "show_units",
 	2: "show_resources",
 }

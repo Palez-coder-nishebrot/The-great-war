@@ -3,20 +3,20 @@
 [ext_resource path="res://Resources/Technologies/Technology.gd" type="Script" id=1]
 [ext_resource path="res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectProductionFactories.gd" type="Script" id=2]
 
-[sub_resource type="Resource" id=1]
-script = ExtResource( 2 )
-name_of_effect = "Производительность"
-power = 5
-target = "military_factories"
-
 [sub_resource type="Resource" id=2]
 script = ExtResource( 2 )
 name_of_effect = "Производительность"
-power = 5
+power = 10
 target = "factories"
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 2 )
+name_of_effect = "Производительность"
+power = 10
+target = "military_factories"
 
 [resource]
 script = ExtResource( 1 )
-cotegory = ""
-name_of_technology = "Массовое производство"
-list_of_effects = [ SubResource( 1 ), SubResource( 2 ) ]
+cost = 1200
+name_of_technology = "Сборочные конвейеры"
+list_of_effects = [ SubResource( 2 ), SubResource( 1 ) ]

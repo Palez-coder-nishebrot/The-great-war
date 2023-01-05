@@ -8,4 +8,5 @@ name_of_policy = "interventionism"
 cost_of_factories = 100
 cost_of_infrastructure = 100
 subsidization = true
+building_not_profit_factories = false
 income_of_capitalists = 80

@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Objects/Tile/Point.gd" type="Script" id=2]
 [ext_resource path="res://Graphics/Fonts/times_new_roman.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="ImageTexture" id=3]
 
 [sub_resource type="DynamicFont" id=2]
 size = 32
@@ -9,14 +11,14 @@ use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 3 )
 
-[node name="Point" type="Sprite" groups=["Province"]]
+[node name="Point" type="TextureButton" groups=["Province"]]
+texture_normal = SubResource( 3 )
 script = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = -378.0
-margin_top = -69.0
-margin_right = 387.0
-margin_bottom = 67.0
+margin_left = -175.0
+margin_right = 590.0
+margin_bottom = 136.0
 rect_pivot_offset = Vector2( 380, 69 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
@@ -24,8 +26,4 @@ text = "Пример"
 align = 1
 valign = 1
 
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
-
-[connection signal="input_event" from="Area2D" to="." method="input"]
+[connection signal="mouse_entered" from="." to="." method="mouse_entered"]

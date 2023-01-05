@@ -1,0 +1,28 @@
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectProductionGoods.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Technologies/Technology.gd" type="Script" id=3]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 1 )
+name_of_effect = "Выпуск продукции"
+power = 5
+target = "coal"
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 1 )
+name_of_effect = "Выпуск продукции"
+power = 5
+target = "iron"
+
+[sub_resource type="Resource" id=3]
+script = ExtResource( 1 )
+name_of_effect = "Выпуск продукции"
+power = 5
+target = "steel"
+
+[resource]
+script = ExtResource( 3 )
+cost = 1000
+name_of_technology = "Электрометаллургия"
+list_of_effects = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ]

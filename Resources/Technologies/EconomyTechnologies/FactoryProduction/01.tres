@@ -4,6 +4,12 @@
 [ext_resource path="res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectProductionGoods.gd" type="Script" id=2]
 [ext_resource path="res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectProductionFactories.gd" type="Script" id=3]
 
+[sub_resource type="Resource" id=3]
+script = ExtResource( 3 )
+name_of_effect = "Производительность"
+power = 5
+target = "factories"
+
 [sub_resource type="Resource" id=1]
 script = ExtResource( 2 )
 name_of_effect = "Выпуск продукции"
@@ -16,14 +22,8 @@ name_of_effect = "Выпуск продукции"
 power = 5
 target = "glass"
 
-[sub_resource type="Resource" id=3]
-script = ExtResource( 3 )
-name_of_effect = "Производительность"
-power = 5
-target = "factories"
-
 [resource]
 script = ExtResource( 1 )
-cotegory = ""
-name_of_technology = "Сборочные конвейеры"
-list_of_effects = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ]
+cost = 1000
+name_of_technology = "Научный менеджмент"
+list_of_effects = [ SubResource( 3 ), SubResource( 1 ), SubResource( 2 ) ]

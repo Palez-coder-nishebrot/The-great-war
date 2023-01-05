@@ -87,7 +87,7 @@ func reform_activeted(effect, cotegory):
 
 	client.set(cotegory, effect.value)
 	
-	print()
+	#print()
 	#print(client.get(cotegory))
 
 
@@ -97,8 +97,8 @@ func update_points_of_reforms():
 		var supporting_pol_reforms = 0
 		var size_of_list = client.parties_manager.list_of_parties.size()
 		for i in client.parties_manager.list_of_parties:
-			supporting_soc_reforms += i.supporting_soc_reforms * i.popularity
-			supporting_pol_reforms += i.supporting_pol_reforms * i.popularity
+			supporting_soc_reforms += i.supporting_soc_reforms * client.parties_manager.popularity_of_parties[i.ideology]
+			supporting_pol_reforms += i.supporting_pol_reforms * client.parties_manager.popularity_of_parties[i.ideology]
 		
 		supporting_soc_reforms = supporting_soc_reforms / size_of_list
 		supporting_pol_reforms = supporting_pol_reforms / size_of_list

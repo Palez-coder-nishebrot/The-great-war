@@ -3,6 +3,10 @@ extends Node
 class_name PopulationManager
 
 var client
+var manager_of_migration_workers      = load("res://Resources/SocialMigration/SocClasses/Worker.tres")
+var manager_of_migration_proletarians = load("res://Resources/SocialMigration/SocClasses/Proletarian.tres")
+var manager_of_migration_clerks       = load("res://Resources/SocialMigration/SocClasses/Clerk.tres")
+
 
 func _init(client):
 	self.client = client
@@ -22,8 +26,8 @@ func update_quantity_of_population():
 
 
 func update_education():
-	for i in client.list_of_soc_classes:
-		i.education += client.education * 0.03
+	for i in client.list_of_tiles:
+		i.population_manager.education += client.education * 0.01
 
 
 func update_stability():
@@ -31,55 +35,50 @@ func update_stability():
 
 
 func update_population_growth():
-	pass
+	for i in client.list_of_tiles:
+		i.population_manager.update_population_growth()
 
 
 func update_research_points():
-	client.researching_points += client.middle_value_education * 0.1
-	pass
+	var points = (client.middle_value_education + client.education + 10) * 0.2
+	client.researching_points += points
+	client.growth_of_researching_points = points
 
 
-func new_day():#client, data):
+func update_soc_migration():#client, data):
 	for region in client.list_of_tiles:
-		#print("Проверка")
-		var migration_to_worker      = load("res://Resources/SocialMigration/SocClasses/Worker.tres").check(region.population_manager)
-		var migration_to_proletarian = load("res://Resources/SocialMigration/SocClasses/Proletarian.tres").check(region.population_manager)
-		var migration_to_clerk       = load("res://Resources/SocialMigration/SocClasses/Clerk.tres").check(region.population_manager)
-		var pop_manager = region.population_manager
-		
-		#region.list_of_workers[0]
+		var migration_to_worker      = manager_of_migration_workers.check(region.population_manager)
+		var migration_to_proletarian = manager_of_migration_proletarians.check(region.population_manager)
+		var migration_to_clerk       = manager_of_migration_clerks.check(region.population_manager)
+		var pop_manager              = region.population_manager
 		
 		if migration_to_worker:
-			migrate_to_workers(pop_manager.list_of_factory_workers[0], pop_manager)
-			pass
+			migrate_to_workers(pop_manager)
 		elif migration_to_proletarian:
-			migrate_to_workers(pop_manager.list_of_workers[0], pop_manager)
+			migrate_to_workers(pop_manager)
 		
 		if migration_to_clerk:
-			migrate_to_workers(pop_manager.list_of_factory_workers[0], pop_manager)
+			migrate_to_workers(pop_manager)
 		
-		yield(client.game, "new_day")
+		#yield(client.game, "new_day")
 
 
-func migrate_to_workers(household, pop_manager):
-	pop_manager.list_of_factory_workers.erase(household)
-	pop_manager.list_of_workers.append(household)
+func migrate_to_workers(pop_manager):
+	pop_manager.quantity_of_factory_workers -= 1
+	pop_manager.quantity_of_workers         += 1
 	
-	household.soc_class == "Worker"
-	print("migrate_to_workers ", pop_manager.province.player.name_of_country)
+	#print("migrate_to_workers ", pop_manager.province.player.name_of_country)
 
 
-func migrate_to_proletarians(household, pop_manager):
-	pop_manager.list_of_workers.erase(household)
-	pop_manager.list_of_factory_workers.append(household)
+func migrate_to_proletarians(pop_manager):
+	pop_manager.quantity_of_workers         -= 1
+	pop_manager.quantity_of_factory_workers += 1
 	
-	household.soc_class == "Proletarian"
-	print("migrate_to_Proletarian")
+	#print("migrate_to_Proletarian")
 
 
-func migrate_to_clerks(household, pop_manager):
-	pop_manager.list_of_factory_workers.erase(household)
-	pop_manager.list_of_clerks.append(household)
+func migrate_to_clerks(pop_manager):
+	pop_manager.quantity_of_factory_workers -= 1
+	pop_manager.quantity_of_clerks          += 1
 	
-	household.soc_class == "Clerk"
-	print("migrate_to_Clerk")
+	#print("migrate_to_Clerk")

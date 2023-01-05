@@ -77,13 +77,14 @@ func update_clients():
 		i.gdp = 0
 		i.radio_net = 0
 		i.population_manager.update_quantity_of_population()
-		i.update_population_growth()
-		i.update_welfare_of_population()
+		i.population_manager.update_population_growth()
+		i.update_values_of_population()
+		i.parties_manager.update_popularity_of_parties()
 		i.reforms_manager.check_data(game.time_of_game)
-		i.technologies.update_middle_value_education_of_population()
+		#i.technologies.update_middle_value_education_of_population()
 		i.reforms_manager.update_points_of_reforms()
 		
-		#i.population_manager.new_day(i, game.time_of_game)
+		i.population_manager.update_soc_migration()
 		i.population_manager.update_research_points()
 		i.population_manager.update_expenses_education()
 		#game.craftsmen_manager.goods_production(i)

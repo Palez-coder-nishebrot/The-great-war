@@ -34,6 +34,6 @@ target = "artillery"
 
 [resource]
 script = ExtResource( 1 )
-cotegory = ""
+cost = 1300
 name_of_technology = "Мобильные соединения"
 list_of_effects = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ]

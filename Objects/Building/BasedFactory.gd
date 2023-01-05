@@ -7,6 +7,7 @@ var list_of_mechanisms: Array = [
 	"el_parts",
 ]
 
+const quantity_of_based_goods: float  = 0.025
 const time:              int          = 10
 var time_of_construction:int          = 0
 
@@ -22,7 +23,7 @@ var reserve:             int          = 0
 var quantity_of_workers: float        = 0.0
 
 var subsidization:       bool         = false
-var closed:              bool         = false
+var closed:              bool         = true
 var in_construction:     bool         = false
 
 var good:            String           = ""
@@ -36,7 +37,7 @@ var expansion:        Object
 func buy_based_goods():
 	var old_money = money
 	for good_for_buy in list_of_mechanisms:
-		var quantity = 0.025 * quantity_of_workers
+		var quantity = quantity_of_based_goods * quantity_of_workers
 		if province.player.local_market[good_for_buy] >= quantity:
 			Functions.buy_good_on_local_market(self, good_for_buy, quantity, province.player.local_market)
 		else:
@@ -53,7 +54,7 @@ func get_quantity_of_workers():
 func get_quanity_of_good():
 	var quanity = province.player.economic_bonuses.get("based_production_of_" + good) * province.get_bonus_of_production().production_of_factory
 	quanity = quanity * get_quantity_of_workers() * get_bonuses_for_production_from_province() * get_bonuses_for_production_for_factories()
-	quanity = quanity * get_bonuses_for_production_from_capitalists()
+	quanity = quanity * get_bonuses_for_production_from_capitalists() * province.landscape.check_debuffs().factory_efficiency
 	
 	return stepify(quanity, 0.01)
 
@@ -84,10 +85,10 @@ func get_expenses():
 
 func update_places_for_workers():
 	if income - get_expenses() < 0: 
-		if max_employed_number > 1:
-			max_employed_number -= 0.5
+		if max_employed_number > 1 and subsidization == false:
+			max_employed_number -= 1
 	elif real_max_employed_number > max_employed_number:
-		max_employed_number += 0.5
+		max_employed_number += 1
 
 
 func open_factory():

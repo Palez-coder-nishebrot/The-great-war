@@ -1,9 +1,21 @@
-[gd_resource type="Resource" load_steps=2 format=2]
+[gd_resource type="Resource" load_steps=6 format=2]
 
 [ext_resource path="res://Resources/Technologies/Technology.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectEducationEfficiency.gd" type="Script" id=2]
+[ext_resource path="res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectInflation.gd" type="Script" id=3]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 2 )
+name_of_effect = "Эффективность обучения"
+power = 10
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 3 )
+name_of_effect = "Прирост инфляции"
+power = 10
 
 [resource]
 script = ExtResource( 1 )
-cotegory = ""
-name_of_technology = ""
-list_of_effects = [  ]
+cost = 1500
+name_of_technology = "Взаимные фонды"
+list_of_effects = [ SubResource( 1 ), SubResource( 2 ) ]

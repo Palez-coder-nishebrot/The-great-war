@@ -6,6 +6,8 @@ export(String) var name_of_state = ""
 
 export(PoolStringArray) var list_of_regions
 
+export(int) var middle_value_education = 50
+
 export(String, "monarchy", "republic", "soviet_republic", "fascist_dictatorship", "military_dictatorship") var form_of_goverment = "monarchy"
 export(String, "liberals", "socialists", "communists", "fascists", "conservators") var ideology = "conservators"
 

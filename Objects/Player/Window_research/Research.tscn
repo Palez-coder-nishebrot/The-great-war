@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
+[ext_resource path="res://Objects/Player/Window_research/ButtonsOfTipesTechnologies.gd" type="Script" id=1]
 [ext_resource path="res://Objects/Player/Window_research/Research.gd" type="Script" id=2]
 [ext_resource path="res://Objects/Player/Window_research/Research_button.gd" type="Script" id=3]
 [ext_resource path="res://Graphics/Fonts/pixel_2.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Objects/Player/Window_research/ButtonOfTipeTechnology.gd" type="Script" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
@@ -10,6 +12,10 @@ extra_spacing_top = 5
 extra_spacing_bottom = 5
 extra_spacing_char = -2
 extra_spacing_space = -4
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 32
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=2]
@@ -33,8 +39,10 @@ margin_bottom = 1078.0
 script = ExtResource( 2 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
+visible = false
+margin_top = 57.0
 margin_right = 1920.0
-margin_bottom = 358.0
+margin_bottom = 415.0
 custom_constants/separation = 20
 
 [node name="ArmyManagerement" type="VBoxContainer" parent="HBoxContainer"]
@@ -42,7 +50,7 @@ margin_right = 465.0
 margin_bottom = 358.0
 size_flags_horizontal = 3
 size_flags_vertical = 5
-custom_constants/separation = 0
+custom_constants/separation = 5
 
 [node name="Label" type="Label" parent="HBoxContainer/ArmyManagerement"]
 margin_right = 465.0
@@ -57,7 +65,7 @@ margin_right = 950.0
 margin_bottom = 358.0
 size_flags_horizontal = 3
 size_flags_vertical = 5
-custom_constants/separation = 0
+custom_constants/separation = 5
 
 [node name="Label" type="Label" parent="HBoxContainer/HeavyWeapon"]
 margin_right = 465.0
@@ -72,7 +80,7 @@ margin_right = 1435.0
 margin_bottom = 358.0
 size_flags_horizontal = 3
 size_flags_vertical = 5
-custom_constants/separation = 0
+custom_constants/separation = 5
 
 [node name="Label" type="Label" parent="HBoxContainer/LightWeapon"]
 margin_right = 465.0
@@ -87,7 +95,7 @@ margin_right = 1920.0
 margin_bottom = 358.0
 size_flags_horizontal = 3
 size_flags_vertical = 5
-custom_constants/separation = 0
+custom_constants/separation = 5
 
 [node name="Label" type="Label" parent="HBoxContainer/Navy"]
 margin_right = 465.0
@@ -96,75 +104,112 @@ custom_fonts/font = SubResource( 1 )
 text = "Флот"
 align = 1
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="."]
-margin_top = 358.0
+[node name="HBoxContainer2" type="GridContainer" parent="."]
+margin_top = 57.0
 margin_right = 1920.0
-margin_bottom = 629.0
-custom_constants/separation = 35
+margin_bottom = 582.0
+custom_constants/hseparation = 20
+columns = 4
 
 [node name="FarmProduction" type="VBoxContainer" parent="HBoxContainer2"]
-margin_right = 453.0
-margin_bottom = 271.0
+margin_right = 465.0
+margin_bottom = 42.0
 size_flags_horizontal = 3
 size_flags_vertical = 5
-custom_constants/separation = 0
+custom_constants/separation = 5
 
 [node name="Label" type="Label" parent="HBoxContainer2/FarmProduction"]
-margin_right = 453.0
+margin_right = 465.0
 margin_bottom = 42.0
 custom_fonts/font = SubResource( 1 )
 text = "Фермерское производство"
 align = 1
 
 [node name="FactoryProduction" type="VBoxContainer" parent="HBoxContainer2"]
-margin_left = 488.0
-margin_right = 942.0
-margin_bottom = 271.0
+margin_left = 485.0
+margin_right = 950.0
+margin_bottom = 42.0
 size_flags_horizontal = 3
 size_flags_vertical = 5
-custom_constants/separation = 0
+custom_constants/separation = 5
 
 [node name="Label" type="Label" parent="HBoxContainer2/FactoryProduction"]
-margin_right = 454.0
+margin_right = 465.0
 margin_bottom = 42.0
 custom_fonts/font = SubResource( 1 )
 text = "Фабричное производство"
 align = 1
 
-[node name="MinesProduction" type="VBoxContainer" parent="HBoxContainer2"]
-margin_left = 977.0
-margin_right = 1431.0
-margin_bottom = 271.0
+[node name="Metallurgy" type="VBoxContainer" parent="HBoxContainer2"]
+margin_left = 970.0
+margin_right = 1435.0
+margin_bottom = 42.0
 size_flags_horizontal = 3
 size_flags_vertical = 5
-custom_constants/separation = 0
+custom_constants/separation = 5
 
-[node name="Label" type="Label" parent="HBoxContainer2/MinesProduction"]
-margin_right = 454.0
+[node name="Label" type="Label" parent="HBoxContainer2/Metallurgy"]
+margin_right = 465.0
 margin_bottom = 42.0
 custom_fonts/font = SubResource( 1 )
-text = "Добыча"
+text = "Металлургия"
 align = 1
 
 [node name="Supply" type="VBoxContainer" parent="HBoxContainer2"]
-margin_left = 1466.0
+margin_left = 1455.0
 margin_right = 1920.0
-margin_bottom = 271.0
+margin_bottom = 42.0
 size_flags_horizontal = 3
 size_flags_vertical = 5
-custom_constants/separation = 0
+custom_constants/separation = 5
 
 [node name="Label" type="Label" parent="HBoxContainer2/Supply"]
-margin_right = 454.0
+margin_right = 465.0
 margin_bottom = 42.0
 custom_fonts/font = SubResource( 1 )
 text = "Инфраструктура и снабжение"
+align = 1
+
+[node name="EconomicStructures" type="VBoxContainer" parent="HBoxContainer2"]
+margin_top = 46.0
+margin_right = 465.0
+margin_bottom = 88.0
+size_flags_horizontal = 3
+size_flags_vertical = 5
+custom_constants/separation = 5
+
+[node name="Label" type="Label" parent="HBoxContainer2/EconomicStructures"]
+margin_right = 465.0
+margin_bottom = 42.0
+custom_fonts/font = SubResource( 1 )
+text = "Структура экономики"
 align = 1
 
 [node name="Effects" type="VBoxContainer" parent="."]
 margin_top = 758.0
 margin_right = 488.0
 margin_bottom = 1016.0
+
+[node name="ButtonsOfTipesTechnologies" type="HBoxContainer" parent="."]
+margin_right = 1920.0
+margin_bottom = 57.0
+custom_constants/separation = 0
+script = ExtResource( 1 )
+
+[node name="ButtonOfTipeTechnology" type="Button" parent="ButtonsOfTipesTechnologies"]
+margin_right = 204.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 5 )
+text = "Военное дело"
+script = ExtResource( 5 )
+
+[node name="ButtonOfTipeTechnology2" type="Button" parent="ButtonsOfTipesTechnologies"]
+margin_left = 204.0
+margin_right = 360.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 5 )
+text = "Экономика"
+script = ExtResource( 5 )
 
 [node name="StartResearch" type="Button" parent="."]
 margin_left = 1477.0

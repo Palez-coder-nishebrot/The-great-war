@@ -28,19 +28,6 @@ func create_players(game_):
 	set_gui()
 	
 	queue_free()
-#	for name_of_country in Players.list_of_players_on_start:
-#		var client
-#
-#		if name_of_country == Players.country_to_start:
-#			client = set_player()
-#		else:
-#			client = load("res://Objects/AI/AI.gd").new()
-#		set_client(client, name_of_country)
-#
-#	game.get_node("TileMap").create_map()
-#	Players.player.window_parties.update()
-#	set_gui()
-#	queue_free()
 
 
 func set_client(client, file):
@@ -51,6 +38,7 @@ func set_client(client, file):
 	client.ideology = file.ideology
 	client.capitalists_manager.player = client
 	client.game = game
+	client.middle_value_education = file.middle_value_education
 	client.technologies.client = client
 	Players.list_of_players.append(client)
 	
@@ -58,11 +46,11 @@ func set_client(client, file):
 	client.military_bonuses.set_object_of_units()
 	client.economic_bonuses.set_list_of_buildings()
 	#client.parties_manager.set_parties(client)
+	client.parties_manager = PartiesManager.new(client, file.ideology)
 
 
 func set_player(file):
 	var player: Object = load("res://Objects/Player/Player.tscn").instance()
-	player.parties_manager = PartiesManager.new(player, file.ideology)
 	set_client(player, file)
 	
 	player.position = Vector2(2318, 2000)

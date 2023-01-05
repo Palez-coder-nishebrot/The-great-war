@@ -18,6 +18,6 @@ export(String,
 	"el_parts",
 	"lumber",
 	"el_appliances",
-	"tech_parts") var good = ""
+	"mech_parts") var good = ""
 
 export(float) var quantity = 0.0

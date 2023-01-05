@@ -2,7 +2,9 @@ extends Node
 
 var list_of_factories: Array = []
 
-var min_salary: int = 5
+var min_salary: int = 2
+
+
 func make_goods():
 	for factory in list_of_factories:
 		if factory.closed == false:
@@ -68,7 +70,7 @@ func buy_purchase():
 
 func check_income(factory, expenses):
 	#factory.province.player.capitalists_manager.income += factory.income
-	var income_of_capitalist = (float(factory.income) / 100.0) * factory.province.player.economy["Доходы_фабрикантов"]
+	var income_of_capitalist = (float(factory.income) / 100.0) * factory.province.player.income_of_capitalists
 	var income_of_country = factory.income - income_of_capitalist
 	factory.province.player.capitalists_manager.income += income_of_capitalist
 	
@@ -112,9 +114,7 @@ func start_expansion_of_factory(factory, province):
 
 
 func pay_salary(list_of_workers, province, factory):
-	var salary = (min_salary + province.player.economy["Минимальная_зарплата"]) * list_of_workers
-	
-	
+	var salary = (min_salary + factory.province.player.min_salary) * list_of_workers
 	factory.province.population_manager.money += salary
 	factory.province.population_manager.income += salary
 	factory.money -= salary

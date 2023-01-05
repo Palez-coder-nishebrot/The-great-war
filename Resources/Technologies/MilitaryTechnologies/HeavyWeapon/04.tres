@@ -9,37 +9,37 @@
 [sub_resource type="Resource" id=1]
 resource_name = "Defense"
 script = ExtResource( 3 )
-TIPE = "EffectAttack"
+name_of_effect = "Атака"
 power = 1
 target = "artillery"
 
 [sub_resource type="Resource" id=2]
 resource_name = "Attack"
 script = ExtResource( 2 )
-TIPE = "EffectDefense"
+name_of_effect = "Оборона"
 power = 1
 target = "artillery"
 
 [sub_resource type="Resource" id=3]
 resource_name = "Supply"
 script = ExtResource( 4 )
-TIPE = "Supply"
+name_of_effect = "Потребление"
 power = 1
 target = "projectile_supply"
 
 [sub_resource type="Resource" id=4]
 script = ExtResource( 5 )
-TIPE = "NewUnit"
+name_of_effect = "Новый юнит"
 target = "tank"
 
 [sub_resource type="Resource" id=5]
 script = ExtResource( 3 )
-TIPE = "EffectAttack"
+name_of_effect = "Атака"
 power = 1
 target = "armored_car"
 
 [resource]
 script = ExtResource( 1 )
-cotegory = ""
+cost = 1400
 name_of_technology = "Штурмовое вооружение"
 list_of_effects = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ]

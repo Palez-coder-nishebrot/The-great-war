@@ -79,7 +79,7 @@ func update_information():
 	factory_label.text = str(Players.player.list_of_factories.size())
 	budget_label.text = str(Players.player.budget)
 	stability_label.text = str(Players.player.stability)
-	research_label.text = str(Players.player.researching_points)
+	research_label.text = str(Players.player.growth_of_researching_points)
 	
 	
 	ideology_label.get_node("TextureRect").texture = load(form_of_goverment_sprite[Players.player.ideology])

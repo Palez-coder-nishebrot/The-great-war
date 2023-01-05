@@ -24,6 +24,6 @@ target = "stormtroopers"
 
 [resource]
 script = ExtResource( 1 )
-cotegory = ""
+cost = 1600
 name_of_technology = "Модернизированное вооружение"
 list_of_effects = [ SubResource( 1 ), SubResource( 3 ), SubResource( 4 ) ]

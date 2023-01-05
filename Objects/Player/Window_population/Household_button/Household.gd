@@ -9,7 +9,7 @@ func update_information():
 	$Welfare.text = str(household.welfare)
 	if tipe_of_soc_class == "Домохозяйство":
 		$Province.text = province.name_of_tile
-		$Quanity.text = str(household.list_of_soc_classes.size())
+		$Quanity.text = str(household.get_quantity_of_population())
 		$Income.text = str(household.income)
 	
 	elif tipe_of_soc_class == "Промышленники":

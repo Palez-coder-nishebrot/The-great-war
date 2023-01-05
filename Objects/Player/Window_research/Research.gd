@@ -5,6 +5,7 @@ onready var player = get_parent().get_parent()
 onready var start_research_button = $StartResearch
 
 
+
 onready var cotegories: Dictionary = {
 	$HBoxContainer/ArmyManagerement: "army_managerment",
 	$HBoxContainer/HeavyWeapon:      "heavy_weapon",
@@ -13,8 +14,9 @@ onready var cotegories: Dictionary = {
 	
 	$HBoxContainer2/FactoryProduction:   "factory_production",
 	$HBoxContainer2/FarmProduction:      "farm_production",
-	$HBoxContainer2/MinesProduction:     "mines_production",
+	$HBoxContainer2/Metallurgy:          "metallurgy",
 	$HBoxContainer2/Supply:              "supply",
+	$HBoxContainer2/EconomicStructures:  "economic_structures",
 }
 
 
@@ -63,3 +65,5 @@ func clear_labels():
 func start_research():
 	Players.player.technologies.start_research(showing_technology)
 	check_start_research_button()
+
+
