@@ -29,6 +29,18 @@ func _ready():
 	var err_ = ManagerDay.connect("allocate_workers_to_factories", self, "allocate_workers_to_factories")
 
 
+func add_debug_nav_line(to):
+	var line = Line2D.new()
+	line.width = 3
+	line.points = PoolVector2Array([(rect_global_position + rect_size / 2) + Vector2(-45, 0), to.rect_global_position + to.rect_size / 2])
+	var g = Gradient.new()
+	g.add_point(0, Color(0, 0.584314, 0.078431))
+	g.add_point(1, Color(1, 1, 1))
+	line.gradient = g
+	
+	get_parent().get_parent().add_child(line)
+
+
 func start():
 	set_mask()
 	player.list_of_tiles.append(self)

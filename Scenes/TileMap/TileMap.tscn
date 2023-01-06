@@ -116,7 +116,7 @@
 [ext_resource path="res://Graphics/Sprites/Provinces/Баскония/Ахалкалаки.png" type="Texture" id=114]
 [ext_resource path="res://Graphics/Sprites/Provinces/Баскония/Батуми.png" type="Texture" id=115]
 
-[node name="TileMap" type="Node2D"]
+[node name="TileMap" type="Control"]
 script = ExtResource( 1 )
 
 [node name="Map" type="Sprite" parent="."]
@@ -1155,10 +1155,10 @@ margin_right = 656.0
 margin_bottom = 273.0
 
 [node name="Тарту" parent="." instance=ExtResource( 4 )]
-margin_left = 5151.0
-margin_top = 1305.0
-margin_right = 5470.0
-margin_bottom = 1549.0
+margin_left = 5142.0
+margin_top = 1301.0
+margin_right = 5461.0
+margin_bottom = 1545.0
 texture_normal = ExtResource( 102 )
 
 [node name="Хаапсалу" parent="." instance=ExtResource( 4 )]
@@ -1213,6 +1213,8 @@ margin_top = 245.0
 margin_right = 5032.0
 margin_bottom = 629.0
 texture_normal = ExtResource( 54 )
+
+[node name="DebugCollisionView" type="Node2D" parent="."]
 
 [editable path="Красник"]
 [editable path="Луцк"]

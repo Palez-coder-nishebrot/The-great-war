@@ -38,7 +38,7 @@ func create_map():
 	var map_children = map.get_children()
 	
 	for i in map_children:
-		if i.name != "Map":
+		if i is TextureButton:
 			create_region(i, map)
 
 

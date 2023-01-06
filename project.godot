@@ -280,6 +280,7 @@ _global_script_class_icons={
 
 config/name="The great war (1914 - 1936)"
 run/main_scene="res://Scenes/Menu/Menu.tscn"
+config/icon="res://icon.png"
 
 [autoload]
 
@@ -403,6 +404,7 @@ locale_filter=[ 0, [ "ru" ] ]
 [physics]
 
 common/enable_pause_aware_picking=true
+2d/thread_model=2
 
 [rendering]
 
