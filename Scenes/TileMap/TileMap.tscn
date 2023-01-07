@@ -1163,9 +1163,9 @@ texture_normal = ExtResource( 102 )
 
 [node name="Хаапсалу" parent="." instance=ExtResource( 4 )]
 margin_left = 4748.0
-margin_top = 2443.0
+margin_top = 2445.0
 margin_right = 4908.0
-margin_bottom = 2926.0
+margin_bottom = 2928.0
 texture_normal = ExtResource( 104 )
 
 [node name="Label" parent="Хаапсалу" index="0"]

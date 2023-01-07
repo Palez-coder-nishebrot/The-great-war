@@ -41,6 +41,12 @@ func add_debug_nav_line(to):
 	get_parent().get_parent().add_child(line)
 
 
+func add_debug_collider(polygon, global_pos):
+	var collision = CollisionPolygon2D.new()
+	collision.global_position = global_pos
+	collision.polygon = polygon
+	add_child(collision)
+
 func start():
 	set_mask()
 	player.list_of_tiles.append(self)
