@@ -10,7 +10,7 @@
 [ext_resource path="res://Graphics/Sprites/GUI/Icons of windows/Production.png" type="Texture" id=10]
 [ext_resource path="res://Graphics/Sprites/GUI/Icons of windows/Hammer no.png" type="Texture" id=11]
 [ext_resource path="res://Graphics/Sprites/GUI/Icons of windows/Welfare.png" type="Texture" id=12]
-[ext_resource path="res://Graphics/Sprites/GUI/Icons of windows/Reform.png" type="Texture" id=13]
+[ext_resource path="res://Graphics/Sprites/GUI/Icons of windows/Reforms.png" type="Texture" id=13]
 [ext_resource path="res://Graphics/Sprites/GUI/Icons of windows/Education.png" type="Texture" id=14]
 
 [sub_resource type="StyleBoxFlat" id=3]

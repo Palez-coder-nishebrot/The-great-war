@@ -1,9 +1,10 @@
-extends Node
+extends Reference
 
 class_name CreateClients
 
 var game
-	
+
+
 func create_players(game_):
 	game = game_
 	
@@ -26,8 +27,6 @@ func create_players(game_):
 	
 	game.get_node("TileMap").create_map()
 	set_gui()
-	
-	queue_free()
 
 
 func set_client(client, file):
@@ -50,7 +49,7 @@ func set_client(client, file):
 
 
 func set_player(file):
-	var player: Object = load("res://Objects/Player/Player.tscn").instance()
+	var player: Object = preload("res://Objects/Player/Player.tscn").instance()
 	set_client(player, file)
 	
 	player.position = Vector2(2318, 2000)
