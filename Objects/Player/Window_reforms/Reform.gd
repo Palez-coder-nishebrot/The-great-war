@@ -35,16 +35,16 @@ func check_available_reform(tipe_of_reform):
 func check_cotegories(target):
 	var reforms_container = get(target)
 	var reform = player.reforms_manager.get(reforms_container.get_children()[1].reform.target).activing_reform
-	var cotegory
-	var children_of_cot
-	var button 
+#	var cotegory
+#	var children_of_cot
+#	var button 
 	#breakpoint
 	for i in reforms_container.get_children():
 		reform = player.reforms_manager.get(i.reform.target).activing_reform
 		get_button(i, i.get_children(), reform)
 
 
-func get_button(cotegory, children_of_cot, effect):
+func get_button(_cotegory, children_of_cot, effect):
 	var button 
 	for i in children_of_cot:
 		if i.get_class() != "Label":

@@ -2,7 +2,7 @@ extends Panel
 
 var province: Object
 
-func update_information(province_, tipe):
+func update_information(province_):
 	lock_or_open_buttons(false)
 	show_info_about_province(province_)
 	if province_.player == Players.player:

@@ -4,7 +4,7 @@ onready var parent = get_parent().get_parent()
 export(String) var good = ""
 
 
-func _input(event):
+func _input(_event):
 	if pressed == true:
 		parent.showing_good = good
 		parent.set_showing_map()

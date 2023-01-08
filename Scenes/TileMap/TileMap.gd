@@ -121,8 +121,8 @@ func set_needs_of_pop_manager(population_manager):
 
 func give_tiles_to_players():
 	var folder: Directory = Directory.new()
-	folder.open("res://Resources/StatesOnStartGame/States/")
-	folder.list_dir_begin(true, true)
+	var _err = folder.open("res://Resources/StatesOnStartGame/States/")
+	var _err_ = folder.list_dir_begin(true, true)
 	var folder_name = folder.get_next()
 	
 	while folder_name != "":

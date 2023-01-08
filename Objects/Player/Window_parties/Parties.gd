@@ -77,7 +77,7 @@ func update_information_of_country():
 	military_fatigue.text = "Военная усталость: " + str(player.military_fatigue)
 	
 
-func get_status_of_country(policy):
+func get_status_of_country(_policy):
 	status_policy_label.text = "Независимая страна"
 	
 	if player.satellite != null:

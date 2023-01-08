@@ -101,10 +101,10 @@ const cost_of_factory: Dictionary = {
 func set_list_of_buildings():
 	var list = []
 	var folder: Directory = Directory.new()
-	folder.open("res://Resources/Factories/TipesOfFactories/")
-	folder.list_dir_begin(true, true)
+	var _err = folder.open("res://Resources/Factories/TipesOfFactories/")
+	var _err_ = folder.list_dir_begin(true, true)
 	
-	for i in range(20):
+	for _i in range(20):
 		var factory = Factory.new()
 		var path_of_file = "res://Resources/Factories/TipesOfFactories/" + folder.get_next()
 		var file = load(path_of_file)

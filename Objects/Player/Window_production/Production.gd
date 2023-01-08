@@ -30,15 +30,15 @@ func update_information():
 	info_about_factory_window.update_information()
 
 
-func spawn_panels(list):
-	for i in list:
+func spawn_panels(list_):
+	for i in list_:
 		if not list_of_provinces.has(i):
 			spawn_panel(i)
 
 
 func spawn_panel(province):
 	var panel = load("res://Objects/Player/Window_production/Province/ProvincePanel.tscn").instance()
-	connect("update_province_panel", panel, "update_information")
+	var _err = connect("update_province_panel", panel, "update_information")
 	panel.province = province
 	panel.update_information()
 	$ScrollContainer/VBoxContainer.add_child(panel)

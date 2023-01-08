@@ -6,6 +6,7 @@
 script = ExtResource( 1 )
 name_of_state = "Horesm"
 list_of_regions = PoolStringArray( "Лодзь", "Станислав", "Черновцы", "Галич", "Калуш", "Познань", "Ровно", "Богородчаны", "Днестр", "Тлумач", "Белжеца", "Митава" )
+middle_value_education = 50
 form_of_goverment = "monarchy"
 ideology = "conservators"
 national_color = Color( 0.556863, 0.447059, 0.431373, 1 )

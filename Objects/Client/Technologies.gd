@@ -34,8 +34,8 @@ var client: Object
 var research_time: int = 0
 
 
-func _init(client):
-	self.client = client
+func _init(client_):
+	self.client = client_
 	set_technologies()
 
 
@@ -48,10 +48,10 @@ func set_cotegories(TECHNOLOGIES_FILES, folder_name):
 	for i in TECHNOLOGIES_FILES:
 		var folder: Directory = Directory.new()
 		var path: String = "res://Resources/Technologies/" + folder_name + "/" + TECHNOLOGIES_FILES[i] + "/"
-		folder.open(path)
-		folder.list_dir_begin(true, true)
+		var _err = folder.open(path)
+		var _err_ = folder.list_dir_begin(true, true)
 		
-		for y in range(5):
+		for _y in range(5):
 			var name_of_file = folder.get_next()
 			var path_of_file: String = path + name_of_file
 			var file = load(path_of_file).duplicate()

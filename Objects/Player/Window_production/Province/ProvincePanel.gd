@@ -25,7 +25,7 @@ func spawn_panel(factory):
 	var panel = load("res://Objects/Player/Window_production/Factory/FactoryPanel.tscn").instance()
 	panel.province = province
 	panel.factory = factory
-	connect("update_info_about_factory", panel, "update_information")
+	var _err = connect("update_info_about_factory", panel, "update_information")
 	list_of_factories[factory] = panel
 	panel.update_information()
 	panel.show_purchase()

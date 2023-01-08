@@ -29,8 +29,8 @@ onready var window_list_of_units: ScrollContainer = $CanvasLayer/List_of_units
 
 
 func _ready():
-	connect("check_available_reform", window_reform, "check_available_reform")
-	connect("research_completed", self, "research_completed")
+	var _err = connect("check_available_reform", window_reform, "check_available_reform")
+	var _err_ = connect("research_completed", self, "research_completed")
 	#hold_debate()
 
 
@@ -46,7 +46,7 @@ func hold_debate():
 	$CanvasLayer.add_child(message)
 
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_pressed("W"):# and position.y >= 1200:
 		camera.position.y -= speed_of_camera
 

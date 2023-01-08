@@ -80,10 +80,10 @@ var game: Object
 
 func set_purchase():
 	var folder: Directory = Directory.new()
-	folder.open("res://Resources/Factories/TipesOfFactories/")
-	folder.list_dir_begin(true, true)
+	var _err = folder.open("res://Resources/Factories/TipesOfFactories/")
+	var _err_ = folder.list_dir_begin(true, true)
 	
-	for i in range(17):
+	for _i in range(17):
 		var path_of_file = "res://Resources/Factories/TipesOfFactories/" + folder.get_next()
 		var file = load(path_of_file)
 		purchase_of_good_for_production[file.good] = file.raw

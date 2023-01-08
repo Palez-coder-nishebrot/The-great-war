@@ -2,7 +2,7 @@ extends Button
 
 
 func _ready():
-	connect("pressed", self, "button_pressed")
+	var _err = connect("pressed", self, "button_pressed")
 	
 
 func button_pressed():

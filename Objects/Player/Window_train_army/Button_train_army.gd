@@ -3,7 +3,7 @@ extends Button
 onready var parent = get_parent().get_parent()
 
 func _ready():
-	connect("pressed", self, "button_pressed")
+	var _err = connect("pressed", self, "button_pressed")
 	
 
 func button_pressed():

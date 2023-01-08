@@ -98,7 +98,7 @@ func meet_the_needs_of_rich_class():
 					return
 
 
-func resourse_extraction(game):
+func resourse_extraction(_game):
 	for population_manager in list_of_population_managers:
 		var player = population_manager.player
 		var size = population_manager.quantity_of_workers

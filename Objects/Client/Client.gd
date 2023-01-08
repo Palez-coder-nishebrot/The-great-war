@@ -2,8 +2,8 @@ extends Node
 
 class_name Client
 
-signal check_available_reform(tipe_of_reform)
-signal research_completed
+signal check_available_reform(tipe_of_reform) # Сигнал вызывается!
+signal research_completed # Сигнал вызывается!
 
 const income: Array = ["tariffs", "tax_on_poor_class", "tax_on_rich_class", "Продажа_драгметаллов", "Производство"]
 
@@ -172,8 +172,8 @@ func update_values_of_population():
 		welfare += i.population_manager.welfare
 		middle_value_education += i.population_manager.education
 	
-	welfare = welfare / list_of_tiles.size()
-	middle_value_education = middle_value_education / list_of_tiles.size()
+	welfare = int(float(welfare) / list_of_tiles.size())
+	middle_value_education = int(float(middle_value_education) / list_of_tiles.size())
 
 
 #func update_population_growth():

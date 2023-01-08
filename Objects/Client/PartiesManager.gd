@@ -19,18 +19,18 @@ var popularity_of_parties: Dictionary = {
 }
 
 
-func _init(client, ideology):
-	self.client = client
+func _init(client_, ideology):
+	self.client = client_
 	set_parties(ideology)
 
 
 func set_parties(ideology):
 	self.client = client
 	var folder: Directory = Directory.new()
-	folder.open("res://Resources/Parties/Ideologies/")
-	folder.list_dir_begin(true, true)
+	var _err = folder.open("res://Resources/Parties/Ideologies/")
+	var _err_ = folder.list_dir_begin(true, true)
 	
-	for i in range(6):
+	for _i in range(6):
 		var party = PoliticalParty.new()
 		var path_of_file = "res://Resources/Parties/Ideologies/" + folder.get_next()
 		var file = load(path_of_file)

@@ -62,8 +62,8 @@ var unions
 
 var client
 
-func _init(client):
-	self.client = client
+func _init(client_):
+	self.client = client_
 	set_cotegories()
 
 
@@ -80,7 +80,7 @@ func set_cotegories():
 func reform_activeted(effect, cotegory):
 	var cot = get(cotegory)
 	
-	var num = client.get(cot.activing_reform.additional_target)
+	#var num = client.get(cot.activing_reform.additional_target)
 	client.set(cot.activing_reform.additional_target, -cot.activing_reform.additional_value)
 	
 	cot.activing_reform = effect

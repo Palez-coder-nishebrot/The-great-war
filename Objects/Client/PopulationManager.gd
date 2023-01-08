@@ -8,8 +8,8 @@ var client
 #var manager_of_migration_clerks       = load("res://Resources/SocialMigration/SocClasses/Clerk.tres")
 
 
-func _init(client):
-	self.client = client
+func _init(client_):
+	self.client = client_
 	#new_day()#client, data)
 
 func update_expenses_education():

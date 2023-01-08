@@ -34,14 +34,14 @@ var supporting_soc_reforms: int = 0
 var supporting_pol_reforms: int = 0
 
 
-func set_party(ideology):
-	var economy     = ideology.economic_policy
-	var trade       = ideology.trade_policy
-	var foreign     = ideology.foreign_policy
-	var form_of_gov = ideology.form_of_government
+func set_party(ideology_):
+	var economy     = ideology_.economic_policy
+	var trade       = ideology_.trade_policy
+	var foreign     = ideology_.foreign_policy
+	var form_of_gov = ideology_.form_of_government
 	
-	name_of_party = ideology.names_of_parties[0]
-	self.ideology = ideology.ideology
+	name_of_party = ideology_.names_of_parties[0]
+	self.ideology = ideology_.ideology
 	form_of_government = form_of_gov.name_of_policy
 	
 	economic_policy = economy.name_of_policy
@@ -58,8 +58,8 @@ func set_party(ideology):
 	max_tariffs = trade.max_tariffs
 	min_tariffs = trade.min_tariffs
 	
-	supporting_soc_reforms = ideology.supporting_soc_reforms
-	supporting_pol_reforms = ideology.supporting_pol_reforms
+	supporting_soc_reforms = ideology_.supporting_soc_reforms
+	supporting_pol_reforms = ideology_.supporting_pol_reforms
 	
 
 func change_country():

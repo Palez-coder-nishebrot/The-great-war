@@ -8,8 +8,8 @@ func _ready():
 func spawn_buttons():
 	
 	var folder: Directory = Directory.new()
-	folder.open("res://Resources/StatesOnStartGame/States/")
-	folder.list_dir_begin(true, true)
+	var _err = folder.open("res://Resources/StatesOnStartGame/States/")
+	var _err_ = folder.list_dir_begin(true, true)
 	var folder_name = folder.get_next()
 	
 	while folder_name != "":

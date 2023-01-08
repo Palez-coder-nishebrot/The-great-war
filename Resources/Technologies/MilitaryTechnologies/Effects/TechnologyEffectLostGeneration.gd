@@ -8,6 +8,6 @@ func get_effect():
 	return 'Активируется "Потерянное поколение"'
 
 
-func activate_effects(client):
+func activate_effects(_client):
 	
 	pass

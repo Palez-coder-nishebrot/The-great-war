@@ -1,6 +1,6 @@
 extends Control
 
-signal update_info(list)
+signal update_info(list) # Сигнал вызывается! (наверно)
 
 var province
 var factory: Object

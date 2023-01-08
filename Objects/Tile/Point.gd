@@ -26,7 +26,7 @@ var sprite_of_resource: Sprite
 
 
 func _ready():
-	var err_ = ManagerDay.connect("allocate_workers_to_factories", self, "allocate_workers_to_factories")
+	var _err = ManagerDay.connect("allocate_workers_to_factories", self, "allocate_workers_to_factories")
 
 
 func add_debug_nav_line(to):
@@ -70,7 +70,7 @@ func _pressed():
 		Players.player.window_build_factory.build_factory(self)
 	
 	elif Players.player.information.showing_map == 0 or Players.player.information.showing_map == 2:
-		Players.player.window_province.update_information(self, "province")
+		Players.player.window_province.update_information(self)
 	else:
 		choose_units()
 

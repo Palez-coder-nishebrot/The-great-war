@@ -27,7 +27,7 @@ func spawn_panels(list):
 
 func spawn_panel(soc_class, tipe_of_soc_class):
 	var panel = load("res://Objects/Player/Window_population/Household_button/Household.tscn").instance()
-	connect("update_household_panels", panel, "update_information")
+	var _err = connect("update_household_panels", panel, "update_information")
 	panel.province = soc_class.province
 	panel.household = soc_class
 	panel.tipe_of_soc_class = tipe_of_soc_class

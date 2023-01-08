@@ -38,7 +38,7 @@ func check_factory(name_of_factory):
 	
 
 func check_chars():
-	var factory_obj = player.economic_bonuses.find_factory(factory)
+#	var factory_obj = player.economic_bonuses.find_factory(factory)
 	
 	check_purchase_for_construction($VBoxContainer/Label2,  Players.player.economic_bonuses.cost_of_factory,
 	"Сырье для строительства")

@@ -16,7 +16,7 @@ func _ready():
 
 func ChangeScene(name_of_country):
 	Players.country_to_start = name_of_country
-	get_tree().change_scene("res://Scenes/Game/Game.tscn")
+	var _err = get_tree().change_scene("res://Scenes/Game/Game.tscn")
 	
 
 func one_player():
@@ -29,7 +29,7 @@ func multiplayer_():
 	
 
 func developer_guide():
-	get_tree().change_scene("res://Scenes/DeveloperGuide/DeveloperGuide.tscn")
+	var _err = get_tree().change_scene("res://Scenes/DeveloperGuide/DeveloperGuide.tscn")
 	
 	
 func hide():
@@ -38,4 +38,4 @@ func hide():
 
 
 func path_editor():
-	get_tree().change_scene("res://Scenes/MapEditor/MapEditor.tscn")
+	var _err = get_tree().change_scene("res://Scenes/MapEditor/MapEditor.tscn")

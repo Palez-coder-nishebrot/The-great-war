@@ -40,7 +40,7 @@ func buy_purchase():
 			
 			factory.buy_based_goods()
 			
-			var good = factory.good
+#			var good = factory.good
 			var purchase = factory.purchase
 			var quantity_of_workers = factory.quantity_of_workers
 			var province = factory.province
@@ -68,7 +68,7 @@ func buy_purchase():
 			check_income(factory, expenses)
 			
 
-func check_income(factory, expenses):
+func check_income(factory, _expenses):
 	#factory.province.player.capitalists_manager.income += factory.income
 	var income_of_capitalist = (float(factory.income) / 100.0) * factory.province.player.income_of_capitalists
 	var income_of_country = factory.income - income_of_capitalist
@@ -113,7 +113,7 @@ func start_expansion_of_factory(factory, province):
 	factory.expansion = expansion_object
 
 
-func pay_salary(list_of_workers, province, factory):
+func pay_salary(list_of_workers, _province, factory):
 	var salary = (min_salary + factory.province.player.min_salary) * list_of_workers
 	factory.province.population_manager.money += salary
 	factory.province.population_manager.income += salary

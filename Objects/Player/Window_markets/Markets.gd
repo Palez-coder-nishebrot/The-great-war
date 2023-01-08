@@ -1,8 +1,8 @@
 extends Panel
 
 signal update(market)
-signal update_info_about_output(market_)
-signal update_info_about_warhouse(warhouse)
+#signal update_info_about_output(market_)
+#signal update_info_about_warhouse(warhouse)
 
 var good: String = "coal"
 
@@ -21,7 +21,7 @@ func update_information_about_good(_good):
 	var demand = GlobalMarket.demand
 	var supply = GlobalMarket.supply
 	var price = GlobalMarket.prices_of_goods_from_other_countries
-	var warhouse_of_goods = Players.player.warhouse_of_goods
+#	var warhouse_of_goods = Players.player.warhouse_of_goods
 	
 	$VBoxContainer2/Label.text  = ""
 	$VBoxContainer2/Label2.text = ""
