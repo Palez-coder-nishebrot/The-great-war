@@ -128,13 +128,6 @@ func check_reforms():
 func check_data(data):
 	if data.day == 1 and data.month == 1:
 		reforms = true
-		hold_debate()
 		
 	elif data.day == 1 and data.month == 6:
 		reforms = true
-		hold_debate()
-
-
-func hold_debate():
-	client.hold_debate()
-	pass

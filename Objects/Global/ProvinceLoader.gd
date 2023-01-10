@@ -64,7 +64,7 @@ func create_map(dict_of_regions, game):
 		for resource in i.resources:
 			region.resources[resource] = 1
 		
-		#var middle_education = create_household(i, region)
+		var _middle_education = create_household(i, region)
 		
 		region.population_manager.education = client.middle_value_education
 		
