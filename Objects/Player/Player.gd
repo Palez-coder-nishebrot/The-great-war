@@ -40,12 +40,6 @@ func research_completed(technology):
 	$CanvasLayer.add_child(message)
 
 
-func hold_debate():
-	var message = load("res://Objects/Player/Message/Debate/Debate.tscn").instance()
-	message.show_info(self)
-	$CanvasLayer.add_child(message)
-
-
 func _process(_delta):
 	if Input.is_action_pressed("W"):# and position.y >= 1200:
 		camera.position.y -= speed_of_camera

@@ -18,7 +18,6 @@ func update_information_in_GUI():
 
 
 func update_economy():
-	
 	emit_signal("allocate_workers_to_factories")
 	update_expenses_on_railways()
 	#game.craftsmen_manager.choose_good(game.time_of_game.day)

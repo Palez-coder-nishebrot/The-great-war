@@ -1,7 +1,6 @@
 extends TextureButton
 
 class_name Region
-
 const max_of_buildings: int = 8
 
 var list_of_neighbors_tiles:    Array      = []
@@ -68,7 +67,7 @@ func set_mask():
 func _pressed():
 	if Players.player.window_build_factory.choose_position_for_building == true:
 		Players.player.window_build_factory.build_factory(self)
-	
+		#print(population_manager.)
 	elif Players.player.information.showing_map == 0 or Players.player.information.showing_map == 2:
 		Players.player.window_province.update_information(self)
 	else:
@@ -101,30 +100,6 @@ func new_owner(new_owner):
 
 func change_color_of_region(color):
 	modulate = color
-	
-
-#func show_roads_to_others_provinces():
-#	for i in list_of_neighbors_tiles:
-#		var line = Line2D.new()
-#		line.add_point(position)
-#		line.add_point(i.position)
-#		line.visible = true
-#		get_parent().add_child(line)
-#		list_of_lines.append(line)
-
-
-#func hide_roads_to_others_provinces():
-#	for i in list_of_lines:
-#		i.queue_free()
-#	list_of_lines.clear()
-
-
-#func mouse_entered():
-#	show_roads_to_others_provinces()
-#
-#
-#func mouse_exited():
-#	hide_roads_to_others_provinces()
 
 
 func build_building(name_of_building, cost):
@@ -261,18 +236,8 @@ func allocate_workers_to_factories():
 			factory.quantity_of_workers = r + reserve
 			
 			if factory.quantity_of_workers > factory.max_employed_number:
-#				factory.quantity_of_workers = factory.max_employed_number
-#				reserve += r - factory.max_employed_number
 				reserve += factory.quantity_of_workers - factory.max_employed_number
 				factory.quantity_of_workers = factory.max_employed_number
-				
-#			if factory.quantity_of_workers < factory.max_employed_number:
-#				if reserve > factory.max_employed_number - factory.quantity_of_workers:
-#					factory.quantity_of_workers = factory.max_employed_number
-#					reserve -= factory.max_employed_number - factory.quantity_of_workers
-#				else:
-#					factory.quantity_of_workers += reserve
-#					reserve = 0
 			
 			workers -= factory.quantity_of_workers
 		population_manager.quantity_of_unemployed = workers + reserve_of_workers
