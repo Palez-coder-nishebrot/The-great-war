@@ -1,4 +1,4 @@
-extends Control
+extends Node2D
 
 const factories: Dictionary = {
 	"Steel_plant":             "res://Resources/Factories/TipesOfFactories/SteelPlant.tres",

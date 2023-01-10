@@ -1,4 +1,4 @@
-[gd_scene load_steps=116 format=2]
+[gd_scene load_steps=119 format=2]
 
 [ext_resource path="res://Scenes/TileMap/TileMap.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/TileMap/Карта региона.png" type="Texture" id=2]
@@ -115,8 +115,11 @@
 [ext_resource path="res://Graphics/Sprites/Provinces/Баскакия/Трускавец.png" type="Texture" id=113]
 [ext_resource path="res://Graphics/Sprites/Provinces/Баскония/Ахалкалаки.png" type="Texture" id=114]
 [ext_resource path="res://Graphics/Sprites/Provinces/Баскония/Батуми.png" type="Texture" id=115]
+[ext_resource path="res://Scenes/Province/province.tscn" type="PackedScene" id=116]
+[ext_resource path="res://Scenes/Province/border.tscn" type="PackedScene" id=117]
+[ext_resource path="res://Scenes/Province/border_part.tscn" type="PackedScene" id=118]
 
-[node name="TileMap" type="Control"]
+[node name="TileMap" type="Node2D"]
 script = ExtResource( 1 )
 
 [node name="Map" type="Sprite" parent="."]
@@ -1215,6 +1218,26 @@ margin_bottom = 629.0
 texture_normal = ExtResource( 54 )
 
 [node name="DebugCollisionView" type="Node2D" parent="."]
+
+[node name="ProvinceBrodi" parent="." instance=ExtResource( 116 )]
+position = Vector2( 2823, 1424 )
+
+[node name="Border" parent="ProvinceBrodi" instance=ExtResource( 117 )]
+
+[node name="BorderPart" parent="ProvinceBrodi/Border" instance=ExtResource( 118 )]
+points = PoolVector2Array( -123, -62, -121, -42, -99, -34, -87, -18, -79, 10, -87, 26, -103, 40, -127, 56, -159, 64, -169, 78, -171, 92, -183, 104 )
+
+[node name="BorderPart2" parent="ProvinceBrodi/Border" instance=ExtResource( 118 )]
+points = PoolVector2Array( -119, -64, -95, -72, -87, -88, -47, -120, -23, -120, -7, -112, 17, -112, 41, -88, 57, -88, 81, -88, 97, -96, 105, -96, 113, -88, 121, -88, 145, -96, 153, -96, 161, -88, 185, -88, 201, -64, 241, -32, 289, -24, 305, -16, 329, -16, 337, 0, 369, 0, 385, -8 )
+
+[node name="BorderPart3" parent="ProvinceBrodi/Border" instance=ExtResource( 118 )]
+points = PoolVector2Array( 385, -8, 393, 8, 401, 24, 393, 48, 409, 64, 409, 88, 393, 112, 393, 128, 385, 152, 385, 160 )
+
+[node name="BorderPart4" parent="ProvinceBrodi/Border" instance=ExtResource( 118 )]
+points = PoolVector2Array( 385, 160, 353, 160, 337, 152, 321, 152, 305, 136, 281, 152, 233, 144 )
+
+[node name="BorderPart5" parent="ProvinceBrodi/Border" instance=ExtResource( 118 )]
+points = PoolVector2Array( 235, 146, 227, 136, 209, 136, 193, 120, 143, 120, 121, 110, 93, 110, 77, 118, 27, 114, -1, 114, -17, 128, -47, 130, -73, 114, -89, 114, -107, 120, -125, 106, -143, 104, -163, 102, -181, 100 )
 
 [editable path="Красник"]
 [editable path="Луцк"]
