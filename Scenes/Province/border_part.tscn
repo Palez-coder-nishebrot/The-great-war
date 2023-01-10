@@ -3,4 +3,5 @@
 [ext_resource path="res://Scenes/Province/border_part.gd" type="Script" id=1]
 
 [node name="BorderPart" type="Line2D"]
+default_color = Color( 0.47451, 1, 0.4, 0.4 )
 script = ExtResource( 1 )

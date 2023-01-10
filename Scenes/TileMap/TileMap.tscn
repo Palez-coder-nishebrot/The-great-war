@@ -1225,19 +1225,19 @@ position = Vector2( 2823, 1424 )
 [node name="Border" parent="ProvinceBrodi" instance=ExtResource( 117 )]
 
 [node name="BorderPart" parent="ProvinceBrodi/Border" instance=ExtResource( 118 )]
-points = PoolVector2Array( -123, -62, -121, -42, -99, -34, -87, -18, -79, 10, -87, 26, -103, 40, -127, 56, -159, 64, -169, 78, -171, 92, -183, 104 )
+points = PoolVector2Array( -123, -62, -127, -50, -123, -36, -101, -32, -93, -16, -85, 0, -85, 10, -95, 24, -105, 38, -113, 40, -135, 58, -159, 60, -173, 76, -171, 92, -181, 100 )
 
 [node name="BorderPart2" parent="ProvinceBrodi/Border" instance=ExtResource( 118 )]
-points = PoolVector2Array( -119, -64, -95, -72, -87, -88, -47, -120, -23, -120, -7, -112, 17, -112, 41, -88, 57, -88, 81, -88, 97, -96, 105, -96, 113, -88, 121, -88, 145, -96, 153, -96, 161, -88, 185, -88, 201, -64, 241, -32, 289, -24, 305, -16, 329, -16, 337, 0, 369, 0, 385, -8 )
+points = PoolVector2Array( -123, -62, -95, -72, -87, -88, -47, -120, -23, -120, -7, -112, 17, -112, 41, -88, 57, -88, 81, -88, 97, -96, 105, -96, 113, -88, 121, -88, 145, -96, 153, -96, 161, -88, 185, -88, 201, -64, 241, -32, 289, -24, 305, -16, 329, -16, 339, 0, 369, 0, 385, -8 )
 
 [node name="BorderPart3" parent="ProvinceBrodi/Border" instance=ExtResource( 118 )]
-points = PoolVector2Array( 385, -8, 393, 8, 401, 24, 393, 48, 409, 64, 409, 88, 393, 112, 393, 128, 385, 152, 385, 160 )
+points = PoolVector2Array( 385, -8, 393, 8, 401, 20, 401, 54, 411, 62, 411, 92, 403, 108, 393, 118, 391, 132, 391, 146, 391, 156, 385, 164 )
 
 [node name="BorderPart4" parent="ProvinceBrodi/Border" instance=ExtResource( 118 )]
-points = PoolVector2Array( 385, 160, 353, 160, 337, 152, 321, 152, 305, 136, 281, 152, 233, 144 )
+points = PoolVector2Array( 235, 146, 249, 152, 271, 154, 289, 146, 305, 136, 321, 152, 341, 156, 355, 164, 385, 164 )
 
 [node name="BorderPart5" parent="ProvinceBrodi/Border" instance=ExtResource( 118 )]
-points = PoolVector2Array( 235, 146, 227, 136, 209, 136, 193, 120, 143, 120, 121, 110, 93, 110, 77, 118, 27, 114, -1, 114, -17, 128, -47, 130, -73, 114, -89, 114, -107, 120, -125, 106, -143, 104, -163, 102, -181, 100 )
+points = PoolVector2Array( 235, 146, 225, 140, 209, 136, 187, 124, 145, 124, 119, 114, 95, 114, 77, 118, 31, 118, 1, 118, -17, 130, -47, 134, -73, 120, -91, 122, -109, 122, -129, 110, -145, 108, -167, 108, -181, 100 )
 
 [editable path="Красник"]
 [editable path="Луцк"]
