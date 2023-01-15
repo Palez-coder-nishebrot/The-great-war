@@ -128,1089 +128,1091 @@ scale = Vector2( 0.995, 0.995 )
 z_index = -10
 texture = ExtResource( 2 )
 
-[node name="Броды" parent="." instance=ExtResource( 4 )]
+[node name="ToDelete" type="Control" parent="."]
+
+[node name="Броды" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 2644.0
 margin_top = 1304.0
 margin_right = 3233.0
 margin_bottom = 1587.0
 texture_normal = ExtResource( 7 )
 
-[node name="Кременец" parent="." instance=ExtResource( 4 )]
+[node name="Кременец" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 2203.0
 margin_top = 1343.0
 margin_right = 2737.0
 margin_bottom = 1606.0
 texture_normal = ExtResource( 5 )
 
-[node name="Люблин" parent="." instance=ExtResource( 4 )]
+[node name="Люблин" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 1878.0
 margin_top = 1417.0
 margin_right = 2272.0
 margin_bottom = 1614.0
 texture_normal = ExtResource( 6 )
 
-[node name="Тарнополь" parent="." instance=ExtResource( 4 )]
+[node name="Тарнополь" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 1842.0
 margin_top = 1578.0
 margin_right = 2120.0
 margin_bottom = 1802.0
 texture_normal = ExtResource( 3 )
 
-[node name="Красник" parent="." instance=ExtResource( 4 )]
+[node name="Красник" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 1847.0
 margin_top = 1666.0
 margin_right = 2141.0
 margin_bottom = 1975.0
 texture_normal = ExtResource( 8 )
 
-[node name="Label" parent="Красник" index="0"]
+[node name="Label" parent="ToDelete/Красник" index="0"]
 margin_left = -238.0
 margin_top = 109.0
 margin_right = 527.0
 margin_bottom = 245.0
 
-[node name="Станислав" parent="." instance=ExtResource( 4 )]
+[node name="Станислав" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 2069.0
 margin_top = 1807.0
 margin_right = 2307.0
 margin_bottom = 1998.0
 texture_normal = ExtResource( 23 )
 
-[node name="Белжеца" parent="." instance=ExtResource( 4 )]
+[node name="Белжеца" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 2292.0
 margin_top = 1854.0
 margin_right = 2567.0
 margin_bottom = 2009.0
 texture_normal = ExtResource( 22 )
 
-[node name="Лодзь" parent="." instance=ExtResource( 4 )]
+[node name="Лодзь" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 2044.0
 margin_top = 1594.0
 margin_right = 2298.0
 margin_bottom = 1845.0
 texture_normal = ExtResource( 9 )
 
-[node name="Митава" parent="." instance=ExtResource( 4 )]
+[node name="Митава" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 2241.0
 margin_top = 1532.0
 margin_right = 2573.0
 margin_bottom = 1887.0
 texture_normal = ExtResource( 93 )
 
-[node name="Черновцы" parent="." instance=ExtResource( 4 )]
+[node name="Черновцы" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 2493.0
 margin_top = 1530.0
 margin_right = 2871.0
 margin_bottom = 1877.0
 texture_normal = ExtResource( 10 )
 
-[node name="Богородчаны" parent="." instance=ExtResource( 4 )]
+[node name="Богородчаны" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 2644.0
 margin_top = 1530.0
 margin_right = 3063.0
 margin_bottom = 1804.0
 texture_normal = ExtResource( 24 )
 
-[node name="Днестр" parent="." instance=ExtResource( 4 )]
+[node name="Днестр" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 2880.0
 margin_top = 1642.0
 margin_right = 3127.0
 margin_bottom = 1953.0
 texture_normal = ExtResource( 16 )
 
-[node name="Галич" parent="." instance=ExtResource( 4 )]
+[node name="Галич" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 2513.0
 margin_top = 1815.0
 margin_right = 2953.0
 margin_bottom = 1980.0
 texture_normal = ExtResource( 15 )
 
-[node name="Калуш" parent="." instance=ExtResource( 4 )]
+[node name="Калуш" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 2978.0
 margin_top = 1565.0
 margin_right = 3324.0
 margin_bottom = 2024.0
 texture_normal = ExtResource( 12 )
 
-[node name="Познань" parent="." instance=ExtResource( 4 )]
+[node name="Познань" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 3065.0
 margin_top = 2251.0
 margin_right = 3462.0
 margin_bottom = 2650.0
 texture_normal = ExtResource( 11 )
 
-[node name="Ровно" parent="." instance=ExtResource( 4 )]
+[node name="Ровно" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 2742.0
 margin_top = 2506.0
 margin_right = 3277.0
 margin_bottom = 2806.0
 texture_normal = ExtResource( 13 )
 
-[node name="Тлумач" parent="." instance=ExtResource( 4 )]
+[node name="Тлумач" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 2980.0
 margin_top = 1931.0
 margin_right = 3365.0
 margin_bottom = 2326.0
 texture_normal = ExtResource( 25 )
 
-[node name="Луцк" parent="." instance=ExtResource( 4 )]
+[node name="Луцк" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 2948.0
 margin_top = 2206.0
 margin_right = 3147.0
 margin_bottom = 2520.0
 texture_normal = ExtResource( 14 )
 
-[node name="Label" parent="Луцк" index="0"]
+[node name="Label" parent="ToDelete/Луцк" index="0"]
 margin_left = -267.0
 margin_top = 103.0
 margin_right = 498.0
 margin_bottom = 239.0
 
-[node name="Коломыя" parent="." instance=ExtResource( 4 )]
+[node name="Коломыя" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 2973.0
 margin_top = 2746.0
 margin_right = 3455.0
 margin_bottom = 3050.0
 texture_normal = ExtResource( 92 )
 
-[node name="Проскуров" parent="." instance=ExtResource( 4 )]
+[node name="Проскуров" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 2645.0
 margin_top = 2887.0
 margin_right = 3102.0
 margin_bottom = 3236.0
 texture_normal = ExtResource( 88 )
 
-[node name="Label" parent="Проскуров" index="0"]
+[node name="Label" parent="ToDelete/Проскуров" index="0"]
 margin_left = -142.0
 margin_top = 110.0
 margin_right = 623.0
 margin_bottom = 246.0
 
-[node name="Стрый" parent="." instance=ExtResource( 4 )]
+[node name="Стрый" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 2507.0
 margin_top = 2792.0
 margin_right = 2998.0
 margin_bottom = 3039.0
 texture_normal = ExtResource( 90 )
 
-[node name="Ковель" parent="." instance=ExtResource( 4 )]
+[node name="Ковель" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 2434.0
 margin_top = 2724.0
 margin_right = 2777.0
 margin_bottom = 2923.0
 texture_normal = ExtResource( 87 )
 
-[node name="Волынский" parent="." instance=ExtResource( 4 )]
+[node name="Волынский" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 2167.0
 margin_top = 2818.0
 margin_right = 2454.0
 margin_bottom = 3055.0
 texture_normal = ExtResource( 89 )
 
-[node name="Label" parent="Волынский" index="0"]
+[node name="Label" parent="ToDelete/Волынский" index="0"]
 margin_left = -270.0
 margin_top = 32.0
 margin_right = 495.0
 margin_bottom = 168.0
 
-[node name="Щепеткова" parent="." instance=ExtResource( 4 )]
+[node name="Щепеткова" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 2345.0
 margin_top = 2902.0
 margin_right = 2669.0
 margin_bottom = 3226.0
 texture_normal = ExtResource( 91 )
 
-[node name="Label" parent="Щепеткова" index="0"]
+[node name="Label" parent="ToDelete/Щепеткова" index="0"]
 margin_left = -211.0
 margin_top = 47.0
 margin_right = 554.0
 margin_bottom = 183.0
 
-[node name="Львов" parent="." instance=ExtResource( 4 )]
+[node name="Львов" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 1901.0
 margin_top = 2756.0
 margin_right = 2092.0
 margin_bottom = 3054.0
 texture_normal = ExtResource( 74 )
 
-[node name="Label" parent="Львов" index="0"]
+[node name="Label" parent="ToDelete/Львов" index="0"]
 margin_left = -283.0
 margin_top = 74.0
 margin_right = 482.0
 margin_bottom = 210.0
 
-[node name="Болехов" parent="." instance=ExtResource( 4 )]
+[node name="Болехов" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 1629.0
 margin_top = 2733.0
 margin_right = 1942.0
 margin_bottom = 3020.0
 texture_normal = ExtResource( 76 )
 
-[node name="Борка" parent="." instance=ExtResource( 4 )]
+[node name="Борка" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 1642.0
 margin_top = 2629.0
 margin_right = 2041.0
 margin_bottom = 2793.0
 texture_normal = ExtResource( 79 )
 
-[node name="Звижень" parent="." instance=ExtResource( 4 )]
+[node name="Звижень" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 1338.0
 margin_top = 2557.0
 margin_right = 1785.0
 margin_bottom = 2764.0
 texture_normal = ExtResource( 75 )
 
-[node name="Гримайлов" parent="." instance=ExtResource( 4 )]
+[node name="Гримайлов" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 1311.0
 margin_top = 2732.0
 margin_right = 1693.0
 margin_bottom = 3012.0
 texture_normal = ExtResource( 78 )
 
-[node name="Хмельницкий" parent="." instance=ExtResource( 4 )]
+[node name="Хмельницкий" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 884.0
 margin_top = 2532.0
 margin_right = 1175.0
 margin_bottom = 2882.0
 texture_normal = ExtResource( 47 )
 
-[node name="Label" parent="Хмельницкий" index="0"]
+[node name="Label" parent="ToDelete/Хмельницкий" index="0"]
 margin_left = -230.0
 margin_top = 119.0
 margin_right = 535.0
 margin_bottom = 255.0
 rect_rotation = 45.0248
 
-[node name="Ивано-Франковск" parent="." instance=ExtResource( 4 )]
+[node name="Ивано-Франковск" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 1135.0
 margin_top = 2666.0
 margin_right = 1378.0
 margin_bottom = 2883.0
 texture_normal = ExtResource( 77 )
 
-[node name="Label" parent="Ивано-Франковск" index="0"]
+[node name="Label" parent="ToDelete/Ивано-Франковск" index="0"]
 margin_left = -256.0
 margin_top = 70.0
 margin_right = 509.0
 margin_bottom = 206.0
 rect_rotation = -41.8436
 
-[node name="Каменец-Подольск" parent="." instance=ExtResource( 4 )]
+[node name="Каменец-Подольск" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 405.0
 margin_top = 1973.0
 margin_right = 716.0
 margin_bottom = 2432.0
 texture_normal = ExtResource( 48 )
 
-[node name="Label" parent="Каменец-Подольск" index="0"]
+[node name="Label" parent="ToDelete/Каменец-Подольск" index="0"]
 margin_left = -225.0
 margin_top = 220.0
 margin_right = 540.0
 margin_bottom = 356.0
 
-[node name="Зборов" parent="." instance=ExtResource( 4 )]
+[node name="Зборов" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 681.0
 margin_top = 2345.0
 margin_right = 982.0
 margin_bottom = 2626.0
 texture_normal = ExtResource( 46 )
 
-[node name="Label" parent="Зборов" index="0"]
+[node name="Label" parent="ToDelete/Зборов" index="0"]
 margin_left = -224.0
 margin_top = 61.0
 margin_right = 541.0
 margin_bottom = 197.0
 rect_rotation = 47.5122
 
-[node name="Белецкое" parent="." instance=ExtResource( 4 )]
+[node name="Белецкое" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 881.0
 margin_top = 2676.0
 margin_right = 1120.0
 margin_bottom = 3028.0
 texture_normal = ExtResource( 106 )
 
-[node name="Label" parent="Белецкое" index="0"]
+[node name="Label" parent="ToDelete/Белецкое" index="0"]
 margin_left = -275.0
 margin_top = 139.0
 margin_right = 490.0
 margin_bottom = 275.0
 
-[node name="Ужгород" parent="." instance=ExtResource( 4 )]
+[node name="Ужгород" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 601.0
 margin_top = 2664.0
 margin_right = 892.0
 margin_bottom = 2991.0
 texture_normal = ExtResource( 108 )
 
-[node name="Дубно" parent="." instance=ExtResource( 4 )]
+[node name="Дубно" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 493.0
 margin_top = 2418.0
 margin_right = 693.0
 margin_bottom = 2719.0
 texture_normal = ExtResource( 52 )
 
-[node name="Label" parent="Дубно" index="0"]
+[node name="Label" parent="ToDelete/Дубно" index="0"]
 margin_left = -272.0
 margin_top = 77.0
 margin_right = 493.0
 margin_bottom = 213.0
 
-[node name="Иршики" parent="." instance=ExtResource( 4 )]
+[node name="Иршики" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 676.0
 margin_top = 2431.0
 margin_right = 883.0
 margin_bottom = 2719.0
 texture_normal = ExtResource( 107 )
 
-[node name="Label" parent="Иршики" index="0"]
+[node name="Label" parent="ToDelete/Иршики" index="0"]
 margin_left = -282.0
 margin_top = 100.0
 margin_right = 483.0
 margin_bottom = 236.0
 
-[node name="Старокостантинов" parent="." instance=ExtResource( 4 )]
+[node name="Старокостантинов" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 638.0
 margin_top = 1989.0
 margin_right = 890.0
 margin_bottom = 2244.0
 texture_normal = ExtResource( 57 )
 
-[node name="Label" parent="Старокостантинов" index="0"]
+[node name="Label" parent="ToDelete/Старокостантинов" index="0"]
 margin_left = -256.0
 margin_top = 46.0
 margin_right = 509.0
 margin_bottom = 182.0
 
-[node name="Дрогобыч" parent="." instance=ExtResource( 4 )]
+[node name="Дрогобыч" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 827.0
 margin_top = 1787.0
 margin_right = 1067.0
 margin_bottom = 2123.0
 texture_normal = ExtResource( 56 )
 
-[node name="Label" parent="Дрогобыч" index="0"]
+[node name="Label" parent="ToDelete/Дрогобыч" index="0"]
 margin_left = -243.0
 margin_top = 114.0
 margin_right = 522.0
 margin_bottom = 250.0
 
-[node name="Нетешин" parent="." instance=ExtResource( 4 )]
+[node name="Нетешин" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 522.0
 margin_top = 1651.0
 margin_right = 918.0
 margin_bottom = 2097.0
 texture_normal = ExtResource( 55 )
 
-[node name="Label" parent="Нетешин" index="0"]
+[node name="Label" parent="ToDelete/Нетешин" index="0"]
 margin_left = -188.0
 margin_top = 170.0
 margin_right = 577.0
 margin_bottom = 306.0
 
-[node name="Мукачево" parent="." instance=ExtResource( 4 )]
+[node name="Мукачево" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 704.0
 margin_top = 1460.0
 margin_right = 1013.0
 margin_bottom = 1919.0
 texture_normal = ExtResource( 73 )
 
-[node name="Label" parent="Мукачево" index="0"]
+[node name="Label" parent="ToDelete/Мукачево" index="0"]
 margin_left = -206.0
 margin_top = 155.0
 margin_right = 559.0
 margin_bottom = 291.0
 
-[node name="Берегово" parent="." instance=ExtResource( 4 )]
+[node name="Берегово" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 978.0
 margin_top = 1373.0
 margin_right = 1305.0
 margin_bottom = 1727.0
 texture_normal = ExtResource( 61 )
 
-[node name="Label" parent="Берегово" index="0"]
+[node name="Label" parent="ToDelete/Берегово" index="0"]
 margin_left = -223.0
 margin_top = 121.0
 margin_right = 542.0
 margin_bottom = 257.0
 
-[node name="Буковина" parent="." instance=ExtResource( 4 )]
+[node name="Буковина" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 998.0
 margin_top = 1666.0
 margin_right = 1310.0
 margin_bottom = 1865.0
 texture_normal = ExtResource( 62 )
 
-[node name="Катовице" parent="." instance=ExtResource( 4 )]
+[node name="Катовице" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 969.0
 margin_top = 1056.0
 margin_right = 1228.0
 margin_bottom = 1456.0
 texture_normal = ExtResource( 72 )
 
-[node name="Label" parent="Катовице" index="0"]
+[node name="Label" parent="ToDelete/Катовице" index="0"]
 margin_left = -276.0
 margin_top = 108.0
 margin_right = 489.0
 margin_bottom = 244.0
 
-[node name="Ченстохова" parent="." instance=ExtResource( 4 )]
+[node name="Ченстохова" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 1099.0
 margin_top = 1362.0
 margin_right = 1511.0
 margin_bottom = 1713.0
 texture_normal = ExtResource( 60 )
 
-[node name="Пшемысль" parent="." instance=ExtResource( 4 )]
+[node name="Пшемысль" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 1323.0
 margin_top = 1457.0
 margin_right = 1633.0
 margin_bottom = 1909.0
 texture_normal = ExtResource( 58 )
 
-[node name="Севастополь" parent="." instance=ExtResource( 4 )]
+[node name="Севастополь" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 1381.0
 margin_top = 2074.0
 margin_right = 1583.0
 margin_bottom = 2344.0
 texture_normal = ExtResource( 49 )
 
-[node name="Label" parent="Севастополь" index="0"]
+[node name="Label" parent="ToDelete/Севастополь" index="0"]
 margin_left = -277.0
 margin_top = 59.0
 margin_right = 488.0
 margin_bottom = 195.0
 
-[node name="Закопане" parent="." instance=ExtResource( 4 )]
+[node name="Закопане" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 1510.0
 margin_top = 2072.0
 margin_right = 1695.0
 margin_bottom = 2312.0
 texture_normal = ExtResource( 50 )
 
-[node name="Label" parent="Закопане" index="0"]
+[node name="Label" parent="ToDelete/Закопане" index="0"]
 margin_left = -277.0
 margin_top = 67.0
 margin_right = 488.0
 margin_bottom = 203.0
 
-[node name="Донецк" parent="." instance=ExtResource( 4 )]
+[node name="Донецк" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 1434.0
 margin_top = 1100.0
 margin_right = 1743.0
 margin_bottom = 1500.0
 texture_normal = ExtResource( 63 )
 
-[node name="Label" parent="Донецк" index="0"]
+[node name="Label" parent="ToDelete/Донецк" index="0"]
 margin_left = -226.0
 margin_top = 144.0
 margin_right = 539.0
 margin_bottom = 280.0
 
-[node name="Сегед" parent="." instance=ExtResource( 4 )]
+[node name="Сегед" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 1225.0
 margin_top = 1053.0
 margin_right = 1520.0
 margin_bottom = 1336.0
 texture_normal = ExtResource( 110 )
 
-[node name="Стецки" parent="." instance=ExtResource( 4 )]
+[node name="Стецки" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 1087.0
 margin_top = 1163.0
 margin_right = 1509.0
 margin_bottom = 1449.0
 texture_normal = ExtResource( 59 )
 
-[node name="Label" parent="Стецки" index="0"]
+[node name="Label" parent="ToDelete/Стецки" index="0"]
 margin_left = -164.0
 margin_top = 100.0
 margin_right = 601.0
 margin_bottom = 236.0
 
-[node name="Николаев" parent="." instance=ExtResource( 4 )]
+[node name="Николаев" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 1136.0
 margin_top = 919.0
 margin_right = 1397.0
 margin_bottom = 1093.0
 texture_normal = ExtResource( 81 )
 
-[node name="Винница" parent="." instance=ExtResource( 4 )]
+[node name="Винница" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 1089.0
 margin_top = 607.0
 margin_right = 1567.0
 margin_bottom = 993.0
 texture_normal = ExtResource( 41 )
 
-[node name="Симферополь" parent="." instance=ExtResource( 4 )]
+[node name="Симферополь" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 1218.0
 margin_top = 391.0
 margin_right = 1569.0
 margin_bottom = 633.0
 texture_normal = ExtResource( 38 )
 
-[node name="Херсон" parent="." instance=ExtResource( 4 )]
+[node name="Херсон" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 1107.0
 margin_top = 106.0
 margin_right = 1566.0
 margin_bottom = 614.0
 texture_normal = ExtResource( 37 )
 
-[node name="Полтава" parent="." instance=ExtResource( 4 )]
+[node name="Полтава" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 1443.0
 margin_top = 103.0
 margin_right = 2008.0
 margin_bottom = 468.0
 texture_normal = ExtResource( 43 )
 
-[node name="Белая Церковь" parent="." instance=ExtResource( 4 )]
+[node name="Белая Церковь" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 814.0
 margin_top = 352.0
 margin_right = 1206.0
 margin_bottom = 790.0
 texture_normal = ExtResource( 42 )
 
-[node name="Пмлица" parent="." instance=ExtResource( 4 )]
+[node name="Пмлица" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 429.0
 margin_top = 516.0
 margin_right = 1078.0
 margin_bottom = 924.0
 texture_normal = ExtResource( 44 )
 
-[node name="Label" parent="Пмлица" index="0"]
+[node name="Label" parent="ToDelete/Пмлица" index="0"]
 margin_left = -46.0
 margin_top = 151.0
 margin_right = 719.0
 margin_bottom = 287.0
 
-[node name="Мелитополь" parent="." instance=ExtResource( 4 )]
+[node name="Мелитополь" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 264.0
 margin_top = 790.0
 margin_right = 772.0
 margin_bottom = 1184.0
 texture_normal = ExtResource( 40 )
 
-[node name="Label" parent="Мелитополь" index="0"]
+[node name="Label" parent="ToDelete/Мелитополь" index="0"]
 margin_left = -159.0
 margin_top = 130.0
 margin_right = 606.0
 margin_bottom = 266.0
 
-[node name="Грубешов" parent="." instance=ExtResource( 4 )]
+[node name="Грубешов" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 313.0
 margin_top = 929.0
 margin_right = 821.0
 margin_bottom = 1304.0
 texture_normal = ExtResource( 97 )
 
-[node name="Label" parent="Грубешов" index="0"]
+[node name="Label" parent="ToDelete/Грубешов" index="0"]
 margin_left = -77.0
 margin_top = 187.0
 margin_right = 688.0
 margin_bottom = 323.0
 
-[node name="Павлоград" parent="." instance=ExtResource( 4 )]
+[node name="Павлоград" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 783.0
 margin_top = 1210.0
 margin_right = 986.0
 margin_bottom = 1540.0
 texture_normal = ExtResource( 36 )
 
-[node name="Label" parent="Павлоград" index="0"]
+[node name="Label" parent="ToDelete/Павлоград" index="0"]
 margin_left = -244.0
 margin_top = 100.0
 margin_right = 521.0
 margin_bottom = 236.0
 rect_rotation = -48.122
 
-[node name="Вилькомир" parent="." instance=ExtResource( 4 )]
+[node name="Вилькомир" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 776.0
 margin_top = 795.0
 margin_right = 1152.0
 margin_bottom = 1250.0
 texture_normal = ExtResource( 96 )
 
-[node name="Label" parent="Вилькомир" index="0"]
+[node name="Label" parent="ToDelete/Вилькомир" index="0"]
 margin_left = -185.0
 margin_top = 164.0
 margin_right = 580.0
 margin_bottom = 300.0
 
-[node name="Лисичанск" parent="." instance=ExtResource( 4 )]
+[node name="Лисичанск" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 384.0
 margin_top = 1237.0
 margin_right = 889.0
 margin_bottom = 1766.0
 texture_normal = ExtResource( 39 )
 
-[node name="Label" parent="Лисичанск" index="0"]
+[node name="Label" parent="ToDelete/Лисичанск" index="0"]
 margin_left = -131.0
 margin_top = 166.0
 margin_right = 634.0
 margin_bottom = 302.0
 
-[node name="Бердичев" parent="." instance=ExtResource( 4 )]
+[node name="Бердичев" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 1538.0
 margin_top = 470.0
 margin_right = 1952.0
 margin_bottom = 830.0
 texture_normal = ExtResource( 67 )
 
-[node name="Label" parent="Бердичев" index="0"]
+[node name="Label" parent="ToDelete/Бердичев" index="0"]
 margin_left = -151.0
 margin_top = 108.0
 margin_right = 614.0
 margin_bottom = 244.0
 
-[node name="Тамань" parent="." instance=ExtResource( 4 )]
+[node name="Тамань" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 1651.0
 margin_top = 653.0
 margin_right = 1997.0
 margin_bottom = 1067.0
 texture_normal = ExtResource( 109 )
 
-[node name="Label" parent="Тамань" index="0"]
+[node name="Label" parent="ToDelete/Тамань" index="0"]
 margin_left = -206.0
 margin_top = 152.0
 margin_right = 559.0
 margin_bottom = 288.0
 
-[node name="Горлица" parent="." instance=ExtResource( 4 )]
+[node name="Горлица" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 1885.0
 margin_top = 436.0
 margin_right = 2226.0
 margin_bottom = 695.0
 texture_normal = ExtResource( 69 )
 
-[node name="Label" parent="Горлица" index="0"]
+[node name="Label" parent="ToDelete/Горлица" index="0"]
 margin_left = -209.0
 margin_top = 80.0
 margin_right = 556.0
 margin_bottom = 216.0
 
-[node name="Константиновка" parent="." instance=ExtResource( 4 )]
+[node name="Константиновка" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 1437.0
 margin_top = 377.0
 margin_right = 1867.0
 margin_bottom = 606.0
 texture_normal = ExtResource( 70 )
 
-[node name="Измаил" parent="." instance=ExtResource( 4 )]
+[node name="Измаил" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 1349.0
 margin_top = 705.0
 margin_right = 1689.0
 margin_bottom = 1091.0
 texture_normal = ExtResource( 71 )
 
-[node name="Label" parent="Измаил" index="0"]
+[node name="Label" parent="ToDelete/Измаил" index="0"]
 margin_left = -183.0
 margin_top = 168.0
 margin_right = 582.0
 margin_bottom = 304.0
 
-[node name="Новомосковск" parent="." instance=ExtResource( 4 )]
+[node name="Новомосковск" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 1521.0
 margin_top = 967.0
 margin_right = 1920.0
 margin_bottom = 1337.0
 texture_normal = ExtResource( 64 )
 
-[node name="Label" parent="Новомосковск" index="0"]
+[node name="Label" parent="ToDelete/Новомосковск" index="0"]
 margin_left = -96.0
 margin_top = 142.0
 margin_right = 669.0
 margin_bottom = 278.0
 
-[node name="Яремче" parent="." instance=ExtResource( 4 )]
+[node name="Яремче" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 1885.0
 margin_top = 897.0
 margin_right = 1996.0
 margin_bottom = 1184.0
 texture_normal = ExtResource( 66 )
 
-[node name="Label" parent="Яремче" index="0"]
+[node name="Label" parent="ToDelete/Яремче" index="0"]
 margin_left = -332.0
 margin_top = 88.0
 margin_right = 433.0
 margin_bottom = 224.0
 rect_rotation = -77.0
 
-[node name="Коростень" parent="." instance=ExtResource( 4 )]
+[node name="Коростень" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 1756.0
 margin_top = 1151.0
 margin_right = 2056.0
 margin_bottom = 1435.0
 texture_normal = ExtResource( 65 )
 
-[node name="Label" parent="Коростень" index="0"]
+[node name="Label" parent="ToDelete/Коростень" index="0"]
 margin_left = -176.0
 margin_top = 91.0
 margin_right = 589.0
 margin_bottom = 227.0
 
-[node name="Должанск" parent="." instance=ExtResource( 4 )]
+[node name="Должанск" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 1945.0
 margin_top = 632.0
 margin_right = 2382.0
 margin_bottom = 939.0
 texture_normal = ExtResource( 68 )
 
-[node name="Label" parent="Должанск" index="0"]
+[node name="Label" parent="ToDelete/Должанск" index="0"]
 margin_left = -182.0
 margin_top = 39.0
 margin_right = 583.0
 margin_bottom = 175.0
 
-[node name="Покровск" parent="." instance=ExtResource( 4 )]
+[node name="Покровск" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 1945.0
 margin_top = 236.0
 margin_right = 2151.0
 margin_bottom = 516.0
 texture_normal = ExtResource( 33 )
 
-[node name="Label" parent="Покровск" index="0"]
+[node name="Label" parent="ToDelete/Покровск" index="0"]
 margin_left = -279.0
 margin_top = 61.0
 margin_right = 486.0
 margin_bottom = 197.0
 
-[node name="Изюм" parent="." instance=ExtResource( 4 )]
+[node name="Изюм" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 2041.0
 margin_top = 172.0
 margin_right = 2358.0
 margin_bottom = 357.0
 texture_normal = ExtResource( 35 )
 
-[node name="Черкасс" parent="." instance=ExtResource( 4 )]
+[node name="Черкасс" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 2087.0
 margin_top = 278.0
 margin_right = 2427.0
 margin_bottom = 622.0
 texture_normal = ExtResource( 28 )
 
-[node name="Label" parent="Черкасс" index="0"]
+[node name="Label" parent="ToDelete/Черкасс" index="0"]
 margin_left = -202.0
 margin_top = 125.0
 margin_right = 563.0
 margin_bottom = 261.0
 
-[node name="Житомир" parent="." instance=ExtResource( 4 )]
+[node name="Житомир" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 2234.0
 margin_top = 558.0
 margin_right = 2571.0
 margin_bottom = 735.0
 texture_normal = ExtResource( 80 )
 
-[node name="Сумы" parent="." instance=ExtResource( 4 )]
+[node name="Сумы" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 2306.0
 margin_top = 119.0
 margin_right = 2874.0
 margin_bottom = 548.0
 texture_normal = ExtResource( 31 )
 
-[node name="Горловка" parent="." instance=ExtResource( 4 )]
+[node name="Горловка" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 2432.0
 margin_top = 414.0
 margin_right = 2922.0
 margin_bottom = 624.0
 texture_normal = ExtResource( 45 )
 
-[node name="Макеевка" parent="." instance=ExtResource( 4 )]
+[node name="Макеевка" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 2474.0
 margin_top = 588.0
 margin_right = 3003.0
 margin_bottom = 806.0
 texture_normal = ExtResource( 30 )
 
-[node name="Label" parent="Макеевка" index="0"]
+[node name="Label" parent="ToDelete/Макеевка" index="0"]
 margin_left = -129.0
 margin_top = 2.0
 margin_right = 636.0
 margin_bottom = 138.0
 
-[node name="Желув" parent="." instance=ExtResource( 4 )]
+[node name="Желув" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 2821.0
 margin_top = 494.0
 margin_right = 3218.0
 margin_bottom = 707.0
 texture_normal = ExtResource( 34 )
 
-[node name="Тулов" parent="." instance=ExtResource( 4 )]
+[node name="Тулов" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 2819.0
 margin_top = 167.0
 margin_right = 3302.0
 margin_bottom = 541.0
 texture_normal = ExtResource( 29 )
 
-[node name="Вручий" parent="." instance=ExtResource( 4 )]
+[node name="Вручий" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 3158.0
 margin_top = 439.0
 margin_right = 3633.0
 margin_bottom = 709.0
 texture_normal = ExtResource( 32 )
 
-[node name="Трускавец" parent="." instance=ExtResource( 4 )]
+[node name="Трускавец" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 3276.0
 margin_top = 190.0
 margin_right = 3676.0
 margin_bottom = 470.0
 texture_normal = ExtResource( 113 )
 
-[node name="Любич" parent="." instance=ExtResource( 4 )]
+[node name="Любич" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 3476.0
 margin_top = 438.0
 margin_right = 3831.0
 margin_bottom = 1066.0
 texture_normal = ExtResource( 85 )
 
-[node name="Подолье" parent="." instance=ExtResource( 4 )]
+[node name="Подолье" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 3166.0
 margin_top = 643.0
 margin_right = 3533.0
 margin_bottom = 896.0
 texture_normal = ExtResource( 84 )
 
-[node name="Теребовль" parent="." instance=ExtResource( 4 )]
+[node name="Теребовль" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 3190.0
 margin_top = 837.0
 margin_right = 3583.0
 margin_bottom = 1198.0
 texture_normal = ExtResource( 83 )
 
-[node name="Пинск" parent="." instance=ExtResource( 4 )]
+[node name="Пинск" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 2830.0
 margin_top = 837.0
 margin_right = 3253.0
 margin_bottom = 1153.0
 texture_normal = ExtResource( 86 )
 
-[node name="Гродно" parent="." instance=ExtResource( 4 )]
+[node name="Гродно" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 3199.0
 margin_top = 1133.0
 margin_right = 3544.0
 margin_bottom = 1634.0
 texture_normal = ExtResource( 82 )
 
-[node name="Витебск" parent="." instance=ExtResource( 4 )]
+[node name="Витебск" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 3512.0
 margin_top = 1121.0
 margin_right = 3881.0
 margin_bottom = 1495.0
 texture_normal = ExtResource( 26 )
 
-[node name="Дукшты" parent="." instance=ExtResource( 4 )]
+[node name="Дукшты" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 3774.0
 margin_top = 1132.0
 margin_right = 4181.0
 margin_bottom = 1724.0
 texture_normal = ExtResource( 95 )
 
-[node name="Надворная" parent="." instance=ExtResource( 4 )]
+[node name="Надворная" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 3565.0
 margin_top = 867.0
 margin_right = 3931.0
 margin_bottom = 1225.0
 texture_normal = ExtResource( 27 )
 
-[node name="Нови-Сад" parent="." instance=ExtResource( 4 )]
+[node name="Нови-Сад" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 3847.0
 margin_top = 927.0
 margin_right = 4154.0
 margin_bottom = 1243.0
 texture_normal = ExtResource( 111 )
 
-[node name="Приштина" parent="." instance=ExtResource( 4 )]
+[node name="Приштина" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 3726.0
 margin_top = 598.0
 margin_right = 4098.0
 margin_bottom = 973.0
 texture_normal = ExtResource( 112 )
 
-[node name="Рутивль" parent="." instance=ExtResource( 4 )]
+[node name="Рутивль" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 3342.0
 margin_top = 2330.0
 margin_right = 3783.0
 margin_bottom = 2656.0
 texture_normal = ExtResource( 19 )
 
-[node name="Заболотов" parent="." instance=ExtResource( 4 )]
+[node name="Заболотов" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 3698.0
 margin_top = 2207.0
 margin_right = 4242.0
 margin_bottom = 2771.0
 texture_normal = ExtResource( 94 )
 
-[node name="Label" parent="Заболотов" index="0"]
+[node name="Label" parent="ToDelete/Заболотов" index="0"]
 margin_left = -135.0
 margin_top = 194.0
 margin_right = 630.0
 margin_bottom = 330.0
 
-[node name="Пядичи" parent="." instance=ExtResource( 4 )]
+[node name="Пядичи" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 3575.0
 margin_top = 1411.0
 margin_right = 4152.0
 margin_bottom = 1964.0
 texture_normal = ExtResource( 20 )
 
-[node name="Label" parent="Пядичи" index="0"]
+[node name="Label" parent="ToDelete/Пядичи" index="0"]
 margin_left = -203.0
 margin_top = 255.0
 margin_right = 562.0
 margin_bottom = 391.0
 
-[node name="Перемышль" parent="." instance=ExtResource( 4 )]
+[node name="Перемышль" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 3371.0
 margin_top = 2030.0
 margin_right = 3776.0
 margin_bottom = 2355.0
 texture_normal = ExtResource( 17 )
 
-[node name="Ахалкалаки" parent="." instance=ExtResource( 4 )]
+[node name="Ахалкалаки" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 3627.0
 margin_top = 1865.0
 margin_right = 4073.0
 margin_bottom = 2325.0
 texture_normal = ExtResource( 114 )
 
-[node name="Батые" parent="." instance=ExtResource( 4 )]
+[node name="Батые" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 3300.0
 margin_top = 1887.0
 margin_right = 3637.0
 margin_bottom = 2243.0
 texture_normal = ExtResource( 18 )
 
-[node name="Батуми" parent="." instance=ExtResource( 4 )]
+[node name="Батуми" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 3189.0
 margin_top = 2578.0
 margin_right = 3766.0
 margin_bottom = 2822.0
 texture_normal = ExtResource( 115 )
 
-[node name="Брзежаны" parent="." instance=ExtResource( 4 )]
+[node name="Брзежаны" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 3260.0
 margin_top = 1363.0
 margin_right = 3614.0
 margin_bottom = 1928.0
 texture_normal = ExtResource( 21 )
 
-[node name="Label" parent="Брзежаны" index="0"]
+[node name="Label" parent="ToDelete/Брзежаны" index="0"]
 margin_left = -188.0
 margin_top = 281.0
 margin_right = 577.0
 margin_bottom = 417.0
 
-[node name="Вильянди" parent="." instance=ExtResource( 4 )]
+[node name="Вильянди" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 4573.0
 margin_top = 1592.0
 margin_right = 4979.0
 margin_bottom = 2005.0
 texture_normal = ExtResource( 98 )
 
-[node name="Label" parent="Вильянди" index="0"]
+[node name="Label" parent="ToDelete/Вильянди" index="0"]
 margin_left = -156.0
 margin_top = 159.0
 margin_right = 609.0
 margin_bottom = 295.0
 
-[node name="Курессааре" parent="." instance=ExtResource( 4 )]
+[node name="Курессааре" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 4401.0
 margin_top = 2066.0
 margin_right = 4893.0
 margin_bottom = 2498.0
 texture_normal = ExtResource( 103 )
 
-[node name="Label" parent="Курессааре" index="0"]
+[node name="Label" parent="ToDelete/Курессааре" index="0"]
 margin_left = -97.0
 margin_top = 185.0
 margin_right = 668.0
 margin_bottom = 321.0
 
-[node name="Пярну" parent="." instance=ExtResource( 4 )]
+[node name="Пярну" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 4922.0
 margin_top = 1504.0
 margin_right = 5476.0
 margin_bottom = 1890.0
 texture_normal = ExtResource( 99 )
 
-[node name="Раквере" parent="." instance=ExtResource( 4 )]
+[node name="Раквере" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 4728.0
 margin_top = 1857.0
 margin_right = 5256.0
 margin_bottom = 2320.0
 texture_normal = ExtResource( 100 )
 
-[node name="Label" parent="Раквере" index="0"]
+[node name="Label" parent="ToDelete/Раквере" index="0"]
 margin_left = -119.0
 margin_top = 142.0
 margin_right = 646.0
 margin_bottom = 278.0
 
-[node name="Силламяэ" parent="." instance=ExtResource( 4 )]
+[node name="Силламяэ" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 4307.0
 margin_top = 1858.0
 margin_right = 4727.0
 margin_bottom = 2217.0
 texture_normal = ExtResource( 101 )
 
-[node name="Label" parent="Силламяэ" index="0"]
+[node name="Label" parent="ToDelete/Силламяэ" index="0"]
 margin_left = -109.0
 margin_top = 137.0
 margin_right = 656.0
 margin_bottom = 273.0
 
-[node name="Тарту" parent="." instance=ExtResource( 4 )]
+[node name="Тарту" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 5142.0
 margin_top = 1301.0
 margin_right = 5461.0
 margin_bottom = 1545.0
 texture_normal = ExtResource( 102 )
 
-[node name="Хаапсалу" parent="." instance=ExtResource( 4 )]
+[node name="Хаапсалу" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 4748.0
 margin_top = 2445.0
 margin_right = 4908.0
 margin_bottom = 2928.0
 texture_normal = ExtResource( 104 )
 
-[node name="Label" parent="Хаапсалу" index="0"]
+[node name="Label" parent="ToDelete/Хаапсалу" index="0"]
 margin_left = -297.0
 margin_top = 262.0
 margin_right = 468.0
 margin_bottom = 398.0
 
-[node name="Алитус" parent="." instance=ExtResource( 4 )]
+[node name="Алитус" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 4271.0
 margin_top = 75.0
 margin_right = 4610.0
 margin_bottom = 388.0
 texture_normal = ExtResource( 105 )
 
-[node name="Label" parent="Алитус" index="0"]
+[node name="Label" parent="ToDelete/Алитус" index="0"]
 margin_left = -190.0
 margin_top = 128.0
 margin_right = 575.0
 margin_bottom = 264.0
 
-[node name="Каунас" parent="." instance=ExtResource( 4 )]
+[node name="Каунас" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 4222.0
 margin_top = 351.0
 margin_right = 4570.0
 margin_bottom = 645.0
 texture_normal = ExtResource( 51 )
 
-[node name="Клайпеда" parent="." instance=ExtResource( 4 )]
+[node name="Клайпеда" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 4299.0
 margin_top = 445.0
 margin_right = 4784.0
 margin_bottom = 898.0
 texture_normal = ExtResource( 53 )
 
-[node name="Label" parent="Клайпеда" index="0"]
+[node name="Label" parent="ToDelete/Клайпеда" index="0"]
 margin_left = -158.0
 margin_top = 173.0
 margin_right = 607.0
 margin_bottom = 309.0
 
-[node name="Паневежис" parent="." instance=ExtResource( 4 )]
+[node name="Паневежис" parent="ToDelete" instance=ExtResource( 4 )]
 margin_left = 4513.0
 margin_top = 245.0
 margin_right = 5032.0
@@ -1225,67 +1227,151 @@ position = Vector2( 2823, 1424 )
 [node name="Border" parent="ProvinceBrodi" instance=ExtResource( 117 )]
 
 [node name="BorderPart" parent="ProvinceBrodi/Border" instance=ExtResource( 118 )]
-points = PoolVector2Array( -123, -62, -127, -50, -123, -36, -101, -32, -93, -16, -85, 0, -85, 10, -95, 24, -105, 38, -113, 40, -135, 58, -159, 60, -173, 76, -171, 92, -181, 100 )
+position = Vector2( -3, 10 )
+points = PoolVector2Array( -180, 94, -180, 88, -170, 82, -170, 68, -156, 50, -134, 48, -112, 30, -102, 28, -82, 6, -82, -10, -98, -42, -112, -42, -124, -52, -124, -72 )
 
 [node name="BorderPart2" parent="ProvinceBrodi/Border" instance=ExtResource( 118 )]
-points = PoolVector2Array( -123, -62, -95, -72, -87, -88, -47, -120, -23, -120, -7, -112, 17, -112, 41, -88, 57, -88, 81, -88, 97, -96, 105, -96, 113, -88, 121, -88, 145, -96, 153, -96, 161, -88, 185, -88, 201, -64, 241, -32, 289, -24, 305, -16, 329, -16, 339, 0, 369, 0, 385, -8 )
+position = Vector2( -3, 10 )
+points = PoolVector2Array( -124, -72, -102, -78, -86, -100, -62, -120, -42, -132, -16, -132, -4, -122, 20, -122, 48, -104, 62, -100, 80, -100, 100, -108, 112, -108, 118, -98, 126, -98, 146, -110, 154, -110, 162, -102, 190, -100, 200, -86, 242, -46, 250, -42, 290, -42, 312, -28, 330, -28, 342, -14, 358, -10, 374, -10, 388, -24 )
 
 [node name="BorderPart3" parent="ProvinceBrodi/Border" instance=ExtResource( 118 )]
-points = PoolVector2Array( 385, -8, 393, 8, 401, 20, 401, 54, 411, 62, 411, 92, 403, 108, 393, 118, 391, 132, 391, 146, 391, 156, 385, 164 )
+position = Vector2( -3, 10 )
+points = PoolVector2Array( 388, -24, 394, -4, 404, 8, 404, 42, 414, 52, 414, 76, 408, 94, 398, 106, 394, 116, 394, 144, 388, 154 )
 
 [node name="BorderPart4" parent="ProvinceBrodi/Border" instance=ExtResource( 118 )]
-points = PoolVector2Array( 235, 146, 249, 152, 271, 154, 289, 146, 305, 136, 321, 152, 341, 156, 355, 164, 385, 164 )
+position = Vector2( -3, 10 )
+points = PoolVector2Array( 388, 154, 388, 154, 360, 154, 346, 146, 326, 144, 308, 128, 282, 142, 254, 142, 238, 134 )
 
 [node name="BorderPart5" parent="ProvinceBrodi/Border" instance=ExtResource( 118 )]
-points = PoolVector2Array( 235, 146, 225, 140, 209, 136, 187, 124, 145, 124, 119, 114, 95, 114, 77, 118, 31, 118, 1, 118, -17, 130, -47, 134, -73, 120, -91, 122, -109, 122, -129, 110, -145, 108, -167, 108, -181, 100 )
+position = Vector2( -3, 10 )
+points = PoolVector2Array( 238, 134, 212, 126, 194, 114, 148, 112, 122, 104, 96, 104, 80, 110, 8, 108, -12, 118, -32, 122, -46, 122, -68, 110, -84, 110, -104, 112, -126, 100, -158, 98, -180, 94, -180, 94 )
+neighbour_border = NodePath("../../../ProvinceBogorodchani/Border/BorderPart")
+neighbour_province = NodePath("../../../ProvinceBogorodchani")
 
-[editable path="Красник"]
-[editable path="Луцк"]
-[editable path="Проскуров"]
-[editable path="Волынский"]
-[editable path="Щепеткова"]
-[editable path="Львов"]
-[editable path="Хмельницкий"]
-[editable path="Ивано-Франковск"]
-[editable path="Каменец-Подольск"]
-[editable path="Зборов"]
-[editable path="Белецкое"]
-[editable path="Дубно"]
-[editable path="Иршики"]
-[editable path="Старокостантинов"]
-[editable path="Дрогобыч"]
-[editable path="Нетешин"]
-[editable path="Мукачево"]
-[editable path="Берегово"]
-[editable path="Катовице"]
-[editable path="Севастополь"]
-[editable path="Закопане"]
-[editable path="Донецк"]
-[editable path="Стецки"]
-[editable path="Пмлица"]
-[editable path="Мелитополь"]
-[editable path="Грубешов"]
-[editable path="Павлоград"]
-[editable path="Вилькомир"]
-[editable path="Лисичанск"]
-[editable path="Бердичев"]
-[editable path="Тамань"]
-[editable path="Горлица"]
-[editable path="Измаил"]
-[editable path="Новомосковск"]
-[editable path="Яремче"]
-[editable path="Коростень"]
-[editable path="Должанск"]
-[editable path="Покровск"]
-[editable path="Черкасс"]
-[editable path="Макеевка"]
-[editable path="Заболотов"]
-[editable path="Пядичи"]
-[editable path="Брзежаны"]
-[editable path="Вильянди"]
-[editable path="Курессааре"]
-[editable path="Раквере"]
-[editable path="Силламяэ"]
-[editable path="Хаапсалу"]
-[editable path="Алитус"]
-[editable path="Клайпеда"]
+[node name="ProvinceBogorodchani" parent="." instance=ExtResource( 116 )]
+position = Vector2( 2882, 1628 )
+
+[node name="Border" parent="ProvinceBogorodchani" instance=ExtResource( 117 )]
+
+[node name="BorderPart" parent="ProvinceBogorodchani/Border" instance=ExtResource( 118 )]
+position = Vector2( -62, -194 )
+points = PoolVector2Array( -180, 94, -180, 94, -158, 98, -126, 100, -104, 112, -84, 110, -68, 110, -46, 122, -32, 122, -12, 118, 8, 108, 80, 110, 96, 104, 122, 104, 148, 112, 194, 114, 212, 126, 238, 134 )
+default_color = Color( 0.4, 1, 0.564706, 1 )
+neighbour_border = NodePath("../../../ProvinceBrodi/Border/BorderPart5")
+neighbour_province = NodePath("../../../ProvinceBrodi")
+
+[node name="BorderPart2" parent="ProvinceBogorodchani/Border" instance=ExtResource( 118 )]
+position = Vector2( -62, -194 )
+points = PoolVector2Array( 238, 134, 234, 156, 246, 178, 244, 204 )
+
+[node name="BorderPart3" parent="ProvinceBogorodchani/Border" instance=ExtResource( 118 )]
+position = Vector2( -62, -194 )
+points = PoolVector2Array( 244, 204, 238, 220, 238, 238, 232, 250, 232, 262, 216, 286, 218, 294, 218, 314, 204, 338, 192, 340, 174, 330, 146, 330, 124, 322, 108, 322, 76, 340, 64, 346, 56, 374 )
+neighbour_border = NodePath("../../../ProvinceDnestr/Border/BorderPart")
+neighbour_province = NodePath("../../../ProvinceDnestr")
+
+[node name="BorderPart4" parent="ProvinceBogorodchani/Border" instance=ExtResource( 118 )]
+position = Vector2( -62, -194 )
+points = PoolVector2Array( 56, 374, 26, 328, 24, 312, 2, 306, -30, 264, -80, 268, -100, 258, -110, 238, -106, 224, -104, 210, -116, 196, -112, 186, -120, 174, -142, 164, -142, 146, -164, 132, -164, 116, -180, 94 )
+
+[node name="ProvinceKalush" parent="." instance=ExtResource( 116 )]
+position = Vector2( 3220, 1808 )
+
+[node name="Border" parent="ProvinceKalush" instance=ExtResource( 117 )]
+
+[node name="BorderPart" parent="ProvinceKalush/Border" instance=ExtResource( 118 )]
+position = Vector2( -400, -374 )
+points = PoolVector2Array( 244, 204, 246, 178, 234, 156, 238, 134 )
+neighbour_province = NodePath("../../../ProvinceBogorodchani")
+
+[node name="BorderPart2" parent="ProvinceKalush/Border" instance=ExtResource( 118 )]
+position = Vector2( -400, -374 )
+points = PoolVector2Array( 238, 134, 254, 142, 282, 142, 308, 128, 326, 144, 346, 146, 360, 154, 388, 154, 388, 154 )
+neighbour_province = NodePath("../../../ProvinceBogorodchani")
+
+[node name="BorderPart3" parent="ProvinceKalush/Border" instance=ExtResource( 118 )]
+position = Vector2( -400, -374 )
+points = PoolVector2Array( 388, 154, 398, 182, 398, 192, 440, 200 )
+neighbour_province = NodePath("../../../ProvinceBogorodchani")
+
+[node name="BorderPart4" parent="ProvinceKalush/Border" instance=ExtResource( 118 )]
+position = Vector2( -400, -374 )
+points = PoolVector2Array( 440, 200, 458, 228, 460, 250, 470, 266, 470, 306, 498, 336, 506, 362, 508, 398, 494, 412, 502, 432, 502, 446, 496, 454, 496, 468 )
+neighbour_province = NodePath("../../../ProvinceBogorodchani")
+
+[node name="BorderPart5" parent="ProvinceKalush/Border" instance=ExtResource( 118 )]
+position = Vector2( -400, -374 )
+points = PoolVector2Array( 496, 468, 484, 474, 484, 482, 478, 490 )
+
+[node name="BorderPart6" parent="ProvinceKalush/Border" instance=ExtResource( 118 )]
+position = Vector2( -400, -374 )
+points = PoolVector2Array( 478, 490, 452, 508, 418, 528, 406, 544, 386, 538, 378, 538, 358, 576, 344, 576, 328, 590, 296, 592, 288, 584, 260, 584, 242, 560, 222, 540, 204, 536, 186, 524, 154, 524 )
+
+[node name="BorderPart7" parent="ProvinceKalush/Border" instance=ExtResource( 118 )]
+position = Vector2( -400, -374 )
+points = PoolVector2Array( 154, 524, 160, 508, 194, 488, 198, 460, 208, 444, 234, 440, 278, 418, 292, 368, 302, 338, 308, 326, 310, 304, 298, 280, 294, 260, 294, 240, 272, 216, 266, 206, 244, 204 )
+
+[node name="ProvinceDnestr" parent="." instance=ExtResource( 116 )]
+position = Vector2( 3030, 1812 )
+
+[node name="Border" parent="ProvinceDnestr" instance=ExtResource( 117 )]
+
+[node name="BorderPart" parent="ProvinceDnestr/Border" instance=ExtResource( 118 )]
+position = Vector2( -210, -378 )
+points = PoolVector2Array( 56, 374, 64, 346, 76, 340, 108, 322, 124, 322, 146, 330, 174, 330, 192, 340, 204, 338, 218, 314, 218, 294, 216, 286, 232, 262, 232, 250, 238, 238, 238, 220, 244, 204 )
+neighbour_border = NodePath("../../../ProvinceBogorodchani/Border/BorderPart3")
+neighbour_province = NodePath("../../../ProvinceBogorodchani")
+
+[node name="BorderPart2" parent="ProvinceDnestr/Border" instance=ExtResource( 118 )]
+position = Vector2( -210, -378 )
+
+[editable path="ToDelete/Красник"]
+[editable path="ToDelete/Луцк"]
+[editable path="ToDelete/Проскуров"]
+[editable path="ToDelete/Волынский"]
+[editable path="ToDelete/Щепеткова"]
+[editable path="ToDelete/Львов"]
+[editable path="ToDelete/Хмельницкий"]
+[editable path="ToDelete/Ивано-Франковск"]
+[editable path="ToDelete/Каменец-Подольск"]
+[editable path="ToDelete/Зборов"]
+[editable path="ToDelete/Белецкое"]
+[editable path="ToDelete/Дубно"]
+[editable path="ToDelete/Иршики"]
+[editable path="ToDelete/Старокостантинов"]
+[editable path="ToDelete/Дрогобыч"]
+[editable path="ToDelete/Нетешин"]
+[editable path="ToDelete/Мукачево"]
+[editable path="ToDelete/Берегово"]
+[editable path="ToDelete/Катовице"]
+[editable path="ToDelete/Севастополь"]
+[editable path="ToDelete/Закопане"]
+[editable path="ToDelete/Донецк"]
+[editable path="ToDelete/Стецки"]
+[editable path="ToDelete/Пмлица"]
+[editable path="ToDelete/Мелитополь"]
+[editable path="ToDelete/Грубешов"]
+[editable path="ToDelete/Павлоград"]
+[editable path="ToDelete/Вилькомир"]
+[editable path="ToDelete/Лисичанск"]
+[editable path="ToDelete/Бердичев"]
+[editable path="ToDelete/Тамань"]
+[editable path="ToDelete/Горлица"]
+[editable path="ToDelete/Измаил"]
+[editable path="ToDelete/Новомосковск"]
+[editable path="ToDelete/Яремче"]
+[editable path="ToDelete/Коростень"]
+[editable path="ToDelete/Должанск"]
+[editable path="ToDelete/Покровск"]
+[editable path="ToDelete/Черкасс"]
+[editable path="ToDelete/Макеевка"]
+[editable path="ToDelete/Заболотов"]
+[editable path="ToDelete/Пядичи"]
+[editable path="ToDelete/Брзежаны"]
+[editable path="ToDelete/Вильянди"]
+[editable path="ToDelete/Курессааре"]
+[editable path="ToDelete/Раквере"]
+[editable path="ToDelete/Силламяэ"]
+[editable path="ToDelete/Хаапсалу"]
+[editable path="ToDelete/Алитус"]
+[editable path="ToDelete/Клайпеда"]

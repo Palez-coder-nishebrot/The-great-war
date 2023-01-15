@@ -3,11 +3,16 @@ extends Line2D
 
 const SNAP_DISTANCE_LIMIT = 25
 
+export(NodePath) var neighbour_border setget _set_neighbour_border
 export(NodePath) var neighbour_province
 
 
 func _ready():
 	pass
+
+
+func get_border():
+	return get_parent()
 
 
 func correct_corners_snap(siblings):
@@ -22,6 +27,9 @@ func correct_corners_snap(siblings):
 			corners.append(sib_points[0])
 			corners.append(sib_points[-1])
 	
+	if corners.size() < 2:
+		return
+	
 	var first = _get_point_with_shortest_distance(points[0], corners)
 	var last = _get_point_with_shortest_distance(points[-1], corners)
 	
@@ -29,6 +37,19 @@ func correct_corners_snap(siblings):
 		points[0] = first
 		points[-1] = last
 		points = points
+
+
+func _get_local_points(target: Line2D) -> PoolVector2Array:
+	var target_gp = target.global_position
+	var self_gp = global_position
+	var local_points = []
+	
+	for point in target.points:
+		local_points.append((point+target_gp) - self_gp)
+		
+	local_points.invert()
+	
+	return PoolVector2Array(local_points)
 
 
 func _get_point_with_shortest_distance(current_point, corners):
@@ -47,3 +68,24 @@ func _get_point_with_shortest_distance(current_point, corners):
 	else:
 		return current_point
 	
+
+func _set_neighbour_border(value):
+	if neighbour_border == value:
+		return
+	
+	neighbour_border = value
+	
+	if not value:
+		return
+
+	var neighbour_bpart = get_node_or_null(value) # border_part
+	
+	if not neighbour_bpart:
+		return
+	
+
+	var _neighbour_province = neighbour_bpart.get_border().get_province()
+	neighbour_province = self.get_path_to(_neighbour_province)
+	neighbour_bpart.neighbour_border = neighbour_bpart.get_path_to(self)
+	
+	points = _get_local_points(neighbour_bpart)
