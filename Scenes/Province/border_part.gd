@@ -1,18 +1,33 @@
 tool
 extends Line2D
 
-const SNAP_DISTANCE_LIMIT = 25
+const SNAP_DISTANCE_LIMIT = 10
 
 export(NodePath) var neighbour_border setget _set_neighbour_border
 export(NodePath) var neighbour_province
 
+var _neighbour_border_node
+var _neighbour_province_node
+
 
 func _ready():
-	pass
+	if not Engine.editor_hint:
+		_neighbour_province_node = get_node_or_null(neighbour_province)
+		
+		if _neighbour_province_node:
+			_neighbour_border_node = get_node_or_null(neighbour_border)
 
 
 func get_border():
 	return get_parent()
+
+
+func get_neighbour_border_node():
+	return _neighbour_border_node
+
+
+func get_neighbour_province_node():
+	return _neighbour_province_node
 
 
 func correct_corners_snap(siblings):
@@ -83,9 +98,11 @@ func _set_neighbour_border(value):
 	if not neighbour_bpart:
 		return
 	
-
 	var _neighbour_province = neighbour_bpart.get_border().get_province()
 	neighbour_province = self.get_path_to(_neighbour_province)
-	neighbour_bpart.neighbour_border = neighbour_bpart.get_path_to(self)
 	
-	points = _get_local_points(neighbour_bpart)
+	neighbour_bpart.neighbour_border = neighbour_bpart.get_path_to(self)
+	neighbour_bpart.neighbour_province = neighbour_bpart.get_path_to(self.get_border().get_province())
+	
+	var new_points =  _get_local_points(neighbour_bpart)
+	points = new_points
