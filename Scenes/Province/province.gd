@@ -1,7 +1,6 @@
 tool
 extends Node2D
 
-
 func get_country():
 	return get_parent().get_parent()
 
@@ -11,10 +10,9 @@ func get_border():
 
 
 func _get_configuration_warning():
-	var hint = "Province not working without configured Border scene"
-	
-	for ch in get_children():
-		if ch.name == "Border":
-			hint = ""
+	var Helper = preload("res://gd_scripts/tool_node_helper.gd")
 		
-	return hint
+	return Helper.detect_children([
+		Helper.create_detect_mask("Border", "Province not working without configured Border scene"),
+		Helper.create_detect_mask("MapNameLabel", "Province not working without configured MapNameLabel scene")
+	], get_children())
