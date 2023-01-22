@@ -1,4 +1,4 @@
-[gd_scene load_steps=122 format=2]
+[gd_scene load_steps=124 format=2]
 
 [ext_resource path="res://Scenes/TileMap/TileMap.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/TileMap/Карта региона.png" type="Texture" id=2]
@@ -121,6 +121,8 @@
 [ext_resource path="res://Scenes/Country/country.tscn" type="PackedScene" id=119]
 [ext_resource path="res://Scenes/Country/country_border.tscn" type="PackedScene" id=120]
 [ext_resource path="res://Scenes/Country/province_container.tscn" type="PackedScene" id=121]
+[ext_resource path="res://Scenes/MapNameLabel/map_name_label.tscn" type="PackedScene" id=122]
+[ext_resource path="res://Scenes/MapNameLabel/map_name_label.theme" type="Theme" id=123]
 
 [node name="TileMap" type="Node2D"]
 script = ExtResource( 1 )
@@ -1449,6 +1451,19 @@ neighbour_province = NodePath("../../../ProvinceBeljeca")
 
 [node name="BorderPart4" parent="CountryExample2/ProvinceContainer/ProvinceMitava/Border" instance=ExtResource( 118 )]
 points = PoolVector2Array( -88, 140, -94, 132, -92, 118, -96, 100, -124, 84, -128, 74, -128, 66, -118, 56, -118, 48, -122, 44, -122, 38, -120, 26, -132, 16, -152, 0, -152, -18, -142, -28, -126, -34, -124, -52, -114, -56, -116, -68, -124, -78, -122, -96, -116, -114 )
+
+[node name="MapNameLabel" parent="CountryExample2/ProvinceContainer/ProvinceMitava" instance=ExtResource( 122 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -110.0
+margin_top = 42.0
+margin_right = 118.0
+margin_bottom = 104.0
+rect_rotation = -14.8735
+theme = ExtResource( 123 )
+text = "Митава"
+align = 1
+valign = 1
 
 [node name="Map" type="Sprite" parent="."]
 visible = false
