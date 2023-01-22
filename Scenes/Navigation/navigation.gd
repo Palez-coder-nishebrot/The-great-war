@@ -20,6 +20,7 @@ var _collectors_mu = Mutex.new()
 var _thread_cteate_polygons_done_counter = 0
 
 func _ready():
+	return
 	_create_thread_pool()
 	var _err = connect("thread_cteate_polygons_done", self, "_on_thread_cteate_polygons_done")
 	_physics_space = Physics2DServer.space_create()
