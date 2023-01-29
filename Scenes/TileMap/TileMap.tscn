@@ -123,9 +123,14 @@
 [ext_resource path="res://Objects/Country/province_container.tscn" type="PackedScene" id=121]
 [ext_resource path="res://Objects/MapNameLabel/map_name_label.tscn" type="PackedScene" id=122]
 
-
 [node name="TileMap" type="Node2D"]
 script = ExtResource( 1 )
+
+[node name="Map" type="Sprite" parent="."]
+position = Vector2( 2758, 1709 )
+scale = Vector2( 0.995, 0.995 )
+z_index = -10
+texture = ExtResource( 2 )
 
 [node name="Броды" parent="." instance=ExtResource( 4 )]
 margin_left = 2644.0
@@ -135,6 +140,7 @@ margin_bottom = 1587.0
 texture_normal = ExtResource( 7 )
 
 [node name="Кременец" parent="." instance=ExtResource( 4 )]
+visible = false
 margin_left = 2203.0
 margin_top = 1343.0
 margin_right = 2737.0
@@ -142,6 +148,7 @@ margin_bottom = 1606.0
 texture_normal = ExtResource( 5 )
 
 [node name="Люблин" parent="." instance=ExtResource( 4 )]
+visible = false
 margin_left = 1878.0
 margin_top = 1417.0
 margin_right = 2272.0
@@ -149,6 +156,7 @@ margin_bottom = 1614.0
 texture_normal = ExtResource( 6 )
 
 [node name="Тарнополь" parent="." instance=ExtResource( 4 )]
+visible = false
 margin_left = 1842.0
 margin_top = 1578.0
 margin_right = 2120.0
@@ -156,6 +164,7 @@ margin_bottom = 1802.0
 texture_normal = ExtResource( 3 )
 
 [node name="Красник" parent="." instance=ExtResource( 4 )]
+visible = false
 margin_left = 1847.0
 margin_top = 1666.0
 margin_right = 2141.0
@@ -169,6 +178,7 @@ margin_right = 527.0
 margin_bottom = 245.0
 
 [node name="Станислав" parent="." instance=ExtResource( 4 )]
+visible = false
 margin_left = 2069.0
 margin_top = 1807.0
 margin_right = 2307.0
@@ -183,6 +193,7 @@ margin_bottom = 2009.0
 texture_normal = ExtResource( 22 )
 
 [node name="Лодзь" parent="." instance=ExtResource( 4 )]
+visible = false
 margin_left = 2044.0
 margin_top = 1594.0
 margin_right = 2298.0
@@ -190,6 +201,7 @@ margin_bottom = 1845.0
 texture_normal = ExtResource( 9 )
 
 [node name="Митава" parent="." instance=ExtResource( 4 )]
+visible = false
 margin_left = 2241.0
 margin_top = 1532.0
 margin_right = 2573.0
@@ -1216,243 +1228,453 @@ margin_right = 5032.0
 margin_bottom = 629.0
 texture_normal = ExtResource( 54 )
 
-[node name="CountryExample" parent="." instance=ExtResource( 119 )]
+[node name="CountryGornia" parent="." instance=ExtResource( 119 )]
 national_color = Color( 0, 1, 0.298039, 1 )
 
-[node name="CountryBorder" parent="CountryExample" instance=ExtResource( 120 )]
+[node name="CountryBorder" parent="CountryGornia" instance=ExtResource( 120 )]
 
-[node name="ProvinceContainer" parent="CountryExample" instance=ExtResource( 121 )]
+[node name="ProvinceContainer" parent="CountryGornia" instance=ExtResource( 121 )]
 
-[node name="ProvinceBrodi" parent="CountryExample/ProvinceContainer" instance=ExtResource( 116 )]
+[node name="ProvinceTarnopl" parent="CountryGornia/ProvinceContainer" instance=ExtResource( 116 )]
+position = Vector2( 1972, 1656 )
+
+[node name="Border" parent="CountryGornia/ProvinceContainer/ProvinceTarnopl" instance=ExtResource( 117 )]
+
+[node name="BorderPart" parent="CountryGornia/ProvinceContainer/ProvinceTarnopl/Border" instance=ExtResource( 118 )]
+position = Vector2( -14, -8 )
+points = PoolVector2Array( -86, -68, -74, -68, -64, -72, -46, -72, -36, -54, -30, -50, -26, -54, -14, -54, -6, -46, 18, -46, 28, -58, 50, -58, 60, -64, 70, -64, 86, -58, 94, -46, 102, -46, 112, -36, 124, -36, 142, -48, 162, -48, 168, -42, 168, -42 )
+neighbour_border = NodePath("../../../ProvinceLublin/Border/BorderPart4")
+neighbour_province = NodePath("../../../ProvinceLublin")
+
+[node name="BorderPart2" parent="CountryGornia/ProvinceContainer/ProvinceTarnopl/Border" instance=ExtResource( 118 )]
+position = Vector2( -14, -8 )
+points = PoolVector2Array( 168, -42, 156, -42, 148, -40, 146, -34, 140, -24, 130, -4, 122, 14, 94, 22, 90, 28, 90, 54, 84, 68, 84, 82, 88, 92, 98, 102, 112, 122, 120, 156 )
+neighbour_border = NodePath("../../../../../CountryHorezm/ProvinceContainer/ProvinceLodz/Border/BorderPart4")
+neighbour_province = NodePath("../../../../../CountryHorezm/ProvinceContainer/ProvinceLodz")
+
+[node name="BorderPart3" parent="CountryGornia/ProvinceContainer/ProvinceTarnopl/Border" instance=ExtResource( 118 )]
+position = Vector2( -14, -8 )
+points = PoolVector2Array( 120, 156, 102, 150, 90, 132, 72, 128, 50, 120, 40, 106, 20, 106, 14, 100, 12, 82, 0, 80, -10, 68, -28, 66, -54, 56, -56, 42, -64, 30, -82, 26, -90, 16, -102, 18 )
+neighbour_border = NodePath("../../../ProvinceKrasnik/Border/BorderPart")
+neighbour_province = NodePath("../../../ProvinceKrasnik")
+
+[node name="BorderPart4" parent="CountryGornia/ProvinceContainer/ProvinceTarnopl/Border" instance=ExtResource( 118 )]
+position = Vector2( -14, -8 )
+points = PoolVector2Array( -102, 18, -118, -12, -118, -28, -108, -50, -86, -68 )
+
+[node name="MapNameLabel" parent="CountryGornia/ProvinceContainer/ProvinceTarnopl" instance=ExtResource( 122 )]
+margin_left = -113.0
+margin_top = -54.0
+margin_right = 84.0
+margin_bottom = -18.0
+rect_rotation = 25.4889
+text = "Тарнополь"
+
+[node name="ProvinceKrasnik" parent="CountryGornia/ProvinceContainer" instance=ExtResource( 116 )]
+position = Vector2( 1980, 1842 )
+
+[node name="Border" parent="CountryGornia/ProvinceContainer/ProvinceKrasnik" instance=ExtResource( 117 )]
+
+[node name="BorderPart" parent="CountryGornia/ProvinceContainer/ProvinceKrasnik/Border" instance=ExtResource( 118 )]
+position = Vector2( -2, 0 )
+points = PoolVector2Array( -122, -176, -110, -178, -102, -168, -84, -164, -76, -152, -74, -138, -48, -128, -30, -126, -20, -114, -8, -112, -6, -94, 0, -88, 20, -88, 30, -74, 52, -66, 70, -62, 82, -44, 100, -38 )
+neighbour_border = NodePath("../../../ProvinceTarnopl/Border/BorderPart3")
+neighbour_province = NodePath("../../../ProvinceTarnopl")
+
+[node name="BorderPart2" parent="CountryGornia/ProvinceContainer/ProvinceKrasnik/Border" instance=ExtResource( 118 )]
+position = Vector2( -2, 0 )
+points = PoolVector2Array( 100, -38, 100, -22, 88, 12, 88, 28, 102, 40, 106, 62, 112, 68, 134, 74, 142, 82, 148, 98, 166, 134 )
+neighbour_border = NodePath("../../../../../CountryHorezm/ProvinceContainer/ProvinceStanislav/Border/BorderPart4")
+neighbour_province = NodePath("../../../../../CountryHorezm/ProvinceContainer/ProvinceStanislav")
+
+[node name="BorderPart3" parent="CountryGornia/ProvinceContainer/ProvinceKrasnik/Border" instance=ExtResource( 118 )]
+position = Vector2( -2, 0 )
+points = PoolVector2Array( 166, 134, 110, 136, 60, 134, 38, 128, 26, 120, 10, 110, -10, 84, -38, 66, -38, 40, -44, 30, -66, 28, -86, 16, -98, -2, -102, -12, -110, -24, -114, -38, -118, -52, -128, -74, -132, -92, -132, -136, -120, -156, -122, -176 )
+
+[node name="MapNameLabel" parent="CountryGornia/ProvinceContainer/ProvinceKrasnik" instance=ExtResource( 122 )]
+margin_left = -82.0
+margin_top = -36.0
+margin_right = 78.0
+margin_bottom = 4.0
+text = "Красник"
+
+[node name="ProvinceLublin" parent="CountryGornia/ProvinceContainer" instance=ExtResource( 116 )]
+position = Vector2( 2064, 1524 )
+
+[node name="Border" parent="CountryGornia/ProvinceContainer/ProvinceLublin" instance=ExtResource( 117 )]
+
+[node name="BorderPart" parent="CountryGornia/ProvinceContainer/ProvinceLublin/Border" instance=ExtResource( 118 )]
+points = PoolVector2Array( -192, 56, -172, 26, -170, 18, -162, 12, -128, -12, -108, -32, -108, -50, -92, -70, -88, -90, -46, -90, -26, -102, -20, -110, -8, -110, 10, -102, 50, -82, 64, -72, 102, -72, 114, -62, 130, -60, 136, -56 )
+
+[node name="BorderPart2" parent="CountryGornia/ProvinceContainer/ProvinceLublin/Border" instance=ExtResource( 118 )]
+points = PoolVector2Array( 136, -56, 150.001, -34.0001, 158.001, -30.0001, 164.001, -18.0001, 166.001, 3.99976, 186.001, 19.9996, 200.001, 43.9995, 210.001, 57.9995, 210.001, 67.9994, 212, 74 )
+neighbour_border = NodePath("../../../ProvinceKremenets/Border/BorderPart5")
+neighbour_province = NodePath("../../../ProvinceKremenets")
+
+[node name="BorderPart3" parent="CountryGornia/ProvinceContainer/ProvinceLublin/Border" instance=ExtResource( 118 )]
+points = PoolVector2Array( 212, 74, 188, 68, 176, 76, 158, 76, 152, 84, 140, 86, 108, 86, 98, 84, 92, 90, 74, 92, 62, 82 )
+neighbour_border = NodePath("../../../../../CountryHorezm/ProvinceContainer/ProvinceLodz/Border/BorderPart")
+neighbour_province = NodePath("../../../../../CountryHorezm/ProvinceContainer/ProvinceLodz")
+
+[node name="BorderPart4" parent="CountryGornia/ProvinceContainer/ProvinceLublin/Border" instance=ExtResource( 118 )]
+points = PoolVector2Array( 62, 82, 62, 82, 56, 76, 36, 76, 18, 88, 6, 88, -4, 78, -12, 78, -20, 66, -36, 60, -46, 60, -56, 66, -78, 66, -88, 78, -112, 78, -120, 70, -132, 70, -136, 74, -142, 70, -152, 52, -170, 52, -180, 56, -192, 56 )
+neighbour_border = NodePath("../../../ProvinceTarnopl/Border/BorderPart")
+neighbour_province = NodePath("../../../ProvinceTarnopl")
+
+[node name="MapNameLabel" parent="CountryGornia/ProvinceContainer/ProvinceLublin" instance=ExtResource( 122 )]
+margin_left = -136.0
+margin_top = -2.0
+margin_right = 160.0
+margin_bottom = 45.0
+text = "Люблин"
+
+[node name="ProvinceKremenets" parent="CountryGornia/ProvinceContainer" instance=ExtResource( 116 )]
+position = Vector2( 2438, 1454 )
+
+[node name="Border" parent="CountryGornia/ProvinceContainer/ProvinceKremenets" instance=ExtResource( 117 )]
+
+[node name="BorderPart" parent="CountryGornia/ProvinceContainer/ProvinceKremenets/Border" instance=ExtResource( 118 )]
+points = PoolVector2Array( -238, 14, -224, 12, -218, -4, -206, -10, -190, -16, -174, -18, -168, -14, -156, -14, -142, -24, -138, -40, -110, -54, -94, -54, -76, -54, -60, -60, -46, -60, -40, -56, -26, -58, -10, -64, 4, -76, 8, -90, 22, -100, 42, -102, 58, -110, 74, -112, 90, -108, 106, -98, 124, -98, 142, -104, 186, -100, 204, -110, 216, -110, 232, -100, 240, -94, 258, -92 )
+
+[node name="BorderPart2" parent="CountryGornia/ProvinceContainer/ProvinceKremenets/Border" instance=ExtResource( 118 )]
+points = PoolVector2Array( 258, -92, 258, -70, 270, -62, 284, -62, 300, -30, 298, -14, 288, -4, 280, 8, 270, 10, 248, 28, 224, 30, 210, 46, 212, 64, 204, 68, 202, 74 )
+neighbour_border = NodePath("../../../ProvinceBrodi/Border/BorderPart")
+neighbour_province = NodePath("../../../ProvinceBrodi")
+
+[node name="BorderPart3" parent="CountryGornia/ProvinceContainer/ProvinceKremenets/Border" instance=ExtResource( 118 )]
+points = PoolVector2Array( 202, 74, 192, 72, 188, 80, 180, 86, 170, 88, 138, 88 )
+neighbour_border = NodePath("../../../../../CountryHorezm/ProvinceContainer/ProvinceChernovci/Border/BorderPart")
+neighbour_province = NodePath("../../../../../CountryHorezm/ProvinceContainer/ProvinceChernovci")
+
+[node name="BorderPart4" parent="CountryGornia/ProvinceContainer/ProvinceKremenets/Border" instance=ExtResource( 118 )]
+points = PoolVector2Array( 138, 88, 110, 78, 82, 76, 44, 88, 10, 88, -18, 104, -36, 108, -58, 110, -70, 114, -80, 124, -124, 138, -140, 154, -152, 154, -162, 144 )
+neighbour_border = NodePath("../../../../../CountryHorezm/ProvinceContainer/ProvinceMitava/Border/BorderPart")
+neighbour_province = NodePath("../../../../../CountryHorezm/ProvinceContainer/ProvinceMitava")
+
+[node name="BorderPart5" parent="CountryGornia/ProvinceContainer/ProvinceKremenets/Border" instance=ExtResource( 118 )]
+points = PoolVector2Array( -162, 144, -163.999, 137.999, -163.999, 128, -173.999, 114, -187.999, 89.9996, -207.999, 73.9998, -209.999, 51.9999, -215.999, 39.9999, -223.999, 35.9999, -238, 14 )
+neighbour_border = NodePath("../../../ProvinceLublin/Border/BorderPart2")
+neighbour_province = NodePath("../../../ProvinceLublin")
+
+[node name="MapNameLabel" parent="CountryGornia/ProvinceContainer/ProvinceKremenets" instance=ExtResource( 122 )]
+margin_left = -164.824
+margin_top = 22.1106
+margin_right = 213.176
+margin_bottom = 65.1106
+rect_rotation = -10.1377
+text = "Кременец"
+
+[node name="ProvinceBrodi" parent="CountryGornia/ProvinceContainer" instance=ExtResource( 116 )]
 position = Vector2( 2823, 1424 )
 
-[node name="Border" parent="CountryExample/ProvinceContainer/ProvinceBrodi" instance=ExtResource( 117 )]
+[node name="Border" parent="CountryGornia/ProvinceContainer/ProvinceBrodi" instance=ExtResource( 117 )]
 
-[node name="BorderPart" parent="CountryExample/ProvinceContainer/ProvinceBrodi/Border" instance=ExtResource( 118 )]
+[node name="BorderPart" parent="CountryGornia/ProvinceContainer/ProvinceBrodi/Border" instance=ExtResource( 118 )]
 position = Vector2( -3, 10 )
-points = PoolVector2Array( -180, 94, -180, 88, -170, 82, -170, 68, -156, 50, -134, 48, -112, 30, -102, 28, -82, 6, -82, -10, -98, -42, -112, -42, -124, -52, -124, -72 )
+points = PoolVector2Array( -180, 94, -178, 88, -170, 84, -172, 66, -158, 50, -134, 48, -112, 30, -102, 28, -94, 16, -84, 6, -82, -10, -98, -42, -112, -42, -124, -50, -124, -72 )
+neighbour_border = NodePath("../../../ProvinceKremenets/Border/BorderPart2")
+neighbour_province = NodePath("../../../ProvinceKremenets")
 
-[node name="BorderPart2" parent="CountryExample/ProvinceContainer/ProvinceBrodi/Border" instance=ExtResource( 118 )]
+[node name="BorderPart2" parent="CountryGornia/ProvinceContainer/ProvinceBrodi/Border" instance=ExtResource( 118 )]
 position = Vector2( -3, 10 )
 points = PoolVector2Array( -124, -72, -102, -78, -86, -100, -62, -120, -42, -132, -16, -132, -4, -122, 20, -122, 48, -104, 62, -100, 80, -100, 100, -108, 112, -108, 118, -98, 126, -98, 146, -110, 154, -110, 162, -102, 190, -100, 200, -86, 242, -46, 250, -42, 290, -42, 312, -28, 330, -28, 342, -14, 358, -10, 374, -10, 388, -24 )
 
-[node name="BorderPart3" parent="CountryExample/ProvinceContainer/ProvinceBrodi/Border" instance=ExtResource( 118 )]
+[node name="BorderPart3" parent="CountryGornia/ProvinceContainer/ProvinceBrodi/Border" instance=ExtResource( 118 )]
 position = Vector2( -3, 10 )
 points = PoolVector2Array( 388, -24, 394, -4, 404, 8, 404, 42, 414, 52, 414, 76, 408, 94, 398, 106, 394, 116, 394, 144, 388, 154 )
 
-[node name="BorderPart4" parent="CountryExample/ProvinceContainer/ProvinceBrodi/Border" instance=ExtResource( 118 )]
+[node name="BorderPart4" parent="CountryGornia/ProvinceContainer/ProvinceBrodi/Border" instance=ExtResource( 118 )]
 position = Vector2( -3, 10 )
 points = PoolVector2Array( 388, 154, 388, 154, 360, 154, 346, 146, 326, 144, 308, 128, 282, 142, 254, 142, 238, 134 )
-neighbour_border = NodePath("../../../ProvinceKalush/Border/BorderPart2")
-neighbour_province = NodePath("../../../ProvinceKalush")
+neighbour_border = NodePath("../../../../../CountryHorezm/ProvinceContainer/ProvinceKalush/Border/BorderPart2")
+neighbour_province = NodePath("../../../../../CountryHorezm/ProvinceContainer/ProvinceKalush")
 
-[node name="BorderPart5" parent="CountryExample/ProvinceContainer/ProvinceBrodi/Border" instance=ExtResource( 118 )]
+[node name="BorderPart5" parent="CountryGornia/ProvinceContainer/ProvinceBrodi/Border" instance=ExtResource( 118 )]
 position = Vector2( -3, 10 )
 points = PoolVector2Array( 238, 134, 212, 126, 194, 114, 148, 112, 122, 104, 96, 104, 80, 110, 8, 108, -12, 118, -32, 122, -46, 122, -68, 110, -84, 110, -104, 112, -126, 100, -158, 98, -180, 94, -180, 94 )
-neighbour_border = NodePath("../../../ProvinceBogorodchani/Border/BorderPart")
-neighbour_province = NodePath("../../../ProvinceBogorodchani")
+neighbour_border = NodePath("../../../../../CountryHorezm/ProvinceContainer/ProvinceBogorodchani/Border/BorderPart")
+neighbour_province = NodePath("../../../../../CountryHorezm/ProvinceContainer/ProvinceBogorodchani")
 
-[node name="ProvinceBogorodchani" parent="CountryExample/ProvinceContainer" instance=ExtResource( 116 )]
+[node name="CountryHorezm" parent="." instance=ExtResource( 119 )]
+national_color = Color( 0, 0.203922, 1, 1 )
+
+[node name="CountryBorder" parent="CountryHorezm" instance=ExtResource( 120 )]
+
+[node name="ProvinceContainer" parent="CountryHorezm" instance=ExtResource( 121 )]
+
+[node name="ProvinceLodz" parent="CountryHorezm/ProvinceContainer" instance=ExtResource( 116 )]
+position = Vector2( 2166, 1706 )
+
+[node name="Border" parent="CountryHorezm/ProvinceContainer/ProvinceLodz" instance=ExtResource( 117 )]
+
+[node name="BorderPart" parent="CountryHorezm/ProvinceContainer/ProvinceLodz/Border" instance=ExtResource( 118 )]
+position = Vector2( 0, 2 )
+points = PoolVector2Array( -40, -102, -28, -92, -10, -94, -4, -100, 6, -98, 38, -98, 50, -100, 56, -108, 74, -108, 86, -116, 110, -110 )
+neighbour_border = NodePath("../../../../../CountryGornia/ProvinceContainer/ProvinceLublin/Border/BorderPart3")
+neighbour_province = NodePath("../../../../../CountryGornia/ProvinceContainer/ProvinceLublin")
+
+[node name="BorderPart2" parent="CountryHorezm/ProvinceContainer/ProvinceLodz/Border" instance=ExtResource( 118 )]
+position = Vector2( 0, 2 )
+points = PoolVector2Array( 110, -110, 104, -92, 102, -74, 110, -64, 112, -52, 102, -48, 100, -30, 84, -24, 74, -14, 74, 4, 94, 20, 106, 30, 104, 42, 104, 48, 108, 52, 108, 60, 98, 70, 98, 78, 102, 88, 130, 104, 134, 122, 132, 136, 138, 144 )
+neighbour_border = NodePath("../../../ProvinceMitava/Border/BorderPart4")
+neighbour_province = NodePath("../../../ProvinceMitava")
+
+[node name="BorderPart3" parent="CountryHorezm/ProvinceContainer/ProvinceLodz/Border" instance=ExtResource( 118 )]
+position = Vector2( 0, 2 )
+points = PoolVector2Array( 138, 144, 110, 134, 88, 122, 70, 102, 42, 98, 28, 104, -8, 110, -28, 102, -40, 102, -62, 102, -72, 98, -88, 96 )
+neighbour_border = NodePath("../../../ProvinceStanislav/Border/BorderPart")
+neighbour_province = NodePath("../../../ProvinceStanislav")
+
+[node name="BorderPart4" parent="CountryHorezm/ProvinceContainer/ProvinceLodz/Border" instance=ExtResource( 118 )]
+position = Vector2( 0, 2 )
+points = PoolVector2Array( -88, 96, -96, 62, -110, 42, -120, 32, -124, 22, -124, 8, -118, -6, -118, -32, -114, -38, -86, -46, -78, -64, -68, -84, -62, -94, -60, -100, -52, -102, -40, -102 )
+neighbour_border = NodePath("../../../../../CountryGornia/ProvinceContainer/ProvinceTarnopl/Border/BorderPart2")
+neighbour_province = NodePath("../../../../../CountryGornia/ProvinceContainer/ProvinceTarnopl")
+
+[node name="MapNameLabel" parent="CountryHorezm/ProvinceContainer/ProvinceLodz" instance=ExtResource( 122 )]
+margin_left = -106.0
+margin_top = -20.0
+margin_right = 64.0
+margin_bottom = 24.0
+text = "Лодзь"
+
+[node name="ProvinceStanislav" parent="CountryHorezm/ProvinceContainer" instance=ExtResource( 116 )]
+position = Vector2( 2194, 1902 )
+
+[node name="Border" parent="CountryHorezm/ProvinceContainer/ProvinceStanislav" instance=ExtResource( 117 )]
+
+[node name="BorderPart" parent="CountryHorezm/ProvinceContainer/ProvinceStanislav/Border" instance=ExtResource( 118 )]
+position = Vector2( -2, -2 )
+points = PoolVector2Array( -114, -96, -98, -94, -88, -90, -66, -90, -54, -90, -34, -82, 2, -88, 16, -94, 44, -90, 62, -70, 84, -58, 112, -48 )
+neighbour_border = NodePath("../../../ProvinceLodz/Border/BorderPart3")
+neighbour_province = NodePath("../../../ProvinceLodz")
+
+[node name="BorderPart2" parent="CountryHorezm/ProvinceContainer/ProvinceStanislav/Border" instance=ExtResource( 118 )]
+position = Vector2( -2, -2 )
+points = PoolVector2Array( 112, -48, 118, -38, 118, -24, 110, -12, 106, 0, 104, 18, 106, 36, 106, 52, 100, 60, 98, 78, 98, 104 )
+neighbour_border = NodePath("../../../ProvinceBeljeca/Border/BorderPart5")
+neighbour_province = NodePath("../../../ProvinceBeljeca")
+
+[node name="BorderPart3" parent="CountryHorezm/ProvinceContainer/ProvinceStanislav/Border" instance=ExtResource( 118 )]
+position = Vector2( -2, -2 )
+points = PoolVector2Array( 98, 104, 60, 102, 32, 92, 18, 92, -22, 82, -32, 78, -48, 76 )
+
+[node name="BorderPart4" parent="CountryHorezm/ProvinceContainer/ProvinceStanislav/Border" instance=ExtResource( 118 )]
+position = Vector2( -2, -2 )
+points = PoolVector2Array( -48, 76, -66, 40, -72, 24, -80, 16, -102, 10, -108, 4, -112, -18, -126, -30, -126, -46, -114, -80, -114, -96 )
+neighbour_border = NodePath("../../../../../CountryGornia/ProvinceContainer/ProvinceKrasnik/Border/BorderPart2")
+neighbour_province = NodePath("../../../../../CountryGornia/ProvinceContainer/ProvinceKrasnik")
+
+[node name="MapNameLabel" parent="CountryHorezm/ProvinceContainer/ProvinceStanislav" instance=ExtResource( 122 )]
+margin_left = -106.0
+margin_top = -70.0
+margin_right = 124.0
+margin_bottom = -41.0
+rect_rotation = 30.8212
+text = "Станислав"
+
+[node name="ProvinceBogorodchani" parent="CountryHorezm/ProvinceContainer" instance=ExtResource( 116 )]
 position = Vector2( 2882, 1628 )
 
-[node name="Border" parent="CountryExample/ProvinceContainer/ProvinceBogorodchani" instance=ExtResource( 117 )]
+[node name="Border" parent="CountryHorezm/ProvinceContainer/ProvinceBogorodchani" instance=ExtResource( 117 )]
 
-[node name="BorderPart" parent="CountryExample/ProvinceContainer/ProvinceBogorodchani/Border" instance=ExtResource( 118 )]
+[node name="BorderPart" parent="CountryHorezm/ProvinceContainer/ProvinceBogorodchani/Border" instance=ExtResource( 118 )]
 position = Vector2( -62, -194 )
 points = PoolVector2Array( -180, 94, -180, 94, -158, 98, -126, 100, -104, 112, -84, 110, -68, 110, -46, 122, -32, 122, -12, 118, 8, 108, 80, 110, 96, 104, 122, 104, 148, 112, 194, 114, 212, 126, 238, 134 )
-neighbour_border = NodePath("../../../ProvinceBrodi/Border/BorderPart5")
-neighbour_province = NodePath("../../../ProvinceBrodi")
+neighbour_border = NodePath("../../../../../CountryGornia/ProvinceContainer/ProvinceBrodi/Border/BorderPart5")
+neighbour_province = NodePath("../../../../../CountryGornia/ProvinceContainer/ProvinceBrodi")
 
-[node name="BorderPart2" parent="CountryExample/ProvinceContainer/ProvinceBogorodchani/Border" instance=ExtResource( 118 )]
+[node name="BorderPart2" parent="CountryHorezm/ProvinceContainer/ProvinceBogorodchani/Border" instance=ExtResource( 118 )]
 position = Vector2( -62, -194 )
 points = PoolVector2Array( 238, 134, 234, 156, 246, 178, 244, 204 )
 neighbour_border = NodePath("../../../ProvinceKalush/Border/BorderPart")
 neighbour_province = NodePath("../../../ProvinceKalush")
 
-[node name="BorderPart3" parent="CountryExample/ProvinceContainer/ProvinceBogorodchani/Border" instance=ExtResource( 118 )]
+[node name="BorderPart3" parent="CountryHorezm/ProvinceContainer/ProvinceBogorodchani/Border" instance=ExtResource( 118 )]
 position = Vector2( -62, -194 )
 points = PoolVector2Array( 244, 204, 238, 220, 238, 238, 232, 250, 232, 262, 216, 286, 218, 294, 218, 314, 204, 338, 192, 340, 174, 330, 146, 330, 124, 322, 108, 322, 76, 340, 64, 346, 56, 374 )
 neighbour_border = NodePath("../../../ProvinceDnestr/Border/BorderPart")
 neighbour_province = NodePath("../../../ProvinceDnestr")
 
-[node name="BorderPart4" parent="CountryExample/ProvinceContainer/ProvinceBogorodchani/Border" instance=ExtResource( 118 )]
+[node name="BorderPart4" parent="CountryHorezm/ProvinceContainer/ProvinceBogorodchani/Border" instance=ExtResource( 118 )]
 position = Vector2( -62, -194 )
 points = PoolVector2Array( 56, 374, 48, 366, 40, 354, 26, 328, 24, 312, 2, 306, -30, 264, -80, 268, -100, 258, -110, 238, -106, 224, -104, 210, -116, 196, -112, 186, -120, 174, -142, 164, -142, 146, -164, 132, -164, 116, -180, 94 )
-neighbour_border = NodePath("../../../../../CountryExample2/ProvinceContainer/ProvinceChernovci/Border/BorderPart2")
-neighbour_province = NodePath("../../../../../CountryExample2/ProvinceContainer/ProvinceChernovci")
+neighbour_border = NodePath("../../../ProvinceChernovci/Border/BorderPart2")
+neighbour_province = NodePath("../../../ProvinceChernovci")
 
-[node name="ProvinceKalush" parent="CountryExample/ProvinceContainer" instance=ExtResource( 116 )]
+[node name="ProvinceKalush" parent="CountryHorezm/ProvinceContainer" instance=ExtResource( 116 )]
 position = Vector2( 3220, 1808 )
 
-[node name="Border" parent="CountryExample/ProvinceContainer/ProvinceKalush" instance=ExtResource( 117 )]
+[node name="Border" parent="CountryHorezm/ProvinceContainer/ProvinceKalush" instance=ExtResource( 117 )]
 
-[node name="BorderPart" parent="CountryExample/ProvinceContainer/ProvinceKalush/Border" instance=ExtResource( 118 )]
+[node name="BorderPart" parent="CountryHorezm/ProvinceContainer/ProvinceKalush/Border" instance=ExtResource( 118 )]
 position = Vector2( -400, -374 )
 points = PoolVector2Array( 244, 204, 246, 178, 234, 156, 238, 134 )
 neighbour_border = NodePath("../../../ProvinceBogorodchani/Border/BorderPart2")
 neighbour_province = NodePath("../../../ProvinceBogorodchani")
 
-[node name="BorderPart2" parent="CountryExample/ProvinceContainer/ProvinceKalush/Border" instance=ExtResource( 118 )]
+[node name="BorderPart2" parent="CountryHorezm/ProvinceContainer/ProvinceKalush/Border" instance=ExtResource( 118 )]
 position = Vector2( -400, -374 )
 points = PoolVector2Array( 238, 134, 254, 142, 282, 142, 308, 128, 326, 144, 346, 146, 360, 154, 388, 154, 388, 154 )
-neighbour_border = NodePath("../../../ProvinceBrodi/Border/BorderPart4")
-neighbour_province = NodePath("../../../ProvinceBrodi")
+neighbour_border = NodePath("../../../../../CountryGornia/ProvinceContainer/ProvinceBrodi/Border/BorderPart4")
+neighbour_province = NodePath("../../../../../CountryGornia/ProvinceContainer/ProvinceBrodi")
 
-[node name="BorderPart3" parent="CountryExample/ProvinceContainer/ProvinceKalush/Border" instance=ExtResource( 118 )]
+[node name="BorderPart3" parent="CountryHorezm/ProvinceContainer/ProvinceKalush/Border" instance=ExtResource( 118 )]
 position = Vector2( -400, -374 )
 points = PoolVector2Array( 388, 154, 398, 182, 398, 192, 440, 200 )
 
-[node name="BorderPart4" parent="CountryExample/ProvinceContainer/ProvinceKalush/Border" instance=ExtResource( 118 )]
+[node name="BorderPart4" parent="CountryHorezm/ProvinceContainer/ProvinceKalush/Border" instance=ExtResource( 118 )]
 position = Vector2( -400, -374 )
 points = PoolVector2Array( 440, 200, 458, 228, 460, 250, 470, 266, 470, 306, 498, 336, 506, 362, 508, 398, 494, 412, 502, 432, 502, 446, 496, 454, 496, 468 )
 
-[node name="BorderPart5" parent="CountryExample/ProvinceContainer/ProvinceKalush/Border" instance=ExtResource( 118 )]
+[node name="BorderPart5" parent="CountryHorezm/ProvinceContainer/ProvinceKalush/Border" instance=ExtResource( 118 )]
 position = Vector2( -400, -374 )
 points = PoolVector2Array( 496, 468, 484, 474, 484, 482, 478, 490 )
 
-[node name="BorderPart6" parent="CountryExample/ProvinceContainer/ProvinceKalush/Border" instance=ExtResource( 118 )]
+[node name="BorderPart6" parent="CountryHorezm/ProvinceContainer/ProvinceKalush/Border" instance=ExtResource( 118 )]
 position = Vector2( -400, -374 )
 points = PoolVector2Array( 478, 490, 452, 508, 418, 528, 406, 544, 386, 538, 378, 538, 358, 576, 344, 576, 328, 590, 296, 592, 288, 584, 260, 584, 242, 560, 222, 540, 204, 536, 186, 524, 154, 524 )
 
-[node name="BorderPart7" parent="CountryExample/ProvinceContainer/ProvinceKalush/Border" instance=ExtResource( 118 )]
+[node name="BorderPart7" parent="CountryHorezm/ProvinceContainer/ProvinceKalush/Border" instance=ExtResource( 118 )]
 position = Vector2( -400, -374 )
 points = PoolVector2Array( 154, 524, 158, 510, 182, 498, 194, 484, 198, 460, 206, 450, 218, 442, 236, 438, 268, 422, 282, 414, 288, 382, 300, 338, 308, 326, 308, 300, 304, 288, 294, 274, 294, 262, 296, 242, 292, 232, 282, 224, 272, 214, 266, 206, 244, 204 )
 neighbour_border = NodePath("../../../ProvinceDnestr/Border/BorderPart2")
 neighbour_province = NodePath("../../../ProvinceDnestr")
 
-[node name="ProvinceDnestr" parent="CountryExample/ProvinceContainer" instance=ExtResource( 116 )]
+[node name="ProvinceDnestr" parent="CountryHorezm/ProvinceContainer" instance=ExtResource( 116 )]
 position = Vector2( 3030, 1812 )
 
-[node name="Border" parent="CountryExample/ProvinceContainer/ProvinceDnestr" instance=ExtResource( 117 )]
+[node name="Border" parent="CountryHorezm/ProvinceContainer/ProvinceDnestr" instance=ExtResource( 117 )]
 
-[node name="BorderPart" parent="CountryExample/ProvinceContainer/ProvinceDnestr/Border" instance=ExtResource( 118 )]
+[node name="BorderPart" parent="CountryHorezm/ProvinceContainer/ProvinceDnestr/Border" instance=ExtResource( 118 )]
 position = Vector2( -210, -378 )
 points = PoolVector2Array( 56, 374, 64, 346, 76, 340, 108, 322, 124, 322, 146, 330, 174, 330, 192, 340, 204, 338, 218, 314, 218, 294, 216, 286, 232, 262, 232, 250, 238, 238, 238, 220, 244, 204 )
 neighbour_border = NodePath("../../../ProvinceBogorodchani/Border/BorderPart3")
 neighbour_province = NodePath("../../../ProvinceBogorodchani")
 
-[node name="BorderPart2" parent="CountryExample/ProvinceContainer/ProvinceDnestr/Border" instance=ExtResource( 118 )]
+[node name="BorderPart2" parent="CountryHorezm/ProvinceContainer/ProvinceDnestr/Border" instance=ExtResource( 118 )]
 position = Vector2( -210, -378 )
 points = PoolVector2Array( 244, 204, 266, 206, 272, 214, 282, 224, 292, 232, 296, 242, 294, 262, 294, 274, 304, 288, 308, 300, 308, 326, 300, 338, 288, 382, 282, 414, 268, 422, 236, 438, 218, 442, 206, 450, 198, 460, 194, 484, 182, 498, 158, 510, 154, 524 )
 neighbour_border = NodePath("../../../ProvinceKalush/Border/BorderPart7")
 neighbour_province = NodePath("../../../ProvinceKalush")
 
-[node name="BorderPart3" parent="CountryExample/ProvinceContainer/ProvinceDnestr/Border" instance=ExtResource( 118 )]
+[node name="BorderPart3" parent="CountryHorezm/ProvinceContainer/ProvinceDnestr/Border" instance=ExtResource( 118 )]
 position = Vector2( -210, -378 )
 points = PoolVector2Array( 154, 524, 136, 512 )
 
-[node name="BorderPart4" parent="CountryExample/ProvinceContainer/ProvinceDnestr/Border" instance=ExtResource( 118 )]
+[node name="BorderPart4" parent="CountryHorezm/ProvinceContainer/ProvinceDnestr/Border" instance=ExtResource( 118 )]
 position = Vector2( -210, -378 )
 points = PoolVector2Array( 136, 512, 130, 492, 114, 460, 108, 430, 96, 410, 70, 396, 56, 374 )
-neighbour_border = NodePath("../../../../../CountryExample2/ProvinceContainer/ProvinceGalich/Border/BorderPart2")
-neighbour_province = NodePath("../../../../../CountryExample2/ProvinceContainer/ProvinceGalich")
+neighbour_border = NodePath("../../../ProvinceGalich/Border/BorderPart2")
+neighbour_province = NodePath("../../../ProvinceGalich")
 
-[node name="CountryExample2" parent="." instance=ExtResource( 119 )]
-national_color = Color( 0, 0.203922, 1, 1 )
-
-[node name="CountryBorder" parent="CountryExample2" instance=ExtResource( 120 )]
-
-[node name="ProvinceContainer" parent="CountryExample2" instance=ExtResource( 121 )]
-
-[node name="ProvinceGalich" parent="CountryExample2/ProvinceContainer" instance=ExtResource( 116 )]
+[node name="ProvinceGalich" parent="CountryHorezm/ProvinceContainer" instance=ExtResource( 116 )]
 position = Vector2( 2742, 1902 )
 
-[node name="Border" parent="CountryExample2/ProvinceContainer/ProvinceGalich" instance=ExtResource( 117 )]
+[node name="Border" parent="CountryHorezm/ProvinceContainer/ProvinceGalich" instance=ExtResource( 117 )]
 
-[node name="BorderPart" parent="CountryExample2/ProvinceContainer/ProvinceGalich/Border" instance=ExtResource( 118 )]
+[node name="BorderPart" parent="CountryHorezm/ProvinceContainer/ProvinceGalich/Border" instance=ExtResource( 118 )]
 points = PoolVector2Array( -176, -22, -166, -32, -142, -32, -132, -42, -124, -42, -118, -38, -106, -38, -102, -40, -94, -40, -86, -36, -82, -36, -60, -52, -44, -52, -2, -76, 28, -76, 46, -78, 58, -74, 70, -78, 78, -76, 84, -68, 96, -68, 134, -94 )
 neighbour_border = NodePath("../../../ProvinceChernovci/Border/BorderPart3")
 neighbour_province = NodePath("../../../ProvinceChernovci")
 
-[node name="BorderPart2" parent="CountryExample2/ProvinceContainer/ProvinceGalich/Border" instance=ExtResource( 118 )]
+[node name="BorderPart2" parent="CountryHorezm/ProvinceContainer/ProvinceGalich/Border" instance=ExtResource( 118 )]
 points = PoolVector2Array( 134, -94, 148, -72, 174, -58, 186, -38, 192, -8, 208, 24, 214, 44 )
-neighbour_border = NodePath("../../../../../CountryExample/ProvinceContainer/ProvinceDnestr/Border/BorderPart4")
-neighbour_province = NodePath("../../../../../CountryExample/ProvinceContainer/ProvinceDnestr")
+neighbour_border = NodePath("../../../ProvinceDnestr/Border/BorderPart4")
+neighbour_province = NodePath("../../../ProvinceDnestr")
 
-[node name="BorderPart3" parent="CountryExample2/ProvinceContainer/ProvinceGalich/Border" instance=ExtResource( 118 )]
+[node name="BorderPart3" parent="CountryHorezm/ProvinceContainer/ProvinceGalich/Border" instance=ExtResource( 118 )]
 points = PoolVector2Array( 214, 44, 104, 42, 62, 54, 0, 56, -26, 58, -60, 74, -112, 74, -126, 80, -148, 78, -174, 70, -210, 68, -214, 70, -232, 70 )
 
-[node name="BorderPart4" parent="CountryExample2/ProvinceContainer/ProvinceGalich/Border" instance=ExtResource( 118 )]
+[node name="BorderPart4" parent="CountryHorezm/ProvinceContainer/ProvinceGalich/Border" instance=ExtResource( 118 )]
 points = PoolVector2Array( -232, 70, -230, 52, -220, 42, -200, 30, -190, 12, -184, -4, -172, -10, -172, -16, -176, -22 )
 neighbour_border = NodePath("../../../ProvinceBeljeca/Border/BorderPart3")
 neighbour_province = NodePath("../../../ProvinceBeljeca")
 
-[node name="ProvinceChernovci" parent="CountryExample2/ProvinceContainer" instance=ExtResource( 116 )]
+[node name="ProvinceChernovci" parent="CountryHorezm/ProvinceContainer" instance=ExtResource( 116 )]
 position = Vector2( 2628, 1718 )
 
-[node name="Border" parent="CountryExample2/ProvinceContainer/ProvinceChernovci" instance=ExtResource( 117 )]
+[node name="Border" parent="CountryHorezm/ProvinceContainer/ProvinceChernovci" instance=ExtResource( 117 )]
 
-[node name="BorderPart" parent="CountryExample2/ProvinceContainer/ProvinceChernovci/Border" instance=ExtResource( 118 )]
+[node name="BorderPart" parent="CountryHorezm/ProvinceContainer/ProvinceChernovci/Border" instance=ExtResource( 118 )]
 points = PoolVector2Array( -52, -176, -20, -176, -10, -178, -2, -184, 2, -192, 12, -190 )
+neighbour_border = NodePath("../../../../../CountryGornia/ProvinceContainer/ProvinceKremenets/Border/BorderPart3")
+neighbour_province = NodePath("../../../../../CountryGornia/ProvinceContainer/ProvinceKremenets")
 
-[node name="BorderPart2" parent="CountryExample2/ProvinceContainer/ProvinceChernovci/Border" instance=ExtResource( 118 )]
+[node name="BorderPart2" parent="CountryHorezm/ProvinceContainer/ProvinceChernovci/Border" instance=ExtResource( 118 )]
 points = PoolVector2Array( 12, -190, 28, -168, 28, -152, 50, -138, 50, -120, 72, -110, 80, -98, 76, -88, 88, -74, 86, -60, 82, -46, 92, -26, 112, -16, 162, -20, 194, 22, 216, 28, 218, 44, 232, 70, 240, 82, 248, 90 )
-neighbour_border = NodePath("../../../../../CountryExample/ProvinceContainer/ProvinceBogorodchani/Border/BorderPart4")
-neighbour_province = NodePath("../../../../../CountryExample/ProvinceContainer/ProvinceBogorodchani")
+neighbour_border = NodePath("../../../ProvinceBogorodchani/Border/BorderPart4")
+neighbour_province = NodePath("../../../ProvinceBogorodchani")
 
-[node name="BorderPart3" parent="CountryExample2/ProvinceContainer/ProvinceChernovci/Border" instance=ExtResource( 118 )]
+[node name="BorderPart3" parent="CountryHorezm/ProvinceContainer/ProvinceChernovci/Border" instance=ExtResource( 118 )]
 points = PoolVector2Array( 248, 90, 210, 116, 198, 116, 192, 108, 184, 106, 172, 110, 160, 106, 142, 108, 112, 108, 70, 132, 54, 132, 32, 148, 28, 148, 20, 144, 12, 144, 8, 146, -4, 146, -10, 142, -18, 142, -28, 152, -52, 152, -62, 162 )
 neighbour_border = NodePath("../../../ProvinceGalich/Border/BorderPart")
 neighbour_province = NodePath("../../../ProvinceGalich")
 
-[node name="BorderPart4" parent="CountryExample2/ProvinceContainer/ProvinceChernovci/Border" instance=ExtResource( 118 )]
+[node name="BorderPart4" parent="CountryHorezm/ProvinceContainer/ProvinceChernovci/Border" instance=ExtResource( 118 )]
 points = PoolVector2Array( -62, 162, -72, 156, -88, 158 )
 neighbour_border = NodePath("../../../ProvinceBeljeca/Border/BorderPart2")
 neighbour_province = NodePath("../../../ProvinceBeljeca")
 
-[node name="BorderPart5" parent="CountryExample2/ProvinceContainer/ProvinceChernovci/Border" instance=ExtResource( 118 )]
+[node name="BorderPart5" parent="CountryHorezm/ProvinceContainer/ProvinceChernovci/Border" instance=ExtResource( 118 )]
 points = PoolVector2Array( -88, 158, -98, 150, -100, 130, -114, 116, -114, 102, -104, 86, -100, 72, -90, 56, -88, 44, -104, 26, -104, 10, -114, -10, -138, -30, -138, -44, -124, -66, -120, -80, -116, -86, -100, -98, -100, -106, -104, -116, -104, -128, -92, -136, -92, -148, -80, -158, -64, -158, -54, -166, -52, -176 )
 neighbour_border = NodePath("../../../ProvinceMitava/Border/BorderPart2")
 neighbour_province = NodePath("../../../ProvinceMitava")
 
-[node name="ProvinceBeljeca" parent="CountryExample2/ProvinceContainer" instance=ExtResource( 116 )]
+[node name="ProvinceBeljeca" parent="CountryHorezm/ProvinceContainer" instance=ExtResource( 116 )]
 position = Vector2( 2412, 1944 )
 
-[node name="Border" parent="CountryExample2/ProvinceContainer/ProvinceBeljeca" instance=ExtResource( 117 )]
+[node name="Border" parent="CountryHorezm/ProvinceContainer/ProvinceBeljeca" instance=ExtResource( 117 )]
 
-[node name="BorderPart" parent="CountryExample2/ProvinceContainer/ProvinceBeljeca/Border" instance=ExtResource( 118 )]
+[node name="BorderPart" parent="CountryHorezm/ProvinceContainer/ProvinceBeljeca/Border" instance=ExtResource( 118 )]
 points = PoolVector2Array( -108, -92, -78, -92, -70, -86, -54, -84, -48, -70, -18, -64, -10, -56, 18, -56, 36, -66, 64, -66, 120, -66, 128, -68 )
 neighbour_border = NodePath("../../../ProvinceMitava/Border/BorderPart3")
 neighbour_province = NodePath("../../../ProvinceMitava")
 
-[node name="BorderPart2" parent="CountryExample2/ProvinceContainer/ProvinceBeljeca/Border" instance=ExtResource( 118 )]
+[node name="BorderPart2" parent="CountryHorezm/ProvinceContainer/ProvinceBeljeca/Border" instance=ExtResource( 118 )]
 points = PoolVector2Array( 128, -68, 144, -70, 154, -64 )
 neighbour_border = NodePath("../../../ProvinceChernovci/Border/BorderPart4")
 neighbour_province = NodePath("../../../ProvinceChernovci")
 
-[node name="BorderPart3" parent="CountryExample2/ProvinceContainer/ProvinceBeljeca/Border" instance=ExtResource( 118 )]
+[node name="BorderPart3" parent="CountryHorezm/ProvinceContainer/ProvinceBeljeca/Border" instance=ExtResource( 118 )]
 points = PoolVector2Array( 154, -64, 158, -58, 158, -52, 146, -46, 140, -30, 130, -12, 110, 0, 100, 10, 98, 28 )
 neighbour_border = NodePath("../../../ProvinceGalich/Border/BorderPart4")
 neighbour_province = NodePath("../../../ProvinceGalich")
 
-[node name="BorderPart4" parent="CountryExample2/ProvinceContainer/ProvinceBeljeca/Border" instance=ExtResource( 118 )]
+[node name="BorderPart4" parent="CountryHorezm/ProvinceContainer/ProvinceBeljeca/Border" instance=ExtResource( 118 )]
 points = PoolVector2Array( 98, 28, 78, 30, 56, 40, 36, 58, 12, 68, -44, 66, -76, 68, -122, 60 )
 
-[node name="BorderPart5" parent="CountryExample2/ProvinceContainer/ProvinceBeljeca/Border" instance=ExtResource( 118 )]
+[node name="BorderPart5" parent="CountryHorezm/ProvinceContainer/ProvinceBeljeca/Border" instance=ExtResource( 118 )]
 points = PoolVector2Array( -122, 60, -122, 34, -120, 16, -114, 8, -114, -8, -116, -26, -114, -44, -110, -56, -102, -68, -102, -82, -108, -92 )
+neighbour_border = NodePath("../../../ProvinceStanislav/Border/BorderPart2")
+neighbour_province = NodePath("../../../ProvinceStanislav")
 
-[node name="ProvinceMitava" parent="CountryExample2/ProvinceContainer" instance=ExtResource( 116 )]
+[node name="ProvinceMitava" parent="CountryHorezm/ProvinceContainer" instance=ExtResource( 116 )]
 position = Vector2( 2392, 1712 )
 
-[node name="Border" parent="CountryExample2/ProvinceContainer/ProvinceMitava" instance=ExtResource( 117 )]
+[node name="Border" parent="CountryHorezm/ProvinceContainer/ProvinceMitava" instance=ExtResource( 117 )]
 
-[node name="BorderPart" parent="CountryExample2/ProvinceContainer/ProvinceMitava/Border" instance=ExtResource( 118 )]
+[node name="BorderPart" parent="CountryHorezm/ProvinceContainer/ProvinceMitava/Border" instance=ExtResource( 118 )]
 points = PoolVector2Array( -116, -114, -106, -104, -94, -104, -78, -120, -34, -134, -24, -144, -12, -148, 10, -150, 28, -154, 56, -170, 90, -170, 128, -182, 156, -180, 184, -170 )
+neighbour_border = NodePath("../../../../../CountryGornia/ProvinceContainer/ProvinceKremenets/Border/BorderPart4")
+neighbour_province = NodePath("../../../../../CountryGornia/ProvinceContainer/ProvinceKremenets")
 
-[node name="BorderPart2" parent="CountryExample2/ProvinceContainer/ProvinceMitava/Border" instance=ExtResource( 118 )]
+[node name="BorderPart2" parent="CountryHorezm/ProvinceContainer/ProvinceMitava/Border" instance=ExtResource( 118 )]
 points = PoolVector2Array( 184, -170, 182, -160, 172, -152, 156, -152, 144, -142, 144, -130, 132, -122, 132, -110, 136, -100, 136, -92, 120, -80, 116, -74, 112, -60, 98, -38, 98, -24, 122, -4, 132, 16, 132, 32, 148, 50, 146, 62, 136, 78, 132, 92, 122, 108, 122, 122, 136, 136, 138, 156, 148, 164 )
 neighbour_border = NodePath("../../../ProvinceChernovci/Border/BorderPart5")
 neighbour_province = NodePath("../../../ProvinceChernovci")
 
-[node name="BorderPart3" parent="CountryExample2/ProvinceContainer/ProvinceMitava/Border" instance=ExtResource( 118 )]
+[node name="BorderPart3" parent="CountryHorezm/ProvinceContainer/ProvinceMitava/Border" instance=ExtResource( 118 )]
 points = PoolVector2Array( 148, 164, 140, 166, 84, 166, 56, 166, 38, 176, 10, 176, 2, 168, -28, 162, -34, 148, -50, 146, -58, 140, -88, 140 )
 neighbour_border = NodePath("../../../ProvinceBeljeca/Border/BorderPart")
 neighbour_province = NodePath("../../../ProvinceBeljeca")
 
-[node name="BorderPart4" parent="CountryExample2/ProvinceContainer/ProvinceMitava/Border" instance=ExtResource( 118 )]
+[node name="BorderPart4" parent="CountryHorezm/ProvinceContainer/ProvinceMitava/Border" instance=ExtResource( 118 )]
 points = PoolVector2Array( -88, 140, -94, 132, -92, 118, -96, 100, -124, 84, -128, 74, -128, 66, -118, 56, -118, 48, -122, 44, -122, 38, -120, 26, -132, 16, -152, 0, -152, -18, -142, -28, -126, -34, -124, -52, -114, -56, -116, -68, -124, -78, -122, -96, -116, -114 )
+neighbour_border = NodePath("../../../ProvinceLodz/Border/BorderPart2")
+neighbour_province = NodePath("../../../ProvinceLodz")
 
-[node name="MapNameLabel" parent="CountryExample2/ProvinceContainer/ProvinceMitava" instance=ExtResource( 122 )]
+[node name="MapNameLabel" parent="CountryHorezm/ProvinceContainer/ProvinceMitava" instance=ExtResource( 122 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = -104.0
@@ -1460,13 +1682,6 @@ margin_top = -11.0
 margin_right = 124.0
 margin_bottom = 51.0
 text = "Митава"
-
-[node name="Map" type="Sprite" parent="."]
-visible = false
-position = Vector2( 2758, 1709 )
-scale = Vector2( 0.995, 0.995 )
-z_index = -10
-texture = ExtResource( 2 )
 
 [node name="ToDelete" type="Control" parent="."]
 visible = false
