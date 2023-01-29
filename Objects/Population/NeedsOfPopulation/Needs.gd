@@ -20,7 +20,7 @@ var list_of_needs: Array = []
 
 func set_objects_of_goods():
 	for good in list_of_goods:
-		var object = Good.new()
+		var object = GoodOld.new()
 		object.name_of_good = good
 		list_of_needs.append(object)
 

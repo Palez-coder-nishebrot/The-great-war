@@ -1,6 +1,6 @@
 extends Resource
 
-class_name Good
+class_name GoodOld
 
 export(String, 
 	"grain",
