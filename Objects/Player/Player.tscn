@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Objects/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Objects/Player/Window_province/Window_province.tscn" type="PackedScene" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Objects/Player/Window_population/Population.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Objects/Player/Window_research/Research.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Objects/Player/Window_train_army/Train_army.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Objects/Player/Camera.gd" type="Script" id=15]
 [ext_resource path="res://Objects/Player/List_of_units/List_of_units.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Graphics/Fonts/pixel_2.ttf" type="DynamicFontData" id=17]
 [ext_resource path="res://Objects/Player/Borders/Border.gd" type="Script" id=18]
@@ -39,6 +40,7 @@ script = ExtResource( 1 )
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 zoom = Vector2( 2.5, 2.5 )
+script = ExtResource( 15 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

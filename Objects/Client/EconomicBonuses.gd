@@ -25,20 +25,19 @@ var based_production_of_rubber    = 1.0
 var based_production_of_oil       = 0.5
 
 var based_production_of_steel         = 0.5
-var based_production_of_glass         = 0.8
-var based_production_of_textile       = 0.8
-var based_production_of_el_parts      = 1.0
-var based_production_of_mech_parts    = 1.0
-var based_production_of_lumber        = 1.0
+var based_production_of_glass         = 0.6
+var based_production_of_textile       = 0.6
+var based_production_of_el_parts      = 0.6
+var based_production_of_mech_parts    = 0.6
+var based_production_of_lumber        = 0.6
 
 var based_production_of_el_appliances = 0.8
 var based_production_of_gas           = 1.0
-var based_production_of_cars          = 0.2
-var based_production_of_telegraphs    = 0.5
-var based_production_of_phone         = 0.5
-var based_production_of_radio         = 0.5
+var based_production_of_cars          = 0.1
+var based_production_of_phone         = 0.2
+var based_production_of_radio         = 0.2
 var based_production_of_furniture     = 0.5
-var based_production_of_alcohol       = 1.0
+var based_production_of_alcohol       = 0.8
 var based_production_of_clothes       = 0.6
 var based_production_of_canned_food   = 1.0
 

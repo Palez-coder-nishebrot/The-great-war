@@ -1,9 +1,6 @@
 extends Client
 
 const speed_of_camera: int            = 50
-const speed_of_zoom:   float          = 0.1
-const MAX_zoom:        float          = 2.5
-const MIN_zoom:        float          = 1.0
 
 const ACTIVE_LEFT_BORDER:  bool = false
 const ACTIVE_RIGHT_BORDER: bool = false
@@ -31,7 +28,6 @@ onready var window_list_of_units: ScrollContainer = $CanvasLayer/List_of_units
 func _ready():
 	var _err = connect("check_available_reform", window_reform, "check_available_reform")
 	var _err_ = connect("research_completed", self, "research_completed")
-	#hold_debate()
 
 
 func research_completed(technology):
@@ -57,12 +53,12 @@ func _process(_delta):
 func _input(event):
 	if Input.is_action_just_pressed("ui_esc"):
 		get_tree().quit()
-	if event.is_pressed() and not event is InputEventKey:
-		if event.button_index == BUTTON_WHEEL_UP:
-			if $Camera2D.zoom.x >= MIN_zoom:
-				$Camera2D.zoom -= Vector2(speed_of_zoom, speed_of_zoom)
-		elif event.button_index == BUTTON_WHEEL_DOWN:
-			if $Camera2D.zoom.x <= MAX_zoom:
-				$Camera2D.zoom += Vector2(speed_of_zoom, speed_of_zoom)
+#	if event.is_pressed() and not event is InputEventKey:
+#		if event.button_index == BUTTON_WHEEL_UP:
+#			if $Camera2D.zoom.x >= MIN_zoom:
+#				$Camera2D.zoom -= Vector2(speed_of_zoom, speed_of_zoom)
+#		elif event.button_index == BUTTON_WHEEL_DOWN:
+#			if $Camera2D.zoom.x <= MAX_zoom:
+#				$Camera2D.zoom += Vector2(speed_of_zoom, speed_of_zoom)
 
 

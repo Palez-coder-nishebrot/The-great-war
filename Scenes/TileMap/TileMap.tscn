@@ -1,4 +1,4 @@
-[gd_scene load_steps=124 format=2]
+[gd_scene load_steps=123 format=2]
 
 [ext_resource path="res://Scenes/TileMap/TileMap.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/TileMap/Карта региона.png" type="Texture" id=2]
@@ -122,7 +122,6 @@
 [ext_resource path="res://Scenes/Country/country_border.tscn" type="PackedScene" id=120]
 [ext_resource path="res://Scenes/Country/province_container.tscn" type="PackedScene" id=121]
 [ext_resource path="res://Scenes/MapNameLabel/map_name_label.tscn" type="PackedScene" id=122]
-[ext_resource path="res://Scenes/MapNameLabel/map_name_label.theme" type="Theme" id=123]
 
 [node name="TileMap" type="Node2D"]
 script = ExtResource( 1 )
@@ -1455,15 +1454,11 @@ points = PoolVector2Array( -88, 140, -94, 132, -92, 118, -96, 100, -124, 84, -12
 [node name="MapNameLabel" parent="CountryExample2/ProvinceContainer/ProvinceMitava" instance=ExtResource( 122 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -110.0
-margin_top = 42.0
-margin_right = 118.0
-margin_bottom = 104.0
-rect_rotation = -14.8735
-theme = ExtResource( 123 )
+margin_left = -104.0
+margin_top = -11.0
+margin_right = 124.0
+margin_bottom = 51.0
 text = "Митава"
-align = 1
-valign = 1
 
 [node name="Map" type="Sprite" parent="."]
 visible = false

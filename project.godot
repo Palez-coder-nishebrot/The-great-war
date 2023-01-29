@@ -292,6 +292,7 @@ Units="*res://Objects/Global/Units.gd"
 Reforms="*res://Objects/Global/Reforms.gd"
 ManagerDay="*res://Objects/Global/Managers/ManagerDay.gd"
 ProvinceLoader="*res://Objects/Global/ProvinceLoader.gd"
+SceneStorage="*res://Objects/Global/SceneStorage.gd"
 
 [display]
 
