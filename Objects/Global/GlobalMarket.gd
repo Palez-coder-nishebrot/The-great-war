@@ -29,7 +29,6 @@ var prices_of_goods:  Dictionary = {
 	
 	"el_appliances": 80,
 	"cars":      300,
-	"telegraphs":       100,
 	"phone":        100,
 	"radio":           100,
 	
@@ -42,9 +41,7 @@ var prices_of_goods:  Dictionary = {
 #	"tabaco":           10,
 #	"tea":             10,
 	
-	"projectiles":             45,
 	"ammo":          45,
-	"machine_guns":            45,
 	"artillery":          45,
 	"plane":            45,
 	"rifles": 45,
@@ -73,7 +70,6 @@ const min_and_max_prices_of_goods: Dictionary = {
 	
 	"el_appliances":          {min_ = 30, max_ = 50},
 	"cars":                   {min_ = 30, max_ = 100},
-	"telegraphs":             {min_ = 30, max_ = 50},
 	"phone":                  {min_ = 30, max_ = 50},
 	"radio":                  {min_ = 30, max_ = 50},
 	
@@ -82,9 +78,6 @@ const min_and_max_prices_of_goods: Dictionary = {
 	"clothes":                {min_ = 20, max_ = 60},
 	"canned_food":            {min_ = 30, max_ = 60},
 	"gas":                    {min_ = 30, max_ = 60},
-	
-	"tabaco":                 {min_ = 20, max_ = 35},
-	"tea":                    {min_ = 20, max_ = 35},
 	
 	"projectiles":            {min_ = 30, max_ = 110},
 	"ammo":                   {min_ = 30, max_ = 100},
@@ -115,8 +108,7 @@ const based_prices_of_goods = {
 	"mech_parts": 30,
 	
 	"el_appliances": 50,
-	"cars":          300,
-	"telegraphs":    50,
+	"cars":          100,
 	"phone":         50,
 	"radio":         50,
 	
@@ -126,104 +118,16 @@ const based_prices_of_goods = {
 	"canned_food":   30,
 	"gas":           30,
 	
-#	"tabaco":           10,
-#	"tea":             10,
-	
-	"projectiles":   45,
-	"ammo":          45,
-	"machine_guns":  45,
-	"artillery":     45,
-	"plane":         45,
-	"rifles":        45,
-	"tanks":         900,
+	"ammo":          30,
+	"artillery":     80,
+	"plane":         130,
+	"rifles":        50,
+	"tanks":         400,
 }
 
 
 var demand: Dictionary = Players.output.duplicate()
 var supply: Dictionary = Players.output.duplicate()
-
-#const goods: Dictionary = {
-#	"rubber": {"coal": 1},
-#	"oil":  {"coal": 1},
-#	"steel":  {"coal": 0.3, "iron": 0.5},
-#	"glass": {"coal": 0.3},
-#	"textile":  {"cotton": 0.5},
-#
-#	"el_parts": {
-#		"steel":     0.5,
-#		"rubber":    0.1,
-#		"glass":     0.5,
-#	},
-#	"lumber":   {
-#		"wood": 1,
-#	},
-#	"el_appliances": {
-#		"el_parts": 0.5,
-#		"steel":    0.2
-#	},
-#	"cars":      {
-#		"rubber":    1,
-#		"steel":     2,
-#		"glass":   0.5,
-#	},
-#	"telegraphs":       {
-#		"steel":      0.1,
-#		"el_parts":   0.3,
-#	},
-#	"phone":        {
-#		"steel":        0.1,
-#		"el_parts":     0.5,
-#	},
-#	"radio":           {
-#		"steel":               0.1,
-#		"glass":               0.1,
-#		"el_parts":            0.5,
-#	},
-#	"furniture":          {
-#		"lumber":       0.5,
-#	},
-#	"alcohol":        {"grain":    0.5, "coal": 0.3},
-#	"clothes":          {"textile":    0.8,},
-#	"canned_food":        {
-#		"steel":    0.5,
-#		"grain":    0.3,
-#		"beasts":    0.3,
-#	},
-#	"gas":         {
-#		"oil":    0.3,
-#	},
-#
-#	"projectiles":         {
-#		"steel":   2,
-#		"saltpeter":  2
-#	},
-#	"ammo":         {
-#		"steel":   0.1,
-#		"saltpeter": 0.1,
-#		"coal":   0.3,
-#		"lumber":   0.1,
-#	},
-#	"machine_guns":         {
-#		"steel":   1,
-#	},
-#	"artillery":         {
-#		"steel":   2,
-#	},
-#	"plane":         {
-#		"lumber":   4,
-#	},
-#	"rifles":         {
-#		"steel":   1,
-#		"lumber":  2,
-#	},
-#	"tanks": {
-#		"cars": 1,
-#		"steel":      6,
-#		"machine_guns":   3,
-#		"artillery": 1,
-#	},
-#}
-
 
 const list_of_resourses: Array = [
 	"coal",
@@ -238,68 +142,6 @@ const list_of_resourses: Array = [
 	"tabaco",
 	"tea",
 	]
-
-
-#const bonuses_for_production_of_civilian_goods: Dictionary = {
-#	"furniture":        1,
-#	"alcohol":      1,
-#	"clothes":        2,
-#	"canned_food":      1,
-#	"gas":       1,
-#	"lumber": 1,
-#	"ammo":    3,
-#	"projectiles":       2,
-#}
-
-
-#const production: Dictionary = {
-#	"coal":     0,
-#	"iron":    0,
-#	"oil":     0,
-#	"rubber":    0,
-#	"cotton":    0,
-#	"grain":     0.5,
-#	"beasts":      0,
-#	"saltpeter":   0,
-#	"wood": 0,
-#	"tabaco":     0,
-#	"tea":       0,
-#
-#	"steel":           0,
-#	"textile":           0,
-#	"glass":          0,
-#	"el_parts": 0,
-#	"lumber":   0,
-#	"cars":      0,
-#	"phone":        0,
-#	"radio":           0,
-#
-#	"furniture":          0,
-#	"gas":         0,
-#	"alcohol":        0,
-#	"clothes":          0,
-#	"canned_food":        0,
-#
-#	"projectiles":             1,
-#	"ammo":          1,
-#	"machine_guns":            1,
-#	"artillery":          1,
-#	"plane":            1,
-#	"rifles": 1,
-#	"tanks":               1,
-#}
-
-
-#const list_of_easy_jobs: Array = [
-#	"textile",
-#	#"steel",
-#	"glass",
-#	"lumber",
-#
-#	"furniture",
-#	"alcohol",
-#	"clothes",
-#]
 
 
 func find_building_in_list(name_of_building):
