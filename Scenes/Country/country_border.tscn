@@ -1,9 +1,0 @@
-[gd_scene load_steps=3 format=2]
-
-[ext_resource path="res://Scenes/Country/country_border.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/Province/border.png" type="Texture" id=2]
-
-[node name="CountryBorder" type="Line2D"]
-texture = ExtResource( 2 )
-texture_mode = 1
-script = ExtResource( 1 )

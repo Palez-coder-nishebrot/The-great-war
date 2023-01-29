@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Scenes/Province/border_part.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/Province/border.png" type="Texture" id=2]
+[ext_resource path="res://Objects/Province/border_part.gd" type="Script" id=1]
+[ext_resource path="res://Objects/Province/border.png" type="Texture" id=2]
 
 [node name="BorderPart" type="Line2D"]
 default_color = Color( 0.4, 0.501961, 1, 1 )

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/border.png-a1c3cbf10fa6a4d228e1a54d6c8a7ca5.stex"
+path="res://.import/border.png-db31469412237852ee87b26684f962dc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Province/border.png"
-dest_files=[ "res://.import/border.png-a1c3cbf10fa6a4d228e1a54d6c8a7ca5.stex" ]
+source_file="res://Objects/Province/border.png"
+dest_files=[ "res://.import/border.png-db31469412237852ee87b26684f962dc.stex" ]
 
 [params]
 

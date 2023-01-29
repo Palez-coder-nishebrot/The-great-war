@@ -5,14 +5,14 @@ signal thread_cteate_polygons_done
 export(NodePath) var tile_container_np
 
 const CHECKER_GROW_SIZE = Vector2(25, 25)
-var CollideCollector = preload("res://Scenes/Navigation/collide_collector.gd")
+var CollideCollector = preload("res://Objects/Navigation/collide_collector.gd")
 
 var _tiles = []
 var _tiles_mu = Mutex.new()
 var _physics_space
 var _threads = []
 var _collisions_collection_node
-var _navigation_checker_area_script = preload("res://Scenes/Navigation/navigation_checker_area.gd")
+var _navigation_checker_area_script = preload("res://Objects/Navigation/navigation_checker_area.gd")
 var _close = false
 var _close_mu = Mutex.new()
 var _collectors = []

@@ -115,13 +115,14 @@
 [ext_resource path="res://Graphics/Sprites/Provinces/Баскакия/Трускавец.png" type="Texture" id=113]
 [ext_resource path="res://Graphics/Sprites/Provinces/Баскония/Ахалкалаки.png" type="Texture" id=114]
 [ext_resource path="res://Graphics/Sprites/Provinces/Баскония/Батуми.png" type="Texture" id=115]
-[ext_resource path="res://Scenes/Province/province.tscn" type="PackedScene" id=116]
-[ext_resource path="res://Scenes/Province/border.tscn" type="PackedScene" id=117]
-[ext_resource path="res://Scenes/Province/border_part.tscn" type="PackedScene" id=118]
-[ext_resource path="res://Scenes/Country/country.tscn" type="PackedScene" id=119]
-[ext_resource path="res://Scenes/Country/country_border.tscn" type="PackedScene" id=120]
-[ext_resource path="res://Scenes/Country/province_container.tscn" type="PackedScene" id=121]
-[ext_resource path="res://Scenes/MapNameLabel/map_name_label.tscn" type="PackedScene" id=122]
+[ext_resource path="res://Objects/Province/province.tscn" type="PackedScene" id=116]
+[ext_resource path="res://Objects/Province/border.tscn" type="PackedScene" id=117]
+[ext_resource path="res://Objects/Province/border_part.tscn" type="PackedScene" id=118]
+[ext_resource path="res://Objects/Country/country.tscn" type="PackedScene" id=119]
+[ext_resource path="res://Objects/Country/country_border.tscn" type="PackedScene" id=120]
+[ext_resource path="res://Objects/Country/province_container.tscn" type="PackedScene" id=121]
+[ext_resource path="res://Objects/MapNameLabel/map_name_label.tscn" type="PackedScene" id=122]
+
 
 [node name="TileMap" type="Node2D"]
 script = ExtResource( 1 )

@@ -38,8 +38,6 @@ func get_country_points():
 				arr.append(point+p.position+position+self_province.position)
 			
 			country_parts.append(arr)
-			
-	print(self_country.name, " ", self_province.name, " parts: ", country_parts.size())
 		
 	return country_parts
 
