@@ -1,15 +1,19 @@
-[gd_resource type="Resource" load_steps=4 format=2]
+[gd_resource type="Resource" load_steps=6 format=2]
 
 [ext_resource path="res://Resources/Factories/Factory.gd" type="Script" id=1]
 [ext_resource path="res://Resources/Factories/Raw.gd" type="Script" id=2]
+[ext_resource path="res://Resources/Good/lumber.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Good/wood.tres" type="Resource" id=4]
 
 [sub_resource type="Resource" id=1]
 script = ExtResource( 2 )
-good = "wood"
-quantity = 0.3
+good = ExtResource( 4 )
+quantity = 1.0
 
 [resource]
 script = ExtResource( 1 )
-name_of_factory = "Lumber_plant"
+name_of_factory = "lumber_plant"
 raw = [ SubResource( 1 ) ]
-good = "lumber"
+factory_equipment = [  ]
+good = ExtResource( 3 )
+available_from_start = true

@@ -43,7 +43,6 @@ func set_client(client, file):
 	
 	#client.technologies.set_technologies()
 	client.military_bonuses.set_object_of_units()
-	client.economic_bonuses.set_list_of_buildings()
 	#client.parties_manager.set_parties(client)
 	client.parties_manager = PartiesManager.new(client, file.ideology)
 

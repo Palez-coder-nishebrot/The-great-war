@@ -18,13 +18,11 @@ var list_of_speed_of_game: Dictionary = {
 
 var speed_of_game: float = 1.0
 var pause:         bool  = false
-var list_of_provinces:   Array = []
-#var list_of_soc_classes: Array = []
+var list_of_regions:   Array = []
 
 var purchase_manager: Object = load("res://Objects/Global/Managers/ManagerPurchase.gd").new()
 var factory_manager: Object = load("res://Objects/Global/Managers/ManagerFactory.gd").new()
-var craftsmen_manager: Object = load("res://Objects/Global/Managers/MaganerCraftsmen.gd").new()
-var population_manager: Object = load("res://Objects/Global/Managers/ManagerPopulation.gd").new()
+
 
 func _ready():
 	TranslationServer.set_locale("en")
@@ -36,9 +34,6 @@ func _ready():
 	else:
 		var manager = CreateClients.new()
 		manager.create_players(self)
-	craftsmen_manager.game = self
-	craftsmen_manager.set_purchase()
-	
 	new_day()
 
 
@@ -77,15 +72,17 @@ func update_data():
 func circle_of_game():
 	ManagerDay.update_accounting() # Обнулить учет расходов и доходов
 	
-	ManagerDay.update_clients() #Финансирование школ, прироста населения обновление реваншизма, военной усталости
+#	ManagerDay.update_clients() #Финансирование школ, прироста населения обновление реваншизма, военной усталости
 	
-	ManagerDay.population_pays_taxes()
+#	ManagerDay.population_pays_taxes()
 
 	ManagerDay.update_economy()
 	
 	ManagerDay.update_information_in_GUI()
 	
-	GlobalMarket.update_prices(time_of_game.day)
+	ManagerDay.update_prices()
+	ManagerDay.clear_markets()
+	ManagerDay.emit_signal("clear_income_in_pop_units")
 	
 	clear_GDP()
 

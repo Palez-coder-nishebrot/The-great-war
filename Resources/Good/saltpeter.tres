@@ -6,5 +6,8 @@
 [resource]
 script = ExtResource( 1 )
 name = "Селитра"
-base_price = 5
+base_price = 15
+min_price = 5
+max_price = 25
 icon = ExtResource( 2 )
+based_effiency_production = 1.0

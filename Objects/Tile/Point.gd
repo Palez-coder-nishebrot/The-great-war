@@ -1,24 +1,26 @@
 extends TextureButton
 
 class_name Region
+
 const max_of_buildings: int = 8
 
 var list_of_neighbors_tiles:    Array      = []
 var list_of_buildings:          Array      = []
 var list_of_units:              Array      = []
 var list_of_households:         Array      = []
-var production_of_goods_in_province: Array  = []
+var goods_production_in_province: Array  = []
 
 export(String) var name_of_tile = ""
 var capital:             bool   = false
 var player:              Object
 var training_units:      Object
 
-var resources:              Dictionary = {}
+var resources:              Array  = []
 var railways:               Object = Railways.new()
 var infrastructure:         Object = Infrastructure.new()
 var population_manager:     Object
 var landscape:              Object = Landscape.new()
+var population:             Object = Population.new()
 
 onready var name_of_region_label: Object = $Label
 var sprite_of_resource: Sprite
@@ -46,6 +48,7 @@ func add_debug_collider(polygon, global_pos):
 	collision.polygon = polygon
 	add_child(collision)
 
+
 func start():
 	set_mask()
 	player.list_of_tiles.append(self)
@@ -65,21 +68,7 @@ func set_mask():
 	
 
 func _pressed():
-	if Players.player.window_build_factory.choose_position_for_building == true:
-		Players.player.window_build_factory.build_factory(self)
-		#print(population_manager.)
-	elif Players.player.information.showing_map == 0 or Players.player.information.showing_map == 2:
-		Players.player.window_province.update_information(self)
-	else:
-		choose_units()
-
-
-func mouse_entered():
-	if player == Players.player:
-		var window = Players.player.window_build_factory
-		window.region = self
-		if window.factory != "":
-			window.check_chars()
+	Players.player.window_province.update_information(self)
 
 
 func new_owner(new_owner):
@@ -117,31 +106,6 @@ func build_building(name_of_building, cost):
 	factory.start_build_factory()
 	
 	list_of_buildings.append(factory)
-	
-
-func build_military_factory(name_of_building, cost):
-	player.budget -= cost
-	
-	var factory = load("res://Objects/Building/Military_factory.gd").new()
-	factory.good = "Боеприпасы"
-	factory.name_of_factory = name_of_building
-	factory.province = self
-	factory.in_construction = true
-	factory.start_build_factory()
-	factory.province.workplaces += 1
-	
-	list_of_buildings.append(factory)
-
-
-func division_entered_in_province(division):
-	list_of_units.append(division)
-	update_text_on_label()
-	show_units()
-
-func division_exited_in_province(division):
-	list_of_units.erase(division)
-	update_text_on_label()
-	show_units()
 
 
 func update_text_on_label():
@@ -183,29 +147,24 @@ func show_units():
 		name_of_region_label.text = "Дивизии(" + str(list_of_units.size()) + ")"
 
 
-func get_bonus_of_production():
-	var production_of_factory = (railways.level * 0.1) + 1.0
-	var production_of_mines   = (railways.level * 0.05) + 1.0
-	var production_of_farms   = (railways.level * 0.05) + 1.0
+func get_production_bonuses():
+	var factory_production = (railways.level * 0.1)
+	var DP_production      = (railways.level * 0.05)
 	
-	return {
-		production_of_factory = production_of_factory,
-		production_of_mines   = production_of_mines,
-		production_of_farms   = production_of_farms,
-	}
+	return [
+		factory_production,
+		DP_production,
+	]
 
 
 func get_goods_in_province():
-	production_of_goods_in_province.clear()
+	goods_production_in_province.clear()
 	for i in list_of_buildings:
-		if i.in_construction == false:
-			production_of_goods_in_province.append(i.good)
+		if i.in_construction == false and i.closed == false:
+			goods_production_in_province.append(i.good)
 	
-	var res = resources.duplicate().keys()
-		
-	for i in res:
-		if not production_of_goods_in_province.has(i):
-			production_of_goods_in_province.append(i)
+	var res = resources.duplicate()
+	goods_production_in_province.append_array(res)
 
 
 func get_factories_in_province():
@@ -223,27 +182,28 @@ func get_open_factories_in_province():
 
 func allocate_workers_to_factories():
 	var quantity_of_open_factories = get_open_factories_in_province().size()
+	var workers_units = population.population_types[1]
+	var workers = workers_units.quantity
 	
-	if quantity_of_open_factories != 0:
-		population_manager.quantity_of_unemployed = 0
+	if quantity_of_open_factories != 0 and population.population_types[1].quantity > 0:
+		workers_units.unemployed_quantity = 0
 		var reserve_of_workers = 0.0 
-		var workers = population_manager.quantity_of_factory_workers
 		
-		var r =  stepify(population_manager.quantity_of_factory_workers / quantity_of_open_factories, 0.01)
+		var r =  stepify(workers / quantity_of_open_factories, 0.01)
 		var reserve = 0
 		var list = check_factories()
 		for factory in list:
-			factory.quantity_of_workers = r + reserve
+			factory.workers_quantity = r + reserve
 			
-			if factory.quantity_of_workers > factory.max_employed_number:
-				reserve += factory.quantity_of_workers - factory.max_employed_number
-				factory.quantity_of_workers = factory.max_employed_number
+			if factory.workers_quantity > factory.max_employed_number:
+				reserve += factory.workers_quantity - factory.max_employed_number
+				factory.workers_quantity = factory.max_employed_number
 			
-			workers -= factory.quantity_of_workers
-		population_manager.quantity_of_unemployed = workers + reserve_of_workers
+			workers -= factory.workers_quantity
+		workers_units.unemployed_quantity = workers + reserve_of_workers
 	
 	else:
-		population_manager.quantity_of_unemployed = population_manager.quantity_of_factory_workers
+		workers_units.unemployed_quantity = workers
 
 
 func check_factories():
@@ -252,21 +212,3 @@ func check_factories():
 		if i.closed == false:
 			list.append(i)
 	return list
-
-
-#func set_collision_from_sprite(collisions):
-#	breakpoint
-#	var new_polygon
-#	if collisions.list_of_pol_of_provinces.has(name_of_tile):
-#		new_polygon = collisions.list_of_pol_of_provinces[name_of_tile]
-#
-#	else:
-#		new_polygon = Functions.convert_sprite_to_collision(texture)
-#		var file = ResourceLoader.load("res://Objects/Provinces/CollisionPolygons_of_provinces.tres")
-#		file.list_of_pol_of_provinces[name_of_tile] = new_polygon
-#		ResourceSaver.save("res://Objects/Provinces/CollisionPolygons_of_provinces.tres", file)
-#
-#	polygon.set_polygon(new_polygon)
-#
-#	polygon.position.x -= get_rect().size.x / 2
-#	polygon.position.y -= get_rect().size.y / 2

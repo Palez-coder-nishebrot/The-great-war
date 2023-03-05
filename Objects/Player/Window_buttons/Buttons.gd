@@ -8,18 +8,6 @@ const form_of_goverment_sprite: Dictionary = {
 	"conservators": "res://Graphics/Sprites/GUI/Icons of windows/04.png",
 }
 
-#onready var list_of_buttons: Dictionary = {
-#	"Строительство":    "window_build_factory",
-#	"Производство":     "window_production",
-#	"Рынки":            "window_markets",
-#	"Бюджет":           "window_taxes",
-#	"Реформы":          "window_reform",
-#	"Предпарламент":    "window_parties",
-#	"Военные заказы":   "window_parties",
-#	"Население":        "window_population",
-#	"Технологии":       "window_research",
-#	"Дипломатия":       "window_diplomacy",
-#}
 
 var windows: Array = [
 	"window_build_factory",
@@ -34,17 +22,6 @@ var windows: Array = [
 	"window_diplomacy",
 ]
 
-#const labels: Array = [
-#	"construction_label",
-#	"budget_label",
-#	"research_label",
-#	"ideology_label",
-#	"population_label",
-#	"stability_label",
-#	"unemployed_label",
-#	"pluralism_label",
-#	"radio_net_label",
-#]
 onready var education_label: Label = $VBoxContainer/EducationLabel/Label
 onready var construction_label: Label = $VBoxContainer/ConstructionLabel/Label
 onready var factory_label: Label = $VBoxContainer/FactoriesLabel/Label
@@ -64,6 +41,9 @@ func on_button_pressed(window):
 	
 	var player = Players.player
 	var b_window = player.get(window)
+	
+	#if window == "window_production":
+		
 	
 	for i in windows:
 		var v_window = player.get(i)

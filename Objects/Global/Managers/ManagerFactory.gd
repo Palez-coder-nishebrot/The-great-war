@@ -10,27 +10,21 @@ func make_goods():
 		if factory.closed == false:
 		
 			var good = factory.good
-			var quanity = factory.get_quanity_of_good()
-			factory.output = quanity
-			
-			if GlobalMarket.quanity_of_military_goods.has(good):
-				make_military_good(factory, good, quanity)
-			else:
-				make_good(factory, good, quanity)
-
-
-func make_military_good(factory, good, quanity):
-	factory.province.player.warhouse_of_goods[good] += quanity
-	Functions.change_GDP(good, quanity, factory.province.player)
+			var quanity = factory.get_good_quantity()
+			factory.good_production = quanity
+	
+			make_good(factory, good, quanity)
 
 
 func make_good(factory, good, quanity):
-	factory.income = 0
-	factory.province.player.local_market[good] += quanity
+	var player = factory.province.player
+	var price = player.prices_goods[good] * quanity
 	
-	var price = GlobalMarket.prices_of_goods[good] * quanity
+	player.local_market[good] += quanity
+	player.demand_supply_goods[good][1] += quanity
+	
 	factory.money += price
-	factory.income += price
+	factory.income = price
 	Functions.change_GDP(good, quanity, factory.province.player)
 
 
@@ -94,11 +88,6 @@ func check_bankrupt(factory, province):
 
 
 func set_accounting_of_subsidization(factory, player, subs):
-#	if factory.tipe == "military_factory":
-#		player.accounting["Военное_производство"] += factory.money
-#		player.budget += factory.money
-#		factory.money = 0
-#	else:
 	player.budget -= subs
 	player.accounting["Субсидии"] += subs
 	factory.money = 170
@@ -113,9 +102,13 @@ func start_expansion_of_factory(factory, province):
 	factory.expansion = expansion_object
 
 
-func pay_salary(list_of_workers, _province, factory):
-	var salary = (min_salary + factory.province.player.min_salary) * list_of_workers
-	factory.province.population_manager.money += salary
-	factory.province.population_manager.income += salary
+func pay_salary(workers_quantity, province, factory):
+	var client = province.player
+	var pop_unit = province.population.population_types[1]
+	
+	var salary = (min_salary + factory.province.player.min_salary) * workers_quantity
+	pop_unit.money += salary
+	client.population_manager.income += salary
 	factory.money -= salary
+	Functions.pay_income_taxes(client, pop_unit, client.tax_on_poor_class, salary)
 	return salary

@@ -4,5 +4,8 @@ extends Resource
 export(String) var name_of_factory = ""
 
 export(Array) var raw = []
+export(Array) var factory_equipment = []
 
-export(String) var good = ""
+export(Resource) var good
+
+export(bool) var available_from_start = true

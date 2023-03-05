@@ -1,22 +1,15 @@
-[gd_resource type="Resource" load_steps=5 format=2]
+[gd_resource type="Resource" load_steps=4 format=2]
 
 [ext_resource path="res://Resources/Technologies/Technology.gd" type="Script" id=1]
 [ext_resource path="res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectProductionFactories.gd" type="Script" id=2]
 
-[sub_resource type="Resource" id=2]
-script = ExtResource( 2 )
-name_of_effect = "Производительность"
-power = 10
-target = "factories"
-
 [sub_resource type="Resource" id=1]
 script = ExtResource( 2 )
-name_of_effect = "Производительность"
-power = 10
-target = "military_factories"
+name_of_effect = "Производительность заводов"
+power = 1.05
 
 [resource]
 script = ExtResource( 1 )
 cost = 1200
-name_of_technology = "Сборочные конвейеры"
-list_of_effects = [ SubResource( 2 ), SubResource( 1 ) ]
+name_of_technology = "Управление персоналом"
+list_of_effects = [ SubResource( 1 ) ]

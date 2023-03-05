@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://Resources/Good/cotton.tres" type="Resource" id=1]
+[ext_resource path="res://Resources/Factories/Factory.gd" type="Script" id=2]
+[ext_resource path="res://Resources/Factories/Raw.gd" type="Script" id=3]
+[ext_resource path="res://Resources/Good/saltpeter.tres" type="Resource" id=4]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 3 )
+good = ExtResource( 1 )
+quantity = 1.0
+
+[resource]
+script = ExtResource( 2 )
+name_of_factory = "saltpeter_factory"
+raw = [ SubResource( 1 ) ]
+good = ExtResource( 4 )
+available = false

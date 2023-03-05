@@ -4,24 +4,29 @@ KEY_PUSH,Нажми!
 set_default_region,Политическая карта
 show_units,Войска
 show_resources,Ресурсы
-Steel_plant,Сталелитейный завод
-Textile_factory,Текстильная фабрика
-Glass_factory,Стеклозавод
-Electrical_appliance_factory,Завод электроприборов
-Electrical_parts_factory,Завод электрозапчастей
-Lumber_plant,Завод пиломатериалов
-Cars_factory,Автозавод
-Telegraph_factory,Завод телеграфов
-Phone_factory,Телефонный завод
-Radio_factory,Радиозавод
-Furniture_factory,Мебельная фабрика
-Distillery,Завод спиртного
-Clothes_factory,Фабрика одежды
-Canning_factory,Консервный завод
-Gas_factory,Топливный завод
-Airplane_factory,Авиазавод
-Rubber_factory,Завод синтетической резины
-Oil_factory,Завод синтетической нефти
+steel_plant,Сталелитейный завод
+textile_factory,Текстильная фабрика
+glass_factory,Стеклозавод
+ammo_factory,Завод боеприпасов
+charcoal_factory,Фабрика древесного угля
+mech_parts_factory,Завод автозапчастей
+rifles_factory,Завод стрелкового оружия
+saltpeter_factory,Завод искусственной серы
+tank_factory,Танковый завод
+electrical_parts_factory,Завод электрозапчастей
+lumber_plant,Завод пиломатериалов
+cars_factory,Автозавод
+airplane_factory,Авиазавод
+phone_factory,Телефонный завод
+radio_factory,Радиозавод
+furniture_factory,Мебельная фабрика
+distillery,Завод спиртного
+clothes_factory,Фабрика одежды
+canning_factory,Консервный завод
+fuel_factory,Топливный завод
+senthetic_textile_factory,Завод синтетической ткани
+senthetic_rubber_factory,Завод синтетической резины
+senthetic_oil_factory,Завод синтетической нефти
 Adamanty,Адамантия
 Amany,Амани
 Baskaky,Баскакия

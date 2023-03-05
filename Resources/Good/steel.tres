@@ -7,4 +7,7 @@
 script = ExtResource( 1 )
 name = "Сталь"
 base_price = 30
+min_price = 20
+max_price = 40
 icon = ExtResource( 2 )
+based_effiency_production = 0.4

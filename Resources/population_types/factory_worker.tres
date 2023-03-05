@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=11 format=2]
+
+[ext_resource path="res://Resources/population_types/population_type.gd" type="Script" id=1]
+[ext_resource path="res://Resources/population_types/population_type_needs/need_clothes.tres" type="Resource" id=2]
+[ext_resource path="res://Resources/population_types/population_type_needs/need_grain.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/population_types/population_type_needs/need_radio.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/population_types/population_type_needs/need_phone.tres" type="Resource" id=5]
+[ext_resource path="res://Resources/population_types/population_type_needs/need_beasts.tres" type="Resource" id=6]
+[ext_resource path="res://Resources/population_types/population_type_needs/need_alcohol.tres" type="Resource" id=7]
+[ext_resource path="res://Resources/population_types/population_type_needs/need_furniture.tres" type="Resource" id=8]
+[ext_resource path="res://Resources/population_types/population_type_needs/need_cars.tres" type="Resource" id=9]
+[ext_resource path="res://Resources/population_types/population_type_needs/need_gas.tres" type="Resource" id=10]
+
+[resource]
+script = ExtResource( 1 )
+display_name = "Фабр. рабочий"
+needs = [ ExtResource( 3 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 2 ), ExtResource( 8 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ) ]

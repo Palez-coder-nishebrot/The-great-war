@@ -1,29 +1,15 @@
-[gd_resource type="Resource" load_steps=7 format=2]
+[gd_resource type="Resource" load_steps=4 format=2]
 
 [ext_resource path="res://Resources/Technologies/Technology.gd" type="Script" id=1]
-[ext_resource path="res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectProductionGoods.gd" type="Script" id=2]
-[ext_resource path="res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectProductionFactories.gd" type="Script" id=3]
-
-[sub_resource type="Resource" id=3]
-script = ExtResource( 3 )
-name_of_effect = "Производительность"
-power = 5
-target = "factories"
+[ext_resource path="res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectProductionFactories.gd" type="Script" id=2]
 
 [sub_resource type="Resource" id=1]
 script = ExtResource( 2 )
-name_of_effect = "Выпуск продукции"
-power = 5
-target = "electronics"
-
-[sub_resource type="Resource" id=2]
-script = ExtResource( 2 )
-name_of_effect = "Выпуск продукции"
-power = 5
-target = "glass"
+name_of_effect = "Производительность заводов"
+power = 1.05
 
 [resource]
 script = ExtResource( 1 )
 cost = 1000
-name_of_technology = "Научный менеджмент"
-list_of_effects = [ SubResource( 3 ), SubResource( 1 ), SubResource( 2 ) ]
+name_of_technology = "Частичная автоматизация"
+list_of_effects = [ SubResource( 1 ) ]

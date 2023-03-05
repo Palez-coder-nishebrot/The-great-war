@@ -1,0 +1,25 @@
+[gd_resource type="Resource" load_steps=8 format=2]
+
+[ext_resource path="res://Resources/Good/iron.tres" type="Resource" id=1]
+[ext_resource path="res://Resources/Factories/Factory.gd" type="Script" id=2]
+[ext_resource path="res://Resources/Factories/Raw.gd" type="Script" id=3]
+[ext_resource path="res://Resources/Good/ammo.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Good/saltpeter.tres" type="Resource" id=5]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 3 )
+good = ExtResource( 5 )
+quantity = 0.5
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 3 )
+good = ExtResource( 1 )
+quantity = 0.5
+
+[resource]
+script = ExtResource( 2 )
+name_of_factory = "ammo_factory"
+raw = [ SubResource( 1 ), SubResource( 2 ) ]
+factory_equipment = [  ]
+good = ExtResource( 4 )
+available_from_start = true

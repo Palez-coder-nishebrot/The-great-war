@@ -1,7 +1,11 @@
 extends Button
 
 onready var parent = get_parent().get_parent()
-export(String) var good = ""
+export(Resource) var good
+
+
+func _ready():
+	icon = good.icon
 
 
 func _input(_event):

@@ -1,6 +1,6 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Graphics/Sprites/Goods/Airplane.png" type="Texture" id=1]
+[ext_resource path="res://Graphics/Sprites/NewSpritesOfGoods/Gas.png" type="Texture" id=1]
 [ext_resource path="res://Objects/Player/Window_province/Window_province.gd" type="Script" id=2]
 [ext_resource path="res://Graphics/Fonts/pixel_2.ttf" type="DynamicFontData" id=3]
 
@@ -13,10 +13,6 @@ size = 32
 use_mipmaps = true
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=4]
-size = 32
-font_data = ExtResource( 3 )
-
 [node name="Province" type="Panel"]
 margin_top = 287.0
 margin_right = 312.0
@@ -24,7 +20,7 @@ margin_bottom = 677.0
 script = ExtResource( 2 )
 
 [node name="Name" type="Label" parent="."]
-margin_right = 340.0
+margin_right = 446.0
 margin_bottom = 32.0
 rect_scale = Vector2( 0.7, 0.7 )
 custom_fonts/font = SubResource( 5 )
@@ -34,7 +30,7 @@ valign = 1
 
 [node name="Country" type="Label" parent="."]
 margin_top = 22.0
-margin_right = 366.0
+margin_right = 480.0
 margin_bottom = 54.0
 rect_scale = Vector2( 0.65, 0.65 )
 custom_fonts/font = SubResource( 5 )
@@ -81,41 +77,35 @@ margin_top = 128.0
 margin_right = 520.0
 margin_bottom = 166.0
 custom_fonts/font = SubResource( 3 )
-text = "Расширить ЖД"
+text = "Расширить Железные дороги"
 
-[node name="Button3" type="Button" parent="VBoxContainer"]
+[node name="Button6" type="Button" parent="VBoxContainer"]
 margin_top = 166.0
 margin_right = 520.0
 margin_bottom = 204.0
 custom_fonts/font = SubResource( 3 )
-text = "Расширить Инфраструктуру"
+text = "Расширить Военную базу"
 
-[node name="Button4" type="Button" parent="VBoxContainer"]
+[node name="Button7" type="Button" parent="VBoxContainer"]
 margin_top = 204.0
 margin_right = 520.0
 margin_bottom = 242.0
 custom_fonts/font = SubResource( 3 )
-text = "Обучить войска"
+text = "Расширить Укрепления"
 
-[node name="Button5" type="Button" parent="VBoxContainer"]
+[node name="Button3" type="Button" parent="VBoxContainer"]
 margin_top = 242.0
 margin_right = 520.0
 margin_bottom = 280.0
 custom_fonts/font = SubResource( 3 )
+text = "Построить фабрику"
+
+[node name="Button5" type="Button" parent="VBoxContainer"]
+margin_top = 280.0
+margin_right = 520.0
+margin_bottom = 318.0
+custom_fonts/font = SubResource( 3 )
 text = "Закрыть"
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="."]
-margin_left = 238.0
-margin_right = 362.0
-margin_bottom = 72.0
-rect_scale = Vector2( 0.6, 0.6 )
-custom_constants/separation = 0
-
-[node name="Button" type="Button" parent="VBoxContainer2"]
-margin_right = 124.0
-margin_bottom = 38.0
-custom_fonts/font = SubResource( 4 )
-text = "Склады"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 margin_top = 43.0
@@ -168,5 +158,5 @@ size_flags_vertical = 3
 icon = ExtResource( 1 )
 expand_icon = true
 
-[connection signal="pressed" from="VBoxContainer/Button4" to="." method="train_army"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="build_factory"]
 [connection signal="pressed" from="VBoxContainer/Button5" to="." method="exit"]

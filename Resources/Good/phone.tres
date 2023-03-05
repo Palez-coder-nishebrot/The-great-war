@@ -6,5 +6,8 @@
 [resource]
 script = ExtResource( 1 )
 name = "Телефоны"
-base_price = 50
+base_price = 40
+min_price = 20
+max_price = 60
 icon = ExtResource( 2 )
+based_effiency_production = 0.3

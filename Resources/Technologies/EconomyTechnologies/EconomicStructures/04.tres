@@ -17,5 +17,5 @@ power = 10
 [resource]
 script = ExtResource( 1 )
 cost = 1800
-name_of_technology = "Золотовалютый стандарт"
+name_of_technology = "Массовая реклама"
 list_of_effects = [ SubResource( 1 ), SubResource( 2 ) ]

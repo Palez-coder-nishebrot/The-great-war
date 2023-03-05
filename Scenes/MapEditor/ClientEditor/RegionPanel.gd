@@ -51,7 +51,7 @@ func set_resources():
 		var button = get_parent().get_node("ResourceButton").duplicate()
 		button.good = i
 		button.parent = self
-		button.icon = load(Players.sprites_of_goods[i])
+		button.icon = i.icon
 		container_of_resources.add_child(button)
 		
 

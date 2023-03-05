@@ -1,10 +1,16 @@
 extends Panel
 
 signal update(market)
-#signal update_info_about_output(market_)
-#signal update_info_about_warhouse(warhouse)
 
-var good: String = "coal"
+onready var good_label          = $VBoxContainer2/Label
+onready var demand_label        = $VBoxContainer2/Label2
+onready var supply_label        = $VBoxContainer2/Label3
+onready var prices_label        = $VBoxContainer2/Label4
+onready var warhouse_label      = $VBoxContainer2/Label5
+onready var export_import_label = $VBoxContainer2/Label6
+
+
+var good: Resource = load("res://Resources/Good/coal.tres")
 
 func update_information():
 	emit_signal("update")
@@ -14,36 +20,29 @@ func update_information():
 	update_information_about_good(good)
 
 
-func update_information_about_good(_good):
-	good = _good
-	var import_ = Players.player.import_of_goods
-	var export_ = Players.player.export_of_goods
-	var demand = GlobalMarket.demand
-	var supply = GlobalMarket.supply
-	var price = GlobalMarket.prices_of_goods_from_other_countries
-#	var warhouse_of_goods = Players.player.warhouse_of_goods
+func update_information_about_good(new_good):
+	good = new_good
 	
-	$VBoxContainer2/Label.text  = ""
-	$VBoxContainer2/Label2.text = ""
+	var player              = Players.player
+	var demand_supply_good  = player.demand_supply_goods[good]
+	var price               = player.prices_goods[good]
+	var goods_warhouse      = player.warhouse_goods[good]
+	var import_good         = player.import_goods[good]
+	var export_good         = player.export_goods[good]
 	
-	$VBoxContainer2/Label.text = good
-	if import_[good] == 0:
-		$VBoxContainer2/Label2.text += "Экспорт: " + str(export_[good]) 
+	good_label.text = good.name
+	
+	if import_good == 0:
+		export_import_label.text = "Экспорт: " + str(export_good) 
 	else:
-		$VBoxContainer2/Label2.text += "Импорт: " + str(import_[good])
+		export_import_label.text = "Импорт: " + str(import_good)
 	
-	$VBoxContainer2/Label4.text = "Спрос:"       + str(demand[good])
-	$VBoxContainer2/Label5.text = "Предложение:" + str(supply[good])
+	warhouse_label.text = "Гос. запасы: " + str(goods_warhouse)
 	
-	if price.has(good):
-		$VBoxContainer2/Label6.text = "Цена на глобальном рынке:" + str(price[good])
-	else:
-		$VBoxContainer2/Label6.text = ""
-
-
-#func _ready():
-#	spawn_buttons(GlobalMarket.prices_of_goods, $ScrollContainer/VBoxContainer)
-#	spawn_buttons(Players.player.warhouse_of_goods, $ScrollContainer2/VBoxContainer)
+	demand_label.text = "Спрос:"       + str(demand_supply_good[0])
+	supply_label.text = "Предложение:" + str(demand_supply_good[1])
+	
+	prices_label.text = "Цена отечественном рынке:" + str(price)
 
 
 func spawn_buttons(market, container):

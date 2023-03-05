@@ -7,16 +7,6 @@ onready var button_battalion:             Button = $Button_example2
 onready var label_divisions_in_training:  Label  = $Button_example3
 
 
-func _ready():
-	for i in Players.list_of_units:
-		var button = button_tipes_of_battalions.duplicate()
-		
-		button.text = i
-		button.visible = true
-		
-		$VBoxContainer.add_child(button)
-
-
 func update_information(province_):
 	province = province_
 	visible = true
@@ -51,30 +41,10 @@ func clear_container(container):
 		i.queue_free()
 
 
-func show_information_about_unit(unit):
+func show_information_about_unit():
 	$Button2.disabled = false
 	
 	$Label.text = ""
-	
-	for i in Units.chars_of_units[unit]:
-		$Label.text = $Label.text + i + ": " + str(Units.chars_of_units[unit][i])
-		$Label.text = $Label.text + "\n"
-		
-	if $VBoxContainer2.get_children().size() != 8:
-		var button = button_battalion.duplicate()
-		button.text = unit
-		button.visible = true
-		$VBoxContainer2.add_child(button)
-
-
-func start_training():
-	var list_of_battalions = []
-	
-	for i in $VBoxContainer2.get_children():
-		list_of_battalions.append(i.text)
-
-	Units.create_division(province, list_of_battalions, Players.player)
-	visible = false
 	
 	
 func exit():

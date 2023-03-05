@@ -1,23 +1,38 @@
 extends Panel
 
-onready var player = get_parent().get_parent()
+onready var player            = get_parent().get_parent()
+onready var buttons_container = $ScrollContainer/VBoxContainer
+
+onready var name_region_label      = $VBoxContainer/Label5
+onready var factory_name_label     = $VBoxContainer/Label
+onready var construction_raw_label = $VBoxContainer/Label2
+onready var production_raw_label   = $VBoxContainer/Label3
+onready var factory_profit_label   = $VBoxContainer/Label4
 
 #var province: Object
-var factory:  String
+var factory:  Node
 var cost: int
-var choose_position_for_building: bool = false
 var region: Object
 
 func _visible():
-	choose_position_for_building = false
-	set_normal_color_of_province()
+	name_region_label.text = region.name_of_tile
 	clear()
+	set_factory_buttons()
+
+
+func set_factory_buttons():
 	for i in player.economic_bonuses.list_of_buildings:
 		var button = load("res://Objects/Player/Window_build_factory/Button_factory.tscn").instance()
 		button.text = i.name_of_factory
+		button.factory = i
 		button.parent = self
-		#button.cost = Players.buildings_on_start[i]
-		$ScrollContainer/VBoxContainer.add_child(button)
+		button.icon = i.good.icon
+		buttons_container.add_child(button)
+
+
+func clear():
+	for i in buttons_container.get_children():
+		i.queue_free()
 
 
 func check_building_limit(province):
@@ -27,25 +42,15 @@ func check_building_limit(province):
 		return true
 
 
-func check_factory(name_of_factory):
-	factory = name_of_factory
-	#var factory_obj = player.economic_bonuses.find_factory(factory)
-	
+func show_factory_info(new_factory):
+	factory = new_factory
 	check_chars()
-	
-	choose_position_for_building = true
-	set_color_of_province()
 	
 
 func check_chars():
-#	var factory_obj = player.economic_bonuses.find_factory(factory)
-	
-	check_purchase_for_construction($VBoxContainer/Label2,  Players.player.economic_bonuses.cost_of_factory,
-	"Сырье для строительства")
-	check_purchase_for_production(factory)
-	
-	$VBoxContainer/Label.text = factory
-	$VBoxContainer/Label4.text = "Прибыль: " + str(Players.player.economic_bonuses.get_profit_of_factory(factory))
+	factory_name_label.text = factory.name_of_factory
+	factory_profit_label.text = "Прибыль: " #+ str(Players.player.economic_bonuses.get_profit_of_factory(factory))
+	production_raw_label.text = check_purchase_for_production()
 
 
 func check_purchase_for_construction(label, resources, first_text):
@@ -61,12 +66,12 @@ func check_purchase_for_construction(label, resources, first_text):
 			label.text += "\n"
 
 
-func check_purchase_for_production(name_of_factory):
-	if not Players.not_factories.has(name_of_factory):
-		check_purchase_for_construction($VBoxContainer/Label3, player.economic_bonuses.find_factory(name_of_factory).purchase, 
-			"Сырье для производства")
-	else:
-		$VBoxContainer/Label3.text = "Сырье для производства" + "\n" + "Исключение"
+func check_purchase_for_production():
+	var text = ""
+	
+	for raw in factory.raw:
+		text += tr(raw.name) + ": " + str(factory.raw[raw]) + "\n"
+	return text
 
 
 func check_cost_of_factory():
@@ -81,36 +86,12 @@ func check_factory_in_province(province):
 	return not list.has(factory)
 
 
-func clear():
-	for i in $ScrollContainer/VBoxContainer.get_children():
-		i.queue_free()
-
-
 func build_factory(province):
 	var profit = player.economic_bonuses.get_profit_of_factory(factory)
 	if check_building_limit(province) and check_cost_of_factory() and check_factory_in_province(province) and profit > 0:
-		if factory != "Морской_завод":
-			if factory != "Военный_завод":
-				province.build_building(factory, cost)
-			else:
-				province.build_military_factory(factory, cost)
+		province.build_building(factory, cost)
 		
-		check_factory(factory)
-	
-	
-func set_color_of_province():
-	for i in player.list_of_tiles:
-		if not check_factory_in_province(i):
-			i.modulate = Color(0, 0.45098, 0.74902)
-		elif check_building_limit(i) and check_cost_of_factory():
-			i.modulate = Color(0.854902, 0.219608, 0.219608)
-		else:
-			i.modulate = Color.gray
-
-
-func set_normal_color_of_province():
-	for i in player.list_of_tiles:
-		i.modulate = i.player.national_color
+		show_factory_info(factory)
 
 
 func exit():

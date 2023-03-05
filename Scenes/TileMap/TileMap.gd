@@ -25,8 +25,6 @@ const factories: Dictionary = {
 
 onready var game: Node2D = get_parent()
 
-
-
 #var list_of_tiles: Array = []
 var list_of_tiles: Dictionary    = {}
 

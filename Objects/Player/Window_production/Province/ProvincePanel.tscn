@@ -26,4 +26,4 @@ custom_fonts/font = SubResource( 1 )
 [node name="Province_panel" parent="." instance=ExtResource( 3 )]
 visible = false
 margin_top = 32.0
-margin_bottom = 102.0
+margin_bottom = 98.0

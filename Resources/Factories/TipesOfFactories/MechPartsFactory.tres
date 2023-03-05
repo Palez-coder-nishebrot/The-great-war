@@ -1,20 +1,24 @@
-[gd_resource type="Resource" load_steps=5 format=2]
+[gd_resource type="Resource" load_steps=8 format=2]
 
 [ext_resource path="res://Resources/Factories/Factory.gd" type="Script" id=1]
 [ext_resource path="res://Resources/Factories/Raw.gd" type="Script" id=2]
+[ext_resource path="res://Resources/Good/coal.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Good/steel.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Good/mech_parts.tres" type="Resource" id=5]
 
 [sub_resource type="Resource" id=1]
 script = ExtResource( 2 )
-good = "coal"
+good = ExtResource( 4 )
 quantity = 0.1
 
 [sub_resource type="Resource" id=2]
 script = ExtResource( 2 )
-good = "steel"
+good = ExtResource( 3 )
 quantity = 0.1
 
 [resource]
 script = ExtResource( 1 )
-name_of_factory = "Mech_parts_factory"
+name_of_factory = "mech_parts_factory"
 raw = [ SubResource( 1 ), SubResource( 2 ) ]
-good = "mech_parts"
+good = ExtResource( 5 )
+available = true

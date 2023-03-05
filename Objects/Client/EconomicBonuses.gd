@@ -7,114 +7,109 @@ var attraction_migrants: int = 0
 var max_railways:        int = 1
 var max_infrastructure:  int = 1
 
-var growth_of_inflation:     float = 1.0
-var education_efficiency:    float = 1.0
-var production_of_factories: float = 1.0
-var production_of_farms:     float = 1.0
-var production_of_mines:     float = 1.0
-var production_of_military_factories: float = 1.0
+var growth_of_inflation:             float = 1.0
+var education_efficiency:            float = 1.0
+var factories_efficiency_production: float = 0.0
+var DP_efficiency_production:        float = 0.0
 
-var based_production_of_iron      = 0.8
-var based_production_of_coal      = 1.0
-var based_production_of_saltpeter = 1.0
-var based_production_of_wood      = 0.5
-var based_production_of_cotton    = 0.5
-var based_production_of_beasts    = 1.0
-var based_production_of_grain     = 1.0
-var based_production_of_rubber    = 1.0
-var based_production_of_oil       = 0.5
+var factory_efficiency_production: Dictionary = {
+	load("res://Resources/Factories/TipesOfFactories/AirplaneFactory.tres"):        0.0,
+	load("res://Resources/Factories/TipesOfFactories/AmmoFactory.tres"):            0.0,
+	load("res://Resources/Factories/TipesOfFactories/CanningFactory.tres"):         0.0,
+	load("res://Resources/Factories/TipesOfFactories/CarsFactory.tres"):            0.0,
+	load("res://Resources/Factories/TipesOfFactories/CharcoalFactory.tres"):        0.0,
+	load("res://Resources/Factories/TipesOfFactories/ClothesFactory.tres"):         0.0,
+	load("res://Resources/Factories/TipesOfFactories/Distillery.tres"):             0.0,
+	load("res://Resources/Factories/TipesOfFactories/ElectricalPartsFactory.tres"): 0.0,
+	load("res://Resources/Factories/TipesOfFactories/FurnitureFactory.tres"):       0.0,
+	load("res://Resources/Factories/TipesOfFactories/FuelFactory.tres"):            0.0,
+	load("res://Resources/Factories/TipesOfFactories/GlassFactory.tres"):           0.0,
+	load("res://Resources/Factories/TipesOfFactories/LumberPlant.tres"):            0.0,
+	load("res://Resources/Factories/TipesOfFactories/MechPartsFactory.tres"):       0.0,
+	load("res://Resources/Factories/TipesOfFactories/SentheticOilFactory.tres"):    0.0,
+	load("res://Resources/Factories/TipesOfFactories/PhoneFactory.tres"):           0.0,
+	load("res://Resources/Factories/TipesOfFactories/RadioFactory.tres"):           0.0,
+	load("res://Resources/Factories/TipesOfFactories/RiflesFactory.tres"):          0.0,
+	load("res://Resources/Factories/TipesOfFactories/SentheticRubberFactory.tres"): 0.0,
+	load("res://Resources/Factories/TipesOfFactories/SaltpeterFactory.tres"):       0.0,
+	load("res://Resources/Factories/TipesOfFactories/SentheticTextileFactory.tres"):0.0,
+	load("res://Resources/Factories/TipesOfFactories/SteelPlant.tres"):             0.0,
+	load("res://Resources/Factories/TipesOfFactories/TankFactory.tres"):            0.0,
+	load("res://Resources/Factories/TipesOfFactories/TextileFactory.tres"):         0.0,
+}
 
-var based_production_of_steel         = 0.5
-var based_production_of_glass         = 0.6
-var based_production_of_textile       = 0.6
-var based_production_of_el_parts      = 0.6
-var based_production_of_mech_parts    = 0.6
-var based_production_of_lumber        = 0.6
-
-var based_production_of_el_appliances = 0.8
-var based_production_of_gas           = 1.0
-var based_production_of_cars          = 0.1
-var based_production_of_phone         = 0.2
-var based_production_of_radio         = 0.2
-var based_production_of_furniture     = 0.5
-var based_production_of_alcohol       = 0.8
-var based_production_of_clothes       = 0.6
-var based_production_of_canned_food   = 1.0
-
-var based_production_of_ammo          = 1.0
-var based_production_of_artillery     = 0.5
-var based_production_of_plane         = 0.5
-var based_production_of_rifles        = 1.0
-var based_production_of_tanks         = 0.1
-
-var factory_efficiency_oil    = 0.8
-var factory_efficiency_rubber = 0.5
-
-
-var goods_from_technologies: Dictionary = {
-	"iron": 1.0, 
-	"coal": 1.0, 
-	
-	"saltpeter": 1.0,
-	"wood":      1.0,
-	"cotton": 1.0,
-	"tabaco": 1.0,
-	"tea":    1.0,
-	
-	"beasts": 1.0,
-	"grain": 1.0,
-	"rubber": 1.0,
-	"oil": 1.0, 
-	"steel": 1.0, 
-	"glass": 1.0, 
-	"gas": 1.0, 
-	"electronics": 1.0,
+var goods_efficiency_production: Dictionary = {
+	load("res://Resources/Good/alcohol.tres"):0.0,
+	load("res://Resources/Good/ammo.tres"):0.0,
+	load("res://Resources/Good/artillery.tres"):0.0,
+	load("res://Resources/Good/beasts.tres"):0.0,
+	load("res://Resources/Good/canned_food.tres"):0.0,
+	load("res://Resources/Good/cars.tres"):0.0,
+	load("res://Resources/Good/clothes.tres"):0.0,
+	load("res://Resources/Good/coal.tres"):0.0,
+	load("res://Resources/Good/cotton.tres"):0.0,
+	load("res://Resources/Good/el_parts.tres"):0.0,
+	load("res://Resources/Good/furniture.tres"):0.0,
+	load("res://Resources/Good/gas.tres"):0.0,
+	load("res://Resources/Good/glass.tres"):0.0,
+	load("res://Resources/Good/grain.tres"):0.0,
+	load("res://Resources/Good/iron.tres"):0.0,
+	load("res://Resources/Good/lumber.tres"):0.0,
+	load("res://Resources/Good/mech_parts.tres"):0.0,
+	load("res://Resources/Good/oil.tres"):0.0,
+	load("res://Resources/Good/phone.tres"):0.0,
+	load("res://Resources/Good/radio.tres"):0.0,
+	load("res://Resources/Good/rifles.tres"):0.0,
+	load("res://Resources/Good/rubber.tres"):0.0,
+	load("res://Resources/Good/saltpeter.tres"):0.0,
+	load("res://Resources/Good/steel.tres"):0.0,
+	load("res://Resources/Good/tanks.tres"):0.0,
+	load("res://Resources/Good/textile.tres"):0.0,
+	load("res://Resources/Good/wood.tres"):0.0,
 }
 
 var list_of_buildings: Array = [
-	"Steel_plant",
-	"Textile_factory",
-	"Glass_factory",
-	"Electrical_appliance_factory",
-	"Electrical_parts_factory",
-	"Lumber_plant",
-	"Cars_factory",
-	"Airplane_factory",
-	#"Telegraph_factory",
-	"Phone_factory",
-	"Radio_factory",
-	"Furniture_factory",
-	"Distillery",
-	"Clothes_factory",
-	"Canning_factory",
+	load("res://Resources/Factories/TipesOfFactories/AirplaneFactory.tres"),
+	load("res://Resources/Factories/TipesOfFactories/AmmoFactory.tres"),
+	load("res://Resources/Factories/TipesOfFactories/CanningFactory.tres"),
+	load("res://Resources/Factories/TipesOfFactories/CarsFactory.tres"),
+	load("res://Resources/Factories/TipesOfFactories/CharcoalFactory.tres"),
+	load("res://Resources/Factories/TipesOfFactories/ClothesFactory.tres"),
+	load("res://Resources/Factories/TipesOfFactories/Distillery.tres"),
+	load("res://Resources/Factories/TipesOfFactories/ElectricalPartsFactory.tres"),
+	load("res://Resources/Factories/TipesOfFactories/FurnitureFactory.tres"),
+	load("res://Resources/Factories/TipesOfFactories/FuelFactory.tres"),
+	load("res://Resources/Factories/TipesOfFactories/GlassFactory.tres"),
+	load("res://Resources/Factories/TipesOfFactories/LumberPlant.tres"),
+	load("res://Resources/Factories/TipesOfFactories/MechPartsFactory.tres"),
+	load("res://Resources/Factories/TipesOfFactories/SentheticOilFactory.tres"),
+	load("res://Resources/Factories/TipesOfFactories/PhoneFactory.tres"),
+	load("res://Resources/Factories/TipesOfFactories/RadioFactory.tres"),
+	load("res://Resources/Factories/TipesOfFactories/RiflesFactory.tres"),
+	load("res://Resources/Factories/TipesOfFactories/SentheticRubberFactory.tres"),
+	load("res://Resources/Factories/TipesOfFactories/SaltpeterFactory.tres"),
+	load("res://Resources/Factories/TipesOfFactories/SentheticTextileFactory.tres"),
+	load("res://Resources/Factories/TipesOfFactories/SteelPlant.tres"),
+	load("res://Resources/Factories/TipesOfFactories/TankFactory.tres"),
+	load("res://Resources/Factories/TipesOfFactories/TextileFactory.tres"),
 ]
 
-const cost_of_factory: Dictionary = {
-		"money":    150,
-		"steel":    2,
-		"el_parts": 1,
-		"lumber":   1,
-	}
+
+func _init():
+	set_list_of_buildings()
 
 
 func set_list_of_buildings():
 	var list = []
-	var folder: Directory = Directory.new()
-	var _err = folder.open("res://Resources/Factories/TipesOfFactories/")
-	var _err_ = folder.list_dir_begin(true, true)
 	
-	for _i in range(20):
+	for file in list_of_buildings:
 		var factory = Factory.new()
-		var path_of_file = "res://Resources/Factories/TipesOfFactories/" + folder.get_next()
-		var file = load(path_of_file)
 		
-		if list_of_buildings.has(file.name_of_factory):
-			factory.name_of_factory = file.name_of_factory
-			factory.good = file.good 
-			
-			for y in file.raw:
-				factory.purchase[y.good] = y.quantity
-			list.append(factory)
+		factory.name_of_factory = file.name_of_factory
+		factory.good = file.good
+		factory.type_factory = file
+		factory.raw = file.raw
+		list.append(factory)
 	list_of_buildings = list
 
 

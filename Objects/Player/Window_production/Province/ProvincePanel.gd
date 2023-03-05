@@ -3,7 +3,7 @@ extends VBoxContainer
 signal update_info_about_factory
 
 var list_of_factories: Dictionary = {}
-var province
+var province:          Object
 
 onready var name_of_tile = $Label
 

@@ -7,4 +7,7 @@
 script = ExtResource( 1 )
 name = "Стрелковое оружие"
 base_price = 50
+min_price = 20
+max_price = 80
 icon = ExtResource( 2 )
+based_effiency_production = 1.0

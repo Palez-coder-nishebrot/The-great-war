@@ -6,5 +6,8 @@
 [resource]
 script = ExtResource( 1 )
 name = "Самолеты"
-base_price = 130
+base_price = 70
+min_price = 50
+max_price = 100
 icon = ExtResource( 2 )
+based_effiency_production = 0.5

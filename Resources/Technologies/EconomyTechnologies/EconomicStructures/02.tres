@@ -28,5 +28,5 @@ power = 10
 [resource]
 script = ExtResource( 1 )
 cost = 1300
-name_of_technology = "Импортозамещение и индустриализация"
+name_of_technology = "Государственное вмешательство"
 list_of_effects = [ SubResource( 3 ), SubResource( 4 ), SubResource( 1 ), SubResource( 2 ) ]

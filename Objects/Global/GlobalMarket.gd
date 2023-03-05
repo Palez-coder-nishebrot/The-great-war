@@ -126,8 +126,8 @@ const based_prices_of_goods = {
 }
 
 
-var demand: Dictionary = Players.output.duplicate()
-var supply: Dictionary = Players.output.duplicate()
+#var demand: Dictionary = Players.output.duplicate()
+#var supply: Dictionary = Players.output.duplicate()
 
 const list_of_resourses: Array = [
 	"coal",
@@ -151,54 +151,51 @@ func find_building_in_list(name_of_building):
 
 
 func clear_supply_and_demand():
-	for i in supply:
-		supply[i] = 0
-	for i in demand:
-		demand[i] = 0
-#		if list_of_resourses.has(i) or bonuses_for_production_of_civilian_goods.has(i):
-#			demand[i] = 0
-#		else:
-#			demand[i] = 5
+#	for i in supply:
+#		supply[i] = 0
+#	for i in demand:
+#		demand[i] = 0
+	pass
 
 
-func clear_export_and_import():
-	for player in Players.list_of_players:
-		for good in player.export_of_goods:
-			player.export_of_goods[good] = 0
-			player.import_of_goods[good] = 0
-		for good in player.output:
-			player.output[good] = 0
+#func clear_export_and_import():
+#	for player in Players.list_of_players:
+#		for good in player.export_of_goods:
+#			player.export_of_goods[good] = 0
+#			player.import_of_goods[good] = 0
+#		for good in player.output:
+#			player.output[good] = 0
 
 
-func update_prices(day):
-	if fmod(day, 5) == 0.0:
-		for good in prices_of_goods:
-			var s = float(supply[good]) + 1
-			var d = float(demand[good]) + 1
-			var based_price = based_prices_of_goods[good]
-			var price_of_good = prices_of_goods[good]
-			
-			var q = ((s / d) * 100) - 100
-			
-			var price = based_price - (based_price * 0.01) * q
-			
-			if price > price_of_good:
-				prices_of_goods[good] += 0.1 #based_price - (based_price * 0.01) * q
-			else:
-				prices_of_goods[good] -= 0.1
-			
-	#			if supply[good] > demand[good]:
-	#				prices_of_goods[good] -= 0.1
-	#			elif supply[good] < demand[good]:
-	#				prices_of_goods[good] += 0.1
-	#
-			if prices_of_goods[good] > min_and_max_prices_of_goods[good].max_:
-				prices_of_goods[good] = min_and_max_prices_of_goods[good].max_
-			elif prices_of_goods[good] < min_and_max_prices_of_goods[good].min_:
-				prices_of_goods[good] = min_and_max_prices_of_goods[good].min_
+#func update_prices(day):
+#	if fmod(day, 5) == 0.0:
+#		for good in prices_of_goods:
+#			var s = float(supply[good]) + 1
+#			var d = float(demand[good]) + 1
+#			var based_price = based_prices_of_goods[good]
+#			var price_of_good = prices_of_goods[good]
 #
-#			prices_of_goods_from_other_countries[good] = int(prices_of_goods[good] * 1.1)
-	clear_supply_and_demand()
+#			var q = ((s / d) * 100) - 100
+#
+#			var price = based_price - (based_price * 0.01) * q
+#
+#			if price > price_of_good:
+#				prices_of_goods[good] += 0.1 #based_price - (based_price * 0.01) * q
+#			else:
+#				prices_of_goods[good] -= 0.1
+#
+#	#			if supply[good] > demand[good]:
+#	#				prices_of_goods[good] -= 0.1
+#	#			elif supply[good] < demand[good]:
+#	#				prices_of_goods[good] += 0.1
+#	#
+#			if prices_of_goods[good] > min_and_max_prices_of_goods[good].max_:
+#				prices_of_goods[good] = min_and_max_prices_of_goods[good].max_
+#			elif prices_of_goods[good] < min_and_max_prices_of_goods[good].min_:
+#				prices_of_goods[good] = min_and_max_prices_of_goods[good].min_
+##
+##			prices_of_goods_from_other_countries[good] = int(prices_of_goods[good] * 1.1)
+#	clear_supply_and_demand()
 
 
 func export_goods_from_local_markets():

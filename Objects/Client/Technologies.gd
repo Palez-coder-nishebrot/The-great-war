@@ -10,23 +10,91 @@ const MILITARY_TECHNOLOGIES_FILES: Dictionary = {
 	}
 
 const ECONOMIC_TECHNOLOGIES_FILES: Dictionary = {
-	"farm_production":    "FarmProduction",
-	"metallurgy":   "Metallurgy",
+	"physics_and_energy":    "PhysicsAndEnergy",
+	"metallurgy":         "Metallurgy",
 	"factory_production": "FactoryProduction",
 	"supply":             "Supply",
 	"economic_structures":"EconomicStructures"
 }
 
-var army_managerment: Array = []
-var heavy_weapon:     Array = []
-var light_weapon:     Array = []
-var navy:             Array = []
 
-var farm_production:    Array = []
-var metallurgy:         Array = []
-var factory_production: Array = []
-var supply:             Array = []
-var economic_structures:Array = []
+var army_managerment: Array = [
+	load("res://Resources/Technologies/MilitaryTechnologies/ArmyManagerement/01.tres"),
+	load("res://Resources/Technologies/MilitaryTechnologies/ArmyManagerement/02.tres"),
+	load("res://Resources/Technologies/MilitaryTechnologies/ArmyManagerement/03.tres"),
+	load("res://Resources/Technologies/MilitaryTechnologies/ArmyManagerement/04.tres"),
+	load("res://Resources/Technologies/MilitaryTechnologies/ArmyManagerement/05.tres"),
+]
+
+
+var heavy_weapon:     Array = [
+	load("res://Resources/Technologies/MilitaryTechnologies/HeavyWeapon/01.tres"),
+	load("res://Resources/Technologies/MilitaryTechnologies/HeavyWeapon/02.tres"),
+	load("res://Resources/Technologies/MilitaryTechnologies/HeavyWeapon/03.tres"),
+	load("res://Resources/Technologies/MilitaryTechnologies/HeavyWeapon/04.tres"),
+	load("res://Resources/Technologies/MilitaryTechnologies/HeavyWeapon/05.tres"),
+]
+
+
+var light_weapon:     Array = [
+	load("res://Resources/Technologies/MilitaryTechnologies/LightWeapon/01.tres"),
+	load("res://Resources/Technologies/MilitaryTechnologies/LightWeapon/02.tres"),
+	load("res://Resources/Technologies/MilitaryTechnologies/LightWeapon/03.tres"),
+	load("res://Resources/Technologies/MilitaryTechnologies/LightWeapon/04.tres"),
+	load("res://Resources/Technologies/MilitaryTechnologies/LightWeapon/05.tres"),
+]
+
+
+var navy:              Array = [
+	load("res://Resources/Technologies/MilitaryTechnologies/Navy/01.tres"),
+	load("res://Resources/Technologies/MilitaryTechnologies/Navy/02.tres"),
+	load("res://Resources/Technologies/MilitaryTechnologies/Navy/03.tres"),
+	load("res://Resources/Technologies/MilitaryTechnologies/Navy/04.tres"),
+	load("res://Resources/Technologies/MilitaryTechnologies/Navy/05.tres"),
+]
+
+
+var physics_and_energy:    Array = [
+	load("res://Resources/Technologies/EconomyTechnologies/PhysicsAndEnergy/01.tres"),
+	load("res://Resources/Technologies/EconomyTechnologies/PhysicsAndEnergy/02.tres"),
+	load("res://Resources/Technologies/EconomyTechnologies/PhysicsAndEnergy/03.tres"),
+	load("res://Resources/Technologies/EconomyTechnologies/PhysicsAndEnergy/04.tres"),
+	load("res://Resources/Technologies/EconomyTechnologies/PhysicsAndEnergy/05.tres"),
+]
+
+
+var metallurgy:         Array = [
+	load("res://Resources/Technologies/EconomyTechnologies/Metallurgy/01.tres"),
+	load("res://Resources/Technologies/EconomyTechnologies/Metallurgy/02.tres"),
+	load("res://Resources/Technologies/EconomyTechnologies/Metallurgy/03.tres"),
+	load("res://Resources/Technologies/EconomyTechnologies/Metallurgy/04.tres"),
+	load("res://Resources/Technologies/EconomyTechnologies/Metallurgy/05.tres"),
+]
+
+
+var factory_production: Array = [
+	load("res://Resources/Technologies/EconomyTechnologies/FactoryProduction/01.tres"),
+	load("res://Resources/Technologies/EconomyTechnologies/FactoryProduction/02.tres"),
+	load("res://Resources/Technologies/EconomyTechnologies/FactoryProduction/03.tres"),
+	load("res://Resources/Technologies/EconomyTechnologies/FactoryProduction/04.tres"),
+	load("res://Resources/Technologies/EconomyTechnologies/FactoryProduction/05.tres"),
+]
+
+
+var supply:             Array = [
+	load("res://Resources/Technologies/EconomyTechnologies/Supply/01.tres"),
+	load("res://Resources/Technologies/EconomyTechnologies/Supply/02.tres"),
+	load("res://Resources/Technologies/EconomyTechnologies/Supply/03.tres"),
+	load("res://Resources/Technologies/EconomyTechnologies/Supply/04.tres"),
+	load("res://Resources/Technologies/EconomyTechnologies/Supply/05.tres"),
+]
+var economic_structures: Array = [
+	load("res://Resources/Technologies/EconomyTechnologies/EconomicStructures/01.tres"),
+	load("res://Resources/Technologies/EconomyTechnologies/EconomicStructures/02.tres"),
+	load("res://Resources/Technologies/EconomyTechnologies/EconomicStructures/03.tres"),
+	load("res://Resources/Technologies/EconomyTechnologies/EconomicStructures/04.tres"),
+	load("res://Resources/Technologies/EconomyTechnologies/EconomicStructures/05.tres"),
+]
 
 var researching_technology: Technology
 var client: Object
@@ -36,6 +104,7 @@ var research_time: int = 0
 
 func _init(client_):
 	self.client = client_
+	
 	set_technologies()
 
 
@@ -46,17 +115,6 @@ func set_technologies():
 
 func set_cotegories(TECHNOLOGIES_FILES, folder_name):
 	for i in TECHNOLOGIES_FILES:
-		var folder: Directory = Directory.new()
-		var path: String = "res://Resources/Technologies/" + folder_name + "/" + TECHNOLOGIES_FILES[i] + "/"
-		var _err = folder.open(path)
-		var _err_ = folder.list_dir_begin(true, true)
-		
-		for _y in range(5):
-			var name_of_file = folder.get_next()
-			var path_of_file: String = path + name_of_file
-			var file = load(path_of_file).duplicate()
-			file.cotegory = i
-			get(i).append(file)
 		get(i)[0].ready_for_researching = true
 
 

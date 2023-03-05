@@ -1,28 +1,31 @@
-[gd_resource type="Resource" load_steps=6 format=2]
+[gd_resource type="Resource" load_steps=9 format=2]
 
 [ext_resource path="res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectProductionGoods.gd" type="Script" id=1]
 [ext_resource path="res://Resources/Technologies/Technology.gd" type="Script" id=2]
+[ext_resource path="res://Resources/Good/iron.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Good/steel.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Good/coal.tres" type="Resource" id=5]
 
 [sub_resource type="Resource" id=1]
 script = ExtResource( 1 )
 name_of_effect = "Выпуск продукции"
-power = 5
-target = "iron"
+power = 1.2
+target = ExtResource( 5 )
 
 [sub_resource type="Resource" id=2]
 script = ExtResource( 1 )
 name_of_effect = "Выпуск продукции"
-power = 5
-target = "coal"
+power = 1.1
+target = ExtResource( 3 )
 
 [sub_resource type="Resource" id=3]
 script = ExtResource( 1 )
 name_of_effect = "Выпуск продукции"
-power = 5
-target = "steel"
+power = 1.25
+target = ExtResource( 4 )
 
 [resource]
 script = ExtResource( 2 )
 cost = 1400
-name_of_technology = "Индукционные печи"
+name_of_technology = "Передовая очистка стали"
 list_of_effects = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ]

@@ -1,33 +1,8 @@
 extends Node
 
-const factories: Dictionary = {
-	"Steel_plant":             "res://Resources/Factories/TipesOfFactories/SteelPlant.tres",
-	"Textile_factory":         "res://Resources/Factories/TipesOfFactories/TextileFactory.tres",
-	"Glass_factory":           "res://Resources/Factories/TipesOfFactories/GlassFactory.tres",
-	"Electrical_appliance_factory": "res://Resources/Factories/TipesOfFactories/ElectricalApplianceFactory.tres",
-	"Electrical_parts_factory": "res://Resources/Factories/TipesOfFactories/ElectricalPartsFactory.tres",
-	"Lumber_plant": "res://Resources/Factories/TipesOfFactories/LumberPlant.tres",
-	"Cars_factory": "res://Resources/Factories/TipesOfFactories/CarsFactory.tres",
-	"Telegraph_factory": "res://Resources/Factories/TipesOfFactories/TelegraphFactory.tres",
-	"Phone_factory": "res://Resources/Factories/TipesOfFactories/PhoneFactory.tres",
-	"Radio_factory": "res://Resources/Factories/TipesOfFactories/RadioFactory.tres",
-	"Furniture_factory": "res://Resources/Factories/TipesOfFactories/FurnitureFactory.tres",
-	"Distillery": "res://Resources/Factories/TipesOfFactories/Distillery.tres",
-	"Clothes_factory": "res://Resources/Factories/TipesOfFactories/ClothesFactory.tres",
-	"Canning_factory": "res://Resources/Factories/TipesOfFactories/CanningFactory.tres",
-	"Gas_factory": "res://Resources/Factories/TipesOfFactories/GasFactory.tres",
-	"Airplane_factory": "res://Resources/Factories/TipesOfFactories/AirplaneFactory.tres",
-	"Mech_parts_factory": "res://Resources/Factories/TipesOfFactories/MechPartsFactory.tres",
-	
-	"Rubber_factory": "res://Resources/Factories/TipesOfFactories/RubberFactory.tres",
-	"Oil_factory": "res://Resources/Factories/TipesOfFactories/OilFactory.tres",
-	"Senthetic_textile_factory": "res://Resources/Factories/TipesOfFactories/SentheticTextileFactory.tres",
-}
-
 const education: Dictionary = {
 	"Worker": 40.0,
 	"Proletarian": 50.0,
-	"Craftsman": 40.0,
 	"Clerk":     80.0,
 }
 
@@ -62,7 +37,7 @@ func create_map(dict_of_regions, game):
 			region.list_of_buildings.append(create_factory(factory, region.get_parent().get_parent(), region))
 		
 		for resource in i.resources:
-			region.resources[resource] = 1
+			region.resources.append(resource)
 		
 		var _middle_education = create_household(i, region)
 		
@@ -73,39 +48,40 @@ func create_map(dict_of_regions, game):
 		region.population_manager.needs.set_needs(region.population_manager)
 		region.get_goods_in_province()
 		
-		game.list_of_provinces.append(region)
+		game.list_of_regions.append(region)
 	
-#	for i in Players.list_of_players:
-#		i.population_manager.new_day()
-		
-			
 
-func create_factory(factory_name, game, region):
-	var factory_object = load(factories[factory_name])
+func create_factory(factory_object, game, region):
 	var factory = Factory.new()
 	factory.closed = false
 	factory.good = factory_object.good
 	factory.name_of_factory = factory_object.name_of_factory
 	factory.province = region
+	factory.raw = factory_object.raw
+	factory.type_factory = factory_object
 	game.factory_manager.list_of_factories.append(factory)
 	region.player.list_of_factories.append(factory)
 	
-	var raw = factory_object.raw
-	for i in raw:
-		factory.purchase[i.good] = i.quantity
-#	if production_goods.has(factory.good):
-#		factory.real_max_employed_number = 1
-#		factory.max_employed_number = 1
-	
 	return factory
-		
-	
+
+
 func create_household(obj, region):
 	var ed = 0
-	region.population_manager.quantity_of_workers = obj.workers
-	region.population_manager.quantity_of_factory_workers = obj.factory_workers
+	var workers         = region.population.population_types[0]
+	var factory_workers = region.population.population_types[1]
+	var clerks          = region.population.population_types[2]
+	
+	workers.quantity         = obj.workers
+	factory_workers.quantity = obj.factory_workers
+	
+	workers.region         = region
+	factory_workers.region = region
+	clerks.region          = region
+	#region.population_manager.quantity_of_workers = obj.workers
+	#region.population_manager.quantity_of_factory_workers = obj.factory_workers
 	ed += education.Worker * obj.workers
 	ed += education.Proletarian * obj.factory_workers
 	
 	ed = ed / (obj.factory_workers + obj.workers)
+	ManagerDay.connect("clear_income_in_pop_units", region.population, "clear_income")
 	return ed

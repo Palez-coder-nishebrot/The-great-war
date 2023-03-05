@@ -4,15 +4,15 @@
 [ext_resource path="res://Scenes/MapEditor/ClientEditor/RegionPanel.gd" type="Script" id=2]
 [ext_resource path="res://Graphics/Fonts/pixel_2.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Scenes/MapEditor/ClientEditor/HouseholdPanel/HouseholdPanel.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Graphics/Sprites/Goods/Oil.png" type="Texture" id=5]
-[ext_resource path="res://Graphics/Sprites/Goods/Iron.png" type="Texture" id=6]
-[ext_resource path="res://Graphics/Sprites/Goods/Rubber.png" type="Texture" id=7]
-[ext_resource path="res://Graphics/Sprites/Goods/Wood.png" type="Texture" id=8]
-[ext_resource path="res://Graphics/Sprites/Goods/Cotton.png" type="Texture" id=9]
-[ext_resource path="res://Graphics/Sprites/Goods/Cattle.png" type="Texture" id=10]
-[ext_resource path="res://Graphics/Sprites/Goods/Coal.png" type="Texture" id=11]
-[ext_resource path="res://Graphics/Sprites/Goods/Seed.png" type="Texture" id=12]
-[ext_resource path="res://Graphics/Sprites/Goods/Nitrate.png" type="Texture" id=13]
+[ext_resource path="res://Resources/Good/iron.tres" type="Resource" id=5]
+[ext_resource path="res://Resources/Good/grain.tres" type="Resource" id=6]
+[ext_resource path="res://Resources/Good/beasts.tres" type="Resource" id=7]
+[ext_resource path="res://Resources/Good/saltpeter.tres" type="Resource" id=8]
+[ext_resource path="res://Resources/Good/cotton.tres" type="Resource" id=9]
+[ext_resource path="res://Resources/Good/wood.tres" type="Resource" id=10]
+[ext_resource path="res://Resources/Good/rubber.tres" type="Resource" id=11]
+[ext_resource path="res://Resources/Good/coal.tres" type="Resource" id=12]
+[ext_resource path="res://Resources/Good/oil.tres" type="Resource" id=13]
 [ext_resource path="res://Scenes/MapEditor/ClientEditor/ResourcePanel/AppendResourceButton.gd" type="Script" id=14]
 [ext_resource path="res://Scenes/MapEditor/ClientEditor/ResourcePanel/ResourceButton.gd" type="Script" id=15]
 [ext_resource path="res://Graphics/Sprites/Goods/Airplane.png" type="Texture" id=16]
@@ -161,10 +161,9 @@ margin_right = 176.0
 margin_bottom = 106.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-icon = ExtResource( 11 )
 icon_align = 1
 script = ExtResource( 14 )
-good = "coal"
+good = ExtResource( 12 )
 
 [node name="Button2" type="Button" parent="CanvasLayer/AppendResourceButtons"]
 margin_left = 176.0
@@ -172,10 +171,9 @@ margin_right = 352.0
 margin_bottom = 106.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-icon = ExtResource( 6 )
 icon_align = 1
 script = ExtResource( 14 )
-good = "iron"
+good = ExtResource( 5 )
 
 [node name="Button3" type="Button" parent="CanvasLayer/AppendResourceButtons"]
 margin_left = 352.0
@@ -183,10 +181,9 @@ margin_right = 528.0
 margin_bottom = 106.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-icon = ExtResource( 12 )
 icon_align = 1
 script = ExtResource( 14 )
-good = "grain"
+good = ExtResource( 6 )
 
 [node name="Button4" type="Button" parent="CanvasLayer/AppendResourceButtons"]
 margin_left = 528.0
@@ -194,10 +191,9 @@ margin_right = 705.0
 margin_bottom = 106.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-icon = ExtResource( 10 )
 icon_align = 1
 script = ExtResource( 14 )
-good = "beasts"
+good = ExtResource( 7 )
 
 [node name="Button5" type="Button" parent="CanvasLayer/AppendResourceButtons"]
 margin_left = 705.0
@@ -205,10 +201,9 @@ margin_right = 881.0
 margin_bottom = 106.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-icon = ExtResource( 8 )
 icon_align = 1
 script = ExtResource( 14 )
-good = "wood"
+good = ExtResource( 10 )
 
 [node name="Button6" type="Button" parent="CanvasLayer/AppendResourceButtons"]
 margin_left = 881.0
@@ -216,10 +211,9 @@ margin_right = 1057.0
 margin_bottom = 106.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-icon = ExtResource( 9 )
 icon_align = 1
 script = ExtResource( 14 )
-good = "cotton"
+good = ExtResource( 9 )
 
 [node name="Button7" type="Button" parent="CanvasLayer/AppendResourceButtons"]
 margin_left = 1057.0
@@ -227,10 +221,9 @@ margin_right = 1234.0
 margin_bottom = 106.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-icon = ExtResource( 7 )
 icon_align = 1
 script = ExtResource( 14 )
-good = "rubber"
+good = ExtResource( 11 )
 
 [node name="Button8" type="Button" parent="CanvasLayer/AppendResourceButtons"]
 margin_left = 1234.0
@@ -238,10 +231,9 @@ margin_right = 1410.0
 margin_bottom = 106.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-icon = ExtResource( 5 )
 icon_align = 1
 script = ExtResource( 14 )
-good = "oil"
+good = ExtResource( 13 )
 
 [node name="Button9" type="Button" parent="CanvasLayer/AppendResourceButtons"]
 margin_left = 1410.0
@@ -249,10 +241,9 @@ margin_right = 1587.0
 margin_bottom = 106.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-icon = ExtResource( 13 )
 icon_align = 1
 script = ExtResource( 14 )
-good = "saltpeter"
+good = ExtResource( 8 )
 
 [node name="AppendFactoryButtons" type="HBoxContainer" parent="CanvasLayer"]
 margin_left = 333.0

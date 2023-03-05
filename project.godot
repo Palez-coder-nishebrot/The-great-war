@@ -49,6 +49,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Objects/Building/BasedFactory.gd"
 }, {
+"base": "Timer",
+"class": "GlobalTimer",
+"language": "GDScript",
+"path": "res://Objects/Global/GlobalTimer.gd"
+}, {
 "base": "Resource",
 "class": "Good",
 "language": "GDScript",
@@ -58,11 +63,6 @@ _global_script_classes=[ {
 "class": "GoodOld",
 "language": "GDScript",
 "path": "res://Objects/Population/NeedsOfPopulation/Good.gd"
-}, {
-"base": "Node",
-"class": "Household",
-"language": "GDScript",
-"path": "res://Objects/Population/Household.gd"
 }, {
 "base": "Node",
 "class": "Infrastructure",
@@ -95,9 +95,24 @@ _global_script_classes=[ {
 "path": "res://Objects/Party/Party.gd"
 }, {
 "base": "Node",
+"class": "Population",
+"language": "GDScript",
+"path": "res://Objects/Population/Population.gd"
+}, {
+"base": "Node",
 "class": "PopulationManager",
 "language": "GDScript",
 "path": "res://Objects/Client/PopulationManager.gd"
+}, {
+"base": "Resource",
+"class": "PopulationUnit",
+"language": "GDScript",
+"path": "res://Objects/Population/population_unit.gd"
+}, {
+"base": "Node",
+"class": "PopulationWorldManager",
+"language": "GDScript",
+"path": "res://Objects/Global/Managers/ManagerPopulation.gd"
 }, {
 "base": "Resource",
 "class": "Prov_saver",
@@ -220,9 +235,19 @@ _global_script_classes=[ {
 "path": "res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectNewUnit.gd"
 }, {
 "base": "TechnologyEffect",
+"class": "TechnologyEffectProductionDP",
+"language": "GDScript",
+"path": "res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectProductionDP.gd"
+}, {
+"base": "TechnologyEffect",
 "class": "TechnologyEffectProductionFactories",
 "language": "GDScript",
 "path": "res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectProductionFactories.gd"
+}, {
+"base": "TechnologyEffect",
+"class": "TechnologyEffectProductionFactory",
+"language": "GDScript",
+"path": "res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectProductionFactory.gd"
 }, {
 "base": "TechnologyEffect",
 "class": "TechnologyEffectProductionGoods",
@@ -233,6 +258,16 @@ _global_script_classes=[ {
 "class": "TechnologyEffectSupply",
 "language": "GDScript",
 "path": "res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectSupply.gd"
+}, {
+"base": "Reference",
+"class": "TradeAgreement",
+"language": "GDScript",
+"path": "res://Objects/References/trade_agreement.gd"
+}, {
+"base": "Node",
+"class": "TradeAgreementsManager",
+"language": "GDScript",
+"path": "res://Objects/Client/TradeAgreementsManager.gd"
 } ]
 _global_script_class_icons={
 "AI": "",
@@ -243,16 +278,19 @@ _global_script_class_icons={
 "CreateClients": "",
 "EconomicBonuses": "",
 "Factory": "",
+"GlobalTimer": "",
 "Good": "",
 "GoodOld": "",
-"Household": "",
 "Infrastructure": "",
 "Landscape": "",
 "MilitaryBonuses": "",
 "PartiesManager": "",
 "Party": "",
 "PoliticalParty": "",
+"Population": "",
 "PopulationManager": "",
+"PopulationUnit": "",
+"PopulationWorldManager": "",
 "Prov_saver": "",
 "Railways": "",
 "Raw": "",
@@ -277,9 +315,13 @@ _global_script_class_icons={
 "TechnologyEffectNewFactory": "",
 "TechnologyEffectNewFleetUnit": "",
 "TechnologyEffectNewUnit": "",
+"TechnologyEffectProductionDP": "",
 "TechnologyEffectProductionFactories": "",
+"TechnologyEffectProductionFactory": "",
 "TechnologyEffectProductionGoods": "",
-"TechnologyEffectSupply": ""
+"TechnologyEffectSupply": "",
+"TradeAgreement": "",
+"TradeAgreementsManager": ""
 }
 
 [application]
@@ -294,8 +336,6 @@ Players="*res://Objects/Global/Players.gd"
 GlobalMarket="*res://Objects/Global/GlobalMarket.gd"
 Functions="*res://Objects/Global/Functions.gd"
 Research="*res://Objects/Global/Research.gd"
-Units="*res://Objects/Global/Units.gd"
-Reforms="*res://Objects/Global/Reforms.gd"
 ManagerDay="*res://Objects/Global/Managers/ManagerDay.gd"
 ProvinceLoader="*res://Objects/Global/ProvinceLoader.gd"
 SceneStorage="*res://Objects/Global/SceneStorage.gd"

@@ -1,7 +1,7 @@
 extends Button
 
 
-var good: String = ""
+var good: Resource
 var parent: Object
 
 func _gui_input(event):

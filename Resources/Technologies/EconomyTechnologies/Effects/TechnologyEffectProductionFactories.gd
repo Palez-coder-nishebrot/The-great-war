@@ -2,26 +2,15 @@ extends TechnologyEffect
 
 class_name TechnologyEffectProductionFactories
 
-export(String) var name_of_effect = "Производительность"
+export(String) var name_of_effect = "Производительность заводов"
 
-export(int) var power = 0
-
-export(String, "military_factories", "factories", "farms", "mines") var target = "factories"
-
-
-const list_of_effects: Dictionary = {
-	"military_factories": "production_of_military_factories", 
-	"factories": "production_of_factories", 
-	"farms": "production_of_farms", 
-	"mines": "production_of_mines", 
-}
-
+export(float) var power = 0.0
 
 func get_effect():
-	return name_of_effect + " " + list_of_points_of_effect[target] + ": +" + str(power)  + "%"
+	var bonus = (power - 1.0) * 100.0
+	return name_of_effect + ": +" + str(bonus)  + "%"
 
 
 func activate_effects(client):
-	var variable = list_of_effects[target]
-	var bonus = client.economic_bonuses.get(variable) * 10
-	client.economic_bonuses.set(variable, (bonus + power) / 10)
+	var bonus = power - 1
+	client.economic_bonuses.factories_efficiency_production += bonus

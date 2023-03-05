@@ -1,7 +1,7 @@
 extends Panel
 
 var showing_map: int = 0
-var showing_good: String = "coal"
+var showing_good: Resource = load("res://Resources/Good/oil.tres")
 
 onready var game = get_parent().get_parent().get_parent()
 

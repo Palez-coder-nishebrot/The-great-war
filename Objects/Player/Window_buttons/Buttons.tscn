@@ -34,18 +34,8 @@ margin_right = 1920.0
 margin_bottom = 70.0
 custom_constants/separation = 0
 
-[node name="Construction" type="Button" parent="HBoxContainer"]
-margin_right = 220.0
-margin_bottom = 38.0
-size_flags_horizontal = 3
-custom_fonts/font = SubResource( 1 )
-text = "Строительство"
-script = ExtResource( 3 )
-window = "window_build_factory"
-
 [node name="Production" type="Button" parent="HBoxContainer"]
-margin_left = 220.0
-margin_right = 424.0
+margin_right = 209.0
 margin_bottom = 38.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 1 )
@@ -54,8 +44,8 @@ script = ExtResource( 3 )
 window = "window_production"
 
 [node name="Budget" type="Button" parent="HBoxContainer"]
-margin_left = 424.0
-margin_right = 597.0
+margin_left = 209.0
+margin_right = 418.0
 margin_bottom = 38.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 1 )
@@ -64,8 +54,8 @@ script = ExtResource( 3 )
 window = "window_taxes"
 
 [node name="Reforms" type="Button" parent="HBoxContainer"]
-margin_left = 597.0
-margin_right = 770.0
+margin_left = 418.0
+margin_right = 627.0
 margin_bottom = 38.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 1 )
@@ -74,8 +64,8 @@ script = ExtResource( 3 )
 window = "window_reform"
 
 [node name="Research" type="Button" parent="HBoxContainer"]
-margin_left = 770.0
-margin_right = 943.0
+margin_left = 627.0
+margin_right = 836.0
 margin_bottom = 38.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 1 )
@@ -84,8 +74,8 @@ script = ExtResource( 3 )
 window = "window_research"
 
 [node name="Parties" type="Button" parent="HBoxContainer"]
-margin_left = 943.0
-margin_right = 1163.0
+margin_left = 836.0
+margin_right = 1056.0
 margin_bottom = 38.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 1 )
@@ -94,8 +84,8 @@ script = ExtResource( 3 )
 window = "window_parties"
 
 [node name="Diplomacy" type="Button" parent="HBoxContainer"]
-margin_left = 1163.0
-margin_right = 1337.0
+margin_left = 1056.0
+margin_right = 1265.0
 margin_bottom = 38.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 1 )
@@ -104,8 +94,8 @@ script = ExtResource( 3 )
 window = "window_diplomacy"
 
 [node name="Markets" type="Button" parent="HBoxContainer"]
-margin_left = 1337.0
-margin_right = 1510.0
+margin_left = 1265.0
+margin_right = 1474.0
 margin_bottom = 38.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 1 )
@@ -114,8 +104,8 @@ script = ExtResource( 3 )
 window = "window_markets"
 
 [node name="MilitaryOrders" type="Button" parent="HBoxContainer"]
-margin_left = 1510.0
-margin_right = 1746.0
+margin_left = 1474.0
+margin_right = 1710.0
 margin_bottom = 38.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 1 )
@@ -124,7 +114,7 @@ script = ExtResource( 3 )
 window = "window_parties"
 
 [node name="Population" type="Button" parent="HBoxContainer"]
-margin_left = 1746.0
+margin_left = 1710.0
 margin_right = 1920.0
 margin_bottom = 38.0
 size_flags_horizontal = 3

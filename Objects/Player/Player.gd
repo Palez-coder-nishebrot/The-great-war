@@ -50,7 +50,7 @@ func _process(_delta):
 		camera.position.x += speed_of_camera
 	
 
-func _input(event):
+func _input(_event):
 	if Input.is_action_just_pressed("ui_esc"):
 		get_tree().quit()
 #	if event.is_pressed() and not event is InputEventKey:

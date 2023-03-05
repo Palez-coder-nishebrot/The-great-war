@@ -13,7 +13,7 @@ onready var cotegories: Dictionary = {
 	$HBoxContainer/Navy:             "navy",
 	
 	$HBoxContainer2/FactoryProduction:   "factory_production",
-	$HBoxContainer2/FarmProduction:      "farm_production",
+	$HBoxContainer2/FarmProduction:      "physics_and_energy",
 	$HBoxContainer2/Metallurgy:          "metallurgy",
 	$HBoxContainer2/Supply:              "supply",
 	$HBoxContainer2/EconomicStructures:  "economic_structures",

@@ -13,23 +13,6 @@ func _ready():
 	#set_collisions_of_regions()
 
 
-#func set_d():
-#	var list = []
-#	for i in get_children():
-#		if i.name != "Map" and i.name != "ClientEditor":
-#			var province = {
-#				"name_of_province": i.name_of_region,
-#				"resources": [],
-#				"factories": [],
-#				"households": [],
-#				}
-#			#breakpoint
-#			list.append(province)
-#	var file = SavedRegions.new()
-#	file.regions = list
-#	ResourceSaver.save("res://Objects/Provinces/SavedRegions.tres", file)
-
-
 func create_map():
 	var map = load("res://Scenes/TileMap/TileMap.tscn").instance()
 	get_node("Map").position = map.get_node("Map").position
@@ -102,14 +85,3 @@ func set_color_of_regions():
 			list_of_regions[i].modulate = file.national_color
 		
 		folder_name = folder.get_next()
-
-
-#func set_collisions_of_regions():
-#	var file = ResourceLoader.load("res://Objects/Provinces/CollisionPolygons_of_provinces.tres")
-#
-#	for i in file.list_of_pol_of_provinces:
-#		var region = list_of_regions[i]
-#		region.collision.polygon = file.list_of_pol_of_provinces[i]
-#
-#		region.collision.position.x -= region.get_rect().size.x / 2
-#		region.collision.position.y -= region.get_rect().size.y / 2

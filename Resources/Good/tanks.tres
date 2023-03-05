@@ -6,5 +6,8 @@
 [resource]
 script = ExtResource( 1 )
 name = "Танки"
-base_price = 400
+base_price = 200
+min_price = 100
+max_price = 300
 icon = ExtResource( 2 )
+based_effiency_production = 0.1

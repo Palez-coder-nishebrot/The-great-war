@@ -122,7 +122,7 @@ custom_constants/separation = 5
 margin_right = 465.0
 margin_bottom = 42.0
 custom_fonts/font = SubResource( 1 )
-text = "Фермерское производство"
+text = "Физика и энергия"
 align = 1
 
 [node name="FactoryProduction" type="VBoxContainer" parent="HBoxContainer2"]

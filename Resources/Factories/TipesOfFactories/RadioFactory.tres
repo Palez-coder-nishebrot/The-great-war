@@ -1,30 +1,30 @@
-[gd_resource type="Resource" load_steps=7 format=2]
+[gd_resource type="Resource" load_steps=10 format=2]
 
 [ext_resource path="res://Resources/Factories/Factory.gd" type="Script" id=1]
 [ext_resource path="res://Resources/Factories/Raw.gd" type="Script" id=2]
+[ext_resource path="res://Resources/Good/glass.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Good/el_parts.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Good/iron.tres" type="Resource" id=5]
+[ext_resource path="res://Resources/Good/radio.tres" type="Resource" id=6]
 
 [sub_resource type="Resource" id=1]
 script = ExtResource( 2 )
-good = "coal"
+good = ExtResource( 5 )
 quantity = 0.2
 
 [sub_resource type="Resource" id=2]
 script = ExtResource( 2 )
-good = "iron"
+good = ExtResource( 3 )
 quantity = 0.4
 
 [sub_resource type="Resource" id=3]
 script = ExtResource( 2 )
-good = "el_appliances"
+good = ExtResource( 4 )
 quantity = 0.4
-
-[sub_resource type="Resource" id=4]
-script = ExtResource( 2 )
-good = "glass"
-quantity = 0.2
 
 [resource]
 script = ExtResource( 1 )
-name_of_factory = "Radio_factory"
-raw = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ]
-good = "radio"
+name_of_factory = "radio_factory"
+raw = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ]
+good = ExtResource( 6 )
+available = true

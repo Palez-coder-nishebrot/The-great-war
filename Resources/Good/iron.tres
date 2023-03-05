@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Resources/Good/good.gd" type="Script" id=1]
+[ext_resource path="res://Graphics/Sprites/NewSpritesOfGoods/Iron.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+name = "Железо"
+base_price = 8
+min_price = 5
+max_price = 20
+icon = ExtResource( 2 )
+based_effiency_production = 0.8

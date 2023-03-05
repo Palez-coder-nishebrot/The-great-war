@@ -50,7 +50,7 @@ text = "Рабочие"
 align = 1
 valign = 1
 
-[node name="Bonus_for_production" type="Label" parent="."]
+[node name="Efficiency" type="Label" parent="."]
 margin_left = 919.0
 margin_right = 1225.0
 margin_bottom = 70.0
