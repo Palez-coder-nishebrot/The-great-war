@@ -2,9 +2,9 @@ extends Panel
 
 var province 
 
-onready var button_tipes_of_battalions:   Button = $Button_example
-onready var button_battalion:             Button = $Button_example2
-onready var label_divisions_in_training:  Label  = $Button_example3
+@onready var button_tipes_of_battalions:   Button = $Button_example
+@onready var button_battalion:             Button = $Button_example2
+@onready var label_divisions_in_training:  Label  = $Button_example3
 
 
 func update_information(province_):

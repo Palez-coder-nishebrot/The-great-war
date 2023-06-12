@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://ddf8p8e1f42lk"
+
+[deps]
+
+files=["res://Localization/Gui/reforms.en.translation"]
+
+source_file="res://Localization/Gui/reforms.csv"
+dest_files=["res://Localization/Gui/reforms.en.translation"]
+
+[params]
+
+compress=true
+delimiter=0

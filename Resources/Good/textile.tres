@@ -1,7 +1,7 @@
 [gd_resource type="Resource" load_steps=3 format=2]
 
 [ext_resource path="res://Resources/Good/good.gd" type="Script" id=1]
-[ext_resource path="res://Graphics/Sprites/NewSpritesOfGoods/Fabric.png" type="Texture" id=2]
+[ext_resource path="res://Graphics/Sprites/goods/fabric.png" type="Texture2D" id=2]
 
 [resource]
 script = ExtResource( 1 )
@@ -10,4 +10,4 @@ base_price = 20
 min_price = 10
 max_price = 30
 icon = ExtResource( 2 )
-based_effiency_production = 0.6
+based_effiency_production = 5.0

@@ -2,9 +2,9 @@ extends TechnologyEffect
 
 class_name TechnologyEffectEducationEfficiency
 
-export(String) var name_of_effect = "Эффективность обучения"
+@export var name_of_effect: String = "Эффективность обучения"
 
-export(int) var power = 10
+@export var power: int = 10
 
 
 func get_effect():

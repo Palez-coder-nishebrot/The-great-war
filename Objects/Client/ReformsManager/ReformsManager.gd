@@ -3,20 +3,20 @@ extends Node
 class_name ReformsManager
 
 const paths: Dictionary = {
-	"tax_on_poor_class": "res://Resources/Reforms/EconomicReforms/TaxOnPoorClass.tres",
-	"tax_on_rich_class": "res://Resources/Reforms/EconomicReforms/TaxOnRichClass.tres",
-	"tariffs":           "res://Resources/Reforms/EconomicReforms/Tarrifs.tres",
-	"education":         "res://Resources/Reforms/EconomicReforms/Education.tres",
-	
-	"pensions":          "res://Resources/Reforms/SocialReforms/Pensions.tres",
-	"min_salary":        "res://Resources/Reforms/SocialReforms/MinSalary.tres",
-	"max_working_day":      "res://Resources/Reforms/SocialReforms/DayWorking.tres",
-	"unemployment_benefit": "res://Resources/Reforms/SocialReforms/UnemploymentBenefit.tres",
-	"healthcare":        "res://Resources/Reforms/SocialReforms/Healthcare.tres",
-	"mass_media":        "res://Resources/Reforms/PoliticalReforms/MassMedia.tres",
-	"political_parties": "res://Resources/Reforms/PoliticalReforms/PoliticalParties.tres",
-	"public_meentings":  "res://Resources/Reforms/PoliticalReforms/PublicMeetings.tres",
-	"unions":            "res://Resources/Reforms/PoliticalReforms/Unions.tres",
+#	"tax_on_poor_class": "res://Resources/Reforms/EconomicReforms/TaxOnPoorClass.tres",
+#	"tax_on_rich_class": "res://Resources/Reforms/EconomicReforms/TaxOnRichClass.tres",
+#	"tariffs":           "res://Resources/Reforms/EconomicReforms/Tarrifs.tres",
+#	"education":         "res://Resources/Reforms/EconomicReforms/Education.tres",
+#
+#	"pensions":          "res://Resources/Reforms/SocialReforms/Pensions.tres",
+#	"min_salary":        "res://Resources/Reforms/SocialReforms/MinSalary.tres",
+#	"max_working_day":      "res://Resources/Reforms/SocialReforms/DayWorking.tres",
+#	"unemployment_benefit": "res://Resources/Reforms/SocialReforms/UnemploymentBenefit.tres",
+#	"healthcare":        "res://Resources/Reforms/SocialReforms/Healthcare.tres",
+#	"mass_media":        "res://Resources/Reforms/PoliticalReforms/MassMedia.tres",
+#	"political_parties": "res://Resources/Reforms/PoliticalReforms/PoliticalParties.tres",
+#	"public_meentings":  "res://Resources/Reforms/PoliticalReforms/PublicMeetings.tres",
+#	"unions":            "res://Resources/Reforms/PoliticalReforms/Unions.tres",
 }
 
 var max_points_of_soc_reforms: Dictionary = {
@@ -64,7 +64,7 @@ var client
 
 func _init(client_):
 	self.client = client_
-	set_cotegories()
+	#set_cotegories()
 
 
 func set_cotegories():

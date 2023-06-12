@@ -1,211 +1,117 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=8 format=3 uid="uid://chbvt3y0tsaip"]
 
-[ext_resource path="res://Resources/Good/iron.tres" type="Resource" id=1]
-[ext_resource path="res://Objects/Player/Window_information/Information.gd" type="Script" id=2]
-[ext_resource path="res://Graphics/Fonts/pixel_2.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://Graphics/Styles/DefaultButton.tres" type="Theme" id=4]
-[ext_resource path="res://Resources/Good/grain.tres" type="Resource" id=5]
-[ext_resource path="res://Resources/Good/beasts.tres" type="Resource" id=6]
-[ext_resource path="res://Resources/Good/saltpeter.tres" type="Resource" id=7]
-[ext_resource path="res://Resources/Good/cotton.tres" type="Resource" id=8]
-[ext_resource path="res://Resources/Good/wood.tres" type="Resource" id=9]
-[ext_resource path="res://Resources/Good/rubber.tres" type="Resource" id=10]
-[ext_resource path="res://Resources/Good/coal.tres" type="Resource" id=11]
-[ext_resource path="res://Resources/Good/oil.tres" type="Resource" id=12]
-[ext_resource path="res://Objects/Player/Window_information/GoodButton.gd" type="Script" id=15]
+[ext_resource type="Script" path="res://Objects/Player/Window_information/Information.gd" id="2"]
+[ext_resource type="FontFile" uid="uid://dpaiod0xc1xgs" path="res://Graphics/Fonts/pixel_2.ttf" id="3"]
+[ext_resource type="Theme" uid="uid://cffw2fgsm5tup" path="res://Graphics/Styles/DefaultButton.tres" id="4"]
 
-[sub_resource type="StyleBoxFlat" id=4]
-bg_color = Color( 0.192157, 0.0862745, 0.109804, 1 )
+[sub_resource type="StyleBoxFlat" id="4"]
+bg_color = Color(0.192157, 0.0862745, 0.109804, 1)
 
-[sub_resource type="DynamicFont" id=1]
-size = 32
-extra_spacing_char = -2
-extra_spacing_space = -7
-font_data = ExtResource( 3 )
+[sub_resource type="FontFile" id="1"]
+fallbacks = Array[Font]([ExtResource("3")])
+face_index = null
+embolden = null
+transform = null
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/21/0 = Vector2(0, 0)
+cache/0/21/0/ascent = 0.0
+cache/0/21/0/descent = 0.0
+cache/0/21/0/underline_position = 0.0
+cache/0/21/0/underline_thickness = 0.0
+cache/0/21/0/scale = 1.0
+cache/0/21/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/21/0/kerning_overrides/21/0 = Vector2(0, 0)
 
-[sub_resource type="DynamicFont" id=2]
-size = 32
-extra_spacing_char = -2
-font_data = ExtResource( 3 )
+[sub_resource type="StyleBoxFlat" id="5"]
+bg_color = Color(0.192157, 0.0862745, 0.109804, 1)
 
-[sub_resource type="DynamicFont" id=3]
-size = 32
-extra_spacing_top = 3
-extra_spacing_bottom = 3
-font_data = ExtResource( 3 )
-
-[sub_resource type="StyleBoxFlat" id=5]
-bg_color = Color( 0.192157, 0.0862745, 0.109804, 1 )
+[sub_resource type="FontFile" id="2"]
+fallbacks = Array[Font]([ExtResource("3")])
+face_index = null
+embolden = null
+transform = null
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/32/0 = Vector2(0, 0)
+cache/0/32/0/ascent = 0.0
+cache/0/32/0/descent = 0.0
+cache/0/32/0/underline_position = 0.0
+cache/0/32/0/underline_thickness = 0.0
+cache/0/32/0/scale = 1.0
+cache/0/32/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/32/0/kerning_overrides/32/0 = Vector2(0, 0)
 
 [node name="Information" type="Panel"]
-margin_right = 415.0
-margin_bottom = 178.0
+offset_right = 415.0
+offset_bottom = 91.0
 mouse_filter = 2
-custom_styles/panel = SubResource( 4 )
-script = ExtResource( 2 )
+theme_override_styles/panel = SubResource("4")
+script = ExtResource("2")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_right = 415.0
-margin_bottom = 178.0
-custom_constants/separation = 0
+layout_mode = 0
+offset_right = 415.0
+offset_bottom = 85.0
+theme_override_constants/separation = 0
 
 [node name="Label" type="Label" parent="VBoxContainer"]
-margin_right = 415.0
-margin_bottom = 32.0
-custom_fonts/font = SubResource( 1 )
+layout_mode = 2
+theme_override_fonts/font = SubResource("1")
+theme_override_font_sizes/font_size = 21
 text = "Государство Государство"
-align = 1
-valign = 1
-
-[node name="Label4" type="Label" parent="VBoxContainer"]
-margin_top = 32.0
-margin_right = 415.0
-margin_bottom = 64.0
-custom_fonts/font = SubResource( 2 )
-text = "ВВП"
-align = 1
-valign = 1
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Button_speed" type="Button" parent="VBoxContainer"]
-margin_top = 64.0
-margin_right = 415.0
-margin_bottom = 102.0
-theme = ExtResource( 4 )
-custom_fonts/font = SubResource( 3 )
+layout_mode = 2
+theme = ExtResource("4")
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 21
 text = "Скорость: 1.0"
 
 [node name="Button_pause" type="Button" parent="VBoxContainer"]
-margin_top = 102.0
-margin_right = 415.0
-margin_bottom = 140.0
-theme = ExtResource( 4 )
-custom_fonts/font = SubResource( 3 )
+layout_mode = 2
+theme = ExtResource("4")
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 21
 text = "Пауза"
 
 [node name="EconomyOrPolicy" type="Button" parent="VBoxContainer"]
-margin_top = 140.0
-margin_right = 415.0
-margin_bottom = 178.0
-theme = ExtResource( 4 )
-custom_fonts/font = SubResource( 3 )
+layout_mode = 2
+theme = ExtResource("4")
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 21
 button_mask = 3
 text = "show_name_of_region"
 
 [node name="Panel" type="Panel" parent="."]
-margin_left = 415.0
-margin_right = 830.0
-margin_bottom = 47.0
-custom_styles/panel = SubResource( 5 )
+layout_mode = 0
+offset_left = 415.0
+offset_right = 830.0
+offset_bottom = 47.0
+theme_override_styles/panel = SubResource("5")
 
-[node name="Label2" type="Label" parent="."]
-margin_left = 415.0
-margin_right = 830.0
-margin_bottom = 46.0
-custom_fonts/font = SubResource( 2 )
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("2")
+theme_override_font_sizes/font_size = 32
 text = "Игровое время"
-align = 1
-valign = 1
-
-[node name="Goods" type="GridContainer" parent="."]
-visible = false
-margin_left = 415.0
-margin_top = 47.0
-margin_right = 830.0
-margin_bottom = 178.0
-custom_constants/vseparation = 0
-custom_constants/hseparation = 0
-columns = 6
-
-[node name="GoodButton" type="Button" parent="Goods"]
-margin_right = 70.0
-margin_bottom = 66.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-expand_icon = true
-script = ExtResource( 15 )
-good = ExtResource( 11 )
-
-[node name="GoodButton2" type="Button" parent="Goods"]
-margin_left = 70.0
-margin_right = 139.0
-margin_bottom = 66.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-expand_icon = true
-script = ExtResource( 15 )
-good = ExtResource( 1 )
-
-[node name="GoodButton3" type="Button" parent="Goods"]
-margin_left = 139.0
-margin_right = 208.0
-margin_bottom = 66.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-expand_icon = true
-script = ExtResource( 15 )
-good = ExtResource( 7 )
-
-[node name="GoodButton4" type="Button" parent="Goods"]
-margin_left = 208.0
-margin_right = 277.0
-margin_bottom = 66.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-expand_icon = true
-script = ExtResource( 15 )
-good = ExtResource( 12 )
-
-[node name="GoodButton5" type="Button" parent="Goods"]
-margin_left = 277.0
-margin_right = 346.0
-margin_bottom = 66.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-expand_icon = true
-script = ExtResource( 15 )
-good = ExtResource( 5 )
-
-[node name="GoodButton6" type="Button" parent="Goods"]
-margin_left = 346.0
-margin_right = 415.0
-margin_bottom = 66.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-expand_icon = true
-script = ExtResource( 15 )
-good = ExtResource( 6 )
-
-[node name="GoodButton7" type="Button" parent="Goods"]
-margin_top = 66.0
-margin_right = 70.0
-margin_bottom = 131.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-expand_icon = true
-script = ExtResource( 15 )
-good = ExtResource( 10 )
-
-[node name="GoodButton8" type="Button" parent="Goods"]
-margin_left = 70.0
-margin_top = 66.0
-margin_right = 139.0
-margin_bottom = 131.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-expand_icon = true
-script = ExtResource( 15 )
-good = ExtResource( 9 )
-
-[node name="GoodButton9" type="Button" parent="Goods"]
-margin_left = 139.0
-margin_top = 66.0
-margin_right = 208.0
-margin_bottom = 131.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-expand_icon = true
-script = ExtResource( 15 )
-good = ExtResource( 8 )
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="VBoxContainer/Button_speed" to="." method="change_speed_of_game"]
 [connection signal="pressed" from="VBoxContainer/Button_pause" to="." method="update_pause"]

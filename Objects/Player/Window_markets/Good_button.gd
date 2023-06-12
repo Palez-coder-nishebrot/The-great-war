@@ -1,20 +1,25 @@
-extends Panel
+@tool
 
-export var good: Resource
+extends TextureRect
 
-onready var parent = get_parent().get_parent().get_parent()
-onready var image = $TextureRect
-onready var cost = $Cost
-onready var import = $Import
-onready var production = $Production
+@export var good: Good
+
+@onready var parent = get_parent().get_parent()
+@onready var good_sprite = $HBoxContainer/good_sprite
+@onready var cost = $HBoxContainer/VBoxContainer/Cost
+@onready var import = $HBoxContainer/VBoxContainer/Import
+@onready var production = $HBoxContainer/VBoxContainer/Production
 
 func _ready():
-	image.icon = good.icon
-	#parent.connect("update", self, "update_information")
+#	var image = good.icon.get_image()
+#	var text_re = ImageTexture.create_from_image(image)
+#	good_sprite.texture = text_re
+	good_sprite.icon =  good.icon
+	parent.connect("update", update_information)
 	
 
 func _gui_input(event):
-	if event is InputEventMouseButton and image.pressed:
+	if event is InputEventMouseButton and event.is_pressed():
 		#parent.good = good
 		parent.update_information_about_good(good)
 #	if pressed == true:
@@ -23,8 +28,8 @@ func _gui_input(event):
 
 func update_information():
 	var player = Players.player
-	cost.text = "Цена: " + str(player.prices_goods[good])
-	production.text = "Пр-во: " + str(player.production_goods[good])
+	cost.text = "Цена: " + str(player.economy_manager.prices_goods[good])
+	production.text = "Пр-во: " + str(player.economy_manager.production_goods[good])
 	
 	var im = player.import_goods[good]
 	var ex = player.export_goods[good]

@@ -1,7 +1,7 @@
 extends Control
 
-onready var title = $Title
-onready var text = $Text
+@onready var title = $Title
+@onready var text = $Text
 
 func set_title(tipe_of_message, object):
 	title = $Title

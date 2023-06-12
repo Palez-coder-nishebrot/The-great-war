@@ -1,32 +1,8 @@
 ,en
-KEY_HELLO,Проверка
-KEY_PUSH,Нажми!
 set_default_region,Политическая карта
 show_units,Войска
 show_resources,Ресурсы
-steel_plant,Сталелитейный завод
-textile_factory,Текстильная фабрика
-glass_factory,Стеклозавод
-ammo_factory,Завод боеприпасов
-charcoal_factory,Фабрика древесного угля
-mech_parts_factory,Завод автозапчастей
-rifles_factory,Завод стрелкового оружия
-saltpeter_factory,Завод искусственной серы
-tank_factory,Танковый завод
-electrical_parts_factory,Завод электрозапчастей
-lumber_plant,Завод пиломатериалов
-cars_factory,Автозавод
-airplane_factory,Авиазавод
-phone_factory,Телефонный завод
-radio_factory,Радиозавод
-furniture_factory,Мебельная фабрика
-distillery,Завод спиртного
-clothes_factory,Фабрика одежды
-canning_factory,Консервный завод
-fuel_factory,Топливный завод
-senthetic_textile_factory,Завод синтетической ткани
-senthetic_rubber_factory,Завод синтетической резины
-senthetic_oil_factory,Завод синтетической нефти
+,
 Adamanty,Адамантия
 Amany,Амани
 Baskaky,Баскакия
@@ -46,26 +22,31 @@ Suetsy,Суеция
 Tevertsy,Теверция
 Ternokat,Тернокат
 Horesm,Хорезм
+,
 liberals,Либералы
 socialists,Социалисты
 communists,Коммунисты
 fascists,Фашисты
 libertarians,Либертарианцы
 conservators,Консерваторы
+,
 free_trade,Свободная торговля
 protectionism,Протекционизм
+,
 pacifism,Пацифизм
-conservatism,Невмешательство
 militarism,Милитаризм
+expansionism,Экспансионизм
+,
 monarchy,Монархия
 republic,Республика
 soviet_republic,Советская республика
 fascist_dictatorship,Фашистская диктатура
-military_dictatorship,Военная диктатура
+,
 free_economy,Рыночная экономика
 interventionism,Частичное вмешательство
-state_capitalism,Гос. регулирование
+dirigisme,Смешанная экономика
 planned_economy,Плановая экономика
+,
 coal,Уголь
 iron,Железо
 oil,Нефть
@@ -80,9 +61,7 @@ glass,Стекло
 textile,Ткань
 el_parts,Электрооборудование
 lumber,Пиломатериалы
-el_appliances,Электроприборы
 cars,Автомобили
-telegraphs,Телеграфы
 phone,Телефоны
 radio,Радио
 furniture,Мебель
@@ -92,25 +71,7 @@ canned_food,Консервы
 gas,Топливо
 projectiles,Снаряды
 ammo,Боеприпасы
-machine_guns,Пулеметы
 artillery,Артиллерия
 plane,Аэропланы
-rifles,Винтовки
+rifles,Стрелковое оружие
 tanks,Танки
-TaxOnRichClass,Налоги на богатых
-TaxOnPoorClass,Налоги на бедных
-Education,Образование
-Tarrifs,Пошлины
-Pensions,Пенсии
-DayWorking,Макс. раб. день
-Healthcare,Здравохранение
-UnemploymentBenefit,Пособия по безработице
-MinSalary,Мин. зарплата
-MassMedia,Пресса
-PoliticalParties,Партии
-PublicMeetings,Публичные собрания
-Unions,Профсоюзы
-Worker,Рабочие
-Proletarian,Фабричные рабочие
-Craftsman,Ремесленники
-Clerk,Служащие

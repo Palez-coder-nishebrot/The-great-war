@@ -1,14 +1,14 @@
-tool
+@tool
 extends Node
 
-export(Color) var national_color
+@export var national_color: Color
 
 
 func get_provinces():
 	return get_node("ProvinceContainer").get_children()
 
 
-func _get_configuration_warning():
+func _get_configuration_warnings():
 	var hint = ""
 	
 	var has_country_border = false

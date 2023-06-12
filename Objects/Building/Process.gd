@@ -11,7 +11,7 @@ func start_build_factory(list):
 	name_of_factory = building.name_of_factory
 	
 	while time != building.time:
-		yield(game, "new_day")
+		await game.new_day
 		time = time + 1
 	
 	list.append(building)

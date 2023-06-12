@@ -2,7 +2,7 @@ extends Area2D
 
 var dragging = false
 
-onready var shape: CollisionShape2D = $CollisionShape2D
+@onready var shape: CollisionShape2D = $CollisionShape2D
 var old_pos
 
 var list_of_units: Array = []
@@ -22,14 +22,14 @@ var list_of_units: Array = []
 			
 
 func update():
-	shape.global_position.x = old_pos.x + shape.shape.extents.x
-	shape.global_position.y = old_pos.y + shape.shape.extents.y
+	shape.global_position.x = old_pos.x + shape.shape.size.x
+	shape.global_position.y = old_pos.y + shape.shape.size.y
 
-	if get_global_mouse_position().x > position.x + shape.shape.extents.x:
-		shape.shape.extents.x = (get_global_mouse_position().x - old_pos.x) / 2
+	if get_global_mouse_position().x > position.x + shape.shape.size.x:
+		shape.shape.size.x = (get_global_mouse_position().x - old_pos.x) / 2
 
-	if get_global_mouse_position().y > position.y + shape.shape.extents.y:
-		shape.shape.extents.y = (get_global_mouse_position().y - old_pos.y) / 2
+	if get_global_mouse_position().y > position.y + shape.shape.size.y:
+		shape.shape.size.y = (get_global_mouse_position().y - old_pos.y) / 2
 		
 	
 #	var shape_pos_x = old_pos.x

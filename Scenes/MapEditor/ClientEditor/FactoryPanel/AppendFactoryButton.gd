@@ -1,8 +1,8 @@
 extends Button
 
 
-export(String) var name_of_factory = ""
-onready var parent = get_parent().get_parent().get_node("RegionPanel")
+@export var name_of_factory: String = ""
+@onready var parent = get_parent().get_parent().get_node("RegionPanel")
 
 func _gui_input(event):
 	if event is InputEventMouseButton and pressed:

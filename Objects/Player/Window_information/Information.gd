@@ -3,22 +3,14 @@ extends Panel
 var showing_map: int = 0
 var showing_good: Resource = load("res://Resources/Good/oil.tres")
 
-onready var game = get_parent().get_parent().get_parent()
+@onready var game = get_parent().get_parent().get_parent()
+@onready var data_label = $Panel/Label2
+
 
 const showing_map_list: Dictionary = {
 	0: "set_default_region",
 	1: "show_units",
 	2: "show_resources",
-}
-
-const day_of_week: Dictionary = {
-	1: "Monday",
-	2: "Tuesday",
-	3: "Wednesday",
-	4: "Thursday",
-	5: "Friday",
-	6: "Saturday",
-	7: "Sunday",
 }
 
 const month_of_year: Dictionary = {
@@ -36,11 +28,6 @@ const month_of_year: Dictionary = {
 	12: "December",
 }
 
-const pause_of_game: Dictionary = {
-	true:  "Resume",
-	false: "Pause"
-}
-
 const speed_of_game: Dictionary = {
 	1.5: 1.0,
 	1.0: 0.8,
@@ -52,12 +39,13 @@ func _ready():
 	$VBoxContainer/Label.text = Players.player.name_of_country
 
 
-func check_data(day, month, year):
-	$Label2.text = str(day) + " " + month_of_year[month] + " " + str(year) + " год"
+func update_info():
+	check_data()
 
 
-func check_GDP():
-	$VBoxContainer/Label4.text = "ВВП: " + str(Players.player.gdp)
+func check_data():
+	var data = SceneStorage.timer.get_data()
+	data_label.text = str(data[0]) + " " + month_of_year[data[1]] + " " + str(data[2]) + " год"
 
 
 func settings_for_showing_map():
@@ -80,8 +68,9 @@ func set_showing_map():
 
 
 func update_pause():
-	game.pause = not game.pause
-	$VBoxContainer/Button_pause.text = pause_of_game[game.pause]
+	var timer = SceneStorage.timer
+	timer.set_pause(not timer.pause)
+	$VBoxContainer/Button_pause.text = timer.check_pause()
 
 
 func change_speed_of_game():

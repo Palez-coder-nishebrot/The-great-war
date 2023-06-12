@@ -1,8 +1,8 @@
 extends Button
 
 
-export(Resource) var good
-onready var parent = get_parent().get_parent().get_node("RegionPanel")
+@export var good: Resource
+@onready var parent = get_parent().get_parent().get_node("RegionPanel")
 
 
 func _ready():

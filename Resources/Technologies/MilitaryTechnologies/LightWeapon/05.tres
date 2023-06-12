@@ -1,34 +1,25 @@
-[gd_resource type="Resource" load_steps=9 format=2]
+[gd_resource type="Resource" load_steps=7 format=2]
 
 [ext_resource path="res://Resources/Technologies/Technology.gd" type="Script" id=1]
-[ext_resource path="res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectAttack.gd" type="Script" id=2]
-[ext_resource path="res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectSupply.gd" type="Script" id=3]
-[ext_resource path="res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectLostGeneration.gd" type="Script" id=4]
+[ext_resource path="res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectDefense.gd" type="Script" id=2]
+[ext_resource path="res://Resources/military_units/army_units_types/infantry.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/military_units/army_units_types/cavalry.tres" type="Resource" id=4]
 
 [sub_resource type="Resource" id=1]
 script = ExtResource( 2 )
-name_of_effect = "Атака"
+name_of_effect = "Оборона"
 power = 1
-target = "cavalry"
+target = ExtResource( 3 )
 
 [sub_resource type="Resource" id=2]
 script = ExtResource( 2 )
-name_of_effect = "Атака"
+name_of_effect = "Оборона"
 power = 1
-target = "infantry"
-
-[sub_resource type="Resource" id=3]
-script = ExtResource( 3 )
-name_of_effect = "Потребление"
-power = 1
-target = "ammo_supply"
-
-[sub_resource type="Resource" id=4]
-script = ExtResource( 4 )
-name_of_effect = "Потерянное поколение"
+target = ExtResource( 4 )
 
 [resource]
 script = ExtResource( 1 )
 cost = 1800
-name_of_technology = "Современное вооружение"
-list_of_effects = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ]
+activation_year = 1930
+name_of_technology = "modern_small_arms"
+list_of_effects = [ SubResource( 1 ), SubResource( 2 ) ]

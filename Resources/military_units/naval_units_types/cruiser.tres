@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Resources/military_units/unit_type.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+unit_name = "Крейсер"
+attack = 8
+defense = 10
+speed = 2

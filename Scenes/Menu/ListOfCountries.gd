@@ -6,14 +6,13 @@ func _ready():
 
 
 func spawn_buttons():
-	
-	var folder: Directory = Directory.new()
-	var _err = folder.open("res://Resources/StatesOnStartGame/States/")
-	var _err_ = folder.list_dir_begin(true, true)
+	var folder = DirAccess.open("res://Resources/StatesOnStartGame/States/")
+	var _err_ = folder.list_dir_begin() # TODOGODOT4 fill missing arguments https://github.com/godotengine/godot/pull/40547
 	var folder_name = folder.get_next()
 	
 	while folder_name != "":
-		var file = load("res://Resources/StatesOnStartGame/States/" + folder_name)
+		var path = "res://Resources/StatesOnStartGame/States/" + folder_name
+		var file = load(path)
 		set_client_button(file.name_of_state)
 		folder_name = folder.get_next()
 		

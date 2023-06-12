@@ -1,21 +1,23 @@
 extends Panel
 
-onready var game = get_parent().get_parent().get_parent()
-onready var player = get_parent().get_parent()
-onready var start_research_button = $StartResearch
+@onready var game = get_parent().get_parent().get_parent()
+@onready var player = get_parent().get_parent()
+@onready var start_research_button = $StartResearch
+@onready var effects_container = $Effects
+@onready var example_button = $TextureButtonExample
+@onready var example_label  = $LabelExample
 
-
-
-onready var cotegories: Dictionary = {
+@onready var cotegories: Dictionary = {
 	$HBoxContainer/ArmyManagerement: "army_managerment",
 	$HBoxContainer/HeavyWeapon:      "heavy_weapon",
 	$HBoxContainer/LightWeapon:      "light_weapon",
-	$HBoxContainer/Navy:             "navy",
+	$HBoxContainer/ShipDesign:       "ship_design",
+	$HBoxContainer/FleetManagement:  "fleet_management",
 	
 	$HBoxContainer2/FactoryProduction:   "factory_production",
 	$HBoxContainer2/FarmProduction:      "physics_and_energy",
 	$HBoxContainer2/Metallurgy:          "metallurgy",
-	$HBoxContainer2/Supply:              "supply",
+	$HBoxContainer2/Infrastructure:      "infrastructure",
 	$HBoxContainer2/EconomicStructures:  "economic_structures",
 }
 
@@ -32,22 +34,38 @@ func update_technologies():
 
 
 func spawn_button(list, i, technology):
-	var button = $ButtonExample.duplicate()
+	var button = example_button.duplicate()
 	button.parent = self
 	button.technology = technology
 	button.level = list.find(technology) + 1
-	button.text = technology.name_of_technology
+	button.text = set_button_text(tr(technology.name_of_technology), button)
 	i.add_child(button)
+
+
+func set_button_text(text: String, button):
+	if text.length() > 30:
+		text = text.substr(0, 25)
+		var new_text = text + "..."
+		return new_text
+	return text
 
 
 func show_technology(button):
 	clear_labels()
+	show_technology_name(button.technology)
+	
 	for i in button.technology.list_of_effects:
-		var label = $LabelExample.duplicate()
+		var label = example_label.duplicate()
 		label.text = i.get_effect()
-		$Effects.add_child(label)
+		effects_container.add_child(label)
 	showing_technology = button.technology
 	check_start_research_button()
+
+
+func show_technology_name(technology):
+	var label_name = example_label.duplicate()
+	label_name.text = technology.name_of_technology
+	effects_container.add_child(label_name)
 
 
 func check_start_research_button():
@@ -58,12 +76,12 @@ func check_start_research_button():
 
 
 func clear_labels():
-	for i in $Effects.get_children():
+	for i in effects_container.get_children():
 		i.queue_free()
 
 
 func start_research():
-	Players.player.technologies.start_research(showing_technology)
+	Players.player.research_manager.start_research(showing_technology)
 	check_start_research_button()
 
 

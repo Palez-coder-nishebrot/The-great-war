@@ -3,8 +3,8 @@ extends Node
 class_name PartiesManager
 
 var list_of_parties: Array = []
-var ruling_party: PoliticalParty
-var supporting_party_by_client: PoliticalParty
+var ruling_party: Object
+var supporting_party_by_client: Object
 var client: Object
 
 const growth_of_popularity: float = 0.05
@@ -26,9 +26,9 @@ func _init(client_, ideology):
 
 func set_parties(ideology):
 	self.client = client
-	var folder: Directory = Directory.new()
+	var folder: DirAccess = DirAccess.new()
 	var _err = folder.open("res://Resources/Parties/Ideologies/")
-	var _err_ = folder.list_dir_begin(true, true)
+	var _err_ = folder.list_dir_begin() # TODOGODOT4 fill missing arguments https://github.com/godotengine/godot/pull/40547
 	
 	for _i in range(6):
 		var party = PoliticalParty.new()
@@ -40,7 +40,7 @@ func set_parties(ideology):
 		
 		if ideology == file.ideology:
 			ruling_party = party
-			party.change_country()
+			party.become_ruling_party()
 
 
 func update_popularity_of_parties():

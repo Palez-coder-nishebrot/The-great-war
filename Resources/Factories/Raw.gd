@@ -2,6 +2,6 @@ extends Resource
 
 class_name Raw
 
-export(Resource) var good
+@export var good: Resource
 
-export(float) var quantity = 0.0
+@export var quantity: float = 0.0

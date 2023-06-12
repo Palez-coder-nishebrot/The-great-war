@@ -2,11 +2,11 @@ extends TechnologyEffect
 
 class_name TechnologyEffectProductionGoods
 
-export(String) var name_of_effect = "Выпуск продукции"
+@export var name_of_effect: String = "Выпуск продукции"
 
-export(float) var power = 0.0
+@export var power: float = 0.0
 
-export(Resource) var target
+@export var target: Resource
 
 
 func get_effect():

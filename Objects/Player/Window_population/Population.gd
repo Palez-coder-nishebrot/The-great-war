@@ -1,36 +1,35 @@
 extends Panel
 
-signal update_household_panels()
+signal update_region_panel
 
-var list_of_soc_classes: Array = []
+var accounted_regions_list: Array = []
 
-
-func _ready():
-	spawn_panel(Players.player.capitalists_manager, "Промышленники")
+@onready var region_panel_example = $region_panel
+@onready var container           = $ScrollContainer/VBoxContainer
 
 
 func update_information():
-	var list = Players.player.list_of_tiles
+	var list = Players.player.regions_list
 
-	emit_signal("update_household_panels")
+	emit_signal("update_region_panel")
 	
 	spawn_panels(list)
 	
-	$HouseholdPanel.update_information()
+	#$HouseholdPanel.update_information()
 
 
 func spawn_panels(list):
-	for i in list:
-		if not list_of_soc_classes.has(i.population_manager):
-			spawn_panel(i.population_manager, "Домохозяйство")
+	for region in list:
+		if not accounted_regions_list.has(region):
+			spawn_panel(region)
 
 
-func spawn_panel(soc_class, tipe_of_soc_class):
-	var panel = load("res://Objects/Player/Window_population/Household_button/Household.tscn").instance()
-	var _err = connect("update_household_panels", panel, "update_information")
-	panel.province = soc_class.province
-	panel.household = soc_class
-	panel.tipe_of_soc_class = tipe_of_soc_class
+func spawn_panel(region):
+	var panel = region_panel_example.duplicate()
+	
+	panel.region = region
+	accounted_regions_list.append(region)
+	connect("update_region_panel", Callable(panel, "update"))
+	
+	container.add_child(panel)
 	panel.update()
-	$ScrollContainer/VBoxContainer.add_child(panel)
-	list_of_soc_classes.append(soc_class)

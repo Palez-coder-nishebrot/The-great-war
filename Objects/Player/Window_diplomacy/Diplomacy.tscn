@@ -1,6 +1,6 @@
 [gd_scene format=2]
 
 [node name="Diplomacy" type="Panel"]
-margin_top = 61.0
-margin_right = 1920.0
-margin_bottom = 1080.0
+offset_top = 61.0
+offset_right = 1920.0
+offset_bottom = 1080.0

@@ -1,7 +1,7 @@
 extends Button
 
 
-export(String) var name_of_factory = ""
+@export var name_of_factory: String = ""
 var parent 
 
 func _gui_input(event):

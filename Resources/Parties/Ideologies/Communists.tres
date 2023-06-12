@@ -1,18 +1,21 @@
 [gd_resource type="Resource" load_steps=6 format=2]
 
 [ext_resource path="res://Resources/Parties/Ideology.gd" type="Script" id=1]
-[ext_resource path="res://Resources/Parties/Policy/TradePolicy/Protectionism.tres" type="Resource" id=2]
-[ext_resource path="res://Resources/Parties/Policy/EconomyPolicy/PlannedEconomy.tres" type="Resource" id=3]
-[ext_resource path="res://Resources/Parties/Policy/ForeignPolicy/Militarism.tres" type="Resource" id=4]
-[ext_resource path="res://Resources/Parties/Policy/FormsOfGovernment/SovietRepublic.tres" type="Resource" id=5]
+[ext_resource path="res://Resources/Parties/Policy/goverment_form/soviet_republic.tres" type="Resource" id=2]
+[ext_resource path="res://Resources/Parties/Policy/trade_policy/protectionism.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Parties/Policy/economy_policy/planned_economy.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Parties/Policy/military_policy/expansionism.tres" type="Resource" id=5]
 
 [resource]
 script = ExtResource( 1 )
 ideology = "communists"
-economic_policy = ExtResource( 3 )
-trade_policy = ExtResource( 2 )
-foreign_policy = ExtResource( 4 )
-names_of_parties = PoolStringArray( "Коммунистическая партия" )
+economic_policy = ExtResource( 4 )
+trade_policy = ExtResource( 3 )
+military_policy = ExtResource( 5 )
+names_of_parties = [ "РСДРП(б)", "Социал-демократическая рабочая партия" ]
+available_for_setting_ruling_party = [ ExtResource( 2 ) ]
 supporting_soc_reforms = 1
-supporting_pol_reforms = -1
-form_of_government = ExtResource( 5 )
+supporting_pol_reforms = 0
+rollback_soc_reforms = 0
+rollback_pol_reforms = 1
+government_form = ExtResource( 2 )

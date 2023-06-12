@@ -2,7 +2,7 @@ extends Node
 
 class_name Population
 
-export(Array, Resource) var population_types = [PopulationUnit.new(), PopulationUnit.new(), PopulationUnit.new()]
+@export var population_types = [PopulationUnit.new(), PopulationUnit.new(), PopulationUnit.new()] # (Array, Resource)
 
 
 func _init():

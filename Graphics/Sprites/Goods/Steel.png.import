@@ -1,35 +1,34 @@
 [remap]
 
 importer="texture"
-type="StreamTexture"
-path="res://.import/Steel.png-40e3ed2921860a478741235d1f1a1c9e.stex"
+type="CompressedTexture2D"
+uid="uid://bh1hrk1qhjm0l"
+path="res://.godot/imported/steel.png-e865803e06a1c3dfa759b3fa059cf1d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphics/Sprites/Goods/Steel.png"
-dest_files=[ "res://.import/Steel.png-40e3ed2921860a478741235d1f1a1c9e.stex" ]
+source_file="res://Graphics/Sprites/goods/steel.png"
+dest_files=["res://.godot/imported/steel.png-e865803e06a1c3dfa759b3fa059cf1d7.ctex"]
 
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
-compress/hdr_mode=0
-compress/bptc_ldr=0
+compress/hdr_compression=1
 compress/normal_map=0
-flags/repeat=0
-flags/filter=false
-flags/mipmaps=false
-flags/anisotropic=false
-flags/srgb=2
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
 process/fix_alpha_border=true
 process/premult_alpha=false
-process/HDR_as_SRGB=false
-process/invert_color=false
 process/normal_map_invert_y=false
-stream=false
-size_limit=0
-detect_3d=false
-svg/scale=1.0
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

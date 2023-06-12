@@ -1,11 +1,11 @@
 class_name Good
 extends Resource
 
-export(String) var name = "Название для отображения"
-export(int) var base_price = 0
-export(int) var min_price  = 0
-export(int) var max_price  = 0
+@export var name: String = "Название для отображения"
+@export var base_price: int = 0
+@export var min_price: int  = 0
+@export var max_price: int  = 0
 
-export(Texture) var icon
+@export var icon: Texture2D
 
-export(float) var based_effiency_production = 1.0
+@export var based_effiency_production: float = 1.0

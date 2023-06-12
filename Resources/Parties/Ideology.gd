@@ -1,16 +1,21 @@
 extends Resource
 
 
-export(String, "liberals", "libertarians", "socialists", "communists", "fascists", "conservators") var ideology = "liberals"
+@export var ideology: String = "liberals"
 
-export(Resource) var economic_policy = Resource
-export(Resource) var trade_policy = Resource
-export(Resource) var foreign_policy = Resource
+@export var economic_policy: Resource
+@export var trade_policy: Resource
+@export var military_policy: Resource
 
-export(Array) var names_of_parties = []
+@export var names_of_parties = [] # (Array, String)
+@export var available_for_setting_ruling_party = [] # формы правления при которых можно назначить партию с этой идеологией правящей # (Array, Resource)
 
-export(int) var supporting_soc_reforms = 0
-export(int) var supporting_pol_reforms = 0
+@export var supporting_soc_reforms: int = 0
+@export var supporting_pol_reforms: int = 0
 
-export(Resource) var form_of_government = Resource
+@export var rollback_soc_reforms: int = 0
+@export var rollback_pol_reforms: int = 0
+
+
+@export var government_form: Resource
 

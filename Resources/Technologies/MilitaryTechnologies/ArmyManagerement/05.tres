@@ -2,49 +2,37 @@
 
 [ext_resource path="res://Resources/Technologies/Technology.gd" type="Script" id=1]
 [ext_resource path="res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectAttack.gd" type="Script" id=2]
-[ext_resource path="res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectLostGeneration.gd" type="Script" id=3]
+[ext_resource path="res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectDefense.gd" type="Script" id=3]
+[ext_resource path="res://Resources/military_units/army_units_types/airplanes.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/military_units/army_units_types/tanks.tres" type="Resource" id=5]
 
 [sub_resource type="Resource" id=1]
-resource_name = "Attack"
 script = ExtResource( 2 )
 name_of_effect = "Атака"
 power = 1
-target = "stormtroopers"
+target = ExtResource( 4 )
 
 [sub_resource type="Resource" id=2]
-resource_name = "Attack"
-script = ExtResource( 2 )
-name_of_effect = "Атака"
-power = 1
-target = "armored_car"
+script = ExtResource( 3 )
+name_of_effect = "Оборона"
+power = 2
+target = ExtResource( 4 )
 
 [sub_resource type="Resource" id=3]
-resource_name = "Attack"
 script = ExtResource( 2 )
 name_of_effect = "Атака"
 power = 1
-target = "tank"
+target = ExtResource( 5 )
 
 [sub_resource type="Resource" id=4]
-resource_name = "Attack"
-script = ExtResource( 2 )
-name_of_effect = "Атака"
-power = 1
-target = "fighter_airplane"
-
-[sub_resource type="Resource" id=5]
-resource_name = "Attack"
-script = ExtResource( 2 )
-name_of_effect = "Атака"
-power = 1
-target = "bomber_airplane"
-
-[sub_resource type="Resource" id=6]
 script = ExtResource( 3 )
-name_of_effect = "Потерянное поколение"
+name_of_effect = "Оборона"
+power = 2
+target = ExtResource( 5 )
 
 [resource]
 script = ExtResource( 1 )
 cost = 1800
-name_of_technology = "Общевойсковой бой"
-list_of_effects = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ]
+activation_year = 1930
+name_of_technology = "modern_military_tactics"
+list_of_effects = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ]

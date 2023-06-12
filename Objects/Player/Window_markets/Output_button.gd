@@ -4,7 +4,7 @@ var good: String
 
 
 func start(parent):
-	parent.connect("update_info_about_output", self, "update_")
+	parent.connect("update_info_about_output", Callable(self, "update_"))
 	icon = load(Players.sprites_of_goods[good])
 
 

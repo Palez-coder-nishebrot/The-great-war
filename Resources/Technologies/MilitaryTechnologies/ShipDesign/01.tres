@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Resources/Technologies/Technology.gd" type="Script" id=2]
+
+[resource]
+script = ExtResource( 2 )
+cost = 1000
+activation_year = 1914
+name_of_technology = "steel_ships"
+list_of_effects = [  ]

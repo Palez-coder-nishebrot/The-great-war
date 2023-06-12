@@ -2,7 +2,7 @@ extends Resource
 
 class_name Landscape
 
-export(String) var landscape = "Fields"
+@export var landscape: String = "Fields"
 # Леса, Холмы, Горы, Равнины
 
 

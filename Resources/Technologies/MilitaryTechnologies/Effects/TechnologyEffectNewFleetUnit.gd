@@ -2,13 +2,13 @@ extends TechnologyEffect
 
 class_name TechnologyEffectNewFleetUnit
 
-export(String) var name_of_effect = "Новый тип корабля"
+@export var name_of_effect: String = "Новый тип корабля"
 
-export(String, "dreadnought", "cruiser_of_death", "battleship_of_death") var target = "dreadnought"
+@export var target: Resource
 	
 
 func get_effect():
-	return name_of_effect + ": " + list_of_points_of_effect[target]
+	return name_of_effect + ": " + tr(target.unit_name)
 
 
 func activate_effects(client):

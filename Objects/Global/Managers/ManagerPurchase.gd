@@ -34,22 +34,20 @@ var list_of_population_managers: Array = []
 
 
 func resourse_extraction(_game):
-	for i in _game.get_node("TileMap").get_children():
-		if i.get_class() == "TextureButton":
-			for good in i.resources:
-				var economic_bonuses = i.player.economic_bonuses
-				var pop_unit = i.population.population_types[0]
+	for region in _game.get_node("TileMap").get_children():
+		if region.get_class() == "TextureButton":
+			for dp in region.DP_list:
+				var good = dp.good
+				var pop_unit = region.population.population_types[0]
 				
 				pop_unit.income = 0
 				
-				var bonuses: float = good.based_effiency_production + economic_bonuses.DP_efficiency_production + economic_bonuses.goods_efficiency_production[good]
-				bonuses += i.get_production_bonuses()[1]
-				
-				var quanity = bonuses * pop_unit.quantity
-				sell_resources(i.player, good, stepify(quanity, 0.01), pop_unit)
+				var production_efficiency: float = dp.get_DP_production_efficiency()
+				var good_quanity = production_efficiency * pop_unit.quantity
+				sell_resources(region.player, good, snapped(good_quanity, 0.01), pop_unit, dp)
 
 
-func sell_resources(player, good, quanity, pop_unit):
+func sell_resources(player, good, quanity, pop_unit, dp):
 	player.demand_supply_goods[good][1] += quanity
 	player.local_market[good] += quanity
 	Functions.change_GDP(good, quanity, player)
@@ -57,3 +55,6 @@ func sell_resources(player, good, quanity, pop_unit):
 
 	pop_unit.money += income
 	pop_unit.income += income
+	
+	dp.income                 = income
+	dp.selling_goods_quantity = quanity

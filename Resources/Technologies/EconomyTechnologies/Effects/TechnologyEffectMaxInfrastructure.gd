@@ -2,11 +2,11 @@ extends TechnologyEffect
 
 class_name TechnologyEffectMaxInfrastructure
 
-export(String) var name_of_effect = "Максимум инфраструктуры"
+@export var name_of_effect: String = "Максимум инфраструктуры"
 
-export(String, "max_railways", "max_infrastructure") var target = "max_railways"
+@export var target = "max_railways" # (String, "max_railways", "max_infrastructure")
 
-export(int) var value = 1
+@export var value: int = 1
 
 
 func get_effect():

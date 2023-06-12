@@ -5,13 +5,13 @@ signal update_info(list) # Сигнал вызывается! (наверно)
 var province
 var factory: Object
 
-onready var actions_container: VBoxContainer      = $Actions
-onready var raw_container: HBoxContainer          = $HBoxContainer
-onready var production_goods_label: Label = $Output
-onready var workers_label: Label          = $Workers
-onready var income_label: Label           = $Income
-onready var efficiency_label: Label       = $Efficiency
-onready var good_texture_rect: TextureRect      = $Good
+@onready var actions_container: VBoxContainer      = $Actions
+@onready var raw_container: HBoxContainer          = $HBoxContainer
+@onready var production_goods_label: Label = $Output
+@onready var workers_label: Label          = $Workers
+@onready var income_label: Label           = $Income
+@onready var efficiency_label: Label       = $Efficiency
+@onready var good_texture_rect: TextureRect      = $Good
 
 
 func Che_za_huinya():
@@ -53,10 +53,10 @@ func update_information_about_income():
 	var profit = factory.get_profit()
 	if profit >= 0: 
 		income_label.text = "+" + str(profit)
-		income_label.add_color_override("font_color", Color(0.094118, 0.580392, 0))
+		income_label.add_theme_color_override("font_color", Color(0.094118, 0.580392, 0))
 	else: 
 		income_label.text = str(profit)
-		income_label.add_color_override("font_color", Color(0.712891, 0.146894, 0.146894))
+		income_label.add_theme_color_override("font_color", Color(0.712891, 0.146894, 0.146894))
 
 
 func update_information_about_factory():
@@ -76,11 +76,13 @@ func update_information_about_closed_factory():
 
 func show_purchase():
 	Che_za_huinya()
-	var list: Array = factory.raw.duplicate()
+	var list: Array = factory.raw_storage.duplicate()
 	var children    = raw_container.get_children()
 	
-	for raw in list:
-		children[list.find(raw)].texture = raw.good.icon
+	for storage_good in list:
+		var raw_icon = children[list.find(storage_good)]
+		raw_icon.texture = storage_good.good.icon
+		raw_icon.storage_good = storage_good
 	
 
 func show_good():
@@ -89,7 +91,7 @@ func show_good():
 
 func on_good_button_pressed(event):
 	if event is InputEventMouseButton and event.is_pressed():
-		if event.button_index == BUTTON_RIGHT:
+		if event.button_index == MOUSE_BUTTON_RIGHT:
 			var window = Players.player.window_production.info_about_factory_window
 			window.factory = factory
 			window.visible = true

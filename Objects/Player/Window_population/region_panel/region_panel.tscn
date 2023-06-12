@@ -1,0 +1,82 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Graphics/Fonts/pixel_2.ttf" type="FontFile" id=1]
+[ext_resource path="res://Objects/Player/Window_population/region_panel/pop_unit_element/pop_unit_element.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Objects/Player/Window_population/region_panel/region_panel.gd" type="Script" id=3]
+[ext_resource path="res://Graphics/Sprites/population_types/worker.png" type="Texture2D" id=4]
+[ext_resource path="res://Graphics/Sprites/population_types/labour.png" type="Texture2D" id=5]
+
+[sub_resource type="FontFile" id=1]
+size = 64
+use_mipmaps = true
+font_data = ExtResource( 1 )
+
+[node name="region_panel" type="HBoxContainer"]
+offset_right = 1920.0
+offset_bottom = 103.0
+script = ExtResource( 3 )
+
+[node name="region_name" type="Label" parent="."]
+offset_right = 477.0
+offset_bottom = 104.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = SubResource( 1 )
+text = "Галиция"
+valign = 1
+
+[node name="pop_unit_element" parent="." instance=ExtResource( 2 )]
+offset_left = 481.0
+offset_right = 958.0
+offset_bottom = 104.0
+
+[node name="Chars" parent="pop_unit_element" index="0"]
+offset_bottom = 104.0
+
+[node name="quantity" parent="pop_unit_element/Chars" index="0"]
+offset_bottom = 32.0
+
+[node name="welfare" parent="pop_unit_element/Chars" index="1"]
+offset_top = 36.0
+offset_bottom = 68.0
+
+[node name="income" parent="pop_unit_element/Chars" index="2"]
+offset_top = 72.0
+offset_bottom = 104.0
+
+[node name="pop_type" parent="pop_unit_element" index="1"]
+offset_right = 477.0
+offset_bottom = 104.0
+texture = ExtResource( 5 )
+
+[node name="pop_unit_element2" parent="." instance=ExtResource( 2 )]
+offset_left = 962.0
+offset_right = 1439.0
+offset_bottom = 104.0
+
+[node name="Chars" parent="pop_unit_element2" index="0"]
+offset_bottom = 104.0
+
+[node name="quantity" parent="pop_unit_element2/Chars" index="0"]
+offset_bottom = 32.0
+
+[node name="welfare" parent="pop_unit_element2/Chars" index="1"]
+offset_top = 36.0
+offset_bottom = 68.0
+
+[node name="income" parent="pop_unit_element2/Chars" index="2"]
+offset_top = 72.0
+offset_bottom = 104.0
+
+[node name="pop_type" parent="pop_unit_element2" index="1"]
+offset_right = 477.0
+offset_bottom = 104.0
+texture = ExtResource( 4 )
+
+[node name="pop_unit_element3" parent="." instance=ExtResource( 2 )]
+offset_left = 1443.0
+offset_right = 1920.0
+offset_bottom = 104.0
+
+[editable path="pop_unit_element"]
+[editable path="pop_unit_element2"]

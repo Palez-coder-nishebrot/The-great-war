@@ -1,11 +1,10 @@
 extends Resource
 
-export(String, "free_economy", "interventionism", "state_capitalism", "planned_economy") var name_of_policy = "free_economy"
+@export var policy_name: String = ""
 
-export(int) var cost_of_factories = 0
-export(int) var cost_of_infrastructure = 0
+@export var factory_cost: int = 0
+@export var infrastructure_cost: int = 0
 
-export(bool) var subsidization = true
-export(bool) var building_not_profit_factories = true
-
-export(int) var income_of_capitalists = 0
+@export var subsidization: bool = true
+@export var building_not_profit_factories: bool = true
+@export var private_property: bool = true

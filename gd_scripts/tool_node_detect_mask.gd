@@ -1,4 +1,4 @@
-extends Reference
+extends RefCounted
 
 var node_name = ""
 var error = ""

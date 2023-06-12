@@ -14,7 +14,7 @@ func _ready():
 
 
 func create_map():
-	var map = load("res://Scenes/TileMap/TileMap.tscn").instance()
+	var map = load("res://Scenes/TileMap/TileMap.tscn").instantiate()
 	get_node("Map").position = map.get_node("Map").position
 	
 	var children = get_children()
@@ -35,12 +35,12 @@ func set_dict_of_regions():
 
 
 func create_region(region_from_tilemap: TextureButton, map):
-	var region = load("res://Scenes/MapEditor/EditorTile/EditorTile.tscn").instance()
+	var region = load("res://Scenes/MapEditor/EditorTile/EditorTile.tscn").instantiate()
 	add_child(region)
 	region.texture_normal = region_from_tilemap.texture_normal
 	region.name_of_region = region_from_tilemap.name
 	region.label.text = region_from_tilemap.name
-	region.rect_position = region_from_tilemap.rect_position
+	region.position = region_from_tilemap.position
 	
 	if not provinces.has(region.name_of_region):
 		provinces[region.name_of_region] = {
@@ -65,16 +65,16 @@ func create_region(region_from_tilemap: TextureButton, map):
 	
 	list_of_regions[region.name_of_region] = region
 	
-	var region_on_map = map.get_node(region.name_of_region).get_node("Label")#.name_of_region_label.rect_position
-	region.label.rect_position = region_on_map.rect_position
-	region.label.rect_rotation = region_on_map.rect_rotation
+	var region_on_map = map.get_node(region.name_of_region).get_node("Label")#.name_of_region_label.position
+	region.label.position = region_on_map.position
+	region.label.rotation = region_on_map.rotation
 	region.set_mask()
 	
 
 func set_color_of_regions():
-	var folder: Directory = Directory.new()
+	var folder: DirAccess = DirAccess.new()
 	folder.open("res://Resources/StatesOnStartGame/States/")
-	folder.list_dir_begin(true, true)
+	folder.list_dir_begin() # TODOGODOT4 fill missing arguments https://github.com/godotengine/godot/pull/40547
 	
 	var folder_name = folder.get_next()
 	

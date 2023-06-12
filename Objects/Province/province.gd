@@ -1,4 +1,4 @@
-tool
+@tool
 extends Node2D
 
 func get_country():
@@ -9,7 +9,7 @@ func get_border():
 	return get_node("Border")
 
 
-func _get_configuration_warning():
+func _get_configuration_warnings():
 	var Helper = preload("res://gd_scripts/tool_node_helper.gd")
 		
 	return Helper.detect_children([

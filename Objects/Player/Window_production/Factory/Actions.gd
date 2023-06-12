@@ -3,7 +3,7 @@ extends VBoxContainer
 const closed_list: Dictionary = {false: "Закрыть", true: "Открыть"}
 const subsidization_list: Dictionary = {true: "Да", false: "Нет"}
 
-onready var parent = get_parent()
+@onready var parent = get_parent()
 
 func update_information():
 	parent = get_parent()

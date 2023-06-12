@@ -1,18 +1,20 @@
 [gd_resource type="Resource" load_steps=6 format=2]
 
 [ext_resource path="res://Resources/Parties/Ideology.gd" type="Script" id=1]
-[ext_resource path="res://Resources/Parties/Policy/TradePolicy/FreeTrade.tres" type="Resource" id=2]
-[ext_resource path="res://Resources/Parties/Policy/EconomyPolicy/Interventionism.tres" type="Resource" id=3]
-[ext_resource path="res://Resources/Parties/Policy/ForeignPolicy/Pacifism.tres" type="Resource" id=4]
-[ext_resource path="res://Resources/Parties/Policy/FormsOfGovernment/Republic.tres" type="Resource" id=5]
+[ext_resource path="res://Resources/Parties/Policy/economy_policy/interventionism.tres" type="Resource" id=2]
+[ext_resource path="res://Resources/Parties/Policy/military_policy/pacifism.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Parties/Policy/trade_policy/free_trade.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Parties/Policy/goverment_form/republic.tres" type="Resource" id=5]
 
 [resource]
 script = ExtResource( 1 )
 ideology = "socialists"
-economic_policy = ExtResource( 3 )
-trade_policy = ExtResource( 2 )
-foreign_policy = ExtResource( 4 )
-names_of_parties = PoolStringArray( "Социал-демократическая партия", "Партия рабочего права" )
+economic_policy = ExtResource( 2 )
+trade_policy = ExtResource( 4 )
+military_policy = ExtResource( 3 )
+names_of_parties = [ "Социал-демократическкая партия" ]
 supporting_soc_reforms = 1
 supporting_pol_reforms = 0
-form_of_government = ExtResource( 5 )
+rollback_soc_reforms = 0
+rollback_pol_reforms = 0
+government_form = ExtResource( 5 )

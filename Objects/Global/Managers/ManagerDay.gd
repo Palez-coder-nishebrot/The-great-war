@@ -1,12 +1,24 @@
 extends Node
 
+signal allocate_workers_to_DP
 signal allocate_workers_to_factories
-signal clear_income_in_pop_units
+
+signal set_accounting
+signal sort_factories_list
+signal set_based_profit
+signal produce_goods
+signal buy_raw
+signal update_prices # EconomyManager
+signal set_gdp # EconomyManager
+signal check_factories_bankrupt
+
+signal clear_markets
+signal clear_accounting 
 
 var game: Object
 
 func update_information_in_GUI():
-	Players.player.information.check_GDP()
+	Players.player.information.update_info()
 	Players.player.window_markets.update_information()
 	
 	Players.player.window_production.update_information()
@@ -19,50 +31,28 @@ func update_information_in_GUI():
 
 
 func update_economy():
+	emit_signal("allocate_workers_to_DP")
 	emit_signal("allocate_workers_to_factories")
+	emit_signal("produce_goods")
+	emit_signal("set_based_profit")
+	emit_signal("sort_factories_list")
+	emit_signal("buy_raw")
+	emit_signal("check_factories_bankrupt")
+	emit_signal("set_gdp")
+	SceneStorage.population_manager.set_population_incomes()
 	#update_expenses_on_railways()
 	#game.craftsmen_manager.choose_good(game.time_of_game.day)
 	
-	game.purchase_manager.resourse_extraction(game) # Добыча ресусов населенем
-	game.factory_manager.make_goods() # Производство товаров фабриками
+	#game.purchase_manager.resourse_extraction(game) # Добыча ресусов населенем
+	#game.factory_manager.make_goods() # Производство товаров фабриками
 	#game.factory_manager.buy_purchase() # Купить сырье для фабрик
 	SceneStorage.population_manager.meet_needs() # Купить товары для населения
 	#update_investing_in_factories()
 	update_balance()
 	#GlobalMarket.export_goods_from_local_markets()
+	emit_signal("update_prices")
+	emit_signal("set_accounting")
 	
-
-
-func clear_markets():
-	for client in Players.list_of_players:
-		for good in client.local_market:
-			client.local_market[good] = 0
-			client.export_goods[good] = 0
-			client.import_goods[good] = 0
-			client.production_goods[good] = 0
-			
-			client.demand_supply_goods[good][0] = 0
-			client.demand_supply_goods[good][1] = 0
-
-
-func update_prices():
-	for client in Players.list_of_players:
-		for good in client.local_market:
-			var price_good = client.prices_goods[good]
-			var demand = client.demand_supply_goods[good][0]
-			var supply = client.demand_supply_goods[good][1]
-			
-			if demand != 0:
-				var q = ((supply / demand) * 100) - 100
-				var price = good.base_price - (good.base_price * 0.01) * q
-				
-				if price > price_good and price_good < good.max_price:
-					client.prices_goods[good] += 0.05
-				elif price < price_good and price_good > good.min_price:
-					client.prices_goods[good] -= 0.05
-			
-			elif supply > 0 and price_good > good.min_price:
-				client.prices_goods[good] -= 0.05
 
 func update_balance():
 	for i in Players.list_of_players:
@@ -77,13 +67,6 @@ func update_expenses_on_railways():
 func update_investing_in_factories():
 	for i in Players.list_of_players:
 		i.capitalists_manager.invest_in_factories()
-
-
-func update_accounting():
-	for i in Players.list_of_players:
-		for y in i.accounting:
-			i.accounting[y] = 0
-		i.capitalists_manager.income = 0
 
 
 func population_pays_taxes():

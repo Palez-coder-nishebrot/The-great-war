@@ -23,7 +23,7 @@ func start_training():
 	var time = 0
 	
 	while time != 3:
-		yield(game, "new_day")
+		await game.new_day
 		time = time + 1
 	
 	province.training_units = null
@@ -83,7 +83,7 @@ func move_to_tile(tile):
 	
 
 func move():
-	yield(game, "new_day")
+	await game.new_day
 	
 	if point != null and province != point:
 		move_to_tile(find_closed_tile(province, [], point))

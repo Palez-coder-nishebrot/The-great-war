@@ -6,4 +6,6 @@
 [resource]
 script = ExtResource( 1 )
 quantity = 0.1
+int_good_quantity = 0.05
 good_type = ExtResource( 2 )
+interchangeable_good = ExtResource( 2 )

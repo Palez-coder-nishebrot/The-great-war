@@ -2,10 +2,10 @@ extends Area2D
 
 var player: Object
 
-onready var name_of_player = name
+@onready var name_of_player = name
 
 func _ready():
-	connect("area_shape_entered", self, "tile_entered")
+	connect("area_shape_entered", Callable(self, "tile_entered"))
 
 
 func tile_entered(area_rid, area, area_shape_index, local_shape_index):

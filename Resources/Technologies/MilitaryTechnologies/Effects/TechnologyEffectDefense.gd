@@ -2,16 +2,15 @@ extends TechnologyEffect
 
 class_name TechnologyEffectDefense
 
-export(String) var name_of_effect = "Оборона"
+@export var name_of_effect: String = "Оборона"
 
-export(int) var power = 0
+@export var power: int = 0
 
-export(String, "infantry", "artillery", "cavalry", "stormtroopers", "armored_car", "tank",
-	"combat_airplane", "fighter_airplane", "bomber_airplane", "fleet") var target = "infantry"
+@export var target: Resource
 	
 
 func get_effect():
-	return name_of_effect + " " + list_of_points_of_effect[target] + ": +" + str(power)
+	return name_of_effect + " " + tr(target.unit_name) + ": +" + str(power)
 
 
 func activate_effects(client):

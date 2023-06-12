@@ -2,6 +2,6 @@ extends Resource
 
 class_name SavedHousehold
 
-export(String) var soc_class = "Worker"
+@export var soc_class: String = "Worker"
 
-export(int) var education = 0 
+@export var education: int = 0 

@@ -1,5 +1,7 @@
 extends Resource
 
 
-export(float)    var quantity = 0.1
-export(Resource) var good_type
+@export var quantity: float = 0.1
+@export var int_good_quantity: float = 0.1
+@export var good_type: Resource
+@export var interchangeable_good: Resource #Взаимозаменяемый товар

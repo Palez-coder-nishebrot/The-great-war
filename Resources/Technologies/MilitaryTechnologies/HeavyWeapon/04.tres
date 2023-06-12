@@ -1,45 +1,25 @@
-[gd_resource type="Resource" load_steps=11 format=2]
+[gd_resource type="Resource" load_steps=7 format=2]
 
 [ext_resource path="res://Resources/Technologies/Technology.gd" type="Script" id=1]
 [ext_resource path="res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectDefense.gd" type="Script" id=2]
 [ext_resource path="res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectAttack.gd" type="Script" id=3]
-[ext_resource path="res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectSupply.gd" type="Script" id=4]
-[ext_resource path="res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectNewUnit.gd" type="Script" id=5]
+[ext_resource path="res://Resources/military_units/army_units_types/artillery.tres" type="Resource" id=4]
 
 [sub_resource type="Resource" id=1]
-resource_name = "Defense"
 script = ExtResource( 3 )
 name_of_effect = "Атака"
 power = 1
-target = "artillery"
+target = ExtResource( 4 )
 
 [sub_resource type="Resource" id=2]
-resource_name = "Attack"
 script = ExtResource( 2 )
 name_of_effect = "Оборона"
 power = 1
-target = "artillery"
-
-[sub_resource type="Resource" id=3]
-resource_name = "Supply"
-script = ExtResource( 4 )
-name_of_effect = "Потребление"
-power = 1
-target = "projectile_supply"
-
-[sub_resource type="Resource" id=4]
-script = ExtResource( 5 )
-name_of_effect = "Новый юнит"
-target = "tank"
-
-[sub_resource type="Resource" id=5]
-script = ExtResource( 3 )
-name_of_effect = "Атака"
-power = 1
-target = "armored_car"
+target = ExtResource( 4 )
 
 [resource]
 script = ExtResource( 1 )
 cost = 1400
-name_of_technology = "Штурмовое вооружение"
-list_of_effects = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ]
+activation_year = 1919
+name_of_technology = "battalion_artillery"
+list_of_effects = [ SubResource( 1 ), SubResource( 2 ) ]

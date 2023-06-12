@@ -2,20 +2,20 @@ extends Node
 
 class_name Technologies
 
-const MILITARY_TECHNOLOGIES_FILES: Dictionary = {
-	"army_managerment": "ArmyManagerement",
-	"heavy_weapon":     "HeavyWeapon",
-	"light_weapon":     "LightWeapon",
-	"navy":             "Navy",
-	}
+const MILITARY_TECHNOLOGIES_FILES: Array = [
+	"army_managerment",
+	"heavy_weapon",
+	"light_weapon",
+	"ship_design",
+	]
 
-const ECONOMIC_TECHNOLOGIES_FILES: Dictionary = {
-	"physics_and_energy":    "PhysicsAndEnergy",
-	"metallurgy":         "Metallurgy",
-	"factory_production": "FactoryProduction",
-	"supply":             "Supply",
-	"economic_structures":"EconomicStructures"
-}
+const ECONOMIC_TECHNOLOGIES_FILES: Array = [
+	"physics_and_energy",
+	"metallurgy",
+	"factory_production",
+	"infrastructure",
+	"economic_structures",
+]
 
 
 var army_managerment: Array = [
@@ -45,12 +45,20 @@ var light_weapon:     Array = [
 ]
 
 
-var navy:              Array = [
-	load("res://Resources/Technologies/MilitaryTechnologies/Navy/01.tres"),
-	load("res://Resources/Technologies/MilitaryTechnologies/Navy/02.tres"),
-	load("res://Resources/Technologies/MilitaryTechnologies/Navy/03.tres"),
-	load("res://Resources/Technologies/MilitaryTechnologies/Navy/04.tres"),
-	load("res://Resources/Technologies/MilitaryTechnologies/Navy/05.tres"),
+var ship_design:       Array = [
+	load("res://Resources/Technologies/MilitaryTechnologies/ShipDesign/01.tres"),
+	load("res://Resources/Technologies/MilitaryTechnologies/ShipDesign/02.tres"),
+	load("res://Resources/Technologies/MilitaryTechnologies/ShipDesign/03.tres"),
+	load("res://Resources/Technologies/MilitaryTechnologies/ShipDesign/04.tres"),
+	load("res://Resources/Technologies/MilitaryTechnologies/ShipDesign/05.tres"),
+]
+
+var fleet_management: Array = [
+	load("res://Resources/Technologies/MilitaryTechnologies/FleetManagement/01.tres"),
+	load("res://Resources/Technologies/MilitaryTechnologies/FleetManagement/02.tres"),
+	load("res://Resources/Technologies/MilitaryTechnologies/FleetManagement/03.tres"),
+	load("res://Resources/Technologies/MilitaryTechnologies/FleetManagement/04.tres"),
+	load("res://Resources/Technologies/MilitaryTechnologies/FleetManagement/05.tres"),
 ]
 
 
@@ -81,12 +89,12 @@ var factory_production: Array = [
 ]
 
 
-var supply:             Array = [
-	load("res://Resources/Technologies/EconomyTechnologies/Supply/01.tres"),
-	load("res://Resources/Technologies/EconomyTechnologies/Supply/02.tres"),
-	load("res://Resources/Technologies/EconomyTechnologies/Supply/03.tres"),
-	load("res://Resources/Technologies/EconomyTechnologies/Supply/04.tres"),
-	load("res://Resources/Technologies/EconomyTechnologies/Supply/05.tres"),
+var infrastructure:             Array = [
+	load("res://Resources/Technologies/EconomyTechnologies/Infrastructure/01.tres"),
+	load("res://Resources/Technologies/EconomyTechnologies/Infrastructure/02.tres"),
+	load("res://Resources/Technologies/EconomyTechnologies/Infrastructure/03.tres"),
+	load("res://Resources/Technologies/EconomyTechnologies/Infrastructure/04.tres"),
+	load("res://Resources/Technologies/EconomyTechnologies/Infrastructure/05.tres"),
 ]
 var economic_structures: Array = [
 	load("res://Resources/Technologies/EconomyTechnologies/EconomicStructures/01.tres"),
@@ -109,11 +117,11 @@ func _init(client_):
 
 
 func set_technologies():
-	set_cotegories(MILITARY_TECHNOLOGIES_FILES, "MilitaryTechnologies")
-	set_cotegories(ECONOMIC_TECHNOLOGIES_FILES, "EconomyTechnologies")
+	set_cotegories(MILITARY_TECHNOLOGIES_FILES)
+	set_cotegories(ECONOMIC_TECHNOLOGIES_FILES)
 
 
-func set_cotegories(TECHNOLOGIES_FILES, folder_name):
+func set_cotegories(TECHNOLOGIES_FILES):
 	for i in TECHNOLOGIES_FILES:
 		get(i)[0].ready_for_researching = true
 
@@ -122,7 +130,7 @@ func start_research(technology):
 	var pool_researching_points = technology.cost
 	researching_technology = technology
 	while pool_researching_points >= 0:
-		yield(Players.player.game, "new_day")
+		await Players.player.game.new_day
 		pool_researching_points -= client.researching_points
 		client.researching_points = 0
 	activate_effects()

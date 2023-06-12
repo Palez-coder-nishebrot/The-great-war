@@ -6,328 +6,13 @@
 ;   [section] ; section goes between []
 ;   param=value ; assign values to parameters
 
-config_version=4
-
-_global_script_classes=[ {
-"base": "Client",
-"class": "AI",
-"language": "GDScript",
-"path": "res://Objects/AI/AI.gd"
-}, {
-"base": "Node",
-"class": "CharsOfUnit",
-"language": "GDScript",
-"path": "res://Objects/Client/CharsOfUnit.gd"
-}, {
-"base": "Node",
-"class": "Client",
-"language": "GDScript",
-"path": "res://Objects/Client/Client.gd"
-}, {
-"base": "Resource",
-"class": "Coll_polygon_saver",
-"language": "GDScript",
-"path": "res://Objects/Provinces/CollisionPolygons_of_provinces.gd"
-}, {
-"base": "Node",
-"class": "CotegoryReform",
-"language": "GDScript",
-"path": "res://Objects/Client/ReformsManager/CotegoryReform.gd"
-}, {
-"base": "Reference",
-"class": "CreateClients",
-"language": "GDScript",
-"path": "res://Objects/Client/CreateClients.gd"
-}, {
-"base": "Node",
-"class": "EconomicBonuses",
-"language": "GDScript",
-"path": "res://Objects/Client/EconomicBonuses.gd"
-}, {
-"base": "Node",
-"class": "Factory",
-"language": "GDScript",
-"path": "res://Objects/Building/BasedFactory.gd"
-}, {
-"base": "Timer",
-"class": "GlobalTimer",
-"language": "GDScript",
-"path": "res://Objects/Global/GlobalTimer.gd"
-}, {
-"base": "Resource",
-"class": "Good",
-"language": "GDScript",
-"path": "res://Resources/Good/good.gd"
-}, {
-"base": "Resource",
-"class": "GoodOld",
-"language": "GDScript",
-"path": "res://Objects/Population/NeedsOfPopulation/Good.gd"
-}, {
-"base": "Node",
-"class": "Infrastructure",
-"language": "GDScript",
-"path": "res://Objects/Building/Infrastructure.gd"
-}, {
-"base": "Resource",
-"class": "Landscape",
-"language": "GDScript",
-"path": "res://Objects/Tile/Landscape.gd"
-}, {
-"base": "Node",
-"class": "MilitaryBonuses",
-"language": "GDScript",
-"path": "res://Objects/Client/MilitaryBonuses.gd"
-}, {
-"base": "Node",
-"class": "PartiesManager",
-"language": "GDScript",
-"path": "res://Objects/Client/PartiesManager.gd"
-}, {
-"base": "Resource",
-"class": "Party",
-"language": "GDScript",
-"path": "res://Resources/StatesOnStartGame/Party.gd"
-}, {
-"base": "Node",
-"class": "PoliticalParty",
-"language": "GDScript",
-"path": "res://Objects/Party/Party.gd"
-}, {
-"base": "Node",
-"class": "Population",
-"language": "GDScript",
-"path": "res://Objects/Population/Population.gd"
-}, {
-"base": "Node",
-"class": "PopulationManager",
-"language": "GDScript",
-"path": "res://Objects/Client/PopulationManager.gd"
-}, {
-"base": "Resource",
-"class": "PopulationUnit",
-"language": "GDScript",
-"path": "res://Objects/Population/population_unit.gd"
-}, {
-"base": "Node",
-"class": "PopulationWorldManager",
-"language": "GDScript",
-"path": "res://Objects/Global/Managers/ManagerPopulation.gd"
-}, {
-"base": "Resource",
-"class": "Prov_saver",
-"language": "GDScript",
-"path": "res://Objects/Provinces/Paths_of_provinces.gd"
-}, {
-"base": "Node",
-"class": "Railways",
-"language": "GDScript",
-"path": "res://Objects/Building/Railways.gd"
-}, {
-"base": "Resource",
-"class": "Raw",
-"language": "GDScript",
-"path": "res://Resources/Factories/Raw.gd"
-}, {
-"base": "Resource",
-"class": "Reform",
-"language": "GDScript",
-"path": "res://Resources/Reforms/Reform.gd"
-}, {
-"base": "Resource",
-"class": "ReformEffect",
-"language": "GDScript",
-"path": "res://Resources/Reforms/ReformEffect.gd"
-}, {
-"base": "Node",
-"class": "ReformsManager",
-"language": "GDScript",
-"path": "res://Objects/Client/ReformsManager/ReformsManager.gd"
-}, {
-"base": "TextureButton",
-"class": "Region",
-"language": "GDScript",
-"path": "res://Objects/Tile/Point.gd"
-}, {
-"base": "Resource",
-"class": "SavedExpansion",
-"language": "GDScript",
-"path": "res://Objects/Provinces/SavedProvince/Expansion.gd"
-}, {
-"base": "Resource",
-"class": "SavedFactory",
-"language": "GDScript",
-"path": "res://Objects/Provinces/SavedProvince/Factory.gd"
-}, {
-"base": "Resource",
-"class": "SavedHousehold",
-"language": "GDScript",
-"path": "res://Objects/Provinces/SavedProvince/Household.gd"
-}, {
-"base": "Resource",
-"class": "SavedRegions",
-"language": "GDScript",
-"path": "res://Objects/Provinces/SavedRegions.gd"
-}, {
-"base": "Resource",
-"class": "StateOnStartGame",
-"language": "GDScript",
-"path": "res://Resources/StatesOnStartGame/State.gd"
-}, {
-"base": "Node",
-"class": "Technologies",
-"language": "GDScript",
-"path": "res://Objects/Client/Technologies.gd"
-}, {
-"base": "Resource",
-"class": "Technology",
-"language": "GDScript",
-"path": "res://Resources/Technologies/Technology.gd"
-}, {
-"base": "Resource",
-"class": "TechnologyEffect",
-"language": "GDScript",
-"path": "res://Resources/Technologies/TechnologyEffect.gd"
-}, {
-"base": "TechnologyEffect",
-"class": "TechnologyEffectAttack",
-"language": "GDScript",
-"path": "res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectAttack.gd"
-}, {
-"base": "TechnologyEffect",
-"class": "TechnologyEffectDefense",
-"language": "GDScript",
-"path": "res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectDefense.gd"
-}, {
-"base": "TechnologyEffect",
-"class": "TechnologyEffectEducationEfficiency",
-"language": "GDScript",
-"path": "res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectEducationEfficiency.gd"
-}, {
-"base": "TechnologyEffect",
-"class": "TechnologyEffectInflation",
-"language": "GDScript",
-"path": "res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectInflation.gd"
-}, {
-"base": "TechnologyEffect",
-"class": "TechnologyEffectLostGeneration",
-"language": "GDScript",
-"path": "res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectLostGeneration.gd"
-}, {
-"base": "TechnologyEffect",
-"class": "TechnologyEffectMaxInfrastructure",
-"language": "GDScript",
-"path": "res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectMaxInfrastructure.gd"
-}, {
-"base": "TechnologyEffect",
-"class": "TechnologyEffectNewFactory",
-"language": "GDScript",
-"path": "res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectNewFactory.gd"
-}, {
-"base": "TechnologyEffect",
-"class": "TechnologyEffectNewFleetUnit",
-"language": "GDScript",
-"path": "res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectNewFleetUnit.gd"
-}, {
-"base": "TechnologyEffect",
-"class": "TechnologyEffectNewUnit",
-"language": "GDScript",
-"path": "res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectNewUnit.gd"
-}, {
-"base": "TechnologyEffect",
-"class": "TechnologyEffectProductionDP",
-"language": "GDScript",
-"path": "res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectProductionDP.gd"
-}, {
-"base": "TechnologyEffect",
-"class": "TechnologyEffectProductionFactories",
-"language": "GDScript",
-"path": "res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectProductionFactories.gd"
-}, {
-"base": "TechnologyEffect",
-"class": "TechnologyEffectProductionFactory",
-"language": "GDScript",
-"path": "res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectProductionFactory.gd"
-}, {
-"base": "TechnologyEffect",
-"class": "TechnologyEffectProductionGoods",
-"language": "GDScript",
-"path": "res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectProductionGoods.gd"
-}, {
-"base": "TechnologyEffect",
-"class": "TechnologyEffectSupply",
-"language": "GDScript",
-"path": "res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectSupply.gd"
-}, {
-"base": "Reference",
-"class": "TradeAgreement",
-"language": "GDScript",
-"path": "res://Objects/References/trade_agreement.gd"
-}, {
-"base": "Node",
-"class": "TradeAgreementsManager",
-"language": "GDScript",
-"path": "res://Objects/Client/TradeAgreementsManager.gd"
-} ]
-_global_script_class_icons={
-"AI": "",
-"CharsOfUnit": "",
-"Client": "",
-"Coll_polygon_saver": "",
-"CotegoryReform": "",
-"CreateClients": "",
-"EconomicBonuses": "",
-"Factory": "",
-"GlobalTimer": "",
-"Good": "",
-"GoodOld": "",
-"Infrastructure": "",
-"Landscape": "",
-"MilitaryBonuses": "",
-"PartiesManager": "",
-"Party": "",
-"PoliticalParty": "",
-"Population": "",
-"PopulationManager": "",
-"PopulationUnit": "",
-"PopulationWorldManager": "",
-"Prov_saver": "",
-"Railways": "",
-"Raw": "",
-"Reform": "",
-"ReformEffect": "",
-"ReformsManager": "",
-"Region": "",
-"SavedExpansion": "",
-"SavedFactory": "",
-"SavedHousehold": "",
-"SavedRegions": "",
-"StateOnStartGame": "",
-"Technologies": "",
-"Technology": "",
-"TechnologyEffect": "",
-"TechnologyEffectAttack": "",
-"TechnologyEffectDefense": "",
-"TechnologyEffectEducationEfficiency": "",
-"TechnologyEffectInflation": "",
-"TechnologyEffectLostGeneration": "",
-"TechnologyEffectMaxInfrastructure": "",
-"TechnologyEffectNewFactory": "",
-"TechnologyEffectNewFleetUnit": "",
-"TechnologyEffectNewUnit": "",
-"TechnologyEffectProductionDP": "",
-"TechnologyEffectProductionFactories": "",
-"TechnologyEffectProductionFactory": "",
-"TechnologyEffectProductionGoods": "",
-"TechnologyEffectSupply": "",
-"TradeAgreement": "",
-"TradeAgreementsManager": ""
-}
+config_version=5
 
 [application]
 
 config/name="The great war (1914 - 1936)"
 run/main_scene="res://Scenes/Menu/Menu.tscn"
+config/features=PackedStringArray("4.0")
 config/icon="res://icon.png"
 
 [autoload]
@@ -337,14 +22,12 @@ GlobalMarket="*res://Objects/Global/GlobalMarket.gd"
 Functions="*res://Objects/Global/Functions.gd"
 Research="*res://Objects/Global/Research.gd"
 ManagerDay="*res://Objects/Global/Managers/ManagerDay.gd"
-ProvinceLoader="*res://Objects/Global/ProvinceLoader.gd"
 SceneStorage="*res://Objects/Global/SceneStorage.gd"
 
 [display]
 
-window/size/width=1920
-window/size/height=1080
-window/dpi/allow_hidpi=true
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 window/stretch/mode="viewport"
 
 [global]
@@ -362,98 +45,102 @@ csv_translation={
 
 ui_accept={
 "deadzone": 0.5,
-"events": [  ]
+"events": []
 }
 ui_select={
 "deadzone": 0.5,
-"events": [  ]
+"events": []
 }
 ui_cancel={
 "deadzone": 0.5,
-"events": [  ]
+"events": []
 }
 ui_focus_next={
 "deadzone": 0.5,
-"events": [  ]
+"events": []
 }
 ui_focus_prev={
 "deadzone": 0.5,
-"events": [  ]
+"events": []
 }
 ui_left={
 "deadzone": 0.5,
-"events": [  ]
+"events": []
 }
 ui_right={
 "deadzone": 0.5,
-"events": [  ]
+"events": []
 }
 ui_up={
 "deadzone": 0.5,
-"events": [  ]
+"events": []
 }
 ui_down={
 "deadzone": 0.5,
-"events": [  ]
+"events": []
 }
 ui_page_up={
 "deadzone": 0.5,
-"events": [  ]
+"events": []
 }
 ui_page_down={
 "deadzone": 0.5,
-"events": [  ]
+"events": []
 }
 ui_home={
 "deadzone": 0.5,
-"events": [  ]
+"events": []
 }
 ui_end={
 "deadzone": 0.5,
-"events": [  ]
+"events": []
 }
 W={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":87,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
- ]
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":87,"key_label":0,"unicode":119,"echo":false,"script":null)
+]
 }
 A={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
- ]
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":65,"key_label":0,"unicode":97,"echo":false,"script":null)
+]
 }
 S={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
- ]
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":83,"key_label":0,"unicode":115,"echo":false,"script":null)
+]
 }
 D={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":68,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
- ]
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":68,"key_label":0,"unicode":100,"echo":false,"script":null)
+]
 }
 mouse_left={
 "deadzone": 0.5,
-"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
- ]
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"pressed":false,"double_click":false,"script":null)
+]
 }
 ui_esc={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777217,"unicode":0,"echo":false,"script":null)
- ]
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
 }
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://Localization/Gui/enterprise.en.translation", "res://Localization/Gui/reforms.en.translation", "res://Localization/Gui/technologies.en.translation", "res://Localization/Gui/text.en.translation")
 
 [locale]
 
-translations=PoolStringArray( "res://Localization/Gui/text.en.translation" )
-locale_filter=[ 0, [ "ru" ] ]
+translations=PackedStringArray("res://Localization/Gui/text.en.translation", "res://Localization/Gui/Technologies.en.translation", "res://Localization/Gui/enterprise.en.translation")
+locale_filter=[0, ["ru"]]
 
 [physics]
 
 common/enable_pause_aware_picking=true
-2d/thread_model=2
+2d/run_on_thread=2
 
 [rendering]
 
+environment/defaults/default_environment="res://default_env.tres"
 2d/snapping/use_gpu_pixel_snap=true
-environment/default_environment="res://default_env.tres"

@@ -1,4 +1,4 @@
-extends Reference
+extends RefCounted
 
 
 static func detect_children(array_of_detect_mask, childrens):

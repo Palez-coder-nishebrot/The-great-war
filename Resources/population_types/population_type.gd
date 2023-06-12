@@ -1,7 +1,7 @@
 extends Resource
 
 
-export(String)          var display_name = ""
-export(Array, Resource) var needs        = [
+@export var display_name: String = ""
+@export var needs        = [ # (Array, Resource)
 	
 ]

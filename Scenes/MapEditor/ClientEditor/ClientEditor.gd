@@ -6,9 +6,9 @@ const speed_of_zoom:   float          = 0.1
 const MAX_zoom:        float          = 2.5
 const MIN_zoom:        float          = 1.0
 
-onready var camera: Camera2D = $Camera2D
-onready var region_panel = $CanvasLayer/RegionPanel
-onready var household_panel = $CanvasLayer/HouseholdPanel
+@onready var camera: Camera2D = $Camera2D
+@onready var region_panel = $CanvasLayer/RegionPanel
+@onready var household_panel = $CanvasLayer/HouseholdPanel
 
 
 func _process(delta):

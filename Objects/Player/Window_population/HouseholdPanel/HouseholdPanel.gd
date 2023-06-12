@@ -2,11 +2,11 @@ extends Panel
 
 var population_manager
 
-onready var household_label = $VBoxContainer/Household
-onready var workers_label = $VBoxContainer/Workers
-onready var factory_workers_label = $VBoxContainer/FactoryWorkers
-onready var clerks_label = $VBoxContainer/Clerks
-onready var unemployed_label = $VBoxContainer/Unemployed
+@onready var household_label = $VBoxContainer/Household
+@onready var workers_label = $VBoxContainer/Workers
+@onready var factory_workers_label = $VBoxContainer/FactoryWorkers
+@onready var clerks_label = $VBoxContainer/Clerks
+@onready var unemployed_label = $VBoxContainer/Unemployed
 
 func update_information():
 	if population_manager != null:

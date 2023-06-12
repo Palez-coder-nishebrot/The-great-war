@@ -2,8 +2,9 @@ extends Panel
 
 var province: Object
 
-onready var button_resources_container   = $HBoxContainer
-onready var button_region_chars_container = $VBoxContainer
+@onready var button_resources_container   = $HBoxContainer
+@onready var button_region_chars_container = $VBoxContainer
+
 
 func update_information(province_):
 	lock_or_open_buttons(false)
@@ -34,23 +35,25 @@ func show_info_about_education_population():
 func lock_or_open_buttons(bool_):
 	$VBoxContainer/Button2.disabled = bool_
 	$VBoxContainer/Button3.disabled = bool_
-	#$VBoxContainer/Railways.visible = not bool_
 
 
 func show_resourses():
-	var res = province.resources.duplicate()
-	for i in button_resources_container.get_children():
-		i.icon = load("res://Graphics/Sprites/Goods/kREST.png")
+	var DP_list = province.DP_list.duplicate()
 	
 	for i in button_resources_container.get_children():
-		if res.size() > 0:
-			i.icon = res[0].icon
-			res.erase(res[0])
+		i.texture = load("res://Graphics/Sprites/goods/cross.png")
+	
+	for i in button_resources_container.get_children():
+		if DP_list.size() > 0:
+			var dp = DP_list[0]
+			var good = dp.good
+			i.texture = good.icon
+			i.dp = dp
+			DP_list.erase(dp)
 
 
 func build_factory():
-	Players.player.window_build_factory.region = province
-	Players.player.window_build_factory.visible = true
+	Players.player.window_build_factory.show_self(province)
 
 
 func exit():

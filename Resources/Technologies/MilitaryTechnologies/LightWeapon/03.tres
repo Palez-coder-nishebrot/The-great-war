@@ -1,29 +1,25 @@
 [gd_resource type="Resource" load_steps=7 format=2]
 
 [ext_resource path="res://Resources/Technologies/Technology.gd" type="Script" id=1]
-[ext_resource path="res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectDefense.gd" type="Script" id=2]
-[ext_resource path="res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectSupply.gd" type="Script" id=3]
+[ext_resource path="res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectAttack.gd" type="Script" id=2]
+[ext_resource path="res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectDefense.gd" type="Script" id=3]
+[ext_resource path="res://Resources/military_units/army_units_types/infantry.tres" type="Resource" id=4]
 
 [sub_resource type="Resource" id=1]
 script = ExtResource( 2 )
-name_of_effect = "Оборона"
-power = 1
-target = "infantry"
+name_of_effect = "Атака"
+power = 2
+target = ExtResource( 4 )
 
 [sub_resource type="Resource" id=2]
-script = ExtResource( 2 )
-name_of_effect = "Оборона"
-power = 1
-target = "cavalry"
-
-[sub_resource type="Resource" id=3]
 script = ExtResource( 3 )
-name_of_effect = "Потребление"
-power = 1
-target = "ammo_supply"
+name_of_effect = "Оборона"
+power = 2
+target = ExtResource( 4 )
 
 [resource]
 script = ExtResource( 1 )
 cost = 1400
-name_of_technology = "Минометное вооружение"
-list_of_effects = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ]
+activation_year = 1925
+name_of_technology = "interwar_infantry"
+list_of_effects = [ SubResource( 1 ), SubResource( 2 ) ]

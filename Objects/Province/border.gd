@@ -1,4 +1,4 @@
-tool
+@tool
 extends Node2D
 
 
@@ -43,20 +43,20 @@ func get_country_points():
 
 
 func _enter_tree():
-	if not Engine.editor_hint:
+	if not Engine.is_editor_hint():
 		for ch in get_children():
 			_parts.append(ch)
 			ch.hide()
 
 
 func _ready():
-	if Engine.editor_hint:
-		var _err = connect("child_entered_tree", self, "_on_border_part_entered")
+	if Engine.is_editor_hint():
+		var _err = connect("child_entered_tree", Callable(self, "_on_border_part_entered"))
 		for ch in get_children():
-			_err = ch.connect("draw", self, "_on_border_part_editor_draw", [ch])
+			_err = ch.connect("draw", Callable(self, "_on_border_part_editor_draw").bind(ch))
 
 
-func _get_configuration_warning():
+func _get_configuration_warnings():
 	var hint = "Border not working without configured BorderPart scenes"
 	
 	for ch in get_children():
@@ -67,7 +67,7 @@ func _get_configuration_warning():
 
 
 func _on_border_part_entered(node):
-	var _err = node.connect("draw", self, "_on_border_part_editor_draw", [node])
+	var _err = node.connect("draw", Callable(self, "_on_border_part_editor_draw").bind(node))
 
 
 func _on_border_part_editor_draw(node):

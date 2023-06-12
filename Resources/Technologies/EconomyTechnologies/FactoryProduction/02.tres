@@ -11,5 +11,6 @@ power = 1.05
 [resource]
 script = ExtResource( 1 )
 cost = 1200
-name_of_technology = "Управление персоналом"
+activation_year = 1914
+name_of_technology = "personnel_management"
 list_of_effects = [ SubResource( 1 ) ]

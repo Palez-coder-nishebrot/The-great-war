@@ -1,162 +1,191 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=3 uid="uid://bmfslq2y1gxrv"]
 
-[ext_resource path="res://Graphics/Sprites/NewSpritesOfGoods/Gas.png" type="Texture" id=1]
-[ext_resource path="res://Objects/Player/Window_province/Window_province.gd" type="Script" id=2]
-[ext_resource path="res://Graphics/Fonts/pixel_2.ttf" type="DynamicFontData" id=3]
+[ext_resource type="Script" path="res://Objects/Player/Window_province/Window_province.gd" id="2"]
+[ext_resource type="FontFile" uid="uid://dpaiod0xc1xgs" path="res://Graphics/Fonts/pixel_2.ttf" id="3"]
+[ext_resource type="PackedScene" path="res://Objects/Player/Window_province/good_icon/good_icon.tscn" id="4"]
+[ext_resource type="Texture2D" uid="uid://d2ffn5ukge48k" path="res://Graphics/Sprites/goods/plane.png" id="4_o380h"]
 
-[sub_resource type="DynamicFont" id=5]
-size = 32
-font_data = ExtResource( 3 )
+[sub_resource type="FontFile" id="5"]
+fallbacks = Array[Font]([ExtResource("3")])
+face_index = null
+embolden = null
+transform = null
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/32/0 = Vector2(0, 0)
+cache/0/32/0/ascent = 0.0
+cache/0/32/0/descent = 0.0
+cache/0/32/0/underline_position = 0.0
+cache/0/32/0/underline_thickness = 0.0
+cache/0/32/0/scale = 1.0
+cache/0/32/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/32/0/kerning_overrides/32/0 = Vector2(0, 0)
 
-[sub_resource type="DynamicFont" id=3]
-size = 32
-use_mipmaps = true
-font_data = ExtResource( 3 )
+[sub_resource type="FontFile" id="3"]
+fallbacks = Array[Font]([ExtResource("3")])
+face_index = null
+embolden = null
+transform = null
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/25/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/30/0 = Vector2(0, 0)
+cache/0/20/0/ascent = 0.0
+cache/0/20/0/descent = 0.0
+cache/0/20/0/underline_position = 0.0
+cache/0/20/0/underline_thickness = 0.0
+cache/0/20/0/scale = 1.0
+cache/0/20/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/20/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/20/0/kerning_overrides/25/0 = Vector2(0, 0)
+cache/0/20/0/kerning_overrides/30/0 = Vector2(0, 0)
+cache/0/25/0/ascent = 0.0
+cache/0/25/0/descent = 0.0
+cache/0/25/0/underline_position = 0.0
+cache/0/25/0/underline_thickness = 0.0
+cache/0/25/0/scale = 1.0
+cache/0/25/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/25/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/25/0/kerning_overrides/25/0 = Vector2(0, 0)
+cache/0/25/0/kerning_overrides/30/0 = Vector2(0, 0)
+cache/0/30/0/ascent = 0.0
+cache/0/30/0/descent = 0.0
+cache/0/30/0/underline_position = 0.0
+cache/0/30/0/underline_thickness = 0.0
+cache/0/30/0/scale = 1.0
+cache/0/30/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/25/0 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/30/0 = Vector2(0, 0)
 
 [node name="Province" type="Panel"]
-margin_top = 287.0
-margin_right = 312.0
-margin_bottom = 677.0
-script = ExtResource( 2 )
+offset_top = 287.0
+offset_right = 312.0
+offset_bottom = 677.0
+script = ExtResource("2")
 
 [node name="Name" type="Label" parent="."]
-margin_right = 446.0
-margin_bottom = 32.0
-rect_scale = Vector2( 0.7, 0.7 )
-custom_fonts/font = SubResource( 5 )
+layout_mode = 0
+offset_right = 446.0
+offset_bottom = 32.0
+scale = Vector2(0.7, 0.7)
+theme_override_fonts/font = SubResource("5")
+theme_override_font_sizes/font_size = 32
 text = "Провинция"
-align = 1
-valign = 1
+horizontal_alignment = 1
 
 [node name="Country" type="Label" parent="."]
-margin_top = 22.0
-margin_right = 480.0
-margin_bottom = 54.0
-rect_scale = Vector2( 0.65, 0.65 )
-custom_fonts/font = SubResource( 5 )
+layout_mode = 0
+offset_top = 25.0
+offset_right = 480.0
+offset_bottom = 60.0
+scale = Vector2(0.65, 0.65)
+theme_override_fonts/font = SubResource("5")
+theme_override_font_sizes/font_size = 32
 text = "Государство"
-align = 1
-valign = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_top = 48.0
+offset_right = 624.0
+offset_bottom = 194.0
+scale = Vector2(0.5, 0.5)
+
+[node name="good_icon" parent="HBoxContainer" instance=ExtResource("4")]
+layout_mode = 2
+texture = ExtResource("4_o380h")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="good_icon2" parent="HBoxContainer" instance=ExtResource("4")]
+layout_mode = 2
+texture = ExtResource("4_o380h")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="good_icon3" parent="HBoxContainer" instance=ExtResource("4")]
+layout_mode = 2
+texture = ExtResource("4_o380h")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="good_icon4" parent="HBoxContainer" instance=ExtResource("4")]
+layout_mode = 2
+texture = ExtResource("4_o380h")
+expand_mode = 1
+stretch_mode = 6
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_top = 96.0
-margin_right = 520.0
-margin_bottom = 586.0
-rect_scale = Vector2( 0.6, 0.6 )
-custom_constants/separation = 0
+layout_mode = 0
+offset_top = 142.0
+offset_right = 520.0
+offset_bottom = 555.0
+scale = Vector2(0.6, 0.6)
+theme_override_constants/separation = 0
 
 [node name="Railways" type="Label" parent="VBoxContainer"]
-margin_right = 520.0
-margin_bottom = 32.0
-custom_fonts/font = SubResource( 3 )
+layout_mode = 2
+theme_override_fonts/font = SubResource("3")
+theme_override_font_sizes/font_size = 30
 text = "Инфраструктура"
 
 [node name="EducationPopulation" type="Label" parent="VBoxContainer"]
-margin_top = 32.0
-margin_right = 520.0
-margin_bottom = 64.0
-custom_fonts/font = SubResource( 3 )
+layout_mode = 2
+theme_override_fonts/font = SubResource("3")
+theme_override_font_sizes/font_size = 30
 text = "Фабричные рабочие"
 
 [node name="EducationPopulation3" type="Label" parent="VBoxContainer"]
-margin_top = 64.0
-margin_right = 520.0
-margin_bottom = 96.0
-custom_fonts/font = SubResource( 3 )
+layout_mode = 2
+theme_override_fonts/font = SubResource("3")
+theme_override_font_sizes/font_size = 30
 text = "Безработные"
 
 [node name="GrowthPopulation" type="Label" parent="VBoxContainer"]
-margin_top = 96.0
-margin_right = 520.0
-margin_bottom = 128.0
-custom_fonts/font = SubResource( 3 )
+layout_mode = 2
+theme_override_fonts/font = SubResource("3")
+theme_override_font_sizes/font_size = 30
 text = "Прирост населения"
 
 [node name="Button2" type="Button" parent="VBoxContainer"]
-margin_top = 128.0
-margin_right = 520.0
-margin_bottom = 166.0
-custom_fonts/font = SubResource( 3 )
+layout_mode = 2
+theme_override_fonts/font = SubResource("3")
+theme_override_font_sizes/font_size = 30
 text = "Расширить Железные дороги"
 
 [node name="Button6" type="Button" parent="VBoxContainer"]
-margin_top = 166.0
-margin_right = 520.0
-margin_bottom = 204.0
-custom_fonts/font = SubResource( 3 )
+layout_mode = 2
+theme_override_fonts/font = SubResource("3")
+theme_override_font_sizes/font_size = 30
 text = "Расширить Военную базу"
 
 [node name="Button7" type="Button" parent="VBoxContainer"]
-margin_top = 204.0
-margin_right = 520.0
-margin_bottom = 242.0
-custom_fonts/font = SubResource( 3 )
+layout_mode = 2
+theme_override_fonts/font = SubResource("3")
+theme_override_font_sizes/font_size = 30
 text = "Расширить Укрепления"
 
 [node name="Button3" type="Button" parent="VBoxContainer"]
-margin_top = 242.0
-margin_right = 520.0
-margin_bottom = 280.0
-custom_fonts/font = SubResource( 3 )
+layout_mode = 2
+theme_override_fonts/font = SubResource("3")
+theme_override_font_sizes/font_size = 30
 text = "Построить фабрику"
 
 [node name="Button5" type="Button" parent="VBoxContainer"]
-margin_top = 280.0
-margin_right = 520.0
-margin_bottom = 318.0
-custom_fonts/font = SubResource( 3 )
+layout_mode = 2
+theme_override_fonts/font = SubResource("3")
+theme_override_font_sizes/font_size = 30
 text = "Закрыть"
-
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-margin_top = 43.0
-margin_right = 624.0
-margin_bottom = 149.0
-rect_scale = Vector2( 0.5, 0.5 )
-custom_constants/separation = 0
-
-[node name="Button" type="Button" parent="HBoxContainer"]
-margin_right = 124.0
-margin_bottom = 106.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-icon = ExtResource( 1 )
-expand_icon = true
-
-[node name="Button2" type="Button" parent="HBoxContainer"]
-margin_left = 124.0
-margin_right = 249.0
-margin_bottom = 106.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-icon = ExtResource( 1 )
-expand_icon = true
-
-[node name="Button3" type="Button" parent="HBoxContainer"]
-margin_left = 249.0
-margin_right = 374.0
-margin_bottom = 106.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-icon = ExtResource( 1 )
-expand_icon = true
-
-[node name="Button4" type="Button" parent="HBoxContainer"]
-margin_left = 374.0
-margin_right = 499.0
-margin_bottom = 106.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-icon = ExtResource( 1 )
-expand_icon = true
-
-[node name="Button5" type="Button" parent="HBoxContainer"]
-margin_left = 499.0
-margin_right = 624.0
-margin_bottom = 106.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-icon = ExtResource( 1 )
-expand_icon = true
 
 [connection signal="pressed" from="VBoxContainer/Button3" to="." method="build_factory"]
 [connection signal="pressed" from="VBoxContainer/Button5" to="." method="exit"]

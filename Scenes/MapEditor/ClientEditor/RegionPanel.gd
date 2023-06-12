@@ -1,16 +1,16 @@
 extends Panel
 
 var region
-onready var parent = get_parent().get_parent()
+@onready var parent = get_parent().get_parent()
 
-onready var append_worker_button = $VBoxContainer/AppendWorkers
-onready var append_factory_worker_button = $VBoxContainer/AppendFactoryWorkers
-onready var append_clerk_button = $VBoxContainer/AppendClerks
+@onready var append_worker_button = $VBoxContainer/AppendWorkers
+@onready var append_factory_worker_button = $VBoxContainer/AppendFactoryWorkers
+@onready var append_clerk_button = $VBoxContainer/AppendClerks
 #onready var container_of_households = $VBoxContainer/ListOfHouseholds
-onready var container_of_resources = $VBoxContainer/ListOfResources
-onready var container_of_factories = $VBoxContainer/ListOfFactories
+@onready var container_of_resources = $VBoxContainer/ListOfResources
+@onready var container_of_factories = $VBoxContainer/ListOfFactories
 
-onready var railways_button = $VBoxContainer/AppendRailways
+@onready var railways_button = $VBoxContainer/AppendRailways
 
 const levels_of_railways: Array = [0, 1, 2, 3]
 
@@ -62,8 +62,8 @@ func set_factories():
 	for i in region.list_of_buildings:
 		var button = get_parent().get_node("FactoryButton").duplicate()
 		button.parent = self
-		button.name_of_factory = i
-		button.text = i
+		button.name_of_factory = i.name_of_factory
+		button.text = i.name_of_factory
 		container_of_factories.add_child(button)
 
 

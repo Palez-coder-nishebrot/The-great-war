@@ -1,6 +1,6 @@
 extends HBoxContainer
 
-onready var tipes_of_technologies = {
+@onready var tipes_of_technologies = {
 	"Военное дело": get_parent().get_node("HBoxContainer"),
 	"Экономика":    get_parent().get_node("HBoxContainer2"),
 }

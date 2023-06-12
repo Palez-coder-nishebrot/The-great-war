@@ -1,9 +1,9 @@
 extends Button
 
 var parent:  Object 
-var factory: Node
+var factory: Resource
 
 
 func _gui_input(event):
-	if event is InputEventMouseButton and pressed:
+	if event is InputEventMouseButton and event.is_pressed():
 		parent.show_factory_info(factory)

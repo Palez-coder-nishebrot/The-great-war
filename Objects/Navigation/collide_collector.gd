@@ -1,4 +1,4 @@
-extends Reference
+extends RefCounted
 
 var tile
 var detector_shapes = []

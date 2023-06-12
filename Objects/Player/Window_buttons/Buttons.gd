@@ -22,16 +22,15 @@ var windows: Array = [
 	"window_diplomacy",
 ]
 
-onready var education_label: Label = $VBoxContainer/EducationLabel/Label
-onready var construction_label: Label = $VBoxContainer/ConstructionLabel/Label
-onready var factory_label: Label = $VBoxContainer/FactoriesLabel/Label
-onready var budget_label: Label = $VBoxContainer/BudgetLabel/Label
-onready var research_label: Label = $VBoxContainer/ResearchLabel/Label
-onready var ideology_label: Object = $VBoxContainer/PartiesLabel
-onready var population_label: Label = $VBoxContainer/PopulationLabel/Label
-onready var stability_label: Label = $VBoxContainer/StabilityLabel/Label
-onready var unemployed_label: Label = $VBoxContainer/UnemployedLabel/Label
-onready var reform_icon: TextureRect = $VBoxContainer/ReformIcon
+@onready var money_icon:           HBoxContainer = $VBoxContainer/money_icon
+@onready var gdp_icon:             HBoxContainer = $VBoxContainer/gdp_icon
+@onready var unemployed_icon:      HBoxContainer = $VBoxContainer/unemployed_icon
+@onready var research_points_icon: HBoxContainer = $VBoxContainer/research_points_icon
+@onready var ruling_party_icon:    HBoxContainer = $VBoxContainer/ruling_party_icon
+@onready var reforms_icon:         HBoxContainer = $VBoxContainer/reforms_icon
+@onready var literacy_icon:        HBoxContainer = $VBoxContainer/literacy_icon
+@onready var population_growth:    HBoxContainer = $VBoxContainer/population_growth_icon
+@onready var welfare_icon:         HBoxContainer = $VBoxContainer/welfare_icon
 
 #
 #func _ready():
@@ -54,26 +53,25 @@ func on_button_pressed(window):
 
 
 func update_information():
+	var client = Players.player
+	#var dp_list = client.economy_manager.DP_list
+	
 	check_reform()
-	education_label.text = str(Players.player.middle_value_education) + "%"
-	factory_label.text = str(Players.player.list_of_factories.size())
-	budget_label.text = str(Players.player.budget)
-	stability_label.text = str(Players.player.stability)
-	research_label.text = str(Players.player.growth_of_researching_points)
 	
+	money_icon.set_data(client.economy_manager.budget)
+	gdp_icon.set_data(client.accounting_manager.gdp)
+	unemployed_icon.set_data(client.accounting_manager.unemployed_quantity)
+	literacy_icon.set_data(client.accounting_manager.population_literacy)
+	welfare_icon.set_data(client.accounting_manager.population_welfare)
+	research_points_icon.set_data(client.research_manager.researching_points)
+	#ruling_party_icon.set_data(ruling_party.party_name, ruling_party.)
 	
-	ideology_label.get_node("TextureRect").texture = load(form_of_goverment_sprite[Players.player.ideology])
-	ideology_label.get_node("Label").text = Players.player.ideology
-	
-	population_label.text = str(Players.player.welfare)
-#	stability_label.text = str(Players.player.policy["Стабильность"])
-	unemployed_label.text = str(Players.player.quantity_of_unemployed)
 
 
 func check_reform():
-	if Players.player.reforms_manager.social_reform or Players.player.reforms_manager.political_reform:
-		reform_icon.visible = true
-	else:
-		reform_icon.visible = false
+#	if Players.player.reforms_manager.social_reform or Players.player.reforms_manager.political_reform:
+#		reform_icon.visible = true
+#	else:
+#		reform_icon.visible = false
 	
 	pass

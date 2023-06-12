@@ -6,11 +6,12 @@ func get_country():
 
 
 func _ready():
-	_create_border()
+	#_create_border()
+	pass
 	
 	
 func _create_border():
-	yield(get_tree(), "idle_frame")
+	await get_tree().idle_frame
 	
 	var border_points = []
 	var country = get_country()

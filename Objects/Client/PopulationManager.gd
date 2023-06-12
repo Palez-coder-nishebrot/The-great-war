@@ -3,6 +3,8 @@ extends Node
 class_name PopulationManager
 
 var client
+var population_growth:    float = 1.0  # Это значение мы тоже будем умножать!
+var education_efficiency: float = 1.0  # Это значение мы тоже будем умножать!
 #var manager_of_migration_workers      = load("res://Resources/SocialMigration/SocClasses/Worker.tres")
 #var manager_of_migration_proletarians = load("res://Resources/SocialMigration/SocClasses/Proletarian.tres")
 #var manager_of_migration_clerks       = load("res://Resources/SocialMigration/SocClasses/Clerk.tres")

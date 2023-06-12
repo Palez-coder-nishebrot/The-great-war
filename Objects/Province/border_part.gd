@@ -1,21 +1,22 @@
-tool
+@tool
 extends Line2D
 
 const SNAP_DISTANCE_LIMIT = 10
 
-export(NodePath) var neighbour_border setget _set_neighbour_border
-export(NodePath) var neighbour_province
+@export var neighbour_border: NodePath: set = _set_neighbour_border
+@export var neighbour_province: NodePath
 
 var _neighbour_border_node
 var _neighbour_province_node
 
 
 func _ready():
-	if not Engine.editor_hint:
-		_neighbour_province_node = get_node_or_null(neighbour_province)
-		
-		if _neighbour_province_node:
-			_neighbour_border_node = get_node_or_null(neighbour_border)
+#	if not Engine.is_editor_hint():
+#		_neighbour_province_node = get_node_or_null(neighbour_province)
+#
+#		if _neighbour_province_node:
+#			_neighbour_border_node = get_node_or_null(neighbour_border)
+	pass
 
 
 func get_border():
@@ -54,7 +55,7 @@ func correct_corners_snap(siblings):
 		points = points
 
 
-func _get_local_points(target: Line2D) -> PoolVector2Array:
+func _get_local_points(target: Line2D) -> PackedVector2Array:
 	var target_gp = target.global_position
 	var self_gp = global_position
 	var local_points = []
@@ -64,7 +65,7 @@ func _get_local_points(target: Line2D) -> PoolVector2Array:
 		
 	local_points.invert()
 	
-	return PoolVector2Array(local_points)
+	return PackedVector2Array(local_points)
 
 
 func _get_point_with_shortest_distance(current_point, corners):
@@ -85,24 +86,25 @@ func _get_point_with_shortest_distance(current_point, corners):
 	
 
 func _set_neighbour_border(value):
-	if neighbour_border == value:
-		return
-	
-	neighbour_border = value
-	
-	if not value:
-		return
-
-	var neighbour_bpart = get_node_or_null(value) # border_part
-	
-	if not neighbour_bpart:
-		return
-	
-	var _neighbour_province = neighbour_bpart.get_border().get_province()
-	neighbour_province = self.get_path_to(_neighbour_province)
-	
-	neighbour_bpart.neighbour_border = neighbour_bpart.get_path_to(self)
-	neighbour_bpart.neighbour_province = neighbour_bpart.get_path_to(self.get_border().get_province())
-	
-	var new_points =  _get_local_points(neighbour_bpart)
-	points = new_points
+#	if neighbour_border == value:
+#		return
+#
+#	neighbour_border = value
+#
+#	if not value:
+#		return
+#
+#	var neighbour_bpart = get_node_or_null(value) # border_part
+#
+#	if not neighbour_bpart:
+#		return
+#
+#	var _neighbour_province = neighbour_bpart.get_border().get_province()
+#	neighbour_province = self.get_path_to(_neighbour_province)
+#
+#	neighbour_bpart.neighbour_border = neighbour_bpart.get_path_to(self)
+#	neighbour_bpart.neighbour_province = neighbour_bpart.get_path_to(self.get_border().get_province())
+#
+#	var new_points =  _get_local_points(neighbour_bpart)
+#	points = new_points
+	pass

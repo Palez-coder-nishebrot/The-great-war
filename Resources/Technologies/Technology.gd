@@ -2,11 +2,12 @@ extends Resource
 
 class_name Technology
 
-export(int) var cost = 1000
+@export var cost: int = 1000
+@export var activation_year: int = 1914
 
-export(String) var name_of_technology = ""
+@export var name_of_technology: String = ""
 var                cotegory           = ""
 
-export(Array) var list_of_effects = []
+@export var list_of_effects: Array = []
 
 var ready_for_researching: bool = false

@@ -2,9 +2,9 @@ extends TechnologyEffect
 
 class_name TechnologyEffectInflation
 
-export(String) var name_of_effect = "Прирост инфляции"
+@export var name_of_effect: String = "Прирост инфляции"
 
-export(int) var power = 10
+@export var power: int = 10
 
 
 func get_effect():

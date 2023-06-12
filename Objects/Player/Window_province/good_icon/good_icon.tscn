@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Graphics/Sprites/NewSpritesOfGoods/Gas.png" type="Texture2D" id=1]
+[ext_resource path="res://Objects/Player/Window_province/good_icon/good_icon.gd" type="Script" id=2]
+
+[node name="good_icon" type="TextureRect"]
+offset_right = 124.0
+offset_bottom = 106.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 4
+script = ExtResource( 2 )
+
+[connection signal="mouse_entered" from="." to="." method="mouse_entered"]

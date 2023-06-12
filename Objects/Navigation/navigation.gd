@@ -2,7 +2,7 @@ extends Node
 
 signal thread_cteate_polygons_done
 
-export(NodePath) var tile_container_np
+@export var tile_container_np: NodePath
 
 const CHECKER_GROW_SIZE = Vector2(25, 25)
 var CollideCollector = preload("res://Objects/Navigation/collide_collector.gd")
@@ -22,9 +22,9 @@ var _thread_cteate_polygons_done_counter = 0
 func _ready():
 	return
 	_create_thread_pool()
-	var _err = connect("thread_cteate_polygons_done", self, "_on_thread_cteate_polygons_done")
-	_physics_space = Physics2DServer.space_create()
-	Physics2DServer.space_set_active(_physics_space, true)
+	var _err = connect("thread_cteate_polygons_done", Callable(self, "_on_thread_cteate_polygons_done"))
+	_physics_space = PhysicsServer2D.space_create()
+	PhysicsServer2D.space_set_active(_physics_space, true)
 	
 	var container = get_node(tile_container_np)
 	_collisions_collection_node = container.get_node("DebugCollisionView")
@@ -34,13 +34,13 @@ func _ready():
 			_tiles.append(ch)
 
 	for t in _threads:
-		t.start(self, "_cteate_polygons")
+		t.start(Callable(self, "_cteate_polygons"))
 
 
 func _exit_tree():
-	_close_mu.lock()
+	false # _close_mu.lock() # TODOConverter40, Image no longer requires locking, `false` helps to not break one line if/else, so it can freely be removed
 	_close = true
-	_close_mu.unlock()
+	false # _close_mu.unlock() # TODOConverter40, Image no longer requires locking, `false` helps to not break one line if/else, so it can freely be removed
 	
 	for t in _threads:
 		t.wait_to_finish()
@@ -67,16 +67,16 @@ func _cteate_polygons():
 		tile_area.set_script(_navigation_checker_area_script)
 		tile_area.tile = tile
 		
-		Physics2DServer.area_set_transform(tile_area, Transform2D(0, tile.rect_global_position))
-		Physics2DServer.area_set_collision_layer(tile_area, 1)
-		Physics2DServer.area_set_collision_mask(tile_area, 0)
-		Physics2DServer.area_set_monitorable(tile_area, true)
-		Physics2DServer.area_set_space(tile_area, _physics_space)
+		PhysicsServer2D.area_set_transform(tile_area, Transform2D(0, tile.global_position))
+		PhysicsServer2D.area_set_collision_layer(tile_area, 1)
+		PhysicsServer2D.area_set_collision_mask(tile_area, 0)
+		PhysicsServer2D.area_set_monitorable(tile_area, true)
+		PhysicsServer2D.area_set_space(tile_area, _physics_space)
 		
 		for poly in polygons:
-			var shape = Physics2DServer.convex_polygon_shape_create()
-			Physics2DServer.shape_set_data(shape, poly)
-			Physics2DServer.area_add_shape(tile_area, shape)
+			var shape = PhysicsServer2D.convex_polygon_shape_create()
+			PhysicsServer2D.shape_set_data(shape, poly)
+			PhysicsServer2D.area_add_shape(tile_area, shape)
 		
 		var collector = CollideCollector.new()
 		collector.tile = tile
@@ -86,8 +86,8 @@ func _cteate_polygons():
 		bm.create_from_image_alpha(raw_image)
 		polygons = bm.opaque_to_polygons(Rect2(Vector2.ZERO, bm.get_size()))
 		for poly in polygons:
-			var shape = Physics2DServer.convex_polygon_shape_create()
-			Physics2DServer.shape_set_data(shape, poly)
+			var shape = PhysicsServer2D.convex_polygon_shape_create()
+			PhysicsServer2D.shape_set_data(shape, poly)
 			collector.detector_shapes.append(shape)
 		
 		_add_new_collector(collector)
@@ -103,15 +103,15 @@ func _monitor_collisions():
 		if collector == null:
 			break
 		
-		var direct_space_state := Physics2DServer.space_get_direct_state(_physics_space)
+		var direct_space_state := PhysicsServer2D.space_get_direct_state(_physics_space)
 		
 		for shape in collector.detector_shapes:
-			var query = Physics2DShapeQueryParameters.new()
+			var query = PhysicsShapeQueryParameters2D.new()
 			query.collide_with_areas = true
 			query.collide_with_bodies = false
 			query.collision_layer = 1
 			query.shape_rid = shape
-			query.transform = Transform2D(0, collector.tile.rect_global_position - CHECKER_GROW_SIZE / 2)
+			query.transform = Transform2D(0, collector.tile.global_position - CHECKER_GROW_SIZE / 2)
 			var res = direct_space_state.intersect_shape(query)
 			for r in res:
 				if r.collider.tile != collector.tile:
@@ -128,30 +128,30 @@ func _create_thread_pool():
 func _ckeck_close():
 	var result
 	
-	_close_mu.lock()
+	false # _close_mu.lock() # TODOConverter40, Image no longer requires locking, `false` helps to not break one line if/else, so it can freely be removed
 	result = _close
-	_close_mu.unlock()
+	false # _close_mu.unlock() # TODOConverter40, Image no longer requires locking, `false` helps to not break one line if/else, so it can freely be removed
 	
 	return result
 
 
 func _get_next(arr, mu):
 	var result
-	mu.lock()
+	false # mu.lock() # TODOConverter40, Image no longer requires locking, `false` helps to not break one line if/else, so it can freely be removed
 	result = arr.pop_back()
-	mu.unlock()
+	false # mu.unlock() # TODOConverter40, Image no longer requires locking, `false` helps to not break one line if/else, so it can freely be removed
 	return result
 
 
 func _add_new_collector(collector):
-	_collectors_mu.lock()
+	false # _collectors_mu.lock() # TODOConverter40, Image no longer requires locking, `false` helps to not break one line if/else, so it can freely be removed
 	_collectors.append(collector)
-	_collectors_mu.unlock()
+	false # _collectors_mu.unlock() # TODOConverter40, Image no longer requires locking, `false` helps to not break one line if/else, so it can freely be removed
 
 
 func _on_thread_cteate_polygons_done():
 	_thread_cteate_polygons_done_counter += 1
 	
 	if _thread_cteate_polygons_done_counter == _threads.size():
-		yield(get_tree(), "physics_frame")
+		await get_tree().physics_frame
 		_monitor_collisions()

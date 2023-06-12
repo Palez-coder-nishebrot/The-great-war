@@ -21,11 +21,12 @@ target = ExtResource( 4 )
 [sub_resource type="Resource" id=3]
 script = ExtResource( 1 )
 name_of_effect = "Выпуск продукции"
-power = 1.15
+power = 1.1
 target = ExtResource( 5 )
 
 [resource]
 script = ExtResource( 3 )
 cost = 1000
-name_of_technology = "Конвертерные печи"
+activation_year = 1914
+name_of_technology = "converting_furnaces"
 list_of_effects = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ]

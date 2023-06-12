@@ -8,11 +8,12 @@
 [sub_resource type="Resource" id=1]
 script = ExtResource( 2 )
 good = ExtResource( 4 )
-quantity = 1.0
+quantity = 4.0
 
 [resource]
 script = ExtResource( 1 )
 name_of_factory = "clothes_factory"
 raw = [ SubResource( 1 ) ]
+factory_equipment = [  ]
 good = ExtResource( 3 )
-available = true
+available_from_start = true

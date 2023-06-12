@@ -1,345 +1,207 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=32 format=3 uid="uid://dkdv1arbmmoam"]
 
-[ext_resource path="res://Graphics/Fonts/pixel_2.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Resources/Good/alcohol.tres" type="Resource" id=2]
-[ext_resource path="res://Objects/Player/Window_markets/Markets.gd" type="Script" id=3]
-[ext_resource path="res://Resources/Good/phone.tres" type="Resource" id=4]
-[ext_resource path="res://Resources/Good/lumber.tres" type="Resource" id=5]
-[ext_resource path="res://Resources/Good/mech_parts.tres" type="Resource" id=6]
-[ext_resource path="res://Resources/Good/plane.tres" type="Resource" id=7]
-[ext_resource path="res://Resources/Good/radio.tres" type="Resource" id=8]
-[ext_resource path="res://Resources/Good/rifles.tres" type="Resource" id=9]
-[ext_resource path="res://Resources/Good/el_parts.tres" type="Resource" id=10]
-[ext_resource path="res://Resources/Good/tanks.tres" type="Resource" id=11]
-[ext_resource path="res://Resources/Good/steel.tres" type="Resource" id=12]
-[ext_resource path="res://Resources/Good/canned_food.tres" type="Resource" id=13]
-[ext_resource path="res://Resources/Good/cars.tres" type="Resource" id=14]
-[ext_resource path="res://Resources/Good/clothes.tres" type="Resource" id=15]
-[ext_resource path="res://Resources/Good/gas.tres" type="Resource" id=16]
-[ext_resource path="res://Resources/Good/glass.tres" type="Resource" id=17]
-[ext_resource path="res://Resources/Good/ammo.tres" type="Resource" id=18]
-[ext_resource path="res://Resources/Good/artillery.tres" type="Resource" id=19]
-[ext_resource path="res://Objects/Player/Window_markets/GoodButton.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Resources/Good/textile.tres" type="Resource" id=21]
-[ext_resource path="res://Resources/Good/furniture.tres" type="Resource" id=22]
-[ext_resource path="res://Resources/Good/saltpeter.tres" type="Resource" id=23]
-[ext_resource path="res://Resources/Good/iron.tres" type="Resource" id=24]
-[ext_resource path="res://Resources/Good/beasts.tres" type="Resource" id=25]
-[ext_resource path="res://Resources/Good/cotton.tres" type="Resource" id=26]
-[ext_resource path="res://Resources/Good/oil.tres" type="Resource" id=27]
-[ext_resource path="res://Resources/Good/wood.tres" type="Resource" id=28]
-[ext_resource path="res://Resources/Good/grain.tres" type="Resource" id=29]
-[ext_resource path="res://Resources/Good/rubber.tres" type="Resource" id=30]
-[ext_resource path="res://Resources/Good/coal.tres" type="Resource" id=31]
-
-[sub_resource type="DynamicFont" id=3]
-size = 48
-font_data = ExtResource( 1 )
+[ext_resource type="FontFile" uid="uid://dpaiod0xc1xgs" path="res://Graphics/Fonts/pixel_2.ttf" id="1"]
+[ext_resource type="Script" path="res://Objects/Player/Window_markets/Markets.gd" id="3"]
+[ext_resource type="Resource" path="res://Resources/Good/coal.tres" id="4_5kp3f"]
+[ext_resource type="Resource" path="res://Resources/Good/iron.tres" id="5_o3d48"]
+[ext_resource type="Resource" path="res://Resources/Good/cotton.tres" id="6_4elhd"]
+[ext_resource type="Resource" path="res://Resources/Good/wood.tres" id="7_a6yc8"]
+[ext_resource type="Resource" path="res://Resources/Good/oil.tres" id="8_25g8n"]
+[ext_resource type="Resource" path="res://Resources/Good/saltpeter.tres" id="9_uj54f"]
+[ext_resource type="Resource" path="res://Resources/Good/rubber.tres" id="10_gdn2v"]
+[ext_resource type="Resource" path="res://Resources/Good/steel.tres" id="11_silgs"]
+[ext_resource type="Resource" path="res://Resources/Good/textile.tres" id="12_qeyre"]
+[ext_resource type="Resource" path="res://Resources/Good/mech_parts.tres" id="13_a0qyi"]
+[ext_resource type="Resource" path="res://Resources/Good/lumber.tres" id="14_fvce0"]
+[ext_resource type="Resource" path="res://Resources/Good/glass.tres" id="15_otth5"]
+[ext_resource type="Resource" path="res://Resources/Good/el_parts.tres" id="16_ko3b3"]
+[ext_resource type="Resource" path="res://Resources/Good/grain.tres" id="17_o5h63"]
+[ext_resource type="Resource" path="res://Resources/Good/beasts.tres" id="18_q5b6g"]
+[ext_resource type="Resource" path="res://Resources/Good/alcohol.tres" id="19_xul04"]
+[ext_resource type="PackedScene" uid="uid://byc35yobaf53i" path="res://Objects/Player/Window_markets/GoodButton.tscn" id="20"]
+[ext_resource type="Resource" path="res://Resources/Good/furniture.tres" id="20_nd7wy"]
+[ext_resource type="Resource" path="res://Resources/Good/clothes.tres" id="21_uhxsh"]
+[ext_resource type="Resource" path="res://Resources/Good/phone.tres" id="22_vlgqn"]
+[ext_resource type="Resource" path="res://Resources/Good/radio.tres" id="23_kp4ti"]
+[ext_resource type="Resource" path="res://Resources/Good/cars.tres" id="24_qg6y3"]
+[ext_resource type="Resource" path="res://Resources/Good/plane.tres" id="25_g7836"]
+[ext_resource type="Resource" path="res://Resources/Good/gas.tres" id="26_p4gfo"]
+[ext_resource type="Resource" path="res://Resources/Good/ammo.tres" id="27_c4qcu"]
+[ext_resource type="Resource" path="res://Resources/Good/rifles.tres" id="28_0dbcv"]
+[ext_resource type="Resource" path="res://Resources/Good/artillery.tres" id="29_cr4y7"]
+[ext_resource type="Resource" path="res://Resources/Good/tanks.tres" id="30_w064d"]
+[ext_resource type="Resource" path="res://Resources/Good/canned_food.tres" id="31_o3ioc"]
 
 [node name="Markets" type="Panel"]
-margin_top = 61.0
-margin_right = 1920.0
-margin_bottom = 1080.0
-script = ExtResource( 3 )
+offset_top = 61.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("3")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
-margin_top = 530.0
-margin_right = 477.0
-margin_bottom = 1019.0
+layout_mode = 0
+offset_top = 661.0
+offset_right = 477.0
+offset_bottom = 1019.0
+theme_override_constants/separation = 0
 
 [node name="Label" type="Label" parent="VBoxContainer2"]
-margin_right = 477.0
-margin_bottom = 48.0
-custom_fonts/font = SubResource( 3 )
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 37
 text = "Уголь"
-align = 1
 
 [node name="Label2" type="Label" parent="VBoxContainer2"]
-margin_top = 52.0
-margin_right = 477.0
-margin_bottom = 100.0
-custom_fonts/font = SubResource( 3 )
-align = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 37
 
 [node name="Label3" type="Label" parent="VBoxContainer2"]
-margin_top = 104.0
-margin_right = 477.0
-margin_bottom = 152.0
-custom_fonts/font = SubResource( 3 )
-align = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 37
 
 [node name="Label4" type="Label" parent="VBoxContainer2"]
-margin_top = 156.0
-margin_right = 477.0
-margin_bottom = 204.0
-custom_fonts/font = SubResource( 3 )
-align = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 37
 
 [node name="Label5" type="Label" parent="VBoxContainer2"]
-margin_top = 208.0
-margin_right = 477.0
-margin_bottom = 256.0
-custom_fonts/font = SubResource( 3 )
-align = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 37
 
 [node name="Label6" type="Label" parent="VBoxContainer2"]
-margin_top = 260.0
-margin_right = 477.0
-margin_bottom = 308.0
-custom_fonts/font = SubResource( 3 )
-align = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 37
 
-[node name="Control" type="Control" parent="."]
-margin_right = 2922.0
-margin_bottom = 1086.0
-rect_scale = Vector2( 0.5, 0.5 )
-mouse_filter = 2
+[node name="Label7" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 37
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
-margin_right = 2662.0
-margin_bottom = 214.0
-mouse_filter = 2
-custom_constants/separation = 0
-
-[node name="GoodButton" parent="Control/HBoxContainer" instance=ExtResource( 20 )]
-margin_right = 380.0
-margin_bottom = 214.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-good = ExtResource( 31 )
-
-[node name="GoodButton2" parent="Control/HBoxContainer" instance=ExtResource( 20 )]
-margin_left = 380.0
-margin_right = 760.0
-margin_bottom = 214.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-good = ExtResource( 24 )
-
-[node name="GoodButton3" parent="Control/HBoxContainer" instance=ExtResource( 20 )]
-margin_left = 760.0
-margin_right = 1140.0
-margin_bottom = 214.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-good = ExtResource( 28 )
-
-[node name="GoodButton4" parent="Control/HBoxContainer" instance=ExtResource( 20 )]
-margin_left = 1140.0
-margin_right = 1521.0
-margin_bottom = 214.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-good = ExtResource( 26 )
-
-[node name="GoodButton5" parent="Control/HBoxContainer" instance=ExtResource( 20 )]
-margin_left = 1521.0
-margin_right = 1901.0
-margin_bottom = 214.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-good = ExtResource( 23 )
-
-[node name="GoodButton6" parent="Control/HBoxContainer" instance=ExtResource( 20 )]
-margin_left = 1901.0
-margin_right = 2281.0
-margin_bottom = 214.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-good = ExtResource( 27 )
-
-[node name="GoodButton7" parent="Control/HBoxContainer" instance=ExtResource( 20 )]
-margin_left = 2281.0
-margin_right = 2662.0
-margin_bottom = 214.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-good = ExtResource( 30 )
-
-[node name="HBoxContainer3" type="HBoxContainer" parent="Control"]
-margin_top = 198.0
-margin_right = 2282.0
-margin_bottom = 412.0
-custom_constants/separation = 0
-
-[node name="GoodButton8" parent="Control/HBoxContainer3" instance=ExtResource( 20 )]
-margin_right = 380.0
-margin_bottom = 214.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-good = ExtResource( 12 )
-
-[node name="GoodButton9" parent="Control/HBoxContainer3" instance=ExtResource( 20 )]
-margin_left = 380.0
-margin_right = 760.0
-margin_bottom = 214.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-good = ExtResource( 6 )
-
-[node name="GoodButton10" parent="Control/HBoxContainer3" instance=ExtResource( 20 )]
-margin_left = 760.0
-margin_right = 1141.0
-margin_bottom = 214.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-good = ExtResource( 10 )
-
-[node name="GoodButton11" parent="Control/HBoxContainer3" instance=ExtResource( 20 )]
-margin_left = 1141.0
-margin_right = 1521.0
-margin_bottom = 214.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-good = ExtResource( 17 )
-
-[node name="GoodButton12" parent="Control/HBoxContainer3" instance=ExtResource( 20 )]
-margin_left = 1521.0
-margin_right = 1901.0
-margin_bottom = 214.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-good = ExtResource( 5 )
-
-[node name="GoodButton13" parent="Control/HBoxContainer3" instance=ExtResource( 20 )]
-margin_left = 1901.0
-margin_right = 2282.0
-margin_bottom = 214.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-good = ExtResource( 21 )
-
-[node name="HBoxContainer2" type="GridContainer" parent="Control"]
-margin_top = 412.0
-margin_right = 2282.0
-margin_bottom = 820.0
-custom_constants/vseparation = -22
-custom_constants/hseparation = 0
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_right = 2400.0
+offset_bottom = 637.0
+scale = Vector2(0.7, 0.7)
+theme_override_constants/h_separation = -12
+theme_override_constants/v_separation = -14
 columns = 6
 
-[node name="GoodButton13" parent="Control/HBoxContainer2" instance=ExtResource( 20 )]
-margin_right = 381.0
-margin_bottom = 215.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-good = ExtResource( 29 )
+[node name="GoodButton" parent="GridContainer" instance=ExtResource("20")]
+layout_mode = 2
+good = ExtResource("4_5kp3f")
 
-[node name="GoodButton14" parent="Control/HBoxContainer2" instance=ExtResource( 20 )]
-margin_left = 381.0
-margin_right = 762.0
-margin_bottom = 215.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-good = ExtResource( 25 )
+[node name="GoodButton2" parent="GridContainer" instance=ExtResource("20")]
+layout_mode = 2
+good = ExtResource("5_o3d48")
 
-[node name="GoodButton15" parent="Control/HBoxContainer2" instance=ExtResource( 20 )]
-margin_left = 762.0
-margin_right = 1142.0
-margin_bottom = 215.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-good = ExtResource( 2 )
+[node name="GoodButton3" parent="GridContainer" instance=ExtResource("20")]
+layout_mode = 2
+good = ExtResource("6_4elhd")
 
-[node name="GoodButton16" parent="Control/HBoxContainer2" instance=ExtResource( 20 )]
-margin_left = 1142.0
-margin_right = 1522.0
-margin_bottom = 215.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-good = ExtResource( 15 )
+[node name="GoodButton4" parent="GridContainer" instance=ExtResource("20")]
+layout_mode = 2
+good = ExtResource("7_a6yc8")
 
-[node name="GoodButton17" parent="Control/HBoxContainer2" instance=ExtResource( 20 )]
-margin_left = 1522.0
-margin_right = 1902.0
-margin_bottom = 215.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-good = ExtResource( 22 )
+[node name="GoodButton5" parent="GridContainer" instance=ExtResource("20")]
+layout_mode = 2
+good = ExtResource("8_25g8n")
 
-[node name="GoodButton19" parent="Control/HBoxContainer2" instance=ExtResource( 20 )]
-margin_left = 1902.0
-margin_right = 2282.0
-margin_bottom = 215.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-good = ExtResource( 16 )
+[node name="GoodButton6" parent="GridContainer" instance=ExtResource("20")]
+layout_mode = 2
+good = ExtResource("9_uj54f")
 
-[node name="GoodButton21" parent="Control/HBoxContainer2" instance=ExtResource( 20 )]
-margin_top = 193.0
-margin_right = 381.0
-margin_bottom = 408.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-good = ExtResource( 4 )
+[node name="GoodButton7" parent="GridContainer" instance=ExtResource("20")]
+layout_mode = 2
+good = ExtResource("10_gdn2v")
 
-[node name="GoodButton23" parent="Control/HBoxContainer2" instance=ExtResource( 20 )]
-margin_left = 381.0
-margin_top = 193.0
-margin_right = 762.0
-margin_bottom = 408.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-good = ExtResource( 8 )
+[node name="GoodButton16" parent="GridContainer" instance=ExtResource("20")]
+layout_mode = 2
+good = ExtResource("6_4elhd")
 
-[node name="GoodButton24" parent="Control/HBoxContainer2" instance=ExtResource( 20 )]
-margin_left = 762.0
-margin_top = 193.0
-margin_right = 1142.0
-margin_bottom = 408.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-good = ExtResource( 14 )
+[node name="GoodButton8" parent="GridContainer" instance=ExtResource("20")]
+layout_mode = 2
+good = ExtResource("11_silgs")
 
-[node name="HBoxContainer5" type="HBoxContainer" parent="Control"]
-margin_left = -2.0
-margin_top = 820.0
-margin_right = 2282.0
-margin_bottom = 1034.0
-custom_constants/separation = 0
+[node name="GoodButton9" parent="GridContainer" instance=ExtResource("20")]
+layout_mode = 2
+good = ExtResource("12_qeyre")
 
-[node name="GoodButton18" parent="Control/HBoxContainer5" instance=ExtResource( 20 )]
-margin_right = 380.0
-margin_bottom = 214.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-good = ExtResource( 18 )
+[node name="GoodButton10" parent="GridContainer" instance=ExtResource("20")]
+layout_mode = 2
+good = ExtResource("13_a0qyi")
 
-[node name="GoodButton25" parent="Control/HBoxContainer5" instance=ExtResource( 20 )]
-margin_left = 380.0
-margin_right = 761.0
-margin_bottom = 214.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-good = ExtResource( 9 )
+[node name="GoodButton11" parent="GridContainer" instance=ExtResource("20")]
+layout_mode = 2
+good = ExtResource("14_fvce0")
 
-[node name="GoodButton28" parent="Control/HBoxContainer5" instance=ExtResource( 20 )]
-margin_left = 761.0
-margin_right = 1141.0
-margin_bottom = 214.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-good = ExtResource( 19 )
+[node name="GoodButton12" parent="GridContainer" instance=ExtResource("20")]
+layout_mode = 2
+good = ExtResource("15_otth5")
 
-[node name="GoodButton30" parent="Control/HBoxContainer5" instance=ExtResource( 20 )]
-margin_left = 1141.0
-margin_right = 1522.0
-margin_bottom = 214.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-good = ExtResource( 7 )
+[node name="GoodButton13" parent="GridContainer" instance=ExtResource("20")]
+layout_mode = 2
+good = ExtResource("16_ko3b3")
 
-[node name="GoodButton26" parent="Control/HBoxContainer5" instance=ExtResource( 20 )]
-margin_left = 1522.0
-margin_right = 1903.0
-margin_bottom = 214.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-good = ExtResource( 11 )
+[node name="GoodButton14" parent="GridContainer" instance=ExtResource("20")]
+layout_mode = 2
+good = ExtResource("17_o5h63")
 
-[node name="GoodButton29" parent="Control/HBoxContainer5" instance=ExtResource( 20 )]
-margin_left = 1903.0
-margin_right = 2284.0
-margin_bottom = 214.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-good = ExtResource( 13 )
+[node name="GoodButton15" parent="GridContainer" instance=ExtResource("20")]
+layout_mode = 2
+good = ExtResource("18_q5b6g")
+
+[node name="GoodButton17" parent="GridContainer" instance=ExtResource("20")]
+layout_mode = 2
+good = ExtResource("19_xul04")
+
+[node name="GoodButton18" parent="GridContainer" instance=ExtResource("20")]
+layout_mode = 2
+good = ExtResource("20_nd7wy")
+
+[node name="GoodButton19" parent="GridContainer" instance=ExtResource("20")]
+layout_mode = 2
+good = ExtResource("21_uhxsh")
+
+[node name="GoodButton20" parent="GridContainer" instance=ExtResource("20")]
+layout_mode = 2
+good = ExtResource("22_vlgqn")
+
+[node name="GoodButton21" parent="GridContainer" instance=ExtResource("20")]
+layout_mode = 2
+good = ExtResource("23_kp4ti")
+
+[node name="GoodButton22" parent="GridContainer" instance=ExtResource("20")]
+layout_mode = 2
+good = ExtResource("24_qg6y3")
+
+[node name="GoodButton23" parent="GridContainer" instance=ExtResource("20")]
+layout_mode = 2
+good = ExtResource("25_g7836")
+
+[node name="GoodButton24" parent="GridContainer" instance=ExtResource("20")]
+layout_mode = 2
+good = ExtResource("26_p4gfo")
+
+[node name="GoodButton25" parent="GridContainer" instance=ExtResource("20")]
+layout_mode = 2
+good = ExtResource("27_c4qcu")
+
+[node name="GoodButton26" parent="GridContainer" instance=ExtResource("20")]
+layout_mode = 2
+good = ExtResource("28_0dbcv")
+
+[node name="GoodButton27" parent="GridContainer" instance=ExtResource("20")]
+layout_mode = 2
+good = ExtResource("29_cr4y7")
+
+[node name="GoodButton28" parent="GridContainer" instance=ExtResource("20")]
+layout_mode = 2
+good = ExtResource("30_w064d")
+
+[node name="GoodButton29" parent="GridContainer" instance=ExtResource("20")]
+layout_mode = 2
+good = ExtResource("31_o3ioc")

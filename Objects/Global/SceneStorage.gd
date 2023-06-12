@@ -5,13 +5,15 @@ signal field_updated
 var camera
 var timer              = GlobalTimer.new()
 var population_manager = PopulationWorldManager.new()
+var regions_manager    = RegionsWorldManager.new()
+
 
 
 func await_field(var_name, callback = null):
 	while get(var_name) == null:
-		yield(self, "field_updated")
+		await self.field_updated
 	
-	if callback != null and callback is FuncRef:
+	if callback != null and callback is Callable:
 		callback.call_func(get(var_name))
 	
 	return get(var_name)

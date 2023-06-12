@@ -1,11 +1,11 @@
 extends Resource
 
 
-export(String) var name_of_factory = ""
+@export var name_of_factory: String = ""
 
-export(Array) var raw = []
-export(Array) var factory_equipment = []
+@export var raw: Array = []
+@export var factory_equipment: Array = []
 
-export(Resource) var good
+@export var good: Resource
 
-export(bool) var available_from_start = true
+@export var available_from_start: bool = true

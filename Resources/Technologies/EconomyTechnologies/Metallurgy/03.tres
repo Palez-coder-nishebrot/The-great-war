@@ -15,17 +15,18 @@ target = ExtResource( 5 )
 [sub_resource type="Resource" id=2]
 script = ExtResource( 1 )
 name_of_effect = "Выпуск продукции"
-power = 1.1
+power = 1.2
 target = ExtResource( 3 )
 
 [sub_resource type="Resource" id=3]
 script = ExtResource( 1 )
 name_of_effect = "Выпуск продукции"
-power = 1.25
+power = 1.1
 target = ExtResource( 4 )
 
 [resource]
 script = ExtResource( 2 )
 cost = 1400
-name_of_technology = "Передовая очистка стали"
+activation_year = 1914
+name_of_technology = "modern_steel_cleaning"
 list_of_effects = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ]

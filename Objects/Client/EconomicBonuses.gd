@@ -2,13 +2,20 @@ extends Node
 
 class_name EconomicBonuses
 
-var population_growth:   int = 0
-var attraction_migrants: int = 0
-var max_railways:        int = 1
-var max_infrastructure:  int = 1
 
-var growth_of_inflation:             float = 1.0
-var education_efficiency:            float = 1.0
+var factory_cost:        int = 0
+var min_salary_bonus:    float = 1.0 # Это число мы будем умножать, а не прибавлять!
+var max_working_day:     int = 0
+
+var pensions:             int = 0
+var unemployment_benefit: int = 0
+var healthcare:           int = 0
+
+var attraction_migrants: int = 0
+
+var max_railways:        int = 1
+
+var inflation_growth:                float = 1.0
 var factories_efficiency_production: float = 0.0
 var DP_efficiency_production:        float = 0.0
 
@@ -96,19 +103,15 @@ var list_of_buildings: Array = [
 
 
 func _init():
-	set_list_of_buildings()
+	#set_list_of_buildings()
+	pass
 
 
 func set_list_of_buildings():
 	var list = []
 	
 	for file in list_of_buildings:
-		var factory = Factory.new()
-		
-		factory.name_of_factory = file.name_of_factory
-		factory.good = file.good
-		factory.type_factory = file
-		factory.raw = file.raw
+		var factory = SceneStorage.regions_manager.province_loader.generate_factory(file)
 		list.append(factory)
 	list_of_buildings = list
 

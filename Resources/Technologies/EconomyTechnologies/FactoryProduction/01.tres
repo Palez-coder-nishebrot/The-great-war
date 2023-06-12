@@ -11,5 +11,6 @@ power = 1.05
 [resource]
 script = ExtResource( 1 )
 cost = 1000
-name_of_technology = "Частичная автоматизация"
+activation_year = 1914
+name_of_technology = "partial_automation"
 list_of_effects = [ SubResource( 1 ) ]

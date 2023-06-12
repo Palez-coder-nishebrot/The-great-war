@@ -1,32 +1,32 @@
-[gd_resource type="Resource" load_steps=7 format=2]
+[gd_resource type="Resource" load_steps=9 format=2]
 
 [ext_resource path="res://Resources/Technologies/Technology.gd" type="Script" id=1]
-[ext_resource path="res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectDefense.gd" type="Script" id=2]
-[ext_resource path="res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectSupply.gd" type="Script" id=3]
+[ext_resource path="res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectAttack.gd" type="Script" id=2]
+[ext_resource path="res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectDefense.gd" type="Script" id=3]
+[ext_resource path="res://Resources/military_units/army_units_types/infantry.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/military_units/army_units_types/cavalry.tres" type="Resource" id=5]
 
 [sub_resource type="Resource" id=1]
-resource_name = "Defense"
 script = ExtResource( 2 )
-name_of_effect = "Оборона"
+name_of_effect = "Атака"
 power = 1
-target = "infantry"
+target = ExtResource( 4 )
 
 [sub_resource type="Resource" id=2]
-resource_name = "Defense"
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 name_of_effect = "Оборона"
-power = 1
-target = "cavalry"
+power = 2
+target = ExtResource( 4 )
 
 [sub_resource type="Resource" id=3]
-resource_name = "Supply"
 script = ExtResource( 3 )
-name_of_effect = "Потребление"
-power = 1
-target = "ammo_supply"
+name_of_effect = "Оборона"
+power = 2
+target = ExtResource( 5 )
 
 [resource]
 script = ExtResource( 1 )
 cost = 1200
-name_of_technology = "Оборонительное вооружение"
+activation_year = 1919
+name_of_technology = "world_war_weapon"
 list_of_effects = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ]

@@ -1,37 +1,40 @@
 extends Client
 
-const speed_of_camera: int            = 50
+#class_name Player
+
+const speed_of_camera: int            = 5
 
 const ACTIVE_LEFT_BORDER:  bool = false
 const ACTIVE_RIGHT_BORDER: bool = false
 const ACTIVE_UP_BORDER:    bool = false
 const ACTIVE_DOWN_BORDER:  bool = false
 
-onready var borders:              Node2D = $CanvasLayer/Borders
-onready var camera:               Camera2D = $Camera2D
-onready var buttons:              Panel = $CanvasLayer/Buttons
-onready var window_province:      Panel = $CanvasLayer/Province
-onready var window_markets:       Panel = $CanvasLayer/Markets
-onready var window_build_factory: Panel = $CanvasLayer/Build_factory
-onready var window_production:    Panel = $CanvasLayer/Production
-onready var window_parties:       Panel = $CanvasLayer/Parties
-onready var window_taxes:         Panel = $CanvasLayer/Taxes
-onready var window_reform:        Panel = $CanvasLayer/Reform
-onready var window_population:    Panel = $CanvasLayer/Population
-onready var window_research:      Panel = $CanvasLayer/Research
-onready var information:          Panel = $CanvasLayer/Information
-onready var window_train_army:    Panel = $CanvasLayer/Train_army
-onready var window_diplomacy:     Panel = $CanvasLayer/Diplomacy
-onready var window_list_of_units: ScrollContainer = $CanvasLayer/List_of_units
+@onready var canvas_layer:         CanvasLayer = $CanvasLayer
+@onready var borders:              Node2D = $CanvasLayer/Borders
+@onready var camera:               Camera2D = $Camera2D
+@onready var buttons:              Panel = $CanvasLayer/Buttons
+@onready var window_province:      Panel = $CanvasLayer/Province
+@onready var window_markets:       Panel = $CanvasLayer/Markets
+@onready var window_build_factory: Panel = $CanvasLayer/Build_factory
+@onready var window_production:    Panel = $CanvasLayer/Production
+@onready var window_parties:       Panel = $CanvasLayer/Parties
+@onready var window_taxes:         Panel = $CanvasLayer/Taxes
+@onready var window_reform:        Panel = $CanvasLayer/Reform
+@onready var window_population:    Panel = $CanvasLayer/Population
+@onready var window_research:      Panel = $CanvasLayer/Research
+@onready var information:          Panel = $CanvasLayer/Information
+@onready var window_train_army:    Panel = $CanvasLayer/Train_army
+@onready var window_diplomacy:     Panel = $CanvasLayer/Diplomacy
+@onready var window_list_of_units: ScrollContainer = $CanvasLayer/List_of_units
 
 
 func _ready():
-	var _err = connect("check_available_reform", window_reform, "check_available_reform")
-	var _err_ = connect("research_completed", self, "research_completed")
+	var _err = connect("check_available_reform", Callable(window_reform, "check_available_reform"))
+	var _err_ = connect("research_completed", Callable(self, "report_research_completed"))
+	
 
-
-func research_completed(technology):
-	var message = load("res://Objects/Player/Message/Message/Message.tscn").instance()
+func report_research_completed(technology):
+	var message = load("res://Objects/Player/Message/Message/Message.tscn").instantiate()
 	message.set_title("research_completed", technology)
 	$CanvasLayer.add_child(message)
 

@@ -13,7 +13,7 @@ const sprites_of_resources: Dictionary = {
 	"Древесина": "res://Graphics/Sprites/Goods/wood.png",
 }
 
-onready var links: Dictionary = {
+@onready var links: Dictionary = {
 	$HBoxContainer/Label:  $TextureRect,
 	$HBoxContainer/Label2: $TextureRect2,
 }

@@ -2,9 +2,9 @@ extends TechnologyEffect
 
 class_name TechnologyEffectProductionFactories
 
-export(String) var name_of_effect = "Производительность заводов"
+@export var name_of_effect: String = "Производительность заводов"
 
-export(float) var power = 0.0
+@export var power: float = 0.0
 
 func get_effect():
 	var bonus = (power - 1.0) * 100.0

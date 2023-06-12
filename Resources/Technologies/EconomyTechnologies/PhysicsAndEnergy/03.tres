@@ -11,5 +11,6 @@ power = 1.15
 [resource]
 script = ExtResource( 1 )
 cost = 1300
-name_of_technology = "Синтетические полимеры"
+activation_year = 1914
+name_of_technology = "synthetic_polymers"
 list_of_effects = [ SubResource( 1 ) ]

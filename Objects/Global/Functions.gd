@@ -9,9 +9,9 @@ extends Node
 #}
 
 func rng(number_1, number_2):
-	var rng = RandomNumberGenerator.new()
-	rng.randomize()
-	return rng.randi_range(number_1,number_2)
+	var RNG = RandomNumberGenerator.new()
+	RNG.randomize()
+	return RNG.randi_range(number_1,number_2)
 	
 
 func convert_sprite_to_collision(sprite):
@@ -27,7 +27,13 @@ func convert_sprite_to_collision(sprite):
 		5
 	)
 	return polys[0]
-	
+
+
+func swap(first_index, second_index, array):
+	var t = array[first_index]
+	array[first_index] = array[second_index]
+	array[second_index] = t
+
 
 func pay_income_taxes(player, object, tax, income):
 	var perc: float = float(tax / 100.0)
@@ -43,17 +49,18 @@ func check_tariffs(price, player):
 	return price * (float(player.tariffs) / 100)
 	
 
-func buy_good_on_local_market(customer, good, quanity, client):
-	if good == load("res://Resources/Good/radio.tres"):
-		client.radio_net += quanity
-	var local_market = client.local_market
-	var good_price = client.prices_goods[good]
+func buy_good_on_local_market(customer, good, quanity, economy_manager):
+	var local_market = economy_manager.local_market
+	var good_price = economy_manager.prices_goods[good]
 	
+	economy_manager.demand_supply_goods[good][0] += quanity
 	local_market[good] -= quanity
 	customer.money -= good_price * quanity
 	return good_price * quanity
 
 
-func change_GDP(good, quanity, player): # ВВП
-	player.gdp += player.prices_goods[good] * quanity
-	player.production_goods[good] += quanity
+func create_details_panel(parent):
+	var panel = load("res://Objects/Player/details_panel/details_panel.tscn").instantiate()
+	Players.player.canvas_layer.add_child(panel)
+	panel.connect_parent(parent)
+	return panel

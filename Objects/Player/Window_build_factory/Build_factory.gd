@@ -1,20 +1,23 @@
 extends Panel
 
-onready var player            = get_parent().get_parent()
-onready var buttons_container = $ScrollContainer/VBoxContainer
+@onready var player            = get_parent().get_parent()
+@onready var buttons_container = $ScrollContainer/VBoxContainer
 
-onready var name_region_label      = $VBoxContainer/Label5
-onready var factory_name_label     = $VBoxContainer/Label
-onready var construction_raw_label = $VBoxContainer/Label2
-onready var production_raw_label   = $VBoxContainer/Label3
-onready var factory_profit_label   = $VBoxContainer/Label4
+@onready var name_region_label      = $VBoxContainer/Label5
+@onready var factory_name_label     = $VBoxContainer/Label
+@onready var construction_raw_label = $VBoxContainer/Label2
+@onready var production_raw_label   = $VBoxContainer/Label3
+@onready var factory_profit_label   = $VBoxContainer/Label4
 
 #var province: Object
-var factory:  Node
+var factory:  Resource
 var cost: int
 var region: Object
 
-func _visible():
+
+func show_self(region_):
+	visible = true
+	region = region_
 	name_region_label.text = region.name_of_tile
 	clear()
 	set_factory_buttons()
@@ -22,7 +25,7 @@ func _visible():
 
 func set_factory_buttons():
 	for i in player.economic_bonuses.list_of_buildings:
-		var button = load("res://Objects/Player/Window_build_factory/Button_factory.tscn").instance()
+		var button = load("res://Objects/Player/Window_build_factory/Button_factory.tscn").instantiate()
 		button.text = i.name_of_factory
 		button.factory = i
 		button.parent = self
@@ -68,9 +71,10 @@ func check_purchase_for_construction(label, resources, first_text):
 
 func check_purchase_for_production():
 	var text = ""
+	var raw_list = factory.raw
 	
-	for raw in factory.raw:
-		text += tr(raw.name) + ": " + str(factory.raw[raw]) + "\n"
+	for storage_good in raw_list:
+		text += tr(storage_good.good.name) + ": " + str(storage_good.quantity) + "\n"
 	return text
 
 

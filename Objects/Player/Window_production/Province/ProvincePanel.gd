@@ -5,7 +5,7 @@ signal update_info_about_factory
 var list_of_factories: Dictionary = {}
 var province:          Object
 
-onready var name_of_tile = $Label
+@onready var name_of_tile = $Label
 
 func update_information():
 	$Label.text = province.name_of_tile
@@ -22,10 +22,10 @@ func update_information():
 
 
 func spawn_panel(factory):
-	var panel = load("res://Objects/Player/Window_production/Factory/FactoryPanel.tscn").instance()
+	var panel = load("res://Objects/Player/Window_production/Factory/FactoryPanel.tscn").instantiate()
 	panel.province = province
 	panel.factory = factory
-	var _err = connect("update_info_about_factory", panel, "update_information")
+	var _err = connect("update_info_about_factory", Callable(panel, "update_information"))
 	list_of_factories[factory] = panel
 	panel.update_information()
 	panel.show_purchase()

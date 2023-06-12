@@ -1,109 +1,95 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=3 uid="uid://cnmntttok106d"]
 
-[ext_resource path="res://Graphics/Fonts/pixel_2.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Objects/Player/Window_build_factory/Build_factory.gd" type="Script" id=3]
+[ext_resource type="FontFile" uid="uid://dpaiod0xc1xgs" path="res://Graphics/Fonts/pixel_2.ttf" id="1"]
+[ext_resource type="Script" path="res://Objects/Player/Window_build_factory/Build_factory.gd" id="3"]
 
-[sub_resource type="DynamicFont" id=2]
-size = 32
-font_data = ExtResource( 1 )
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bm86c"]
+bg_color = Color(0.443137, 0.360784, 0.309804, 1)
 
-[sub_resource type="DynamicFont" id=3]
-size = 26
-font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=4]
-size = 32
-font_data = ExtResource( 1 )
+[sub_resource type="FontFile" id="4"]
+fallbacks = Array[Font]([ExtResource("1")])
+face_index = null
+embolden = null
+transform = null
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/30/0 = Vector2(0, 0)
+cache/0/30/0/ascent = 0.0
+cache/0/30/0/descent = 0.0
+cache/0/30/0/underline_position = 0.0
+cache/0/30/0/underline_thickness = 0.0
+cache/0/30/0/scale = 1.0
+cache/0/30/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/30/0 = Vector2(0, 0)
 
 [node name="Build_factory" type="Panel"]
-margin_left = 438.0
-margin_top = 222.0
-margin_right = 1408.0
-margin_bottom = 865.0
-script = ExtResource( 3 )
+offset_left = 438.0
+offset_top = 222.0
+offset_right = 1408.0
+offset_bottom = 865.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_bm86c")
+script = ExtResource("3")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
-margin_right = 461.0
-margin_bottom = 566.0
+layout_mode = 0
+offset_right = 461.0
+offset_bottom = 566.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
-margin_right = 461.0
-margin_bottom = 566.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_constants/separation = 0
+theme_override_constants/separation = 0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_left = 485.0
-margin_right = 969.0
-margin_bottom = 643.0
-custom_constants/separation = -3
+layout_mode = 0
+offset_left = 485.0
+offset_right = 969.0
+offset_bottom = 643.0
 
 [node name="Label5" type="Label" parent="VBoxContainer"]
-margin_right = 484.0
-margin_bottom = 32.0
-custom_fonts/font = SubResource( 2 )
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 25
 text = "Название"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="VBoxContainer"]
-margin_top = 29.0
-margin_right = 484.0
-margin_bottom = 61.0
-custom_fonts/font = SubResource( 2 )
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 25
 text = "Название"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label2" type="Label" parent="VBoxContainer"]
-margin_top = 58.0
-margin_right = 484.0
-margin_bottom = 85.0
-custom_fonts/font = SubResource( 3 )
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 25
 text = "Сырье для строительства"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label3" type="Label" parent="VBoxContainer"]
-margin_top = 82.0
-margin_right = 484.0
-margin_bottom = 109.0
-custom_fonts/font = SubResource( 3 )
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 25
 text = "Сырье для производства"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label4" type="Label" parent="VBoxContainer"]
-margin_top = 106.0
-margin_right = 484.0
-margin_bottom = 133.0
-custom_fonts/font = SubResource( 3 )
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 25
 text = "Прибыль фабрики"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Button2" type="Button" parent="VBoxContainer"]
-margin_top = 130.0
-margin_right = 484.0
-margin_bottom = 168.0
-custom_fonts/font = SubResource( 4 )
+layout_mode = 2
+theme_override_fonts/font = SubResource("4")
+theme_override_font_sizes/font_size = 30
 text = "Закрыть"
 
-[connection signal="visibility_changed" from="." to="." method="_visible"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="exit"]

@@ -1,7 +1,7 @@
 extends Resource
 
 
-export var needs_of_workers: Dictionary = {
+@export var needs_of_workers: Dictionary = {
 	"grain": 0.1,
 	"beasts": 0.1,
 	"alcohol": 0.1,
@@ -14,7 +14,7 @@ export var needs_of_workers: Dictionary = {
 	"plane": 0.1,
 }
 
-export var needs_of_factory_workers: Dictionary = {
+@export var needs_of_factory_workers: Dictionary = {
 	"grain": 0.1,
 	"beasts": 0.1,
 	"alcohol": 0.1,
@@ -28,7 +28,7 @@ export var needs_of_factory_workers: Dictionary = {
 }
 
 
-export var needs_of_clerks: Dictionary = {
+@export var needs_of_clerks: Dictionary = {
 	"grain": 0.1,
 	"beasts": 0.1,
 	"alcohol": 0.1,

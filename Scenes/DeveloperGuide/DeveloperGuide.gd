@@ -10,7 +10,7 @@ var list_of_texts: Dictionary = {
 
 func _ready():
 	for i in $VBoxContainer.get_children():
-		i.connect("pressed", i, "on_button_pressed")
+		i.connect("pressed", Callable(i, "on_button_pressed"))
 		
 
 func open_file(path):
@@ -22,4 +22,4 @@ func open_file(path):
 
 
 func exit():
-	get_tree().change_scene("res://Scenes/Menu/Menu.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Menu/Menu.tscn")

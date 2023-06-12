@@ -2,9 +2,9 @@ extends TechnologyEffect
 
 class_name TechnologyEffectNewFactory
 
-export(String) var name_of_effect = "Новый тип завода"
+@export var name_of_effect: String = "Новый тип завода"
 
-export(String, "Rubber_factory", "Oil_factory", "Senthetic_textile_factory") var target = "Rubber_factory"
+@export var target = "Rubber_factory" # (String, "Rubber_factory", "Oil_factory", "Senthetic_textile_factory")
 
 
 #const list_of_factories: Dictionary = {

@@ -2,21 +2,21 @@ extends Resource
 
 class_name StateOnStartGame
 
-export(String) var name_of_state = ""
+@export var name_of_state: String = ""
 
-export(PoolStringArray) var list_of_regions
+@export var list_of_regions: PackedStringArray
 
-export(int) var middle_value_education = 50
+@export var middle_value_education: int = 50
 
-export(String, "monarchy", "republic", "soviet_republic", "fascist_dictatorship", "military_dictatorship") var form_of_goverment = "monarchy"
-export(String, "liberals", "socialists", "communists", "fascists", "conservators") var ideology = "conservators"
+@export var government_form: Resource
+@export var ideology: Resource
 
-export(Color)   var national_color = Color(0.556863, 0.447059, 0.431373)
-export(Texture) var national_flag
-export(String)  var national_id
+@export var national_color: Color = Color(0.556863, 0.447059, 0.431373)
+@export var national_flag: Texture2D
+@export var national_id: String
 
 
-export(Dictionary) var popularity_of_parties: Dictionary = {
+@export var popularity_of_parties: Dictionary = {
 	"liberals": 30,
 	"socialists": 15,
 	"libertarians": 5,
@@ -24,7 +24,7 @@ export(Dictionary) var popularity_of_parties: Dictionary = {
 	"fascists": 0, 
 	"conservators": 45,
 }
-export(Dictionary) var names_of_parties = {
+@export var names_of_parties: Dictionary = {
 	"liberals": "",
 	"socialists": "",
 	"libertarians": "",

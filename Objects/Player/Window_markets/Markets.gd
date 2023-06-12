@@ -1,13 +1,14 @@
 extends Panel
 
-signal update(market)
+signal update
 
-onready var good_label          = $VBoxContainer2/Label
-onready var demand_label        = $VBoxContainer2/Label2
-onready var supply_label        = $VBoxContainer2/Label3
-onready var prices_label        = $VBoxContainer2/Label4
-onready var warhouse_label      = $VBoxContainer2/Label5
-onready var export_import_label = $VBoxContainer2/Label6
+@onready var good_label          = $VBoxContainer2/Label
+@onready var demand_label        = $VBoxContainer2/Label2
+@onready var supply_label        = $VBoxContainer2/Label3
+@onready var prices_label        = $VBoxContainer2/Label4
+@onready var warhouse_label      = $VBoxContainer2/Label5
+@onready var export_import_label = $VBoxContainer2/Label6
+@onready var max_price_label     = $VBoxContainer2/Label7
 
 
 var good: Resource = load("res://Resources/Good/coal.tres")
@@ -23,12 +24,12 @@ func update_information():
 func update_information_about_good(new_good):
 	good = new_good
 	
-	var player              = Players.player
-	var demand_supply_good  = player.demand_supply_goods[good]
-	var price               = player.prices_goods[good]
-	var goods_warhouse      = player.warhouse_goods[good]
-	var import_good         = player.import_goods[good]
-	var export_good         = player.export_goods[good]
+	var economy_manager     = Players.player.economy_manager
+	var demand_supply_good  = economy_manager.demand_supply_goods[good]
+	var price               = economy_manager.prices_goods[good]
+	#var goods_warhouse      = economy_manager.warhouse_goods[good]
+	var import_good         = economy_manager.import_goods[good]
+	var export_good         = economy_manager.export_goods[good]
 	
 	good_label.text = good.name
 	
@@ -37,12 +38,20 @@ func update_information_about_good(new_good):
 	else:
 		export_import_label.text = "Импорт: " + str(import_good)
 	
-	warhouse_label.text = "Гос. запасы: " + str(goods_warhouse)
+	#warhouse_label.text = "Гос. запасы: " + str(goods_warhouse)
 	
 	demand_label.text = "Спрос:"       + str(demand_supply_good[0])
 	supply_label.text = "Предложение:" + str(demand_supply_good[1])
 	
 	prices_label.text = "Цена отечественном рынке:" + str(price)
+	max_price_label.text = "border_price: " + str(get_m_price(demand_supply_good[1], demand_supply_good[0]))
+
+
+func get_m_price(supply, demand):
+	if supply != 0:
+		var border_price = (demand / supply) * good.base_price
+		return border_price
+	return 0
 
 
 func spawn_buttons(market, container):

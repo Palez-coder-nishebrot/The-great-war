@@ -3,8 +3,8 @@ extends HBoxContainer
 var household
 var parent
 
-onready var soc_class_button = $SocClass
-onready var delete_button = $Delete
+@onready var soc_class_button = $SocClass
+@onready var delete_button = $Delete
 
 var list_of_soc_classes: Array = [
 	"Worker",

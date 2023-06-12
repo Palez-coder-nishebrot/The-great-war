@@ -11,5 +11,6 @@ power = 1.1
 [resource]
 script = ExtResource( 1 )
 cost = 1100
-name_of_technology = "Дизельные двигатели"
+activation_year = 1914
+name_of_technology = "diesel_engines"
 list_of_effects = [ SubResource( 1 ) ]

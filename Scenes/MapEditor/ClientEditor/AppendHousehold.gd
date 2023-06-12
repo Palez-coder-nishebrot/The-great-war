@@ -1,13 +1,13 @@
 extends Button
 
 
-export(String) var soc_class = ""
-export(String) var array = ""
+@export var soc_class: String = ""
+@export var array: String = ""
 
 func _gui_input(event):
 	if event is InputEventMouseButton and pressed:
 		var region = get_parent().get_parent().region
-		if event.get_button_index() == BUTTON_RIGHT:
+		if event.get_button_index() == MOUSE_BUTTON_RIGHT:
 			if region.get(array) != 0:
 				plus(region, -1)
 		else:

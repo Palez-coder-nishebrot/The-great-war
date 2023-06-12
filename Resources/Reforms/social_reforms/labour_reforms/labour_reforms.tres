@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=7 format=2]
+
+[ext_resource path="res://Resources/reforms/social_reforms/labour_reforms/01.tres" type="Resource" id=1]
+[ext_resource path="res://Resources/reforms/social_reforms/labour_reforms/03.tres" type="Resource" id=2]
+[ext_resource path="res://Resources/reforms/social_reforms/labour_reforms/02.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/reforms/social_reforms/labour_reforms/05.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/reforms/Reform.gd" type="Script" id=5]
+[ext_resource path="res://Resources/reforms/social_reforms/labour_reforms/04.tres" type="Resource" id=6]
+
+[resource]
+script = ExtResource( 5 )
+levels = [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 4 ) ]
+reform_name = "labour_reforms"

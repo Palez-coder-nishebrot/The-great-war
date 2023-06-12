@@ -14,9 +14,9 @@ var editor:              Object
 var resources:           Array = []
 var railways: int = 0
 
-onready var label = $Label
+@onready var label = $Label
 #onready var collision = $Area2D/CollisionPolygon2D
-onready var map_editor = get_parent().get_node("ClientEditor")
+@onready var map_editor = get_parent().get_node("ClientEditor")
 
 #func _gui_input(event):
 #	if event is InputEventMouseButton and pressed:

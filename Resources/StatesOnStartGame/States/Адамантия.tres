@@ -1,13 +1,16 @@
-[gd_resource type="Resource" load_steps=2 format=2]
+[gd_resource type="Resource" load_steps=4 format=2]
 
 [ext_resource path="res://Resources/StatesOnStartGame/State.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Parties/Policy/goverment_form/monarchy.tres" type="Resource" id=2]
+[ext_resource path="res://Resources/Parties/Ideologies/Conservators.tres" type="Resource" id=3]
 
 [resource]
 script = ExtResource( 1 )
 name_of_state = "Adamanty"
-list_of_regions = PoolStringArray( "Должанск", "Бердичев", "Константиновка", "Новомосковск", "Коростень", "Измаил", "Горлица", "Яремче", "Тамань" )
-form_of_goverment = "republic"
-ideology = "communists"
+list_of_regions = PackedStringArray( "Должанск", "Бердичев", "Константиновка", "Новомосковск", "Коростень", "Измаил", "Горлица", "Яремче", "Тамань" )
+middle_value_education = 50
+government_form = ExtResource( 2 )
+ideology = ExtResource( 3 )
 national_color = Color( 0.533333, 0.556863, 0.431373, 1 )
 national_id = ""
 popularity_of_parties = {

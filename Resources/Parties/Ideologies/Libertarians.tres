@@ -1,18 +1,21 @@
 [gd_resource type="Resource" load_steps=6 format=2]
 
 [ext_resource path="res://Resources/Parties/Ideology.gd" type="Script" id=1]
-[ext_resource path="res://Resources/Parties/Policy/ForeignPolicy/Militarism.tres" type="Resource" id=2]
-[ext_resource path="res://Resources/Parties/Policy/TradePolicy/FreeTrade.tres" type="Resource" id=3]
-[ext_resource path="res://Resources/Parties/Policy/EconomyPolicy/FreeEconomy.tres" type="Resource" id=4]
-[ext_resource path="res://Resources/Parties/Policy/FormsOfGovernment/Republic.tres" type="Resource" id=5]
+[ext_resource path="res://Resources/Parties/Policy/trade_policy/free_trade.tres" type="Resource" id=2]
+[ext_resource path="res://Resources/Parties/Policy/military_policy/expansionism.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Parties/Policy/economy_policy/free_economy.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Parties/Policy/goverment_form/republic.tres" type="Resource" id=5]
 
 [resource]
 script = ExtResource( 1 )
 ideology = "libertarians"
 economic_policy = ExtResource( 4 )
-trade_policy = ExtResource( 3 )
-foreign_policy = ExtResource( 2 )
-names_of_parties = PoolStringArray( "Либертарианская партия" )
-supporting_soc_reforms = -1
+trade_policy = ExtResource( 2 )
+military_policy = ExtResource( 3 )
+names_of_parties = [ "Партия социалистов-революционеров" ]
+available_for_setting_ruling_party = [  ]
+supporting_soc_reforms = 0
 supporting_pol_reforms = 1
-form_of_government = ExtResource( 5 )
+rollback_soc_reforms = 1
+rollback_pol_reforms = 0
+government_form = ExtResource( 5 )
