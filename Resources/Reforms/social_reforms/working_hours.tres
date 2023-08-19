@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Reform" load_steps=8 format=3 uid="uid://cob23b0vyydqo"]
+
+[ext_resource type="Script" path="res://Resources/reforms/Reform.gd" id="1_333he"]
+[ext_resource type="Script" path="res://Resources/reforms/levels/working_hours_level.gd" id="1_rviv5"]
+
+[sub_resource type="Resource" id="Resource_po8ph"]
+script = ExtResource("1_rviv5")
+factory_efficiency = 0.0
+level = 0
+level_name = ""
+
+[sub_resource type="Resource" id="Resource_wy8fl"]
+script = ExtResource("1_rviv5")
+factory_efficiency = -0.05
+level = 0
+level_name = ""
+
+[sub_resource type="Resource" id="Resource_arkvl"]
+script = ExtResource("1_rviv5")
+factory_efficiency = -0.1
+level = 0
+level_name = ""
+
+[sub_resource type="Resource" id="Resource_ovp3v"]
+script = ExtResource("1_rviv5")
+factory_efficiency = -0.15
+level = 0
+level_name = ""
+
+[sub_resource type="Resource" id="Resource_msivl"]
+script = ExtResource("1_rviv5")
+factory_efficiency = -0.2
+level = 0
+level_name = ""
+
+[resource]
+script = ExtResource("1_333he")
+levels = Array[Resource("res://Resources/reforms/reform_level.gd")]([SubResource("Resource_po8ph"), SubResource("Resource_wy8fl"), SubResource("Resource_arkvl"), SubResource("Resource_ovp3v"), SubResource("Resource_msivl")])
+reform_name = ""

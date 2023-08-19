@@ -1,31 +1,17 @@
-[gd_resource type="Resource" load_steps=4 format=2]
+[gd_resource type="Resource" script_class="StateOnStartGame" load_steps=4 format=3 uid="uid://dg2ycers1hlbl"]
 
-[ext_resource path="res://Resources/StatesOnStartGame/State.gd" type="Script" id=1]
-[ext_resource path="res://Resources/Parties/Policy/goverment_form/monarchy.tres" type="Resource" id=2]
-[ext_resource path="res://Resources/Parties/Ideologies/Conservators.tres" type="Resource" id=3]
+[ext_resource type="Script" path="res://Resources/StatesOnStartGame/State.gd" id="1"]
+[ext_resource type="Resource" path="res://Resources/Parties/Policy/goverment_form/monarchy.tres" id="2"]
+[ext_resource type="Resource" path="res://Resources/Parties/Ideologies/Conservators.tres" id="3"]
 
 [resource]
-script = ExtResource( 1 )
+script = ExtResource("1")
 name_of_state = "Adamanty"
-list_of_regions = PackedStringArray( "Должанск", "Бердичев", "Константиновка", "Новомосковск", "Коростень", "Измаил", "Горлица", "Яремче", "Тамань" )
-middle_value_education = 50
-government_form = ExtResource( 2 )
-ideology = ExtResource( 3 )
-national_color = Color( 0.533333, 0.556863, 0.431373, 1 )
-national_id = ""
-popularity_of_parties = {
-"communists": 5,
-"conservators": 45,
-"fascists": 0,
-"liberals": 30,
-"libertarians": 5,
-"socialists": 15
-}
-names_of_parties = {
-"communists": "",
-"conservators": "",
-"fascists": "",
-"liberals": "",
-"libertarians": "",
-"socialists": ""
-}
+list_of_regions = PackedStringArray("Должанск", "Бердичев", "Константиновка", "Новомосковск", "Коростень", "Измаил", "Горлица", "Яремче", "Тамань", "Луцк")
+middle_value_education = null
+government_form = ExtResource("2")
+ideology = ExtResource("3")
+national_color = Color(0.533333, 0.556863, 0.431373, 1)
+national_id = null
+popularity_of_parties = null
+names_of_parties = null

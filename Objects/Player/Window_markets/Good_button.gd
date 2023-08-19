@@ -27,12 +27,12 @@ func _gui_input(event):
 
 
 func update_information():
-	var player = Players.player
+	var player = Players.get_player_client()
 	cost.text = "Цена: " + str(player.economy_manager.prices_goods[good])
-	production.text = "Пр-во: " + str(player.economy_manager.production_goods[good])
+	production.text = "Пр-во: " + str(player.accounting_manager.produced_goods[good])
 	
-	var im = player.import_goods[good]
-	var ex = player.export_goods[good]
+	var im = player.economy_manager.import_goods[good]
+	var ex = player.economy_manager.export_goods[good]
 	
 	if im > ex:
 		import.text = "Имп: " + str(im)

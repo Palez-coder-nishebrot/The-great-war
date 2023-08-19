@@ -38,7 +38,7 @@ var windows: Array = [
 
 func on_button_pressed(window):
 	
-	var player = Players.player
+	var player = Players.get_player()
 	var b_window = player.get(window)
 	
 	#if window == "window_production":
@@ -53,7 +53,7 @@ func on_button_pressed(window):
 
 
 func update_information():
-	var client = Players.player
+	var client = Players.get_player_client()
 	#var dp_list = client.economy_manager.DP_list
 	
 	check_reform()

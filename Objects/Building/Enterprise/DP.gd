@@ -2,33 +2,32 @@ extends Enterprise
 class_name DP
 
 
-var selling_goods_quantity: float = 0.0
 var workers_unit
 var workers_quantity: float = 0.0
 
-var economy_manager
 
-
-func _init():
+func _init(good_, economy_manager_):
 	var _err = ManagerDay.connect("produce_goods", produce_goods)
-
-
-func get_DP_production_efficiency():
-	return production_efficiency + good_production_efficiency + get_based_good_effiency_production()
+	_err = ManagerDay.connect("add_money_in_investment_pool", add_money_in_investment_pool)
+	good = good_
+	economy_manager = economy_manager_
+	#production_efficiency = 2
+	#print(production_efficiency)
 
 
 func produce_goods():
-	var prod_efficiency = get_DP_production_efficiency()
-	var good_quanity = prod_efficiency * workers_unit.quantity
+	var workers_productivity = workers_quantity * labourers_labour_productivity
+	var good_quanity         = snappedf(production_efficiency * workers_productivity, 0.1)
 	
 	workers_unit.income = 0
 	
-	sell_goods(good_quanity)
+	sell_goods(snappedf(good_quanity, 0.1))
 
 
 func sell_goods(quanity):
 	economy_manager.demand_supply_goods[good][1] += quanity
 	economy_manager.local_market[good] += quanity
+	
 	var income_ = economy_manager.prices_goods[good] * quanity
 
 	money += income_
@@ -38,4 +37,8 @@ func sell_goods(quanity):
 
 
 func set_wage():
-	wage = income / workers_quantity
+	wage = (income / workers_quantity) + (money_for_increase_wage / workers_quantity)
+
+
+func set_profit():
+	profit = income - expenses_workers

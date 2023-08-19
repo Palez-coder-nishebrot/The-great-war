@@ -1,13 +1,14 @@
-[gd_resource type="Resource" load_steps=3 format=2]
+[gd_resource type="Resource" script_class="Good" load_steps=3 format=3 uid="uid://dm1c0og0w4de3"]
 
-[ext_resource path="res://Resources/Good/good.gd" type="Script" id=1]
-[ext_resource path="res://Graphics/Sprites/goods/iron.png" type="Texture2D" id=2]
+[ext_resource type="Script" path="res://Resources/Good/good.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://dgy2j82efkktn" path="res://Graphics/Sprites/goods/iron.png" id="2"]
 
 [resource]
-script = ExtResource( 1 )
+script = ExtResource("1")
 name = "Железо"
-base_price = 8
-min_price = 5
+base_price = 7
+min_price = 4
 max_price = 20
-icon = ExtResource( 2 )
-based_effiency_production = 0.8
+icon = ExtResource("2")
+dp_effiency_production = 0.7
+factory_effiency_production = 0.0

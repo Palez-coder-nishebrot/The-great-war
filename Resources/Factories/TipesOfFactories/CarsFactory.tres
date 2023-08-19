@@ -1,36 +1,42 @@
-[gd_resource type="Resource" load_steps=12 format=2]
+[gd_resource type="Resource" load_steps=14 format=3 uid="uid://befjlohagv3fh"]
 
-[ext_resource path="res://Resources/Factories/Factory.gd" type="Script" id=1]
-[ext_resource path="res://Resources/Factories/Raw.gd" type="Script" id=2]
-[ext_resource path="res://Resources/Good/cars.tres" type="Resource" id=3]
-[ext_resource path="res://Resources/Good/el_parts.tres" type="Resource" id=4]
-[ext_resource path="res://Resources/Good/steel.tres" type="Resource" id=5]
-[ext_resource path="res://Resources/Good/rubber.tres" type="Resource" id=6]
-[ext_resource path="res://Resources/Good/mech_parts.tres" type="Resource" id=7]
+[ext_resource type="Script" path="res://Resources/Factories/Factory.gd" id="1"]
+[ext_resource type="Script" path="res://Resources/Factories/Raw.gd" id="2"]
+[ext_resource type="Resource" uid="uid://ds60ia3p2mgrk" path="res://Resources/Good/cars.tres" id="3"]
+[ext_resource type="Resource" uid="uid://ceelq1ks2ecm6" path="res://Resources/Good/el_parts.tres" id="4"]
+[ext_resource type="Resource" uid="uid://c64oytvdwhc6m" path="res://Resources/Good/steel.tres" id="5"]
+[ext_resource type="Resource" uid="uid://cs3jts051165o" path="res://Resources/Good/rubber.tres" id="6"]
+[ext_resource type="Resource" uid="uid://ck4y8ofg2n1hb" path="res://Resources/Good/mech_parts.tres" id="7"]
+[ext_resource type="Script" path="res://Resources/Factories/factory_equipment.gd" id="7_ucmtd"]
 
-[sub_resource type="Resource" id=1]
-script = ExtResource( 2 )
-good = ExtResource( 6 )
+[sub_resource type="Resource" id="1"]
+script = ExtResource("2")
+good = ExtResource("6")
 quantity = 0.5
 
-[sub_resource type="Resource" id=2]
-script = ExtResource( 2 )
-good = ExtResource( 7 )
-quantity = 0.1
+[sub_resource type="Resource" id="2"]
+script = ExtResource("2")
+good = ExtResource("7")
+quantity = 0.01
 
-[sub_resource type="Resource" id=3]
-script = ExtResource( 2 )
-good = ExtResource( 5 )
-quantity = 0.4
+[sub_resource type="Resource" id="3"]
+script = ExtResource("2")
+good = ExtResource("5")
+quantity = 0.04
 
-[sub_resource type="Resource" id=4]
-script = ExtResource( 2 )
-good = ExtResource( 4 )
-quantity = 0.2
+[sub_resource type="Resource" id="4"]
+script = ExtResource("2")
+good = ExtResource("4")
+quantity = 0.02
+
+[sub_resource type="Resource" id="Resource_cbmxm"]
+script = ExtResource("7_ucmtd")
+quantity = 0.01
 
 [resource]
-script = ExtResource( 1 )
+script = ExtResource("1")
 name_of_factory = "cars_factory"
-raw = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ]
-good = ExtResource( 3 )
-available = true
+raw = Array[ExtResource("2")]([SubResource("1"), SubResource("2"), SubResource("3"), SubResource("4"), SubResource("Resource_cbmxm")])
+good = ExtResource("3")
+available_from_start = true
+construction_days = 3

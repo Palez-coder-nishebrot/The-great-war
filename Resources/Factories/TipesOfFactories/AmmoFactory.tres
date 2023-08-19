@@ -1,25 +1,30 @@
-[gd_resource type="Resource" load_steps=8 format=2]
+[gd_resource type="Resource" load_steps=10 format=3 uid="uid://c323lsu5gal61"]
 
-[ext_resource path="res://Resources/Good/iron.tres" type="Resource" id=1]
-[ext_resource path="res://Resources/Factories/Factory.gd" type="Script" id=2]
-[ext_resource path="res://Resources/Factories/Raw.gd" type="Script" id=3]
-[ext_resource path="res://Resources/Good/ammo.tres" type="Resource" id=4]
-[ext_resource path="res://Resources/Good/saltpeter.tres" type="Resource" id=5]
+[ext_resource type="Resource" uid="uid://dm1c0og0w4de3" path="res://Resources/Good/iron.tres" id="1"]
+[ext_resource type="Script" path="res://Resources/Factories/Factory.gd" id="2"]
+[ext_resource type="Script" path="res://Resources/Factories/Raw.gd" id="3"]
+[ext_resource type="Resource" uid="uid://qq0glkk84kxt" path="res://Resources/Good/ammo.tres" id="4"]
+[ext_resource type="Resource" uid="uid://c1v3oasg5ag6p" path="res://Resources/Good/saltpeter.tres" id="5"]
+[ext_resource type="Script" path="res://Resources/Factories/factory_equipment.gd" id="5_8mf11"]
 
-[sub_resource type="Resource" id=1]
-script = ExtResource( 3 )
-good = ExtResource( 5 )
-quantity = 0.5
+[sub_resource type="Resource" id="1"]
+script = ExtResource("3")
+good = ExtResource("5")
+quantity = 0.05
 
-[sub_resource type="Resource" id=2]
-script = ExtResource( 3 )
-good = ExtResource( 1 )
-quantity = 0.5
+[sub_resource type="Resource" id="2"]
+script = ExtResource("3")
+good = ExtResource("1")
+quantity = 0.05
+
+[sub_resource type="Resource" id="Resource_pphg8"]
+script = ExtResource("5_8mf11")
+quantity = 0.01
 
 [resource]
-script = ExtResource( 2 )
+script = ExtResource("2")
 name_of_factory = "ammo_factory"
-raw = [ SubResource( 1 ), SubResource( 2 ) ]
-factory_equipment = [  ]
-good = ExtResource( 4 )
+raw = Array[ExtResource("3")]([SubResource("1"), SubResource("2"), SubResource("Resource_pphg8")])
+good = ExtResource("4")
 available_from_start = true
+construction_days = 3

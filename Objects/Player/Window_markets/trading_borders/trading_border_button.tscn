@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5yksvakldxwl"]
+
+[ext_resource type="FontFile" uid="uid://dpaiod0xc1xgs" path="res://Graphics/Fonts/pixel_2.ttf" id="1_n51l2"]
+[ext_resource type="Script" path="res://Objects/Player/Window_markets/trading_borders/trading_border_button.gd" id="2_oabdg"]
+
+[node name="Button" type="Button"]
+theme_override_fonts/font = ExtResource("1_n51l2")
+theme_override_font_sizes/font_size = 40
+text = "0%"
+script = ExtResource("2_oabdg")

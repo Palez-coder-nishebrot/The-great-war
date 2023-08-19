@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://4ck2c55nl7cl"]
+[gd_scene load_steps=16 format=3 uid="uid://4ck2c55nl7cl"]
 
 [ext_resource type="Script" path="res://Objects/Player/Window_buttons/Buttons.gd" id="1"]
 [ext_resource type="FontFile" uid="uid://dpaiod0xc1xgs" path="res://Graphics/Fonts/pixel_2.ttf" id="2"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://c2fyt66d5aesc" path="res://Graphics/Sprites/GUI/Icons of windows/Hammer no.png" id="11"]
 [ext_resource type="Texture2D" uid="uid://bmf06k4n06051" path="res://Graphics/Sprites/GUI/Icons of windows/population_growth.png" id="12_fd8t5"]
 [ext_resource type="Texture2D" uid="uid://b1bwjw0aw7tnr" path="res://Graphics/Sprites/GUI/Icons of windows/Reforms.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://dkpf4rv568b4" path="res://Graphics/Sprites/GUI/Icons of windows/welfare.png" id="13_bf3g2"]
 [ext_resource type="Texture2D" uid="uid://br7np06gtgbn4" path="res://Graphics/Sprites/GUI/Icons of windows/Education.png" id="14"]
 
 [sub_resource type="StyleBoxFlat" id="3"]
@@ -18,9 +19,6 @@ bg_color = Color(0.192157, 0.0862745, 0.109804, 1)
 
 [sub_resource type="FontFile" id="1"]
 fallbacks = Array[Font]([ExtResource("2")])
-face_index = null
-embolden = null
-transform = null
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -155,4 +153,4 @@ icon = ExtResource("12_fd8t5")
 
 [node name="welfare_icon" parent="VBoxContainer" instance=ExtResource("4")]
 layout_mode = 2
-icon = ExtResource("12_fd8t5")
+icon = ExtResource("13_bf3g2")

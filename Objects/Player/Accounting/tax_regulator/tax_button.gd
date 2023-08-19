@@ -6,4 +6,4 @@ extends Button
 
 func _gui_input(event):
 	if event is InputEventMouseButton and event.is_pressed():
-		Players.player.economy_manager.set_tax(value, parent.variable)
+		Players.get_player_client().economy_manager.set_tax(value, parent.variable)

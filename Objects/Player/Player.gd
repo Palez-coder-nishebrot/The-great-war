@@ -1,8 +1,8 @@
-extends Client
+extends Node2D
 
 #class_name Player
 
-const speed_of_camera: int            = 5
+const speed_of_camera: float            = 0.25
 
 const ACTIVE_LEFT_BORDER:  bool = false
 const ACTIVE_RIGHT_BORDER: bool = false
@@ -15,7 +15,7 @@ const ACTIVE_DOWN_BORDER:  bool = false
 @onready var buttons:              Panel = $CanvasLayer/Buttons
 @onready var window_province:      Panel = $CanvasLayer/Province
 @onready var window_markets:       Panel = $CanvasLayer/Markets
-@onready var window_build_factory: Panel = $CanvasLayer/Build_factory
+@onready var window_build_factory: Control = $CanvasLayer/Build_factory
 @onready var window_production:    Panel = $CanvasLayer/Production
 @onready var window_parties:       Panel = $CanvasLayer/Parties
 @onready var window_taxes:         Panel = $CanvasLayer/Taxes
@@ -26,11 +26,14 @@ const ACTIVE_DOWN_BORDER:  bool = false
 @onready var window_train_army:    Panel = $CanvasLayer/Train_army
 @onready var window_diplomacy:     Panel = $CanvasLayer/Diplomacy
 @onready var window_list_of_units: ScrollContainer = $CanvasLayer/List_of_units
+@onready var menu_panel:           Panel           = $CanvasLayer/menu_panel
+
+var client
 
 
 func _ready():
-	var _err = connect("check_available_reform", Callable(window_reform, "check_available_reform"))
-	var _err_ = connect("research_completed", Callable(self, "report_research_completed"))
+	var _err = client.connect("check_available_reform", Callable(window_reform, "check_available_reform"))
+	var _err_ = client.connect("research_completed", Callable(self, "report_research_completed"))
 	
 
 func report_research_completed(technology):
@@ -55,7 +58,7 @@ func _process(_delta):
 
 func _input(_event):
 	if Input.is_action_just_pressed("ui_esc"):
-		get_tree().quit()
+		menu_panel.visible = not menu_panel.visible
 #	if event.is_pressed() and not event is InputEventKey:
 #		if event.button_index == BUTTON_WHEEL_UP:
 #			if $Camera2D.zoom.x >= MIN_zoom:

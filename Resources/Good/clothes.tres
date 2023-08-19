@@ -1,13 +1,14 @@
-[gd_resource type="Resource" load_steps=3 format=2]
+[gd_resource type="Resource" script_class="Good" load_steps=3 format=3 uid="uid://bq77c6p0lpoh6"]
 
-[ext_resource path="res://Resources/Good/good.gd" type="Script" id=1]
-[ext_resource path="res://Graphics/Sprites/goods/clothes.png" type="Texture2D" id=2]
+[ext_resource type="Script" path="res://Resources/Good/good.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://dtd223c43ujfj" path="res://Graphics/Sprites/goods/clothes.png" id="2"]
 
 [resource]
-script = ExtResource( 1 )
+script = ExtResource("1")
 name = "Одежда"
-base_price = 25
-min_price = 10
-max_price = 40
-icon = ExtResource( 2 )
-based_effiency_production = 0.6
+base_price = 13
+min_price = 9
+max_price = 20
+icon = ExtResource("2")
+dp_effiency_production = 0.0
+factory_effiency_production = 0.8

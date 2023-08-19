@@ -11,5 +11,6 @@ func get_effect():
 	return name_of_effect + ": +" + str(power) + "%"
 
 
-func activate_effects(client):
-	client.economic_bonuses.education_efficiency += power / 100
+func activate_effects(_client):
+	pass
+#	client.economic_bonuses.education_efficiency += power / 100

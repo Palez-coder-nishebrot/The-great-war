@@ -25,10 +25,14 @@ extends Panel
 var showing_technology: Technology
 
 
+func _ready():
+	update_technologies()
+
+
 func update_technologies():
 	for i in cotegories:
-		var list = player.technologies.get(cotegories[i])
-		
+		var list = Players.get_player_client().research_manager.get(cotegories[i])
+
 		for technology in list:
 			spawn_button(list, i, technology)
 
@@ -38,11 +42,11 @@ func spawn_button(list, i, technology):
 	button.parent = self
 	button.technology = technology
 	button.level = list.find(technology) + 1
-	button.text = set_button_text(tr(technology.name_of_technology), button)
+	button.text = set_button_text(tr(technology.name_of_technology))
 	i.add_child(button)
 
 
-func set_button_text(text: String, button):
+func set_button_text(text: String):
 	if text.length() > 30:
 		text = text.substr(0, 25)
 		var new_text = text + "..."
@@ -69,7 +73,7 @@ func show_technology_name(technology):
 
 
 func check_start_research_button():
-	if Players.player.technologies.researching_technology == null and showing_technology.ready_for_researching:
+	if Players.get_player_client().research_manager.researching_technology == null and showing_technology.ready_for_researching:
 		start_research_button.disabled = false
 	else:
 		start_research_button.disabled = true
@@ -81,7 +85,7 @@ func clear_labels():
 
 
 func start_research():
-	Players.player.research_manager.start_research(showing_technology)
+	Players.get_player_client().research_manager.start_research(showing_technology)
 	check_start_research_button()
 
 

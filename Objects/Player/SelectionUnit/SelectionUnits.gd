@@ -7,18 +7,6 @@ var old_pos
 
 var list_of_units: Array = []
 
-#func _input(event):
-#	if Players.player.information.showing_map == true:
-#		if Input.is_action_pressed("mouse_left"):
-#			if dragging == false:
-#				shape.global_position = get_global_mouse_position()
-#				old_pos = shape.global_position
-#			dragging = true
-#			update()
-#		elif Input.is_action_just_released("mouse_left"):
-#			dragging = false
-#			shape.shape.extents = Vector2(0, 0)
-#			append_units()
 			
 
 func update():

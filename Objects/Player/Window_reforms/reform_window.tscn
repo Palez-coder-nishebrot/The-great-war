@@ -1,33 +1,10 @@
-[gd_scene load_steps=31 format=3 uid="uid://bpvbyvrny7811"]
+[gd_scene load_steps=12 format=3 uid="uid://bpvbyvrny7811"]
 
-[ext_resource type="PackedScene" path="res://Objects/Player/Window_reforms/reform_button/reform_button.tscn" id="1"]
-[ext_resource type="Resource" uid="uid://bu6ndxfscs1wl" path="res://Resources/reforms/social_reforms/social_protection/04.tres" id="2"]
 [ext_resource type="Script" path="res://Objects/Player/Window_reforms/reform_window.gd" id="3"]
-[ext_resource type="Resource" uid="uid://ckc1vhkpkvc0t" path="res://Resources/reforms/social_reforms/social_protection/03.tres" id="4"]
 [ext_resource type="FontFile" uid="uid://dpaiod0xc1xgs" path="res://Graphics/Fonts/pixel_2.ttf" id="5"]
-[ext_resource type="Resource" uid="uid://mgy044q32kr2" path="res://Resources/reforms/social_reforms/social_protection/02.tres" id="6"]
-[ext_resource type="Resource" uid="uid://b47a16bsty6qy" path="res://Resources/reforms/political_reforms/electing_authorities/04.tres" id="7"]
-[ext_resource type="Resource" uid="uid://ctskym34xhynf" path="res://Resources/reforms/political_reforms/electing_authorities/03.tres" id="8"]
-[ext_resource type="Resource" uid="uid://bcvx2550haapr" path="res://Resources/reforms/political_reforms/electing_authorities/02.tres" id="9"]
-[ext_resource type="Resource" uid="uid://bllhs7g1guabn" path="res://Resources/reforms/political_reforms/political_rights/01.tres" id="10"]
-[ext_resource type="Resource" uid="uid://daypbnq0hbojv" path="res://Resources/reforms/political_reforms/electing_authorities/01.tres" id="11"]
-[ext_resource type="Resource" path="res://Resources/reforms/social_reforms/social_protection/01.tres" id="12"]
-[ext_resource type="Resource" uid="uid://1y50c7bg0x4f" path="res://Resources/reforms/social_reforms/social_protection/05.tres" id="13"]
-[ext_resource type="Resource" uid="uid://clajol7rqns1w" path="res://Resources/reforms/political_reforms/electing_authorities/05.tres" id="14"]
-[ext_resource type="Resource" uid="uid://d0je1ae07atc3" path="res://Resources/reforms/political_reforms/political_rights/02.tres" id="15"]
-[ext_resource type="Resource" uid="uid://b6gmji4rnajd4" path="res://Resources/reforms/social_reforms/labour_reforms/01.tres" id="16"]
-[ext_resource type="Resource" uid="uid://bwaos31cbn5qc" path="res://Resources/reforms/social_reforms/labour_reforms/03.tres" id="17"]
-[ext_resource type="Resource" uid="uid://c2o3f71uk4b04" path="res://Resources/reforms/social_reforms/labour_reforms/02.tres" id="18"]
-[ext_resource type="Resource" uid="uid://ds1l07so53yml" path="res://Resources/reforms/political_reforms/political_rights/03.tres" id="19"]
-[ext_resource type="Resource" uid="uid://wbpsnd4uafyk" path="res://Resources/reforms/political_reforms/political_rights/04.tres" id="20"]
-[ext_resource type="Resource" uid="uid://dvgix0ouay6p0" path="res://Resources/reforms/social_reforms/labour_reforms/05.tres" id="21"]
-[ext_resource type="Resource" uid="uid://c14tcigs4xcqs" path="res://Resources/reforms/social_reforms/labour_reforms/04.tres" id="22"]
 
 [sub_resource type="FontFile" id="3"]
 fallbacks = Array[Font]([ExtResource("5")])
-face_index = null
-embolden = null
-transform = null
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -55,9 +32,6 @@ Button/styles/pressed = SubResource("4")
 
 [sub_resource type="FontFile" id="7"]
 fallbacks = Array[Font]([ExtResource("5")])
-face_index = null
-embolden = null
-transform = null
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -74,7 +48,6 @@ var cotegory: String
 var effect:         Object
 var name_of_reform: String
 var parent:         Object
-var player: Client = Players.player
 var active: bool = true
 
 func _ready():
@@ -97,6 +70,7 @@ func update_text_for_not_active_buttons():
 
 
 func _gui_input(event):
+	var player = Players.get_player_client()
 	if event is InputEventMouseButton and get_rect().has_point(event.position):
 		player.reforms_manager.reform_activeted(effect, cotegory)
 		#disabled = true
@@ -121,6 +95,9 @@ func disable_buttons():
 			parent.parent.buttons_for_changing_text.erase(i)
 	
 "
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q6wny"]
+bg_color = Color(0.435294, 0.435294, 0.435294, 1)
 
 [node name="Reform" type="Panel"]
 offset_top = 61.0
@@ -147,122 +124,128 @@ theme_override_fonts/font = SubResource("7")
 text = "Нет"
 script = SubResource("8")
 
-[node name="Reforms" type="VBoxContainer" parent="."]
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 0
-offset_left = 267.0
-offset_top = 88.0
-offset_right = 882.0
-offset_bottom = 553.0
-theme_override_constants/separation = 0
+offset_top = 150.0
+offset_right = 381.0
+offset_bottom = 1019.0
 
-[node name="SocialReforms" type="HBoxContainer" parent="Reforms"]
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_constants/separation = 0
 
-[node name="LabourReforms" type="VBoxContainer" parent="Reforms/SocialReforms"]
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 30
+text = "Название реформы"
+
+[node name="Button2" type="Button" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 30
+text = "Название реформы"
+
+[node name="Button3" type="Button" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 30
+text = "Название реформы"
+
+[node name="Button4" type="Button" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 30
+text = "Название реформы"
+
+[node name="Button5" type="Button" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 30
+text = "Название реформы"
+
+[node name="Button6" type="Button" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 30
+text = "Название реформы"
+
+[node name="Button7" type="Button" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 30
+text = "Название реформы"
+
+[node name="Button8" type="Button" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 30
+text = "Название реформы"
+
+[node name="Button9" type="Button" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 30
+text = "Название реформы"
+
+[node name="Button10" type="Button" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 30
+text = "Название реформы"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 150.0
+
+[node name="Label2" type="Label" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/separation = 0
+size_flags_vertical = 1
 
-[node name="Button" parent="Reforms/SocialReforms/LabourReforms" instance=ExtResource("1")]
-layout_mode = 2
-reform = ExtResource("16")
-
-[node name="Button2" parent="Reforms/SocialReforms/LabourReforms" instance=ExtResource("1")]
-layout_mode = 2
-reform = ExtResource("18")
-
-[node name="Button3" parent="Reforms/SocialReforms/LabourReforms" instance=ExtResource("1")]
-layout_mode = 2
-reform = ExtResource("17")
-
-[node name="Button4" parent="Reforms/SocialReforms/LabourReforms" instance=ExtResource("1")]
-layout_mode = 2
-reform = ExtResource("22")
-
-[node name="Button5" parent="Reforms/SocialReforms/LabourReforms" instance=ExtResource("1")]
-layout_mode = 2
-reform = ExtResource("21")
-
-[node name="SocialProtection" type="VBoxContainer" parent="Reforms/SocialReforms"]
+[node name="Label3" type="Label" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/separation = 0
+size_flags_vertical = 1
 
-[node name="Button" parent="Reforms/SocialReforms/SocialProtection" instance=ExtResource("1")]
-layout_mode = 2
-reform = ExtResource("12")
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 513.0
+offset_top = 200.0
+offset_right = 1413.0
+offset_bottom = 745.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_q6wny")
 
-[node name="Button2" parent="Reforms/SocialReforms/SocialProtection" instance=ExtResource("1")]
-layout_mode = 2
-reform = ExtResource("6")
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_right = 900.0
+offset_bottom = 74.0
 
-[node name="Button3" parent="Reforms/SocialReforms/SocialProtection" instance=ExtResource("1")]
-layout_mode = 2
-reform = ExtResource("4")
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_top = 473.0
+offset_right = 900.0
+offset_bottom = 545.0
+theme_override_constants/separation = 400
 
-[node name="Button4" parent="Reforms/SocialReforms/SocialProtection" instance=ExtResource("1")]
-layout_mode = 2
-reform = ExtResource("2")
-
-[node name="Button5" parent="Reforms/SocialReforms/SocialProtection" instance=ExtResource("1")]
-layout_mode = 2
-reform = ExtResource("13")
-
-[node name="PoliticalReforms" type="HBoxContainer" parent="Reforms"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/separation = 0
-
-[node name="ElectingAuthorities" type="VBoxContainer" parent="Reforms/PoliticalReforms"]
+[node name="Button" type="Button" parent="Panel/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/separation = 0
+size_flags_vertical = 5
 
-[node name="Button" parent="Reforms/PoliticalReforms/ElectingAuthorities" instance=ExtResource("1")]
-layout_mode = 2
-reform = ExtResource("11")
-
-[node name="Button2" parent="Reforms/PoliticalReforms/ElectingAuthorities" instance=ExtResource("1")]
-layout_mode = 2
-reform = ExtResource("9")
-
-[node name="Button3" parent="Reforms/PoliticalReforms/ElectingAuthorities" instance=ExtResource("1")]
-layout_mode = 2
-reform = ExtResource("8")
-
-[node name="Button4" parent="Reforms/PoliticalReforms/ElectingAuthorities" instance=ExtResource("1")]
-layout_mode = 2
-reform = ExtResource("7")
-
-[node name="Button5" parent="Reforms/PoliticalReforms/ElectingAuthorities" instance=ExtResource("1")]
-layout_mode = 2
-reform = ExtResource("14")
-
-[node name="PoliticalRights" type="VBoxContainer" parent="Reforms/PoliticalReforms"]
+[node name="Button2" type="Button" parent="Panel/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/separation = 0
-
-[node name="Button" parent="Reforms/PoliticalReforms/PoliticalRights" instance=ExtResource("1")]
-layout_mode = 2
-reform = ExtResource("10")
-
-[node name="Button2" parent="Reforms/PoliticalReforms/PoliticalRights" instance=ExtResource("1")]
-layout_mode = 2
-reform = ExtResource("15")
-
-[node name="Button3" parent="Reforms/PoliticalReforms/PoliticalRights" instance=ExtResource("1")]
-layout_mode = 2
-reform = ExtResource("19")
-
-[node name="Button4" parent="Reforms/PoliticalReforms/PoliticalRights" instance=ExtResource("1")]
-layout_mode = 2
-reform = ExtResource("20")
+size_flags_vertical = 5

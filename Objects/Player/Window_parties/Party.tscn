@@ -5,9 +5,6 @@
 
 [sub_resource type="FontFile" id="1"]
 fallbacks = Array[Font]([ExtResource("1")])
-face_index = null
-embolden = null
-transform = null
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -25,9 +22,6 @@ cache/0/32/0/kerning_overrides/32/0 = Vector2(0, 0)
 
 [sub_resource type="FontFile" id="2"]
 fallbacks = Array[Font]([ExtResource("1")])
-face_index = null
-embolden = null
-transform = null
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -67,9 +61,6 @@ cache/0/20/0/kerning_overrides/20/0 = Vector2(0, 0)
 
 [sub_resource type="FontFile" id="3"]
 fallbacks = Array[Font]([ExtResource("1")])
-face_index = null
-embolden = null
-transform = null
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -163,10 +154,18 @@ layout_mode = 2
 mouse_filter = 1
 theme_override_fonts/font = SubResource("2")
 theme_override_font_sizes/font_size = 20
-text = "Внешняя политика"
+text = "Военная политика"
+
+[node name="national_issue" type="Label" parent="."]
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = SubResource("2")
+theme_override_font_sizes/font_size = 20
+text = "Нац. политика"
 
 [connection signal="pressed" from="SupportParty" to="." method="update_supporting_party_by_client"]
 [connection signal="pressed" from="RulingParty" to="." method="set_ruling_party"]
 [connection signal="mouse_entered" from="Economy" to="." method="show_economy_policy_info"]
 [connection signal="mouse_entered" from="TradePolicy" to="." method="show_trade_policy_info"]
 [connection signal="mouse_entered" from="ForeignPolicy" to="." method="show_military_policy_info"]
+[connection signal="mouse_entered" from="national_issue" to="." method="show_military_policy_info"]

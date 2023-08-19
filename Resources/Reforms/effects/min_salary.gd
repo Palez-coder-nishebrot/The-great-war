@@ -2,7 +2,6 @@ extends ReformEffect
 
 class_name ReformEffectMinSalary
 
-@export var effect_name: String = "min_salary"
 
 func _init():
 	target = "min_salary"

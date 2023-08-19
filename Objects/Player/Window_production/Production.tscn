@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://8hw3k7yvauul"]
 
 [ext_resource type="Script" path="res://Objects/Player/Window_production/Production.gd" id="1"]
-[ext_resource type="PackedScene" path="res://Objects/Player/Window_production/Info_about_factory.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://bir8xb0kour83" path="res://Objects/Player/Window_production/Info_about_factory.tscn" id="2"]
 [ext_resource type="FontFile" uid="uid://dpaiod0xc1xgs" path="res://Graphics/Fonts/pixel_2.ttf" id="3"]
 
 [sub_resource type="StyleBoxFlat" id="10"]
@@ -37,16 +37,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = -10
-
-[node name="Info_about_factory" parent="." instance=ExtResource("2")]
-visible = false
-layout_mode = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 0.0
-offset_bottom = -118.0
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="."]
 layout_mode = 0
@@ -104,3 +94,11 @@ size_flags_horizontal = 3
 size_flags_vertical = 7
 theme_override_fonts/font = SubResource("9")
 text = "   Действия    "
+
+[node name="Info_about_factory" parent="." instance=ExtResource("2")]
+visible = false
+layout_mode = 1
+offset_left = 630.0
+offset_top = 255.0
+offset_right = -600.0
+offset_bottom = -211.0

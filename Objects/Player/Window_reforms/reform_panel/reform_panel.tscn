@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://cd5cwuf4jbmmi"]
+
+[ext_resource type="FontFile" uid="uid://dpaiod0xc1xgs" path="res://Graphics/Fonts/pixel_2.ttf" id="1_jl4dh"]
+[ext_resource type="Script" path="res://Objects/Player/Window_reforms/reform_panel/reform_panel.gd" id="1_tdqa8"]
+
+[node name="reform_panel" type="Panel"]
+custom_minimum_size = Vector2(752, 230)
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 753.0
+offset_bottom = 229.0
+script = ExtResource("1_tdqa8")
+
+[node name="reform_name" type="Label" parent="."]
+layout_mode = 2
+offset_right = 752.0
+offset_bottom = 43.0
+theme_override_fonts/font = ExtResource("1_jl4dh")
+theme_override_font_sizes/font_size = 35
+text = "Название реформы"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+offset_left = 8.0
+offset_top = 177.0
+offset_right = 744.0
+offset_bottom = 222.0
+theme_override_constants/separation = 350
+
+[node name="to_reform" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("1_jl4dh")
+theme_override_font_sizes/font_size = 20
+text = "Провести"
+
+[node name="roll_back" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("1_jl4dh")
+theme_override_font_sizes/font_size = 20
+text = "Откатить"

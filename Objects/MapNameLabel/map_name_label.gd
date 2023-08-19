@@ -9,13 +9,13 @@ func _ready():
 	pass
 
 
-func _on_camera_ready(camera):
+func _on_camera_ready(_camera):
 #	var _error = camera.connect("scale_updated", Callable(self, "_on_scale_updated").bind(camera))
 #	_on_scale_updated(camera)
 	pass
 
 
-func _on_scale_updated(camera):
+func _on_scale_updated(_camera):
 #	get_font("font").size = base_font_size * camera.zoom.x
 	#breakpoint
 	#

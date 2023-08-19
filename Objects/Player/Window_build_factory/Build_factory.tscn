@@ -1,43 +1,41 @@
-[gd_scene load_steps=5 format=3 uid="uid://cnmntttok106d"]
+[gd_scene load_steps=3 format=3 uid="uid://cnmntttok106d"]
 
 [ext_resource type="FontFile" uid="uid://dpaiod0xc1xgs" path="res://Graphics/Fonts/pixel_2.ttf" id="1"]
 [ext_resource type="Script" path="res://Objects/Player/Window_build_factory/Build_factory.gd" id="3"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bm86c"]
-bg_color = Color(0.443137, 0.360784, 0.309804, 1)
-
-[sub_resource type="FontFile" id="4"]
-fallbacks = Array[Font]([ExtResource("1")])
-face_index = null
-embolden = null
-transform = null
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/30/0 = Vector2(0, 0)
-cache/0/30/0/ascent = 0.0
-cache/0/30/0/descent = 0.0
-cache/0/30/0/underline_position = 0.0
-cache/0/30/0/underline_thickness = 0.0
-cache/0/30/0/scale = 1.0
-cache/0/30/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/30/0/kerning_overrides/30/0 = Vector2(0, 0)
-
-[node name="Build_factory" type="Panel"]
-offset_left = 438.0
-offset_top = 222.0
+[node name="Build_factory" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 0
 offset_right = 1408.0
-offset_bottom = 865.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_bm86c")
+offset_bottom = 768.0
 script = ExtResource("3")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="."]
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="factory_description" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_right = 461.0
-offset_bottom = 566.0
+offset_left = 832.0
+offset_top = 16.0
+offset_right = 1344.0
+offset_bottom = 576.0
+theme_override_fonts/normal_font = ExtResource("1")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "ff"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 512.0
+grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
 layout_mode = 2
@@ -45,51 +43,25 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="build_button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 485.0
-offset_right = 969.0
-offset_bottom = 643.0
-
-[node name="Label5" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = 1024.0
+offset_top = 600.0
+offset_right = 1327.0
+offset_bottom = 700.0
 theme_override_fonts/font = ExtResource("1")
-theme_override_font_sizes/font_size = 25
-text = "Название"
+theme_override_font_sizes/font_size = 40
+text = "Построить"
 
-[node name="Label" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+[node name="exit_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 656.0
+offset_top = 600.0
+offset_right = 959.0
+offset_bottom = 700.0
 theme_override_fonts/font = ExtResource("1")
-theme_override_font_sizes/font_size = 25
-text = "Название"
-
-[node name="Label2" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1")
-theme_override_font_sizes/font_size = 25
-text = "Сырье для строительства"
-
-[node name="Label3" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1")
-theme_override_font_sizes/font_size = 25
-text = "Сырье для производства"
-
-[node name="Label4" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1")
-theme_override_font_sizes/font_size = 25
-text = "Прибыль фабрики"
-
-[node name="Button2" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = SubResource("4")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 40
 text = "Закрыть"
 
-[connection signal="pressed" from="VBoxContainer/Button2" to="." method="exit"]
+[connection signal="pressed" from="build_button" to="." method="build_factory"]
+[connection signal="pressed" from="exit_button" to="." method="close_window"]

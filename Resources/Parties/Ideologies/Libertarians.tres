@@ -1,21 +1,23 @@
-[gd_resource type="Resource" load_steps=6 format=2]
+[gd_resource type="Resource" script_class="Ideology" load_steps=7 format=3 uid="uid://duh8h5p27isjj"]
 
-[ext_resource path="res://Resources/Parties/Ideology.gd" type="Script" id=1]
-[ext_resource path="res://Resources/Parties/Policy/trade_policy/free_trade.tres" type="Resource" id=2]
-[ext_resource path="res://Resources/Parties/Policy/military_policy/expansionism.tres" type="Resource" id=3]
-[ext_resource path="res://Resources/Parties/Policy/economy_policy/free_economy.tres" type="Resource" id=4]
-[ext_resource path="res://Resources/Parties/Policy/goverment_form/republic.tres" type="Resource" id=5]
+[ext_resource type="Script" path="res://Resources/Parties/Ideology.gd" id="1"]
+[ext_resource type="Resource" uid="uid://bgj0h81in03wi" path="res://Resources/Parties/Policy/trade_policy/free_trade.tres" id="2"]
+[ext_resource type="Resource" path="res://Resources/Parties/Policy/military_policy/expansionism.tres" id="3"]
+[ext_resource type="Resource" path="res://Resources/Parties/Policy/economy_policy/free_economy.tres" id="4"]
+[ext_resource type="Resource" uid="uid://dlch2seyv6nu" path="res://Resources/Parties/Policy/national_issue/full_citizenship.tres" id="4_pqb7m"]
+[ext_resource type="Resource" path="res://Resources/Parties/Policy/goverment_form/republic.tres" id="5"]
 
 [resource]
-script = ExtResource( 1 )
+script = ExtResource("1")
 ideology = "libertarians"
-economic_policy = ExtResource( 4 )
-trade_policy = ExtResource( 2 )
-military_policy = ExtResource( 3 )
-names_of_parties = [ "Партия социалистов-революционеров" ]
-available_for_setting_ruling_party = [  ]
+economic_policy = ExtResource("4")
+trade_policy = ExtResource("2")
+military_policy = ExtResource("3")
+national_issue = ExtResource("4_pqb7m")
+names_of_parties = ["anarcho_lib_party_name_1"]
+available_for_setting_ruling_party = []
 supporting_soc_reforms = 0
 supporting_pol_reforms = 1
 rollback_soc_reforms = 1
 rollback_pol_reforms = 0
-government_form = ExtResource( 5 )
+government_form = ExtResource("5")

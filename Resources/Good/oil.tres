@@ -1,13 +1,14 @@
-[gd_resource type="Resource" load_steps=3 format=2]
+[gd_resource type="Resource" script_class="Good" load_steps=3 format=3 uid="uid://bobf2wyd3n62f"]
 
-[ext_resource path="res://Resources/Good/good.gd" type="Script" id=1]
-[ext_resource path="res://Graphics/Sprites/goods/oil.png" type="Texture2D" id=2]
+[ext_resource type="Script" path="res://Resources/Good/good.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://dnmbp7k6mxtc3" path="res://Graphics/Sprites/goods/oil.png" id="2"]
 
 [resource]
-script = ExtResource( 1 )
+script = ExtResource("1")
 name = "Нефть"
 base_price = 15
 min_price = 10
 max_price = 30
-icon = ExtResource( 2 )
-based_effiency_production = 0.5
+icon = ExtResource("2")
+dp_effiency_production = 0.9
+factory_effiency_production = 0.4

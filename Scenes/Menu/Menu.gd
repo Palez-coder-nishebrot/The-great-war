@@ -1,23 +1,22 @@
 extends Node2D
 
+@onready var game_name_label: Label           = $game_name
+@onready var countries_list:  ScrollContainer = $ScrollContainer
+@onready var main_buttons:    VBoxContainer   = $VBoxContainer
+
 
 func _ready():
 	TranslationServer.set_locale("en")
 
 
-func ChangeScene(name_of_country):
-	Players.country_to_start = name_of_country
+func ChangeScene(state):
+	Players.country_to_start = state
 	var _err = get_tree().change_scene_to_file("res://Scenes/Game/Game.tscn")
 
 
 func one_player():
 	hide_cont()
-	$ScrollContainer.visible = true
-	$VBoxContainer2.visible = true
-
-
-func multiplayer_():
-	hide_cont()
+	countries_list.visible = true
 	
 
 func developer_guide():
@@ -25,9 +24,9 @@ func developer_guide():
 	
 	
 func hide_cont():
-	$VBoxContainer.visible = false
-	$Label2.visible        = false
+	main_buttons.visible  = false
+	game_name_label.visible = false
 
 
-func path_editor():
-	var _err = get_tree().change_scene_to_file("res://Scenes/MapEditor/MapEditor.tscn")
+func exit_game():
+	get_tree().quit()

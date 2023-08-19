@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Reform" load_steps=8 format=3 uid="uid://dn5ws0uewbrxk"]
+
+[ext_resource type="Script" path="res://Resources/reforms/Reform.gd" id="1_2yq6q"]
+[ext_resource type="Script" path="res://Resources/reforms/levels/labour_protection_level.gd" id="1_xu1i8"]
+
+[sub_resource type="Resource" id="Resource_dvohl"]
+script = ExtResource("1_xu1i8")
+factory_cost = 0.0
+level = 0
+level_name = ""
+
+[sub_resource type="Resource" id="Resource_n4nn8"]
+script = ExtResource("1_xu1i8")
+factory_cost = 0.3
+level = 0
+level_name = ""
+
+[sub_resource type="Resource" id="Resource_l3mwp"]
+script = ExtResource("1_xu1i8")
+factory_cost = 0.6
+level = 0
+level_name = ""
+
+[sub_resource type="Resource" id="Resource_km2uu"]
+script = ExtResource("1_xu1i8")
+factory_cost = 0.1
+level = 0
+level_name = ""
+
+[sub_resource type="Resource" id="Resource_wsnyp"]
+script = ExtResource("1_xu1i8")
+factory_cost = 0.15
+level = 0
+level_name = ""
+
+[resource]
+script = ExtResource("1_2yq6q")
+levels = Array[Resource("res://Resources/reforms/reform_level.gd")]([SubResource("Resource_dvohl"), SubResource("Resource_n4nn8"), SubResource("Resource_l3mwp"), SubResource("Resource_km2uu"), SubResource("Resource_wsnyp")])
+reform_name = "labour_protection"

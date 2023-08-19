@@ -26,16 +26,17 @@ func show_resource_output_details(dp):
 	text.text += "Выпуск = Эфф-ть пр-ва * кол-во рабочих" + "\n"
 	text.text += "\n"
 	
-	text.text += "Эфф-ть пр-ва: "                + str(dp.get_DP_production_efficiency()) + "\n"
-	text.text += "Базовая эфф-ть пр-ва товара: " + str(dp.get_based_good_effiency_production()) + "\n"
-	text.text += "Эфф-ть пр-ва товара: "         + str(dp.get_good_production_efficiency()) + "\n"
-	text.text += "Производительность ДП: "       + str(dp.get_production_efficiency())
+	text.text += "Эфф-ть ДП: +"                   + str(100 * dp.enterprise_production_efficiency) + "% \n"
+	text.text += "Эфф-ть выпуска продукции: +"    + str(100 * dp.good_production_efficiency) + "% \n"
+	text.text += "Базовая эфф-ть пр-ва товара: +" + str(100 * dp.based_good_production_efficiency) + "% \n"
+	text.text += "Общая производительность ДП: +" + str(100 * dp.production_efficiency) + "%"
 
 
 func show_raw(storage_good, factory):
 	clear_text()
 	var required_quantity = storage_good.get_good_required_quantity(factory)
 	text.text += "Товар: " + storage_good.good.name + "\n"
+	text.text += "Куплено за " + str(storage_good.purchase_price) + " Крон" + "\n"
 	text.text += "Требуется " + storage_good.good.name + " " + str(required_quantity) + " ед." + "\n"
 	
 	if factory.ready_to_produce == true:

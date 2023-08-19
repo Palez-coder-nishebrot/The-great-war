@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Reform" load_steps=2 format=3 uid="uid://cwmtjebjpsvdk"]
+
+[ext_resource type="Script" path="res://Resources/reforms/Reform.gd" id="1_dalai"]
+
+[resource]
+script = ExtResource("1_dalai")
+levels = Array[Resource("res://Resources/reforms/reform_level.gd")]([])
+reform_name = ""

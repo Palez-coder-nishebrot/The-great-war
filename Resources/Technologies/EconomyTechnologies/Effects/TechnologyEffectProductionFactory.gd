@@ -2,7 +2,7 @@ extends TechnologyEffect
 
 class_name TechnologyEffectProductionFactory
 
-@export var name_of_effect: String = "Производительность"
+@export var name_of_effect: String = "НУЖНО УДАЛИТЬ"
 
 @export var power: float = 0.0
 
@@ -16,4 +16,4 @@ func get_effect():
 
 func activate_effects(client):
 	var bonus = power - 1
-	client.economic_bonuses.factory_efficiency_production[target] += bonus
+	#client.economic_bonuses.factory_efficiency_production[target] += bonus

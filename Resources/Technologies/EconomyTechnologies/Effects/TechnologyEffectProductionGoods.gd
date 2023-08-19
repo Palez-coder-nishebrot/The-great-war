@@ -10,10 +10,9 @@ class_name TechnologyEffectProductionGoods
 
 
 func get_effect():
-	var bonus = (power - 1.0) * 100
+	var bonus = power * 100
 	return name_of_effect + " " + target.name + ": +" + str(bonus) + "%"
 
 
 func activate_effects(client):
-	var bonus = power - 1
-	client.economic_bonuses.goods_from_technologies[target] += power
+	client.economy_manager.production_efficiency_manager.production_goods_efficiency[target] += power

@@ -38,6 +38,8 @@ func set_client(client, file):
 	client.political_manager.get_factories_list = Callable(client.economy_manager, "get_factories_list")
 	client.game = game
 	client.economy_manager.set_accounting_values_func = Callable(client.accounting_manager, "set_accounting_values")
+	client.economy_manager.set_accounting_values_func = Callable(client.accounting_manager, "set_accounting_values")
+	client.state_on_starting = file
 
 
 func set_player(file):

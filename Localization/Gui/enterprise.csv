@@ -4,15 +4,16 @@ cotton_plantations,Хлопковые плантации
 grain_fields,Зерновые поля
 iron_mines,Железные рудники
 oilfields,Нефтяные скважины
-rubber_plantations,Плантации резины
+rubber_plantations,Каучуковые плантации
 sulphur_mines,Серные шахты
-forest,Лес
+forest,Лесозаготовки
+,
 ,
 steel_plant,Сталелитейный завод
 textile_factory,Текстильная фабрика
 glass_factory,Стеклозавод
 ammo_factory,Завод боеприпасов
-charcoal_factory,Фабрика древесного угля
+coal_burning_plant,Углевыжигательный завод
 mech_parts_factory,Завод автозапчастей
 rifles_factory,Завод стрелкового оружия
 saltpeter_factory,Завод искусственной серы

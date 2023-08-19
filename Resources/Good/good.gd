@@ -8,4 +8,12 @@ extends Resource
 
 @export var icon: Texture2D
 
-@export var based_effiency_production: float = 1.0
+@export var dp_effiency_production: float = 1.0 #Не менять!
+@export var factory_effiency_production: float = 1.0 #Не менять!
+
+
+func get_based_good_production_effiency(enterprise):
+	if enterprise is DP:
+		return dp_effiency_production
+	else:
+		return factory_effiency_production

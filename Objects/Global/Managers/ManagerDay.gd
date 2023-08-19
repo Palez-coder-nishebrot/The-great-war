@@ -3,14 +3,17 @@ extends Node
 signal allocate_workers_to_DP
 signal allocate_workers_to_factories
 
+signal update_internal_migration
+signal add_money_in_investment_pool
+signal check_projects
+signal put_on_goods_on_trading
 signal set_accounting
 signal sort_factories_list
 signal set_based_profit
 signal produce_goods
 signal buy_raw
 signal update_prices # EconomyManager
-signal set_gdp # EconomyManager
-signal check_factories_bankrupt
+signal set_factories_subsidies
 
 signal clear_markets
 signal clear_accounting 
@@ -18,87 +21,31 @@ signal clear_accounting
 var game: Object
 
 func update_information_in_GUI():
-	Players.player.information.update_info()
-	Players.player.window_markets.update_information()
+	var player = Players.get_player()
+	player.information.update_info()
+	player.window_markets.update_information()
 	
-	Players.player.window_production.update_information()
-	Players.player.window_population.update_information()
-	Players.player.window_parties.update_information()
-	Players.player.window_taxes.update_information()
-	Players.player.buttons.update_information()
-	
-	#GlobalMarket.clear_export_and_import()
+	player.window_production.update_information()
+	player.window_population.update_information()
+	player.window_parties.update_information()
+	player.window_taxes.update_information()
+	player.buttons.update_information()
 
 
 func update_economy():
+	emit_signal("check_projects")
 	emit_signal("allocate_workers_to_DP")
 	emit_signal("allocate_workers_to_factories")
 	emit_signal("produce_goods")
 	emit_signal("set_based_profit")
 	emit_signal("sort_factories_list")
 	emit_signal("buy_raw")
-	emit_signal("check_factories_bankrupt")
-	emit_signal("set_gdp")
+	emit_signal("set_factories_subsidies")
+	emit_signal("add_money_in_investment_pool")#Дает прибавку к ЗП
 	SceneStorage.population_manager.set_population_incomes()
-	#update_expenses_on_railways()
-	#game.craftsmen_manager.choose_good(game.time_of_game.day)
-	
-	#game.purchase_manager.resourse_extraction(game) # Добыча ресусов населенем
-	#game.factory_manager.make_goods() # Производство товаров фабриками
-	#game.factory_manager.buy_purchase() # Купить сырье для фабрик
-	SceneStorage.population_manager.meet_needs() # Купить товары для населения
-	#update_investing_in_factories()
-	update_balance()
-	#GlobalMarket.export_goods_from_local_markets()
+	SceneStorage.population_manager.meet_needs()#Купить товары для населения
+	emit_signal("update_internal_migration")
 	emit_signal("update_prices")
 	emit_signal("set_accounting")
-	
-
-func update_balance():
-	for i in Players.list_of_players:
-		i.update_balance()
-
-
-func update_expenses_on_railways():
-	for i in Players.list_of_players:
-		i.update_expenses_on_railways()
-
-
-func update_investing_in_factories():
-	for i in Players.list_of_players:
-		i.capitalists_manager.invest_in_factories()
-
-
-func population_pays_taxes():
-	for i in Players.list_of_players:
-		i.capitalists_manager.new_day()
-		for tile in i.list_of_tiles:
-			Functions.pay_taxes(i, tile.population_manager, 0, "tax_on_poor_class")
-
-
-func update_trade_agreements():
-	pass
-
-
-func update_clients():
-	for i in Players.list_of_players:
-		i.quantity_of_unemployed = 0
-		i.gdp = 0
-		i.radio_net = 0
-		i.population_manager.update_quantity_of_population()
-		i.population_manager.update_population_growth()
-		i.update_values_of_population()
-		i.parties_manager.update_popularity_of_parties()
-		i.reforms_manager.check_data(game.time_of_game)
-		#i.technologies.update_middle_value_education_of_population()
-		i.reforms_manager.update_points_of_reforms()
-		
-#		i.population_manager.update_soc_migration()
-		i.population_manager.update_research_points()
-		i.population_manager.update_expenses_education()
-		#game.craftsmen_manager.goods_production(i)
-		#game.population_manager.set_social_migration(i)
-		
-		for tile in i.list_of_tiles:
-			i.quantity_of_unemployed += tile.population_manager.quantity_of_unemployed
-	
+	SceneStorage.population_manager.set_population_growth()
+	GlobalMarket.set_exporting_goods()

@@ -2,6 +2,8 @@ extends Resource
 
 class_name StateOnStartGame
 
+var player_spawner: PlayerSpawner = PlayerSpawner.new()
+
 @export var name_of_state: String = ""
 
 @export var list_of_regions: PackedStringArray

@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Reform" load_steps=8 format=3 uid="uid://dl4byuu8x6uhh"]
+
+[ext_resource type="Script" path="res://Resources/reforms/Reform.gd" id="1_bvl2h"]
+[ext_resource type="Script" path="res://Resources/reforms/levels/min_wage_level.gd" id="1_rpivy"]
+
+[sub_resource type="Resource" id="Resource_w6dd2"]
+script = ExtResource("1_rpivy")
+min_wage = 0.0
+level = 0
+level_name = ""
+
+[sub_resource type="Resource" id="Resource_fl3h6"]
+script = ExtResource("1_rpivy")
+min_wage = 0.1
+level = 0
+level_name = ""
+
+[sub_resource type="Resource" id="Resource_6r4ur"]
+script = ExtResource("1_rpivy")
+min_wage = 0.2
+level = 0
+level_name = ""
+
+[sub_resource type="Resource" id="Resource_3nm7f"]
+script = ExtResource("1_rpivy")
+min_wage = 0.3
+level = 0
+level_name = ""
+
+[sub_resource type="Resource" id="Resource_7kiec"]
+script = ExtResource("1_rpivy")
+min_wage = 0.4
+level = 0
+level_name = ""
+
+[resource]
+script = ExtResource("1_bvl2h")
+levels = Array[Resource("res://Resources/reforms/reform_level.gd")]([SubResource("Resource_w6dd2"), SubResource("Resource_fl3h6"), SubResource("Resource_6r4ur"), SubResource("Resource_3nm7f"), SubResource("Resource_7kiec")])
+reform_name = ""

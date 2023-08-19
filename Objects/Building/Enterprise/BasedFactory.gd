@@ -1,59 +1,65 @@
 extends Enterprise
-#var good: Resource
-#var production_efficiency: float
-#var good_production_efficiency: float
+
+
 class_name Factory
 
-var type_production_efficiency: float = 0.0
-
-const min_salary: int = 2
-const quantity_of_based_goods: float  = 0.025
+const expanding_cost:    float        = 200
+const min_clerks_salary: float        = 0.03
+const min_salary:        float        = 0.02
 const time:              int          = 10
 var time_of_construction:int          = 0
 
 var based_profit:        float        = 0.0 # Прибыль, когда на заводе работает 1 рабочий
-var good_production:     float        = 0.0
 var expenses_raw:        int          = 0
 var expenses_factory_equipment: int   = 0
-var real_max_employed_number:   int   = 10
-var max_employed_number: int          = 10
-var workers_quantity:    float        = 0.0
+var real_max_employed_number:   int   = 1300
+var max_employed_number: int          = 1300
+
+var workers_quantity:      float        = 0.0
+var clerks_quantity:       float        = 0.0
+
+var clerks_wage: float = 0.0
+
+var bonus_from_produced_goods: float  = 0.0
 
 var ready_to_produce:    bool         = true
 var subsidization:       bool         = false
-var closed:              bool         = true
 var in_construction:     bool         = false
-
 var type_factory:      Resource
 var name_of_factory:   String
 #var raw:               Array
 var raw_storage:       Array
-var factory_equipment: Array
 
-var province:         Object
-var expansion:        Object
-var economy_manager:  Object
-var workers_unit:     Object
+var province:          Object
+var expansion_project: ExpansionProject
+
+var workers_unit:      Object
+var clerks_unit:       Object
 
 
-func _init():
-	var _err = ManagerDay.connect("produce_goods", Callable(self, "produce_goods"))
-	var __err = ManagerDay.connect("set_based_profit", Callable(self, "set_based_profit"))
+func _init(region = null):
+	var _err = ManagerDay.connect("produce_goods",            produce_goods)
+	_err = ManagerDay.connect("set_based_profit",             set_based_profit)
+	_err = ManagerDay.connect("add_money_in_investment_pool", add_money_in_investment_pool)
+	_err = ManagerDay.connect("set_factories_subsidies",      set_factories_subsidies)
+	_err = connect("update_employed_places",                  set_places_for_workers)
 	wage = 2
+	
+	if region != null:
+		_err = connect("update_produced_goods", Callable(region, "get_produced_goods"))
 
 
 func produce_goods():
-	if ready_to_produce == false:
-		good_production = 0
+	if ready_to_produce == false or workers_quantity == 0 or closed:
+		selling_goods_quantity = 0
 		income = 0
 		return
-	var q = get_good_quantity(get_workers_quantity())
+	var q = get_good_quantity(workers_quantity, clerks_quantity)
 	var p = economy_manager.prices_goods[good]
 	
-	good_production = q
-	economy_manager.demand_supply_goods[good][1] += q
-	#print(economy_manager.demand_supply_goods[good][1], "", q)
-	economy_manager.local_market[good] += q
+	selling_goods_quantity = q
+	economy_manager.demand_supply_goods[good][1] = economy_manager.demand_supply_goods[good][1] + q
+	economy_manager.local_market[good]           = economy_manager.local_market[good] + q
 	income = q * p
 	money += income
 	set_empty_raw_storage()
@@ -64,44 +70,42 @@ func set_empty_raw_storage():
 		i.quantity = 0
 
 
-func buy_factory_equipment():
-	var old_money = money
-	for good_for_buy in factory_equipment:
-		var quantity = quantity_of_based_goods * workers_quantity
-		var local_market = economy_manager.local_market
-		economy_manager.demand_supply_goods[good][0] += quantity
-		
-		if local_market[good_for_buy] >= quantity:
-			Functions.buy_good_on_local_market(self, good_for_buy, quantity, economy_manager)
-		else:
-			var q = local_market[good_for_buy]
-			Functions.buy_good_on_local_market(self, good_for_buy, q, economy_manager)
-	expenses_factory_equipment = old_money - money
-
-
 func buy_raw():
+	expenses_raw = 0.0
+	
+	if closed:
+		return
+	
 	var old_money = money
 	var completed_plan = 0
-	expenses_raw = 0
 	for storage_good in raw_storage:
 		var local_market      = province.player.economy_manager.local_market
 		var raw_good          = storage_good.good
 		var quantity          = storage_good.get_good_quantity()
 		var required_quantity = storage_good.get_good_required_quantity(self)
 		var quantity_for_buy  = required_quantity - quantity
+		
+		var market_good_quantity = local_market[raw_good]
+		var purchase_price = 0
 		#economy_manager.demand_supply_goods[good][0] += quantity_for_buy
 		
-		if quantity < required_quantity:
-			if local_market[raw_good] >= quantity_for_buy:
-				Functions.buy_good_on_local_market(self, raw_good, quantity_for_buy, economy_manager)
+		if not is_equal_approx(quantity, required_quantity):
+			if market_good_quantity > quantity_for_buy or is_equal_approx(market_good_quantity, quantity_for_buy):
+				purchase_price = Functions.buy_good_on_local_market(self, raw_good, quantity_for_buy, economy_manager)
 				completed_plan += 1
 			
 			else:
-				quantity_for_buy = local_market[raw_good]
-				Functions.buy_good_on_local_market(self, raw_good, quantity_for_buy, economy_manager)
+				var importing_goods_q = GlobalMarket.fill_lack(economy_manager, raw_good, quantity_for_buy - market_good_quantity)
+				market_good_quantity = local_market[raw_good]
+				if market_good_quantity > quantity_for_buy or is_equal_approx(quantity_for_buy, market_good_quantity):
+					completed_plan += 1
 			
+				quantity_for_buy = market_good_quantity
+				purchase_price = Functions.buy_good_on_local_market(self, raw_good, quantity_for_buy, economy_manager, importing_goods_q)
+			
+			economy_manager.demand_supply_goods[raw_good][0] += required_quantity
 			storage_good.quantity += quantity_for_buy
-			expenses_raw += quantity_for_buy * economy_manager.prices_goods[raw_good]
+			storage_good.purchase_price = purchase_price
 		
 		else:
 			completed_plan += 1
@@ -114,39 +118,42 @@ func buy_raw():
 
 
 func set_based_profit():
-	based_profit = economy_manager.prices_goods[good] * get_good_quantity(1)
+	based_profit = economy_manager.prices_goods[good] * get_good_quantity(1, 0)
 
 
 func set_wage():
-	wage = min_salary
+	wage        = min_salary
+	clerks_wage = min_clerks_salary
+
+
+func set_profit():
+	profit = income - get_expenses()
 
 
 func get_workers_quantity():
-	return workers_quantity
+	return workers_quantity + clerks_quantity
 
 
-func get_good_quantity(workers):
-	var quanity = workers * get_effiency_production()
-	return snapped(quanity, 0.01)
+func get_good_quantity(workers_q, clerks_q):
+	var workers_productivity = (workers_q * craftsmen_labour_productivity) + (clerks_q * clerks_labour_productivity)
+	var quanity              = workers_productivity * get_factory_production_efficiency()
+	
+	if quanity < 0:
+		breakpoint
+	return quanity
 
 
-func get_effiency_production():
-	var effiency = production_efficiency + good_production_efficiency + type_production_efficiency
-	effiency += get_based_good_effiency_production()
+func get_factory_production_efficiency():
+	var effiency = production_efficiency + bonus_from_produced_goods
 	
 	return effiency
 
 
-func get_effiency_bonus_from_raw_in_region():
-	var bonus = 0.0
+func set_region_raw_bonus():
+	bonus_from_produced_goods = 0.0
 	for raw in raw_storage:
-		if province.goods_production_in_province.has(raw.good):
-			bonus += 0.1
-	return bonus
-	
-
-func get_profit():
-	return income - get_expenses()
+		if province.produced_goods.has(raw.good):
+			bonus_from_produced_goods += 0.1
 
 
 func get_expenses():
@@ -154,47 +161,45 @@ func get_expenses():
 
 
 func update_places_for_workers():
-	if get_profit() < 0:
-		if max_employed_number > 1 and subsidization == false:
-			max_employed_number -= 1
-	elif real_max_employed_number > max_employed_number:
-		max_employed_number += 1
-
-
-func check_bankrupt():
-	if money < 0:
-		if subsidization == true:
-			var expenses = money * -1
-			return expenses
-		else:
-			close_factory()
-			return 0.0
-	return 0.0
-
-
-func open_factory():
-	closed = false
-	money = 170
-	province.player.budget -= 170
-
-
-func close_factory():
-	closed = true
-	province.get_goods_in_province()
-
-
-func start_build_factory():
-	var game = province.player.game
+	if closed:
+		return
 	
-	while time_of_construction != time:
-		await game.new_day
-		time_of_construction = time_of_construction + 1
+	if profit < 0:
+		if max_employed_number > 10:
+			if workers_quantity < max_employed_number:
+				max_employed_number = workers_quantity
+			
+			max_employed_number -= 10
+			workers_unit.fire_workers_from_factory(self, "workers_quantity", 10)
 		
-	province.player.list_of_factories.append(self)
+	else:
+		max_employed_number = real_max_employed_number
+
+
+func set_places_for_workers():
+	if closed:
+		max_employed_number = 0
+		workers_unit.fire_workers_from_factory(self, "workers_quantity", workers_quantity)
+		clerks_unit.fire_workers_from_factory(self, "clerks_quantity", clerks_quantity)
+	else:
+		max_employed_number = real_max_employed_number
+
+
+func set_factories_subsidies():
+	update_places_for_workers()
+	if profit < 0:
+		if subsidization == true and money < 0:
+			var client    = province.player
+			var sub_money = money * -1
+			client.economy_manager.budget -= sub_money
+			money                         += sub_money
+		
+		if money < 0:
+			close_enterprise()
+		
 	
-	game.factory_manager.list_of_factories.append(self)
-	
-	province.get_goods_in_province()
-	
-	in_construction = false
-	
+
+func expand_factory(client):
+	if client.economy_manager.budget > expanding_cost and expansion_project == null:
+		expansion_project = ExpansionProject.new(self, province.player.game)
+		expansion_project.start_factory_expansion()

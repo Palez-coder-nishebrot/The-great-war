@@ -1,21 +1,29 @@
 extends Node
 
 
+class_name ExpansionProject
+
+const effect: int = 500
+
 var building: Object
 var game:     Object
 var time     = 0
 var max_time = 3
 
-func start_expansion_of_factory():
+
+func _init(building_, game_):
+	self.building = building_
+	self.game     = game_
+	
+
+func start_factory_expansion():
 	
 	while time != max_time:
-		await game.new_day
+		await ManagerDay.check_projects
 		time = time + 1
 	
-	building.max_employed_number += 1
-	building.real_max_employed_number += 1
+	building.max_employed_number      += effect
+	building.real_max_employed_number += effect
 	
+	building.expansion_project = null
 	
-	building.expansion = null
-	
-	queue_free()

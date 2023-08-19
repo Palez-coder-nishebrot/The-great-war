@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://dix2alumg5auy"]
+
+[ext_resource type="Texture2D" uid="uid://ps138eygcdjt" path="res://Graphics/Sprites/GUI/main_menu/main_menu_buttons/main_menu_button.png" id="1_ro4ew"]
+[ext_resource type="Script" path="res://Scenes/Menu/main_button/main_button.gd" id="2_fgxs1"]
+[ext_resource type="FontFile" uid="uid://dpaiod0xc1xgs" path="res://Graphics/Fonts/pixel_2.ttf" id="2_rrnxj"]
+
+[node name="main_button" type="TextureButton"]
+texture_filter = 1
+custom_minimum_size = Vector2(321, 85)
+offset_top = 1.0
+offset_right = 321.0
+offset_bottom = 86.0
+texture_normal = ExtResource("1_ro4ew")
+stretch_mode = 5
+script = ExtResource("2_fgxs1")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_rrnxj")
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1

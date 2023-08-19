@@ -12,10 +12,11 @@ func update_information():
 	$Open.text = closed_list[factory.closed]
 	update_information_about_expanding_factory()
 
+
 func update_information_about_expanding_factory():
 	var factory = parent.factory
-	if factory.expansion != null:
-		$Expansion.text = str(factory.expansion.time) + "/" + str(factory.expansion.max_time)
+	if factory.expansion_project != null:
+		$Expansion.text = str(factory.expansion_project.time) + "/" + str(factory.expansion_project.max_time)
 	else:
 		$Expansion.text = "Расширение(НЕТ)"
 
@@ -29,15 +30,11 @@ func set_subsidization():
 func set_closing():
 	var factory = parent.factory
 	if factory.closed == false: #Нужно закрыть!
-		factory.bankrupt()
+		factory.close_enterprise()
 	else:
-		factory.open_factory()
+		factory.open_enterprise()
 	update_information()
 
 
 func expand_factory():
-	var expand_factory = load("res://Objects/Building/Expand_factory.gd").new()
-	expand_factory.building = parent.factory
-	expand_factory.game = parent.factory.province.player.game
-	parent.factory.expansion = expand_factory
-	expand_factory.start_expansion_of_factory()
+	parent.factory.expand_factory(Players.get_player_client())

@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Reform" load_steps=8 format=3 uid="uid://cd0icnpo25t1o"]
+
+[ext_resource type="Script" path="res://Resources/reforms/levels/unemploy_benefit_level.gd" id="1_8hjdx"]
+[ext_resource type="Script" path="res://Resources/reforms/Reform.gd" id="1_ata6k"]
+
+[sub_resource type="Resource" id="Resource_qywhl"]
+script = ExtResource("1_8hjdx")
+unemployment_benefit = 0.0
+level = 0
+level_name = ""
+
+[sub_resource type="Resource" id="Resource_sjjxl"]
+script = ExtResource("1_8hjdx")
+unemployment_benefit = 0.0
+level = 0
+level_name = ""
+
+[sub_resource type="Resource" id="Resource_6suwk"]
+script = ExtResource("1_8hjdx")
+unemployment_benefit = 0.0
+level = 0
+level_name = ""
+
+[sub_resource type="Resource" id="Resource_v745p"]
+script = ExtResource("1_8hjdx")
+unemployment_benefit = 0.0
+level = 0
+level_name = ""
+
+[sub_resource type="Resource" id="Resource_8id4w"]
+script = ExtResource("1_8hjdx")
+unemployment_benefit = 0.0
+level = 0
+level_name = ""
+
+[resource]
+script = ExtResource("1_ata6k")
+levels = Array[Resource("res://Resources/reforms/reform_level.gd")]([SubResource("Resource_qywhl"), SubResource("Resource_sjjxl"), SubResource("Resource_6suwk"), SubResource("Resource_v745p"), SubResource("Resource_8id4w")])
+reform_name = ""

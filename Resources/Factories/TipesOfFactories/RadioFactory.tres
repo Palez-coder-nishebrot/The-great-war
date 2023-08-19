@@ -1,30 +1,36 @@
-[gd_resource type="Resource" load_steps=10 format=2]
+[gd_resource type="Resource" load_steps=12 format=3 uid="uid://bo0yl4xc3mb5a"]
 
-[ext_resource path="res://Resources/Factories/Factory.gd" type="Script" id=1]
-[ext_resource path="res://Resources/Factories/Raw.gd" type="Script" id=2]
-[ext_resource path="res://Resources/Good/glass.tres" type="Resource" id=3]
-[ext_resource path="res://Resources/Good/el_parts.tres" type="Resource" id=4]
-[ext_resource path="res://Resources/Good/iron.tres" type="Resource" id=5]
-[ext_resource path="res://Resources/Good/radio.tres" type="Resource" id=6]
+[ext_resource type="Script" path="res://Resources/Factories/Factory.gd" id="1"]
+[ext_resource type="Script" path="res://Resources/Factories/Raw.gd" id="2"]
+[ext_resource type="Resource" uid="uid://bnhfsbwpo488q" path="res://Resources/Good/glass.tres" id="3"]
+[ext_resource type="Resource" uid="uid://ceelq1ks2ecm6" path="res://Resources/Good/el_parts.tres" id="4"]
+[ext_resource type="Resource" uid="uid://dm1c0og0w4de3" path="res://Resources/Good/iron.tres" id="5"]
+[ext_resource type="Resource" uid="uid://cdif8lsivgklc" path="res://Resources/Good/radio.tres" id="6"]
+[ext_resource type="Script" path="res://Resources/Factories/factory_equipment.gd" id="6_c1m65"]
 
-[sub_resource type="Resource" id=1]
-script = ExtResource( 2 )
-good = ExtResource( 5 )
-quantity = 0.2
+[sub_resource type="Resource" id="1"]
+script = ExtResource("2")
+good = ExtResource("5")
+quantity = 0.02
 
-[sub_resource type="Resource" id=2]
-script = ExtResource( 2 )
-good = ExtResource( 3 )
-quantity = 0.4
+[sub_resource type="Resource" id="2"]
+script = ExtResource("2")
+good = ExtResource("3")
+quantity = 0.04
 
-[sub_resource type="Resource" id=3]
-script = ExtResource( 2 )
-good = ExtResource( 4 )
-quantity = 0.4
+[sub_resource type="Resource" id="3"]
+script = ExtResource("2")
+good = ExtResource("4")
+quantity = 0.04
+
+[sub_resource type="Resource" id="Resource_fqgx3"]
+script = ExtResource("6_c1m65")
+quantity = 0.01
 
 [resource]
-script = ExtResource( 1 )
+script = ExtResource("1")
 name_of_factory = "radio_factory"
-raw = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ]
-good = ExtResource( 6 )
-available = true
+raw = Array[ExtResource("2")]([SubResource("1"), SubResource("2"), SubResource("3"), SubResource("Resource_fqgx3")])
+good = ExtResource("6")
+available_from_start = true
+construction_days = 3

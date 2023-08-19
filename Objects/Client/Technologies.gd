@@ -130,7 +130,7 @@ func start_research(technology):
 	var pool_researching_points = technology.cost
 	researching_technology = technology
 	while pool_researching_points >= 0:
-		await Players.player.game.new_day
+		await Players.get_player_client().game.new_day
 		pool_researching_points -= client.researching_points
 		client.researching_points = 0
 	activate_effects()

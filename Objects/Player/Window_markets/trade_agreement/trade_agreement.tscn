@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6ekd67elfxwo"]
+
+[ext_resource type="Texture2D" uid="uid://chu2wjgxxht4u" path="res://Graphics/Sprites/goods/alcohol.png" id="1_1abvf"]
+[ext_resource type="Script" path="res://Objects/Player/Window_markets/trade_agreement/trade_agreement.gd" id="1_6ceqj"]
+[ext_resource type="FontFile" uid="uid://dpaiod0xc1xgs" path="res://Graphics/Fonts/pixel_2.ttf" id="2_potyk"]
+
+[node name="trade_agreement" type="HBoxContainer"]
+offset_right = 297.0
+offset_bottom = 54.0
+script = ExtResource("1_6ceqj")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("1_1abvf")
+expand_mode = 2
+
+[node name="quantity" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("2_potyk")
+theme_override_font_sizes/font_size = 32
+text = "Quantity"
+vertical_alignment = 1
+
+[node name="country" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("2_potyk")
+theme_override_font_sizes/font_size = 32
+text = "Country"
+horizontal_alignment = 1
+vertical_alignment = 1

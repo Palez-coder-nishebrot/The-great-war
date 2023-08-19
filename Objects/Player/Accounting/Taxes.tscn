@@ -311,9 +311,9 @@ cache/0/32/0/kerning_overrides/25/0 = Vector2(0, 0)
 cache/0/32/0/kerning_overrides/32/0 = Vector2(0, 0)
 
 [node name="Taxes" type="Panel"]
-offset_top = 348.0
+offset_top = -2.0
 offset_right = 415.0
-offset_bottom = 1078.0
+offset_bottom = 728.0
 script = ExtResource("1")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
@@ -573,6 +573,15 @@ theme_override_fonts/font = SubResource("3")
 theme_override_font_sizes/font_size = 25
 text = "Производство товаров"
 script = ExtResource("2")
+
+[node name="investment_pool" type="Label" parent="."]
+layout_mode = 0
+offset_top = 619.0
+offset_right = 415.0
+offset_bottom = 656.0
+theme_override_fonts/font = SubResource("6")
+theme_override_font_sizes/font_size = 32
+text = "Инвестиционный пул"
 
 [node name="Balance" type="Label" parent="."]
 layout_mode = 0

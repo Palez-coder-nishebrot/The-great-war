@@ -1,25 +1,30 @@
-[gd_resource type="Resource" load_steps=8 format=2]
+[gd_resource type="Resource" load_steps=10 format=3 uid="uid://dbp2mqscr4xoq"]
 
-[ext_resource path="res://Resources/Factories/Factory.gd" type="Script" id=1]
-[ext_resource path="res://Resources/Factories/Raw.gd" type="Script" id=2]
-[ext_resource path="res://Resources/Good/coal.tres" type="Resource" id=3]
-[ext_resource path="res://Resources/Good/textile.tres" type="Resource" id=4]
-[ext_resource path="res://Resources/Good/wood.tres" type="Resource" id=5]
+[ext_resource type="Script" path="res://Resources/Factories/Factory.gd" id="1"]
+[ext_resource type="Script" path="res://Resources/Factories/Raw.gd" id="2"]
+[ext_resource type="Resource" uid="uid://elav5270b0j0" path="res://Resources/Good/coal.tres" id="3"]
+[ext_resource type="Resource" uid="uid://ejbvt3sq1sk6" path="res://Resources/Good/textile.tres" id="4"]
+[ext_resource type="Resource" uid="uid://cwixv5m7fktn3" path="res://Resources/Good/wood.tres" id="5"]
+[ext_resource type="Script" path="res://Resources/Factories/factory_equipment.gd" id="5_b7w8y"]
 
-[sub_resource type="Resource" id=1]
-script = ExtResource( 2 )
-good = ExtResource( 5 )
-quantity = 1.0
+[sub_resource type="Resource" id="1"]
+script = ExtResource("2")
+good = ExtResource("5")
+quantity = 0.1
 
-[sub_resource type="Resource" id=2]
-script = ExtResource( 2 )
-good = ExtResource( 3 )
-quantity = 1.0
+[sub_resource type="Resource" id="2"]
+script = ExtResource("2")
+good = ExtResource("3")
+quantity = 0.1
+
+[sub_resource type="Resource" id="Resource_82v24"]
+script = ExtResource("5_b7w8y")
+quantity = 0.01
 
 [resource]
-script = ExtResource( 1 )
+script = ExtResource("1")
 name_of_factory = "senthetic_textile_factory"
-raw = [ SubResource( 1 ), SubResource( 2 ) ]
-factory_equipment = [  ]
-good = ExtResource( 4 )
+raw = Array[ExtResource("2")]([SubResource("1"), SubResource("2"), SubResource("Resource_82v24")])
+good = ExtResource("4")
 available_from_start = false
+construction_days = 3

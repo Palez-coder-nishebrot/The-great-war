@@ -1,18 +1,24 @@
-[gd_resource type="Resource" load_steps=6 format=2]
+[gd_resource type="Resource" load_steps=8 format=3 uid="uid://sghp8v3d63g3"]
 
-[ext_resource path="res://Resources/Factories/Factory.gd" type="Script" id=1]
-[ext_resource path="res://Resources/Factories/Raw.gd" type="Script" id=2]
-[ext_resource path="res://Resources/Good/gas.tres" type="Resource" id=3]
-[ext_resource path="res://Resources/Good/oil.tres" type="Resource" id=4]
+[ext_resource type="Script" path="res://Resources/Factories/Factory.gd" id="1"]
+[ext_resource type="Script" path="res://Resources/Factories/Raw.gd" id="2"]
+[ext_resource type="Resource" uid="uid://c4fdo1grgwtqh" path="res://Resources/Good/gas.tres" id="3"]
+[ext_resource type="Resource" uid="uid://bobf2wyd3n62f" path="res://Resources/Good/oil.tres" id="4"]
+[ext_resource type="Script" path="res://Resources/Factories/factory_equipment.gd" id="4_ysoqb"]
 
-[sub_resource type="Resource" id=1]
-script = ExtResource( 2 )
-good = ExtResource( 4 )
-quantity = 1.0
+[sub_resource type="Resource" id="1"]
+script = ExtResource("2")
+good = ExtResource("4")
+quantity = 0.1
+
+[sub_resource type="Resource" id="Resource_lbuea"]
+script = ExtResource("4_ysoqb")
+quantity = 0.01
 
 [resource]
-script = ExtResource( 1 )
+script = ExtResource("1")
 name_of_factory = "fuel_factory"
-raw = [ SubResource( 1 ) ]
-good = ExtResource( 3 )
-available = true
+raw = Array[ExtResource("2")]([SubResource("1"), SubResource("Resource_lbuea")])
+good = ExtResource("3")
+available_from_start = true
+construction_days = 3

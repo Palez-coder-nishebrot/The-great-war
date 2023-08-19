@@ -1,31 +1,32 @@
-extends Panel
+extends Control
 
 @onready var player            = get_parent().get_parent()
 @onready var buttons_container = $ScrollContainer/VBoxContainer
 
-@onready var name_region_label      = $VBoxContainer/Label5
-@onready var factory_name_label     = $VBoxContainer/Label
-@onready var construction_raw_label = $VBoxContainer/Label2
-@onready var production_raw_label   = $VBoxContainer/Label3
-@onready var factory_profit_label   = $VBoxContainer/Label4
+@onready var build_button           = $build_button
+
+@onready var factory_description = $factory_description
 
 #var province: Object
-var factory:  Resource
+var factory
 var cost: int
 var region: Object
+
+
+#func _ready():
+#	$Button.set_text
 
 
 func show_self(region_):
 	visible = true
 	region = region_
-	name_region_label.text = region.name_of_tile
 	clear()
 	set_factory_buttons()
 
 
 func set_factory_buttons():
-	for i in player.economic_bonuses.list_of_buildings:
-		var button = load("res://Objects/Player/Window_build_factory/Button_factory.tscn").instantiate()
+	for i in Players.get_player_client().economy_manager.list_of_buildings:
+		var button = load("res://Objects/Player/Window_build_factory/factory_button/Button_factory.tscn").instantiate()
 		button.text = i.name_of_factory
 		button.factory = i
 		button.parent = self
@@ -34,8 +35,7 @@ func set_factory_buttons():
 
 
 func clear():
-	for i in buttons_container.get_children():
-		i.queue_free()
+	factory_description.text = ""
 
 
 func check_building_limit(province):
@@ -46,38 +46,27 @@ func check_building_limit(province):
 
 
 func show_factory_info(new_factory):
+	clear()
+	factory_description.text += region.name_of_tile + "\n"
 	factory = new_factory
 	check_chars()
 	
 
 func check_chars():
-	factory_name_label.text = factory.name_of_factory
-	factory_profit_label.text = "Прибыль: " #+ str(Players.player.economic_bonuses.get_profit_of_factory(factory))
-	production_raw_label.text = check_purchase_for_production()
-
-
-func check_purchase_for_construction(label, resources, first_text):
-	label.text = first_text + "\n"
-	for i in resources:
-		if i == "Кроны":
-			var cost_of_factory = resources[i] + (float(resources[i]) / 100.0 * player.cost_of_factories)
-			label.text += i + ": " + str(cost_of_factory)
-			cost = cost_of_factory
-		else:
-			label.text += i + ": " + str(resources[i])
-		if resources.keys().find(i) + 1 != resources.keys().size():
-			label.text += "\n"
+	factory_description.text += tr(factory.name_of_factory) + "\n"
+	factory_description.text += "Прибыль: "  + "\n"#+ str(Players.player.economic_bonuses.get_profit_of_factory(factory))
+	check_purchase_for_production()
 
 
 func check_purchase_for_production():
-	var text = ""
-	var raw_list = factory.raw
+	var raw = factory.raw
+	for i in raw:
+		if not i is FactoryEquipment:
+			factory_description.add_image(i.good.icon, 64, 64)
+			factory_description.add_text(str(i.quantity) + " ")
+	factory_description.add_text("\n")
 	
-	for storage_good in raw_list:
-		text += tr(storage_good.good.name) + ": " + str(storage_good.quantity) + "\n"
-	return text
-
-
+	
 func check_cost_of_factory():
 	if player.budget >= cost:
 		return true
@@ -90,13 +79,10 @@ func check_factory_in_province(province):
 	return not list.has(factory)
 
 
-func build_factory(province):
-	var profit = player.economic_bonuses.get_profit_of_factory(factory)
-	if check_building_limit(province) and check_cost_of_factory() and check_factory_in_province(province) and profit > 0:
-		province.build_building(factory, cost)
-		
-		show_factory_info(factory)
+func build_factory():
+	region.build_factory(factory)
 
 
-func exit():
+func close_window():
 	visible = false
+	clear()

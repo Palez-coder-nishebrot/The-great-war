@@ -2,7 +2,6 @@ extends ReformEffect
 
 class_name ReformEffectPensions
 
-@export var effect_name: String = "pensions"
 
 func _init():
 	target = "pensions"

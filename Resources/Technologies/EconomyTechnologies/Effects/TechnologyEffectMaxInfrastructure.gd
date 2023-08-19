@@ -10,7 +10,7 @@ class_name TechnologyEffectMaxInfrastructure
 
 
 func get_effect():
-	return "Максимальный уровень " + list_of_points_of_effect[target] + ": +" + str(value)
+	return "Максимальный уровень железных дорог" + ": +" + str(value)
 
 
 func activate_effects(client):

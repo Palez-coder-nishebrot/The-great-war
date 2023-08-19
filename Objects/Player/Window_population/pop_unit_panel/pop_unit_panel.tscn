@@ -1,0 +1,106 @@
+[gd_scene load_steps=8 format=3 uid="uid://bul6btqnogigu"]
+
+[ext_resource type="Script" path="res://Objects/Player/Window_population/pop_unit_panel/pop_unit_panel.gd" id="1_0e5ab"]
+[ext_resource type="Texture2D" uid="uid://bmf06k4n06051" path="res://Graphics/Sprites/GUI/Icons of windows/population_growth.png" id="1_71811"]
+[ext_resource type="Texture2D" uid="uid://dkpf4rv568b4" path="res://Graphics/Sprites/GUI/Icons of windows/welfare.png" id="2_mrvcw"]
+[ext_resource type="Texture2D" uid="uid://bubh8msab4khv" path="res://Graphics/Sprites/GUI/Icons of windows/Cron.png" id="3_a3gfe"]
+[ext_resource type="Texture2D" uid="uid://chmbagyd2lmba" path="res://Graphics/Sprites/GUI/Icons of windows/aggressiveness.png" id="5_8dac1"]
+[ext_resource type="Texture2D" uid="uid://c2p4aqu8rd1xr" path="res://Graphics/Sprites/GUI/Icons of windows/population_window/pol_reform_desire.png" id="5_m2rkt"]
+[ext_resource type="Texture2D" uid="uid://btpew6bkyltlw" path="res://Graphics/Sprites/GUI/Icons of windows/population_window/soc_reform_desire.png" id="6_jly4w"]
+
+[node name="pop_unit_panel" type="HBoxContainer"]
+theme_override_constants/separation = 0
+script = ExtResource("1_0e5ab")
+
+[node name="pop_type" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 25
+text = "Служащие"
+vertical_alignment = 1
+
+[node name="region" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 25
+text = "Провинция"
+vertical_alignment = 1
+
+[node name="quantity" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 25
+text = "1200"
+vertical_alignment = 1
+
+[node name="pop_growth_icon" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_71811")
+expand_mode = 2
+
+[node name="pop_growth" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 25
+text = "1"
+vertical_alignment = 1
+
+[node name="welfare_icon" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_mrvcw")
+expand_mode = 2
+
+[node name="welfare" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 25
+text = "1"
+vertical_alignment = 1
+
+[node name="money_icon" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("3_a3gfe")
+expand_mode = 2
+
+[node name="money" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 25
+text = "12.4"
+vertical_alignment = 1
+
+[node name="aggressiveness_icon" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("5_8dac1")
+expand_mode = 2
+
+[node name="aggressiveness" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 25
+text = "10.0"
+vertical_alignment = 1
+
+[node name="pol_reform_desire_icon" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("5_m2rkt")
+expand_mode = 2
+
+[node name="pol_reform_desire" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 25
+text = "10.0"
+vertical_alignment = 1
+
+[node name="soc_reform_desire_icon" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("6_jly4w")
+expand_mode = 2
+
+[node name="soc_reform_desire" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 25
+text = "10.0"
+vertical_alignment = 1

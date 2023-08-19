@@ -12,17 +12,16 @@ config_version=5
 
 config/name="The great war (1914 - 1936)"
 run/main_scene="res://Scenes/Menu/Menu.tscn"
-config/features=PackedStringArray("4.0")
+config/features=PackedStringArray("4.1")
 config/icon="res://icon.png"
 
 [autoload]
 
 Players="*res://Objects/Global/Players.gd"
-GlobalMarket="*res://Objects/Global/GlobalMarket.gd"
 Functions="*res://Objects/Global/Functions.gd"
-Research="*res://Objects/Global/Research.gd"
 ManagerDay="*res://Objects/Global/Managers/ManagerDay.gd"
 SceneStorage="*res://Objects/Global/SceneStorage.gd"
+GlobalMarket="*res://Objects/Global/GlobalMarket.gd"
 
 [display]
 
@@ -117,18 +116,18 @@ D={
 }
 mouse_left={
 "deadzone": 0.5,
-"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"pressed":false,"double_click":false,"script":null)
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":false,"double_click":false,"script":null)
 ]
 }
 ui_esc={
 "deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
+"events": [null, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"echo":false,"script":null)
 ]
 }
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://Localization/Gui/enterprise.en.translation", "res://Localization/Gui/reforms.en.translation", "res://Localization/Gui/technologies.en.translation", "res://Localization/Gui/text.en.translation")
+locale/translations=PackedStringArray("res://Localization/Gui/enterprise.en.translation", "res://Localization/Gui/reforms.en.translation", "res://Localization/Gui/technologies.en.translation", "res://Localization/Gui/text.en.translation", "res://Localization/Gui/parties.en.translation")
 
 [locale]
 

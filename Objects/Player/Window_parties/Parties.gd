@@ -1,7 +1,5 @@
 extends Panel
 
-@onready var player = get_parent().get_parent()
-
 @onready var form_of_goverment_label      = $CharsOfCountry/FormOfGovernment
 @onready var status_policy_label          = $CharsOfCountry/StatusPolicy
 @onready var ruling_party_label           = $CharsOfCountry/RulingParty
@@ -26,9 +24,13 @@ extends Panel
 
 var list_of_answers: Dictionary = {true: "Да", false: "Нет"}
 
-func update():
-	clear_cont()
-	var political_manager = Players.player.political_manager
+
+func _ready():
+	spawn_party_panels()
+
+
+func spawn_party_panels():
+	var political_manager = Players.get_player_client().political_manager
 	var list_of_parties = political_manager.parties_list
 	for i in list_of_parties:
 		var panel = load("res://Objects/Player/Window_parties/Party.tscn").instantiate()
@@ -36,14 +38,6 @@ func update():
 		
 		panel.party = i
 		panel.update()
-		
-		if political_manager.supported_party_by_client == i:
-			panel.supporting_party_button.text = "Ведется поддержка партии"
-
-
-func clear_cont():
-	for i in $ScrollContainer/VBoxContainer.get_children():
-		i.queue_free()
 
 
 func update_information():
@@ -53,8 +47,8 @@ func update_information():
 	
 
 func update_information_of_country():
+	var player =  Players.get_player_client()
 	var ruling_party = player.get_ruling_party()
-	var political_manager = player.political_manager
 	
 	form_of_goverment_label.text = "Форма правления: " + tr(player.get_government_form())
 	ruling_party_label.text = ruling_party.party_name
@@ -82,6 +76,7 @@ func update_information_of_country():
 	
 
 func get_status_of_country(_policy):
+	var player = Players.get_player_client()
 	status_policy_label.text = "Независимая страна"
 	
 	if player.satellite != null:

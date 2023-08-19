@@ -1,37 +1,42 @@
-[gd_resource type="Resource" load_steps=12 format=2]
+[gd_resource type="Resource" load_steps=14 format=3 uid="uid://cjiwajp7qhqeb"]
 
-[ext_resource path="res://Resources/Good/steel.tres" type="Resource" id=1]
-[ext_resource path="res://Resources/Good/cars.tres" type="Resource" id=2]
-[ext_resource path="res://Resources/Good/tanks.tres" type="Resource" id=3]
-[ext_resource path="res://Resources/Good/rubber.tres" type="Resource" id=4]
-[ext_resource path="res://Resources/Good/artillery.tres" type="Resource" id=5]
-[ext_resource path="res://Resources/Factories/Factory.gd" type="Script" id=6]
-[ext_resource path="res://Resources/Factories/Raw.gd" type="Script" id=7]
+[ext_resource type="Resource" uid="uid://c64oytvdwhc6m" path="res://Resources/Good/steel.tres" id="1"]
+[ext_resource type="Resource" uid="uid://ds60ia3p2mgrk" path="res://Resources/Good/cars.tres" id="2"]
+[ext_resource type="Resource" uid="uid://cei22pcvmrvuf" path="res://Resources/Good/tanks.tres" id="3"]
+[ext_resource type="Resource" uid="uid://cs3jts051165o" path="res://Resources/Good/rubber.tres" id="4"]
+[ext_resource type="Resource" uid="uid://wdeqewu6lln4" path="res://Resources/Good/artillery.tres" id="5"]
+[ext_resource type="Script" path="res://Resources/Factories/Factory.gd" id="6"]
+[ext_resource type="Script" path="res://Resources/Factories/Raw.gd" id="7"]
+[ext_resource type="Script" path="res://Resources/Factories/factory_equipment.gd" id="7_6mu6h"]
 
-[sub_resource type="Resource" id=1]
-script = ExtResource( 7 )
-good = ExtResource( 2 )
-quantity = 0.5
+[sub_resource type="Resource" id="1"]
+script = ExtResource("7")
+good = ExtResource("2")
+quantity = 0.05
 
-[sub_resource type="Resource" id=2]
-script = ExtResource( 7 )
-good = ExtResource( 4 )
-quantity = 0.5
+[sub_resource type="Resource" id="2"]
+script = ExtResource("7")
+good = ExtResource("4")
+quantity = 0.05
 
-[sub_resource type="Resource" id=3]
-script = ExtResource( 7 )
-good = ExtResource( 1 )
-quantity = 1.0
+[sub_resource type="Resource" id="3"]
+script = ExtResource("7")
+good = ExtResource("1")
+quantity = 0.1
 
-[sub_resource type="Resource" id=4]
-script = ExtResource( 7 )
-good = ExtResource( 5 )
-quantity = 1.0
+[sub_resource type="Resource" id="4"]
+script = ExtResource("7")
+good = ExtResource("5")
+quantity = 0.1
+
+[sub_resource type="Resource" id="Resource_naj11"]
+script = ExtResource("7_6mu6h")
+quantity = 0.01
 
 [resource]
-script = ExtResource( 6 )
+script = ExtResource("6")
 name_of_factory = "tank_factory"
-raw = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ]
-factory_equipment = [  ]
-good = ExtResource( 3 )
+raw = Array[ExtResource("7")]([SubResource("1"), SubResource("2"), SubResource("3"), SubResource("4"), SubResource("Resource_naj11")])
+good = ExtResource("3")
 available_from_start = false
+construction_days = 3

@@ -15,6 +15,7 @@ var form_of_government: Resource
 var economy_policy:     Resource
 var trade_policy:       Resource
 var military_policy:    Resource
+var national_issue:     Resource
 
 
 func _init(party_ideology):
@@ -23,6 +24,7 @@ func _init(party_ideology):
 	economy_policy     = party_ideology.economic_policy
 	trade_policy       = party_ideology.trade_policy
 	military_policy    = party_ideology.military_policy
+	national_issue     = party_ideology.national_issue
 	form_of_government = party_ideology.government_form
 
 
@@ -33,6 +35,7 @@ func check_subsidization(client):
 			for y in i.list_of_buildings:
 				if y.tipe == "factory":
 					y.subsidization = false
+
 
 func get_party_name():
 	return tr(party_name)
@@ -48,7 +51,11 @@ func get_trade_policy():
 
 func get_military_policy():
 	return tr(military_policy.policy_name)
-	
+
+
+func get_national_issue():
+	return tr(national_issue.policy_name)
+
 
 func get_ideology():
 	return tr(ideology.ideology)

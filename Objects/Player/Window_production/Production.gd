@@ -11,7 +11,7 @@ var list
 
 
 func update_information():
-	for i in Players.player.regions_list:
+	for i in Players.get_player_client().regions_list:
 		if not list_of_provinces.has(i):
 			spawn_panel(i)
 	

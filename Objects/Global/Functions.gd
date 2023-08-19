@@ -1,12 +1,5 @@
 extends Node
 
-#var economy_list: Dictionary = {
-#	"Цена_на_фабрики":      "cost_of_factories",
-#	"Субсидирование":       "cost_of_factories",
-#	"Доходы_фабрикантов":   "cost_of_factories",
-#	"Максимальные_пошлины": "cost_of_factories",
-#	"Экспорт_товаров":      "cost_of_factories",
-#}
 
 func rng(number_1, number_2):
 	var RNG = RandomNumberGenerator.new()
@@ -47,20 +40,52 @@ func pay_income_taxes(player, object, tax, income):
 
 func check_tariffs(price, player):
 	return price * (float(player.tariffs) / 100)
-	
 
-func buy_good_on_local_market(customer, good, quanity, economy_manager):
-	var local_market = economy_manager.local_market
-	var good_price = economy_manager.prices_goods[good]
+
+func get_tariff(good, quanity, economy_manager: EconomyManager):
+	var price = economy_manager.prices_goods[good]
+	var tariff = economy_manager.tariffs
+	return (price * quanity) * tariff
+
+
+func get_good_price(price, imp_quantity, quantity, tariffs):
 	
-	economy_manager.demand_supply_goods[good][0] += quanity
+	var price_from_loc  = quantity * price
+	var price_from_glob = (imp_quantity * price) + ((imp_quantity * price) * tariffs)
+	
+	return price_from_loc + price_from_glob
+
+
+func pay_tariffs(money, economy_manager):
+	economy_manager.pay_tariffs(money)
+
+
+func check_goods_quantity(local_market, good, quantity):
+	if local_market[good] > quantity or is_equal_approx(local_market[good], quantity):
+		return true
+	return false
+
+
+func buy_good_on_local_market(customer, good, quanity, economy_manager: EconomyManager, imp_quantity = 0.0):
+	var local_market = economy_manager.local_market
+	var goods_price  = economy_manager.prices_goods[good] * quanity
+	
+	var money_tariff = get_tariff(good, imp_quantity, economy_manager)
+	
+	var total_price = money_tariff + goods_price
+	
+	pay_tariffs(money_tariff, economy_manager)
+	
 	local_market[good] -= quanity
-	customer.money -= good_price * quanity
-	return good_price * quanity
+	customer.money -= total_price
+	
+	if total_price < 0:
+		breakpoint
+	return total_price
 
 
 func create_details_panel(parent):
 	var panel = load("res://Objects/Player/details_panel/details_panel.tscn").instantiate()
-	Players.player.canvas_layer.add_child(panel)
+	Players.get_player().canvas_layer.add_child(panel)
 	panel.connect_parent(parent)
 	return panel

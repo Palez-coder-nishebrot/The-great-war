@@ -9,6 +9,9 @@ signal update
 @onready var warhouse_label      = $VBoxContainer2/Label5
 @onready var export_import_label = $VBoxContainer2/Label6
 @onready var max_price_label     = $VBoxContainer2/Label7
+@onready var goods_on_global_m = $VBoxContainer2/Label8
+@onready var goods_on_local_m  = $VBoxContainer2/Label10
+@onready var price_with_tariffs     = $VBoxContainer2/Label9
 
 
 var good: Resource = load("res://Resources/Good/coal.tres")
@@ -24,12 +27,17 @@ func update_information():
 func update_information_about_good(new_good):
 	good = new_good
 	
-	var economy_manager     = Players.player.economy_manager
-	var demand_supply_good  = economy_manager.demand_supply_goods[good]
-	var price               = economy_manager.prices_goods[good]
-	#var goods_warhouse      = economy_manager.warhouse_goods[good]
-	var import_good         = economy_manager.import_goods[good]
-	var export_good         = economy_manager.export_goods[good]
+	var economy_manager       = Players.get_player_client().economy_manager
+	var tariffs               = economy_manager.tariffs
+	var local_market_quantity = economy_manager.local_market[good]
+	var demand_supply_good    = economy_manager.demand_supply_goods[good]
+	var price                 = economy_manager.prices_goods[good]
+	#var goods_warhouse       = economy_manager.warhouse_goods[good]
+	var import_good           = economy_manager.import_goods[good]
+	var export_good           = economy_manager.export_goods[good]
+	var q_on_global_m         = GlobalMarket.goods_quantity[good]
+	
+	var price_w_tar           = Functions.get_good_price(price, 1, 0, economy_manager.tariffs)
 	
 	good_label.text = good.name
 	
@@ -45,6 +53,10 @@ func update_information_about_good(new_good):
 	
 	prices_label.text = "Цена отечественном рынке:" + str(price)
 	max_price_label.text = "border_price: " + str(get_m_price(demand_supply_good[1], demand_supply_good[0]))
+	goods_on_global_m.text = "Кол-во на глобальном рынке: " + str(q_on_global_m)
+	price_with_tariffs.text = "Цена с учетом пошлин: "  + str(price_w_tar)
+	goods_on_local_m.text   = "Кол-во на локальном рынке: " + str(local_market_quantity)
+	
 
 
 func get_m_price(supply, demand):

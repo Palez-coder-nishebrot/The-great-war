@@ -20,7 +20,7 @@ class_name TechnologyEffectNewFactory
 
 
 func get_effect():
-	return name_of_effect + ": " + list_of_points_of_effect[target]
+	return name_of_effect + ": " + target
 
 
 func activate_effects(client):

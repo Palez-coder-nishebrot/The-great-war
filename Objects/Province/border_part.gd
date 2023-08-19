@@ -85,7 +85,7 @@ func _get_point_with_shortest_distance(current_point, corners):
 		return current_point
 	
 
-func _set_neighbour_border(value):
+func _set_neighbour_border(_value):
 #	if neighbour_border == value:
 #		return
 #

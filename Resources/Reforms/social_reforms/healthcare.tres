@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Reform" load_steps=8 format=3 uid="uid://btuue1fp10uma"]
+
+[ext_resource type="Script" path="res://Resources/reforms/Reform.gd" id="1_22680"]
+[ext_resource type="Script" path="res://Resources/reforms/levels/healthcare_level.gd" id="1_l1tal"]
+
+[sub_resource type="Resource" id="Resource_bt22t"]
+script = ExtResource("1_l1tal")
+population_growth = 0.0
+level = 0
+level_name = ""
+
+[sub_resource type="Resource" id="Resource_5wjnk"]
+script = ExtResource("1_l1tal")
+population_growth = 0.02
+level = 0
+level_name = ""
+
+[sub_resource type="Resource" id="Resource_w5gq4"]
+script = ExtResource("1_l1tal")
+population_growth = 0.04
+level = 0
+level_name = ""
+
+[sub_resource type="Resource" id="Resource_knv7t"]
+script = ExtResource("1_l1tal")
+population_growth = 0.06
+level = 0
+level_name = ""
+
+[sub_resource type="Resource" id="Resource_4apsj"]
+script = ExtResource("1_l1tal")
+population_growth = 0.08
+level = 0
+level_name = ""
+
+[resource]
+script = ExtResource("1_22680")
+levels = Array[Resource("res://Resources/reforms/reform_level.gd")]([SubResource("Resource_bt22t"), SubResource("Resource_5wjnk"), SubResource("Resource_w5gq4"), SubResource("Resource_knv7t"), SubResource("Resource_4apsj")])
+reform_name = "healthcare"

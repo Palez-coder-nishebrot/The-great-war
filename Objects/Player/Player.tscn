@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dmjitjcdnorww"]
+[gd_scene load_steps=25 format=3 uid="uid://dmjitjcdnorww"]
 
 [ext_resource type="Script" path="res://Objects/Player/Player.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://bmfslq2y1gxrv" path="res://Objects/Player/Window_province/Window_province.tscn" id="2"]
@@ -11,22 +11,20 @@
 [ext_resource type="PackedScene" path="res://Objects/Player/Window_diplomacy/Diplomacy.tscn" id="9"]
 [ext_resource type="PackedScene" uid="uid://bpvbyvrny7811" path="res://Objects/Player/Window_reforms/reform_window.tscn" id="10"]
 [ext_resource type="PackedScene" uid="uid://bckhubtkbept3" path="res://Objects/Player/Accounting/Taxes.tscn" id="11"]
-[ext_resource type="PackedScene" path="res://Objects/Player/Window_population/Population.tscn" id="12"]
+[ext_resource type="PackedScene" uid="uid://dtrljq38ue4ja" path="res://Objects/Player/Window_population/Population.tscn" id="12"]
 [ext_resource type="PackedScene" uid="uid://b2tfnwdynuxp0" path="res://Objects/Player/Window_research/Research.tscn" id="13"]
 [ext_resource type="PackedScene" path="res://Objects/Player/Window_train_army/Train_army.tscn" id="14"]
 [ext_resource type="Script" path="res://Objects/Player/Camera.gd" id="15"]
 [ext_resource type="PackedScene" path="res://Objects/Player/List_of_units/List_of_units.tscn" id="16"]
 [ext_resource type="FontFile" uid="uid://dpaiod0xc1xgs" path="res://Graphics/Fonts/pixel_2.ttf" id="17"]
 [ext_resource type="Script" path="res://Objects/Player/Borders/Border.gd" id="18"]
+[ext_resource type="PackedScene" uid="uid://dw71igj2kjacn" path="res://Objects/Player/menu_panel/menu_panel.tscn" id="19_2wves"]
 
 [sub_resource type="StyleBoxFlat" id="1"]
 bg_color = Color(0.101961, 0.101961, 0.101961, 0.690196)
 
 [sub_resource type="FontFile" id="2"]
 fallbacks = Array[Font]([ExtResource("17")])
-face_index = null
-embolden = null
-transform = null
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -47,10 +45,17 @@ size = Vector2(960, 10)
 script = ExtResource("1")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2.5, 2.5)
+zoom = Vector2(3, 3)
 script = ExtResource("15")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="menu_panel" parent="CanvasLayer" instance=ExtResource("19_2wves")]
+visible = false
+offset_left = 853.0
+offset_top = 387.0
+offset_right = 1189.0
+offset_bottom = 551.0
 
 [node name="Buttons" parent="CanvasLayer" instance=ExtResource("3")]
 mouse_filter = 2
@@ -80,8 +85,10 @@ offset_top = 78.0
 
 [node name="Taxes" parent="CanvasLayer" instance=ExtResource("11")]
 visible = false
-offset_top = 260.0
-offset_bottom = 1080.0
+offset_left = 1.0
+offset_top = 181.0
+offset_right = 416.0
+offset_bottom = 1001.0
 
 [node name="Population" parent="CanvasLayer" instance=ExtResource("12")]
 visible = false
@@ -96,7 +103,10 @@ visible = false
 
 [node name="Build_factory" parent="CanvasLayer" instance=ExtResource("7")]
 visible = false
-offset_top = 248.0
+offset_left = 402.0
+offset_top = 200.0
+offset_right = 1746.0
+offset_bottom = 923.0
 
 [node name="Diplomacy" parent="CanvasLayer" instance=ExtResource("9")]
 visible = false
@@ -160,3 +170,5 @@ script = ExtResource("18")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Borders/BorderDown"]
 position = Vector2(960, 1070)
 shape = SubResource("5")
+
+[connection signal="visibility_changed" from="CanvasLayer/menu_panel" to="CanvasLayer/menu_panel" method="_on_visibility_changed"]

@@ -1,17 +1,17 @@
-[gd_resource type="Resource" load_steps=4 format=2]
+[gd_resource type="Resource" script_class="StateOnStartGame" load_steps=4 format=3 uid="uid://wypori3l83c6"]
 
-[ext_resource path="res://Resources/StatesOnStartGame/State.gd" type="Script" id=1]
-[ext_resource path="res://Resources/Parties/Ideologies/Conservators.tres" type="Resource" id=2]
-[ext_resource path="res://Resources/Parties/Policy/goverment_form/monarchy.tres" type="Resource" id=3]
+[ext_resource type="Script" path="res://Resources/StatesOnStartGame/State.gd" id="1"]
+[ext_resource type="Resource" uid="uid://gkom1yh6vlr7" path="res://Resources/Parties/Ideologies/Conservators.tres" id="2"]
+[ext_resource type="Resource" uid="uid://c5n5ywdho8jcw" path="res://Resources/Parties/Policy/goverment_form/monarchy.tres" id="3"]
 
 [resource]
-script = ExtResource( 1 )
+script = ExtResource("1")
 name_of_state = "Kavardatsy"
-list_of_regions = PackedStringArray( "Хмельницкий", "Севастополь", "Закопане", "Ивано-Франковск", "Зборов", "Каменец-Подольск" )
+list_of_regions = PackedStringArray("Хмельницкий", "Севастополь", "Закопане", "Ивано-Франковск", "Зборов", "Каменец-Подольск")
 middle_value_education = 50
-government_form = ExtResource( 3 )
-ideology = ExtResource( 2 )
-national_color = Color( 0.560784, 0.294118, 0.568627, 1 )
+government_form = ExtResource("3")
+ideology = ExtResource("2")
+national_color = Color(0.560784, 0.294118, 0.568627, 1)
 national_id = ""
 popularity_of_parties = {
 "communists": 5,

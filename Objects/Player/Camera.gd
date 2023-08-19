@@ -1,7 +1,7 @@
 extends Camera2D
 
-const MAX_zoom:        float          = 3.0
-const MIN_zoom:        float          = 0.5
+const MAX_zoom:        float          = 7.0
+const MIN_zoom:        float          = 3.0
 const ZOOM_SPEED:      float          = 0.1
 
 signal scale_updated

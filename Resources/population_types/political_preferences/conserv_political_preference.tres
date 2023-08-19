@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PoliticalPreference" load_steps=4 format=3 uid="uid://bd2dyuu7gdl36"]
+
+[ext_resource type="Resource" path="res://Resources/Parties/Ideologies/Conservators.tres" id="1_36het"]
+[ext_resource type="Resource" path="res://Resources/Parties/Ideologies/Fascists.tres" id="2_xa8am"]
+[ext_resource type="Script" path="res://Resources/population_types/political_preferences/political_preference.gd" id="3_h10fl"]
+
+[resource]
+script = ExtResource("3_h10fl")
+preferred_ideologies = Array[Resource("res://Resources/Parties/Ideology.gd")]([ExtResource("1_36het"), ExtResource("2_xa8am")])

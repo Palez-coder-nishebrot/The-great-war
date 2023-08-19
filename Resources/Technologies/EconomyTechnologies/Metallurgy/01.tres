@@ -1,32 +1,32 @@
-[gd_resource type="Resource" load_steps=9 format=2]
+[gd_resource type="Resource" script_class="Technology" load_steps=9 format=3 uid="uid://cdyy180iotnd6"]
 
-[ext_resource path="res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectProductionGoods.gd" type="Script" id=1]
-[ext_resource path="res://Resources/Good/coal.tres" type="Resource" id=2]
-[ext_resource path="res://Resources/Technologies/Technology.gd" type="Script" id=3]
-[ext_resource path="res://Resources/Good/iron.tres" type="Resource" id=4]
-[ext_resource path="res://Resources/Good/steel.tres" type="Resource" id=5]
+[ext_resource type="Script" path="res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectProductionGoods.gd" id="1"]
+[ext_resource type="Resource" path="res://Resources/Good/coal.tres" id="2"]
+[ext_resource type="Script" path="res://Resources/Technologies/Technology.gd" id="3"]
+[ext_resource type="Resource" path="res://Resources/Good/iron.tres" id="4"]
+[ext_resource type="Resource" path="res://Resources/Good/steel.tres" id="5"]
 
-[sub_resource type="Resource" id=1]
-script = ExtResource( 1 )
+[sub_resource type="Resource" id="1"]
+script = ExtResource("1")
 name_of_effect = "Выпуск продукции"
-power = 1.1
-target = ExtResource( 2 )
+power = 0.1
+target = ExtResource("2")
 
-[sub_resource type="Resource" id=2]
-script = ExtResource( 1 )
+[sub_resource type="Resource" id="2"]
+script = ExtResource("1")
 name_of_effect = "Выпуск продукции"
-power = 1.1
-target = ExtResource( 4 )
+power = 0.1
+target = ExtResource("4")
 
-[sub_resource type="Resource" id=3]
-script = ExtResource( 1 )
+[sub_resource type="Resource" id="3"]
+script = ExtResource("1")
 name_of_effect = "Выпуск продукции"
-power = 1.1
-target = ExtResource( 5 )
+power = 0.1
+target = ExtResource("5")
 
 [resource]
-script = ExtResource( 3 )
+script = ExtResource("3")
 cost = 1000
 activation_year = 1914
 name_of_technology = "converting_furnaces"
-list_of_effects = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ]
+list_of_effects = [SubResource("1"), SubResource("2"), SubResource("3")]

@@ -13,13 +13,14 @@ func spawn_buttons():
 	while folder_name != "":
 		var path = "res://Resources/StatesOnStartGame/States/" + folder_name
 		var file = load(path)
-		set_client_button(file.name_of_state)
+		set_client_button(file)
 		folder_name = folder.get_next()
 		
 
 
-func set_client_button(state):
+func set_client_button(file):
 	var button = $VBoxContainer/Button.duplicate()
 	button.visible = true
-	button.text = state
+	button.file = file
+	button.text = file.name_of_state
 	$VBoxContainer.add_child(button)

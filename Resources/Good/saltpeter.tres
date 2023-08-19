@@ -1,13 +1,14 @@
-[gd_resource type="Resource" load_steps=3 format=2]
+[gd_resource type="Resource" script_class="Good" load_steps=3 format=3 uid="uid://c1v3oasg5ag6p"]
 
-[ext_resource path="res://Resources/Good/good.gd" type="Script" id=1]
-[ext_resource path="res://Graphics/Sprites/goods/sulfur.png" type="Texture2D" id=2]
+[ext_resource type="Script" path="res://Resources/Good/good.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://dkumcfd0j0hi0" path="res://Graphics/Sprites/goods/sulfur.png" id="2"]
 
 [resource]
-script = ExtResource( 1 )
+script = ExtResource("1")
 name = "Селитра"
 base_price = 15
 min_price = 5
 max_price = 25
-icon = ExtResource( 2 )
-based_effiency_production = 1.0
+icon = ExtResource("2")
+dp_effiency_production = 0.5
+factory_effiency_production = 0.3

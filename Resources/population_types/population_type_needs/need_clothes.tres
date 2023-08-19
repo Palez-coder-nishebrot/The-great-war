@@ -1,12 +1,10 @@
-[gd_resource type="Resource" load_steps=4 format=2]
+[gd_resource type="Resource" script_class="NeededGood" load_steps=3 format=3 uid="uid://b5sl3q0qogpmn"]
 
-[ext_resource path="res://Resources/population_types/population_type_needs/population_type_need.gd" type="Script" id=1]
-[ext_resource path="res://Resources/Good/clothes.tres" type="Resource" id=2]
-[ext_resource path="res://Resources/Good/textile.tres" type="Resource" id=3]
+[ext_resource type="Script" path="res://Resources/population_types/population_type_needs/population_type_need.gd" id="1"]
+[ext_resource type="Resource" uid="uid://bq77c6p0lpoh6" path="res://Resources/Good/clothes.tres" id="2"]
 
 [resource]
-script = ExtResource( 1 )
-quantity = 3.0
-int_good_quantity = 1.0
-good_type = ExtResource( 2 )
-interchangeable_good = ExtResource( 3 )
+script = ExtResource("1")
+util = 2.0
+quantity = 5.0
+good_type = ExtResource("2")

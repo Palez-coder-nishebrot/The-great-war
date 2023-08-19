@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="Reform" load_steps=9 format=3 uid="uid://brb1bssfuq1b7"]
+
+[ext_resource type="Script" path="res://Resources/reforms/Reform.gd" id="1_4ggv0"]
+[ext_resource type="Script" path="res://Resources/reforms/levels/school_system_level.gd" id="1_leycm"]
+
+[sub_resource type="Resource" id="Resource_413wl"]
+script = ExtResource("1_leycm")
+education_efficiency = 0.0
+level = 0
+level_name = ""
+
+[sub_resource type="Resource" id="Resource_bgcp2"]
+script = ExtResource("1_leycm")
+education_efficiency = 0.1
+level = 0
+level_name = ""
+
+[sub_resource type="Resource" id="Resource_7bjad"]
+script = ExtResource("1_leycm")
+education_efficiency = 0.2
+level = 0
+level_name = ""
+
+[sub_resource type="Resource" id="Resource_1k8of"]
+script = ExtResource("1_leycm")
+education_efficiency = 0.3
+level = 0
+level_name = ""
+
+[sub_resource type="Resource" id="Resource_7bvp8"]
+script = ExtResource("1_leycm")
+education_efficiency = 0.4
+level = 0
+level_name = ""
+
+[sub_resource type="Resource" id="Resource_ti83w"]
+script = ExtResource("1_leycm")
+education_efficiency = 0.5
+level = 0
+level_name = ""
+
+[resource]
+script = ExtResource("1_4ggv0")
+levels = Array[Resource("res://Resources/reforms/reform_level.gd")]([SubResource("Resource_413wl"), SubResource("Resource_bgcp2"), SubResource("Resource_7bjad"), SubResource("Resource_1k8of"), SubResource("Resource_7bvp8"), SubResource("Resource_ti83w")])
+reform_name = "school_system"

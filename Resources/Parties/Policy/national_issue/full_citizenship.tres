@@ -1,0 +1,7 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dlch2seyv6nu"]
+
+[ext_resource type="Script" path="res://Resources/Parties/national_issue.gd" id="1_x0r6v"]
+
+[resource]
+script = ExtResource("1_x0r6v")
+policy_name = "full_citizenship"

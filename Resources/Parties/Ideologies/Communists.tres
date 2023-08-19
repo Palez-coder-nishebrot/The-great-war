@@ -1,21 +1,23 @@
-[gd_resource type="Resource" load_steps=6 format=2]
+[gd_resource type="Resource" script_class="Ideology" load_steps=7 format=3 uid="uid://bhk8mcni27woj"]
 
-[ext_resource path="res://Resources/Parties/Ideology.gd" type="Script" id=1]
-[ext_resource path="res://Resources/Parties/Policy/goverment_form/soviet_republic.tres" type="Resource" id=2]
-[ext_resource path="res://Resources/Parties/Policy/trade_policy/protectionism.tres" type="Resource" id=3]
-[ext_resource path="res://Resources/Parties/Policy/economy_policy/planned_economy.tres" type="Resource" id=4]
-[ext_resource path="res://Resources/Parties/Policy/military_policy/expansionism.tres" type="Resource" id=5]
+[ext_resource type="Script" path="res://Resources/Parties/Ideology.gd" id="1"]
+[ext_resource type="Resource" path="res://Resources/Parties/Policy/goverment_form/soviet_republic.tres" id="2"]
+[ext_resource type="Resource" uid="uid://diunltbmleadq" path="res://Resources/Parties/Policy/trade_policy/protectionism.tres" id="3"]
+[ext_resource type="Resource" path="res://Resources/Parties/Policy/economy_policy/planned_economy.tres" id="4"]
+[ext_resource type="Resource" uid="uid://bk5nufoc0oh6o" path="res://Resources/Parties/Policy/national_issue/residence_permit.tres" id="4_udth3"]
+[ext_resource type="Resource" path="res://Resources/Parties/Policy/military_policy/expansionism.tres" id="5"]
 
 [resource]
-script = ExtResource( 1 )
+script = ExtResource("1")
 ideology = "communists"
-economic_policy = ExtResource( 4 )
-trade_policy = ExtResource( 3 )
-military_policy = ExtResource( 5 )
-names_of_parties = [ "РСДРП(б)", "Социал-демократическая рабочая партия" ]
-available_for_setting_ruling_party = [ ExtResource( 2 ) ]
+economic_policy = ExtResource("4")
+trade_policy = ExtResource("3")
+military_policy = ExtResource("5")
+national_issue = ExtResource("4_udth3")
+names_of_parties = ["com_party_name_1", "com_party_name_2"]
+available_for_setting_ruling_party = [ExtResource("2")]
 supporting_soc_reforms = 1
 supporting_pol_reforms = 0
 rollback_soc_reforms = 0
 rollback_pol_reforms = 1
-government_form = ExtResource( 2 )
+government_form = ExtResource("2")

@@ -1,5 +1,6 @@
 extends Resource
 
+class_name GovernmentForm
 
 @export var policy_name: String = ""
 

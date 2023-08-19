@@ -25,14 +25,13 @@ func Che_za_huinya():
 
 
 func update_information():
+	var player          = province.player
 	if actions_container != null and income_label != null:
 		if not is_instance_valid(factory):
-			get_parent().list_of_factories.erase(factory)
+			player.list_of_factories.erase(factory)
 			queue_free()
 		elif factory.in_construction == false:
 			update()
-		else:
-			update_information_about_factory_in_construction()
 
 
 func update_information_about_factory_in_construction():
@@ -50,7 +49,7 @@ func update():
 
 
 func update_information_about_income():
-	var profit = factory.get_profit()
+	var profit = factory.profit
 	if profit >= 0: 
 		income_label.text = "+" + str(profit)
 		income_label.add_theme_color_override("font_color", Color(0.094118, 0.580392, 0))
@@ -61,9 +60,9 @@ func update_information_about_income():
 
 func update_information_about_factory():
 	show_good()
-	production_goods_label.text = str(factory.good_production)
-	workers_label.text = str(factory.workers_quantity) + "/" + str(factory.real_max_employed_number)
-	efficiency_label.text = "+" + str(factory.get_effiency_production()) + "%"
+	production_goods_label.text = str(factory.selling_goods_quantity)
+	workers_label.text = str(factory.workers_quantity) + "/" + str(factory.real_max_employed_number) + "(" + str(factory.max_employed_number) + ")"
+	efficiency_label.text = "+" + str(factory.get_factory_production_efficiency()) + "%"
 	actions_container.update_information()
 
 
@@ -92,7 +91,7 @@ func show_good():
 func on_good_button_pressed(event):
 	if event is InputEventMouseButton and event.is_pressed():
 		if event.button_index == MOUSE_BUTTON_RIGHT:
-			var window = Players.player.window_production.info_about_factory_window
+			var window = Players.get_player().window_production.info_about_factory_window
 			window.factory = factory
 			window.visible = true
 			window.update_information()

@@ -1,13 +1,14 @@
-[gd_resource type="Resource" load_steps=3 format=2]
+[gd_resource type="Resource" script_class="Good" load_steps=3 format=3 uid="uid://cwixv5m7fktn3"]
 
-[ext_resource path="res://Resources/Good/good.gd" type="Script" id=1]
-[ext_resource path="res://Graphics/Sprites/goods/wood.png" type="Texture2D" id=2]
+[ext_resource type="Script" path="res://Resources/Good/good.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://csg8hom11bobh" path="res://Graphics/Sprites/goods/wood.png" id="2"]
 
 [resource]
-script = ExtResource( 1 )
+script = ExtResource("1")
 name = "Древесина"
 base_price = 5
 min_price = 2
 max_price = 10
-icon = ExtResource( 2 )
-based_effiency_production = 0.5
+icon = ExtResource("2")
+dp_effiency_production = 0.7
+factory_effiency_production = 0.0

@@ -18,7 +18,7 @@ const subsidization_list: Dictionary = {true: "Да", false: "Нет"}
 
 func update_information():
 	if factory != null:
-		if factory.province.player != Players.player:
+		if factory.province.player != Players.get_player_client():
 			factory = null
 			return
 		else:
@@ -37,7 +37,7 @@ func show_information_about_factory():
 
 
 func show_quantity_of_workers():
-	workers_label.text = "Рабочие: " + str(factory.workers_quantity) + "/" + str(factory.max_employed_number)
+	workers_label.text = "Рабочие: " + str(factory.workers_quantity) + " Клерки: " + str(factory.clerks_quantity) + " Макс:" + str(factory.max_employed_number)
 
 
 func show_expenses():
@@ -59,20 +59,14 @@ func show_resourses():
 
 
 func show_bonuses_for_production():
-	var client = factory.province.player
-	var economic_bonuses = client.economic_bonuses
 	var good = factory.good
 	#var manager = factory.province.player.get_parent().factory_manager
 	production_label.text = "Бонус к выпуску продукции от: \n"
 	ready_to_produce.text = "Способен производить: " + str(factory.ready_to_produce)
-	#production_label.text += "*Сырье, производимое в провинции: +" + str((factory.get_bonuses_for_production_from_province() - 1) * 100) + "% \n"
-	#production_label.text += "*Базовый бонус: x" + str(factory.check_based_bonuses_for_production()) + "\n"
-	#production_label.text += "*Промышленники: +0%"  + "\n"#+ str(factory.province.player.economic_bonuses.production_of_factories * 10) + "% \n"
-	#production_label.text += "*Производительность фабрик: +" + str((factory.province.player.economic_bonuses.production_of_factories - 1) * 100) + "% \n"
 	
-	production_label.text += "*Базовый выпуск продукции x" + str(good.based_effiency_production) + "\n"
-	production_label.text += "*Выпуск данной продукции: " + str(factory.good_production) + "ед."
-	#production_label.text += "*Железные дороги: +" + str((factory.province.get_bonus_of_production().production_of_factory - 1) * 100) + "%"
+	production_label.text += "*Производительность завода: x" + str(factory.enterprise_production_efficiency) + "\n"
+	production_label.text += "*Эффективность выпуска продукции: " + str(factory.good_production_efficiency) + "ед." + "\n"
+	production_label.text += "*Базовая эффективность выпуска продукции: " + str(good.factory_effiency_production) + "ед." + "\n"
 	
 	
 func exit():

@@ -8,6 +8,6 @@ class_name Technology
 @export var name_of_technology: String = ""
 var                cotegory           = ""
 
-@export var list_of_effects: Array = []
+@export var list_of_effects: Array[TechnologyEffect] = []
 
 var ready_for_researching: bool = false

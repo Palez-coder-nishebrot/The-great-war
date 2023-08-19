@@ -20,3 +20,5 @@ tile_container_np = NodePath("../TileMap")
 
 [node name="DataManager" type="Node" parent="."]
 script = ExtResource("5")
+
+[editable path="TileMap"]

@@ -1,809 +1,809 @@
-[gd_resource type="Resource" load_steps=20 format=2]
+[gd_resource type="Resource" script_class="SavedRegions" load_steps=20 format=3 uid="uid://4o5m88n1x6dd"]
 
-[ext_resource path="res://Objects/Provinces/SavedRegions.gd" type="Script" id=1]
-[ext_resource path="res://Resources/Good/grain.tres" type="Resource" id=2]
-[ext_resource path="res://Resources/Good/beasts.tres" type="Resource" id=3]
-[ext_resource path="res://Resources/Good/wood.tres" type="Resource" id=4]
-[ext_resource path="res://Resources/Good/iron.tres" type="Resource" id=5]
-[ext_resource path="res://Resources/Good/rubber.tres" type="Resource" id=6]
-[ext_resource path="res://Resources/Good/oil.tres" type="Resource" id=7]
-[ext_resource path="res://Resources/Good/coal.tres" type="Resource" id=8]
-[ext_resource path="res://Resources/Good/cotton.tres" type="Resource" id=9]
-[ext_resource path="res://Resources/Good/saltpeter.tres" type="Resource" id=10]
-[ext_resource path="res://Resources/Factories/TipesOfFactories/ClothesFactory.tres" type="Resource" id=11]
-[ext_resource path="res://Resources/Factories/TipesOfFactories/LumberPlant.tres" type="Resource" id=12]
-[ext_resource path="res://Resources/Factories/TipesOfFactories/FuelFactory.tres" type="Resource" id=13]
-[ext_resource path="res://Resources/Factories/TipesOfFactories/MechPartsFactory.tres" type="Resource" id=14]
-[ext_resource path="res://Resources/Factories/TipesOfFactories/SteelPlant.tres" type="Resource" id=15]
-[ext_resource path="res://Resources/Factories/TipesOfFactories/FurnitureFactory.tres" type="Resource" id=16]
-[ext_resource path="res://Resources/Factories/TipesOfFactories/Distillery.tres" type="Resource" id=17]
-[ext_resource path="res://Resources/Factories/TipesOfFactories/GlassFactory.tres" type="Resource" id=18]
-[ext_resource path="res://Resources/Factories/TipesOfFactories/TextileFactory.tres" type="Resource" id=19]
+[ext_resource type="Script" path="res://Objects/Provinces/SavedRegions.gd" id="1"]
+[ext_resource type="Resource" path="res://Resources/Good/grain.tres" id="2"]
+[ext_resource type="Resource" path="res://Resources/Good/beasts.tres" id="3"]
+[ext_resource type="Resource" path="res://Resources/Good/wood.tres" id="4"]
+[ext_resource type="Resource" path="res://Resources/Good/iron.tres" id="5"]
+[ext_resource type="Resource" path="res://Resources/Good/rubber.tres" id="6"]
+[ext_resource type="Resource" path="res://Resources/Good/oil.tres" id="7"]
+[ext_resource type="Resource" path="res://Resources/Good/coal.tres" id="8"]
+[ext_resource type="Resource" path="res://Resources/Good/cotton.tres" id="9"]
+[ext_resource type="Resource" path="res://Resources/Good/saltpeter.tres" id="10"]
+[ext_resource type="Resource" uid="uid://cunw6t0n3ider" path="res://Resources/Factories/TipesOfFactories/ClothesFactory.tres" id="11"]
+[ext_resource type="Resource" uid="uid://c3uy2oiblbxwb" path="res://Resources/Factories/TipesOfFactories/LumberPlant.tres" id="12"]
+[ext_resource type="Resource" uid="uid://sghp8v3d63g3" path="res://Resources/Factories/TipesOfFactories/FuelFactory.tres" id="13"]
+[ext_resource type="Resource" uid="uid://cde8mfjdld8wo" path="res://Resources/Factories/TipesOfFactories/MechPartsFactory.tres" id="14"]
+[ext_resource type="Resource" uid="uid://b1wqxe257cfu5" path="res://Resources/Factories/TipesOfFactories/SteelPlant.tres" id="15"]
+[ext_resource type="Resource" uid="uid://dce6gbr2eafs7" path="res://Resources/Factories/TipesOfFactories/FurnitureFactory.tres" id="16"]
+[ext_resource type="Resource" uid="uid://cbpwf7sg1hxn5" path="res://Resources/Factories/TipesOfFactories/Distillery.tres" id="17"]
+[ext_resource type="Resource" uid="uid://cddjqguykgja8" path="res://Resources/Factories/TipesOfFactories/GlassFactory.tres" id="18"]
+[ext_resource type="Resource" uid="uid://b1c0ctapnvwt3" path="res://Resources/Factories/TipesOfFactories/TextileFactory.tres" id="19"]
 
 [resource]
-script = ExtResource( 1 )
-regions = [ {
-"factories": [  ],
+script = ExtResource("1")
+regions = [{
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Броды",
 "railways": 0,
-"resources": [ ExtResource( 3 ), ExtResource( 4 ) ],
+"resources": [ExtResource("3"), ExtResource("4")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Кременец",
 "railways": 1,
-"resources": [ ExtResource( 3 ), ExtResource( 5 ) ],
+"resources": [ExtResource("3"), ExtResource("5")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 11 ) ],
+"factories": [ExtResource("11")],
 "factory_workers": 8,
 "name_of_province": "Люблин",
 "railways": 2,
-"resources": [ ExtResource( 4 ), ExtResource( 9 ) ],
+"resources": [ExtResource("4"), ExtResource("9")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Тарнополь",
 "railways": 0,
-"resources": [ ExtResource( 2 ), ExtResource( 5 ) ],
+"resources": [ExtResource("2"), ExtResource("5")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Красник",
 "railways": 0,
-"resources": [ ExtResource( 2 ), ExtResource( 6 ) ],
+"resources": [ExtResource("2"), ExtResource("6")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Станислав",
 "railways": 0,
-"resources": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"resources": [ExtResource("2"), ExtResource("3")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Белжеца",
 "railways": 0,
-"resources": [ ExtResource( 2 ), ExtResource( 8 ) ],
+"resources": [ExtResource("2"), ExtResource("8")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 13 ) ],
+"factories": [ExtResource("13")],
 "factory_workers": 8,
 "name_of_province": "Лодзь",
 "railways": 1,
-"resources": [ ExtResource( 7 ), ExtResource( 5 ) ],
+"resources": [ExtResource("7"), ExtResource("5")],
 "workers": 10
 }, {
-"factories": [ ExtResource( 12 ), ExtResource( 16 ) ],
+"factories": [ExtResource("12"), ExtResource("16")],
 "factory_workers": 16,
 "name_of_province": "Митава",
 "railways": 1,
-"resources": [ ExtResource( 5 ), ExtResource( 4 ) ],
+"resources": [ExtResource("5"), ExtResource("4")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 17 ) ],
+"factories": [ExtResource("17")],
 "factory_workers": 8,
 "name_of_province": "Черновцы",
 "railways": 1,
-"resources": [ ExtResource( 8 ), ExtResource( 3 ) ],
+"resources": [ExtResource("8"), ExtResource("3")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 16 ) ],
+"factories": [ExtResource("16")],
 "factory_workers": 8,
 "name_of_province": "Богородчаны",
 "railways": 1,
-"resources": [ ExtResource( 8 ), ExtResource( 4 ) ],
+"resources": [ExtResource("8"), ExtResource("4")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Днестр",
 "railways": 0,
-"resources": [ ExtResource( 5 ), ExtResource( 9 ) ],
+"resources": [ExtResource("5"), ExtResource("9")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Галич",
 "railways": 0,
-"resources": [ ExtResource( 2 ), ExtResource( 8 ) ],
+"resources": [ExtResource("2"), ExtResource("8")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Калуш",
 "railways": 0,
-"resources": [ ExtResource( 9 ), ExtResource( 10 ) ],
+"resources": [ExtResource("9"), ExtResource("10")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 17 ), ExtResource( 13 ) ],
+"factories": [ExtResource("17"), ExtResource("13")],
 "factory_workers": 16,
 "name_of_province": "Луцк",
 "railways": 0,
-"resources": [ ExtResource( 2 ), ExtResource( 7 ) ],
+"resources": [ExtResource("2"), ExtResource("7")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 12 ) ],
+"factories": [ExtResource("12")],
 "factory_workers": 8,
 "name_of_province": "Познань",
 "railways": 1,
-"resources": [ ExtResource( 4 ), ExtResource( 2 ) ],
+"resources": [ExtResource("4"), ExtResource("2")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 18 ) ],
+"factories": [ExtResource("18")],
 "factory_workers": 4,
 "name_of_province": "Ровно",
 "railways": 1,
-"resources": [ ExtResource( 8 ), ExtResource( 6 ) ],
+"resources": [ExtResource("8"), ExtResource("6")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 13 ) ],
+"factories": [ExtResource("13")],
 "factory_workers": 8,
 "name_of_province": "Коломыя",
 "railways": 1,
-"resources": [ ExtResource( 7 ), ExtResource( 2 ) ],
+"resources": [ExtResource("7"), ExtResource("2")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 17 ) ],
+"factories": [ExtResource("17")],
 "factory_workers": 8,
 "name_of_province": "Проскуров",
 "railways": 0,
-"resources": [ ExtResource( 8 ), ExtResource( 4 ) ],
+"resources": [ExtResource("8"), ExtResource("4")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Стрый",
 "railways": 0,
-"resources": [ ExtResource( 5 ), ExtResource( 4 ) ],
+"resources": [ExtResource("5"), ExtResource("4")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 19 ), ExtResource( 11 ) ],
+"factories": [ExtResource("19"), ExtResource("11")],
 "factory_workers": 0,
 "name_of_province": "Ковель",
 "railways": 2,
-"resources": [ ExtResource( 2 ), ExtResource( 9 ) ],
+"resources": [ExtResource("2"), ExtResource("9")],
 "workers": 28
 }, {
-"factories": [ ExtResource( 19 ), ExtResource( 11 ) ],
+"factories": [ExtResource("19"), ExtResource("11")],
 "factory_workers": 0,
 "name_of_province": "Волынский",
 "railways": 2,
-"resources": [ ExtResource( 2 ), ExtResource( 9 ) ],
+"resources": [ExtResource("2"), ExtResource("9")],
 "workers": 28
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Щепеткова",
 "railways": 0,
-"resources": [ ExtResource( 8 ), ExtResource( 6 ) ],
+"resources": [ExtResource("8"), ExtResource("6")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Львов",
 "railways": 0,
-"resources": [ ExtResource( 2 ), ExtResource( 8 ) ],
+"resources": [ExtResource("2"), ExtResource("8")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Болехов",
 "railways": 0,
-"resources": [ ExtResource( 5 ), ExtResource( 4 ) ],
+"resources": [ExtResource("5"), ExtResource("4")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Борка",
 "railways": 0,
-"resources": [ ExtResource( 2 ), ExtResource( 9 ) ],
+"resources": [ExtResource("2"), ExtResource("9")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Звижень",
 "railways": 0,
-"resources": [ ExtResource( 2 ), ExtResource( 9 ) ],
+"resources": [ExtResource("2"), ExtResource("9")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Гримайлов",
 "railways": 0,
-"resources": [ ExtResource( 5 ), ExtResource( 4 ) ],
+"resources": [ExtResource("5"), ExtResource("4")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 18 ) ],
+"factories": [ExtResource("18")],
 "factory_workers": 8,
 "name_of_province": "Хмельницкий",
 "railways": 1,
-"resources": [ ExtResource( 8 ), ExtResource( 4 ) ],
+"resources": [ExtResource("8"), ExtResource("4")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Ивано-Франковск",
 "railways": 0,
-"resources": [ ExtResource( 7 ), ExtResource( 9 ) ],
+"resources": [ExtResource("7"), ExtResource("9")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Ужгород",
 "railways": 0,
-"resources": [ ExtResource( 3 ), ExtResource( 5 ) ],
+"resources": [ExtResource("3"), ExtResource("5")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Белецкое",
 "railways": 0,
-"resources": [ ExtResource( 3 ), ExtResource( 4 ) ],
+"resources": [ExtResource("3"), ExtResource("4")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 17 ) ],
+"factories": [ExtResource("17")],
 "factory_workers": 8,
 "name_of_province": "Каменец-Подольск",
 "railways": 1,
-"resources": [ ExtResource( 2 ), ExtResource( 8 ) ],
+"resources": [ExtResource("2"), ExtResource("8")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 19 ), ExtResource( 11 ) ],
+"factories": [ExtResource("19"), ExtResource("11")],
 "factory_workers": 16,
 "name_of_province": "Дубно",
 "railways": 2,
-"resources": [ ExtResource( 2 ), ExtResource( 9 ) ],
+"resources": [ExtResource("2"), ExtResource("9")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 18 ), ExtResource( 17 ) ],
+"factories": [ExtResource("18"), ExtResource("17")],
 "factory_workers": 16,
 "name_of_province": "Иршики",
 "railways": 2,
-"resources": [ ExtResource( 2 ), ExtResource( 8 ) ],
+"resources": [ExtResource("2"), ExtResource("8")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Зборов",
 "railways": 1,
-"resources": [ ExtResource( 2 ), ExtResource( 5 ) ],
+"resources": [ExtResource("2"), ExtResource("5")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 18 ), ExtResource( 17 ) ],
+"factories": [ExtResource("18"), ExtResource("17")],
 "factory_workers": 16,
 "name_of_province": "Старокостантинов",
 "railways": 0,
-"resources": [ ExtResource( 2 ), ExtResource( 8 ) ],
+"resources": [ExtResource("2"), ExtResource("8")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Дрогобыч",
 "railways": 0,
-"resources": [ ExtResource( 2 ), ExtResource( 5 ) ],
+"resources": [ExtResource("2"), ExtResource("5")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Нетешин",
 "railways": 0,
-"resources": [ ExtResource( 3 ), ExtResource( 4 ) ],
+"resources": [ExtResource("3"), ExtResource("4")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 13 ) ],
+"factories": [ExtResource("13")],
 "factory_workers": 8,
 "name_of_province": "Мукачево",
 "railways": 0,
-"resources": [ ExtResource( 3 ), ExtResource( 7 ) ],
+"resources": [ExtResource("3"), ExtResource("7")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 18 ), ExtResource( 17 ) ],
+"factories": [ExtResource("18"), ExtResource("17")],
 "factory_workers": 0,
 "name_of_province": "Берегово",
 "railways": 2,
-"resources": [ ExtResource( 3 ), ExtResource( 8 ) ],
+"resources": [ExtResource("3"), ExtResource("8")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 18 ), ExtResource( 17 ) ],
+"factories": [ExtResource("18"), ExtResource("17")],
 "factory_workers": 16,
 "name_of_province": "Буковина",
 "railways": 2,
-"resources": [ ExtResource( 2 ), ExtResource( 5 ) ],
+"resources": [ExtResource("2"), ExtResource("5")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 19 ), ExtResource( 11 ) ],
+"factories": [ExtResource("19"), ExtResource("11")],
 "factory_workers": 16,
 "name_of_province": "Катовице",
 "railways": 2,
-"resources": [ ExtResource( 8 ), ExtResource( 9 ) ],
+"resources": [ExtResource("8"), ExtResource("9")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 15 ), ExtResource( 14 ) ],
+"factories": [ExtResource("15"), ExtResource("14")],
 "factory_workers": 16,
 "name_of_province": "Ченстохова",
 "railways": 3,
-"resources": [ ExtResource( 5 ), ExtResource( 4 ) ],
+"resources": [ExtResource("5"), ExtResource("4")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 19 ), ExtResource( 11 ) ],
+"factories": [ExtResource("19"), ExtResource("11")],
 "factory_workers": 16,
 "name_of_province": "Пшемысль",
 "railways": 1,
-"resources": [ ExtResource( 2 ), ExtResource( 9 ) ],
+"resources": [ExtResource("2"), ExtResource("9")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Севастополь",
 "railways": 0,
-"resources": [ ExtResource( 2 ), ExtResource( 4 ) ],
+"resources": [ExtResource("2"), ExtResource("4")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Закопане",
 "railways": 0,
-"resources": [ ExtResource( 2 ), ExtResource( 4 ) ],
+"resources": [ExtResource("2"), ExtResource("4")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Донецк",
 "railways": 0,
-"resources": [ ExtResource( 9 ), ExtResource( 8 ) ],
+"resources": [ExtResource("9"), ExtResource("8")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Сегед",
 "railways": 2,
-"resources": [ ExtResource( 7 ), ExtResource( 10 ) ],
+"resources": [ExtResource("7"), ExtResource("10")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Стецки",
 "railways": 0,
-"resources": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"resources": [ExtResource("2"), ExtResource("3")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Николаев",
 "railways": 0,
-"resources": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"resources": [ExtResource("2"), ExtResource("3")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 18 ), ExtResource( 17 ) ],
+"factories": [ExtResource("18"), ExtResource("17")],
 "factory_workers": 16,
 "name_of_province": "Винница",
 "railways": 3,
-"resources": [ ExtResource( 2 ), ExtResource( 8 ) ],
+"resources": [ExtResource("2"), ExtResource("8")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Симферополь",
 "railways": 3,
-"resources": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"resources": [ExtResource("2"), ExtResource("3")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Херсон",
 "railways": 3,
-"resources": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"resources": [ExtResource("2"), ExtResource("3")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 15 ) ],
+"factories": [ExtResource("15")],
 "factory_workers": 8,
 "name_of_province": "Полтава",
 "railways": 3,
-"resources": [ ExtResource( 2 ), ExtResource( 5 ) ],
+"resources": [ExtResource("2"), ExtResource("5")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Белая Церковь",
 "railways": 0,
-"resources": [ ExtResource( 3 ), ExtResource( 4 ) ],
+"resources": [ExtResource("3"), ExtResource("4")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 12 ), ExtResource( 16 ) ],
+"factories": [ExtResource("12"), ExtResource("16")],
 "factory_workers": 16,
 "name_of_province": "Пмлица",
 "railways": 3,
-"resources": [ ExtResource( 8 ), ExtResource( 4 ) ],
+"resources": [ExtResource("8"), ExtResource("4")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 18 ), ExtResource( 17 ) ],
+"factories": [ExtResource("18"), ExtResource("17")],
 "factory_workers": 16,
 "name_of_province": "Мелитополь",
 "railways": 0,
-"resources": [ ExtResource( 2 ), ExtResource( 10 ) ],
+"resources": [ExtResource("2"), ExtResource("10")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Грубешов",
 "railways": 0,
-"resources": [ ExtResource( 2 ), ExtResource( 5 ) ],
+"resources": [ExtResource("2"), ExtResource("5")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Павлоград",
 "railways": 0,
-"resources": [ ExtResource( 7 ), ExtResource( 9 ) ],
+"resources": [ExtResource("7"), ExtResource("9")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Вилькомир",
 "railways": 0,
-"resources": [ ExtResource( 8 ), ExtResource( 4 ) ],
+"resources": [ExtResource("8"), ExtResource("4")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 19 ), ExtResource( 11 ) ],
+"factories": [ExtResource("19"), ExtResource("11")],
 "factory_workers": 16,
 "name_of_province": "Лисичанск",
 "railways": 3,
-"resources": [ ExtResource( 4 ), ExtResource( 9 ) ],
+"resources": [ExtResource("4"), ExtResource("9")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 18 ), ExtResource( 17 ) ],
+"factories": [ExtResource("18"), ExtResource("17")],
 "factory_workers": 16,
 "name_of_province": "Бердичев",
 "railways": 3,
-"resources": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"resources": [ExtResource("2"), ExtResource("3")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Тамань",
 "railways": 0,
-"resources": [ ExtResource( 2 ), ExtResource( 5 ) ],
+"resources": [ExtResource("2"), ExtResource("5")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 18 ) ],
+"factories": [ExtResource("18")],
 "factory_workers": 8,
 "name_of_province": "Горлица",
 "railways": 2,
-"resources": [ ExtResource( 3 ), ExtResource( 8 ) ],
+"resources": [ExtResource("3"), ExtResource("8")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 15 ), ExtResource( 14 ) ],
+"factories": [ExtResource("15"), ExtResource("14")],
 "factory_workers": 12,
 "name_of_province": "Константиновка",
 "railways": 0,
-"resources": [ ExtResource( 3 ), ExtResource( 5 ) ],
+"resources": [ExtResource("3"), ExtResource("5")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Измаил",
 "railways": 0,
-"resources": [ ExtResource( 4 ), ExtResource( 10 ) ],
+"resources": [ExtResource("4"), ExtResource("10")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Новомосковск",
 "railways": 0,
-"resources": [ ExtResource( 7 ), ExtResource( 10 ) ],
+"resources": [ExtResource("7"), ExtResource("10")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Яремче",
 "railways": 0,
-"resources": [ ExtResource( 2 ), ExtResource( 9 ) ],
+"resources": [ExtResource("2"), ExtResource("9")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Коростень",
 "railways": 0,
-"resources": [ ExtResource( 2 ), ExtResource( 9 ) ],
+"resources": [ExtResource("2"), ExtResource("9")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Должанск",
 "railways": 0,
-"resources": [ ExtResource( 8 ), ExtResource( 9 ) ],
+"resources": [ExtResource("8"), ExtResource("9")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 18 ) ],
+"factories": [ExtResource("18")],
 "factory_workers": 8,
 "name_of_province": "Покровск",
 "railways": 1,
-"resources": [ ExtResource( 3 ), ExtResource( 8 ) ],
+"resources": [ExtResource("3"), ExtResource("8")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 18 ) ],
+"factories": [ExtResource("18")],
 "factory_workers": 8,
 "name_of_province": "Изюм",
 "railways": 1,
-"resources": [ ExtResource( 3 ), ExtResource( 8 ) ],
+"resources": [ExtResource("3"), ExtResource("8")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 18 ) ],
+"factories": [ExtResource("18")],
 "factory_workers": 8,
 "name_of_province": "Черкасс",
 "railways": 0,
-"resources": [ ExtResource( 8 ), ExtResource( 4 ) ],
+"resources": [ExtResource("8"), ExtResource("4")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Житомир",
 "railways": 0,
-"resources": [ ExtResource( 8 ), ExtResource( 2 ) ],
+"resources": [ExtResource("8"), ExtResource("2")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 15 ) ],
+"factories": [ExtResource("15")],
 "factory_workers": 8,
 "name_of_province": "Сумы",
 "railways": 0,
-"resources": [ ExtResource( 5 ), ExtResource( 4 ) ],
+"resources": [ExtResource("5"), ExtResource("4")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Горловка",
 "railways": 0,
-"resources": [ ExtResource( 2 ), ExtResource( 7 ) ],
+"resources": [ExtResource("2"), ExtResource("7")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 17 ) ],
+"factories": [ExtResource("17")],
 "factory_workers": 8,
 "name_of_province": "Макеевка",
 "railways": 2,
-"resources": [ ExtResource( 2 ), ExtResource( 8 ) ],
+"resources": [ExtResource("2"), ExtResource("8")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 17 ) ],
+"factories": [ExtResource("17")],
 "factory_workers": 8,
 "name_of_province": "Желув",
 "railways": 2,
-"resources": [ ExtResource( 2 ), ExtResource( 9 ) ],
+"resources": [ExtResource("2"), ExtResource("9")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Тулов",
 "railways": 0,
-"resources": [ ExtResource( 4 ), ExtResource( 10 ) ],
+"resources": [ExtResource("4"), ExtResource("10")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 17 ) ],
+"factories": [ExtResource("17")],
 "factory_workers": 8,
 "name_of_province": "Вручий",
 "railways": 2,
-"resources": [ ExtResource( 2 ), ExtResource( 8 ) ],
+"resources": [ExtResource("2"), ExtResource("8")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Трускавец",
 "railways": 0,
-"resources": [ ExtResource( 3 ), ExtResource( 4 ) ],
+"resources": [ExtResource("3"), ExtResource("4")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Любич",
 "railways": 0,
-"resources": [ ExtResource( 2 ), ExtResource( 4 ) ],
+"resources": [ExtResource("2"), ExtResource("4")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Подолье",
 "railways": 0,
-"resources": [ ExtResource( 2 ), ExtResource( 4 ) ],
+"resources": [ExtResource("2"), ExtResource("4")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Теребовль",
 "railways": 0,
-"resources": [ ExtResource( 3 ), ExtResource( 2 ) ],
+"resources": [ExtResource("3"), ExtResource("2")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Пинск",
 "railways": 0,
-"resources": [ ExtResource( 2 ) ],
+"resources": [ExtResource("2")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Гродно",
 "railways": 0,
-"resources": [ ExtResource( 3 ), ExtResource( 8 ) ],
+"resources": [ExtResource("3"), ExtResource("8")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 15 ) ],
+"factories": [ExtResource("15")],
 "factory_workers": 8,
 "name_of_province": "Витебск",
 "railways": 0,
-"resources": [ ExtResource( 3 ), ExtResource( 8 ) ],
+"resources": [ExtResource("3"), ExtResource("8")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Дукшты",
 "railways": 0,
-"resources": [ ExtResource( 2 ), ExtResource( 4 ) ],
+"resources": [ExtResource("2"), ExtResource("4")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Надворная",
 "railways": 0,
-"resources": [ ExtResource( 3 ), ExtResource( 8 ) ],
+"resources": [ExtResource("3"), ExtResource("8")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 14 ) ],
+"factories": [ExtResource("14")],
 "factory_workers": 8,
 "name_of_province": "Нови-Сад",
 "railways": 3,
-"resources": [ ExtResource( 2 ), ExtResource( 5 ) ],
+"resources": [ExtResource("2"), ExtResource("5")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Приштина",
 "railways": 0,
-"resources": [ ExtResource( 2 ), ExtResource( 10 ) ],
+"resources": [ExtResource("2"), ExtResource("10")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Рутивль",
 "railways": 0,
-"resources": [ ExtResource( 3 ), ExtResource( 4 ) ],
+"resources": [ExtResource("3"), ExtResource("4")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Заболотов",
 "railways": 1,
-"resources": [ ExtResource( 7 ), ExtResource( 4 ) ],
+"resources": [ExtResource("7"), ExtResource("4")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 19 ), ExtResource( 11 ) ],
+"factories": [ExtResource("19"), ExtResource("11")],
 "factory_workers": 16,
 "name_of_province": "Тлумач",
 "railways": 1,
-"resources": [ ExtResource( 9 ), ExtResource( 6 ) ],
+"resources": [ExtResource("9"), ExtResource("6")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 13 ) ],
+"factories": [ExtResource("13")],
 "factory_workers": 8,
 "name_of_province": "Пядичи",
 "railways": 3,
-"resources": [ ExtResource( 7 ), ExtResource( 10 ) ],
+"resources": [ExtResource("7"), ExtResource("10")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 15 ), ExtResource( 14 ) ],
+"factories": [ExtResource("15"), ExtResource("14")],
 "factory_workers": 16,
 "name_of_province": "Перемышль",
 "railways": 1,
-"resources": [ ExtResource( 5 ), ExtResource( 4 ) ],
+"resources": [ExtResource("5"), ExtResource("4")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 18 ), ExtResource( 17 ) ],
+"factories": [ExtResource("18"), ExtResource("17")],
 "factory_workers": 16,
 "name_of_province": "Ахалкалаки",
 "railways": 0,
-"resources": [ ExtResource( 2 ), ExtResource( 8 ) ],
+"resources": [ExtResource("2"), ExtResource("8")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 18 ) ],
+"factories": [ExtResource("18")],
 "factory_workers": 8,
 "name_of_province": "Батые",
 "railways": 0,
-"resources": [ ExtResource( 8 ), ExtResource( 4 ) ],
+"resources": [ExtResource("8"), ExtResource("4")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 19 ), ExtResource( 11 ) ],
+"factories": [ExtResource("19"), ExtResource("11")],
 "factory_workers": 16,
 "name_of_province": "Брзежаны",
 "railways": 3,
-"resources": [ ExtResource( 3 ), ExtResource( 9 ) ],
+"resources": [ExtResource("3"), ExtResource("9")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Вильянди",
 "railways": 0,
-"resources": [ ExtResource( 2 ), ExtResource( 5 ) ],
+"resources": [ExtResource("2"), ExtResource("5")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Курессааре",
 "railways": 0,
-"resources": [ ExtResource( 2 ), ExtResource( 8 ) ],
+"resources": [ExtResource("2"), ExtResource("8")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Пярну",
 "railways": 0,
-"resources": [ ExtResource( 3 ), ExtResource( 2 ) ],
+"resources": [ExtResource("3"), ExtResource("2")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Раквере",
 "railways": 0,
-"resources": [ ExtResource( 8 ), ExtResource( 4 ) ],
+"resources": [ExtResource("8"), ExtResource("4")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Силламяэ",
 "railways": 0,
-"resources": [ ExtResource( 9 ), ExtResource( 7 ) ],
+"resources": [ExtResource("9"), ExtResource("7")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Тарту",
 "railways": 0,
-"resources": [ ExtResource( 3 ), ExtResource( 4 ) ],
+"resources": [ExtResource("3"), ExtResource("4")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Хаапсалу",
 "railways": 0,
-"resources": [ ExtResource( 9 ), ExtResource( 2 ) ],
+"resources": [ExtResource("9"), ExtResource("2")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Алитус",
 "railways": 0,
-"resources": [ ExtResource( 3 ), ExtResource( 4 ) ],
+"resources": [ExtResource("3"), ExtResource("4")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Каунас",
 "railways": 0,
-"resources": [ ExtResource( 7 ), ExtResource( 5 ) ],
+"resources": [ExtResource("7"), ExtResource("5")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Клайпеда",
 "railways": 0,
-"resources": [ ExtResource( 2 ), ExtResource( 8 ) ],
+"resources": [ExtResource("2"), ExtResource("8")],
 "workers": 12
 }, {
-"factories": [  ],
+"factories": [],
 "factory_workers": 0,
 "name_of_province": "Паневежис",
 "railways": 0,
-"resources": [ ExtResource( 9 ), ExtResource( 2 ) ],
+"resources": [ExtResource("9"), ExtResource("2")],
 "workers": 12
 }, {
-"factories": [ ExtResource( 17 ) ],
+"factories": [ExtResource("17")],
 "factory_workers": 4,
 "name_of_province": "Батуми",
 "railways": 1,
-"resources": [ ExtResource( 2 ), ExtResource( 6 ) ],
+"resources": [ExtResource("2"), ExtResource("6")],
 "workers": 12
-} ]
+}]

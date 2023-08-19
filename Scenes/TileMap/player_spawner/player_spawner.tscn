@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://crgmahdx4b4vs"]
+
+[ext_resource type="Script" path="res://Scenes/TileMap/player_spawner/player_spawner.gd" id="1_68a8t"]
+
+[node name="player_spawner" type="Node"]
+script = ExtResource("1_68a8t")
