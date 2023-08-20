@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="Ideology" load_steps=8 format=3 uid="uid://du5n7mpwi5le8"]
+[gd_resource type="Resource" script_class="Ideology" load_steps=9 format=3 uid="uid://du5n7mpwi5le8"]
 
 [ext_resource type="Script" path="res://Resources/Parties/Ideology.gd" id="1"]
 [ext_resource type="Resource" uid="uid://diunltbmleadq" path="res://Resources/Parties/Policy/trade_policy/protectionism.tres" id="2"]
 [ext_resource type="Resource" path="res://Resources/Parties/Policy/goverment_form/fascist_dictatorship.tres" id="3"]
 [ext_resource type="Resource" path="res://Resources/Parties/Policy/economy_policy/dirigisme.tres" id="4"]
+[ext_resource type="Texture2D" uid="uid://rfcjkpntqpl5" path="res://Graphics/Sprites/GUI/Icons of windows/ideology_icons/fascists_icon.png" id="4_4v4we"]
 [ext_resource type="Resource" path="res://Resources/Parties/Policy/military_policy/expansionism.tres" id="5"]
 [ext_resource type="Resource" uid="uid://bk5nufoc0oh6o" path="res://Resources/Parties/Policy/national_issue/residence_permit.tres" id="5_vlleh"]
 [ext_resource type="Resource" uid="uid://c5n5ywdho8jcw" path="res://Resources/Parties/Policy/goverment_form/monarchy.tres" id="6"]
@@ -22,3 +23,4 @@ supporting_pol_reforms = 0
 rollback_soc_reforms = 1
 rollback_pol_reforms = 1
 government_form = ExtResource("3")
+ideology_icon = ExtResource("4_4v4we")

@@ -19,4 +19,4 @@ class_name Ideology
 @export var rollback_pol_reforms: int = 0
 
 @export var government_form: Resource
-
+@export var ideology_icon:   Texture

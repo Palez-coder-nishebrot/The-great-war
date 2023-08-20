@@ -78,4 +78,4 @@ func get_ruling_party():
 
 
 func get_government_form():
-	return political_manager.form_of_government.policy_name
+	return political_manager.form_of_government#.policy_name

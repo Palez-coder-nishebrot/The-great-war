@@ -50,7 +50,7 @@ func update_information_of_country():
 	var player =  Players.get_player_client()
 	var ruling_party = player.get_ruling_party()
 	
-	form_of_goverment_label.text = "Форма правления: " + tr(player.get_government_form())
+	form_of_goverment_label.text = "Форма правления: " + tr(player.get_government_form().policy_name)
 	ruling_party_label.text = ruling_party.party_name
 	
 	foreign_policy_label.text = "Военная политика: "       + ruling_party.get_military_policy()

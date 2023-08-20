@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="Ideology" load_steps=7 format=3 uid="uid://gkom1yh6vlr7"]
+[gd_resource type="Resource" script_class="Ideology" load_steps=8 format=3 uid="uid://gkom1yh6vlr7"]
 
 [ext_resource type="Script" path="res://Resources/Parties/Ideology.gd" id="1"]
 [ext_resource type="Resource" uid="uid://c5n5ywdho8jcw" path="res://Resources/Parties/Policy/goverment_form/monarchy.tres" id="2"]
 [ext_resource type="Resource" path="res://Resources/Parties/Policy/military_policy/militarism.tres" id="3"]
+[ext_resource type="Texture2D" uid="uid://djoydx2i4baex" path="res://Graphics/Sprites/GUI/Icons of windows/ideology_icons/conservatives_icon.png" id="3_0pnlu"]
 [ext_resource type="Resource" uid="uid://bgj0h81in03wi" path="res://Resources/Parties/Policy/trade_policy/free_trade.tres" id="4"]
 [ext_resource type="Resource" uid="uid://de7gtg3eghryr" path="res://Resources/Parties/Policy/national_issue/limited_citizenship.tres" id="4_i6nwd"]
 [ext_resource type="Resource" path="res://Resources/Parties/Policy/economy_policy/free_economy.tres" id="5"]
@@ -21,3 +22,4 @@ supporting_pol_reforms = 0
 rollback_soc_reforms = 0
 rollback_pol_reforms = 0
 government_form = ExtResource("2")
+ideology_icon = ExtResource("3_0pnlu")

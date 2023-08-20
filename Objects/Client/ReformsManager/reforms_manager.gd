@@ -19,42 +19,24 @@ const paths: Dictionary = {
 #	"unions":            "res://Resources/Reforms/PoliticalReforms/Unions.tres",
 }
 
-var max_points_of_soc_reforms: Dictionary = {
-	"liberals":     80,
-	"socialists":   50,
-	"libertarians": 5000,
-	"communists":   50, 
-	"fascists":     50, 
-	"conservators": 80,
-}
-
-var max_points_of_pol_reforms: Dictionary = {
-	"liberals":     50,
-	"socialists":   80,
-	"libertarians": 50,
-	"communists":   5000, 
-	"fascists":     5000, 
-	"conservators": 80,
-}
-
 var points_social_reforms:    float = 0.0
 var points_political_reforms: float = 0.0
 
-var social_reform:    bool = false
+var avaliable:    bool = false
 var political_reform: bool = false
 var reforms:          bool = false
 
-var school_system:        Reform = load("res://Resources/reforms/social_reforms/school_system.tres")
-var pensions:             Reform
-var min_salary:           Reform
-var max_working_day:      Reform
-var unemployment_benefit: Reform
-var healthcare:           Reform
+var school_system:        ReformCotegory = ReformCotegory.new(load("res://Resources/reforms/social_reforms/school_system.tres"))
+var pensions:             ReformCotegory = ReformCotegory.new(load("res://Resources/reforms/social_reforms/pensions.tres"))
+var min_wage:             ReformCotegory = ReformCotegory.new(load("res://Resources/reforms/social_reforms/min_wage.tres"))
+var working_hours:        ReformCotegory = ReformCotegory.new(load("res://Resources/reforms/social_reforms/working_hours.tres"))
+var unemployment_benefit: ReformCotegory = ReformCotegory.new(load("res://Resources/reforms/social_reforms/unemployment_benefit.tres"))
+var healthcare:           ReformCotegory = ReformCotegory.new(load("res://Resources/reforms/social_reforms/healthcare.tres"))
 
-var mass_media:           Reform
-var political_parties:    Reform
-var public_meetings:      Reform
-var unions:               Reform
+var mass_media:           ReformCotegory
+var political_parties:    ReformCotegory
+var public_meetings:      ReformCotegory
+var unions:               ReformCotegory
 
 var client
 

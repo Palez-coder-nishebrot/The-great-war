@@ -125,7 +125,9 @@ func check_literacy_for_pluralism():
 
 
 func add_soc_reform_desire(number):
-	soc_reform_desire += number
+	if soc_reform_desire + number > 0:
+		soc_reform_desire += number
+	else: soc_reform_desire = 0.0
 
 
 func add_pol_reform_desire(number):

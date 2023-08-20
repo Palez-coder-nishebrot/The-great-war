@@ -89,7 +89,7 @@ func buy_raw():
 		var purchase_price = 0
 		#economy_manager.demand_supply_goods[good][0] += quantity_for_buy
 		
-		if not is_equal_approx(quantity, required_quantity):
+		if not is_zero_approx(quantity_for_buy) and quantity_for_buy > 0.0:
 			if market_good_quantity > quantity_for_buy or is_equal_approx(market_good_quantity, quantity_for_buy):
 				purchase_price = Functions.buy_good_on_local_market(self, raw_good, quantity_for_buy, economy_manager)
 				completed_plan += 1

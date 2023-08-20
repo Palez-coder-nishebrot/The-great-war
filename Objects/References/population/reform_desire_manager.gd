@@ -35,7 +35,7 @@ func school_system(pluralism: float, literacy: float):
 		value += 0.2
 	elif 8.0 > pluralism and pluralism > 6.0 and literacy < 70:
 		value += 0.3
-	elif literacy < 80:# 8-10
+	elif  10.1 > pluralism and pluralism > 8.0 and literacy < 80:# 8-10
 		value += 0.4
 	return value
 
@@ -45,9 +45,11 @@ func social_payments(unemployment_percent: float, welfare: int):
 	if 0.2 > unemployment_percent and unemployment_percent > 0.0:
 		value += 0.0
 	elif 0.5 > unemployment_percent and unemployment_percent > 0.2 and welfare < 3:
-		value += 2.0
+		value += 0.05
 	elif 1.0 > unemployment_percent and unemployment_percent > 0.5:
-		value += 3.0
+		value += 0.1
+	elif unemployment_percent == 1.0:
+		value += 0.11
 	return value
 	
 

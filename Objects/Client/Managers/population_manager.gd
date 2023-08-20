@@ -29,13 +29,12 @@ func _init(client):
 	
 
 func execute_thread():
-	_semaphore.post()
-	#thread_debugger()
+	#_semaphore.post()
+	thread_debugger()
 
 
-#func thread_debugger():
-#	update_aggressiveness()
-#	update_internal_migration()
+func thread_debugger():
+	loop_executor()
 
 
 func thread_executor():
@@ -45,35 +44,29 @@ func thread_executor():
 		if _exit == true:
 			break
 		
-		var government_form      = government_form_getter.call()
-		var ruling_party         = ruling_party_getter.call()
+		loop_executor()
+
+
+func loop_executor():
+	var government_form      = government_form_getter.call()
+	var ruling_party         = ruling_party_getter.call()
 		
-		for unit in population_units_getter.call():
-			if unit.quantity > 0:
-				var unemployment_percent = unit.unemployed_quantity / unit.quantity
-				var pluralism            = unit.pluralism
-				var literacy             = unit.literacy
-				var welfare              = unit.welfare
-				var pop_type             = unit.population_type
-				
-				unit.update_aggressiveness(ruling_party, government_form)
-				unit.update_literacy()
-				unit.reform_desire_manager.update_soc_reform_desire(unemployment_percent,
-					pluralism, literacy, welfare, pop_type)
+	for unit in population_units_getter.call():
+		if unit.quantity > 0:
+			update_pop_unit_chars(unit, government_form, ruling_party)
 
 
-func update_internal_migration(unit):
-	unit.internal_migration_chance = 0
-	var chance = unit.get_internal_migration_chance() * 10
-	var value = Functions.rng(0, 100)
-
-	if chance > value:
-		var pop_quantity = unit.get_pop_units_for_migration()
-		var new_unit = pop_unit_for_migration_getter.call(unit.income, unit.population_type)
-		if new_unit != false:
-			unit.migrate_in_region(new_unit, pop_quantity)
-		else:
-			print("Go abroad!")
+func update_pop_unit_chars(unit, government_form, ruling_party):
+	var unemployment_percent = snappedf(unit.unemployed_quantity / unit.quantity, 0.01)
+	var pluralism            = unit.pluralism
+	var literacy             = unit.literacy
+	var welfare              = unit.welfare
+	var pop_type             = unit.population_type
+	
+	unit.update_aggressiveness(ruling_party, government_form)
+	unit.update_literacy()
+	unit.reform_desire_manager.update_soc_reform_desire(unemployment_percent,
+		pluralism, literacy, welfare, pop_type)
 
 
 func _exit_tree():

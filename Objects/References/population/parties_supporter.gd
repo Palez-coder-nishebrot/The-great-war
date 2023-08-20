@@ -15,7 +15,6 @@ var parties_supports: Dictionary = {
 
 
 func add_support(ideology, num):
-	ideology = get_ide_name(ideology)
 	var num_1 = num / parties_supports.size()
 	parties_supports[ideology] += num
 	
@@ -40,7 +39,7 @@ func conservators_is_majority():
 
 
 func majority_agree_with_ruling_party(ruling_party):
-	if get_ide_name(ruling_party.ideology) == get_majority():
+	if ruling_party.ideology == get_majority():
 		return true
 	return false
 
@@ -50,6 +49,3 @@ func government_form_is_republic(government_form):
 		return true
 	return false
 
-
-func get_ide_name(ide):
-	return ide.ideology

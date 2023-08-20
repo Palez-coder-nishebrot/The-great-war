@@ -8,6 +8,7 @@ extends HBoxContainer
 @onready var welfare_label:           Label = $welfare
 @onready var money_label:             Label = $money
 @onready var aggressiveness_label:    Label = $aggressiveness
+@onready var pluralism:               Label = $pluralism
 @onready var pol_reform_label:        Label = $pol_reform_desire
 @onready var soc_reform_label:        Label = $soc_reform_desire
 
@@ -33,5 +34,6 @@ func update(population_units_list):
 		welfare_label.text    = str(pop_unit.welfare)
 		money_label.text      = str(snapped(pop_unit.money, 0.1))
 		aggressiveness_label.text      = str(snapped(pop_unit.aggressiveness, 0.1))
+		pluralism.text        = str(pop_unit.pluralism)
 		pol_reform_label.text = str(pop_unit.pol_reform_desire)
 		soc_reform_label.text = str(pop_unit.soc_reform_desire)
