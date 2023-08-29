@@ -46,6 +46,12 @@ func new_day():
 		month = 1
 
 
+func is_first_day_in_week():
+	if fposmod(day, 7) == 0:
+		return true
+	return false
+
+
 func get_data():
 	return [
 		day,

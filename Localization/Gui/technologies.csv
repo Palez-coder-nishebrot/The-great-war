@@ -1,63 +1,63 @@
 ,en
-power_generation,Выработка электроэнергии
-diesel_engines,Дизельные двигатели
-synthetic_polymers,Синтетические полимеры
-relativity_theory,Теория относительности
-quantum_theory,Квантовая теория
+physics_and_energy_1,Электричество
+physics_and_energy_2,Выработка электроэнергии
+physics_and_energy_3,Дизельные двигатели
+physics_and_energy_4,Синтетические полимеры
+physics_and_energy_5,Квантовая теория
 ,
-partial_automation,Частичная автоматизация
-personnel_management,Управление персоналом
-assembly_lines,Сборочные конвейеры
-shift_work,Посменная работа
-labour_economics,Экономика труда
+factory_production_1,Частичная автоматизация
+factory_production_2,Управление персоналом
+factory_production_3,Сборочные конвейеры
+factory_production_4,Посменная работа
+factory_production_5,Экономика труда
 ,
-converting_furnaces,Конвертерные печи
-electrometallurgy,Электрометаллургия
-modern_steel_cleaning,Передовая очистка стали
-electric_arc_furnaces,Дуговые электропечи
-modern_steelmaking,Передовая выплавка стали
+metallurgy_1,Конвертерные печи
+metallurgy_2,Электрометаллургия
+metallurgy_3,Передовая очистка стали
+metallurgy_4,Дуговые электропечи
+metallurgy_5,Передовая выплавка стали
 ,
-railways_one,
-national_railways_system,Национальная ЖД система
-railway_lines,ЖД магистрали
-early_autobahns,Ранние автобаны
-modern_autobahns,Современные автобаны
+infrastructure_1,
+infrastructure_2,Национальная ЖД система
+infrastructure_3,ЖД магистрали
+infrastructure_4,Ранние автобаны
+infrastructure_5,Современные автобаны
 ,
-insurance_firms,Страховые фирмы
-state_intervention,Государственное вмешательство
-mutual_funds,Взаимные фонды
-mass_advertising,Массовая реклама
-pump_priming_approach,Бюджетное накачивание
+economic_structures_1,Страховые фирмы
+economic_structures_2,Государственное вмешательство
+economic_structures_3,Взаимные фонды
+economic_structures_4,Массовая реклама
+economic_structures_5,Бюджетное накачивание
 ,
-manoeuvre_doctrine,Доктрина маневренной войны
-elastic_defence,Эластичная оборона
-infiltration,Проникновение в тыл противника
-mobile_units_doctrine,Доктрина мобильных соединений
-modern_military_tactics,Современная военная тактика
+army_managerement_1,Доктрина маневренной войны
+army_managerement_2,Эластичная оборона
+army_managerement_3,Проникновение в тыл противника
+army_managerement_4,Доктрина мобильных соединений
+army_managerement_5,Современная военная тактика
 ,
-heavy_artillery,Тяжелая артиллерия
-air_fleet,Воздушный флот
-experimental_tanks,Экспериментальные танки
-battalion_artillery,Батальонная артиллерия
-modern_heavy_weapon,Современное тяжелое вооружение
+heavy_weapon_1,Тяжелая артиллерия
+heavy_weapon_2,Воздушный флот
+heavy_weapon_3,Экспериментальные танки
+heavy_weapon_4,Батальонная артиллерия
+heavy_weapon_5,Современное тяжелое вооружение
 ,
-store_rifles,Магазинные винтовки
-world_war_weapon,Вооружение Первой мировой
-interwar_infantry,Межвоенная пехота
-interwar_cavalry,Межвоенная кавалерия
-modern_small_arms,Современное стрелковое оружие
+light_weapon_1,Магазинные винтовки
+light_weapon_2,Вооружение Первой мировой
+light_weapon_3,Межвоенная пехота
+light_weapon_4,Межвоенная кавалерия
+light_weapon_5,Современное стрелковое оружие
 ,
-steel_ships,Стальные корабли
-heavy_steel_ships,Тяжелые стальные корабли
-diesel_ships,Дизельные корабли
-modern_steel_ships,Современные стальные корабли
-modern_shipbuilding,Современное кораблестроение
+ship_design_1,Стальные корабли
+ship_design_2,Тяжелые стальные корабли
+ship_design_3,Дизельные корабли
+ship_design_4,Современные стальные корабли
+ship_design_5,Современное кораблестроение
 ,
-modern_naval_control,Современный военно-морской контроль
-all_out_battle_doctrine,Доктрина генерального сражения
-ship_interaction,Взаимодействие кораблей в море
-modern_sailors_training,Современное обучение моряков
-firepower_doctrine,Доктрина огневой мощи
+fleet_management_1,Современный военно-морской контроль
+fleet_management_2,Доктрина генерального сражения
+fleet_management_3,Взаимодействие кораблей в море
+fleet_management_4,Современное обучение моряков
+fleet_management_5,Доктрина огневой мощи
 ,
 airplanes,Самолеты
 artillery,Артиллерия

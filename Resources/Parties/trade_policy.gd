@@ -1,5 +1,9 @@
 extends PartyIssue
 
 
-@export var avaliable_tariffs: Array[int] # (Array, int)
-@export var investing: bool
+@export var tariffs_efficiency: float = 1.0
+@export var investing:          bool
+
+
+func set_values(economy_manager):
+	economy_manager.tariffs_efficiency = tariffs_efficiency

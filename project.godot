@@ -127,7 +127,7 @@ ui_esc={
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://Localization/Gui/enterprise.en.translation", "res://Localization/Gui/reforms.en.translation", "res://Localization/Gui/technologies.en.translation", "res://Localization/Gui/text.en.translation", "res://Localization/Gui/parties.en.translation")
+locale/translations=PackedStringArray("res://Localization/Gui/enterprise.en.translation", "res://Localization/Gui/technologies.en.translation", "res://Localization/Gui/text.en.translation", "res://Localization/Gui/parties.en.translation", "res://Localization/Gui/reforms.en.translation", "res://Localization/Gui/values.en.translation")
 
 [locale]
 

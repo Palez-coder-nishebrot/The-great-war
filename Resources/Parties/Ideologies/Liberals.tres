@@ -6,8 +6,8 @@
 [ext_resource type="Resource" path="res://Resources/Parties/Policy/economy_policy/free_economy.tres" id="4"]
 [ext_resource type="Texture2D" uid="uid://xbhra16x051v" path="res://Graphics/Sprites/GUI/Icons of windows/ideology_icons/liberals_icon.png" id="4_qwqfa"]
 [ext_resource type="Resource" path="res://Resources/Parties/Policy/goverment_form/republic.tres" id="5"]
-[ext_resource type="Resource" uid="uid://dlch2seyv6nu" path="res://Resources/Parties/Policy/national_issue/full_citizenship.tres" id="5_5hydw"]
 [ext_resource type="Resource" uid="uid://c5n5ywdho8jcw" path="res://Resources/Parties/Policy/goverment_form/monarchy.tres" id="6"]
+[ext_resource type="Resource" uid="uid://dlch2seyv6nu" path="res://Resources/Parties/Policy/migration_policy/full_citizenship.tres" id="6_866qu"]
 
 [resource]
 script = ExtResource("1")
@@ -15,7 +15,7 @@ ideology = "liberals"
 economic_policy = ExtResource("4")
 trade_policy = ExtResource("3")
 military_policy = ExtResource("2")
-national_issue = ExtResource("5_5hydw")
+national_issue = ExtResource("6_866qu")
 names_of_parties = ["lib_party_name_1"]
 available_for_setting_ruling_party = [ExtResource("6")]
 supporting_soc_reforms = 0

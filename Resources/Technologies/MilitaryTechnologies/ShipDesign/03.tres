@@ -1,10 +1,10 @@
-[gd_resource type="Resource" load_steps=2 format=2]
+[gd_resource type="Resource" script_class="Technology" load_steps=2 format=3 uid="uid://b46i8qnn3vpu2"]
 
-[ext_resource path="res://Resources/Technologies/Technology.gd" type="Script" id=1]
+[ext_resource type="Script" path="res://Resources/Technologies/Technology.gd" id="1"]
 
 [resource]
-script = ExtResource( 1 )
+script = ExtResource("1")
 cost = 1200
 activation_year = 1919
-name_of_technology = "diesel_ships"
-list_of_effects = [  ]
+name_of_technology = "ship_design_3"
+list_of_effects = Array[Resource("res://Resources/Technologies/TechnologyEffect.gd")]([])

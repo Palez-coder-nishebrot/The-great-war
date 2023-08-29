@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtrljq38ue4ja"]
+
+[ext_resource type="Script" path="res://Objects/Player/population_window/population_window.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://bul6btqnogigu" path="res://Objects/Player/population_window/pop_unit_panel/pop_unit_panel.tscn" id="2_o5dbu"]
+
+[node name="population_window" type="Panel"]
+texture_filter = 1
+offset_right = 1386.0
+offset_bottom = 891.0
+script = ExtResource("2")
+
+[node name="pop_unit_panel" parent="." instance=ExtResource("2_o5dbu")]
+layout_mode = 2
+offset_left = 16.0
+offset_top = -209.0
+offset_right = 1386.0
+offset_bottom = -171.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 50

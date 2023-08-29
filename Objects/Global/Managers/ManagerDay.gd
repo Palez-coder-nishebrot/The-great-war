@@ -14,6 +14,7 @@ signal produce_goods
 signal buy_raw
 signal update_prices # EconomyManager
 signal set_factories_subsidies
+signal set_education_expenses
 
 signal clear_markets
 signal clear_accounting 
@@ -25,6 +26,7 @@ func update_information_in_GUI():
 	player.information.update_info()
 	player.window_markets.update_information()
 	
+	player.window_reform.update_information()
 	player.window_production.update_information()
 	player.window_population.update_information()
 	player.window_parties.update_information()
@@ -41,10 +43,10 @@ func update_economy():
 	emit_signal("sort_factories_list")
 	emit_signal("buy_raw")
 	emit_signal("set_factories_subsidies")
+	emit_signal("set_education_expenses")
 	emit_signal("add_money_in_investment_pool")#Дает прибавку к ЗП
 	SceneStorage.population_manager.set_population_incomes()
 	SceneStorage.population_manager.meet_needs()#Купить товары для населения
-	emit_signal("update_internal_migration")
 	emit_signal("update_prices")
 	emit_signal("set_accounting")
 	SceneStorage.population_manager.set_population_growth()

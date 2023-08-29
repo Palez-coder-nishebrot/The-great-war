@@ -8,4 +8,4 @@ class_name Raw
 
 
 func get_good_quantity():
-	return quantity * 0.1
+	return quantity * 0.01

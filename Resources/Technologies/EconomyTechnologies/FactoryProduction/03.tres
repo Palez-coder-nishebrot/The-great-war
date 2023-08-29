@@ -12,5 +12,5 @@ power = 0.05
 script = ExtResource("1")
 cost = 1400
 activation_year = 1914
-name_of_technology = "assembly_lines"
+name_of_technology = "factory_production_3"
 list_of_effects = Array[Resource("res://Resources/Technologies/TechnologyEffect.gd")]([SubResource("1")])

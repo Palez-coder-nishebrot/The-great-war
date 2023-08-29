@@ -1,12 +1,13 @@
-[gd_resource type="Resource" load_steps=2 format=3]
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dg0b54j0ted3s"]
 
 [ext_resource type="Script" path="res://Resources/Parties/economy_policy.gd" id="1"]
 
 [resource]
-script = ExtResource( 1 )
-policy_name = "interventionism"
+script = ExtResource("1")
 factory_cost = 0
 infrastructure_cost = 0
+taxes_efficiency = 0.5
 subsidization = true
-building_not_profit_factories = false
+building_np_factories = false
 private_property = true
+policy_name = "interventionism"

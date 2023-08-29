@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="Ideology" load_steps=8 format=3 uid="uid://bhk8mcni27woj"]
 
 [ext_resource type="Script" path="res://Resources/Parties/Ideology.gd" id="1"]
-[ext_resource type="Resource" path="res://Resources/Parties/Policy/goverment_form/soviet_republic.tres" id="2"]
+[ext_resource type="Resource" path="res://Resources/Parties/Policy/goverment_form/proletarian_dictatorship.tres" id="2"]
 [ext_resource type="Resource" uid="uid://diunltbmleadq" path="res://Resources/Parties/Policy/trade_policy/protectionism.tres" id="3"]
 [ext_resource type="Texture2D" uid="uid://clud5qqc4i6h0" path="res://Graphics/Sprites/GUI/Icons of windows/ideology_icons/communists_icon.png" id="3_wfwkj"]
-[ext_resource type="Resource" path="res://Resources/Parties/Policy/economy_policy/planned_economy.tres" id="4"]
-[ext_resource type="Resource" uid="uid://bk5nufoc0oh6o" path="res://Resources/Parties/Policy/national_issue/residence_permit.tres" id="4_udth3"]
+[ext_resource type="Resource" uid="uid://cre60p8ab1o6b" path="res://Resources/Parties/Policy/economy_policy/planned_economy.tres" id="4"]
 [ext_resource type="Resource" path="res://Resources/Parties/Policy/military_policy/expansionism.tres" id="5"]
+[ext_resource type="Resource" uid="uid://bk5nufoc0oh6o" path="res://Resources/Parties/Policy/migration_policy/residence_permit.tres" id="5_vrlns"]
 
 [resource]
 script = ExtResource("1")
@@ -14,7 +14,7 @@ ideology = "communists"
 economic_policy = ExtResource("4")
 trade_policy = ExtResource("3")
 military_policy = ExtResource("5")
-national_issue = ExtResource("4_udth3")
+national_issue = ExtResource("5_vrlns")
 names_of_parties = ["com_party_name_1", "com_party_name_2"]
 available_for_setting_ruling_party = [ExtResource("2")]
 supporting_soc_reforms = 1

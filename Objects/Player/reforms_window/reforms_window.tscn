@@ -1,0 +1,217 @@
+[gd_scene load_steps=9 format=3 uid="uid://bpvbyvrny7811"]
+
+[ext_resource type="Script" path="res://Objects/Player/reforms_window/reforms_window.gd" id="3"]
+[ext_resource type="Script" path="res://Objects/Player/reforms_window/reform_list_container.gd" id="3_ujr11"]
+[ext_resource type="Script" path="res://Objects/Player/reforms_window/reform_button.gd" id="4_ltrh8"]
+[ext_resource type="FontFile" uid="uid://dpaiod0xc1xgs" path="res://Graphics/Fonts/pixel_2.ttf" id="5"]
+[ext_resource type="Script" path="res://Objects/Player/reforms_window/reform_panel.gd" id="5_g1axn"]
+[ext_resource type="Script" path="res://Objects/Player/reforms_window/roll_back_reform_button.gd" id="6_dehxy"]
+[ext_resource type="Script" path="res://Objects/Player/reforms_window/to_reform_button.gd" id="7_jhe6s"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q6wny"]
+bg_color = Color(0.435294, 0.435294, 0.435294, 1)
+
+[node name="reforms_window" type="Panel"]
+offset_top = 61.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("3")
+
+[node name="reform_list_ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_top = 150.0
+offset_right = 396.0
+offset_bottom = 1019.0
+script = ExtResource("3_ujr11")
+
+[node name="reform_list_container" type="VBoxContainer" parent="reform_list_ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="info_label5" type="Label" parent="reform_list_ScrollContainer/reform_list_container"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 20
+text = "Реформы будут доступны через 100 дн."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="reform_list_ScrollContainer/reform_list_container"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 30
+text = "Название реформы"
+script = ExtResource("4_ltrh8")
+reform_variable = "school_system"
+
+[node name="Button2" type="Button" parent="reform_list_ScrollContainer/reform_list_container"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 30
+text = "Название реформы"
+script = ExtResource("4_ltrh8")
+reform_variable = "pensions"
+
+[node name="Button3" type="Button" parent="reform_list_ScrollContainer/reform_list_container"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 30
+text = "Название реформы"
+script = ExtResource("4_ltrh8")
+reform_variable = "min_wage"
+
+[node name="Button4" type="Button" parent="reform_list_ScrollContainer/reform_list_container"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 30
+text = "Название реформы"
+script = ExtResource("4_ltrh8")
+reform_variable = "working_hours"
+
+[node name="Button5" type="Button" parent="reform_list_ScrollContainer/reform_list_container"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 30
+text = "Название реформы"
+script = ExtResource("4_ltrh8")
+reform_variable = "unemployment_benefit"
+
+[node name="Button6" type="Button" parent="reform_list_ScrollContainer/reform_list_container"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 30
+text = "Название реформы"
+script = ExtResource("4_ltrh8")
+reform_variable = "healthcare"
+
+[node name="info_label" type="Label" parent="reform_list_ScrollContainer/reform_list_container"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 30
+text = "Проведение соц. реформ"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="info_label2" type="Label" parent="reform_list_ScrollContainer/reform_list_container"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 30
+text = "Проведение пол. реформ"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="info_label3" type="Label" parent="reform_list_ScrollContainer/reform_list_container"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 30
+text = "Откат соц. реформ"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="info_label4" type="Label" parent="reform_list_ScrollContainer/reform_list_container"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 30
+text = "Откат пол. реформ"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 150.0
+
+[node name="Label2" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+
+[node name="Label3" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+
+[node name="reform_panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 513.0
+offset_top = 200.0
+offset_right = 1413.0
+offset_bottom = 745.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_q6wny")
+script = ExtResource("5_g1axn")
+
+[node name="reform_name" type="Label" parent="reform_panel"]
+layout_mode = 0
+offset_right = 900.0
+offset_bottom = 74.0
+theme_override_font_sizes/font_size = 30
+text = "Реформа"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="next_level" type="Label" parent="reform_panel"]
+layout_mode = 0
+offset_left = 577.0
+offset_top = 74.0
+offset_right = 900.0
+offset_bottom = 473.0
+theme_override_font_sizes/font_size = 20
+text = "Реформа"
+horizontal_alignment = 2
+
+[node name="previous_level" type="Label" parent="reform_panel"]
+layout_mode = 0
+offset_top = 74.0
+offset_right = 250.0
+offset_bottom = 473.0
+theme_override_font_sizes/font_size = 20
+text = "Реформа"
+
+[node name="this_level" type="Label" parent="reform_panel"]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 376.0
+offset_right = 650.0
+offset_bottom = 545.0
+theme_override_font_sizes/font_size = 20
+text = "Реформа"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="buttons" type="HBoxContainer" parent="reform_panel"]
+layout_mode = 0
+offset_top = 473.0
+offset_right = 900.0
+offset_bottom = 545.0
+theme_override_constants/separation = 400
+
+[node name="roll_back_reform" type="Button" parent="reform_panel/buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 5
+theme_override_font_sizes/font_size = 20
+text = "Откатить"
+script = ExtResource("6_dehxy")
+
+[node name="to_reform" type="Button" parent="reform_panel/buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 5
+theme_override_font_sizes/font_size = 20
+text = "Провести"
+script = ExtResource("7_jhe6s")
+
+[connection signal="pressed" from="reform_panel/buttons/roll_back_reform" to="reform_panel" method="roll_back_reform_"]
+[connection signal="pressed" from="reform_panel/buttons/to_reform" to="reform_panel" method="to_reform_"]

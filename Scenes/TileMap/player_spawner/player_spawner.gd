@@ -17,11 +17,11 @@ func set_client(client, state_on_start):
 	client.national_color = state_on_start.national_color
 	
 	client.political_manager.set_government_form(state_on_start.government_form)
-	client.political_manager.set_parties(state_on_start.ideology)
 	client.political_manager.get_factories_list = Callable(client.economy_manager, "get_factories_list")
 	client.game = ManagerDay.game
-	client.economy_manager.set_accounting_values_func = Callable(client.accounting_manager, "set_accounting_values")
+	client.economy_manager.set_accounting_values_func  = Callable(client.accounting_manager, "set_accounting_values")
 	client.economy_manager.pay_tariffs_accounting_func = Callable(client.accounting_manager, "pay_tariffs")
+	client.economy_manager.get_accounting_value_func   = Callable(client.accounting_manager, "get_accounting_value")
 	client.state_on_starting = state_on_start
 
 

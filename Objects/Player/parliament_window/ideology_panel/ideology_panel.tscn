@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://biic214lgpkdf"]
+
+[ext_resource type="Texture2D" uid="uid://djoydx2i4baex" path="res://Graphics/Sprites/GUI/Icons of windows/ideology_icons/conservatives_icon.png" id="1_3e7fm"]
+[ext_resource type="Script" path="res://Objects/Player/parliament_window/ideology_panel/ideology_panel.gd" id="1_073xs"]
+[ext_resource type="FontFile" uid="uid://dpaiod0xc1xgs" path="res://Graphics/Fonts/pixel_2.ttf" id="2_k1jkb"]
+
+[node name="ideology_panel" type="HBoxContainer"]
+script = ExtResource("1_073xs")
+
+[node name="icon" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("1_3e7fm")
+stretch_mode = 3
+
+[node name="ide_name" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_k1jkb")
+theme_override_font_sizes/font_size = 25
+text = "Коммунисты -"
+
+[node name="seats" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_k1jkb")
+theme_override_font_sizes/font_size = 25
+text = "10%"
+horizontal_alignment = 2

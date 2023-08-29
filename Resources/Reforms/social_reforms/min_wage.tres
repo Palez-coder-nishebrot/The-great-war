@@ -36,4 +36,4 @@ level_name = ""
 [resource]
 script = ExtResource("1_bvl2h")
 levels = Array[Resource("res://Resources/reforms/reform_level.gd")]([SubResource("Resource_w6dd2"), SubResource("Resource_fl3h6"), SubResource("Resource_6r4ur"), SubResource("Resource_3nm7f"), SubResource("Resource_7kiec")])
-reform_name = ""
+reform_name = "min_wage"

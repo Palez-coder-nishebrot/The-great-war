@@ -1,24 +1,18 @@
 extends Node2D
 
-@onready var tilemap = $TileMap
+signal new_day
 
-var time_of_game: Dictionary = {
-	day   = 1,
-	month = 1,
-	year  = 1914,
-}
-
-var list_of_speed_of_game: Dictionary = {
-	"Медленно": 1.0,
-	"Нормально": 0.8,
-	"Быстро": 0.6,
-	"Очень быстро": 0.4,
-}
+@onready var tilemap      = $TileMap
+@onready var data_manager = $DataManager
 
 
-var speed_of_game: float = 1.0
+var speed_of_game: float = 0.8
 var pause:         bool  = false
 var list_of_regions:   Array = []
+
+
+func _init():
+	SceneStorage.game = self
 
 
 func _ready():
@@ -32,6 +26,7 @@ func _ready():
 
 
 func new_day_started():
+	emit_signal("new_day")
 	ManagerDay.emit_signal("clear_accounting")
 	ManagerDay.emit_signal("clear_markets")
 	ManagerDay.update_economy()

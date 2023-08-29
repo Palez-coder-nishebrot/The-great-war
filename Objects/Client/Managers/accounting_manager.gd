@@ -23,10 +23,12 @@ var subsidies_expenses:            float = 0.0
 var debts_expenses:                float = 0.0
 var army_expenses:                 float = 0.0
 
-var unemployed_quantity: int   = 0
-var population_literacy: float = 0.0
-var population_quantity: int   = 0
-var population_welfare:  float = 0
+var unemployed_quantity:       int   = 0
+var population_literacy:       float = 0.0
+var population_quantity:       int   = 0
+var population_welfare:        float = 0.0
+var population_aggressiveness: float = 0.0
+var population_pluralism:      float = 0.0
 
 var produced_goods: Dictionary = {}
 var projects_list:  Array      = []
@@ -40,6 +42,10 @@ var healthcare_getter:           Callable
 var unemployment_benefit_getter: Callable
 var pensions_getter:             Callable
 var army_getter:                 Callable
+
+
+func get_accounting_value(variable: String):
+	return get(variable)
 
 
 func set_accounting_values(variable: String, value: float):
@@ -85,6 +91,8 @@ func set_info():
 func get_population_statistics():
 	clear_dict(produced_goods)
 	
+	var plu        = 0.0
+	var agr        = 0.0
 	var unemployed = 0
 	var literacy = 0.0
 	var pop_quantity = 0
@@ -106,14 +114,18 @@ func get_population_statistics():
 				pop_classes_q += 1
 				literacy      += pop_unit.literacy
 				welfare       += pop_unit.welfare
+				agr           += pop_unit.aggressiveness
+				plu           += pop_unit.pluralism
 				
 		
 		for enterprise in region.DP_list + region.get_factories_list():
 			gdp_ += enterprise.income
 			produced_goods[enterprise.good] += enterprise.selling_goods_quantity
 	
-	population_literacy = literacy / pop_classes_q
-	population_welfare  = snappedf(welfare / pop_classes_q, 0.1)
+	population_aggressiveness = snappedf(agr / pop_classes_q, 0.1)
+	population_pluralism      = snappedf(plu / pop_classes_q, 0.1)
+	population_literacy       = snappedf(literacy / pop_classes_q, 0.1)
+	population_welfare        = snappedf(welfare / pop_classes_q, 0.1) 
 	
 	unemployed_quantity = unemployed
 	population_quantity = pop_quantity

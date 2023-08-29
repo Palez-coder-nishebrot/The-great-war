@@ -10,23 +10,20 @@ const ACTIVE_UP_BORDER:    bool = false
 const ACTIVE_DOWN_BORDER:  bool = false
 
 @onready var canvas_layer:         CanvasLayer = $CanvasLayer
-@onready var borders:              Node2D = $CanvasLayer/Borders
 @onready var camera:               Camera2D = $Camera2D
-@onready var buttons:              Panel = $CanvasLayer/Buttons
-@onready var window_province:      Panel = $CanvasLayer/Province
-@onready var window_markets:       Panel = $CanvasLayer/Markets
-@onready var window_build_factory: Control = $CanvasLayer/Build_factory
-@onready var window_production:    Panel = $CanvasLayer/Production
-@onready var window_parties:       Panel = $CanvasLayer/Parties
-@onready var window_taxes:         Panel = $CanvasLayer/Taxes
-@onready var window_reform:        Panel = $CanvasLayer/Reform
-@onready var window_population:    Panel = $CanvasLayer/Population
-@onready var window_research:      Panel = $CanvasLayer/Research
-@onready var information:          Panel = $CanvasLayer/Information
-@onready var window_train_army:    Panel = $CanvasLayer/Train_army
-@onready var window_diplomacy:     Panel = $CanvasLayer/Diplomacy
-@onready var window_list_of_units: ScrollContainer = $CanvasLayer/List_of_units
-@onready var menu_panel:           Panel           = $CanvasLayer/menu_panel
+@onready var buttons:              Panel = $CanvasLayer/buttons_panel
+@onready var window_province:      Panel = $CanvasLayer/province_window
+@onready var window_markets:       Panel = $CanvasLayer/markets_window
+@onready var window_build_factory: Control = $CanvasLayer/building_factory_window
+@onready var window_production:    Panel = $CanvasLayer/production_window
+@onready var window_parties:       Panel = $CanvasLayer/parliament_window
+@onready var window_taxes:         Panel = $CanvasLayer/accounting_window
+@onready var window_reform:        Panel = $CanvasLayer/reforms_window
+@onready var window_population:    Panel = $CanvasLayer/population_window
+@onready var window_research:      Panel = $CanvasLayer/research_window
+@onready var information:          Panel = $CanvasLayer/information_panel
+@onready var window_diplomacy:     Panel = $CanvasLayer/diplomacy_window
+@onready var menu_panel:           Panel = $CanvasLayer/menu_panel
 
 var client
 

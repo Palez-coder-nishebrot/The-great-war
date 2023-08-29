@@ -1,0 +1,241 @@
+[gd_scene load_steps=20 format=3 uid="uid://bvleisqfaxn1t"]
+
+[ext_resource type="Script" path="res://Objects/Player/parliament_window/parliament_window.gd" id="1"]
+[ext_resource type="FontFile" uid="uid://dpaiod0xc1xgs" path="res://Graphics/Fonts/pixel_2.ttf" id="2"]
+[ext_resource type="Texture2D" uid="uid://bomdkgd6mtfui" path="res://Graphics/Sprites/GUI/Icons of windows/Pluralism.png" id="3"]
+[ext_resource type="PackedScene" uid="uid://bemoq85lg1ff0" path="res://Objects/Player/parliament_window/stats_label.tscn" id="3_rqra3"]
+[ext_resource type="Texture2D" uid="uid://ppemrgbqyf7m" path="res://Graphics/Sprites/GUI/Icons of windows/Radion net.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://75tlxde36n2q" path="res://Graphics/Sprites/GUI/Icons of windows/Revanchism.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://bd2gjbuk7xb5e" path="res://Graphics/Sprites/GUI/Icons of windows/military fatigue.png" id="5_du3td"]
+[ext_resource type="PackedScene" uid="uid://biic214lgpkdf" path="res://Objects/Player/parliament_window/ideology_panel/ideology_panel.tscn" id="8_0pg6f"]
+[ext_resource type="Resource" uid="uid://bhk8mcni27woj" path="res://Resources/Parties/Ideologies/Communists.tres" id="9_em7kw"]
+[ext_resource type="Resource" uid="uid://gkom1yh6vlr7" path="res://Resources/Parties/Ideologies/Conservators.tres" id="10_fv6w0"]
+[ext_resource type="Resource" uid="uid://du5n7mpwi5le8" path="res://Resources/Parties/Ideologies/Fascists.tres" id="11_i2vga"]
+[ext_resource type="Texture2D" uid="uid://chmbagyd2lmba" path="res://Graphics/Sprites/GUI/Icons of windows/aggressiveness.png" id="11_x7mhb"]
+[ext_resource type="Resource" uid="uid://dvbrct83mhfi3" path="res://Resources/Parties/Ideologies/Liberals.tres" id="12_i12rm"]
+[ext_resource type="Texture2D" uid="uid://br7np06gtgbn4" path="res://Graphics/Sprites/GUI/Icons of windows/Education.png" id="13_lvfdh"]
+[ext_resource type="Resource" uid="uid://duh8h5p27isjj" path="res://Resources/Parties/Ideologies/Libertarians.tres" id="13_wvx73"]
+[ext_resource type="Resource" uid="uid://dd4i86awv627i" path="res://Resources/Parties/Ideologies/Socialists.tres" id="14_12cw0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n1ou6"]
+bg_color = Color(0.25098, 0.27451, 0.294118, 1)
+
+[sub_resource type="FontFile" id="1"]
+fallbacks = Array[Font]([ExtResource("2")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[sub_resource type="FontFile" id="2"]
+fallbacks = Array[Font]([ExtResource("2")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/25/0 = Vector2(0, 0)
+cache/0/20/0/ascent = 0.0
+cache/0/20/0/descent = 0.0
+cache/0/20/0/underline_position = 0.0
+cache/0/20/0/underline_thickness = 0.0
+cache/0/20/0/scale = 1.0
+cache/0/20/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/20/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/20/0/kerning_overrides/25/0 = Vector2(0, 0)
+cache/0/25/0/ascent = 0.0
+cache/0/25/0/descent = 0.0
+cache/0/25/0/underline_position = 0.0
+cache/0/25/0/underline_thickness = 0.0
+cache/0/25/0/scale = 1.0
+cache/0/25/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/25/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/25/0/kerning_overrides/25/0 = Vector2(0, 0)
+
+[node name="parliament_window" type="Panel"]
+offset_top = 61.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_n1ou6")
+script = ExtResource("1")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 688.0
+offset_bottom = 48.0
+theme_override_fonts/font = SubResource("1")
+text = "Список партий"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_top = 62.0
+offset_right = 688.0
+offset_bottom = 967.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 50
+
+[node name="CharsOfCountry" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 712.0
+offset_right = 1318.0
+offset_bottom = 359.0
+
+[node name="FormOfGovernment" type="Label" parent="CharsOfCountry"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("2")
+theme_override_font_sizes/font_size = 25
+text = "Форма правления"
+
+[node name="StatusPolicy" type="Label" parent="CharsOfCountry"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("2")
+theme_override_font_sizes/font_size = 25
+text = "Независимое государство"
+
+[node name="RulingParty" type="Label" parent="CharsOfCountry"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("2")
+theme_override_font_sizes/font_size = 25
+text = "Правящая партия"
+
+[node name="EconomyPolicy" type="Label" parent="CharsOfCountry"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("2")
+theme_override_font_sizes/font_size = 25
+text = "Экономическая политика"
+
+[node name="TradePolicy" type="Label" parent="CharsOfCountry"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("2")
+theme_override_font_sizes/font_size = 25
+text = "Торговая политика"
+
+[node name="ForeignPolicy" type="Label" parent="CharsOfCountry"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("2")
+theme_override_font_sizes/font_size = 25
+text = "Военная политика"
+
+[node name="BuildingFactories" type="Label" parent="CharsOfCountry"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("2")
+theme_override_font_sizes/font_size = 25
+text = "Строительство неприбыльных фабрик: Нет"
+
+[node name="Subsidization" type="Label" parent="CharsOfCountry"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("2")
+theme_override_font_sizes/font_size = 25
+text = "Субсидии: Да"
+
+[node name="CostOfFactories" type="Label" parent="CharsOfCountry"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("2")
+theme_override_font_sizes/font_size = 25
+text = "Цена Фабрик: +0%"
+
+[node name="CostOfInfrastructure" type="Label" parent="CharsOfCountry"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("2")
+theme_override_font_sizes/font_size = 25
+text = "Цена инфраструктуры: +0%"
+
+[node name="MaxTariffs" type="Label" parent="CharsOfCountry"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("2")
+theme_override_font_sizes/font_size = 25
+text = "Эффективность пошлин"
+
+[node name="parliament" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 712.0
+offset_top = 359.0
+offset_right = 960.0
+offset_bottom = 591.0
+
+[node name="Label" type="Label" parent="parliament"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 30
+text = "Парламент"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ideology_panel" parent="parliament" instance=ExtResource("8_0pg6f")]
+layout_mode = 2
+ideology = ExtResource("9_em7kw")
+
+[node name="ideology_panel2" parent="parliament" instance=ExtResource("8_0pg6f")]
+layout_mode = 2
+ideology = ExtResource("10_fv6w0")
+
+[node name="ideology_panel3" parent="parliament" instance=ExtResource("8_0pg6f")]
+layout_mode = 2
+ideology = ExtResource("11_i2vga")
+
+[node name="ideology_panel4" parent="parliament" instance=ExtResource("8_0pg6f")]
+layout_mode = 2
+ideology = ExtResource("12_i12rm")
+
+[node name="ideology_panel5" parent="parliament" instance=ExtResource("8_0pg6f")]
+layout_mode = 2
+ideology = ExtResource("13_wvx73")
+
+[node name="ideology_panel6" parent="parliament" instance=ExtResource("8_0pg6f")]
+layout_mode = 2
+ideology = ExtResource("14_12cw0")
+
+[node name="pop_values" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 712.0
+offset_top = 591.0
+offset_right = 960.0
+offset_bottom = 868.0
+theme_override_constants/separation = 9
+
+[node name="Label" type="Label" parent="pop_values"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 30
+text = "Население"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="aggressiveness" parent="pop_values" instance=ExtResource("3_rqra3")]
+layout_mode = 2
+icon = ExtResource("11_x7mhb")
+value_name = "aggressiveness"
+
+[node name="pluralism" parent="pop_values" instance=ExtResource("3_rqra3")]
+layout_mode = 2
+icon = ExtResource("3")
+value_name = "pluralism"
+
+[node name="literacy" parent="pop_values" instance=ExtResource("3_rqra3")]
+layout_mode = 2
+icon = ExtResource("13_lvfdh")
+value_name = "population_literacy"
+
+[node name="military_fatigue" parent="pop_values" instance=ExtResource("3_rqra3")]
+layout_mode = 2
+icon = ExtResource("5_du3td")
+value_name = "military_fatigue"
+
+[node name="revanchism" parent="pop_values" instance=ExtResource("3_rqra3")]
+layout_mode = 2
+icon = ExtResource("5")
+value_name = "revanchism"
+
+[node name="radio_net" parent="pop_values" instance=ExtResource("3_rqra3")]
+visible = false
+layout_mode = 2
+icon = ExtResource("4")

@@ -1,17 +1,17 @@
-[gd_resource type="Resource" load_steps=4 format=2]
+[gd_resource type="Resource" script_class="Technology" load_steps=4 format=3 uid="uid://dgbss12ntlg01"]
 
-[ext_resource path="res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectMaxInfrastructure.gd" type="Script" id=1]
-[ext_resource path="res://Resources/Technologies/Technology.gd" type="Script" id=2]
+[ext_resource type="Script" path="res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectMaxInfrastructure.gd" id="1"]
+[ext_resource type="Script" path="res://Resources/Technologies/Technology.gd" id="2"]
 
-[sub_resource type="Resource" id=1]
-script = ExtResource( 1 )
+[sub_resource type="Resource" id="1"]
+script = ExtResource("1")
 name_of_effect = "Максимум инфраструктуры"
 target = "max_railways"
 value = 1
 
 [resource]
-script = ExtResource( 2 )
+script = ExtResource("2")
 cost = 1500
 activation_year = 1919
-name_of_technology = "railway_lines"
-list_of_effects = [ SubResource( 1 ) ]
+name_of_technology = "infrastructure_3"
+list_of_effects = Array[Resource("res://Resources/Technologies/TechnologyEffect.gd")]([SubResource("1")])

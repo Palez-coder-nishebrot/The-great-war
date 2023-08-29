@@ -18,5 +18,5 @@ power = 10
 script = ExtResource("1")
 cost = 1000
 activation_year = 1914
-name_of_technology = "insurance_firms"
+name_of_technology = "economic_structures_1"
 list_of_effects = Array[Resource("res://Resources/Technologies/TechnologyEffect.gd")]([SubResource("1"), SubResource("2")])

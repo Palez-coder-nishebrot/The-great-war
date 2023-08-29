@@ -8,9 +8,9 @@ const education: Dictionary = {
 	"Clerk":     80.0,
 }
 
-var pop_labourer_coef = 800
-var pop_worker_coef   = 1200
-var pop_clerk_coef    = 4
+var pop_labourer_coef = 8000
+var pop_worker_coef   = 12000
+var pop_clerk_coef    = 40
 
 
 func create_map(regions_list):

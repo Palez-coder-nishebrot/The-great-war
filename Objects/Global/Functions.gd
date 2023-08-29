@@ -45,10 +45,13 @@ func check_tariffs(price, player):
 func get_tariff(good, quanity, economy_manager: EconomyManager):
 	var price = economy_manager.prices_goods[good]
 	var tariff = economy_manager.tariffs
+	
+	if tariff > 0:
+		tariff += economy_manager.tariffs_efficiency
 	return (price * quanity) * tariff
 
 
-func get_good_price(price, imp_quantity, quantity, tariffs):
+func get_good_price(price, imp_quantity, quantity, tariffs, tariffs_efficiency):
 	
 	var price_from_loc  = quantity * price
 	var price_from_glob = (imp_quantity * price) + ((imp_quantity * price) * tariffs)

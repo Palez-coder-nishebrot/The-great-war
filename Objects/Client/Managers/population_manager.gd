@@ -7,30 +7,34 @@ var government_form_getter:        Callable
 var ruling_party_getter:           Callable
 var population_units_getter:       Callable
 var pop_unit_for_migration_getter: Callable
+var education_cost_getter:         Callable
 
 
 var education_efficiency: float = 0.0
 var pop_growth_modifier:  float = 0.0
 
+var military_fatigue: float = 0.0
+var revanchism:       float = 0.0
 
 var _thread = Thread.new()
 var _semaphore = Semaphore.new()
 var _mutex     = Mutex.new()
-var _exit = false
+var _exit      = false
 
 
 func _init(client):
+	SceneStorage.game.connect("new_day", Callable(self, "execute_thread"))
 	_thread.start(Callable(self, "thread_executor"))
-	ManagerDay.connect("update_internal_migration", Callable(self, "execute_thread"))
 	population_units_getter       = Callable(client, "get_population_units_list")
 	pop_unit_for_migration_getter = Callable(client, "get_pop_unit_for_migration")
 	ruling_party_getter           = Callable(client, "get_ruling_party")
 	government_form_getter        = Callable(client, "get_government_form")
+	education_cost_getter         = Callable(client, "get_education_cost")
 	
 
 func execute_thread():
-	#_semaphore.post()
-	thread_debugger()
+	_semaphore.post()
+	#thread_debugger()
 
 
 func thread_debugger():
@@ -64,9 +68,11 @@ func update_pop_unit_chars(unit, government_form, ruling_party):
 	var pop_type             = unit.population_type
 	
 	unit.update_aggressiveness(ruling_party, government_form)
-	unit.update_literacy()
 	unit.reform_desire_manager.update_soc_reform_desire(unemployment_percent,
 		pluralism, literacy, welfare, pop_type)
+	
+	if SceneStorage.game.data_manager.is_first_day_in_week():
+		unit.update_literacy(education_efficiency, education_cost_getter.call())
 
 
 func _exit_tree():

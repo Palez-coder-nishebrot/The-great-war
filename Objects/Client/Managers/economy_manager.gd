@@ -17,7 +17,10 @@ var demand_supply_goods:   Dictionary     = {}
 
 var factory_cost_modifier:        float = 1.0 # Это число мы будем умножать, а не прибавлять
 var min_wage_modifier:            float = 1.0 # Это число мы будем умножать, а не прибавлять
+var tariffs_efficiency:           float = 1.0 # Это число мы будем прибавлять, а не умножать
+var taxes_efficiency:             float = 1.0 # Это число мы будем прибавлять, а не умножать
 
+var education_cost:       float = 0.0 # Проценты
 var tariffs:              float = 0.0 # Проценты
 var poor_classes_taxes:   float = 0.0 # Проценты
 var middle_classes_taxes: float = 0.0 # Проценты
@@ -34,8 +37,13 @@ var inflation_growth:                float = 1.0
 var budget:                          float = 0.0
 var investment_pool:                 float = 0.0
 
+var subsidization: bool = false
+var building_np_factories: bool = false
+var private_property:      bool = false
+
 var set_accounting_values_func:  Callable
 var pay_tariffs_accounting_func: Callable
+var get_accounting_value_func:   Callable
 
 var production_efficiency_manager: ProductionEfficiencyManager = ProductionEfficiencyManager.new()
 
@@ -65,6 +73,11 @@ var list_of_buildings: Array = [
 	load("res://Resources/Factories/TipesOfFactories/TankFactory.tres"),
 	load("res://Resources/Factories/TipesOfFactories/TextileFactory.tres"),
 ]
+
+
+#func reduce_budget(money, expense_type):
+#	budget -= money
+#	set_accounting_values_func.call(expense_type)
 
 
 func sort_countries_sellers_list(good, client):
@@ -111,6 +124,7 @@ func sort_factories_list():
 func _init():
 	set_local_market()
 	var _err
+	_err = ManagerDay.connect("set_education_expenses", set_education_expenses)
 	_err = ManagerDay.connect("update_prices", Callable(self, "update_prices"))
 	_err = ManagerDay.connect("sort_factories_list", Callable(self, "sort_factories_list"))
 	_err = ManagerDay.connect("buy_raw", Callable(self, "buy_raw"))
@@ -157,11 +171,12 @@ func buy_raw():
 		i.buy_raw()
 
 
-func check_factories_bankrupt():
-	for factory in factories_list:
-		var subsidization_expenses = factory.check_bankrupt()
-		budget -= subsidization_expenses
-		set_accounting_values_func.call("subsidies_expenses", subsidization_expenses)
+func set_education_expenses():
+	var pop_q = get_accounting_value_func.call("population_quantity")
+	var teachers_q = pop_q * 0.001
+	var expenses = teachers_q * education_cost
+	budget -= expenses
+	set_accounting_values_func.call("education_expenses", expenses)
 
 
 func update_prices():

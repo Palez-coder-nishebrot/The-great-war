@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://bemoq85lg1ff0"]
+
+[ext_resource type="Texture2D" uid="uid://br7np06gtgbn4" path="res://Graphics/Sprites/GUI/Icons of windows/Education.png" id="1_6paya"]
+[ext_resource type="FontFile" uid="uid://dpaiod0xc1xgs" path="res://Graphics/Fonts/pixel_2.ttf" id="1_a10do"]
+[ext_resource type="Script" path="res://Objects/Player/parliament_window/stats_label.gd" id="1_ipkb8"]
+
+[node name="Pluralism" type="HBoxContainer"]
+offset_right = 168.0
+offset_bottom = 23.0
+script = ExtResource("1_ipkb8")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("1_6paya")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("1_a10do")
+theme_override_font_sizes/font_size = 25
+text = "Value name"
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("1_a10do")
+theme_override_font_sizes/font_size = 25
+text = "Value"
+horizontal_alignment = 2
+vertical_alignment = 1

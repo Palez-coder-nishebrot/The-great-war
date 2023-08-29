@@ -1,25 +1,25 @@
-[gd_resource type="Resource" load_steps=7 format=2]
+[gd_resource type="Resource" script_class="Technology" load_steps=7 format=3 uid="uid://b3t0harc2vy7o"]
 
-[ext_resource path="res://Resources/Technologies/Technology.gd" type="Script" id=1]
-[ext_resource path="res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectAttack.gd" type="Script" id=2]
-[ext_resource path="res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectDefense.gd" type="Script" id=3]
-[ext_resource path="res://Resources/military_units/army_units_types/artillery.tres" type="Resource" id=4]
+[ext_resource type="Script" path="res://Resources/Technologies/Technology.gd" id="1"]
+[ext_resource type="Script" path="res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectAttack.gd" id="2"]
+[ext_resource type="Script" path="res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectDefense.gd" id="3"]
+[ext_resource type="Resource" path="res://Resources/military_units/army_units_types/artillery.tres" id="4"]
 
-[sub_resource type="Resource" id=1]
-script = ExtResource( 2 )
+[sub_resource type="Resource" id="1"]
+script = ExtResource("2")
 name_of_effect = "Атака"
 power = 1
-target = ExtResource( 4 )
+target = ExtResource("4")
 
-[sub_resource type="Resource" id=2]
-script = ExtResource( 3 )
+[sub_resource type="Resource" id="2"]
+script = ExtResource("3")
 name_of_effect = "Оборона"
 power = 2
-target = ExtResource( 4 )
+target = ExtResource("4")
 
 [resource]
-script = ExtResource( 1 )
+script = ExtResource("1")
 cost = 1000
 activation_year = 1914
-name_of_technology = "heavy_artillery"
-list_of_effects = [ SubResource( 1 ), SubResource( 2 ) ]
+name_of_technology = "heavy_weapon_1"
+list_of_effects = Array[Resource("res://Resources/Technologies/TechnologyEffect.gd")]([SubResource("1"), SubResource("2")])

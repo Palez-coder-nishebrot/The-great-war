@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="Technology" load_steps=11 format=3 uid="uid://otgxnpgqgbiv"]
 
 [ext_resource type="Script" path="res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectProductionGoods.gd" id="1"]
-[ext_resource type="Resource" path="res://Resources/Good/iron.tres" id="2"]
+[ext_resource type="Resource" uid="uid://dm1c0og0w4de3" path="res://Resources/Good/iron.tres" id="2"]
 [ext_resource type="Script" path="res://Resources/Technologies/Technology.gd" id="3"]
-[ext_resource type="Resource" path="res://Resources/Good/steel.tres" id="4"]
-[ext_resource type="Resource" path="res://Resources/Good/coal.tres" id="5"]
-[ext_resource type="Resource" path="res://Resources/Good/glass.tres" id="6"]
+[ext_resource type="Resource" uid="uid://c64oytvdwhc6m" path="res://Resources/Good/steel.tres" id="4"]
+[ext_resource type="Resource" uid="uid://elav5270b0j0" path="res://Resources/Good/coal.tres" id="5"]
+[ext_resource type="Resource" uid="uid://bnhfsbwpo488q" path="res://Resources/Good/glass.tres" id="6"]
 
 [sub_resource type="Resource" id="3"]
 script = ExtResource("1")
@@ -35,5 +35,5 @@ target = ExtResource("6")
 script = ExtResource("3")
 cost = 1600
 activation_year = 1914
-name_of_technology = "electric_arc_furnaces"
+name_of_technology = "metallurgy_4"
 list_of_effects = Array[Resource("res://Resources/Technologies/TechnologyEffect.gd")]([SubResource("3"), SubResource("4"), SubResource("5"), SubResource("6")])

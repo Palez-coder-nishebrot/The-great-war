@@ -6,8 +6,8 @@
 [ext_resource type="Resource" path="res://Resources/Parties/Policy/economy_policy/dirigisme.tres" id="4"]
 [ext_resource type="Texture2D" uid="uid://rfcjkpntqpl5" path="res://Graphics/Sprites/GUI/Icons of windows/ideology_icons/fascists_icon.png" id="4_4v4we"]
 [ext_resource type="Resource" path="res://Resources/Parties/Policy/military_policy/expansionism.tres" id="5"]
-[ext_resource type="Resource" uid="uid://bk5nufoc0oh6o" path="res://Resources/Parties/Policy/national_issue/residence_permit.tres" id="5_vlleh"]
 [ext_resource type="Resource" uid="uid://c5n5ywdho8jcw" path="res://Resources/Parties/Policy/goverment_form/monarchy.tres" id="6"]
+[ext_resource type="Resource" uid="uid://bk5nufoc0oh6o" path="res://Resources/Parties/Policy/migration_policy/residence_permit.tres" id="6_r47gg"]
 
 [resource]
 script = ExtResource("1")
@@ -15,7 +15,7 @@ ideology = "fascists"
 economic_policy = ExtResource("4")
 trade_policy = ExtResource("2")
 military_policy = ExtResource("5")
-national_issue = ExtResource("5_vlleh")
+national_issue = ExtResource("6_r47gg")
 names_of_parties = ["fas_party_name_1", "fas_party_name_2"]
 available_for_setting_ruling_party = [ExtResource("3"), ExtResource("6")]
 supporting_soc_reforms = 1

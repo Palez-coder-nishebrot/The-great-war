@@ -1646,6 +1646,7 @@ offset_right = 2232.0
 offset_bottom = 2197.0
 texture_normal = ExtResource("139_3msg0")
 dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("130"), ExtResource("125")])
+factory_goods = Array[Resource("res://Resources/Factories/Factory.gd")]([ExtResource("82_dlsmy"), ExtResource("83_hffge")])
 
 [node name="Анталья" parent="Client17" instance=ExtResource("4")]
 offset_left = 2197.0
@@ -1670,6 +1671,7 @@ offset_right = 2332.0
 offset_bottom = 2215.0
 texture_normal = ExtResource("142_wuqqo")
 dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("127")])
+factory_goods = Array[Resource("res://Resources/Factories/Factory.gd")]([ExtResource("77_fbuxq"), ExtResource("78_dencq")])
 
 [node name="Газиантеп" parent="Client17" instance=ExtResource("4")]
 offset_left = 2341.0

@@ -1,45 +1,20 @@
-[gd_scene load_steps=25 format=3 uid="uid://dmjitjcdnorww"]
+[gd_scene load_steps=16 format=3 uid="uid://dmjitjcdnorww"]
 
 [ext_resource type="Script" path="res://Objects/Player/Player.gd" id="1"]
-[ext_resource type="PackedScene" uid="uid://bmfslq2y1gxrv" path="res://Objects/Player/Window_province/Window_province.tscn" id="2"]
-[ext_resource type="PackedScene" uid="uid://4ck2c55nl7cl" path="res://Objects/Player/Window_buttons/Buttons.tscn" id="3"]
-[ext_resource type="PackedScene" uid="uid://chbvt3y0tsaip" path="res://Objects/Player/Window_information/Information.tscn" id="4"]
-[ext_resource type="PackedScene" uid="uid://dkdv1arbmmoam" path="res://Objects/Player/Window_markets/Markets.tscn" id="5"]
-[ext_resource type="PackedScene" uid="uid://8hw3k7yvauul" path="res://Objects/Player/Window_production/Production.tscn" id="6"]
-[ext_resource type="PackedScene" uid="uid://cnmntttok106d" path="res://Objects/Player/Window_build_factory/Build_factory.tscn" id="7"]
-[ext_resource type="PackedScene" uid="uid://bvleisqfaxn1t" path="res://Objects/Player/Window_parties/Parties.tscn" id="8"]
-[ext_resource type="PackedScene" path="res://Objects/Player/Window_diplomacy/Diplomacy.tscn" id="9"]
-[ext_resource type="PackedScene" uid="uid://bpvbyvrny7811" path="res://Objects/Player/Window_reforms/reform_window.tscn" id="10"]
-[ext_resource type="PackedScene" uid="uid://bckhubtkbept3" path="res://Objects/Player/Accounting/Taxes.tscn" id="11"]
-[ext_resource type="PackedScene" uid="uid://dtrljq38ue4ja" path="res://Objects/Player/Window_population/Population.tscn" id="12"]
-[ext_resource type="PackedScene" uid="uid://b2tfnwdynuxp0" path="res://Objects/Player/Window_research/Research.tscn" id="13"]
-[ext_resource type="PackedScene" path="res://Objects/Player/Window_train_army/Train_army.tscn" id="14"]
+[ext_resource type="PackedScene" uid="uid://dw71igj2kjacn" path="res://Objects/Player/GUI_panels/menu_panel/menu_panel.tscn" id="3_y861b"]
+[ext_resource type="PackedScene" uid="uid://4ck2c55nl7cl" path="res://Objects/Player/GUI_panels/buttons_panel/buttons_panel.tscn" id="4_0al22"]
+[ext_resource type="PackedScene" uid="uid://chbvt3y0tsaip" path="res://Objects/Player/GUI_panels/information_panel/information_panel.tscn" id="5_exx7w"]
+[ext_resource type="PackedScene" uid="uid://dkdv1arbmmoam" path="res://Objects/Player/markets_window/markets_window.tscn" id="7_ponm7"]
+[ext_resource type="PackedScene" uid="uid://bvleisqfaxn1t" path="res://Objects/Player/parliament_window/parliament_window.tscn" id="8_wmux8"]
+[ext_resource type="PackedScene" uid="uid://dtrljq38ue4ja" path="res://Objects/Player/population_window/population_window.tscn" id="9_dla8i"]
+[ext_resource type="PackedScene" uid="uid://8hw3k7yvauul" path="res://Objects/Player/production_window/production_window.tscn" id="10_kdycn"]
+[ext_resource type="PackedScene" uid="uid://bmfslq2y1gxrv" path="res://Objects/Player/province_window/province_window.tscn" id="11_qw62a"]
+[ext_resource type="PackedScene" uid="uid://bpvbyvrny7811" path="res://Objects/Player/reforms_window/reforms_window.tscn" id="12_hll6u"]
+[ext_resource type="PackedScene" uid="uid://b2tfnwdynuxp0" path="res://Objects/Player/research_window/research_window.tscn" id="13_md421"]
+[ext_resource type="PackedScene" uid="uid://bckhubtkbept3" path="res://Objects/Player/accounting_window/accounting_window.tscn" id="14_402mc"]
 [ext_resource type="Script" path="res://Objects/Player/Camera.gd" id="15"]
-[ext_resource type="PackedScene" path="res://Objects/Player/List_of_units/List_of_units.tscn" id="16"]
-[ext_resource type="FontFile" uid="uid://dpaiod0xc1xgs" path="res://Graphics/Fonts/pixel_2.ttf" id="17"]
-[ext_resource type="Script" path="res://Objects/Player/Borders/Border.gd" id="18"]
-[ext_resource type="PackedScene" uid="uid://dw71igj2kjacn" path="res://Objects/Player/menu_panel/menu_panel.tscn" id="19_2wves"]
-
-[sub_resource type="StyleBoxFlat" id="1"]
-bg_color = Color(0.101961, 0.101961, 0.101961, 0.690196)
-
-[sub_resource type="FontFile" id="2"]
-fallbacks = Array[Font]([ExtResource("17")])
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
-
-[sub_resource type="RectangleShape2D" id="3"]
-size = Vector2(8.5, 538.25)
-
-[sub_resource type="RectangleShape2D" id="4"]
-size = Vector2(965, 55.5)
-
-[sub_resource type="RectangleShape2D" id="5"]
-size = Vector2(960, 10)
+[ext_resource type="PackedScene" uid="uid://cnmntttok106d" path="res://Objects/Player/building_factory_window/building_factory_window.tscn" id="15_me7w4"]
+[ext_resource type="PackedScene" uid="uid://hui8uycxrlgw" path="res://Objects/Player/diplomacy_window/diplomacy_window.tscn" id="16_acj17"]
 
 [node name="Player" type="Node2D" groups=["Human"]]
 script = ExtResource("1")
@@ -50,125 +25,59 @@ script = ExtResource("15")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="menu_panel" parent="CanvasLayer" instance=ExtResource("19_2wves")]
+[node name="menu_panel" parent="CanvasLayer" instance=ExtResource("3_y861b")]
 visible = false
-offset_left = 853.0
-offset_top = 387.0
-offset_right = 1189.0
-offset_bottom = 551.0
+offset_left = 821.0
+offset_top = 448.0
+offset_right = 1157.0
+offset_bottom = 653.0
 
-[node name="Buttons" parent="CanvasLayer" instance=ExtResource("3")]
-mouse_filter = 2
+[node name="buttons_panel" parent="CanvasLayer" instance=ExtResource("4_0al22")]
 
-[node name="Information" parent="CanvasLayer" instance=ExtResource("4")]
+[node name="information_panel" parent="CanvasLayer" instance=ExtResource("5_exx7w")]
 offset_top = 86.0
 offset_bottom = 177.0
 
-[node name="Province" parent="CanvasLayer" instance=ExtResource("2")]
+[node name="diplomacy_window" parent="CanvasLayer" instance=ExtResource("16_acj17")]
 visible = false
-offset_left = -1.0
-offset_top = 691.0
-offset_right = 311.0
-offset_bottom = 1081.0
+offset_top = 85.0
 
-[node name="Markets" parent="CanvasLayer" instance=ExtResource("5")]
+[node name="markets_window" parent="CanvasLayer" instance=ExtResource("7_ponm7")]
 visible = false
-offset_top = 78.0
+offset_top = 86.0
 
-[node name="Production" parent="CanvasLayer" instance=ExtResource("6")]
+[node name="parliament_window" parent="CanvasLayer" instance=ExtResource("8_wmux8")]
 visible = false
-offset_top = 78.0
+offset_top = 86.0
 
-[node name="Parties" parent="CanvasLayer" instance=ExtResource("8")]
+[node name="population_window" parent="CanvasLayer" instance=ExtResource("9_dla8i")]
 visible = false
-offset_top = 78.0
+offset_left = 415.0
+offset_top = 134.0
+offset_right = 1801.0
+offset_bottom = 1025.0
 
-[node name="Taxes" parent="CanvasLayer" instance=ExtResource("11")]
+[node name="production_window" parent="CanvasLayer" instance=ExtResource("10_kdycn")]
 visible = false
-offset_left = 1.0
-offset_top = 181.0
-offset_right = 416.0
-offset_bottom = 1001.0
+offset_top = 85.0
 
-[node name="Population" parent="CanvasLayer" instance=ExtResource("12")]
+[node name="province_window" parent="CanvasLayer" instance=ExtResource("11_qw62a")]
 visible = false
-offset_top = 78.0
+offset_top = 690.0
+offset_bottom = 1080.0
 
-[node name="Research" parent="CanvasLayer" instance=ExtResource("13")]
+[node name="reforms_window" parent="CanvasLayer" instance=ExtResource("12_hll6u")]
 visible = false
-offset_top = 80.0
+offset_top = 86.0
 
-[node name="Train_army" parent="CanvasLayer" instance=ExtResource("14")]
+[node name="research_window" parent="CanvasLayer" instance=ExtResource("13_md421")]
 visible = false
+offset_top = 86.0
 
-[node name="Build_factory" parent="CanvasLayer" instance=ExtResource("7")]
+[node name="accounting_window" parent="CanvasLayer" instance=ExtResource("14_402mc")]
 visible = false
-offset_left = 402.0
-offset_top = 200.0
-offset_right = 1746.0
-offset_bottom = 923.0
+offset_top = 177.0
+offset_bottom = 973.0
 
-[node name="Diplomacy" parent="CanvasLayer" instance=ExtResource("9")]
+[node name="building_factory_window" parent="CanvasLayer" instance=ExtResource("15_me7w4")]
 visible = false
-offset_top = 80.0
-
-[node name="List_of_units" parent="CanvasLayer" instance=ExtResource("16")]
-visible = false
-offset_left = 1710.0
-offset_top = 61.0
-offset_right = 1919.0
-
-[node name="Reform" parent="CanvasLayer" instance=ExtResource("10")]
-visible = false
-
-[node name="Panel" type="Panel" parent="CanvasLayer"]
-visible = false
-offset_left = 1677.0
-offset_top = 99.0
-offset_right = 1920.0
-offset_bottom = 560.0
-theme_override_styles/panel = SubResource("1")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel"]
-layout_mode = 0
-offset_right = 243.0
-offset_bottom = 464.0
-
-[node name="Label" type="Label" parent="CanvasLayer/Panel/VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = SubResource("2")
-text = "ТекстТекстТекст Текст Текст"
-
-[node name="Borders" type="Node2D" parent="CanvasLayer"]
-visible = false
-
-[node name="BorderLeft" type="Area2D" parent="CanvasLayer/Borders"]
-script = ExtResource("18")
-tipe_of_border = "LEFT"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Borders/BorderLeft"]
-position = Vector2(9, 540.5)
-shape = SubResource("3")
-
-[node name="BorderRight" type="Area2D" parent="CanvasLayer/Borders"]
-script = ExtResource("18")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Borders/BorderRight"]
-position = Vector2(1911.5, 541.75)
-shape = SubResource("3")
-
-[node name="BorderUp" type="Area2D" parent="CanvasLayer/Borders"]
-script = ExtResource("18")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Borders/BorderUp"]
-position = Vector2(955, 55.5)
-shape = SubResource("4")
-
-[node name="BorderDown" type="Area2D" parent="CanvasLayer/Borders"]
-script = ExtResource("18")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Borders/BorderDown"]
-position = Vector2(960, 1070)
-shape = SubResource("5")
-
-[connection signal="visibility_changed" from="CanvasLayer/menu_panel" to="CanvasLayer/menu_panel" method="_on_visibility_changed"]

@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1")
-avaliable_tariffs = Array[int]([])
+tariffs_efficiency = 0.1
 investing = false
 policy_name = "protectionism"

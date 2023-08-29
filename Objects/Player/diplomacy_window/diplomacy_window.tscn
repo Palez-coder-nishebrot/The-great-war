@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://hui8uycxrlgw"]
+
+[node name="diplomacy_window" type="Panel"]
+offset_top = 61.0
+offset_right = 1920.0
+offset_bottom = 1080.0

@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnmntttok106d"]
+
+[ext_resource type="FontFile" uid="uid://dpaiod0xc1xgs" path="res://Graphics/Fonts/pixel_2.ttf" id="1"]
+[ext_resource type="Script" path="res://Objects/Player/building_factory_window/building_factory_window.gd" id="3"]
+
+[node name="building_factory_window" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1408.0
+offset_bottom = 768.0
+script = ExtResource("3")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="factory_description" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 832.0
+offset_top = 16.0
+offset_right = 1344.0
+offset_bottom = 576.0
+theme_override_fonts/normal_font = ExtResource("1")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "ff"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 512.0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+
+[node name="build_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1024.0
+offset_top = 600.0
+offset_right = 1327.0
+offset_bottom = 700.0
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 40
+text = "Построить"
+
+[node name="exit_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 656.0
+offset_top = 600.0
+offset_right = 959.0
+offset_bottom = 700.0
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 40
+text = "Закрыть"
+
+[connection signal="pressed" from="build_button" to="." method="build_factory"]
+[connection signal="pressed" from="exit_button" to="." method="close_window"]

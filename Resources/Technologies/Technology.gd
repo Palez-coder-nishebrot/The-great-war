@@ -6,8 +6,11 @@ class_name Technology
 @export var activation_year: int = 1914
 
 @export var name_of_technology: String = ""
-var                cotegory           = ""
+var         cotegory:           String = ""
 
 @export var list_of_effects: Array[TechnologyEffect] = []
 
-var ready_for_researching: bool = false
+
+func activate_effects(client):
+	for i in list_of_effects:
+		i.activate_effects(client)

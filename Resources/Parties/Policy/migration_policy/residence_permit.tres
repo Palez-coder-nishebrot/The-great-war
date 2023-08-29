@@ -1,0 +1,7 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bk5nufoc0oh6o"]
+
+[ext_resource type="Script" path="res://Resources/Parties/migration_policy.gd" id="1_22h20"]
+
+[resource]
+script = ExtResource("1_22h20")
+policy_name = "residence_permit"

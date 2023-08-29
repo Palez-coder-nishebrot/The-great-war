@@ -1,0 +1,156 @@
+[gd_scene load_steps=16 format=3 uid="uid://4ck2c55nl7cl"]
+
+[ext_resource type="Script" path="res://Objects/Player/GUI_panels/buttons_panel/buttons_panel.gd" id="1"]
+[ext_resource type="FontFile" uid="uid://dpaiod0xc1xgs" path="res://Graphics/Fonts/pixel_2.ttf" id="2"]
+[ext_resource type="Script" path="res://Objects/Player/GUI_panels/buttons_panel/Button.gd" id="3"]
+[ext_resource type="PackedScene" uid="uid://ddur287uur1cd" path="res://Objects/Player/GUI_panels/buttons_panel/ValueIcon.tscn" id="4"]
+[ext_resource type="Texture2D" uid="uid://6p81i1ky1vgn" path="res://Graphics/Sprites/GUI/Icons of windows/ResearchPoints.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://djoydx2i4baex" path="res://Graphics/Sprites/GUI/Icons of windows/ideology_icons/conservatives_icon.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://bubh8msab4khv" path="res://Graphics/Sprites/GUI/Icons of windows/Cron.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://dqnjp2irtgnk6" path="res://Graphics/Sprites/GUI/Icons of windows/Production.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://c2fyt66d5aesc" path="res://Graphics/Sprites/GUI/Icons of windows/Hammer no.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://bmf06k4n06051" path="res://Graphics/Sprites/GUI/Icons of windows/population_growth.png" id="12_fd8t5"]
+[ext_resource type="Texture2D" uid="uid://b1bwjw0aw7tnr" path="res://Graphics/Sprites/GUI/Icons of windows/Reforms.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://dkpf4rv568b4" path="res://Graphics/Sprites/GUI/Icons of windows/welfare.png" id="13_bf3g2"]
+[ext_resource type="Texture2D" uid="uid://br7np06gtgbn4" path="res://Graphics/Sprites/GUI/Icons of windows/Education.png" id="14"]
+
+[sub_resource type="StyleBoxFlat" id="3"]
+bg_color = Color(0.192157, 0.0862745, 0.109804, 1)
+
+[sub_resource type="FontFile" id="1"]
+fallbacks = Array[Font]([ExtResource("2")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[node name="buttons_panel" type="Panel"]
+offset_right = 1920.0
+offset_bottom = 86.0
+theme_override_styles/panel = SubResource("3")
+script = ExtResource("1")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_top = 32.0
+offset_right = 1920.0
+offset_bottom = 86.0
+theme_override_constants/separation = 0
+
+[node name="Production" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = SubResource("1")
+text = "Производство"
+script = ExtResource("3")
+window = "window_production"
+
+[node name="Budget" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = SubResource("1")
+text = "Бюджет"
+script = ExtResource("3")
+window = "window_taxes"
+
+[node name="Reforms" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = SubResource("1")
+text = "Реформы"
+script = ExtResource("3")
+window = "window_reform"
+
+[node name="Research" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = SubResource("1")
+text = "Технологии"
+script = ExtResource("3")
+window = "window_research"
+
+[node name="Parties" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = SubResource("1")
+text = "Парламент"
+script = ExtResource("3")
+window = "window_parties"
+
+[node name="Diplomacy" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = SubResource("1")
+text = "Дипломатия"
+script = ExtResource("3")
+window = "window_diplomacy"
+
+[node name="Markets" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = SubResource("1")
+text = "Рынки"
+script = ExtResource("3")
+window = "window_markets"
+
+[node name="MilitaryOrders" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = SubResource("1")
+text = "Военные заказы"
+script = ExtResource("3")
+window = "window_parties"
+
+[node name="Population" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = SubResource("1")
+text = "Население"
+script = ExtResource("3")
+window = "window_population"
+
+[node name="VBoxContainer" type="HBoxContainer" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_right = 960.0
+offset_bottom = 16.0
+scale = Vector2(2, 2)
+theme_override_constants/separation = 23
+
+[node name="money_icon" parent="VBoxContainer" instance=ExtResource("4")]
+layout_mode = 2
+icon = ExtResource("8")
+
+[node name="gdp_icon" parent="VBoxContainer" instance=ExtResource("4")]
+layout_mode = 2
+icon = ExtResource("10")
+
+[node name="unemployed_icon" parent="VBoxContainer" instance=ExtResource("4")]
+layout_mode = 2
+icon = ExtResource("11")
+
+[node name="research_points_icon" parent="VBoxContainer" instance=ExtResource("4")]
+layout_mode = 2
+icon = ExtResource("5")
+
+[node name="ruling_party_icon" parent="VBoxContainer" instance=ExtResource("4")]
+layout_mode = 2
+icon = ExtResource("6")
+
+[node name="reforms_icon" parent="VBoxContainer" instance=ExtResource("4")]
+layout_mode = 2
+icon = ExtResource("13")
+
+[node name="literacy_icon" parent="VBoxContainer" instance=ExtResource("4")]
+layout_mode = 2
+icon = ExtResource("14")
+
+[node name="population_growth_icon" parent="VBoxContainer" instance=ExtResource("4")]
+layout_mode = 2
+icon = ExtResource("12_fd8t5")
+
+[node name="welfare_icon" parent="VBoxContainer" instance=ExtResource("4")]
+layout_mode = 2
+icon = ExtResource("13_bf3g2")

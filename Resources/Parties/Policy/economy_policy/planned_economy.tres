@@ -1,12 +1,13 @@
-[gd_resource type="Resource" load_steps=2 format=3]
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://cre60p8ab1o6b"]
 
 [ext_resource type="Script" path="res://Resources/Parties/economy_policy.gd" id="1"]
 
 [resource]
-script = ExtResource( 1 )
-policy_name = "planned_economy"
+script = ExtResource("1")
 factory_cost = 0
 infrastructure_cost = 0
+taxes_efficiency = 0.2
 subsidization = true
-building_not_profit_factories = true
+building_np_factories = true
 private_property = false
+policy_name = "planned_economy"

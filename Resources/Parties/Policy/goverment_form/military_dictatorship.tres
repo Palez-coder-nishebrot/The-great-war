@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="GovernmentForm" load_steps=2 format=3 uid="uid://dx6fou7h6nliq"]
+
+[ext_resource type="Script" path="res://Resources/Parties/government_form.gd" id="1_3wpxv"]
+
+[resource]
+script = ExtResource("1_3wpxv")
+policy_name = "military_dictatorship"
+elections = false
+reforms_after_revolution = []

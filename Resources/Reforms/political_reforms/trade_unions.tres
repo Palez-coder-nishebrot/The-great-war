@@ -6,3 +6,4 @@
 script = ExtResource("1_dalai")
 levels = Array[Resource("res://Resources/reforms/reform_level.gd")]([])
 reform_name = ""
+reform_type = "pol_reform"

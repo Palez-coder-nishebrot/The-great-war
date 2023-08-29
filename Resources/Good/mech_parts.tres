@@ -11,4 +11,4 @@ min_price = 10
 max_price = 50
 icon = ExtResource("2")
 dp_effiency_production = 0.0
-factory_effiency_production = 0.5
+factory_effiency_production = 0.4

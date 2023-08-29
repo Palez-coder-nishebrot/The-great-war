@@ -4,16 +4,16 @@ extends Enterprise
 class_name Factory
 
 const expanding_cost:    float        = 200
-const min_clerks_salary: float        = 0.03
-const min_salary:        float        = 0.02
+const min_clerks_salary: float        = 3.5 * PopulationWorldManager.POP_COEF
+const min_salary:        float        = 2 * PopulationWorldManager.POP_COEF
 const time:              int          = 10
 var time_of_construction:int          = 0
 
 var based_profit:        float        = 0.0 # Прибыль, когда на заводе работает 1 рабочий
 var expenses_raw:        int          = 0
 var expenses_factory_equipment: int   = 0
-var real_max_employed_number:   int   = 1300
-var max_employed_number: int          = 1300
+var real_max_employed_number:   int   = 13000
+var max_employed_number: int          = 13000
 
 var workers_quantity:      float        = 0.0
 var clerks_quantity:       float        = 0.0

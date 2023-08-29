@@ -17,7 +17,7 @@ var unemployed_quantity: int = 0
 var money:             float = 0
 var income:            float = 0
 var expenses:          float = 0
-var literacy:          float = 40 # Макс. 100.0
+var literacy:          float = 40.0 # Макс. 100.0
 var parties_supporter:     PartiesSupporter    = PartiesSupporter.new()
 var reform_desire_manager: ReformDesireManager = ReformDesireManager.new(add_soc_reform_desire, add_pol_reform_desire)
 var population_type:   Resource
@@ -134,8 +134,12 @@ func add_pol_reform_desire(number):
 	pol_reform_desire += number
 
 
-func update_literacy():
-	pass
+func update_literacy(education_efficiency, education_cost):
+	if education_cost > 0:
+		var points = (education_efficiency + education_cost) * 0.1
+		literacy = snappedf(literacy + points, 0.01)
+		if literacy > 100.0:
+			literacy = 100.0
 
 
 func allocate_workers_to_factories(factory, workers_variable: String, avaliable_jobs):

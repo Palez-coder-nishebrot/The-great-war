@@ -1,10 +1,20 @@
 ,en
-factory_cost,Стоимость фабрик
-max_working_day,Макс. рабочий день
-min_salary,Минимальная зарплата
+labour_protection,Защита труда
+school_system,Школьная система
+working_hours,Рабочий день
+min_wage,Минимальная зарплата
 pensions,Пенсии
 unemployment_benefit,Пособия по безработице
 healthcare,Здравоохранение
+,
+factory_cost,Стоимость фабрик
+education_efficiency,Эфф-сть образования
+factory_efficiency,Эфф-сть фабрик
+min_wage_level,Уровень минимальной ЗП
+pension_payments,Выплаты пенсий
+unemployment_benefit_payments,Выплаты пособий
+population_growth,Прирост населения
+,
 parliamentary_elections,Выборы в парламент
 ruling_party_elections,Выборы правящей партии
 voting_rights,Избирательные права

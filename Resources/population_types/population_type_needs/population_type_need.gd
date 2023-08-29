@@ -9,4 +9,4 @@ class_name NeededGood
 
 
 func get_good_quantity():
-	return snappedf(quantity * 0.001, 0.00001)
+	return snappedf(quantity * PopulationWorldManager.POP_COEF * 0.1, 0.000001)

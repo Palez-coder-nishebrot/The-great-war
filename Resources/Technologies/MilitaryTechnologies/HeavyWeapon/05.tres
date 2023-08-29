@@ -1,32 +1,32 @@
-[gd_resource type="Resource" load_steps=9 format=2]
+[gd_resource type="Resource" script_class="Technology" load_steps=9 format=3 uid="uid://44jptv8f656l"]
 
-[ext_resource path="res://Resources/Technologies/Technology.gd" type="Script" id=1]
-[ext_resource path="res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectAttack.gd" type="Script" id=2]
-[ext_resource path="res://Resources/military_units/army_units_types/tanks.tres" type="Resource" id=3]
-[ext_resource path="res://Resources/military_units/army_units_types/artillery.tres" type="Resource" id=4]
-[ext_resource path="res://Resources/military_units/army_units_types/airplanes.tres" type="Resource" id=5]
+[ext_resource type="Script" path="res://Resources/Technologies/Technology.gd" id="1"]
+[ext_resource type="Script" path="res://Resources/Technologies/MilitaryTechnologies/Effects/TechnologyEffectAttack.gd" id="2"]
+[ext_resource type="Resource" path="res://Resources/military_units/army_units_types/tanks.tres" id="3"]
+[ext_resource type="Resource" path="res://Resources/military_units/army_units_types/artillery.tres" id="4"]
+[ext_resource type="Resource" path="res://Resources/military_units/army_units_types/airplanes.tres" id="5"]
 
-[sub_resource type="Resource" id=1]
-script = ExtResource( 2 )
+[sub_resource type="Resource" id="1"]
+script = ExtResource("2")
 name_of_effect = "Атака"
 power = 1
-target = ExtResource( 4 )
+target = ExtResource("4")
 
-[sub_resource type="Resource" id=2]
-script = ExtResource( 2 )
+[sub_resource type="Resource" id="2"]
+script = ExtResource("2")
 name_of_effect = "Атака"
 power = 1
-target = ExtResource( 5 )
+target = ExtResource("5")
 
-[sub_resource type="Resource" id=3]
-script = ExtResource( 2 )
+[sub_resource type="Resource" id="3"]
+script = ExtResource("2")
 name_of_effect = "Атака"
 power = 1
-target = ExtResource( 3 )
+target = ExtResource("3")
 
 [resource]
-script = ExtResource( 1 )
+script = ExtResource("1")
 cost = 1500
 activation_year = 1930
-name_of_technology = "modern_heavy_weapon"
-list_of_effects = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ]
+name_of_technology = "heavy_weapon_5"
+list_of_effects = Array[Resource("res://Resources/Technologies/TechnologyEffect.gd")]([SubResource("1"), SubResource("2"), SubResource("3")])

@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectProductionGoods.gd" id="1"]
 [ext_resource type="Script" path="res://Resources/Technologies/Technology.gd" id="2"]
-[ext_resource type="Resource" path="res://Resources/Good/iron.tres" id="3"]
-[ext_resource type="Resource" path="res://Resources/Good/steel.tres" id="4"]
-[ext_resource type="Resource" path="res://Resources/Good/coal.tres" id="5"]
+[ext_resource type="Resource" uid="uid://dm1c0og0w4de3" path="res://Resources/Good/iron.tres" id="3"]
+[ext_resource type="Resource" uid="uid://c64oytvdwhc6m" path="res://Resources/Good/steel.tres" id="4"]
+[ext_resource type="Resource" uid="uid://elav5270b0j0" path="res://Resources/Good/coal.tres" id="5"]
 
 [sub_resource type="Resource" id="1"]
 script = ExtResource("1")
@@ -28,5 +28,5 @@ target = ExtResource("4")
 script = ExtResource("2")
 cost = 1400
 activation_year = 1914
-name_of_technology = "modern_steel_cleaning"
+name_of_technology = "metallurgy_3"
 list_of_effects = Array[Resource("res://Resources/Technologies/TechnologyEffect.gd")]([SubResource("1"), SubResource("2"), SubResource("3")])

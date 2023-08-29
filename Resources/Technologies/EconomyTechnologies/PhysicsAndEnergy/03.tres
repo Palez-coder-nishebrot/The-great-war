@@ -12,5 +12,5 @@ power = 0.15
 script = ExtResource("1")
 cost = 1300
 activation_year = 1914
-name_of_technology = "synthetic_polymers"
+name_of_technology = "physics_and_energy_3"
 list_of_effects = Array[Resource("res://Resources/Technologies/TechnologyEffect.gd")]([SubResource("1")])

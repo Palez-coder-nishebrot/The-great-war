@@ -2,6 +2,7 @@ extends Node
 
 signal field_updated
 
+var game
 var camera
 var timer              = GlobalTimer.new()
 var population_manager = PopulationWorldManager.new()

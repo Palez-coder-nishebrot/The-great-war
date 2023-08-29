@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://daua65ky2j24w"
+
+[deps]
+
+files=["res://Localization/Gui/values.en.translation"]
+
+source_file="res://Localization/Gui/values.csv"
+dest_files=["res://Localization/Gui/values.en.translation"]
+
+[params]
+
+compress=true
+delimiter=0

@@ -11,10 +11,9 @@ signal update_employed_places
 #export(float) var worker_productivity = 1
 #export(Resource) var product
 #export(int) var money = 0
-
-const clerks_labour_productivity:    float = 0.02
-const craftsmen_labour_productivity: float = 0.01
-const labourers_labour_productivity: float = 0.009
+const clerks_labour_productivity:    float = 2 * PopulationWorldManager.POP_COEF
+const craftsmen_labour_productivity: float = 1 * PopulationWorldManager.POP_COEF
+const labourers_labour_productivity: float = 9 * 0.1 * PopulationWorldManager.POP_COEF
 const max_money:                  float = 500.0
 
 var good: Resource

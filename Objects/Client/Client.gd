@@ -10,14 +10,14 @@ signal research_completed # Сигнал вызывается!
 var population_units_list: Array = []
 var regions_list:          Array = []
 
-var political_manager:          PoliticalManager       = PoliticalManager.new()
-var research_manager:           ResearchManager        = ResearchManager.new()
 var economy_manager:            EconomyManager         = EconomyManager.new()
+var political_manager:          PoliticalManager       = PoliticalManager.new(self)
+var research_manager:           ResearchManager        = ResearchManager.new()
 var accounting_manager:         AccountingManager      = AccountingManager.new(self)
 var population_manager:         PopulationManager      = PopulationManager.new(self)
+var reforms_manager:            ReformsManager         = ReformsManager.new(self)
 
 var military_bonuses:         MilitaryBonuses        = MilitaryBonuses.new()
-var reforms_manager:          ReformsManager         = ReformsManager.new(self)
 
 var state_on_starting:        StateOnStartGame
 
@@ -34,10 +34,6 @@ var national_color:      Color
 @onready var game:       Node2D
 
 
-func _init():
-	var _err = research_manager.connect("research_completed", Callable(economy_manager, "set_enterprises_efficiency"))
-
-
 func register_region(region):
 	add_child(region)
 	regions_list.append(region)
@@ -50,6 +46,10 @@ func erase_region(region):
 	
 	for i in region.population.population_types:
 		population_units_list.erase(i)
+
+
+func get_education_cost():
+	return economy_manager.education_cost
 
 
 func get_pop_unit_for_migration(income: float, population_type: Resource):
