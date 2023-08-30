@@ -37,3 +37,4 @@ level_name = ""
 script = ExtResource("1_22680")
 levels = Array[Resource("res://Resources/reforms/reform_level.gd")]([SubResource("Resource_bt22t"), SubResource("Resource_5wjnk"), SubResource("Resource_w5gq4"), SubResource("Resource_knv7t"), SubResource("Resource_4apsj")])
 reform_name = "healthcare"
+reform_type = "soc_reform"

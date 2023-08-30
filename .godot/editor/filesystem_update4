@@ -17,3 +17,6 @@ res://Objects/Player/GUI_panels/buttons_panel/buttons_panel.tscn
 res://Objects/Player/GUI_panels/buttons_panel/ValueIcon.tscn
 res://Objects/Player/research_window/research_window.tscn
 res://Scenes/TileMap/TileMap.tscn
+res://Resources/reforms/social_reforms/healthcare.tres
+res://Resources/reforms/social_reforms/working_hours.tres
+res://Resources/reforms/Reform.gd
