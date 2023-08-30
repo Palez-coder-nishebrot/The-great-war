@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Technology" load_steps=5 format=3 uid="uid://dqjxoemurwj8o"]
+
+[ext_resource type="Script" path="res://Resources/Technologies/Technology.gd" id="1"]
+[ext_resource type="Script" path="res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectNewFactory.gd" id="1_gckeu"]
+[ext_resource type="Resource" uid="uid://cilfwi10fcm7u" path="res://Resources/Factories/TipesOfFactories/SentheticOilFactory.tres" id="2_l3y2g"]
+
+[sub_resource type="Resource" id="Resource_n1lf4"]
+script = ExtResource("1_gckeu")
+name_of_effect = "Новое сооружение"
+target = ExtResource("2_l3y2g")
+
+[resource]
+script = ExtResource("1")
+cost = 1500
+activation_year = 1914
+name_of_technology = "economic_structures_3"
+list_of_effects = Array[Resource("res://Resources/Technologies/TechnologyEffect.gd")]([SubResource("Resource_n1lf4")])

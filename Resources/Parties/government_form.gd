@@ -7,3 +7,4 @@ class_name GovernmentForm
 @export var elections: bool = false #Если выборов нет, то в Парламенте будет присутсвовать только прав. партия
 
 @export var reforms_after_revolution = [] # (Array, Resource)
+@export var avaliable_ideologies: Array[Ideology] = []

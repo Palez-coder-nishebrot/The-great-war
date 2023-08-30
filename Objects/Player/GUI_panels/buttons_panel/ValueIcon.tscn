@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://ddur287uur1cd"]
 
-[ext_resource type="Texture2D" uid="uid://bubh8msab4khv" path="res://Graphics/Sprites/GUI/Icons of windows/Cron.png" id="1"]
 [ext_resource type="Script" path="res://Objects/Player/GUI_panels/buttons_panel/ValueIcon.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://clud5qqc4i6h0" path="res://Graphics/Sprites/GUI/Icons of windows/ideology_icons/communists_icon.png" id="2_crqc5"]
 [ext_resource type="FontFile" uid="uid://dpaiod0xc1xgs" path="res://Graphics/Fonts/pixel_2.ttf" id="3_b8eyl"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_lm8lj"]
@@ -18,7 +18,8 @@ script = ExtResource("2")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 2
-texture = ExtResource("1")
+texture = ExtResource("2_crqc5")
+expand_mode = 2
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 2

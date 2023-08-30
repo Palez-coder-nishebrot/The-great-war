@@ -1,13 +1,5 @@
 extends Panel
 
-const form_of_goverment_sprite: Dictionary = {
-	"liberals": "res://Graphics/Sprites/GUI/Icons of windows/03.png",
-	"socialists":"res://Graphics/Sprites/GUI/Icons of windows/01.png",
-	"communists":"res://Graphics/Sprites/GUI/Icons of windows/02.png",
-	"fascists":"res://Graphics/Sprites/GUI/Icons of windows/05.png",
-	"conservators": "res://Graphics/Sprites/GUI/Icons of windows/04.png",
-}
-
 
 var windows: Array = [
 	"window_build_factory",
@@ -63,7 +55,8 @@ func update_information():
 	unemployed_icon.set_data(client.accounting_manager.unemployed_quantity)
 	literacy_icon.set_data(client.accounting_manager.population_literacy)
 	welfare_icon.set_data(client.accounting_manager.population_welfare)
-	research_points_icon.set_data(client.research_manager.researching_points)
+	research_points_icon.set_data(client.research_manager.researching_points_growth)
+	#ruling_party_icon.set_data(client.political_manager.ruling_party.party_name)
 	#ruling_party_icon.set_data(ruling_party.party_name, ruling_party.)
 	
 

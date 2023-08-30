@@ -32,6 +32,7 @@ var sprite_of_resource: Sprite2D
 
 
 func _ready():
+	texture_normal = load("res://Graphics/Sprites/Regions/new regions/" + name + ".png")
 	var _err = ManagerDay.connect("allocate_workers_to_factories", Callable(self, "allocate_workers_to_factories"))
 	_err     = ManagerDay.connect("allocate_workers_to_DP", Callable(self, "allocate_workers_to_DP"))
 	name_of_region_label.position = Vector2(size.x / 2, size.y / 2)

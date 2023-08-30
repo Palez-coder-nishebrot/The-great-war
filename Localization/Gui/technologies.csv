@@ -9,7 +9,7 @@ factory_production_1,Частичная автоматизация
 factory_production_2,Управление персоналом
 factory_production_3,Сборочные конвейеры
 factory_production_4,Посменная работа
-factory_production_5,Экономика труда
+factory_production_5,Передовое оборудование
 ,
 metallurgy_1,Конвертерные печи
 metallurgy_2,Электрометаллургия
@@ -17,17 +17,17 @@ metallurgy_3,Передовая очистка стали
 metallurgy_4,Дуговые электропечи
 metallurgy_5,Передовая выплавка стали
 ,
-infrastructure_1,
+infrastructure_1,Железные дороги
 infrastructure_2,Национальная ЖД система
 infrastructure_3,ЖД магистрали
 infrastructure_4,Ранние автобаны
 infrastructure_5,Современные автобаны
 ,
-economic_structures_1,Страховые фирмы
-economic_structures_2,Государственное вмешательство
-economic_structures_3,Взаимные фонды
-economic_structures_4,Массовая реклама
-economic_structures_5,Бюджетное накачивание
+economic_structures_1,Смешанная экономика
+economic_structures_2,Автаркия
+economic_structures_3,Централизованное планирование
+economic_structures_4,Импортозамещающая индустриализация
+economic_structures_5,Современная модель экономики
 ,
 army_managerement_1,Доктрина маневренной войны
 army_managerement_2,Эластичная оборона

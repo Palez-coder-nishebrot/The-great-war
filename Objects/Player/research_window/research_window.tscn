@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b2tfnwdynuxp0"]
+[gd_scene load_steps=9 format=3 uid="uid://b2tfnwdynuxp0"]
 
 [ext_resource type="Script" path="res://Objects/Player/research_window/ButtonsOfTipesTechnologies.gd" id="1"]
 [ext_resource type="Script" path="res://Objects/Player/research_window/research_window.gd" id="2"]
@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://dpaiod0xc1xgs" path="res://Graphics/Fonts/pixel_2.ttf" id="4"]
 [ext_resource type="Script" path="res://Objects/Player/research_window/ButtonOfTipeTechnology.gd" id="5"]
 [ext_resource type="Texture2D" uid="uid://dqcotlbaxn3v5" path="res://Graphics/Sprites/GUI/technology_button.png" id="5_7jvcu"]
+[ext_resource type="Texture2D" uid="uid://kwwekstdqhct" path="res://Graphics/Sprites/GUI/technology_button_2.png" id="6_ah8v2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n4j4p"]
 bg_color = Color(0.443137, 0.360784, 0.309804, 1)
@@ -18,7 +19,6 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_n4j4p")
 script = ExtResource("2")
 
 [node name="HBoxContainer" type="GridContainer" parent="."]
-visible = false
 custom_minimum_size = Vector2(1167, 525)
 layout_mode = 0
 offset_top = 57.0
@@ -103,6 +103,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="HBoxContainer2" type="GridContainer" parent="."]
+visible = false
 clip_contents = true
 custom_minimum_size = Vector2(1167, 525)
 layout_mode = 1
@@ -168,7 +169,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4")
 theme_override_font_sizes/font_size = 32
-text = "Инфраструктура и снабжение"
+text = "Инфраструктура"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -183,14 +184,14 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4")
 theme_override_font_sizes/font_size = 32
-text = "Структура экономики"
+text = "Гос. вмешательство"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Effects" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_top = 758.0
-offset_right = 488.0
+offset_top = 637.0
+offset_right = 582.0
 offset_bottom = 1016.0
 
 [node name="ButtonsOfTipesTechnologies" type="HBoxContainer" parent="."]
@@ -242,7 +243,7 @@ offset_top = -273.0
 offset_right = 476.0
 offset_bottom = -225.0
 theme_override_fonts/font = ExtResource("4")
-theme_override_font_sizes/font_size = 21
+theme_override_font_sizes/font_size = 24
 text = "Маневренная война"
 horizontal_alignment = 1
 
@@ -254,6 +255,7 @@ offset_top = -273.0
 offset_right = 230.0
 offset_bottom = -208.0
 texture_normal = ExtResource("5_7jvcu")
+texture_pressed = ExtResource("6_ah8v2")
 stretch_mode = 0
 script = ExtResource("3")
 
@@ -267,7 +269,7 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4")
 theme_override_font_sizes/font_size = 22
-text = "Передовая выплавк"
+text = "Передовая выплавка"
 horizontal_alignment = 1
 vertical_alignment = 1
 

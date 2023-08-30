@@ -10,5 +10,5 @@
 [resource]
 script = ExtResource("1")
 index_in_pop_types_list = 0
-display_name = "Рабочий"
+display_name = "labourers"
 needs = [ExtResource("3"), ExtResource("6"), ExtResource("2"), ExtResource("7"), ExtResource("4")]

@@ -22,3 +22,4 @@ raw = Array[ExtResource("2")]([SubResource("1"), SubResource("Resource_34qnj")])
 good = ExtResource("3")
 available_from_start = true
 construction_days = 3
+initial_max_workers = 5000

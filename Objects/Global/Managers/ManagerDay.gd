@@ -49,5 +49,4 @@ func update_economy():
 	SceneStorage.population_manager.meet_needs()#Купить товары для населения
 	emit_signal("update_prices")
 	emit_signal("set_accounting")
-	SceneStorage.population_manager.set_population_growth()
 	GlobalMarket.set_exporting_goods()

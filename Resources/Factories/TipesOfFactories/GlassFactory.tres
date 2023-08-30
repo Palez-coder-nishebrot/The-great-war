@@ -1,24 +1,20 @@
-[gd_resource type="Resource" script_class="FactoryTipe" load_steps=8 format=3 uid="uid://cddjqguykgja8"]
+[gd_resource type="Resource" script_class="FactoryTipe" load_steps=6 format=3 uid="uid://cddjqguykgja8"]
 
 [ext_resource type="Script" path="res://Resources/Factories/Factory.gd" id="1"]
 [ext_resource type="Script" path="res://Resources/Factories/Raw.gd" id="2"]
 [ext_resource type="Resource" uid="uid://bnhfsbwpo488q" path="res://Resources/Good/glass.tres" id="3"]
 [ext_resource type="Resource" uid="uid://elav5270b0j0" path="res://Resources/Good/coal.tres" id="4"]
-[ext_resource type="Script" path="res://Resources/Factories/factory_equipment.gd" id="4_rq6gh"]
 
 [sub_resource type="Resource" id="1"]
 script = ExtResource("2")
 good = ExtResource("4")
 quantity = 0.03
 
-[sub_resource type="Resource" id="Resource_4iaxw"]
-script = ExtResource("4_rq6gh")
-quantity = 0.01
-
 [resource]
 script = ExtResource("1")
 name_of_factory = "glass_factory"
-raw = Array[ExtResource("2")]([SubResource("1"), SubResource("Resource_4iaxw")])
+raw = Array[ExtResource("2")]([SubResource("1")])
 good = ExtResource("3")
 available_from_start = true
 construction_days = 3
+initial_max_workers = 5000

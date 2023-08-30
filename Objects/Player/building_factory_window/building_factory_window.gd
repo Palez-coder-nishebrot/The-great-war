@@ -26,7 +26,7 @@ func show_self(region_):
 
 func set_factory_buttons():
 	for i in Players.get_player_client().economy_manager.list_of_buildings:
-		var button = load("res://Objects/Player/Window_build_factory/factory_button/Button_factory.tscn").instantiate()
+		var button = load("res://Objects/Player/building_factory_window/factory_button/Button_factory.tscn").instantiate()
 		button.text = i.name_of_factory
 		button.factory = i
 		button.parent = self

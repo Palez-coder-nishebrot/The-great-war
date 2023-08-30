@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=10 format=3 uid="uid://c323lsu5gal61"]
+[gd_resource type="Resource" script_class="FactoryTipe" load_steps=10 format=3 uid="uid://c323lsu5gal61"]
 
 [ext_resource type="Resource" uid="uid://dm1c0og0w4de3" path="res://Resources/Good/iron.tres" id="1"]
 [ext_resource type="Script" path="res://Resources/Factories/Factory.gd" id="2"]
@@ -28,3 +28,4 @@ raw = Array[ExtResource("3")]([SubResource("1"), SubResource("2"), SubResource("
 good = ExtResource("4")
 available_from_start = true
 construction_days = 3
+initial_max_workers = 10000

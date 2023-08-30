@@ -56,6 +56,7 @@ func _init(client):
 	set_dict()
 	var _err = ManagerDay.connect("set_accounting", Callable(self, "set_info"))
 	_err     = ManagerDay.connect("clear_accounting", Callable(self, "clear_accounting"))
+	client.research_manager.accounting_value_getter = get_accounting_value
 	
 	population_units_getter = Callable(client, "get_population_units_list")
 	regions_list_getter     = Callable(client, "get_regions_list")

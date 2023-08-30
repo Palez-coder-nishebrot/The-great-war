@@ -68,11 +68,13 @@ func update_pop_unit_chars(unit, government_form, ruling_party):
 	var pop_type             = unit.population_type
 	
 	unit.update_aggressiveness(ruling_party, government_form)
-	unit.reform_desire_manager.update_soc_reform_desire(unemployment_percent,
-		pluralism, literacy, welfare, pop_type)
 	
 	if SceneStorage.game.data_manager.is_first_day_in_week():
 		unit.update_literacy(education_efficiency, education_cost_getter.call())
+		unit.increase_population_quantity(pop_growth_modifier)
+		unit.update_pluralism(government_form)
+		unit.reform_desire_manager.update_soc_reform_desire(unemployment_percent,
+			pluralism, literacy, welfare, pop_type)
 
 
 func _exit_tree():

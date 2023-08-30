@@ -197,9 +197,9 @@ ideology = ExtResource("14_12cw0")
 [node name="pop_values" type="VBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 712.0
-offset_top = 591.0
+offset_top = 620.0
 offset_right = 960.0
-offset_bottom = 868.0
+offset_bottom = 897.0
 theme_override_constants/separation = 9
 
 [node name="Label" type="Label" parent="pop_values"]

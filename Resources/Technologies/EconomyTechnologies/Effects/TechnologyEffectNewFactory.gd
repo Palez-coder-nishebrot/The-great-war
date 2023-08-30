@@ -2,25 +2,14 @@ extends TechnologyEffect
 
 class_name TechnologyEffectNewFactory
 
-@export var name_of_effect: String = "Новый тип завода"
+@export var name_of_effect: String = "Сооружение"
 
-@export var target = "Rubber_factory" # (String, "Rubber_factory", "Oil_factory", "Senthetic_textile_factory")
+@export var target: FactoryTipe
 
-
-#const list_of_factories: Dictionary = {
-#	"Rubber_factory": {
-#		"Кроны":           150,
-#		"Сталь":           2,
-#	}, 
-#	"Oil_factory": {
-#		"Кроны":           150,
-#		"Сталь":           2,
-#	},
-#}
 
 
 func get_effect():
-	return name_of_effect + ": " + target
+	return name_of_effect + ": " + tr(target.name_of_factory)
 
 
 func activate_effects(client):

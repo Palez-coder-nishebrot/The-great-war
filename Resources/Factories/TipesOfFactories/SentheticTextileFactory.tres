@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=10 format=3 uid="uid://dbp2mqscr4xoq"]
+[gd_resource type="Resource" script_class="FactoryTipe" load_steps=10 format=3 uid="uid://dbp2mqscr4xoq"]
 
 [ext_resource type="Script" path="res://Resources/Factories/Factory.gd" id="1"]
 [ext_resource type="Script" path="res://Resources/Factories/Raw.gd" id="2"]

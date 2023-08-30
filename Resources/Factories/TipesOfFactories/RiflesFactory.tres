@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=12 format=3 uid="uid://beodya4xly8h1"]
+[gd_resource type="Resource" script_class="FactoryTipe" load_steps=12 format=3 uid="uid://beodya4xly8h1"]
 
 [ext_resource type="Resource" uid="uid://c64oytvdwhc6m" path="res://Resources/Good/steel.tres" id="1"]
 [ext_resource type="Resource" uid="uid://c5kyu153f4ey" path="res://Resources/Good/lumber.tres" id="2"]

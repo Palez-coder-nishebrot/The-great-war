@@ -20,6 +20,7 @@ var expenses:          float = 0
 var literacy:          float = 40.0 # Макс. 100.0
 var parties_supporter:     PartiesSupporter    = PartiesSupporter.new()
 var reform_desire_manager: ReformDesireManager = ReformDesireManager.new(add_soc_reform_desire, add_pol_reform_desire)
+var soc_migration_manager: SocMigrationManager = SocMigrationManager.new()
 var population_type:   Resource
 var region:            Object
 
@@ -38,22 +39,9 @@ func clear_income_variable():
 	income = 0.0
 
 
-func emigrate_in_foreign_country():
-	pass
-
-
 func migrate_in_region(new_pop_unit: Region, pop_quantity):
 	quantity -= pop_quantity
 	new_pop_unit.quantity += pop_quantity
-
-
-func get_pop_units_for_migration():
-	if unemployed_quantity >= 6:
-		return 6
-	elif population_type == clerk_res:
-		return 2
-	else:
-		return 4
 
 
 func update_aggressiveness(ruling_party: PoliticalParty, government_form: GovernmentForm):
@@ -76,9 +64,7 @@ func update_aggressiveness(ruling_party: PoliticalParty, government_form: Govern
 	if parties_supporter.government_form_is_republic(government_form):
 		growth += 0.1
 	
-	if aggressiveness + growth > 0:
-		aggressiveness += growth
-	else: aggressiveness = 0.0
+	increase_value("aggressiveness", growth, 10.0)
 
 
 func update_pluralism(government_form: GovernmentForm):
@@ -102,9 +88,7 @@ func update_pluralism(government_form: GovernmentForm):
 		5:
 			growth += 0.4
 	
-	if pluralism + growth > 0:
-		pluralism += growth
-	else: pluralism = 0.0
+	increase_value("pluralism", growth, 10.0)
 
 
 func check_literacy_for_pluralism():
@@ -137,9 +121,7 @@ func add_pol_reform_desire(number):
 func update_literacy(education_efficiency, education_cost):
 	if education_cost > 0:
 		var points = (education_efficiency + education_cost) * 0.1
-		literacy = snappedf(literacy + points, 0.01)
-		if literacy > 100.0:
-			literacy = 100.0
+		increase_value("literacy", points, 100.0)
 
 
 func allocate_workers_to_factories(factory, workers_variable: String, avaliable_jobs):
@@ -166,3 +148,24 @@ func increase_workers_on_factory(factory, value):
 		factory.workers_quantity += value
 	else:
 		factory.clerks_quantity += value
+
+
+func increase_population_quantity(pop_growth_modifier):
+	var value = 0.0
+	
+	unemployed_quantity += value
+	quantity            += value
+	population_growth    = value
+
+
+func increase_value(variable_name, number, max_value):
+	var variable_value = get(variable_name)
+	
+	if variable_value + number < 0:
+		set(variable_name, 0.0)
+	
+	elif variable_value + number > max_value:
+		set(variable_name, max_value)
+	
+	else: 
+		set(variable_name, number + variable_value)

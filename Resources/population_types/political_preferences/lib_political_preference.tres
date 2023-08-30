@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="PoliticalPreference" load_steps=4 format=3 uid="uid://bruyn62xtxqo0"]
 
-[ext_resource type="Resource" path="res://Resources/Parties/Ideologies/Liberals.tres" id="1_skbx2"]
-[ext_resource type="Resource" path="res://Resources/Parties/Ideologies/Libertarians.tres" id="2_7oia3"]
+[ext_resource type="Resource" uid="uid://dvbrct83mhfi3" path="res://Resources/Parties/Ideologies/Liberals.tres" id="1_skbx2"]
+[ext_resource type="Resource" uid="uid://duh8h5p27isjj" path="res://Resources/Parties/Ideologies/Libertarians.tres" id="2_7oia3"]
 [ext_resource type="Script" path="res://Resources/population_types/political_preferences/political_preference.gd" id="3_1pgwe"]
 
 [resource]

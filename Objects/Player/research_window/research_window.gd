@@ -19,7 +19,7 @@ extends Panel
 	$HBoxContainer2/FarmProduction:      "physics_and_energy",
 	$HBoxContainer2/Metallurgy:          "metallurgy",
 	$HBoxContainer2/Infrastructure:      "infrastructure",
-	$HBoxContainer2/EconomicStructures:  "economic_structures",
+	$HBoxContainer2/EconomicStructures:  "state_intervention",
 }
 
 var showing_technology_branch: TechnologyBranch

@@ -1,179 +1,199 @@
-[gd_scene load_steps=175 format=3 uid="uid://30x2k38ivx3h"]
+[gd_scene load_steps=195 format=3 uid="uid://30x2k38ivx3h"]
 
 [ext_resource type="Script" path="res://Scenes/TileMap/TileMap.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://dvajwaaar4hot" path="res://Scenes/TileMap/Карта региона.png" id="2"]
 [ext_resource type="PackedScene" uid="uid://bdxl3vypql2ta" path="res://Objects/Tile/Point.tscn" id="4"]
-[ext_resource type="Texture2D" uid="uid://cy3g4v7x21ktd" path="res://Graphics/Sprites/Regions/Адамантия/Sprite-0059.png" id="13_hxi4k"]
-[ext_resource type="Resource" uid="uid://cs3jts051165o" path="res://Resources/Good/rubber.tres" id="14_v4afx"]
-[ext_resource type="Texture2D" uid="uid://bvmmbcgp5bfxm" path="res://Graphics/Sprites/Regions/Адамантия/Sprite-0060.png" id="16_5nxns"]
-[ext_resource type="Texture2D" uid="uid://b3vnnhrcv00bh" path="res://Graphics/Sprites/Regions/Адамантия/Sprite-0063.png" id="21_6m0dx"]
-[ext_resource type="Resource" uid="uid://dc6ynar0oh46s" path="res://Resources/Factories/TipesOfFactories/CharcoalFactory.tres" id="21_rv3gp"]
-[ext_resource type="Texture2D" uid="uid://bujo0p4umkmb0" path="res://Graphics/Sprites/Regions/Адамантия/Sprite-0064.png" id="24_1tjob"]
-[ext_resource type="Texture2D" uid="uid://dc0acwivquogk" path="res://Graphics/Sprites/Regions/Адамантия/Sprite-0065.png" id="25_h6mso"]
-[ext_resource type="Texture2D" uid="uid://b3aqiaqyi65sd" path="res://Graphics/Sprites/Regions/Адамантия/Sprite-0062.png" id="26_bkefg"]
-[ext_resource type="Texture2D" uid="uid://c4w8m36ug32y7" path="res://Graphics/Sprites/Regions/Адамантия/Sprite-0058.png" id="27_w4xg5"]
-[ext_resource type="Texture2D" uid="uid://dfeldjt6bc18j" path="res://Graphics/Sprites/Regions/Адамантия/Sprite-0066.png" id="28_p84vd"]
-[ext_resource type="Texture2D" uid="uid://qr7fgr8r7tol" path="res://Graphics/Sprites/Regions/Адамантия/Sprite-0061.png" id="29_1pd57"]
-[ext_resource type="Texture2D" uid="uid://rberged4rg7o" path="res://Graphics/Sprites/Regions/Балкария/Sprite-0019.png" id="32_v5pxl"]
-[ext_resource type="Texture2D" uid="uid://g8mtqrpghgt8" path="res://Graphics/Sprites/Regions/Балкария/Sprite-0017.png" id="33_q4bls"]
-[ext_resource type="Texture2D" uid="uid://baslmmakn0w47" path="res://Graphics/Sprites/Regions/Балкария/Sprite-0018.png" id="34_lmyqd"]
-[ext_resource type="Texture2D" uid="uid://cjjcubbw0ogpb" path="res://Graphics/Sprites/Regions/Балкария/Sprite-0016.png" id="36_m7a1d"]
-[ext_resource type="Texture2D" uid="uid://b5lwne2r6nwki" path="res://Graphics/Sprites/Regions/Балкария/Sprite-0021.png" id="37_npqrn"]
-[ext_resource type="Texture2D" uid="uid://rdrasl4gvswu" path="res://Graphics/Sprites/Regions/Балкария/Sprite-0015.png" id="38_0pn57"]
-[ext_resource type="Texture2D" uid="uid://cdo0dupds8m2a" path="res://Graphics/Sprites/Regions/Балкария/Sprite-0020.png" id="39_faof0"]
-[ext_resource type="Texture2D" uid="uid://cr05hma58ljun" path="res://Graphics/Sprites/Regions/Балкария/Sprite-0022.png" id="40_23uqe"]
-[ext_resource type="Texture2D" uid="uid://bjkd3attki23x" path="res://Graphics/Sprites/Regions/Баскакия/Sprite-0038.png" id="42_24s6b"]
-[ext_resource type="Texture2D" uid="uid://cn0kp75ylln7c" path="res://Graphics/Sprites/Regions/Баскакия/Sprite-0041.png" id="43_otaaj"]
-[ext_resource type="Texture2D" uid="uid://78rpt1r8cfgu" path="res://Graphics/Sprites/Regions/Баскакия/Sprite-0039.png" id="44_6c88k"]
-[ext_resource type="Texture2D" uid="uid://jathrapovdws" path="res://Graphics/Sprites/Regions/Баскакия/Sprite-0040.png" id="45_ul5b1"]
-[ext_resource type="Texture2D" uid="uid://cq34pf5ptsh1r" path="res://Graphics/Sprites/Regions/Баскакия/Sprite-0043.png" id="47_jp21j"]
-[ext_resource type="Texture2D" uid="uid://wat828ytb2er" path="res://Graphics/Sprites/Regions/Баскакия/Sprite-0042.png" id="48_pg1l2"]
-[ext_resource type="Texture2D" uid="uid://cieuo056vf8rg" path="res://Graphics/Sprites/Provinces/Теверция/Каунас.png" id="51"]
-[ext_resource type="Texture2D" uid="uid://bii5rx0fpm4r" path="res://Graphics/Sprites/Regions/Баскакия/Sprite-0045.png" id="51_3fwyt"]
-[ext_resource type="Texture2D" uid="uid://d38ngl0w51enq" path="res://Graphics/Sprites/Regions/Баскакия/Sprite-0048.png" id="52_15b18"]
-[ext_resource type="Texture2D" uid="uid://bmwpq8cjpua1d" path="res://Graphics/Sprites/Provinces/Теверция/Клайпеда.png" id="53"]
-[ext_resource type="Texture2D" uid="uid://d0ur4m6rj5itu" path="res://Graphics/Sprites/Regions/Баскакия/Sprite-0047.png" id="53_phlwx"]
-[ext_resource type="Texture2D" uid="uid://uhdj4d3qwdxr" path="res://Graphics/Sprites/Provinces/Теверция/Паневежис.png" id="54"]
-[ext_resource type="Texture2D" uid="uid://dtahto4avjhvl" path="res://Graphics/Sprites/Regions/Баскакия/Sprite-0049.png" id="54_lki5o"]
-[ext_resource type="Texture2D" uid="uid://c3onm08a64ofh" path="res://Graphics/Sprites/Regions/Баскакия/Sprite-0046.png" id="55_da7u5"]
-[ext_resource type="Texture2D" uid="uid://c2vegwm26d73n" path="res://Graphics/Sprites/Regions/Баскакия/Sprite-0044.png" id="56_rhapb"]
-[ext_resource type="Texture2D" uid="uid://bdrpqb3heoph2" path="res://Graphics/Sprites/Regions/Баскакия/Sprite-0037.png" id="57_36gfv"]
-[ext_resource type="Texture2D" uid="uid://3vqys1vpby4w" path="res://Graphics/Sprites/Regions/БТК/03.png" id="58_lkjt2"]
-[ext_resource type="Texture2D" uid="uid://btr7v1acevjvt" path="res://Graphics/Sprites/Regions/БТК/Куманово.png" id="59_xgynq"]
-[ext_resource type="Texture2D" uid="uid://c5jsglbx37vsx" path="res://Graphics/Sprites/Regions/БТК/Тетово.png" id="60_gj0f0"]
-[ext_resource type="Texture2D" uid="uid://rr3krspipyef" path="res://Graphics/Sprites/Regions/БТК/Охрид.png" id="61_wk68t"]
-[ext_resource type="Texture2D" uid="uid://b3swk2o4gdigc" path="res://Graphics/Sprites/Regions/БТК/02.png" id="62_crpqk"]
-[ext_resource type="Texture2D" uid="uid://cu0gyuq3l1owm" path="res://Graphics/Sprites/Regions/БТК/Скопье.png" id="63_5c7cm"]
-[ext_resource type="Texture2D" uid="uid://bcvsdj68fysxd" path="res://Graphics/Sprites/Regions/БТК/Гевгелия.png" id="64_c6f25"]
-[ext_resource type="Texture2D" uid="uid://ss3ke3g02g33" path="res://Graphics/Sprites/Regions/БТК/01.png" id="65_wdjbi"]
-[ext_resource type="Texture2D" uid="uid://dounkinu72rov" path="res://Graphics/Sprites/Regions/Горния/Sprite-0024.png" id="67_dk6hh"]
-[ext_resource type="Texture2D" uid="uid://ce55aisoo0ii2" path="res://Graphics/Sprites/Regions/Горния/Sprite-0023.png" id="68_u3wy3"]
-[ext_resource type="Texture2D" uid="uid://cvqsxjkgom5xg" path="res://Graphics/Sprites/Regions/Горния/Sprite-0025.png" id="69_5v0tw"]
-[ext_resource type="Texture2D" uid="uid://kqtu5cqyw45u" path="res://Graphics/Sprites/Regions/Горния/Sprite-0026.png" id="70_nij0p"]
-[ext_resource type="Texture2D" uid="uid://d0tjadmesx4cj" path="res://Graphics/Sprites/Regions/Горния/Sprite-0027.png" id="71_2rr6k"]
-[ext_resource type="Texture2D" uid="uid://dqxs1migaegbj" path="res://Graphics/Sprites/Regions/Горния/Sprite-0028.png" id="72_ys0wr"]
-[ext_resource type="Texture2D" uid="uid://ojux33wck1ts" path="res://Graphics/Sprites/Regions/Горния/Sprite-0029.png" id="73_btmcy"]
+[ext_resource type="Texture2D" uid="uid://bxgexd6rkf60s" path="res://Graphics/Sprites/Regions/new regions/1.png" id="13_q4kxf"]
+[ext_resource type="Texture2D" uid="uid://ct1xgaks6o775" path="res://Graphics/Sprites/Regions/new regions/2.png" id="15_ukd11"]
+[ext_resource type="Texture2D" uid="uid://bp5euqno8dgg5" path="res://Graphics/Sprites/Regions/new regions/3.png" id="17_wasi5"]
+[ext_resource type="Texture2D" uid="uid://tp3x4xlelik8" path="res://Graphics/Sprites/Regions/new regions/4.png" id="19_55ecy"]
+[ext_resource type="Texture2D" uid="uid://datp8fhg2dxrk" path="res://Graphics/Sprites/Regions/new regions/5.png" id="20_v2j12"]
+[ext_resource type="Texture2D" uid="uid://dgiskmuvkamt0" path="res://Graphics/Sprites/Regions/new regions/6.png" id="21_io4md"]
+[ext_resource type="Texture2D" uid="uid://bgspykn51w20d" path="res://Graphics/Sprites/Regions/new regions/7.png" id="22_7ikdu"]
+[ext_resource type="Texture2D" uid="uid://buultrr6ot46v" path="res://Graphics/Sprites/Regions/new regions/8.png" id="23_hjv7n"]
+[ext_resource type="Texture2D" uid="uid://buvecaj55rtk7" path="res://Graphics/Sprites/Regions/new regions/9.png" id="24_ocl4r"]
+[ext_resource type="Texture2D" uid="uid://depps6qrg7wys" path="res://Graphics/Sprites/Regions/new regions/10.png" id="25_tapmd"]
+[ext_resource type="Texture2D" uid="uid://dugfrqvwou5fh" path="res://Graphics/Sprites/Regions/new regions/11.png" id="26_ocmx4"]
+[ext_resource type="Texture2D" uid="uid://d3nkmrjah6bje" path="res://Graphics/Sprites/Regions/new regions/12.png" id="28_4ix1k"]
+[ext_resource type="Texture2D" uid="uid://df62orbk0tw37" path="res://Graphics/Sprites/Regions/new regions/13.png" id="30_et55k"]
+[ext_resource type="Texture2D" uid="uid://ct5ovvrp7cmv1" path="res://Graphics/Sprites/Regions/new regions/14.png" id="32_umopq"]
+[ext_resource type="Texture2D" uid="uid://3k73ds0wngbr" path="res://Graphics/Sprites/Regions/new regions/15.png" id="33_xaex8"]
+[ext_resource type="Texture2D" uid="uid://bptbxtavt4qvs" path="res://Graphics/Sprites/Regions/new regions/16.png" id="34_ma5j5"]
+[ext_resource type="Texture2D" uid="uid://drl1rk6jt6xou" path="res://Graphics/Sprites/Regions/new regions/17.png" id="37_74bql"]
+[ext_resource type="Texture2D" uid="uid://cokmeaxq66574" path="res://Graphics/Sprites/Regions/new regions/18.png" id="38_brkxm"]
+[ext_resource type="Texture2D" uid="uid://df7rru8dayd0u" path="res://Graphics/Sprites/Regions/new regions/19.png" id="39_o2c2m"]
+[ext_resource type="Texture2D" uid="uid://fyddk8t51l0e" path="res://Graphics/Sprites/Regions/new regions/20.png" id="40_5xcm2"]
+[ext_resource type="Texture2D" uid="uid://chi31qyfqsnry" path="res://Graphics/Sprites/Regions/new regions/21.png" id="41_mlihx"]
+[ext_resource type="Texture2D" uid="uid://b8o2rmod5rdks" path="res://Graphics/Sprites/Regions/new regions/22.png" id="42_y24ig"]
+[ext_resource type="Texture2D" uid="uid://birs7rxhbqpdu" path="res://Graphics/Sprites/Regions/new regions/23.png" id="43_m2yyi"]
+[ext_resource type="Texture2D" uid="uid://bgt48msfkvael" path="res://Graphics/Sprites/Regions/new regions/24.png" id="44_yjv58"]
+[ext_resource type="Texture2D" uid="uid://dk5crg4007gwf" path="res://Graphics/Sprites/Regions/new regions/25.png" id="45_nhvv7"]
+[ext_resource type="Texture2D" uid="uid://c8cj6jjinrbc5" path="res://Graphics/Sprites/Regions/new regions/26.png" id="46_m45hk"]
+[ext_resource type="Texture2D" uid="uid://c0aq10xarfpir" path="res://Graphics/Sprites/Regions/new regions/27.png" id="47_rhq11"]
+[ext_resource type="Texture2D" uid="uid://besj18yeay8mw" path="res://Graphics/Sprites/Regions/new regions/28.png" id="48_uh24u"]
+[ext_resource type="Texture2D" uid="uid://cw8kuy3ep37mv" path="res://Graphics/Sprites/Regions/new regions/29.png" id="49_kd8ng"]
+[ext_resource type="Texture2D" uid="uid://del1opve70ykr" path="res://Graphics/Sprites/Regions/new regions/30.png" id="50_pykon"]
+[ext_resource type="Texture2D" uid="uid://cxta8l4xfwikp" path="res://Graphics/Sprites/Regions/new regions/31.png" id="51_7p8ux"]
+[ext_resource type="Texture2D" uid="uid://cgs142aic13u3" path="res://Graphics/Sprites/Regions/new regions/32.png" id="52_mqqbw"]
+[ext_resource type="Texture2D" uid="uid://d0bsemjkt6flu" path="res://Graphics/Sprites/Regions/new regions/33.png" id="53_y4d2q"]
+[ext_resource type="Texture2D" uid="uid://cm5gvhf8s8odx" path="res://Graphics/Sprites/Regions/new regions/34.png" id="54_glb6r"]
+[ext_resource type="Texture2D" uid="uid://bmjalctkponi1" path="res://Graphics/Sprites/Regions/new regions/35.png" id="55_052vr"]
+[ext_resource type="Texture2D" uid="uid://c7noi3k16a13l" path="res://Graphics/Sprites/Regions/new regions/36.png" id="56_d7jyh"]
+[ext_resource type="Texture2D" uid="uid://cjhrm842jvc5o" path="res://Graphics/Sprites/Regions/new regions/37.png" id="57_hphev"]
+[ext_resource type="Texture2D" uid="uid://jpq1l2s75qgs" path="res://Graphics/Sprites/Regions/new regions/38.png" id="58_y15tg"]
+[ext_resource type="Texture2D" uid="uid://up5yq6auddd1" path="res://Graphics/Sprites/Regions/new regions/39.png" id="59_7lljj"]
+[ext_resource type="Texture2D" uid="uid://c5n4fo6af1ey1" path="res://Graphics/Sprites/Regions/new regions/40.png" id="60_lxvx6"]
+[ext_resource type="Texture2D" uid="uid://bcyvef76v1ggv" path="res://Graphics/Sprites/Regions/new regions/41.png" id="61_bit4w"]
+[ext_resource type="Texture2D" uid="uid://e773kxlgblvy" path="res://Graphics/Sprites/Regions/new regions/42.png" id="62_mwcni"]
+[ext_resource type="Texture2D" uid="uid://nxkru6qckeui" path="res://Graphics/Sprites/Regions/new regions/43.png" id="63_1o0ok"]
+[ext_resource type="Texture2D" uid="uid://bs8hvyvmie3ui" path="res://Graphics/Sprites/Regions/new regions/44.png" id="65_85w30"]
+[ext_resource type="Texture2D" uid="uid://qa2yb7qnxa48" path="res://Graphics/Sprites/Regions/new regions/45.png" id="66_0v68l"]
+[ext_resource type="Texture2D" uid="uid://bjtpysbmdwswy" path="res://Graphics/Sprites/Regions/new regions/46.png" id="67_24tlt"]
+[ext_resource type="Texture2D" uid="uid://cdxspa4wi6kja" path="res://Graphics/Sprites/Regions/new regions/47.png" id="68_d0ed2"]
+[ext_resource type="Texture2D" uid="uid://d0gdeh8ea2yi1" path="res://Graphics/Sprites/Regions/new regions/48.png" id="69_gj5m0"]
+[ext_resource type="Texture2D" uid="uid://b53jlrjqycq73" path="res://Graphics/Sprites/Regions/new regions/49.png" id="70_jd8tj"]
+[ext_resource type="Texture2D" uid="uid://bb4kxanqyr1vx" path="res://Graphics/Sprites/Regions/new regions/50.png" id="71_qmkc7"]
+[ext_resource type="Texture2D" uid="uid://57ra4qprdpne" path="res://Graphics/Sprites/Regions/new regions/51.png" id="72_2bfhc"]
+[ext_resource type="Texture2D" uid="uid://22ppj2oc1i45" path="res://Graphics/Sprites/Regions/new regions/52.png" id="73_01328"]
+[ext_resource type="Texture2D" uid="uid://cpkjf0ou8b1b1" path="res://Graphics/Sprites/Regions/new regions/53.png" id="74_7ar8j"]
+[ext_resource type="Texture2D" uid="uid://craxy3f0gqv16" path="res://Graphics/Sprites/Regions/new regions/54.png" id="75_53pg0"]
+[ext_resource type="Texture2D" uid="uid://dxkwlbn4ct8mb" path="res://Graphics/Sprites/Regions/new regions/55.png" id="76_5h73o"]
 [ext_resource type="Resource" uid="uid://cddjqguykgja8" path="res://Resources/Factories/TipesOfFactories/GlassFactory.tres" id="77_fbuxq"]
-[ext_resource type="Texture2D" uid="uid://buqsqtkm7ry3v" path="res://Graphics/Sprites/Regions/Иллирия/Sprite-0109.png" id="77_o4ohc"]
-[ext_resource type="Texture2D" uid="uid://dk22t4sbov600" path="res://Graphics/Sprites/Regions/Иллирия/Sprite-0107.png" id="78_agr6j"]
 [ext_resource type="Resource" uid="uid://cbpwf7sg1hxn5" path="res://Resources/Factories/TipesOfFactories/Distillery.tres" id="78_dencq"]
-[ext_resource type="Texture2D" uid="uid://cmhpdv1j22ju5" path="res://Graphics/Sprites/Regions/Иллирия/Sprite-0106.png" id="79_0m1r6"]
-[ext_resource type="Texture2D" uid="uid://dy6dw7jnseayi" path="res://Graphics/Sprites/Regions/Иллирия/Sprite-0105.png" id="80_qg7ra"]
-[ext_resource type="Texture2D" uid="uid://dvcv1fis77kyb" path="res://Graphics/Sprites/Regions/Иллирия/Sprite-0108.png" id="81_adb4j"]
+[ext_resource type="Texture2D" uid="uid://dqvasj8csw6vx" path="res://Graphics/Sprites/Regions/new regions/56.png" id="78_vyuy8"]
+[ext_resource type="Texture2D" uid="uid://66jqupmo2wq1" path="res://Graphics/Sprites/Regions/new regions/57.png" id="79_a633h"]
+[ext_resource type="Texture2D" uid="uid://4hruoxwtqlmh" path="res://Graphics/Sprites/Regions/new regions/58.png" id="80_kyxkg"]
+[ext_resource type="Texture2D" uid="uid://dmek7u0xhin53" path="res://Graphics/Sprites/Regions/new regions/59.png" id="81_0hg7v"]
 [ext_resource type="Resource" uid="uid://b1wqxe257cfu5" path="res://Resources/Factories/TipesOfFactories/SteelPlant.tres" id="82_dlsmy"]
+[ext_resource type="Texture2D" uid="uid://banvtnoou04sv" path="res://Graphics/Sprites/Regions/new regions/60.png" id="82_mglgc"]
 [ext_resource type="Resource" uid="uid://cde8mfjdld8wo" path="res://Resources/Factories/TipesOfFactories/MechPartsFactory.tres" id="83_hffge"]
-[ext_resource type="Texture2D" uid="uid://10x5wrlortoi" path="res://Graphics/Sprites/Regions/Кавардация/Sprite-0087.png" id="83_iec88"]
-[ext_resource type="Texture2D" uid="uid://hkqilsedv7i6" path="res://Graphics/Sprites/Regions/Кавардация/Sprite-0102.png" id="84_n2b4i"]
-[ext_resource type="Texture2D" uid="uid://chbynixe4y2g2" path="res://Graphics/Sprites/Regions/Кавардация/Sprite-0103.png" id="85_fbst4"]
-[ext_resource type="Texture2D" uid="uid://b453jrjqimbls" path="res://Graphics/Sprites/Regions/Кавардация/Sprite-0088.png" id="86_opsh5"]
-[ext_resource type="Texture2D" uid="uid://bnuqdkipb5jp4" path="res://Graphics/Sprites/Regions/Кавардация/Sprite-0086.png" id="87_mgumm"]
-[ext_resource type="Texture2D" uid="uid://cqf0del1mhgig" path="res://Graphics/Sprites/Regions/Кавардация/Sprite-0085.png" id="88_175i2"]
-[ext_resource type="Texture2D" uid="uid://bsgbga2noe855" path="res://Graphics/Sprites/Regions/Кавардация/Sprite-0081.png" id="89_qmxot"]
-[ext_resource type="Texture2D" uid="uid://dvsow0lgaoqhx" path="res://Graphics/Sprites/Regions/Кавардация/Sprite-0083.png" id="90_xai44"]
-[ext_resource type="Texture2D" uid="uid://cnp56bdyuwot5" path="res://Graphics/Sprites/Regions/Кавардация/Sprite-0082.png" id="91_3r4hu"]
-[ext_resource type="Texture2D" uid="uid://cr1ftf5o2w813" path="res://Graphics/Sprites/Regions/Кавардация/Sprite-0084.png" id="92_1eq5g"]
-[ext_resource type="Texture2D" uid="uid://usa0ui4rki0j" path="res://Graphics/Sprites/Regions/Кракожия/Лесковац.png" id="92_gocys"]
-[ext_resource type="Texture2D" uid="uid://cmxphij08ts7g" path="res://Graphics/Sprites/Regions/Кракожия/Белград.png" id="93_e8ppm"]
-[ext_resource type="Texture2D" uid="uid://e5k6n22sdqdt" path="res://Graphics/Sprites/Regions/Кракожия/Ниш.png" id="94_covhs"]
-[ext_resource type="Texture2D" uid="uid://dcytcd8dbcfm" path="res://Graphics/Sprites/Regions/Кракожия/01.png" id="95_j56n8"]
-[ext_resource type="Texture2D" uid="uid://ipix0u7ckdgk" path="res://Graphics/Sprites/Regions/Кракожия/Пожаревац.png" id="96_78dml"]
-[ext_resource type="Texture2D" uid="uid://c3b8546m6jxpo" path="res://Graphics/Sprites/Regions/Кракожия/Нови-сад.png" id="97_jso4k"]
-[ext_resource type="Texture2D" uid="uid://dw4exmlcc4526" path="res://Graphics/Sprites/Provinces/Роксолания/Вильянди.png" id="98"]
-[ext_resource type="Resource" uid="uid://b1c0ctapnvwt3" path="res://Resources/Factories/TipesOfFactories/TextileFactory.tres" id="98_nel8t"]
-[ext_resource type="Texture2D" uid="uid://fhfouboh61su" path="res://Graphics/Sprites/Provinces/Роксолания/Пярну.png" id="99"]
-[ext_resource type="Texture2D" uid="uid://bl0wo33fv4h8l" path="res://Graphics/Sprites/Provinces/Роксолания/Раквере.png" id="100"]
-[ext_resource type="Texture2D" uid="uid://bqc2m2lomx6yh" path="res://Graphics/Sprites/Provinces/Роксолания/Силламяэ.png" id="101"]
-[ext_resource type="Texture2D" uid="uid://beqjcpthi5p8b" path="res://Graphics/Sprites/Regions/Насардия/Донецк.png" id="101_vhp7j"]
-[ext_resource type="Texture2D" uid="uid://dtekmyoojah7x" path="res://Graphics/Sprites/Provinces/Роксолания/Тарту.png" id="102"]
-[ext_resource type="Texture2D" uid="uid://blnckkjujmm0g" path="res://Graphics/Sprites/Regions/Насардия/Ченстохова.png" id="102_l50aw"]
-[ext_resource type="Texture2D" uid="uid://d4nirp6q4fgy" path="res://Graphics/Sprites/Provinces/Роксолания/Курессааре.png" id="103"]
-[ext_resource type="Texture2D" uid="uid://b3qyfijw4tuh4" path="res://Graphics/Sprites/Regions/Насардия/Катовице.png" id="103_sr0ff"]
-[ext_resource type="Texture2D" uid="uid://cnmij8bfyit74" path="res://Graphics/Sprites/Provinces/Роксолания/Хаапсалу.png" id="104"]
-[ext_resource type="Texture2D" uid="uid://ug2udqtbvgo5" path="res://Graphics/Sprites/Regions/Насардия/Николаев.png" id="104_teuwx"]
-[ext_resource type="Texture2D" uid="uid://clrvgmwi45kfy" path="res://Graphics/Sprites/Provinces/Теверция/Алитус.png" id="105"]
-[ext_resource type="Texture2D" uid="uid://b5um5sn5ah2pg" path="res://Graphics/Sprites/Regions/Насардия/Берегово.png" id="105_oo2uk"]
-[ext_resource type="Texture2D" uid="uid://cujdqi7cp46t4" path="res://Graphics/Sprites/Regions/Насардия/Буковина.png" id="106_hvo4v"]
-[ext_resource type="Texture2D" uid="uid://dl5t0cejxd11a" path="res://Graphics/Sprites/Regions/Насардия/Пшемысль.png" id="107_15k1t"]
-[ext_resource type="Texture2D" uid="uid://bjhb56ah8e1pe" path="res://Graphics/Sprites/Regions/Насардия/Стецки.png" id="108_cu3an"]
-[ext_resource type="Texture2D" uid="uid://b661na8s3rd7" path="res://Graphics/Sprites/Regions/Насардия/Сегед.png" id="109_45cs2"]
-[ext_resource type="Texture2D" uid="uid://cdbqonylctdcn" path="res://Graphics/Sprites/Regions/Насардия/01.png" id="110_uqpx5"]
-[ext_resource type="Texture2D" uid="uid://dg3y2bcwb5ime" path="res://Graphics/Sprites/Regions/Поляния/Sprite-0052.png" id="111_3xpct"]
-[ext_resource type="Texture2D" uid="uid://dj6hom73j0mqv" path="res://Graphics/Sprites/Regions/Насардия/02.png" id="111_w2vrx"]
-[ext_resource type="Texture2D" uid="uid://cb520yfccpvvi" path="res://Graphics/Sprites/Regions/Насардия/03.png" id="112_qbity"]
-[ext_resource type="Texture2D" uid="uid://f6nttnqa0jlt" path="res://Graphics/Sprites/Regions/Поляния/Sprite-0051.png" id="112_wvaaj"]
-[ext_resource type="Texture2D" uid="uid://bb3jfi5pkfft2" path="res://Graphics/Sprites/Regions/Поляния/Sprite-0050.png" id="113_bkn73"]
-[ext_resource type="Texture2D" uid="uid://b8ooc13yleeyv" path="res://Graphics/Sprites/Regions/Поляния/Sprite-0054.png" id="114_086pr"]
-[ext_resource type="Texture2D" uid="uid://jxve02qronni" path="res://Graphics/Sprites/Regions/Поляния/Sprite-0055.png" id="115_mc00x"]
+[ext_resource type="Texture2D" uid="uid://b4yvg7gwtag7d" path="res://Graphics/Sprites/Regions/new regions/61.png" id="83_wvu8h"]
+[ext_resource type="Texture2D" uid="uid://cyn21ry8n00pg" path="res://Graphics/Sprites/Regions/new regions/62.png" id="84_o7m11"]
+[ext_resource type="Texture2D" uid="uid://dvh1wc8godvj1" path="res://Graphics/Sprites/Regions/new regions/63.png" id="85_425c8"]
+[ext_resource type="Texture2D" uid="uid://btqjkrfxdrrt2" path="res://Graphics/Sprites/Regions/new regions/64.png" id="86_o4b0l"]
+[ext_resource type="Texture2D" uid="uid://br8c8bi3cw1w6" path="res://Graphics/Sprites/Regions/new regions/65.png" id="87_n0a0c"]
+[ext_resource type="Texture2D" uid="uid://b5gmlr1yahnlf" path="res://Graphics/Sprites/Regions/new regions/66.png" id="88_hqmen"]
+[ext_resource type="Texture2D" uid="uid://65crw2n371jh" path="res://Graphics/Sprites/Regions/new regions/67.png" id="89_yi3m0"]
+[ext_resource type="Texture2D" uid="uid://c7lb6wni0q210" path="res://Graphics/Sprites/Regions/new regions/68.png" id="91_i65b5"]
+[ext_resource type="Texture2D" uid="uid://ptq7ccivvhgv" path="res://Graphics/Sprites/Regions/new regions/69.png" id="92_s3wjh"]
+[ext_resource type="Texture2D" uid="uid://htgcsfc7n70r" path="res://Graphics/Sprites/Regions/new regions/70.png" id="93_bge3u"]
+[ext_resource type="Texture2D" uid="uid://rsur02adpc6l" path="res://Graphics/Sprites/Regions/new regions/71.png" id="94_js0oa"]
+[ext_resource type="Texture2D" uid="uid://cachckqka7uxy" path="res://Graphics/Sprites/Regions/new regions/72.png" id="95_c3pa6"]
+[ext_resource type="Texture2D" uid="uid://bjkpm0buamvro" path="res://Graphics/Sprites/Regions/new regions/73.png" id="96_x5nfr"]
+[ext_resource type="Texture2D" uid="uid://dfphnyi488dkw" path="res://Graphics/Sprites/Regions/new regions/74.png" id="97_p4n33"]
+[ext_resource type="Texture2D" uid="uid://brpjp7qxqdvkm" path="res://Graphics/Sprites/Regions/new regions/75.png" id="98_wjk5i"]
+[ext_resource type="Texture2D" uid="uid://bs6i36prieubt" path="res://Graphics/Sprites/Regions/new regions/76.png" id="99_jgie6"]
+[ext_resource type="Texture2D" uid="uid://bgpt0202h4oir" path="res://Graphics/Sprites/Regions/new regions/77.png" id="100_yqnwh"]
+[ext_resource type="Texture2D" uid="uid://rvkjg7arhriu" path="res://Graphics/Sprites/Regions/new regions/78.png" id="101_igfku"]
+[ext_resource type="Texture2D" uid="uid://dy8expwbpj2ug" path="res://Graphics/Sprites/Regions/new regions/79.png" id="102_xg8mk"]
+[ext_resource type="Texture2D" uid="uid://br0bxvhnlj1o1" path="res://Graphics/Sprites/Regions/new regions/80.png" id="103_yr1c5"]
+[ext_resource type="Texture2D" uid="uid://bvywmtwycgvg1" path="res://Graphics/Sprites/Regions/new regions/81.png" id="104_qjrfd"]
+[ext_resource type="Texture2D" uid="uid://cq20hq3fjbbqn" path="res://Graphics/Sprites/Regions/new regions/82.png" id="105_dd5vr"]
+[ext_resource type="Texture2D" uid="uid://dsi6xr5xfobbo" path="res://Graphics/Sprites/Regions/new regions/83.png" id="106_8o8y7"]
+[ext_resource type="Texture2D" uid="uid://c0qnqrrdnnas8" path="res://Graphics/Sprites/Regions/new regions/84.png" id="107_ho3qu"]
+[ext_resource type="Texture2D" uid="uid://c72ys7m4ivvr1" path="res://Graphics/Sprites/Regions/new regions/85.png" id="108_ebak0"]
+[ext_resource type="Texture2D" uid="uid://bae27dpj6so68" path="res://Graphics/Sprites/Regions/new regions/86.png" id="109_geb24"]
+[ext_resource type="Texture2D" uid="uid://ca56oydn5xg0h" path="res://Graphics/Sprites/Regions/new regions/87.png" id="111_do4fs"]
+[ext_resource type="Texture2D" uid="uid://didvjvm37cbnt" path="res://Graphics/Sprites/Regions/new regions/88.png" id="112_e3sbl"]
+[ext_resource type="Texture2D" uid="uid://ym1cxoemvmdu" path="res://Graphics/Sprites/Regions/new regions/89.png" id="113_vey6i"]
+[ext_resource type="Texture2D" uid="uid://cr6ai8g0psdm7" path="res://Graphics/Sprites/Regions/new regions/90.png" id="114_sotxu"]
+[ext_resource type="Texture2D" uid="uid://c2i4f8q27kvks" path="res://Graphics/Sprites/Regions/new regions/91.png" id="115_llryh"]
 [ext_resource type="PackedScene" path="res://Objects/Province/province.tscn" id="116"]
-[ext_resource type="Texture2D" uid="uid://d3lrljfgau8r8" path="res://Graphics/Sprites/Regions/Поляния/Sprite-0053.png" id="116_xch8a"]
+[ext_resource type="Texture2D" uid="uid://bws4a3dujbkiv" path="res://Graphics/Sprites/Regions/new regions/92.png" id="116_b2ptv"]
 [ext_resource type="PackedScene" path="res://Objects/Province/border.tscn" id="117"]
+[ext_resource type="Texture2D" uid="uid://b742cmusmo1m" path="res://Graphics/Sprites/Regions/new regions/93.png" id="117_xchqa"]
 [ext_resource type="PackedScene" path="res://Objects/Province/border_part.tscn" id="118"]
+[ext_resource type="Texture2D" uid="uid://82v80rm0wmp8" path="res://Graphics/Sprites/Regions/new regions/94.png" id="118_3yh1g"]
 [ext_resource type="PackedScene" path="res://Objects/Country/country.tscn" id="119"]
+[ext_resource type="Texture2D" uid="uid://s671a227rbgv" path="res://Graphics/Sprites/Regions/new regions/95.png" id="119_5s25c"]
 [ext_resource type="PackedScene" path="res://Objects/Country/country_border.tscn" id="120"]
+[ext_resource type="Texture2D" uid="uid://brnnd68t7645g" path="res://Graphics/Sprites/Regions/new regions/96.png" id="120_r7hkm"]
 [ext_resource type="PackedScene" path="res://Objects/Country/province_container.tscn" id="121"]
+[ext_resource type="Texture2D" uid="uid://h78u33nwjyqr" path="res://Graphics/Sprites/Regions/new regions/97.png" id="121_jw17d"]
 [ext_resource type="PackedScene" path="res://Objects/MapNameLabel/map_name_label.tscn" id="122"]
+[ext_resource type="Texture2D" uid="uid://cwj0el35dtsbv" path="res://Graphics/Sprites/Regions/new regions/98.png" id="122_w85ne"]
 [ext_resource type="Resource" uid="uid://by6kkbix02xfm" path="res://Resources/Good/grain.tres" id="123"]
+[ext_resource type="Texture2D" uid="uid://b1h4y4j8dup7t" path="res://Graphics/Sprites/Regions/new regions/99.png" id="123_h6bsl"]
 [ext_resource type="Resource" uid="uid://cyiu6swvkuaa1" path="res://Resources/Good/beasts.tres" id="124"]
+[ext_resource type="Texture2D" uid="uid://dno63jc6qptrj" path="res://Graphics/Sprites/Regions/new regions/100.png" id="124_xuitg"]
 [ext_resource type="Resource" uid="uid://dm1c0og0w4de3" path="res://Resources/Good/iron.tres" id="125"]
+[ext_resource type="Texture2D" uid="uid://b2i5cqi3qi5ci" path="res://Graphics/Sprites/Regions/new regions/101.png" id="125_vci5x"]
 [ext_resource type="Resource" uid="uid://fm86nkg7s2qd" path="res://Resources/Good/cotton.tres" id="126"]
+[ext_resource type="Texture2D" uid="uid://bs70o4q3cg5y7" path="res://Graphics/Sprites/Regions/new regions/102.png" id="126_on2lo"]
 [ext_resource type="Resource" uid="uid://elav5270b0j0" path="res://Resources/Good/coal.tres" id="127"]
+[ext_resource type="Texture2D" uid="uid://b2b804bbjeeuy" path="res://Graphics/Sprites/Regions/new regions/103.png" id="127_uxhmn"]
 [ext_resource type="Resource" uid="uid://cwixv5m7fktn3" path="res://Resources/Good/wood.tres" id="128"]
+[ext_resource type="Texture2D" uid="uid://dewhpvommurvx" path="res://Graphics/Sprites/Regions/new regions/104.png" id="128_4wu3q"]
 [ext_resource type="Resource" uid="uid://c1v3oasg5ag6p" path="res://Resources/Good/saltpeter.tres" id="129"]
 [ext_resource type="Resource" uid="uid://bobf2wyd3n62f" path="res://Resources/Good/oil.tres" id="130"]
-[ext_resource type="Texture2D" uid="uid://dhhqanhcacjvi" path="res://Graphics/Sprites/Regions/Теверция/Белая Церковь.png" id="130_n3giy"]
-[ext_resource type="Texture2D" uid="uid://fvd1r2twpe7a" path="res://Graphics/Sprites/Regions/Теверция/Павлоград.png" id="131_isrnk"]
-[ext_resource type="Texture2D" uid="uid://dcl7iky3s8kku" path="res://Graphics/Sprites/Regions/Теверция/Мелитополь.png" id="132_3eqnq"]
-[ext_resource type="Texture2D" uid="uid://c1rx5amln4sac" path="res://Graphics/Sprites/Regions/Теверция/02.png" id="133_mq2qm"]
-[ext_resource type="Texture2D" uid="uid://dt8axgw43us4p" path="res://Graphics/Sprites/Regions/Теверция/Лисичанск.png" id="134_6owu5"]
-[ext_resource type="Texture2D" uid="uid://c83rm8vskbih1" path="res://Graphics/Sprites/Regions/Теверция/03.png" id="135_d25ip"]
-[ext_resource type="Texture2D" uid="uid://02koaqyj1nmd" path="res://Graphics/Sprites/Regions/Теверция/Пмлица.png" id="136_kyhui"]
-[ext_resource type="Texture2D" uid="uid://c80wf5h6rii0" path="res://Graphics/Sprites/Regions/Теверция/01.png" id="137_cb0kp"]
-[ext_resource type="Texture2D" uid="uid://huyvf4hgajn8" path="res://Graphics/Sprites/Regions/Теверция/Грубешов.png" id="138_1lm17"]
-[ext_resource type="Resource" uid="uid://cunw6t0n3ider" path="res://Resources/Factories/TipesOfFactories/ClothesFactory.tres" id="138_gl4dv"]
-[ext_resource type="Texture2D" uid="uid://c5vhlc2abvaix" path="res://Graphics/Sprites/Regions/Хорезм/Лодзь.png" id="139_3msg0"]
-[ext_resource type="Texture2D" uid="uid://dv8oglodg0k3q" path="res://Graphics/Sprites/Regions/Теверция/Вилькомир.png" id="139_08p6y"]
+[ext_resource type="Texture2D" uid="uid://bsjn6t2w6a8by" path="res://Graphics/Sprites/Regions/new regions/105.png" id="130_w5enb"]
+[ext_resource type="Texture2D" uid="uid://vximgp3vt5ur" path="res://Graphics/Sprites/Regions/new regions/106.png" id="131_6n6n7"]
+[ext_resource type="Texture2D" uid="uid://3yb52380utmd" path="res://Graphics/Sprites/Regions/new regions/107.png" id="132_yw6o0"]
+[ext_resource type="Texture2D" uid="uid://dlsvmydbd3gma" path="res://Graphics/Sprites/Regions/new regions/108.png" id="133_75n2t"]
+[ext_resource type="Texture2D" uid="uid://cmirpy3bfprt3" path="res://Graphics/Sprites/Regions/new regions/109.png" id="134_0eoj5"]
+[ext_resource type="Texture2D" uid="uid://dp37ngxyag37p" path="res://Graphics/Sprites/Regions/new regions/110.png" id="135_5nccj"]
+[ext_resource type="Texture2D" uid="uid://bnmhvy3ktyw64" path="res://Graphics/Sprites/Regions/new regions/111.png" id="136_m2j3n"]
+[ext_resource type="Texture2D" uid="uid://dt0se7llhewdu" path="res://Graphics/Sprites/Regions/new regions/112.png" id="137_42hvd"]
+[ext_resource type="Texture2D" uid="uid://cv2wiln50vj1n" path="res://Graphics/Sprites/Regions/new regions/113.png" id="138_yp6iv"]
+[ext_resource type="Texture2D" uid="uid://dh1jdfwifu4b0" path="res://Graphics/Sprites/Regions/new regions/114.png" id="139_lmtvy"]
 [ext_resource type="Resource" uid="uid://dg2ycers1hlbl" path="res://Resources/StatesOnStartGame/States/Адамантия.tres" id="139_u23jg"]
-[ext_resource type="Texture2D" uid="uid://crm8uljcrved8" path="res://Graphics/Sprites/Regions/Хорезм/Станислав.png" id="140_g2bh6"]
-[ext_resource type="Texture2D" uid="uid://tbkxcfo5rj7o" path="res://Graphics/Sprites/Regions/Теверция/04.png" id="140_wls8m"]
 [ext_resource type="Resource" uid="uid://coja6kprctfd2" path="res://Resources/StatesOnStartGame/States/Балкария.tres" id="141_7bo5t"]
-[ext_resource type="Texture2D" uid="uid://dq4dhkbivc6d2" path="res://Graphics/Sprites/Regions/Теверция/05.png" id="141_7tdeg"]
-[ext_resource type="Texture2D" uid="uid://5te0m7dh1a5o" path="res://Graphics/Sprites/Regions/Трухмения/Sprite-0036.png" id="141_81yva"]
-[ext_resource type="Texture2D" uid="uid://jd7c43v0rsr" path="res://Graphics/Sprites/Regions/Хорезм/Черновцы.png" id="141_d7h37"]
+[ext_resource type="Texture2D" uid="uid://dgo5fl3672jmv" path="res://Graphics/Sprites/Regions/new regions/115.png" id="141_8wv14"]
 [ext_resource type="Resource" uid="uid://bdld17v2606ho" path="res://Resources/StatesOnStartGame/States/Баскакия.tres" id="142_4ng3t"]
-[ext_resource type="Texture2D" uid="uid://csoyd6okarv5h" path="res://Graphics/Sprites/Regions/Трухмения/Sprite-0035.png" id="142_6or55"]
-[ext_resource type="Texture2D" uid="uid://csk2sd7sptmds" path="res://Graphics/Sprites/Regions/Хорезм/Галич.png" id="142_wuqqo"]
+[ext_resource type="Texture2D" uid="uid://c22lil2c7t8da" path="res://Graphics/Sprites/Regions/new regions/116.png" id="142_xmkc5"]
 [ext_resource type="Resource" uid="uid://lgvrq02skk4k" path="res://Resources/StatesOnStartGame/States/Баскакская Торговая Компания.tres" id="143_68xq3"]
-[ext_resource type="Texture2D" uid="uid://cmdbmyn76xgev" path="res://Graphics/Sprites/Regions/Тернокат/Sprite-0098.png" id="143_fiqkt"]
-[ext_resource type="Texture2D" uid="uid://cpugjjgertifm" path="res://Graphics/Sprites/Regions/Хорезм/Калуш.png" id="143_qn8rg"]
-[ext_resource type="Texture2D" uid="uid://b4vm7fhq6g5cw" path="res://Graphics/Sprites/Regions/Трухмения/Sprite-0032.png" id="143_vdwuk"]
-[ext_resource type="Texture2D" uid="uid://df5dom2l663xe" path="res://Graphics/Sprites/Regions/Тернокат/Sprite-0099.png" id="144_45m4o"]
-[ext_resource type="Texture2D" uid="uid://bkiio7dy3wk6o" path="res://Graphics/Sprites/Regions/Трухмения/Sprite-0034.png" id="144_kumy1"]
+[ext_resource type="Texture2D" uid="uid://b0phu0srb3p0a" path="res://Graphics/Sprites/Regions/new regions/117.png" id="143_cn2oi"]
+[ext_resource type="Texture2D" uid="uid://cn51pdkwsgd3f" path="res://Graphics/Sprites/Regions/new regions/118.png" id="144_3fae5"]
 [ext_resource type="Resource" uid="uid://bdg0qhybpw1t" path="res://Resources/StatesOnStartGame/States/Горния.tres" id="144_w083g"]
-[ext_resource type="Texture2D" uid="uid://dw2wuke7ws08o" path="res://Graphics/Sprites/Regions/Хорезм/Богородчаны.png" id="144_y7k0j"]
-[ext_resource type="Texture2D" uid="uid://7xqdd166tvye" path="res://Graphics/Sprites/Regions/Тернокат/Sprite-0101.png" id="145_17vs5"]
-[ext_resource type="Texture2D" uid="uid://dxn18j3oe8q4b" path="res://Graphics/Sprites/Regions/Трухмения/Sprite-0031.png" id="145_t833l"]
-[ext_resource type="Texture2D" uid="uid://l0enooiix5g8" path="res://Graphics/Sprites/Regions/Хорезм/Днестр.png" id="145_wobpb"]
-[ext_resource type="Texture2D" uid="uid://r73wbqmgjegg" path="res://Graphics/Sprites/Regions/Тернокат/Sprite-0100.png" id="146_gln8u"]
-[ext_resource type="Texture2D" uid="uid://ce400wdwpu6kt" path="res://Graphics/Sprites/Regions/Трухмения/Sprite-0033.png" id="146_hgkc8"]
+[ext_resource type="Texture2D" uid="uid://hlyihb8alyt6" path="res://Graphics/Sprites/Regions/new regions/119.png" id="145_nmr4e"]
+[ext_resource type="Texture2D" uid="uid://deq41r10phena" path="res://Graphics/Sprites/Regions/new regions/120.png" id="146_375v8"]
 [ext_resource type="Resource" uid="uid://c1w5vr18rjwjk" path="res://Resources/StatesOnStartGame/States/Иллирия.tres" id="146_o7fr6"]
-[ext_resource type="Texture2D" uid="uid://0d8ldkiknou0" path="res://Graphics/Sprites/Regions/Хорезм/Белжеца.png" id="146_vd3w7"]
-[ext_resource type="Texture2D" uid="uid://crktw1objh20o" path="res://Graphics/Sprites/Regions/Хорезм/Митава.png" id="147_6dtbw"]
-[ext_resource type="Texture2D" uid="uid://fxoju7q31nm3" path="res://Graphics/Sprites/Regions/Трухмения/Sprite-0030.png" id="147_i7tcr"]
+[ext_resource type="Texture2D" uid="uid://bjdk1kbr30k0m" path="res://Graphics/Sprites/Regions/new regions/121.png" id="147_8f40u"]
 [ext_resource type="Resource" uid="uid://wypori3l83c6" path="res://Resources/StatesOnStartGame/States/Кавардация.tres" id="147_nlly3"]
 [ext_resource type="Resource" uid="uid://b21gfl57v4p5m" path="res://Resources/StatesOnStartGame/States/Кракожия.tres" id="148_83223"]
-[ext_resource type="Texture2D" uid="uid://dpkbss41lervm" path="res://Graphics/Sprites/Regions/Хорезм/Броды.png" id="148_q5mpy"]
-[ext_resource type="Texture2D" uid="uid://drcusge4787gn" path="res://Graphics/Sprites/Regions/Хорезм/Кременец.png" id="149_gx55s"]
+[ext_resource type="Texture2D" uid="uid://b2sjnvepw1var" path="res://Graphics/Sprites/Regions/new regions/122.png" id="148_rjhfk"]
+[ext_resource type="Texture2D" uid="uid://dwq7gvr47lat5" path="res://Graphics/Sprites/Regions/new regions/123.png" id="149_0hdvc"]
 [ext_resource type="Resource" uid="uid://d1o3f5kce0s5x" path="res://Resources/StatesOnStartGame/States/Насардия.tres" id="149_qp85k"]
-[ext_resource type="Texture2D" uid="uid://d277u2qfeeaqu" path="res://Graphics/Sprites/Regions/Хорезм/Люблин.png" id="150_tk08t"]
+[ext_resource type="Texture2D" uid="uid://dp7hejuupaxeo" path="res://Graphics/Sprites/Regions/new regions/124.png" id="150_d7mlf"]
 [ext_resource type="Resource" uid="uid://taa8e4wyikty" path="res://Resources/StatesOnStartGame/States/Поляния.tres" id="150_vq62b"]
 [ext_resource type="Resource" uid="uid://dw4a16wj6i12n" path="res://Resources/StatesOnStartGame/States/Роксолания.tres" id="151_3yl71"]
-[ext_resource type="Texture2D" uid="uid://dwagkpu7gpdlx" path="res://Graphics/Sprites/Regions/Хорезм/Тарнополь.png" id="151_mk28a"]
-[ext_resource type="Texture2D" uid="uid://d0a5af0ppwpx2" path="res://Graphics/Sprites/Regions/Хорезм/Красник.png" id="152_jo62e"]
+[ext_resource type="Texture2D" uid="uid://bxknwh6270qgr" path="res://Graphics/Sprites/Regions/new regions/125.png" id="151_6yl38"]
 [ext_resource type="Resource" uid="uid://dtmi6dfodsp0u" path="res://Resources/StatesOnStartGame/States/Теверция.tres" id="152_p548f"]
+[ext_resource type="Texture2D" uid="uid://b6qa7v27y7o4i" path="res://Graphics/Sprites/Regions/new regions/126.png" id="152_tmk13"]
 [ext_resource type="Resource" uid="uid://b1a1pyisnhtv2" path="res://Resources/StatesOnStartGame/States/Тернокат.tres" id="153_elbxs"]
+[ext_resource type="Texture2D" uid="uid://cnciyxvnvg5a0" path="res://Graphics/Sprites/Regions/new regions/127.png" id="153_o4khm"]
 [ext_resource type="Resource" uid="uid://dtks1roxp74jy" path="res://Resources/StatesOnStartGame/States/Трухмения.tres" id="154_j8r12"]
+[ext_resource type="Texture2D" uid="uid://c3ku1enk0lc4u" path="res://Graphics/Sprites/Regions/new regions/128.png" id="155_3y2uq"]
 [ext_resource type="Resource" uid="uid://byv8l8egbci2y" path="res://Resources/StatesOnStartGame/States/Хорезм.tres" id="155_brk8r"]
+[ext_resource type="Texture2D" uid="uid://pxdnjexb8r2u" path="res://Graphics/Sprites/Regions/new regions/129.png" id="156_6yc8s"]
 [ext_resource type="Script" path="res://Objects/Client/Client.gd" id="156_bpgcc"]
+[ext_resource type="Texture2D" uid="uid://rsjl4gxov2j5" path="res://Graphics/Sprites/Regions/new regions/130.png" id="157_2vxmk"]
+[ext_resource type="Texture2D" uid="uid://28ukh6cckkh8" path="res://Graphics/Sprites/Regions/new regions/131.png" id="158_ndala"]
+[ext_resource type="Texture2D" uid="uid://dv4wsfjihbrmm" path="res://Graphics/Sprites/Regions/new regions/132.png" id="159_ma2ne"]
+[ext_resource type="Texture2D" uid="uid://bjxlud1kq0v8i" path="res://Graphics/Sprites/Regions/new regions/133.png" id="161_8p8oc"]
+[ext_resource type="Texture2D" uid="uid://tlinwscmqvw5" path="res://Graphics/Sprites/Regions/new regions/134.png" id="162_enpgt"]
+[ext_resource type="Texture2D" uid="uid://5tunvuk7xu7o" path="res://Graphics/Sprites/Regions/new regions/135.png" id="163_vn4m3"]
+[ext_resource type="Texture2D" uid="uid://b8vk7rmaqjq4u" path="res://Graphics/Sprites/Regions/new regions/136.png" id="164_1go46"]
+[ext_resource type="Texture2D" uid="uid://q7ahkgbmb6xt" path="res://Graphics/Sprites/Regions/new regions/137.png" id="165_5nj28"]
+[ext_resource type="Texture2D" uid="uid://dtr33mo5aaka1" path="res://Graphics/Sprites/Regions/new regions/138.png" id="166_7xqia"]
+[ext_resource type="Texture2D" uid="uid://bis6jrbqskhmg" path="res://Graphics/Sprites/Regions/new regions/139.png" id="168_wwnrd"]
+[ext_resource type="Texture2D" uid="uid://dw0hyioj6sfmj" path="res://Graphics/Sprites/Regions/new regions/140.png" id="169_5no58"]
+[ext_resource type="Texture2D" uid="uid://cad7dyybcpeir" path="res://Graphics/Sprites/Regions/new regions/141.png" id="170_bbafc"]
+[ext_resource type="Texture2D" uid="uid://dgg203bh6uor4" path="res://Graphics/Sprites/Regions/new regions/142.png" id="171_gq40o"]
+[ext_resource type="Texture2D" uid="uid://dpqxnk6arko3y" path="res://Graphics/Sprites/Regions/new regions/143.png" id="172_yyhuk"]
+[ext_resource type="Texture2D" uid="uid://b01wknc030ywc" path="res://Graphics/Sprites/Regions/new regions/144.png" id="174_ml8aa"]
+[ext_resource type="Texture2D" uid="uid://c0aumyigoe0fv" path="res://Graphics/Sprites/Regions/new regions/145.png" id="175_hwmp2"]
+[ext_resource type="Texture2D" uid="uid://ctvxbkrycw1tf" path="res://Graphics/Sprites/Regions/new regions/146.png" id="176_fc002"]
+[ext_resource type="Texture2D" uid="uid://dp7usc17vf4lx" path="res://Graphics/Sprites/Regions/new regions/147.png" id="178_8kxek"]
+[ext_resource type="Texture2D" uid="uid://bb7h6v70ajvhd" path="res://Graphics/Sprites/Regions/new regions/148.png" id="179_vlhph"]
+[ext_resource type="Texture2D" uid="uid://bqxyjbld6jblx" path="res://Graphics/Sprites/Regions/new regions/149.png" id="180_bnm5g"]
+[ext_resource type="Texture2D" uid="uid://bldds022r0j6f" path="res://Graphics/Sprites/Regions/new regions/150.png" id="181_am6xo"]
+[ext_resource type="Texture2D" uid="uid://6lthx7yjgoa5" path="res://Graphics/Sprites/Regions/new regions/151.png" id="183_ge57g"]
+[ext_resource type="Texture2D" uid="uid://bevfy5686dxw2" path="res://Graphics/Sprites/Regions/new regions/152.png" id="184_bmb75"]
+[ext_resource type="Texture2D" uid="uid://bdbr7a116gcow" path="res://Graphics/Sprites/Regions/new regions/153.png" id="186_h4rjk"]
+[ext_resource type="Texture2D" uid="uid://b0j42vh4shqr7" path="res://Graphics/Sprites/Regions/new regions/154.png" id="188_hw2vn"]
+[ext_resource type="Texture2D" uid="uid://ccsu5mkj5vo65" path="res://Graphics/Sprites/Regions/map.png" id="189_v058e"]
+[ext_resource type="Texture2D" uid="uid://c3aifepang4gp" path="res://Graphics/Sprites/Regions/map with nums.png" id="190_ldoju"]
 
 [node name="TileMap" type="Node2D"]
 texture_filter = 1
@@ -624,1131 +644,1301 @@ anchors_preset = 0
 script = ExtResource("156_bpgcc")
 state_on_start = ExtResource("139_u23jg")
 
-[node name="Должанск" parent="Client" instance=ExtResource("4")]
-offset_left = 2180.0
-offset_top = 2042.0
-offset_right = 2243.0
-offset_bottom = 2080.0
-texture_normal = ExtResource("13_hxi4k")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("126"), ExtResource("127")])
+[node name="1" parent="Client" instance=ExtResource("4")]
+offset_left = 13.0
+offset_top = 197.0
+offset_right = 40.0
+offset_bottom = 213.0
+texture_normal = ExtResource("13_q4kxf")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123")])
 
-[node name="Бердичев" parent="Client" instance=ExtResource("4")]
-offset_left = 2118.0
-offset_top = 2020.0
-offset_right = 2178.0
-offset_bottom = 2067.0
-texture_normal = ExtResource("16_5nxns")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("124"), ExtResource("128")])
-factory_goods = Array[Resource("res://Resources/Factories/Factory.gd")]([ExtResource("77_fbuxq"), ExtResource("78_dencq"), ExtResource("21_rv3gp")])
-
-[node name="Новомосковск" parent="Client" instance=ExtResource("4")]
-offset_left = 2116.0
-offset_top = 2094.0
-offset_right = 2157.0
-offset_bottom = 2125.0
-texture_normal = ExtResource("21_6m0dx")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("130"), ExtResource("129")])
-
-[node name="01" parent="Client" instance=ExtResource("4")]
-offset_left = 2143.0
-offset_top = 2086.0
-offset_right = 2184.0
-offset_bottom = 2132.0
-texture_normal = ExtResource("24_1tjob")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("130"), ExtResource("129")])
-
-[node name="Коростень" parent="Client" instance=ExtResource("4")]
-offset_left = 2150.0
-offset_top = 2109.0
-offset_right = 2195.0
-offset_bottom = 2145.0
-texture_normal = ExtResource("25_h6mso")
+[node name="2" parent="Client" instance=ExtResource("4")]
+offset_left = 39.0
+offset_top = 208.0
+offset_right = 66.0
+offset_bottom = 227.0
+texture_normal = ExtResource("15_ukd11")
 dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("126")])
 
-[node name="Измаил" parent="Client" instance=ExtResource("4")]
-offset_left = 2089.0
-offset_top = 2052.0
-offset_right = 2139.0
-offset_bottom = 2100.0
-texture_normal = ExtResource("26_bkefg")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("128"), ExtResource("129")])
+[node name="3" parent="Client" instance=ExtResource("4")]
+offset_left = 11.0
+offset_top = 218.0
+offset_right = 43.0
+offset_bottom = 241.0
+texture_normal = ExtResource("17_wasi5")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("127")])
+factory_goods = Array[Resource("res://Resources/Factories/Factory.gd")]([ExtResource("77_fbuxq"), ExtResource("78_dencq")])
 
-[node name="Яремче" parent="Client" instance=ExtResource("4")]
-offset_left = 2169.0
-offset_top = 2076.0
-offset_right = 2187.0
-offset_bottom = 2112.0
-texture_normal = ExtResource("28_p84vd")
+[node name="4" parent="Client" instance=ExtResource("4")]
+offset_left = 13.0
+offset_top = 239.0
+offset_right = 54.0
+offset_bottom = 272.0
+texture_normal = ExtResource("19_55ecy")
 dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("126")])
 
-[node name="Тамань" parent="Client" instance=ExtResource("4")]
-offset_left = 2135.0
-offset_top = 2046.0
-offset_right = 2184.0
-offset_bottom = 2095.0
-texture_normal = ExtResource("29_1pd57")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("125")])
+[node name="5" parent="Client" instance=ExtResource("4")]
+offset_left = 47.0
+offset_top = 246.0
+offset_right = 81.0
+offset_bottom = 273.0
+texture_normal = ExtResource("20_v2j12")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123")])
 
-[node name="Тамань2" parent="Client" instance=ExtResource("4")]
-offset_left = 2169.0
-offset_top = 2016.0
-offset_right = 2221.0
-offset_bottom = 2065.0
-texture_normal = ExtResource("27_w4xg5")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("125")])
+[node name="6" parent="Client" instance=ExtResource("4")]
+offset_left = 43.0
+offset_top = 223.0
+offset_right = 70.0
+offset_bottom = 246.0
+texture_normal = ExtResource("21_io4md")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("126")])
+
+[node name="7" parent="Client" instance=ExtResource("4")]
+offset_left = 64.0
+offset_top = 196.0
+offset_right = 109.0
+offset_bottom = 222.0
+texture_normal = ExtResource("22_7ikdu")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127")])
+
+[node name="8" parent="Client" instance=ExtResource("4")]
+offset_left = 70.0
+offset_top = 219.0
+offset_right = 115.0
+offset_bottom = 248.0
+texture_normal = ExtResource("23_hjv7n")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127"), ExtResource("126")])
+
+[node name="9" parent="Client" instance=ExtResource("4")]
+offset_left = 78.0
+offset_top = 247.0
+offset_right = 112.0
+offset_bottom = 272.0
+texture_normal = ExtResource("24_ocl4r")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123")])
+
+[node name="10" parent="Client" instance=ExtResource("4")]
+offset_left = 110.0
+offset_top = 205.0
+offset_right = 145.0
+offset_bottom = 230.0
+texture_normal = ExtResource("25_tapmd")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127")])
+
+[node name="11" parent="Client" instance=ExtResource("4")]
+offset_left = 107.0
+offset_top = 223.0
+offset_right = 146.0
+offset_bottom = 249.0
+texture_normal = ExtResource("26_ocmx4")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("126"), ExtResource("125")])
+
+[node name="12" parent="Client" instance=ExtResource("4")]
+offset_left = 110.0
+offset_top = 241.0
+offset_right = 163.0
+offset_bottom = 267.0
+texture_normal = ExtResource("28_4ix1k")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("126"), ExtResource("130")])
+
+[node name="13" parent="Client" instance=ExtResource("4")]
+offset_left = 145.0
+offset_top = 206.0
+offset_right = 169.0
+offset_bottom = 244.0
+texture_normal = ExtResource("30_et55k")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127"), ExtResource("124")])
+
+[node name="14" parent="Client" instance=ExtResource("4")]
+offset_left = 159.0
+offset_top = 247.0
+offset_right = 194.0
+offset_bottom = 262.0
+texture_normal = ExtResource("32_umopq")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("125"), ExtResource("127")])
+
+[node name="15" parent="Client" instance=ExtResource("4")]
+offset_left = 164.0
+offset_top = 223.0
+offset_right = 191.0
+offset_bottom = 247.0
+texture_normal = ExtResource("33_xaex8")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("125")])
+
+[node name="16" parent="Client" instance=ExtResource("4")]
+offset_left = 189.0
+offset_top = 227.0
+offset_right = 236.0
+offset_bottom = 257.0
+texture_normal = ExtResource("34_ma5j5")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("128"), ExtResource("126")])
 
 [node name="Client3" type="Node" parent="."]
 script = ExtResource("156_bpgcc")
 state_on_start = ExtResource("141_7bo5t")
 
-[node name="Кутаиси" parent="Client3" instance=ExtResource("4")]
-offset_left = 2395.0
-offset_top = 2222.0
-offset_right = 2455.0
-offset_bottom = 2264.0
-texture_normal = ExtResource("32_v5pxl")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("124"), ExtResource("128")])
+[node name="17" parent="Client3" instance=ExtResource("4")]
+offset_left = 195.0
+offset_top = 258.0
+offset_right = 242.0
+offset_bottom = 302.0
+texture_normal = ExtResource("37_74bql")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("126")])
 
-[node name="Сенаки" parent="Client3" instance=ExtResource("4")]
-offset_left = 2385.0
-offset_top = 2204.0
-offset_right = 2434.0
-offset_bottom = 2249.0
-texture_normal = ExtResource("33_q4bls")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("125"), ExtResource("128")])
+[node name="18" parent="Client3" instance=ExtResource("4")]
+offset_left = 205.0
+offset_top = 255.0
+offset_right = 252.0
+offset_bottom = 299.0
+texture_normal = ExtResource("38_brkxm")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127"), ExtResource("124")])
 
-[node name="Зугдиди" parent="Client3" instance=ExtResource("4")]
-offset_left = 2429.0
-offset_top = 2187.0
-offset_right = 2501.0
-offset_bottom = 2223.0
-texture_normal = ExtResource("34_lmyqd")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127"), ExtResource("128")])
+[node name="19" parent="Client3" instance=ExtResource("4")]
+offset_left = 229.0
+offset_top = 256.0
+offset_right = 290.0
+offset_bottom = 305.0
+texture_normal = ExtResource("39_o2c2m")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("128"), ExtResource("130")])
 
-[node name="Гудаури" parent="Client3" instance=ExtResource("4")]
-offset_left = 2427.0
-offset_top = 2143.0
-offset_right = 2487.0
-offset_bottom = 2195.0
-texture_normal = ExtResource("36_m7a1d")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("130"), ExtResource("129")])
+[node name="20" parent="Client3" instance=ExtResource("4")]
+offset_left = 209.0
+offset_top = 289.0
+offset_right = 270.0
+offset_bottom = 338.0
+texture_normal = ExtResource("40_5xcm2")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("126")])
 
-[node name="Тбилиси" parent="Client3" instance=ExtResource("4")]
-offset_left = 2400.0
-offset_top = 2261.0
-offset_right = 2457.0
-offset_bottom = 2294.0
-texture_normal = ExtResource("37_npqrn")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("130"), ExtResource("128")])
+[node name="21" parent="Client3" instance=ExtResource("4")]
+offset_left = 224.0
+offset_top = 313.0
+offset_right = 259.0
+offset_bottom = 343.0
+texture_normal = ExtResource("41_mlihx")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("126"), ExtResource("130")])
 
-[node name="Сухум" parent="Client3" instance=ExtResource("4")]
-offset_left = 2381.0
-offset_top = 2154.0
-offset_right = 2430.0
-offset_bottom = 2209.0
-texture_normal = ExtResource("38_0pn57")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("124"), ExtResource("126")])
+[node name="22" parent="Client3" instance=ExtResource("4")]
+offset_left = 253.0
+offset_top = 301.0
+offset_right = 294.0
+offset_bottom = 331.0
+texture_normal = ExtResource("42_y24ig")
 
-[node name="Ахалкалаки" parent="Client3" instance=ExtResource("4")]
-offset_left = 2434.0
-offset_top = 2222.0
-offset_right = 2492.0
-offset_bottom = 2259.0
-texture_normal = ExtResource("39_faof0")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("127")])
+[node name="23" parent="Client3" instance=ExtResource("4")]
+offset_left = 249.0
+offset_top = 329.0
+offset_right = 290.0
+offset_bottom = 370.0
+texture_normal = ExtResource("43_m2yyi")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("130")])
 
-[node name="Батуми" parent="Client3" instance=ExtResource("4")]
-offset_left = 2408.0
-offset_top = 2294.0
-offset_right = 2453.0
-offset_bottom = 2324.0
-texture_normal = ExtResource("40_23uqe")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("14_v4afx")])
+[node name="24" parent="Client3" instance=ExtResource("4")]
+offset_left = 273.0
+offset_top = 328.0
+offset_right = 323.0
+offset_bottom = 380.0
+texture_normal = ExtResource("44_yjv58")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("125"), ExtResource("123")])
+
+[node name="25" parent="Client3" instance=ExtResource("4")]
+offset_left = 295.0
+offset_top = 301.0
+offset_right = 323.0
+offset_bottom = 332.0
+texture_normal = ExtResource("45_nhvv7")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("126")])
+
+[node name="26" parent="Client3" instance=ExtResource("4")]
+offset_left = 289.0
+offset_top = 265.0
+offset_right = 355.0
+offset_bottom = 300.0
+texture_normal = ExtResource("46_m45hk")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127")])
+
+[node name="27" parent="Client3" instance=ExtResource("4")]
+offset_left = 324.0
+offset_top = 301.0
+offset_right = 351.0
+offset_bottom = 327.0
+texture_normal = ExtResource("47_rhq11")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123")])
+
+[node name="28" parent="Client3" instance=ExtResource("4")]
+offset_left = 324.0
+offset_top = 327.0
+offset_right = 361.0
+offset_bottom = 362.0
+texture_normal = ExtResource("48_uh24u")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123")])
+
+[node name="29" parent="Client3" instance=ExtResource("4")]
+offset_left = 314.0
+offset_top = 360.0
+offset_right = 375.0
+offset_bottom = 396.0
+texture_normal = ExtResource("49_kd8ng")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123")])
+
+[node name="30" parent="Client3" instance=ExtResource("4")]
+offset_left = 327.0
+offset_top = 338.0
+offset_right = 361.0
+offset_bottom = 365.0
+texture_normal = ExtResource("50_pykon")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123")])
+
+[node name="31" parent="Client3" instance=ExtResource("4")]
+offset_left = 285.0
+offset_top = 246.0
+offset_right = 317.0
+offset_bottom = 269.0
+texture_normal = ExtResource("51_7p8ux")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("126")])
+
+[node name="32" parent="Client3" instance=ExtResource("4")]
+offset_left = 308.0
+offset_top = 253.0
+offset_right = 355.0
+offset_bottom = 276.0
+texture_normal = ExtResource("52_mqqbw")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127")])
+
+[node name="33" parent="Client3" instance=ExtResource("4")]
+offset_left = 272.0
+offset_top = 194.0
+offset_right = 331.0
+offset_bottom = 256.0
+texture_normal = ExtResource("53_y4d2q")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("130")])
+
+[node name="34" parent="Client3" instance=ExtResource("4")]
+offset_left = 318.0
+offset_top = 212.0
+offset_right = 386.0
+offset_bottom = 280.0
+texture_normal = ExtResource("54_glb6r")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("126")])
+
+[node name="35" parent="Client3" instance=ExtResource("4")]
+offset_left = 347.0
+offset_top = 208.0
+offset_right = 370.0
+offset_bottom = 229.0
+texture_normal = ExtResource("55_052vr")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("126")])
+
+[node name="36" parent="Client3" instance=ExtResource("4")]
+offset_left = 371.0
+offset_top = 208.0
+offset_right = 386.0
+offset_bottom = 229.0
+texture_normal = ExtResource("56_d7jyh")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123")])
+
+[node name="37" parent="Client3" instance=ExtResource("4")]
+offset_left = 352.0
+offset_top = 262.0
+offset_right = 397.0
+offset_bottom = 295.0
+texture_normal = ExtResource("57_hphev")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("126")])
+
+[node name="38" parent="Client3" instance=ExtResource("4")]
+offset_left = 351.0
+offset_top = 230.0
+offset_right = 386.0
+offset_bottom = 252.0
+texture_normal = ExtResource("58_y15tg")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123")])
+
+[node name="39" parent="Client3" instance=ExtResource("4")]
+offset_left = 398.0
+offset_top = 252.0
+offset_right = 442.0
+offset_bottom = 295.0
+texture_normal = ExtResource("59_7lljj")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("124")])
+
+[node name="40" parent="Client3" instance=ExtResource("4")]
+offset_left = 384.0
+offset_top = 239.0
+offset_right = 402.0
+offset_bottom = 264.0
+texture_normal = ExtResource("60_lxvx6")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123")])
+
+[node name="41" parent="Client3" instance=ExtResource("4")]
+offset_left = 394.0
+offset_top = 234.0
+offset_right = 419.0
+offset_bottom = 269.0
+texture_normal = ExtResource("61_bit4w")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123")])
+
+[node name="42" parent="Client3" instance=ExtResource("4")]
+offset_left = 387.0
+offset_top = 218.0
+offset_right = 406.0
+offset_bottom = 238.0
+texture_normal = ExtResource("62_mwcni")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("124")])
+
+[node name="43" parent="Client3" instance=ExtResource("4")]
+offset_left = 407.0
+offset_top = 204.0
+offset_right = 444.0
+offset_bottom = 238.0
+texture_normal = ExtResource("63_1o0ok")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("130"), ExtResource("123")])
 
 [node name="Client4" type="Node" parent="."]
 script = ExtResource("156_bpgcc")
 state_on_start = ExtResource("142_4ng3t")
 
-[node name="Мариуполь" parent="Client4" instance=ExtResource("4")]
-offset_left = 2363.0
-offset_top = 2017.0
-offset_right = 2434.0
-offset_bottom = 2051.0
-texture_normal = ExtResource("42_24s6b")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("127")])
-factory_goods = Array[Resource("res://Resources/Factories/Factory.gd")]([ExtResource("78_dencq")])
-
-[node name="01" parent="Client4" instance=ExtResource("4")]
-offset_left = 2312.0
-offset_top = 1982.0
-offset_right = 2359.0
-offset_bottom = 2030.0
-texture_normal = ExtResource("43_otaaj")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("128"), ExtResource("129")])
-
-[node name="Полтава" parent="Client4" instance=ExtResource("4")]
-offset_left = 2346.0
-offset_top = 1983.0
-offset_right = 2383.0
-offset_bottom = 2029.0
-texture_normal = ExtResource("44_6c88k")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("128"), ExtResource("129")])
-
-[node name="Мелитополь" parent="Client4" instance=ExtResource("4")]
-offset_left = 2313.0
-offset_top = 2024.0
-offset_right = 2371.0
-offset_bottom = 2051.0
-texture_normal = ExtResource("45_ul5b1")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("126")])
-factory_goods = Array[Resource("res://Resources/Factories/Factory.gd")]([ExtResource("98_nel8t")])
-worker_quantity = 8
-
-[node name="Тернополь" parent="Client4" instance=ExtResource("4")]
-offset_left = 2254.0
-offset_top = 2015.0
-offset_right = 2325.0
-offset_bottom = 2040.0
-texture_normal = ExtResource("47_jp21j")
+[node name="44" parent="Client4" instance=ExtResource("4")]
+offset_left = 376.0
+offset_top = 187.0
+offset_right = 424.0
+offset_bottom = 224.0
+texture_normal = ExtResource("65_85w30")
 dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("130")])
 
-[node name="Киев" parent="Client4" instance=ExtResource("4")]
-offset_left = 2265.0
-offset_top = 1975.0
-offset_right = 2319.0
-offset_bottom = 2017.0
-texture_normal = ExtResource("48_pg1l2")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("125"), ExtResource("128")])
-factory_goods = Array[Resource("res://Resources/Factories/Factory.gd")]([ExtResource("82_dlsmy"), ExtResource("83_hffge")])
+[node name="45" parent="Client4" instance=ExtResource("4")]
+offset_left = 420.0
+offset_top = 237.0
+offset_right = 452.0
+offset_bottom = 256.0
+texture_normal = ExtResource("66_0v68l")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127")])
 
-[node name="02" parent="Client4" instance=ExtResource("4")]
-offset_left = 2234.0
-offset_top = 1979.0
-offset_right = 2288.0
-offset_bottom = 2031.0
-texture_normal = ExtResource("51_3fwyt")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("125"), ExtResource("128")])
-factory_goods = Array[Resource("res://Resources/Factories/Factory.gd")]([ExtResource("82_dlsmy"), ExtResource("83_hffge")])
+[node name="46" parent="Client4" instance=ExtResource("4")]
+offset_left = 433.0
+offset_top = 246.0
+offset_right = 465.0
+offset_bottom = 271.0
+texture_normal = ExtResource("67_24tlt")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123")])
 
-[node name="Ужгород" parent="Client4" instance=ExtResource("4")]
-offset_left = 2222.0
-offset_top = 2032.0
-offset_right = 2272.0
-offset_bottom = 2053.0
-texture_normal = ExtResource("52_15b18")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127"), ExtResource("123")])
-factory_goods = Array[Resource("res://Resources/Factories/Factory.gd")]([ExtResource("83_hffge")])
+[node name="47" parent="Client4" instance=ExtResource("4")]
+offset_left = 429.0
+offset_top = 222.0
+offset_right = 457.0
+offset_bottom = 239.0
+texture_normal = ExtResource("68_d0ed2")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("128")])
 
-[node name="Стрый" parent="Client4" instance=ExtResource("4")]
-offset_left = 2209.0
-offset_top = 1996.0
-offset_right = 2250.0
-offset_bottom = 2040.0
-texture_normal = ExtResource("53_phlwx")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127"), ExtResource("128")])
-factory_goods = Array[Resource("res://Resources/Factories/Factory.gd")]([ExtResource("77_fbuxq")])
+[node name="48" parent="Client4" instance=ExtResource("4")]
+offset_left = 422.0
+offset_top = 198.0
+offset_right = 445.0
+offset_bottom = 219.0
+texture_normal = ExtResource("69_gj5m0")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("128")])
 
-[node name="Львов" parent="Client4" instance=ExtResource("4")]
-offset_left = 2178.0
-offset_top = 1991.0
-offset_right = 2209.0
-offset_bottom = 2029.0
-texture_normal = ExtResource("54_lki5o")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("124"), ExtResource("127")])
-factory_goods = Array[Resource("res://Resources/Factories/Factory.gd")]([ExtResource("83_hffge")])
+[node name="49" parent="Client4" instance=ExtResource("4")]
+offset_left = 445.0
+offset_top = 192.0
+offset_right = 475.0
+offset_bottom = 223.0
+texture_normal = ExtResource("70_jd8tj")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("126"), ExtResource("125")])
 
-[node name="Коростень" parent="Client4" instance=ExtResource("4")]
-offset_left = 2199.0
-offset_top = 1982.0
-offset_right = 2242.0
-offset_bottom = 2006.0
-texture_normal = ExtResource("55_da7u5")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127"), ExtResource("124")])
+[node name="50" parent="Client4" instance=ExtResource("4")]
+offset_left = 464.0
+offset_top = 191.0
+offset_right = 489.0
+offset_bottom = 217.0
+texture_normal = ExtResource("71_qmkc7")
 
-[node name="Херсон" parent="Client4" instance=ExtResource("4")]
-offset_left = 2258.0
-offset_top = 2037.0
-offset_right = 2338.0
-offset_bottom = 2064.0
-texture_normal = ExtResource("56_rhapb")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127"), ExtResource("123")])
-factory_goods = Array[Resource("res://Resources/Factories/Factory.gd")]([ExtResource("83_hffge")])
+[node name="51" parent="Client4" instance=ExtResource("4")]
+offset_left = 446.0
+offset_top = 164.0
+offset_right = 503.0
+offset_bottom = 206.0
+texture_normal = ExtResource("72_2bfhc")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("126")])
 
-[node name="Северодонецк" parent="Client4" instance=ExtResource("4")]
-offset_left = 2381.0
-offset_top = 1984.0
-offset_right = 2439.0
-offset_bottom = 2020.0
-texture_normal = ExtResource("57_36gfv")
+[node name="52" parent="Client4" instance=ExtResource("4")]
+offset_left = 449.0
+offset_top = 146.0
+offset_right = 506.0
+offset_bottom = 188.0
+texture_normal = ExtResource("73_01328")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("130")])
+
+[node name="53" parent="Client4" instance=ExtResource("4")]
+offset_left = 256.0
+offset_top = 172.0
+offset_right = 313.0
+offset_bottom = 214.0
+texture_normal = ExtResource("74_7ar8j")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123")])
+
+[node name="54" parent="Client4" instance=ExtResource("4")]
+offset_left = 297.0
+offset_top = 162.0
+offset_right = 325.0
+offset_bottom = 206.0
+texture_normal = ExtResource("75_53pg0")
 dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("124"), ExtResource("128")])
+
+[node name="55" parent="Client4" instance=ExtResource("4")]
+offset_left = 323.0
+offset_top = 175.0
+offset_right = 375.0
+offset_bottom = 213.0
+texture_normal = ExtResource("76_5h73o")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("129")])
+
+[node name="56" parent="Client4" instance=ExtResource("4")]
+offset_left = 341.0
+offset_top = 140.0
+offset_right = 407.0
+offset_bottom = 188.0
+texture_normal = ExtResource("78_vyuy8")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127"), ExtResource("123")])
+
+[node name="57" parent="Client4" instance=ExtResource("4")]
+offset_left = 399.0
+offset_top = 156.0
+offset_right = 448.0
+offset_bottom = 199.0
+texture_normal = ExtResource("79_a633h")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("127")])
+
+[node name="58" parent="Client4" instance=ExtResource("4")]
+offset_left = 249.0
+offset_top = 152.0
+offset_right = 282.0
+offset_bottom = 171.0
+texture_normal = ExtResource("80_kyxkg")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123")])
+
+[node name="59" parent="Client4" instance=ExtResource("4")]
+offset_left = 273.0
+offset_top = 154.0
+offset_right = 296.0
+offset_bottom = 176.0
+texture_normal = ExtResource("81_0hg7v")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123")])
+
+[node name="60" parent="Client4" instance=ExtResource("4")]
+offset_left = 233.0
+offset_top = 129.0
+offset_right = 276.0
+offset_bottom = 152.0
+texture_normal = ExtResource("82_mglgc")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123")])
+
+[node name="61" parent="Client4" instance=ExtResource("4")]
+offset_left = 273.0
+offset_top = 131.0
+offset_right = 316.0
+offset_bottom = 161.0
+texture_normal = ExtResource("83_wvu8h")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("126")])
+
+[node name="62" parent="Client4" instance=ExtResource("4")]
+offset_left = 312.0
+offset_top = 133.0
+offset_right = 355.0
+offset_bottom = 163.0
+texture_normal = ExtResource("84_o7m11")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("124")])
+
+[node name="63" parent="Client4" instance=ExtResource("4")]
+offset_left = 241.0
+offset_top = 85.0
+offset_right = 284.0
+offset_bottom = 132.0
+texture_normal = ExtResource("85_425c8")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("124")])
+
+[node name="64" parent="Client4" instance=ExtResource("4")]
+offset_left = 283.0
+offset_top = 93.0
+offset_right = 341.0
+offset_bottom = 142.0
+texture_normal = ExtResource("86_o4b0l")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("126")])
+
+[node name="65" parent="Client4" instance=ExtResource("4")]
+offset_left = 337.0
+offset_top = 89.0
+offset_right = 422.0
+offset_bottom = 139.0
+texture_normal = ExtResource("87_n0a0c")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("125"), ExtResource("123")])
+
+[node name="66" parent="Client4" instance=ExtResource("4")]
+offset_left = 363.0
+offset_top = 111.0
+offset_right = 420.0
+offset_bottom = 155.0
+texture_normal = ExtResource("88_hqmen")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("127")])
+
+[node name="67" parent="Client4" instance=ExtResource("4")]
+offset_left = 408.0
+offset_top = 119.0
+offset_right = 451.0
+offset_bottom = 156.0
+texture_normal = ExtResource("89_yi3m0")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127")])
 
 [node name="Client5" type="Node" parent="."]
 script = ExtResource("156_bpgcc")
 state_on_start = ExtResource("143_68xq3")
 
-[node name="03" parent="Client5" instance=ExtResource("4")]
-offset_left = 2420.0
-offset_top = 2018.0
-offset_right = 2465.0
-offset_bottom = 2067.0
-texture_normal = ExtResource("58_lkjt2")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("128")])
+[node name="68" parent="Client5" instance=ExtResource("4")]
+offset_left = 440.0
+offset_top = 90.0
+offset_right = 480.0
+offset_bottom = 146.0
+texture_normal = ExtResource("91_i65b5")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("128")])
 
-[node name="Куманово" parent="Client5" instance=ExtResource("4")]
-offset_left = 2411.0
-offset_top = 2046.0
-offset_right = 2456.0
-offset_bottom = 2095.0
-texture_normal = ExtResource("59_xgynq")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("128")])
+[node name="69" parent="Client5" instance=ExtResource("4")]
+offset_left = 472.0
+offset_top = 89.0
+offset_right = 517.0
+offset_bottom = 145.0
+texture_normal = ExtResource("92_s3wjh")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127")])
 
-[node name="Тетово" parent="Client5" instance=ExtResource("4")]
-offset_left = 2363.0
-offset_top = 2044.0
-offset_right = 2419.0
-offset_bottom = 2075.0
-texture_normal = ExtResource("60_gj0f0")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("128")])
+[node name="70" parent="Client5" instance=ExtResource("4")]
+offset_left = 489.0
+offset_top = 109.0
+offset_right = 516.0
+offset_bottom = 165.0
+texture_normal = ExtResource("93_bge3u")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("129")])
 
-[node name="Охрид" parent="Client5" instance=ExtResource("4")]
-offset_left = 2314.0
-offset_top = 2068.0
-offset_right = 2355.0
-offset_bottom = 2096.0
-texture_normal = ExtResource("61_wk68t")
+[node name="71" parent="Client5" instance=ExtResource("4")]
+offset_left = 497.0
+offset_top = 87.0
+offset_right = 538.0
+offset_bottom = 143.0
+texture_normal = ExtResource("94_js0oa")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127")])
+
+[node name="72" parent="Client5" instance=ExtResource("4")]
+offset_left = 258.0
+offset_top = 77.0
+offset_right = 307.0
+offset_bottom = 113.0
+texture_normal = ExtResource("95_c3pa6")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123")])
+
+[node name="73" parent="Client5" instance=ExtResource("4")]
+offset_left = 291.0
+offset_top = 61.0
+offset_right = 359.0
+offset_bottom = 101.0
+texture_normal = ExtResource("96_x5nfr")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127")])
+
+[node name="74" parent="Client5" instance=ExtResource("4")]
+offset_left = 344.0
+offset_top = 61.0
+offset_right = 392.0
+offset_bottom = 117.0
+texture_normal = ExtResource("97_p4n33")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("128")])
+
+[node name="75" parent="Client5" instance=ExtResource("4")]
+offset_left = 378.0
+offset_top = 73.0
+offset_right = 434.0
+offset_bottom = 95.0
+texture_normal = ExtResource("98_wjk5i")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("125")])
+
+[node name="76" parent="Client5" instance=ExtResource("4")]
+offset_left = 374.0
+offset_top = 48.0
+offset_right = 444.0
+offset_bottom = 78.0
+texture_normal = ExtResource("99_jgie6")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("128")])
+
+[node name="77" parent="Client5" instance=ExtResource("4")]
+offset_left = 441.0
+offset_top = 55.0
+offset_right = 526.0
+offset_bottom = 111.0
+texture_normal = ExtResource("100_yqnwh")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127")])
+
+[node name="78" parent="Client5" instance=ExtResource("4")]
+offset_left = 416.0
+offset_top = 78.0
+offset_right = 452.0
+offset_bottom = 120.0
+texture_normal = ExtResource("101_igfku")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127")])
+
+[node name="79" parent="Client5" instance=ExtResource("4")]
+offset_left = 245.0
+offset_top = 55.0
+offset_right = 293.0
+offset_bottom = 92.0
+texture_normal = ExtResource("102_xg8mk")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("125")])
+
+[node name="80" parent="Client5" instance=ExtResource("4")]
+offset_left = 217.0
+offset_top = 60.0
+offset_right = 250.0
+offset_bottom = 81.0
+texture_normal = ExtResource("103_yr1c5")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127"), ExtResource("123")])
+
+[node name="81" parent="Client5" instance=ExtResource("4")]
+offset_left = 209.0
+offset_top = 79.0
+offset_right = 251.0
+offset_bottom = 123.0
+texture_normal = ExtResource("104_qjrfd")
 dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("126")])
 
-[node name="02" parent="Client5" instance=ExtResource("4")]
-offset_left = 2356.0
-offset_top = 2078.0
-offset_right = 2376.0
-offset_bottom = 2115.0
-texture_normal = ExtResource("62_crpqk")
+[node name="82" parent="Client5" instance=ExtResource("4")]
+offset_left = 221.0
+offset_top = 112.0
+offset_right = 254.0
+offset_bottom = 147.0
+texture_normal = ExtResource("105_dd5vr")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("126")])
+
+[node name="83" parent="Client5" instance=ExtResource("4")]
+offset_left = 175.0
+offset_top = 92.0
+offset_right = 220.0
+offset_bottom = 133.0
+texture_normal = ExtResource("106_8o8y7")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("125")])
+
+[node name="84" parent="Client5" instance=ExtResource("4")]
+offset_left = 188.0
+offset_top = 127.0
+offset_right = 230.0
+offset_bottom = 156.0
+texture_normal = ExtResource("107_ho3qu")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("126")])
+
+[node name="85" parent="Client5" instance=ExtResource("4")]
+offset_left = 145.0
+offset_top = 101.0
+offset_right = 194.0
+offset_bottom = 137.0
+texture_normal = ExtResource("108_ebak0")
 dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("124"), ExtResource("123")])
 
-[node name="Скопье" parent="Client5" instance=ExtResource("4")]
-offset_left = 2369.0
-offset_top = 2067.0
-offset_right = 2427.0
-offset_bottom = 2114.0
-texture_normal = ExtResource("63_5c7cm")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("124"), ExtResource("123")])
-
-[node name="Гевгелия" parent="Client5" instance=ExtResource("4")]
-offset_left = 2369.0
-offset_top = 2107.0
-offset_right = 2420.0
-offset_bottom = 2140.0
-texture_normal = ExtResource("64_c6f25")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("128"), ExtResource("123")])
-
-[node name="01" parent="Client5" instance=ExtResource("4")]
-offset_left = 2371.0
-offset_top = 2132.0
-offset_right = 2427.0
-offset_bottom = 2173.0
-texture_normal = ExtResource("65_wdjbi")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("128"), ExtResource("123")])
+[node name="86" parent="Client5" instance=ExtResource("4")]
+offset_left = 116.0
+offset_top = 117.0
+offset_right = 161.0
+offset_bottom = 165.0
+texture_normal = ExtResource("109_geb24")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("127")])
 
 [node name="Client6" type="Node" parent="."]
 script = ExtResource("156_bpgcc")
 state_on_start = ExtResource("144_w083g")
 
-[node name="Ровно" parent="Client6" instance=ExtResource("4")]
-offset_left = 2361.0
-offset_top = 2206.0
-offset_right = 2393.0
-offset_bottom = 2244.0
-texture_normal = ExtResource("67_dk6hh")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127"), ExtResource("14_v4afx")])
+[node name="87" parent="Client6" instance=ExtResource("4")]
+offset_left = 143.0
+offset_top = 135.0
+offset_right = 192.0
+offset_bottom = 164.0
+texture_normal = ExtResource("111_do4fs")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127"), ExtResource("123")])
 
-[node name="Познань" parent="Client6" instance=ExtResource("4")]
-offset_left = 2336.0
-offset_top = 2210.0
-offset_right = 2363.0
-offset_bottom = 2245.0
-texture_normal = ExtResource("68_u3wy3")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("128"), ExtResource("123")])
+[node name="88" parent="Client6" instance=ExtResource("4")]
+offset_left = 137.0
+offset_top = 159.0
+offset_right = 189.0
+offset_bottom = 187.0
+texture_normal = ExtResource("112_e3sbl")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123")])
 
-[node name="Тлумач" parent="Client6" instance=ExtResource("4")]
-offset_left = 2331.0
-offset_top = 2244.0
-offset_right = 2382.0
-offset_bottom = 2284.0
-texture_normal = ExtResource("69_5v0tw")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("126"), ExtResource("129")])
+[node name="89" parent="Client6" instance=ExtResource("4")]
+offset_left = 152.0
+offset_top = 181.0
+offset_right = 206.0
+offset_bottom = 222.0
+texture_normal = ExtResource("113_vey6i")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("126")])
 
-[node name="01" parent="Client6" instance=ExtResource("4")]
-offset_left = 2356.0
-offset_top = 2244.0
-offset_right = 2407.0
-offset_bottom = 2284.0
-texture_normal = ExtResource("70_nij0p")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("126"), ExtResource("129")])
+[node name="90" parent="Client6" instance=ExtResource("4")]
+offset_left = 187.0
+offset_top = 149.0
+offset_right = 221.0
+offset_bottom = 178.0
+texture_normal = ExtResource("114_sotxu")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("126")])
 
-[node name="02" parent="Client6" instance=ExtResource("4")]
-offset_left = 2300.0
-offset_top = 2284.0
-offset_right = 2351.0
-offset_bottom = 2319.0
-texture_normal = ExtResource("71_2rr6k")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("126"), ExtResource("129")])
+[node name="91" parent="Client6" instance=ExtResource("4")]
+offset_left = 180.0
+offset_top = 174.0
+offset_right = 228.0
+offset_bottom = 200.0
+texture_normal = ExtResource("115_llryh")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("130")])
 
-[node name="03" parent="Client6" instance=ExtResource("4")]
-offset_left = 2349.0
-offset_top = 2275.0
-offset_right = 2402.0
-offset_bottom = 2307.0
-texture_normal = ExtResource("72_ys0wr")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("126"), ExtResource("129")])
+[node name="92" parent="Client6" instance=ExtResource("4")]
+offset_left = 201.0
+offset_top = 198.0
+offset_right = 248.0
+offset_bottom = 243.0
+texture_normal = ExtResource("116_b2ptv")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("127")])
 
-[node name="04" parent="Client6" instance=ExtResource("4")]
-offset_left = 2323.0
-offset_top = 2295.0
-offset_right = 2379.0
-offset_bottom = 2327.0
-texture_normal = ExtResource("73_btmcy")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("126"), ExtResource("129")])
+[node name="93" parent="Client6" instance=ExtResource("4")]
+offset_left = 180.0
+offset_top = 214.0
+offset_right = 213.0
+offset_bottom = 237.0
+texture_normal = ExtResource("117_xchqa")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("125")])
+
+[node name="94" parent="Client6" instance=ExtResource("4")]
+offset_left = 124.0
+offset_top = 88.0
+offset_right = 149.0
+offset_bottom = 117.0
+texture_normal = ExtResource("118_3yh1g")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("125"), ExtResource("127")])
+factory_goods = Array[Resource("res://Resources/Factories/Factory.gd")]([ExtResource("82_dlsmy"), ExtResource("83_hffge")])
+
+[node name="95" parent="Client6" instance=ExtResource("4")]
+offset_left = 99.0
+offset_top = 113.0
+offset_right = 136.0
+offset_bottom = 134.0
+texture_normal = ExtResource("119_5s25c")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127")])
+
+[node name="96" parent="Client6" instance=ExtResource("4")]
+offset_left = 70.0
+offset_top = 118.0
+offset_right = 104.0
+offset_bottom = 140.0
+texture_normal = ExtResource("120_r7hkm")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127"), ExtResource("123")])
+
+[node name="97" parent="Client6" instance=ExtResource("4")]
+offset_left = 91.0
+offset_top = 95.0
+offset_right = 123.0
+offset_bottom = 118.0
+texture_normal = ExtResource("121_jw17d")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123")])
+
+[node name="98" parent="Client6" instance=ExtResource("4")]
+offset_left = 41.0
+offset_top = 84.0
+offset_right = 97.0
+offset_bottom = 122.0
+texture_normal = ExtResource("122_w85ne")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("127")])
+
+[node name="99" parent="Client6" instance=ExtResource("4")]
+offset_left = 97.0
+offset_top = 66.0
+offset_right = 127.0
+offset_bottom = 94.0
+texture_normal = ExtResource("123_h6bsl")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127"), ExtResource("123")])
+
+[node name="100" parent="Client6" instance=ExtResource("4")]
+offset_left = 67.0
+offset_top = 55.0
+offset_right = 99.0
+offset_bottom = 95.0
+texture_normal = ExtResource("124_xuitg")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123")])
+
+[node name="101" parent="Client6" instance=ExtResource("4")]
+offset_left = 29.0
+offset_top = 58.0
+offset_right = 74.0
+offset_bottom = 92.0
+texture_normal = ExtResource("125_vci5x")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("124")])
+
+[node name="102" parent="Client6" instance=ExtResource("4")]
+offset_left = 28.0
+offset_top = 93.0
+offset_right = 69.0
+offset_bottom = 140.0
+texture_normal = ExtResource("126_on2lo")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("124")])
+
+[node name="103" parent="Client6" instance=ExtResource("4")]
+offset_left = 20.0
+offset_top = 105.0
+offset_right = 54.0
+offset_bottom = 145.0
+texture_normal = ExtResource("127_uxhmn")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123")])
+
+[node name="104" parent="Client6" instance=ExtResource("4")]
+offset_left = 8.0
+offset_top = 104.0
+offset_right = 31.0
+offset_bottom = 142.0
+texture_normal = ExtResource("128_4wu3q")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123")])
 
 [node name="Client8" type="Node" parent="."]
 script = ExtResource("156_bpgcc")
 state_on_start = ExtResource("146_o7fr6")
 
-[node name="Львов" parent="Client8" instance=ExtResource("4")]
-offset_left = 2172.0
-offset_top = 2314.0
-offset_right = 2200.0
-offset_bottom = 2352.0
-texture_normal = ExtResource("77_o4ohc")
+[node name="105" parent="Client8" instance=ExtResource("4")]
+offset_left = -21.0
+offset_top = 141.0
+offset_right = 64.0
+offset_bottom = 166.0
+texture_normal = ExtResource("130_w5enb")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127"), ExtResource("130")])
+
+[node name="106" parent="Client8" instance=ExtResource("4")]
+offset_left = -20.0
+offset_top = 165.0
+offset_right = 31.0
+offset_bottom = 196.0
+texture_normal = ExtResource("131_6n6n7")
 dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("128")])
 
-[node name="Борка" parent="Client8" instance=ExtResource("4")]
-offset_left = 2134.0
-offset_top = 2297.0
-offset_right = 2192.0
-offset_bottom = 2318.0
-texture_normal = ExtResource("78_agr6j")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("126")])
+[node name="107" parent="Client8" instance=ExtResource("4")]
+offset_left = -27.0
+offset_top = 195.0
+offset_right = 12.0
+offset_bottom = 214.0
+texture_normal = ExtResource("132_yw6o0")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123")])
 
-[node name="Звижень" parent="Client8" instance=ExtResource("4")]
-offset_left = 2111.0
-offset_top = 2311.0
-offset_right = 2140.0
-offset_bottom = 2346.0
-texture_normal = ExtResource("79_0m1r6")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("126")])
+[node name="108" parent="Client8" instance=ExtResource("4")]
+offset_left = -36.0
+offset_top = 206.0
+offset_right = -7.0
+offset_bottom = 227.0
+texture_normal = ExtResource("133_75n2t")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("126"), ExtResource("128")])
 
-[node name="Гримайлов" parent="Client8" instance=ExtResource("4")]
-offset_left = 2083.0
-offset_top = 2311.0
-offset_right = 2111.0
-offset_bottom = 2337.0
-texture_normal = ExtResource("80_qg7ra")
+[node name="109" parent="Client8" instance=ExtResource("4")]
+offset_left = -31.0
+offset_top = 226.0
+offset_right = 7.0
+offset_bottom = 261.0
+texture_normal = ExtResource("134_0eoj5")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("126"), ExtResource("128")])
+
+[node name="110" parent="Client8" instance=ExtResource("4")]
+offset_left = -48.0
+offset_top = 186.0
+offset_right = -33.0
+offset_bottom = 220.0
+texture_normal = ExtResource("135_5nccj")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("128"), ExtResource("130")])
+
+[node name="111" parent="Client8" instance=ExtResource("4")]
+offset_left = -39.0
+offset_top = 187.0
+offset_right = -15.0
+offset_bottom = 206.0
+texture_normal = ExtResource("136_m2j3n")
 dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("125"), ExtResource("128")])
 
-[node name="Болехов" parent="Client8" instance=ExtResource("4")]
-offset_left = 2132.0
-offset_top = 2310.0
-offset_right = 2177.0
-offset_bottom = 2348.0
-texture_normal = ExtResource("81_adb4j")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("125"), ExtResource("128")])
+[node name="112" parent="Client8" instance=ExtResource("4")]
+offset_left = -52.0
+offset_top = 160.0
+offset_right = -14.0
+offset_bottom = 189.0
+texture_normal = ExtResource("137_42hvd")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127"), ExtResource("123")])
+
+[node name="113" parent="Client8" instance=ExtResource("4")]
+offset_left = -58.0
+offset_top = 174.0
+offset_right = -41.0
+offset_bottom = 192.0
+texture_normal = ExtResource("138_yp6iv")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("125"), ExtResource("123")])
+
+[node name="114" parent="Client8" instance=ExtResource("4")]
+offset_left = -83.0
+offset_top = 154.0
+offset_right = -51.0
+offset_bottom = 183.0
+texture_normal = ExtResource("139_lmtvy")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("127")])
 
 [node name="Client9" type="Node" parent="."]
 script = ExtResource("156_bpgcc")
 state_on_start = ExtResource("147_nlly3")
 
-[node name="Серре" parent="Client9" instance=ExtResource("4")]
-offset_left = 2017.0
-offset_top = 2286.0
-offset_right = 2061.0
-offset_bottom = 2331.0
-texture_normal = ExtResource("83_iec88")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("128"), ExtResource("123")])
+[node name="115" parent="Client9" instance=ExtResource("4")]
+offset_left = -52.0
+offset_top = 145.0
+offset_right = -22.0
+offset_bottom = 163.0
+texture_normal = ExtResource("141_8wv14")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127"), ExtResource("126")])
 
-[node name="Севастополь" parent="Client9" instance=ExtResource("4")]
-offset_left = 2086.0
-offset_top = 2233.0
-offset_right = 2116.0
-offset_bottom = 2267.0
-texture_normal = ExtResource("84_n2b4i")
+[node name="116" parent="Client9" instance=ExtResource("4")]
+offset_left = -80.0
+offset_top = 141.0
+offset_right = -52.0
+offset_bottom = 158.0
+texture_normal = ExtResource("142_xmkc5")
 dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("128")])
 
-[node name="Закопане" parent="Client9" instance=ExtResource("4")]
-offset_left = 2106.0
-offset_top = 2233.0
-offset_right = 2132.0
-offset_bottom = 2263.0
-texture_normal = ExtResource("85_fbst4")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("128")])
+[node name="117" parent="Client9" instance=ExtResource("4")]
+offset_left = -72.0
+offset_top = 119.0
+offset_right = -42.0
+offset_bottom = 149.0
+texture_normal = ExtResource("143_cn2oi")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("124")])
 
-[node name="Кавала" parent="Client9" instance=ExtResource("4")]
-offset_left = 2056.0
-offset_top = 2304.0
-offset_right = 2092.0
-offset_bottom = 2331.0
-texture_normal = ExtResource("86_opsh5")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("130"), ExtResource("126")])
+[node name="118" parent="Client9" instance=ExtResource("4")]
+offset_left = -45.0
+offset_top = 121.0
+offset_right = -18.0
+offset_bottom = 144.0
+texture_normal = ExtResource("144_3fae5")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("124")])
 
-[node name="Верия" parent="Client9" instance=ExtResource("4")]
-offset_left = 1987.0
-offset_top = 2264.0
-offset_right = 2030.0
-offset_bottom = 2296.0
-texture_normal = ExtResource("87_mgumm")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("125")])
-
-[node name="Салоники" parent="Client9" instance=ExtResource("4")]
-offset_left = 1945.0
-offset_top = 2214.0
-offset_right = 1990.0
-offset_bottom = 2271.0
-texture_normal = ExtResource("88_175i2")
+[node name="119" parent="Client9" instance=ExtResource("4")]
+offset_left = -34.0
+offset_top = 120.0
+offset_right = 11.0
+offset_bottom = 149.0
+texture_normal = ExtResource("145_nmr4e")
 dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("126")])
 
-[node name="Мукачево" parent="Client9" instance=ExtResource("4")]
-offset_left = 1992.0
-offset_top = 2150.0
-offset_right = 2036.0
-offset_bottom = 2207.0
-texture_normal = ExtResource("89_qmxot")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("124"), ExtResource("130")])
+[node name="120" parent="Client9" instance=ExtResource("4")]
+offset_left = -105.0
+offset_top = 144.0
+offset_right = -75.0
+offset_bottom = 172.0
+texture_normal = ExtResource("146_375v8")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123")])
 
-[node name="Нетешин" parent="Client9" instance=ExtResource("4")]
-offset_left = 1962.0
-offset_top = 2174.0
-offset_right = 2022.0
-offset_bottom = 2231.0
-texture_normal = ExtResource("90_xai44")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("124"), ExtResource("128")])
+[node name="121" parent="Client9" instance=ExtResource("4")]
+offset_left = -107.0
+offset_top = 125.0
+offset_right = -73.0
+offset_bottom = 144.0
+texture_normal = ExtResource("147_8f40u")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("128")])
 
-[node name="Дрогобыч" parent="Client9" instance=ExtResource("4")]
-offset_left = 2009.0
-offset_top = 2191.0
-offset_right = 2044.0
-offset_bottom = 2234.0
-texture_normal = ExtResource("91_3r4hu")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("125")])
+[node name="122" parent="Client9" instance=ExtResource("4")]
+offset_left = -112.0
+offset_top = 110.0
+offset_right = -73.0
+offset_bottom = 134.0
+texture_normal = ExtResource("148_rjhfk")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("125"), ExtResource("129")])
 
-[node name="Старокостантинов" parent="Client9" instance=ExtResource("4")]
-offset_left = 1980.0
-offset_top = 2216.0
-offset_right = 2017.0
-offset_bottom = 2249.0
-texture_normal = ExtResource("92_1eq5g")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("128")])
+[node name="123" parent="Client9" instance=ExtResource("4")]
+offset_left = -77.0
+offset_top = 102.0
+offset_right = -27.0
+offset_bottom = 123.0
+texture_normal = ExtResource("149_0hdvc")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("127")])
+
+[node name="124" parent="Client9" instance=ExtResource("4")]
+offset_left = -113.0
+offset_top = 76.0
+offset_right = -65.0
+offset_bottom = 110.0
+texture_normal = ExtResource("150_d7mlf")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127"), ExtResource("125")])
+factory_goods = Array[Resource("res://Resources/Factories/Factory.gd")]([ExtResource("82_dlsmy"), ExtResource("83_hffge")])
+
+[node name="125" parent="Client9" instance=ExtResource("4")]
+offset_left = -67.0
+offset_top = 87.0
+offset_right = -38.0
+offset_bottom = 106.0
+texture_normal = ExtResource("151_6yl38")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127")])
+
+[node name="126" parent="Client9" instance=ExtResource("4")]
+offset_left = -44.0
+offset_top = 90.0
+offset_right = -1.0
+offset_bottom = 124.0
+texture_normal = ExtResource("152_tmk13")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127")])
+
+[node name="127" parent="Client9" instance=ExtResource("4")]
+offset_left = -46.0
+offset_top = 74.0
+offset_right = -11.0
+offset_bottom = 90.0
+texture_normal = ExtResource("153_o4khm")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("130")])
 
 [node name="Client10" type="Node" parent="."]
 script = ExtResource("156_bpgcc")
 state_on_start = ExtResource("148_83223")
 
-[node name="Лесковац" parent="Client10" instance=ExtResource("4")]
-offset_left = 2419.0
-offset_top = 2104.0
-offset_right = 2471.0
-offset_bottom = 2152.0
-texture_normal = ExtResource("92_gocys")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("124"), ExtResource("125")])
+[node name="128" parent="Client10" instance=ExtResource("4")]
+offset_left = -10.0
+offset_top = 79.0
+offset_right = 13.0
+offset_bottom = 119.0
+texture_normal = ExtResource("155_3y2uq")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("127")])
 
-[node name="Белград" parent="Client10" instance=ExtResource("4")]
-offset_left = 2424.0
-offset_top = 2072.0
-offset_right = 2479.0
-offset_bottom = 2117.0
-texture_normal = ExtResource("93_e8ppm")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("128"), ExtResource("123")])
+[node name="129" parent="Client10" instance=ExtResource("4")]
+offset_left = -65.0
+offset_top = 49.0
+offset_right = -40.0
+offset_bottom = 86.0
+texture_normal = ExtResource("156_6yc8s")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127"), ExtResource("126")])
 
-[node name="Ниш" parent="Client10" instance=ExtResource("4")]
-offset_left = 2468.0
-offset_top = 2107.0
-offset_right = 2518.0
-offset_bottom = 2146.0
-texture_normal = ExtResource("94_covhs")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("128")])
+[node name="130" parent="Client10" instance=ExtResource("4")]
+offset_left = -48.0
+offset_top = 40.0
+offset_right = -22.0
+offset_bottom = 79.0
+texture_normal = ExtResource("157_2vxmk")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("124")])
 
-[node name="01" parent="Client10" instance=ExtResource("4")]
-offset_left = 2456.0
-offset_top = 2140.0
-offset_right = 2515.0
-offset_bottom = 2182.0
-texture_normal = ExtResource("95_j56n8")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("128")])
+[node name="131" parent="Client10" instance=ExtResource("4")]
+offset_left = -28.0
+offset_top = 27.0
+offset_right = -2.0
+offset_bottom = 52.0
+texture_normal = ExtResource("158_ndala")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("124")])
 
-[node name="Пожаревац" parent="Client10" instance=ExtResource("4")]
-offset_left = 2467.0
-offset_top = 2080.0
-offset_right = 2513.0
-offset_bottom = 2120.0
-texture_normal = ExtResource("96_78dml")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("125")])
-
-[node name="Нови-сад" parent="Client10" instance=ExtResource("4")]
-offset_left = 2451.0
-offset_top = 2038.0
-offset_right = 2504.0
-offset_bottom = 2085.0
-texture_normal = ExtResource("97_jso4k")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("129")])
+[node name="132" parent="Client10" instance=ExtResource("4")]
+offset_left = -22.0
+offset_top = 49.0
+offset_right = 6.0
+offset_bottom = 84.0
+texture_normal = ExtResource("159_ma2ne")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("126")])
 
 [node name="Client11" type="Node" parent="."]
 script = ExtResource("156_bpgcc")
 state_on_start = ExtResource("149_qp85k")
 
-[node name="Дебрецен" parent="Client11" instance=ExtResource("4")]
-offset_left = 2102.0
-offset_top = 2102.0
-offset_right = 2145.0
-offset_bottom = 2153.0
-texture_normal = ExtResource("101_vhp7j")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127"), ExtResource("128")])
+[node name="133" parent="Client11" instance=ExtResource("4")]
+offset_left = -2.0
+offset_top = 18.0
+offset_right = 28.0
+offset_bottom = 48.0
+texture_normal = ExtResource("161_8p8oc")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("128")])
 
-[node name="Ченстохова" parent="Client11" instance=ExtResource("4")]
-offset_left = 2084.0
-offset_top = 2163.0
-offset_right = 2125.0
-offset_bottom = 2206.0
-texture_normal = ExtResource("102_l50aw")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("128"), ExtResource("125")])
-
-[node name="Катовице" parent="Client11" instance=ExtResource("4")]
-offset_left = 2111.0
-offset_top = 2149.0
-offset_right = 2131.0
-offset_bottom = 2179.0
-texture_normal = ExtResource("103_sr0ff")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("126"), ExtResource("128")])
-
-[node name="Николаев" parent="Client11" instance=ExtResource("4")]
-offset_left = 2056.0
-offset_top = 2080.0
-offset_right = 2098.0
-offset_bottom = 2102.0
-texture_normal = ExtResource("104_teuwx")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("124")])
-factory_goods = Array[Resource("res://Resources/Factories/Factory.gd")]([ExtResource("78_dencq")])
-
-[node name="Дьор" parent="Client11" instance=ExtResource("4")]
-offset_left = 2035.0
-offset_top = 2098.0
-offset_right = 2068.0
-offset_bottom = 2117.0
-texture_normal = ExtResource("105_oo2uk")
+[node name="134" parent="Client11" instance=ExtResource("4")]
+offset_left = 1.0
+offset_top = 41.0
+offset_right = 28.0
+offset_bottom = 76.0
+texture_normal = ExtResource("162_enpgt")
 dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("124"), ExtResource("128")])
 
-[node name="Шопрон" parent="Client11" instance=ExtResource("4")]
-offset_left = 2030.0
-offset_top = 2114.0
-offset_right = 2054.0
-offset_bottom = 2146.0
-texture_normal = ExtResource("106_hvo4v")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("125")])
-
-[node name="Пшемысль" parent="Client11" instance=ExtResource("4")]
-offset_left = 2071.0
-offset_top = 2123.0
-offset_right = 2112.0
-offset_bottom = 2177.0
-texture_normal = ExtResource("107_15k1t")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("126")])
-
-[node name="Стецки" parent="Client11" instance=ExtResource("4")]
-offset_left = 2032.0
-offset_top = 2166.0
-offset_right = 2083.0
-offset_bottom = 2199.0
-texture_normal = ExtResource("108_cu3an")
+[node name="135" parent="Client11" instance=ExtResource("4")]
+offset_left = 7.0
+offset_top = 76.0
+offset_right = 32.0
+offset_bottom = 106.0
+texture_normal = ExtResource("163_vn4m3")
 dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("124")])
 
-[node name="Сегед" parent="Client11" instance=ExtResource("4")]
-offset_left = 2069.0
-offset_top = 2096.0
-offset_right = 2113.0
-offset_bottom = 2130.0
-texture_normal = ExtResource("109_45cs2")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("130"), ExtResource("128")])
+[node name="136" parent="Client11" instance=ExtResource("4")]
+offset_left = -15.0
+offset_top = -54.0
+offset_right = 31.0
+offset_bottom = -25.0
+texture_normal = ExtResource("164_1go46")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("125")])
 
-[node name="Будапешт" parent="Client11" instance=ExtResource("4")]
-offset_left = 2033.0
-offset_top = 2130.0
-offset_right = 2063.0
-offset_bottom = 2170.0
-texture_normal = ExtResource("110_uqpx5")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("128"), ExtResource("14_v4afx")])
+[node name="137" parent="Client11" instance=ExtResource("4")]
+offset_left = -37.0
+offset_top = -30.0
+offset_right = 26.0
+texture_normal = ExtResource("165_5nj28")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("124")])
 
-[node name="Сольнок" parent="Client11" instance=ExtResource("4")]
-offset_left = 2058.0
-offset_top = 2140.0
-offset_right = 2085.0
-offset_bottom = 2165.0
-texture_normal = ExtResource("111_w2vrx")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("128"), ExtResource("14_v4afx")])
-
-[node name="Печ" parent="Client11" instance=ExtResource("4")]
-offset_left = 2054.0
-offset_top = 2110.0
-offset_right = 2098.0
-offset_bottom = 2150.0
-texture_normal = ExtResource("112_qbity")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("128"), ExtResource("126")])
+[node name="138" parent="Client11" instance=ExtResource("4")]
+offset_left = -37.0
+offset_top = -7.0
+offset_right = 15.0
+offset_bottom = 31.0
+texture_normal = ExtResource("166_7xqia")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("124")])
 
 [node name="Client12" type="Node" parent="."]
 script = ExtResource("156_bpgcc")
 state_on_start = ExtResource("150_vq62b")
 
-[node name="01" parent="Client12" instance=ExtResource("4")]
-offset_left = 2054.0
-offset_top = 1983.0
-offset_right = 2100.0
-offset_bottom = 2036.0
-texture_normal = ExtResource("111_3xpct")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("127")])
-factory_goods = Array[Resource("res://Resources/Factories/Factory.gd")]([ExtResource("78_dencq")])
-
-[node name="Брезно" parent="Client12" instance=ExtResource("4")]
-offset_left = 2094.0
-offset_top = 1972.0
-offset_right = 2131.0
-offset_bottom = 2015.0
-texture_normal = ExtResource("112_wvaaj")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("127")])
-
-[node name="Кошице" parent="Client12" instance=ExtResource("4")]
-offset_left = 2126.0
-offset_top = 1972.0
-offset_right = 2186.0
-offset_bottom = 2015.0
-texture_normal = ExtResource("113_bkn73")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("125")])
-
-[node name="Братислава" parent="Client12" instance=ExtResource("4")]
-offset_left = 2069.0
-offset_top = 2011.0
-offset_right = 2122.0
-offset_bottom = 2063.0
-texture_normal = ExtResource("114_086pr")
+[node name="139" parent="Client12" instance=ExtResource("4")]
+offset_left = -52.0
+offset_top = 3.0
+offset_right = -21.0
+offset_bottom = 45.0
+texture_normal = ExtResource("168_wwnrd")
 dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("124")])
 
-[node name="Лученец" parent="Client12" instance=ExtResource("4")]
-offset_left = 2050.0
-offset_top = 2040.0
-offset_right = 2103.0
-offset_bottom = 2092.0
-texture_normal = ExtResource("115_mc00x")
+[node name="140" parent="Client12" instance=ExtResource("4")]
+offset_left = -73.0
+offset_top = 28.0
+offset_right = -46.0
+offset_bottom = 57.0
+texture_normal = ExtResource("169_5no58")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("124")])
+
+[node name="141" parent="Client12" instance=ExtResource("4")]
+offset_left = -95.0
+offset_top = 30.0
+offset_right = -71.0
+offset_bottom = 59.0
+texture_normal = ExtResource("170_bbafc")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("124")])
+
+[node name="142" parent="Client12" instance=ExtResource("4")]
+offset_left = -95.0
+offset_top = 55.0
+offset_right = -62.0
+offset_bottom = 80.0
+texture_normal = ExtResource("171_gq40o")
 dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("127")])
 
-[node name="Жилина" parent="Client12" instance=ExtResource("4")]
-offset_left = 2100.0
-offset_top = 2009.0
-offset_right = 2170.0
-offset_bottom = 2037.0
-texture_normal = ExtResource("116_xch8a")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("124"), ExtResource("125")])
-factory_goods = Array[Resource("res://Resources/Factories/Factory.gd")]([ExtResource("82_dlsmy"), ExtResource("83_hffge")])
+[node name="143" parent="Client12" instance=ExtResource("4")]
+offset_left = -83.0
+offset_top = 73.0
+offset_right = -56.0
+offset_bottom = 89.0
+texture_normal = ExtResource("172_yyhuk")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("125"), ExtResource("127")])
 
 [node name="Client13" type="Node" parent="."]
 script = ExtResource("156_bpgcc")
 state_on_start = ExtResource("151_3yl71")
 
-[node name="Пярну" parent="Client13" instance=ExtResource("4")]
-offset_left = 4922.0
-offset_top = 1504.0
-offset_right = 5476.0
-offset_bottom = 1890.0
-texture_normal = ExtResource("99")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("124"), ExtResource("123")])
-
-[node name="Тарту" parent="Client13" instance=ExtResource("4")]
-offset_left = 5142.0
-offset_top = 1301.0
-offset_right = 5461.0
-offset_bottom = 1545.0
-texture_normal = ExtResource("102")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("124"), ExtResource("128")])
-
-[node name="Раквере" parent="Client13" instance=ExtResource("4")]
-offset_left = 4728.0
-offset_top = 1857.0
-offset_right = 5256.0
-offset_bottom = 2320.0
-texture_normal = ExtResource("100")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("127")])
-
-[node name="Вильянди" parent="Client13" instance=ExtResource("4")]
-offset_left = 4573.0
-offset_top = 1592.0
-offset_right = 4979.0
-offset_bottom = 2005.0
-texture_normal = ExtResource("98")
+[node name="144" parent="Client13" instance=ExtResource("4")]
+offset_left = -127.0
+offset_top = 33.0
+offset_right = -96.0
+offset_bottom = 67.0
+texture_normal = ExtResource("174_ml8aa")
 dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("125")])
 
-[node name="Силламяэ" parent="Client13" instance=ExtResource("4")]
-offset_left = 4307.0
-offset_top = 1858.0
-offset_right = 4727.0
-offset_bottom = 2217.0
-texture_normal = ExtResource("101")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("128")])
+[node name="145" parent="Client13" instance=ExtResource("4")]
+offset_left = -139.0
+offset_top = 54.0
+offset_right = -108.0
+offset_bottom = 72.0
+texture_normal = ExtResource("175_hwmp2")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127"), ExtResource("123")])
 
-[node name="Курессааре" parent="Client13" instance=ExtResource("4")]
-offset_left = 4401.0
-offset_top = 2066.0
-offset_right = 4893.0
-offset_bottom = 2498.0
-texture_normal = ExtResource("103")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("128")])
-
-[node name="Хаапсалу" parent="Client13" instance=ExtResource("4")]
-offset_left = 4748.0
-offset_top = 2445.0
-offset_right = 4908.0
-offset_bottom = 2928.0
-texture_normal = ExtResource("104")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("126")])
-
-[node name="Алитус" parent="Client13" instance=ExtResource("4")]
-offset_left = 4271.0
-offset_top = 75.0
-offset_right = 4610.0
-offset_bottom = 388.0
-texture_normal = ExtResource("105")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("124"), ExtResource("128")])
-
-[node name="Каунас" parent="Client13" instance=ExtResource("4")]
-offset_left = 4221.0
-offset_top = 351.0
-offset_right = 4569.0
-offset_bottom = 645.0
-texture_normal = ExtResource("51")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("130"), ExtResource("125")])
-
-[node name="Клайпеда" parent="Client13" instance=ExtResource("4")]
-offset_left = 4299.0
-offset_top = 445.0
-offset_right = 4784.0
-offset_bottom = 898.0
-texture_normal = ExtResource("53")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("127")])
-
-[node name="Паневежис" parent="Client13" instance=ExtResource("4")]
-offset_left = 4513.0
-offset_top = 245.0
-offset_right = 5032.0
-offset_bottom = 629.0
-texture_normal = ExtResource("54")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("126"), ExtResource("123")])
+[node name="146" parent="Client13" instance=ExtResource("4")]
+offset_left = -142.0
+offset_top = 73.0
+offset_right = -116.0
+offset_bottom = 89.0
+texture_normal = ExtResource("176_fc002")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("126"), ExtResource("125")])
 
 [node name="Client14" type="Node" parent="."]
 script = ExtResource("156_bpgcc")
 state_on_start = ExtResource("152_p548f")
 
-[node name="Белая Церковь" parent="Client14" instance=ExtResource("4")]
-offset_left = 2009.0
-offset_top = 2007.0
-offset_right = 2068.0
-offset_bottom = 2062.0
-texture_normal = ExtResource("130_n3giy")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("128"), ExtResource("124")])
+[node name="147" parent="Client14" instance=ExtResource("4")]
+offset_left = -119.0
+offset_top = 67.0
+offset_right = -96.0
+offset_bottom = 89.0
+texture_normal = ExtResource("178_8kxek")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("129"), ExtResource("127")])
 
-[node name="Павлоград" parent="Client14" instance=ExtResource("4")]
-offset_left = 2006.0
-offset_top = 2117.0
-offset_right = 2032.0
-offset_bottom = 2155.0
-texture_normal = ExtResource("131_isrnk")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("130"), ExtResource("126")])
+[node name="148" parent="Client14" instance=ExtResource("4")]
+offset_left = -131.0
+offset_top = 89.0
+offset_right = -102.0
+offset_bottom = 121.0
+texture_normal = ExtResource("179_vlhph")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127"), ExtResource("123")])
 
-[node name="Мелитополь" parent="Client14" instance=ExtResource("4")]
-offset_left = 1924.0
-offset_top = 2063.0
-offset_right = 1978.0
-offset_bottom = 2111.0
-texture_normal = ExtResource("132_3eqnq")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("129")])
-factory_goods = Array[Resource("res://Resources/Factories/Factory.gd")]([ExtResource("78_dencq")])
+[node name="149" parent="Client14" instance=ExtResource("4")]
+offset_left = -151.0
+offset_top = 89.0
+offset_right = -128.0
+offset_bottom = 121.0
+texture_normal = ExtResource("180_bnm5g")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("127")])
 
-[node name="02" parent="Client14" instance=ExtResource("4")]
-offset_left = 1931.0
-offset_top = 2102.0
-offset_right = 1977.0
-offset_bottom = 2128.0
-texture_normal = ExtResource("133_mq2qm")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("129")])
-
-[node name="Лисичанск" parent="Client14" instance=ExtResource("4")]
-offset_left = 1945.0
-offset_top = 2141.0
-offset_right = 1990.0
-offset_bottom = 2187.0
-texture_normal = ExtResource("134_6owu5")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("128"), ExtResource("126")])
-factory_goods = Array[Resource("res://Resources/Factories/Factory.gd")]([ExtResource("138_gl4dv")])
-
-[node name="03" parent="Client14" instance=ExtResource("4")]
-offset_left = 1942.0
-offset_top = 2125.0
-offset_right = 1982.0
-offset_bottom = 2159.0
-texture_normal = ExtResource("135_d25ip")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("128"), ExtResource("126")])
-
-[node name="Пмлица" parent="Client14" instance=ExtResource("4")]
-offset_left = 1970.0
-offset_top = 2026.0
-offset_right = 2046.0
-offset_bottom = 2073.0
-texture_normal = ExtResource("136_kyhui")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127"), ExtResource("125")])
-
-[node name="01" parent="Client14" instance=ExtResource("4")]
-offset_left = 1947.0
-offset_top = 2036.0
-offset_right = 2023.0
-offset_bottom = 2085.0
-texture_normal = ExtResource("137_cb0kp")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127"), ExtResource("125")])
-
-[node name="Грубешов" parent="Client14" instance=ExtResource("4")]
-offset_left = 1977.0
-offset_top = 2080.0
-offset_right = 2006.0
-offset_bottom = 2125.0
-texture_normal = ExtResource("138_1lm17")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("125")])
-
-[node name="Вилькомир" parent="Client14" instance=ExtResource("4")]
-offset_left = 1968.0
-offset_top = 2120.0
-offset_right = 2017.0
-offset_bottom = 2168.0
-texture_normal = ExtResource("139_08p6y")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127"), ExtResource("128")])
-
-[node name="04" parent="Client14" instance=ExtResource("4")]
-offset_left = 2004.0
-offset_top = 2089.0
-offset_right = 2056.0
-offset_bottom = 2137.0
-texture_normal = ExtResource("140_wls8m")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127"), ExtResource("128")])
-
-[node name="05" parent="Client14" instance=ExtResource("4")]
-offset_left = 2000.0
-offset_top = 2063.0
-offset_right = 2056.0
-offset_bottom = 2095.0
-texture_normal = ExtResource("141_7tdeg")
+[node name="150" parent="Client14" instance=ExtResource("4")]
+offset_left = -165.0
+offset_top = 71.0
+offset_right = -142.0
+offset_bottom = 96.0
+texture_normal = ExtResource("181_am6xo")
 dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127"), ExtResource("128")])
 
 [node name="Client15" type="Node" parent="."]
 script = ExtResource("156_bpgcc")
 state_on_start = ExtResource("153_elbxs")
 
-[node name="Ужгород" parent="Client15" instance=ExtResource("4")]
-offset_left = 1958.0
-offset_top = 2272.0
-offset_right = 1988.0
-offset_bottom = 2308.0
-texture_normal = ExtResource("143_fiqkt")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("124"), ExtResource("125")])
+[node name="151" parent="Client15" instance=ExtResource("4")]
+offset_left = -163.0
+offset_top = 57.0
+offset_right = -139.0
+offset_bottom = 73.0
+texture_normal = ExtResource("183_ge57g")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127"), ExtResource("124")])
 
-[node name="Дубно" parent="Client15" instance=ExtResource("4")]
-offset_left = 1987.0
-offset_top = 2274.0
-offset_right = 2016.0
-offset_bottom = 2308.0
-texture_normal = ExtResource("144_45m4o")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("126")])
-
-[node name="Белецкое" parent="Client15" instance=ExtResource("4")]
-offset_left = 2018.0
-offset_top = 2306.0
-offset_right = 2052.0
-offset_bottom = 2349.0
-texture_normal = ExtResource("145_17vs5")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("124"), ExtResource("128")])
-
-[node name="Иршики" parent="Client15" instance=ExtResource("4")]
-offset_left = 1974.0
-offset_top = 2303.0
-offset_right = 2018.0
-offset_bottom = 2344.0
-texture_normal = ExtResource("146_gln8u")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("127")])
+[node name="152" parent="Client15" instance=ExtResource("4")]
+offset_left = -155.0
+offset_top = 38.0
+offset_right = -124.0
+offset_bottom = 56.0
+texture_normal = ExtResource("184_bmb75")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("124"), ExtResource("127")])
 
 [node name="Client16" type="Node" parent="."]
 script = ExtResource("156_bpgcc")
 state_on_start = ExtResource("154_j8r12")
 
-[node name="01" parent="Client16" instance=ExtResource("4")]
-offset_left = 2240.0
-offset_top = 2335.0
-offset_right = 2289.0
-offset_bottom = 2374.0
-texture_normal = ExtResource("141_81yva")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("126")])
-
-[node name="Кедабекский" parent="Client16" instance=ExtResource("4")]
-offset_left = 2212.0
-offset_top = 2324.0
-offset_right = 2254.0
-offset_bottom = 2354.0
-texture_normal = ExtResource("142_6or55")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("126")])
-
-[node name="Гянджа" parent="Client16" instance=ExtResource("4")]
-offset_left = 2254.0
-offset_top = 2311.0
-offset_right = 2304.0
-offset_bottom = 2336.0
-texture_normal = ExtResource("143_vdwuk")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("126")])
-
-[node name="Лачын" parent="Client16" instance=ExtResource("4")]
-offset_left = 2286.0
-offset_top = 2334.0
-offset_right = 2351.0
-offset_bottom = 2377.0
-texture_normal = ExtResource("144_kumy1")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("14_v4afx"), ExtResource("128")])
-
-[node name="Локоатан" parent="Client16" instance=ExtResource("4")]
-offset_left = 2335.0
-offset_top = 2314.0
-offset_right = 2408.0
-offset_bottom = 2353.0
-texture_normal = ExtResource("145_t833l")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127"), ExtResource("128")])
-
-[node name="Зардаб" parent="Client16" instance=ExtResource("4")]
-offset_left = 2264.0
-offset_top = 2320.0
-offset_right = 2337.0
-offset_bottom = 2350.0
-texture_normal = ExtResource("146_hgkc8")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("125"), ExtResource("128")])
-
-[node name="Баку" parent="Client16" instance=ExtResource("4")]
-offset_left = 2366.0
-offset_top = 2289.0
-offset_right = 2407.0
-offset_bottom = 2316.0
-texture_normal = ExtResource("147_i7tcr")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("130"), ExtResource("123")])
+[node name="153" parent="Client16" instance=ExtResource("4")]
+offset_left = -139.0
+offset_top = 114.0
+offset_right = -106.0
+offset_bottom = 142.0
+texture_normal = ExtResource("186_h4rjk")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("128")])
 
 [node name="Client17" type="Node" parent="."]
 script = ExtResource("156_bpgcc")
 state_on_start = ExtResource("155_brk8r")
 
-[node name="Эскишехир" parent="Client17" instance=ExtResource("4")]
-offset_left = 2195.0
-offset_top = 2166.0
-offset_right = 2232.0
-offset_bottom = 2197.0
-texture_normal = ExtResource("139_3msg0")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("130"), ExtResource("125")])
-factory_goods = Array[Resource("res://Resources/Factories/Factory.gd")]([ExtResource("82_dlsmy"), ExtResource("83_hffge")])
+[node name="154" parent="Client17" instance=ExtResource("4")]
+offset_left = 74.0
+offset_top = 141.0
+offset_right = 113.0
+offset_bottom = 164.0
+texture_normal = ExtResource("188_hw2vn")
+dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("125"), ExtResource("124")])
 
-[node name="Анталья" parent="Client17" instance=ExtResource("4")]
-offset_left = 2197.0
-offset_top = 2194.0
-offset_right = 2233.0
-offset_bottom = 2218.0
-texture_normal = ExtResource("140_g2bh6")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("124")])
+[node name="Map2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(192, 533)
+texture = ExtResource("189_v058e")
 
-[node name="Кайсери" parent="Client17" instance=ExtResource("4")]
-offset_left = 2261.0
-offset_top = 2157.0
-offset_right = 2318.0
-offset_bottom = 2201.0
-texture_normal = ExtResource("141_d7h37")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("127"), ExtResource("124")])
-
-[node name="Мерсин" parent="Client17" instance=ExtResource("4")]
-offset_left = 2266.0
-offset_top = 2193.0
-offset_right = 2332.0
-offset_bottom = 2215.0
-texture_normal = ExtResource("142_wuqqo")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("127")])
-factory_goods = Array[Resource("res://Resources/Factories/Factory.gd")]([ExtResource("77_fbuxq"), ExtResource("78_dencq")])
-
-[node name="Газиантеп" parent="Client17" instance=ExtResource("4")]
-offset_left = 2341.0
-offset_top = 2162.0
-offset_right = 2387.0
-offset_bottom = 2211.0
-texture_normal = ExtResource("143_qn8rg")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("126"), ExtResource("129")])
-
-[node name="Сивас" parent="Client17" instance=ExtResource("4")]
-offset_left = 2286.0
-offset_top = 2159.0
-offset_right = 2348.0
-offset_bottom = 2191.0
-texture_normal = ExtResource("144_y7k0j")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("126")])
-
-[node name="Адана" parent="Client17" instance=ExtResource("4")]
-offset_left = 2320.0
-offset_top = 2172.0
-offset_right = 2359.0
-offset_bottom = 2212.0
-texture_normal = ExtResource("145_wobpb")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("125"), ExtResource("126")])
-
-[node name="Аланья" parent="Client17" instance=ExtResource("4")]
-offset_left = 2232.0
-offset_top = 2198.0
-offset_right = 2273.0
-offset_bottom = 2218.0
-texture_normal = ExtResource("146_vd3w7")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("127")])
-
-[node name="Анкара" parent="Client17" instance=ExtResource("4")]
-offset_left = 2223.0
-offset_top = 2158.0
-offset_right = 2272.0
-offset_bottom = 2203.0
-texture_normal = ExtResource("147_6dtbw")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("128"), ExtResource("130")])
-
-[node name="Ризе" parent="Client17" instance=ExtResource("4")]
-offset_left = 2285.0
-offset_top = 2129.0
-offset_right = 2373.0
-offset_bottom = 2164.0
-texture_normal = ExtResource("148_q5mpy")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("126")])
-
-[node name="Синоп" parent="Client17" instance=ExtResource("4")]
-offset_left = 2218.0
-offset_top = 2133.0
-offset_right = 2298.0
-offset_bottom = 2166.0
-texture_normal = ExtResource("149_gx55s")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("124"), ExtResource("125")])
-
-[node name="Стамбаул" parent="Client17" instance=ExtResource("4")]
-offset_left = 2168.0
-offset_top = 2144.0
-offset_right = 2226.0
-offset_bottom = 2167.0
-texture_normal = ExtResource("150_tk08t")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("128"), ExtResource("126")])
-
-[node name="Бурса" parent="Client17" instance=ExtResource("4")]
-offset_left = 2163.0
-offset_top = 2164.0
-offset_right = 2201.0
-offset_bottom = 2192.0
-texture_normal = ExtResource("151_mk28a")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("125")])
-
-[node name="Измир" parent="Client17" instance=ExtResource("4")]
-offset_left = 2163.0
-offset_top = 2175.0
-offset_right = 2209.0
-offset_bottom = 2214.0
-texture_normal = ExtResource("152_jo62e")
-dp_goods = Array[Resource("res://Resources/Good/good.gd")]([ExtResource("123"), ExtResource("14_v4afx")])
+[node name="MapWithNums" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(192, 533)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("190_ldoju")

@@ -30,7 +30,7 @@ func set_player(client, state_on_start):
 	set_client(client, state_on_start)
 	
 	player.client = client
-	player.position = Vector2(2318, 2000)
+	player.global_position = Vector2(0, 0)
 	Players.player = player
 	Players.player.client = client
 	ManagerDay.game.add_child(player)

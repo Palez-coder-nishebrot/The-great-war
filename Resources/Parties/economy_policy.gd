@@ -1,5 +1,7 @@
 extends PartyIssue
 
+class_name EconomyIssue
+
 @export var factory_cost: int = 0
 @export var infrastructure_cost: int = 0
 @export var taxes_efficiency:  float = 0.0

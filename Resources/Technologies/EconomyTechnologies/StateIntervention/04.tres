@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Technology" load_steps=5 format=3 uid="uid://pp8q8ogjejg3"]
+
+[ext_resource type="Script" path="res://Resources/Technologies/Technology.gd" id="1"]
+[ext_resource type="Script" path="res://Resources/Technologies/EconomyTechnologies/Effects/TechnologyEffectNewFactory.gd" id="1_rpe0q"]
+[ext_resource type="Resource" uid="uid://dbp2mqscr4xoq" path="res://Resources/Factories/TipesOfFactories/SentheticTextileFactory.tres" id="2_sl4mg"]
+
+[sub_resource type="Resource" id="Resource_ebg8a"]
+script = ExtResource("1_rpe0q")
+name_of_effect = "Новое сооружение"
+target = ExtResource("2_sl4mg")
+
+[resource]
+script = ExtResource("1")
+cost = 1800
+activation_year = 1914
+name_of_technology = "economic_structures_4"
+list_of_effects = Array[Resource("res://Resources/Technologies/TechnologyEffect.gd")]([SubResource("Resource_ebg8a")])

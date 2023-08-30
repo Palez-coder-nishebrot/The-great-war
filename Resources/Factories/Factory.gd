@@ -8,19 +8,21 @@ class_name FactoryTipe
 
 @export var good: Resource
 
-@export var available_from_start: bool = true
-
-@export var construction_days: int = 3
+@export var construction_days:   int = 3
+@export var initial_max_workers: int = 10000
 
 
 func generate_factory(region = null, economy_manager = null):
-	var factory = Factory.new()
+	var factory             = Factory.new()
 	factory.closed          = false
 	factory.name_of_factory = name_of_factory
 	factory.good            = good
 	factory.type_factory    = self
 	factory.province        = region
 	factory.economy_manager = economy_manager
+	factory.real_max_employed_number = initial_max_workers
+	factory.max_employed_number      = initial_max_workers
+	
 	set_factory_storage(factory)
 	if region != null:
 		factory.workers_unit = region.population.population_types[1]

@@ -610,6 +610,59 @@ text = "Налоги на средний класс"
 script = ExtResource("2")
 variable = "middle_class_taxes"
 
+[node name="HBoxContainer4" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+script = ExtResource("4_vwp17")
+variable = "middle_classes_taxes"
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7j3sh")
+theme_override_font_sizes/font_size = 30
+text = "0%"
+script = ExtResource("5_fuhht")
+
+[node name="Button2" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7j3sh")
+theme_override_font_sizes/font_size = 30
+text = "10%"
+script = ExtResource("5_fuhht")
+value = 0.1
+
+[node name="Button3" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7j3sh")
+theme_override_font_sizes/font_size = 30
+text = "20%"
+script = ExtResource("5_fuhht")
+value = 0.2
+
+[node name="Button4" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7j3sh")
+theme_override_font_sizes/font_size = 30
+text = "30%"
+script = ExtResource("5_fuhht")
+value = 0.3
+
+[node name="Button5" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7j3sh")
+theme_override_font_sizes/font_size = 30
+text = "40%"
+script = ExtResource("5_fuhht")
+value = 0.4
+
+[node name="Button6" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7j3sh")
+theme_override_font_sizes/font_size = 30
+text = "50%"
+script = ExtResource("5_fuhht")
+value = 0.5
+
 [node name="EconomyReform3" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = SubResource("3")

@@ -7,3 +7,4 @@ script = ExtResource("1_qd82q")
 policy_name = "royal_dictatorship"
 elections = false
 reforms_after_revolution = []
+avaliable_ideologies = Array[Resource("res://Resources/Parties/Ideology.gd")]([])
