@@ -68,6 +68,7 @@ func update_pop_unit_chars(unit, government_form, ruling_party):
 	var pop_type             = unit.population_type
 	
 	unit.update_aggressiveness(ruling_party, government_form)
+	unit.soc_migrated_q = unit.soc_migration_manager.get_pop_q_for_soc_migration(unit)
 	
 	if SceneStorage.game.data_manager.is_first_day_in_week():
 		unit.update_literacy(education_efficiency, education_cost_getter.call())

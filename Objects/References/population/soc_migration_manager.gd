@@ -4,8 +4,24 @@ extends Node
 class_name SocMigrationManager
 
 
-func get_pop_q_for_soc_migration(pop_unit):
-	pass
+func get_pop_q_for_soc_migration(pop_unit: PopulationUnit):
+	var percent = 0.0
+	var pluralism = pop_unit.pluralism
+	
+	match pop_unit.welfare:
+		0:
+			percent += 0.1
+		1:
+			percent += 0.02
+		2:
+			percent += 0.01
+	
+	if pluralism > 0 and pluralism < 5:
+		percent += 0.01
+	elif pluralism > 5:
+		percent += 0.02
+	
+	return snapped(pop_unit.quantity * percent, 1)
 
 
 func to_labourer():
@@ -22,7 +38,10 @@ func to_craftsmen(factories_list):
 	value += check_literacy(0.0)
 
 
-func to_clerks():
+func to_clerks(factories_list):
+	var value = 0.0
+	if not region_haves_jobs_for_craftsmen(factories_list):
+		value -= 100
 	pass
 
 

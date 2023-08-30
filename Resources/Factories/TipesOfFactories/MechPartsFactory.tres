@@ -21,5 +21,5 @@ script = ExtResource("1")
 name_of_factory = "mech_parts_factory"
 raw = Array[ExtResource("2")]([SubResource("1"), SubResource("2")])
 good = ExtResource("5")
-available_from_start = true
 construction_days = 3
+initial_max_workers = 10000

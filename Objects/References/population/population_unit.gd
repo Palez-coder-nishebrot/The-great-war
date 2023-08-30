@@ -11,6 +11,8 @@ var pol_reform_desire:     float = 0.0 # Макс. 10.0
 var pluralism:             float = 0.0 # Макс. 10.0
 var aggressiveness:        float = 0.0 # Макс. 10.0
 
+var soc_migrated_q: int  = 0
+
 var welfare:             int = 0
 var quantity:            int = 0
 var unemployed_quantity: int = 0
