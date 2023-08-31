@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("1")
 util = 1.0
-quantity = 1.0
+quantity = 0.5
 good_type = ExtResource("2")

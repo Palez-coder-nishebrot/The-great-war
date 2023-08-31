@@ -14,15 +14,15 @@ var windows: Array = [
 	"window_diplomacy",
 ]
 
-@onready var money_icon:           HBoxContainer = $VBoxContainer/money_icon
-@onready var gdp_icon:             HBoxContainer = $VBoxContainer/gdp_icon
-@onready var unemployed_icon:      HBoxContainer = $VBoxContainer/unemployed_icon
-@onready var research_points_icon: HBoxContainer = $VBoxContainer/research_points_icon
-@onready var ruling_party_icon:    HBoxContainer = $VBoxContainer/ruling_party_icon
-@onready var reforms_icon:         HBoxContainer = $VBoxContainer/reforms_icon
-@onready var literacy_icon:        HBoxContainer = $VBoxContainer/literacy_icon
-@onready var population_growth:    HBoxContainer = $VBoxContainer/population_growth_icon
-@onready var welfare_icon:         HBoxContainer = $VBoxContainer/welfare_icon
+@onready var money_icon:            HBoxContainer = $VBoxContainer/money_icon
+@onready var gdp_icon:               HBoxContainer = $VBoxContainer/gdp_icon
+@onready var unemployed_icon:        HBoxContainer = $VBoxContainer/unemployed_icon
+@onready var research_points_icon:   HBoxContainer = $VBoxContainer/research_points_icon
+@onready var ruling_party_icon:      HBoxContainer = $VBoxContainer/ruling_party_icon
+@onready var reforms_icon:           HBoxContainer = $VBoxContainer/reforms_icon
+@onready var literacy_icon:          HBoxContainer = $VBoxContainer/literacy_icon
+@onready var population_growth_icon: HBoxContainer = $VBoxContainer/population_growth_icon
+@onready var welfare_icon:           HBoxContainer = $VBoxContainer/welfare_icon
 
 #
 #func _ready():
@@ -56,6 +56,7 @@ func update_information():
 	literacy_icon.set_data(client.accounting_manager.population_literacy)
 	welfare_icon.set_data(client.accounting_manager.population_welfare)
 	research_points_icon.set_data(client.research_manager.researching_points_growth)
+	population_growth_icon.set_data(client.accounting_manager.population_growth)
 	#ruling_party_icon.set_data(client.political_manager.ruling_party.party_name)
 	#ruling_party_icon.set_data(ruling_party.party_name, ruling_party.)
 	

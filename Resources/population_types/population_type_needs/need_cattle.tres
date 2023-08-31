@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="NeededGood" load_steps=3 format=3 uid="uid://crcsycdlcbeq8"]
+
+[ext_resource type="Resource" uid="uid://cyiu6swvkuaa1" path="res://Resources/Good/beasts.tres" id="1_ikx0t"]
+[ext_resource type="Script" path="res://Resources/population_types/population_type_needs/population_type_need.gd" id="2_35wxw"]
+
+[resource]
+script = ExtResource("2_35wxw")
+util = 1.0
+quantity = 0.5
+good_type = ExtResource("1_ikx0t")

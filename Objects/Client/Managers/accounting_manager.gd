@@ -23,6 +23,7 @@ var subsidies_expenses:            float = 0.0
 var debts_expenses:                float = 0.0
 var army_expenses:                 float = 0.0
 
+var population_growth:         int   = 0
 var unemployed_quantity:       int   = 0
 var population_literacy:       float = 0.0
 var population_quantity:       int   = 0
@@ -92,6 +93,8 @@ func set_info():
 func get_population_statistics():
 	clear_dict(produced_goods)
 	
+	population_growth = 0
+	
 	var plu        = 0.0
 	var agr        = 0.0
 	var unemployed = 0
@@ -117,6 +120,7 @@ func get_population_statistics():
 				welfare       += pop_unit.welfare
 				agr           += pop_unit.aggressiveness
 				plu           += pop_unit.pluralism
+				population_growth += pop_unit.population_growth
 				
 		
 		for enterprise in region.DP_list + region.get_factories_list():

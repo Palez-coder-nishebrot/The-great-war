@@ -142,7 +142,7 @@ func set_local_market():
 	while file != "":
 		if file != "good.gd":
 			var fle = load(path + file)
-			local_market[fle] = 100.0
+			local_market[fle] = 0.0
 			prices_goods[fle] = float(fle.base_price)
 			export_goods[fle] = 0.0
 			import_goods[fle] = 0.0

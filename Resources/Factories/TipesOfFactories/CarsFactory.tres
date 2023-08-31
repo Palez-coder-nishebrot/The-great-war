@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=14 format=3 uid="uid://befjlohagv3fh"]
+[gd_resource type="Resource" script_class="FactoryTipe" load_steps=12 format=3 uid="uid://befjlohagv3fh"]
 
 [ext_resource type="Script" path="res://Resources/Factories/Factory.gd" id="1"]
 [ext_resource type="Script" path="res://Resources/Factories/Raw.gd" id="2"]
@@ -6,18 +6,12 @@
 [ext_resource type="Resource" uid="uid://ceelq1ks2ecm6" path="res://Resources/Good/el_parts.tres" id="4"]
 [ext_resource type="Resource" uid="uid://c64oytvdwhc6m" path="res://Resources/Good/steel.tres" id="5"]
 [ext_resource type="Resource" uid="uid://cs3jts051165o" path="res://Resources/Good/rubber.tres" id="6"]
-[ext_resource type="Resource" uid="uid://ck4y8ofg2n1hb" path="res://Resources/Good/mech_parts.tres" id="7"]
 [ext_resource type="Script" path="res://Resources/Factories/factory_equipment.gd" id="7_ucmtd"]
 
 [sub_resource type="Resource" id="1"]
 script = ExtResource("2")
 good = ExtResource("6")
 quantity = 0.5
-
-[sub_resource type="Resource" id="2"]
-script = ExtResource("2")
-good = ExtResource("7")
-quantity = 0.01
 
 [sub_resource type="Resource" id="3"]
 script = ExtResource("2")
@@ -36,7 +30,7 @@ quantity = 0.01
 [resource]
 script = ExtResource("1")
 name_of_factory = "cars_factory"
-raw = Array[ExtResource("2")]([SubResource("1"), SubResource("2"), SubResource("3"), SubResource("4"), SubResource("Resource_cbmxm")])
+raw = Array[ExtResource("2")]([SubResource("1"), SubResource("3"), SubResource("4"), SubResource("Resource_cbmxm")])
 good = ExtResource("3")
-available_from_start = true
 construction_days = 3
+initial_max_workers = 10000

@@ -11,7 +11,9 @@ var pol_reform_desire:     float = 0.0 # Макс. 10.0
 var pluralism:             float = 0.0 # Макс. 10.0
 var aggressiveness:        float = 0.0 # Макс. 10.0
 
-var soc_migrated_q: int  = 0
+var want_to_upgrade_status:     int  = 0
+var upgraded_status_quantity:   int  = 0
+var downgraded_status_quantity: int  = 0
 
 var welfare:             int = 0
 var quantity:            int = 0
@@ -139,7 +141,7 @@ func add_workers_in_factory(factory, workers_variable, quantity_):
 	unemployed_quantity -= quantity_
 
 
-func fire_workers_from_factory(factory: Factory, workers_variable: String, quantity_: int):
+func fire_workers_from_factory(factory: Enterprise, workers_variable: String, quantity_: int):
 	var getter = factory.get(workers_variable)
 	factory.set(workers_variable, getter - quantity_)
 	unemployed_quantity += quantity_
@@ -155,9 +157,33 @@ func increase_workers_on_factory(factory, value):
 func increase_population_quantity(pop_growth_modifier):
 	var value = 0.0
 	
-	unemployed_quantity += value
-	quantity            += value
-	population_growth    = value
+	match welfare:
+		1:
+			value += 0.01
+		2:
+			value += 0.01
+		3:
+			value += 0.02
+		4:
+			value += 0.03
+		5:
+			value += 0.04
+		6:
+			value += 0.05
+	
+	if literacy > 80:
+		value -= 0.01
+	
+	var number = 1 + snapped(value * quantity, 0)
+	
+	if number > 0:
+		increase_population(number)
+		population_growth = number
+	
+
+func increase_population(number):
+	unemployed_quantity += number
+	quantity            += number
 
 
 func increase_value(variable_name, number, max_value):
@@ -171,3 +197,27 @@ func increase_value(variable_name, number, max_value):
 	
 	else: 
 		set(variable_name, number + variable_value)
+
+
+func reduce_population(number: int, enterprises_list: Array, workers_variable: String):
+	if unemployed_quantity >= number:
+		quantity            -= number
+		unemployed_quantity -= number
+	else:
+		number   -= unemployed_quantity
+		delete_all_unemployed_population()
+		
+		for i in enterprises_list:
+			var workers_in_factory = i.get(workers_variable)
+			if workers_in_factory >= number:
+				fire_workers_from_factory(i, workers_variable, number)
+				delete_all_unemployed_population()
+				return
+			else:
+				fire_workers_from_factory(i, workers_variable, workers_in_factory)
+				delete_all_unemployed_population()
+
+
+func delete_all_unemployed_population():
+	quantity -= unemployed_quantity
+	unemployed_quantity = 0

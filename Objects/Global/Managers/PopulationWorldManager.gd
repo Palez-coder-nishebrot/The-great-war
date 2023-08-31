@@ -34,6 +34,9 @@ func meet_needs():
 				var money                = pop_unit.money
 				var good                 = need_good.good_type
 				
+#				if pop_unit.population_type == load("res://Resources/population_types/clerk.tres"):
+#					breakpoint
+				
 				var market_good_quantity = local_market[good]
 				var needed_good_quantity = need_good.get_good_quantity() * pop_unit_quantity
 				
@@ -58,6 +61,8 @@ func meet_needs():
 							GlobalMarket.fill_lack(economy_manager, good, im_good_quantity)
 							pop_unit.expenses += Functions.buy_good_on_local_market(pop_unit, good, needed_good_quantity, economy_manager, im_good_quantity)
 							pop_unit.welfare += 1
+						else:
+							break
 
 
 func set_population_incomes():
@@ -80,20 +85,12 @@ func set_population_incomes():
 		for enterprise in ec_manager.DP_list + ec_manager.factories_list:
 			if not enterprise.closed:
 				enterprise.set_wage()
-				var wage = enterprise.wage * enterprise.workers_quantity
-				var wage_bonus = enterprise.money_for_increase_wage / enterprise.workers_quantity
-				var real_wage  = wage_bonus + wage
-				var tax = get_tax(real_wage, poor_tax)
-				var wage_tax = real_wage - tax
 				
-				enterprise.workers_unit.money  = wage_tax
-				enterprise.workers_unit.income += real_wage
-				enterprise.expenses_workers = wage
-				enterprise.money -= wage
+				poor_taxes_income += pay_wage_to_workers(enterprise, poor_tax)
 				
-				poor_taxes_income += tax
+				if enterprise is Factory: 
+					middle_taxes_income += pay_wage_to_clerks(enterprise, middle_tax)
 				
-				if enterprise is Factory: middle_taxes_income += pay_wage_to_clerks(enterprise, middle_tax)
 				enterprise.set_profit()
 			else:
 				enterprise.workers_unit.income = 0.0
@@ -104,19 +101,30 @@ func set_population_incomes():
 
 
 func pay_wage_to_clerks(factory, middle_tax):
-	var pop_unit  = factory.clerks_unit
-	var wage      = factory.clerks_wage * factory.clerks_quantity
-	var tax       = get_tax(wage, middle_tax)
-	var real_wage = wage - tax
+	var wage = factory.wage * factory.workers_quantity
+	var tax = 0#get_tax(wage, middle_tax)
+	var pop_unit_wage = wage - tax
 	
-#	if factory.province.name == "Бердичев":
-#		breakpoint
+	factory.clerks_unit.money  = pop_unit_wage
+	factory.clerks_unit.income = pop_unit_wage
 	
 	factory.expenses_workers += wage
-	factory.money           -= wage
+	factory.money -= wage
 	
-	pop_unit.money  = real_wage
-	pop_unit.income += wage
+	return tax
+
+
+func pay_wage_to_workers(enterprise, poor_tax):
+	var wage = enterprise.wage * enterprise.workers_quantity
+	var wage_bonus = enterprise.money_for_increase_wage / enterprise.workers_quantity
+	var pop_unit_income  = wage_bonus + wage
+	var tax = get_tax(pop_unit_income, poor_tax)
+	var pop_unit_wage = pop_unit_income - tax
+	
+	enterprise.workers_unit.money  = pop_unit_wage
+	enterprise.workers_unit.income += pop_unit_wage
+	enterprise.expenses_workers = wage
+	enterprise.money -= wage
 	
 	return tax
 
@@ -138,16 +146,6 @@ func set_population_growth():
 			pop_unit.unemployed_quantity += value
 			pop_unit.quantity            += value
 			pop_unit.population_growth   = value
-
-#			var value = (pension + healthcare + pop_unit.welfare) * 0.1
-#			pop_unit.new_generation += value
-#			if pop_unit.new_generation > pop_unit.new_generation_max:
-#				var q = snappedf(pop_unit.new_generation / pop_unit.new_generation_max, 0.1)
-#				pop_unit.new_generation   -= q
-#				pop_unit.quantity         += q
-#				pop_unit.population_growth = q
-#			else:
-#				pop_unit.population_growth = 0.0
 
 
 func get_tax(value, proc):

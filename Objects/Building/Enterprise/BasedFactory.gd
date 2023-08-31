@@ -4,7 +4,7 @@ extends Enterprise
 class_name Factory
 
 const expanding_cost:    float        = 200
-const min_clerks_salary: float        = 3.5 * PopulationWorldManager.POP_COEF
+const min_clerks_salary: float        = 10 * PopulationWorldManager.POP_COEF
 const min_salary:        float        = 2 * PopulationWorldManager.POP_COEF
 const time:              int          = 10
 var time_of_construction:int          = 0

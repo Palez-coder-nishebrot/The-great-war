@@ -3,6 +3,7 @@ extends Node
 
 class_name PopulationManager
 
+var regions_list_getter:           Callable
 var government_form_getter:        Callable
 var ruling_party_getter:           Callable
 var population_units_getter:       Callable
@@ -30,11 +31,12 @@ func _init(client):
 	ruling_party_getter           = Callable(client, "get_ruling_party")
 	government_form_getter        = Callable(client, "get_government_form")
 	education_cost_getter         = Callable(client, "get_education_cost")
+	regions_list_getter           = Callable(client, "get_regions_list")
 	
 
 func execute_thread():
-	_semaphore.post()
-	#thread_debugger()
+	#_semaphore.post()
+	thread_debugger()
 
 
 func thread_debugger():
@@ -58,7 +60,10 @@ func loop_executor():
 	for unit in population_units_getter.call():
 		if unit.quantity > 0:
 			update_pop_unit_chars(unit, government_form, ruling_party)
-
+	
+	for i in regions_list_getter.call():
+		i.population.set_soc_migration(i)
+	
 
 func update_pop_unit_chars(unit, government_form, ruling_party):
 	var unemployment_percent = snappedf(unit.unemployed_quantity / unit.quantity, 0.01)
@@ -67,13 +72,12 @@ func update_pop_unit_chars(unit, government_form, ruling_party):
 	var welfare              = unit.welfare
 	var pop_type             = unit.population_type
 	
-	unit.update_aggressiveness(ruling_party, government_form)
-	unit.soc_migrated_q = unit.soc_migration_manager.get_pop_q_for_soc_migration(unit)
 	
 	if SceneStorage.game.data_manager.is_first_day_in_week():
 		unit.update_literacy(education_efficiency, education_cost_getter.call())
 		unit.increase_population_quantity(pop_growth_modifier)
 		unit.update_pluralism(government_form)
+		unit.update_aggressiveness(ruling_party, government_form)
 		unit.reform_desire_manager.update_soc_reform_desire(unemployment_percent,
 			pluralism, literacy, welfare, pop_type)
 

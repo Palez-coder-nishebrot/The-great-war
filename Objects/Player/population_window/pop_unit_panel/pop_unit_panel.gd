@@ -36,6 +36,6 @@ func update(population_units_list):
 		money_label.text      = str(snapped(pop_unit.money, 0.1))
 		aggressiveness_label.text      = str(snapped(pop_unit.aggressiveness, 0.1))
 		pluralism.text        = str(pop_unit.pluralism)
-		pol_reform_label.text = str(pop_unit.soc_migrated_q)
-		soc_reform_label.text = str(pop_unit.soc_reform_desire)
+		pol_reform_label.text = str(pop_unit.upgraded_status_quantity)
+		soc_reform_label.text = str(pop_unit.want_to_upgrade_status)
 		literacy_label.text   = str(pop_unit.literacy)

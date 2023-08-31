@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=7 format=3 uid="uid://ndjtfhod3tbo"]
+[gd_resource type="Resource" script_class="PopulationType" load_steps=7 format=3 uid="uid://ndjtfhod3tbo"]
 
 [ext_resource type="Script" path="res://Resources/population_types/population_type.gd" id="1"]
 [ext_resource type="Resource" uid="uid://b5sl3q0qogpmn" path="res://Resources/population_types/population_type_needs/need_clothes.tres" id="2"]
@@ -11,4 +11,6 @@
 script = ExtResource("1")
 index_in_pop_types_list = 0
 display_name = "labourers"
+workers_variable = "workers_quantity"
+enterprises_list_variable = "DP_list"
 needs = [ExtResource("3"), ExtResource("6"), ExtResource("2"), ExtResource("7"), ExtResource("4")]
