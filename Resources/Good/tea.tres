@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Good" load_steps=3 format=3 uid="uid://b0lvejpsjf86b"]
+
+[ext_resource type="Script" path="res://Resources/Good/good.gd" id="1_m21i5"]
+[ext_resource type="Texture2D" uid="uid://bdh7s2ad344os" path="res://Graphics/Sprites/goods/tea.png" id="1_nriwn"]
+
+[resource]
+script = ExtResource("1_m21i5")
+name = "Чай"
+base_price = 5
+min_price = 4
+max_price = 6
+icon = ExtResource("1_nriwn")
+dp_effiency_production = 1.0
+factory_effiency_production = 1.0

@@ -7,8 +7,9 @@ signal research_completed # Сигнал вызывается!
 
 @export var state_on_start: StateOnStartGame
 
-var population_units_list: Array = []
-var regions_list:          Array = []
+var population_units_list: Array[PopulationUnit] = []
+var regions_list:          Array[Region]         = []
+var provinces_list:        Array[Province]       = []
 
 var economy_manager:            EconomyManager         = EconomyManager.new()
 var political_manager:          PoliticalManager       = PoliticalManager.new(self)
@@ -38,6 +39,7 @@ func register_region(region):
 	add_child(region)
 	regions_list.append(region)
 	population_units_list.append_array(region.population.population_types)
+	provinces_list.append_array(region.provinces_list)
 
 
 func erase_region(region):
@@ -46,6 +48,8 @@ func erase_region(region):
 	
 	for i in region.population.population_types:
 		population_units_list.erase(i)
+	for i in region.provinces_list:
+		provinces_list.erase(i)
 
 
 func get_education_cost():

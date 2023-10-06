@@ -14,9 +14,6 @@ font_size = 60
 
 [sub_resource type="FontFile" id="8"]
 fallbacks = Array[Font]([ExtResource("5")])
-face_index = null
-embolden = null
-transform = null
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -571,9 +568,6 @@ cache/0/50/0/kerning_overrides/50/0 = Vector2(0, 0)
 
 [sub_resource type="FontFile" id="7"]
 fallbacks = Array[Font]([ExtResource("5")])
-face_index = null
-embolden = null
-transform = null
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -613,7 +607,6 @@ theme_override_font_sizes/font_size = 50
 text = "Меню: Esc
 Код: Kerensky,
 Графика: Kerensky, Kyle и Mr Protoss,
-Карта: Semkay,
 Помощь со скриптами: Question."
 horizontal_alignment = 1
 

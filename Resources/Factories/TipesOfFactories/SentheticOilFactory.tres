@@ -20,5 +20,5 @@ script = ExtResource("1")
 name_of_factory = "senthetic_oil_factory"
 raw = Array[ExtResource("2")]([SubResource("1"), SubResource("Resource_ojqfg")])
 good = ExtResource("4")
-available_from_start = false
 construction_days = 3
+initial_max_workers = 10000

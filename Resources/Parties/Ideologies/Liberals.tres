@@ -3,10 +3,10 @@
 [ext_resource type="Script" path="res://Resources/Parties/Ideology.gd" id="1"]
 [ext_resource type="Resource" path="res://Resources/Parties/Policy/military_policy/militarism.tres" id="2"]
 [ext_resource type="Resource" uid="uid://bgj0h81in03wi" path="res://Resources/Parties/Policy/trade_policy/free_trade.tres" id="3"]
-[ext_resource type="Resource" path="res://Resources/Parties/Policy/economy_policy/free_economy.tres" id="4"]
+[ext_resource type="Resource" uid="uid://csdqq3hajwi7a" path="res://Resources/Parties/Policy/economy_policy/free_economy.tres" id="4"]
 [ext_resource type="Texture2D" uid="uid://xbhra16x051v" path="res://Graphics/Sprites/GUI/Icons of windows/ideology_icons/liberals_icon.png" id="4_qwqfa"]
 [ext_resource type="Resource" path="res://Resources/Parties/Policy/goverment_form/republic.tres" id="5"]
-[ext_resource type="Resource" uid="uid://c5n5ywdho8jcw" path="res://Resources/Parties/Policy/goverment_form/monarchy.tres" id="6"]
+[ext_resource type="Resource" uid="uid://c5n5ywdho8jcw" path="res://Resources/Parties/Policy/goverment_form/constitutional_monarchy.tres" id="6"]
 [ext_resource type="Resource" uid="uid://dlch2seyv6nu" path="res://Resources/Parties/Policy/migration_policy/full_citizenship.tres" id="6_866qu"]
 
 [resource]

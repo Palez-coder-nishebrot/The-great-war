@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="GovernmentForm" load_steps=2 format=3 uid="uid://c5n5ywdho8jcw"]
+
+[ext_resource type="Script" path="res://Resources/Parties/government_form.gd" id="1_mth42"]
+
+[resource]
+script = ExtResource("1_mth42")
+policy_name = "monarchy"
+elections = true
+reforms_after_revolution = []
+avaliable_ideologies = Array[Resource("res://Resources/Parties/Ideology.gd")]([])

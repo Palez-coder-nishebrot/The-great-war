@@ -38,6 +38,5 @@ script = ExtResource("1")
 name_of_factory = "airplane_factory"
 raw = Array[ExtResource("2")]([SubResource("1"), SubResource("2"), SubResource("3"), SubResource("4"), SubResource("Resource_01frp")])
 good = ExtResource("7")
-available_from_start = true
 construction_days = 3
 initial_max_workers = 0

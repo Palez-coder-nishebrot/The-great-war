@@ -30,7 +30,7 @@ var income:                     float = 0.0
 var expenses_workers:           float = 0.0
 var wage:                       float = 0.0
 var money:                      float = 100.0
-var money_for_increase_wage:    float = 0.0
+var salary_supplement:    float = 0.0
 
 var closed: bool = false
 
@@ -51,10 +51,9 @@ func close_enterprise():
 	emit_signal("update_employed_places")
 	
 
-func add_money_in_investment_pool():
+func add_salary_supplement():
 	var dop_money = 0.0
 	if money > max_money and profit > 0:
 		var balance = money - max_money
 		money = max_money
-		dop_money = economy_manager.add_money_in_investment_pool(balance)
-	money_for_increase_wage = dop_money
+	salary_supplement = dop_money

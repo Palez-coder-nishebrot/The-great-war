@@ -8,7 +8,7 @@ var workers_quantity: float = 0.0
 
 func _init(good_, economy_manager_):
 	var _err = ManagerDay.connect("produce_goods", produce_goods)
-	_err = ManagerDay.connect("add_money_in_investment_pool", add_money_in_investment_pool)
+	_err = ManagerDay.connect("add_salary_supplement", add_salary_supplement)
 	good = good_
 	economy_manager = economy_manager_
 	#production_efficiency = 2
@@ -37,8 +37,12 @@ func sell_goods(quanity):
 
 
 func set_wage():
-	wage = (income / workers_quantity) + (money_for_increase_wage / workers_quantity)
-
+	var supplement = 0.0
+	if workers_quantity != 0:
+		supplement = salary_supplement / workers_quantity
+	
+	wage = (income / workers_quantity)
+	
 
 func set_profit():
 	profit = income - expenses_workers

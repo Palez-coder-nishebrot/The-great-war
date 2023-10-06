@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="NeededGood" load_steps=3 format=3 uid="uid://ba4trkc1yekha"]
+
+[ext_resource type="Resource" uid="uid://ejbvt3sq1sk6" path="res://Resources/Good/textile.tres" id="1_u5afu"]
+[ext_resource type="Script" path="res://Resources/population_types/population_type_needs/population_type_need.gd" id="2_cd187"]
+
+[resource]
+script = ExtResource("2_cd187")
+util = 4.0
+quantity = 1.0
+good_type = ExtResource("1_u5afu")

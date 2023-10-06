@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Good" load_steps=3 format=3 uid="uid://d06erxjuvvmy8"]
+
+[ext_resource type="Texture2D" uid="uid://uxekx72qvalh" path="res://Graphics/Sprites/goods/wool.png" id="1_dk1qh"]
+[ext_resource type="Script" path="res://Resources/Good/good.gd" id="1_uefxb"]
+
+[resource]
+script = ExtResource("1_uefxb")
+name = "Шерсть"
+base_price = 4
+min_price = 3
+max_price = 5
+icon = ExtResource("1_dk1qh")
+dp_effiency_production = 0.3
+factory_effiency_production = 1.0

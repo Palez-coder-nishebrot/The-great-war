@@ -20,6 +20,8 @@ var min_wage_modifier:            float = 1.0 # Это число мы буде�
 var tariffs_efficiency:           float = 1.0 # Это число мы будем прибавлять, а не умножать
 var taxes_efficiency:             float = 1.0 # Это число мы будем прибавлять, а не умножать
 
+var army_cost:            float = 0.0 # Проценты
+var bureaucracy_cost:     float = 0.0 # Проценты
 var education_cost:       float = 0.0 # Проценты
 var tariffs:              float = 0.0 # Проценты
 var poor_classes_taxes:   float = 0.0 # Проценты
@@ -48,7 +50,7 @@ var get_accounting_value_func:   Callable
 var production_efficiency_manager: ProductionEfficiencyManager = ProductionEfficiencyManager.new()
 
 
-var list_of_buildings: Array = [
+var avaliable_factories: Array = [
 	load("res://Resources/Factories/TipesOfFactories/AirplaneFactory.tres"),
 	load("res://Resources/Factories/TipesOfFactories/AmmoFactory.tres"),
 	load("res://Resources/Factories/TipesOfFactories/CanningFactory.tres"),
@@ -72,6 +74,7 @@ var list_of_buildings: Array = [
 	load("res://Resources/Factories/TipesOfFactories/SteelPlant.tres"),
 	load("res://Resources/Factories/TipesOfFactories/TankFactory.tres"),
 	load("res://Resources/Factories/TipesOfFactories/TextileFactory.tres"),
+	load("res://Resources/Factories/TipesOfFactories/TextileFactory_01.tres"),
 ]
 
 
@@ -114,8 +117,8 @@ func sort_factories_list():
 				var first_index = new_list.find(first)
 				var second_index = new_list.find(second)
 				
-				var first_profit = first.based_profit
-				var second_profit = second.based_profit
+				var first_profit = first.basic_profit
+				var second_profit = second.basic_profit
 				
 				if first_profit < second_profit: # Если true, то элементы меняем местами
 					Functions.swap(first_index, second_index, new_list)
@@ -124,7 +127,6 @@ func sort_factories_list():
 func _init():
 	set_local_market()
 	var _err
-	_err = ManagerDay.connect("set_education_expenses", set_education_expenses)
 	_err = ManagerDay.connect("update_prices", Callable(self, "update_prices"))
 	_err = ManagerDay.connect("sort_factories_list", Callable(self, "sort_factories_list"))
 	_err = ManagerDay.connect("buy_raw", Callable(self, "buy_raw"))
@@ -171,14 +173,6 @@ func buy_raw():
 		i.buy_raw()
 
 
-func set_education_expenses():
-	var pop_q = get_accounting_value_func.call("population_quantity")
-	var teachers_q = pop_q * 0.001
-	var expenses = teachers_q * education_cost
-	budget -= expenses
-	set_accounting_values_func.call("education_expenses", expenses)
-
-
 func update_prices():
 	for good in local_market:
 		var price_good = prices_goods[good]
@@ -201,16 +195,6 @@ func update_prices():
 		prices_goods[good] = snappedf(prices_goods[good], 0.01)
 
 
-func add_money_in_investment_pool(money):
-	investment_pool += money
-	
-	if investment_pool > max_investment_pool:
-		var balance = investment_pool - max_investment_pool
-		investment_pool = max_investment_pool
-		return balance
-	return 0.0
-
-
 func set_tax(value: float, variable: String):
 	set(variable, value)
 
@@ -229,3 +213,7 @@ func get_enterprise_efficiency_production(enterprise):
 
 func get_good_production_efficiency(good):
 	return production_efficiency_manager.production_goods_efficiency[good]
+
+
+func get_education_cost():
+	return education_cost

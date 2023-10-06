@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://dkdv1arbmmoam"]
+[gd_scene load_steps=36 format=3 uid="uid://dkdv1arbmmoam"]
 
 [ext_resource type="FontFile" uid="uid://dpaiod0xc1xgs" path="res://Graphics/Fonts/pixel_2.ttf" id="1"]
 [ext_resource type="Script" path="res://Objects/Player/markets_window/markets_window.gd" id="3"]
@@ -15,8 +15,12 @@
 [ext_resource type="Resource" uid="uid://c5kyu153f4ey" path="res://Resources/Good/lumber.tres" id="14_fvce0"]
 [ext_resource type="Resource" uid="uid://bnhfsbwpo488q" path="res://Resources/Good/glass.tres" id="15_otth5"]
 [ext_resource type="Resource" uid="uid://ceelq1ks2ecm6" path="res://Resources/Good/el_parts.tres" id="16_ko3b3"]
+[ext_resource type="Resource" uid="uid://d06erxjuvvmy8" path="res://Resources/Good/wool.tres" id="16_ylrt8"]
+[ext_resource type="Resource" uid="uid://b0lvejpsjf86b" path="res://Resources/Good/tea.tres" id="17_8kffi"]
 [ext_resource type="Resource" uid="uid://by6kkbix02xfm" path="res://Resources/Good/grain.tres" id="17_o5h63"]
+[ext_resource type="Resource" uid="uid://c414n02213hlp" path="res://Resources/Good/coffee.tres" id="18_81dl2"]
 [ext_resource type="Resource" uid="uid://cyiu6swvkuaa1" path="res://Resources/Good/beasts.tres" id="18_q5b6g"]
+[ext_resource type="Resource" uid="uid://b0i2iuci15pc3" path="res://Resources/Good/sugar.tres" id="19_h7ykg"]
 [ext_resource type="Resource" uid="uid://c5y708y087n74" path="res://Resources/Good/alcohol.tres" id="19_xul04"]
 [ext_resource type="PackedScene" uid="uid://byc35yobaf53i" path="res://Objects/Player/markets_window/GoodButton.tscn" id="20"]
 [ext_resource type="Resource" uid="uid://dho5r02o6p2se" path="res://Resources/Good/furniture.tres" id="20_nd7wy"]
@@ -45,7 +49,7 @@ offset_bottom = 944.0
 scale = Vector2(0.6, 0.6)
 theme_override_constants/h_separation = -12
 theme_override_constants/v_separation = -14
-columns = 6
+columns = 7
 
 [node name="GoodButton" parent="GridContainer" instance=ExtResource("20")]
 layout_mode = 2
@@ -98,6 +102,22 @@ good = ExtResource("15_otth5")
 [node name="GoodButton13" parent="GridContainer" instance=ExtResource("20")]
 layout_mode = 2
 good = ExtResource("16_ko3b3")
+
+[node name="GoodButton30" parent="GridContainer" instance=ExtResource("20")]
+layout_mode = 2
+good = ExtResource("16_ylrt8")
+
+[node name="GoodButton16" parent="GridContainer" instance=ExtResource("20")]
+layout_mode = 2
+good = ExtResource("17_8kffi")
+
+[node name="GoodButton31" parent="GridContainer" instance=ExtResource("20")]
+layout_mode = 2
+good = ExtResource("18_81dl2")
+
+[node name="GoodButton32" parent="GridContainer" instance=ExtResource("20")]
+layout_mode = 2
+good = ExtResource("19_h7ykg")
 
 [node name="GoodButton14" parent="GridContainer" instance=ExtResource("20")]
 layout_mode = 2

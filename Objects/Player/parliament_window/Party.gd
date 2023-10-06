@@ -1,6 +1,6 @@
 extends Control
 
-var party: Object
+var party: PoliticalParty
 @onready var supporting_party_button: Object = $SupportParty
 @onready var ruling_party_button: Object = $RulingParty
 
@@ -29,10 +29,7 @@ func check_party_supporting():
 
 
 func update_ruling_party():
-	if Players.get_player_client().political_manager.check_party_for_setting_ruling(party):
-		ruling_party_button.disabled = false
-	else:
-		ruling_party_button.disabled = true
+	ruling_party_button.disabled = not party.avaliable
 
 
 func set_ruling_party():

@@ -17,15 +17,18 @@ var region: Object
 #	$Button.set_text
 
 
-func show_self(region_):
+func show_self(province):
 	visible = true
-	region = region_
+	region = province.get_parent()
 	clear()
 	set_factory_buttons()
 
 
 func set_factory_buttons():
-	for i in Players.get_player_client().economy_manager.list_of_buildings:
+	for i in buttons_container.get_children():
+		i.queue_free()
+	var list = Players.get_player_client().economy_manager.avaliable_factories
+	for i in list:
 		var button = load("res://Objects/Player/building_factory_window/factory_button/Button_factory.tscn").instantiate()
 		button.text = i.name_of_factory
 		button.factory = i
@@ -38,8 +41,8 @@ func clear():
 	factory_description.text = ""
 
 
-func check_building_limit(province):
-	if province.max_of_buildings == province.list_of_buildings.size():
+func check_building_limit(region):
+	if region.max_of_buildings == region.factories_list.size():
 		return false
 	else: 
 		return true
@@ -47,7 +50,7 @@ func check_building_limit(province):
 
 func show_factory_info(new_factory):
 	clear()
-	factory_description.text += region.name_of_tile + "\n"
+	factory_description.text += region.region_name + "\n"
 	factory = new_factory
 	check_chars()
 	

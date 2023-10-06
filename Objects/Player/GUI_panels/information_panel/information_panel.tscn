@@ -8,6 +8,9 @@
 bg_color = Color(0.192157, 0.0862745, 0.109804, 1)
 
 [sub_resource type="FontFile" id="1"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 fallbacks = Array[Font]([ExtResource("3")])
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
@@ -140,6 +143,9 @@ cache/0/28/0/kerning_overrides/28/0 = Vector2(0, 0)
 bg_color = Color(0.192157, 0.0862745, 0.109804, 1)
 
 [sub_resource type="FontFile" id="2"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 fallbacks = Array[Font]([ExtResource("3")])
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
@@ -157,7 +163,7 @@ cache/0/32/0/kerning_overrides/16/0 = Vector2(0, 0)
 cache/0/32/0/kerning_overrides/32/0 = Vector2(0, 0)
 
 [node name="information_panel" type="Panel"]
-offset_right = 415.0
+offset_right = 322.0
 offset_bottom = 91.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("4")
@@ -165,8 +171,8 @@ script = ExtResource("2")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_right = 415.0
-offset_bottom = 85.0
+offset_right = 322.0
+offset_bottom = 90.0
 theme_override_constants/separation = 0
 
 [node name="Label" type="Label" parent="VBoxContainer"]
@@ -193,8 +199,8 @@ text = "Пауза"
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 415.0
-offset_right = 830.0
+offset_left = 322.0
+offset_right = 637.0
 offset_bottom = 47.0
 theme_override_styles/panel = SubResource("5")
 

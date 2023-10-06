@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource("1")
+is_luxury_need = true
 util = 4.0
 quantity = 1.0
 good_type = ExtResource("2")

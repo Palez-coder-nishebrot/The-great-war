@@ -13,4 +13,4 @@ func get_effect():
 
 
 func activate_effects(client):
-	client.economic_bonuses.list_of_buildings.append(target)
+	client.economic_bonuses.factories_list.append(target)

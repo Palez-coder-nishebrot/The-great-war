@@ -3,6 +3,8 @@ extends Node
 
 class_name PopulationManager
 
+var economy_manager: EconomyManager
+
 var regions_list_getter:           Callable
 var government_form_getter:        Callable
 var ruling_party_getter:           Callable
@@ -32,6 +34,7 @@ func _init(client):
 	government_form_getter        = Callable(client, "get_government_form")
 	education_cost_getter         = Callable(client, "get_education_cost")
 	regions_list_getter           = Callable(client, "get_regions_list")
+	economy_manager               = client.economy_manager
 	
 
 func execute_thread():
@@ -75,11 +78,12 @@ func update_pop_unit_chars(unit, government_form, ruling_party):
 	
 	if SceneStorage.game.data_manager.is_first_day_in_week():
 		unit.update_literacy(education_efficiency, education_cost_getter.call())
-		unit.increase_population_quantity(pop_growth_modifier)
-		unit.update_pluralism(government_form)
+		unit.set_natural_population_increase(pop_growth_modifier)
+		unit.update_pluralism(government_form, economy_manager)
+		
 		unit.update_aggressiveness(ruling_party, government_form)
-		unit.reform_desire_manager.update_soc_reform_desire(unemployment_percent,
-			pluralism, literacy, welfare, pop_type)
+		unit.reform_desire_manager.update_soc_reform_desire(unit, unemployment_percent)
+		unit.reform_desire_manager.update_pol_reform_desire(unit, unemployment_percent, ruling_party.ideology, government_form)
 
 
 func _exit_tree():

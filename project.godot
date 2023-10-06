@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="The great war (1914 - 1936)"
+config/name="The great war (1901 - 1936)"
 run/main_scene="res://Scenes/Menu/Menu.tscn"
 config/features=PackedStringArray("4.1")
 config/icon="res://icon.png"

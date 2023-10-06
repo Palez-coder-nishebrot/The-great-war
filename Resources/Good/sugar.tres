@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Good" load_steps=3 format=3 uid="uid://b0i2iuci15pc3"]
+
+[ext_resource type="Script" path="res://Resources/Good/good.gd" id="1_g2w1l"]
+[ext_resource type="Texture2D" uid="uid://y3u1oajcol0r" path="res://Graphics/Sprites/goods/sugar.png" id="1_h6ahs"]
+
+[resource]
+script = ExtResource("1_g2w1l")
+name = "Сахар"
+base_price = 5
+min_price = 4
+max_price = 7
+icon = ExtResource("1_h6ahs")
+dp_effiency_production = 1.0
+factory_effiency_production = 1.0

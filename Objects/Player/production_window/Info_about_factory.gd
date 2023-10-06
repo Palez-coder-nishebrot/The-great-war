@@ -18,7 +18,7 @@ const subsidization_list: Dictionary = {true: "Да", false: "Нет"}
 
 func update_information():
 	if factory != null:
-		if factory.province.player != Players.get_player_client():
+		if factory.province.client_owner != Players.get_player_client():
 			factory = null
 			return
 		else:

@@ -1,9 +1,10 @@
-[gd_resource type="Resource" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="GovernmentForm" load_steps=2 format=3 uid="uid://bxcxpnjo0kpcp"]
 
 [ext_resource type="Script" path="res://Resources/Parties/government_form.gd" id="1"]
 
 [resource]
-script = ExtResource( 1 )
+script = ExtResource("1")
 policy_name = "soviet_republic"
 elections = false
-reforms_after_revolution = [  ]
+reforms_after_revolution = []
+avaliable_ideologies = Array[Resource("res://Resources/Parties/Ideology.gd")]([])

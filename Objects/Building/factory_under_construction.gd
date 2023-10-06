@@ -28,7 +28,7 @@ func new_day():
 
 func spawn_factory():
 	var factory = factory_type.generate_factory(region, economy_manager)
-	region.player.economy_manager.factories_list.append(factory)
-	region.list_of_buildings.append(factory)
+	region.client_owner.economy_manager.factories_list.append(factory)
+	region.factories_list.append(factory)
 	region.set_enterprises_efficiency(economy_manager)
 	queue_free()

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Culture" load_steps=3 format=3 uid="uid://bgb5bis8x55ht"]
+
+[ext_resource type="Resource" uid="uid://b0lvejpsjf86b" path="res://Resources/Good/tea.tres" id="1_38iv4"]
+[ext_resource type="Script" path="res://Resources/scripts/culture.gd" id="1_fmqj7"]
+
+[resource]
+script = ExtResource("1_fmqj7")
+display_name = ""
+national_drink = ExtResource("1_38iv4")
+national_color = Color(0, 0, 0, 1)

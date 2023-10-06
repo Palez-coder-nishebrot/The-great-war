@@ -2,6 +2,26 @@ extends RefCounted
 
 class_name AccountingManager
 
+const INCOME_VARS:   Array[String] = [
+	"poor_class_taxes", 
+	"middle_class_taxes", 
+	"tariffs",
+	]
+
+const EXPENSES_VARS: Array[String] = [
+	"bureaucracy_expenses", 
+	"education_expenses",
+	"healthcare_expenses",
+	"unemployment_benefit_expenses",
+	"pensions_expenses",
+	"subsidies_expenses",
+	"debts_expenses",
+	"army_expenses",
+	]
+
+
+var bureaucrats_res: Resource = load("res://Resources/population_types/bureaucrat.tres")
+
 var income:        float
 var expenses:      float
 var daily_balance: float
@@ -15,6 +35,7 @@ var tariffs:            float = 0.0
 var contributions:                 float = 0.0
 var factories_subsidies_expenses:  float = 0.0
 
+var bureaucracy_expenses:          float = 0.0
 var education_expenses:            float = 0.0
 var healthcare_expenses:           float = 0.0
 var unemployment_benefit_expenses: float = 0.0
@@ -36,6 +57,7 @@ var projects_list:  Array      = []
 
 var production_points:  float = 0.0
 
+var education_cost_getter:       Callable
 var population_units_getter:     Callable
 var regions_list_getter:         Callable
 var contributions_getter:        Callable
@@ -61,6 +83,7 @@ func _init(client):
 	
 	population_units_getter = Callable(client, "get_population_units_list")
 	regions_list_getter     = Callable(client, "get_regions_list")
+	education_cost_getter   = Callable(client.economy_manager, "get_education_cost")
 
 
 func set_dict():
@@ -93,7 +116,9 @@ func set_info():
 func get_population_statistics():
 	clear_dict(produced_goods)
 	
-	population_growth = 0
+	population_growth    = 0
+	bureaucracy_expenses = 0.0
+	education_expenses   = 0.0
 	
 	var plu        = 0.0
 	var agr        = 0.0
@@ -117,20 +142,28 @@ func get_population_statistics():
 			if pop_unit.quantity != 0:
 				pop_classes_q += 1
 				literacy      += pop_unit.literacy
-				welfare       += pop_unit.welfare
+				welfare       += pop_unit.welfare * pop_unit.quantity
 				agr           += pop_unit.aggressiveness
 				plu           += pop_unit.pluralism
 				population_growth += pop_unit.population_growth
 				
+				if pop_unit.population_type == bureaucrats_res:
+					var e_expenses  = education_cost_getter.call() * SceneStorage.population_manager.BUREAUCRATS_EDUCATION_WAGE
+					e_expenses      = e_expenses * pop_unit.quantity
+					var b_expenses  = pop_unit.income - e_expenses
+					
+					bureaucracy_expenses += b_expenses
+					education_expenses   += e_expenses
+				
 		
-		for enterprise in region.DP_list + region.get_factories_list():
+		for enterprise in region.DP_list + region.factories_list:
 			gdp_ += enterprise.income
 			produced_goods[enterprise.good] += enterprise.selling_goods_quantity
 	
 	population_aggressiveness = snappedf(agr / pop_classes_q, 0.1)
 	population_pluralism      = snappedf(plu / pop_classes_q, 0.1)
 	population_literacy       = snappedf(literacy / pop_classes_q, 0.1)
-	population_welfare        = snappedf(welfare / pop_classes_q, 0.1) 
+	population_welfare        = snappedf(welfare / pop_quantity, 0.1) 
 	
 	unemployed_quantity = unemployed
 	population_quantity = pop_quantity
@@ -138,8 +171,14 @@ func get_population_statistics():
 	
 
 func get_balance():
-	income = poor_class_taxes + middle_class_taxes + rich_class_taxes + tariffs
-	expenses = education_expenses + army_expenses + debts_expenses + healthcare_expenses + pensions_expenses + subsidies_expenses + unemployment_benefit_expenses
+	income = 0.0
+	expenses = 0.0
+	
+	for i in INCOME_VARS:
+		income += get(i)
+	for i in EXPENSES_VARS:
+		expenses += get(i)
+	
 	daily_balance = income - expenses
 
 

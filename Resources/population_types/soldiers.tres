@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="PopulationType" load_steps=10 format=3 uid="uid://c4grv1gow3utr"]
+
+[ext_resource type="Script" path="res://Resources/population_types/migration_managers/soldiers.gd" id="1_dnvuf"]
+[ext_resource type="Script" path="res://Resources/scripts/population_type.gd" id="1_g24c4"]
+[ext_resource type="Resource" uid="uid://dti04wa7gihqo" path="res://Resources/population_types/population_type_needs/need_grain.tres" id="2_l0j0e"]
+[ext_resource type="Resource" uid="uid://crcsycdlcbeq8" path="res://Resources/population_types/population_type_needs/need_cattle.tres" id="3_0lir1"]
+[ext_resource type="Resource" uid="uid://b5sl3q0qogpmn" path="res://Resources/population_types/population_type_needs/need_clothes.tres" id="4_d8axv"]
+[ext_resource type="Resource" uid="uid://1ag3k7thgr2c" path="res://Resources/population_types/population_type_needs/need_small_arms.tres" id="5_8ktu3"]
+[ext_resource type="Resource" uid="uid://cnl4vxolimken" path="res://Resources/population_types/population_type_needs/need_national_drink.tres" id="5_daeox"]
+[ext_resource type="Resource" uid="uid://bd4g7w8x0rers" path="res://Resources/population_types/population_type_needs/need_gas.tres" id="7_fa27y"]
+
+[sub_resource type="Resource" id="Resource_r23u4"]
+script = ExtResource("1_dnvuf")
+
+[resource]
+script = ExtResource("1_g24c4")
+migration_manager = SubResource("Resource_r23u4")
+population_growth_modifier = 0.0
+index_in_pop_types_list = 0
+display_name = "soldiers"
+workers_variable = ""
+enterprises_list_variable = ""
+tax_variable = "poor_classes_taxes"
+needs = Array[Resource("res://Resources/population_types/population_type_needs/population_type_need.gd")]([ExtResource("2_l0j0e"), ExtResource("3_0lir1"), ExtResource("4_d8axv"), ExtResource("5_daeox"), ExtResource("5_8ktu3"), ExtResource("7_fa27y")])
+upgrade_class_paths = Array[String](["to_bureaucrats"])
+downgrade_class_paths = Array[String](["to_craftsmen"])

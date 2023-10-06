@@ -56,7 +56,7 @@ func update_information():
 	literacy_icon.set_data(client.accounting_manager.population_literacy)
 	welfare_icon.set_data(client.accounting_manager.population_welfare)
 	research_points_icon.set_data(client.research_manager.researching_points_growth)
-	population_growth_icon.set_data(client.accounting_manager.population_growth)
+	population_growth_icon.set_data(str(client.accounting_manager.population_growth) + "/week")
 	#ruling_party_icon.set_data(client.political_manager.ruling_party.party_name)
 	#ruling_party_icon.set_data(ruling_party.party_name, ruling_party.)
 	

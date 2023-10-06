@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://lquv068pik71"]
+
+[ext_resource type="Script" path="res://Objects/Tile/region.gd" id="1_3vf12"]
+
+[node name="region" type="Node"]
+script = ExtResource("1_3vf12")

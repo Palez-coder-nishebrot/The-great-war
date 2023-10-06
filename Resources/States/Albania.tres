@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="StateOnStartGame" load_steps=4 format=3 uid="uid://nwjcymsjjx22"]
+
+[ext_resource type="Resource" uid="uid://c5n5ywdho8jcw" path="res://Resources/Parties/Policy/goverment_form/constitutional_monarchy.tres" id="1_5qaeo"]
+[ext_resource type="Resource" uid="uid://gkom1yh6vlr7" path="res://Resources/Parties/Ideologies/Conservators.tres" id="2_su5pe"]
+[ext_resource type="Script" path="res://Resources/States/scripts/State.gd" id="3_plxs2"]
+
+[resource]
+script = ExtResource("3_plxs2")
+name_of_state = "albania"
+list_of_regions = PackedStringArray("Лодзь", "Станислав", "Черновцы", "Галич", "Калуш", "Богородчаны", "Днестр", "Белжеца", "Митава", "Броды", "Кременец", "Люблин", "Тарнополь", "Красник")
+middle_value_education = 50
+government_form = ExtResource("1_5qaeo")
+ideology = ExtResource("2_su5pe")
+national_color = Color(0.556863, 0.447059, 0.431373, 1)
+national_id = ""
+popularity_of_parties = {
+"communists": 5,
+"conservators": 45,
+"fascists": 0,
+"liberals": 30,
+"libertarians": 5,
+"socialists": 15
+}
+names_of_parties = {
+"communists": "Партия защиты труда",
+"conservators": "Крестьянская партия",
+"fascists": "Национально-трудовая группа",
+"liberals": "Республиканская народная партия",
+"libertarians": "Федерально-демократическая партия",
+"socialists": "Социалистическая рабочая федерация"
+}
+parties_list = Array[Resource("res://Resources/States/scripts/party.gd")]([])

@@ -4,7 +4,7 @@ signal allocate_workers_to_DP
 signal allocate_workers_to_factories
 
 signal update_internal_migration
-signal add_money_in_investment_pool
+signal add_salary_supplement
 signal check_projects
 signal put_on_goods_on_trading
 signal set_accounting
@@ -14,7 +14,6 @@ signal produce_goods
 signal buy_raw
 signal update_prices # EconomyManager
 signal set_factories_subsidies
-signal set_education_expenses
 
 signal clear_markets
 signal clear_accounting 
@@ -43,8 +42,7 @@ func update_economy():
 	emit_signal("sort_factories_list")
 	emit_signal("buy_raw")
 	emit_signal("set_factories_subsidies")
-	emit_signal("set_education_expenses")
-	emit_signal("add_money_in_investment_pool")#Дает прибавку к ЗП
+	emit_signal("add_salary_supplement")#Дает прибавку к ЗП
 	SceneStorage.population_manager.set_population_incomes()
 	SceneStorage.population_manager.meet_needs()#Купить товары для населения
 	emit_signal("update_prices")

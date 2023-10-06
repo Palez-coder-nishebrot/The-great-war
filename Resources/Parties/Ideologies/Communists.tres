@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Ideology" load_steps=8 format=3 uid="uid://bhk8mcni27woj"]
 
 [ext_resource type="Script" path="res://Resources/Parties/Ideology.gd" id="1"]
-[ext_resource type="Resource" path="res://Resources/Parties/Policy/goverment_form/proletarian_dictatorship.tres" id="2"]
+[ext_resource type="Resource" uid="uid://bxcxpnjo0kpcp" path="res://Resources/Parties/Policy/goverment_form/proletarian_dictatorship.tres" id="2"]
 [ext_resource type="Resource" uid="uid://diunltbmleadq" path="res://Resources/Parties/Policy/trade_policy/protectionism.tres" id="3"]
 [ext_resource type="Texture2D" uid="uid://clud5qqc4i6h0" path="res://Graphics/Sprites/GUI/Icons of windows/ideology_icons/communists_icon.png" id="3_wfwkj"]
 [ext_resource type="Resource" uid="uid://cre60p8ab1o6b" path="res://Resources/Parties/Policy/economy_policy/planned_economy.tres" id="4"]

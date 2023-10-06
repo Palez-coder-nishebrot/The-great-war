@@ -4,12 +4,12 @@ extends Enterprise
 class_name Factory
 
 const expanding_cost:    float        = 200
-const min_clerks_salary: float        = 10 * PopulationWorldManager.POP_COEF
+const min_clerks_salary: float        = 5 * PopulationWorldManager.POP_COEF
 const min_salary:        float        = 2 * PopulationWorldManager.POP_COEF
 const time:              int          = 10
 var time_of_construction:int          = 0
 
-var based_profit:        float        = 0.0 # Прибыль, когда на заводе работает 1 рабочий
+var basic_profit:        float        = 0.0 # Прибыль, когда на заводе работает 100 рабочих
 var expenses_raw:        int          = 0
 var expenses_factory_equipment: int   = 0
 var real_max_employed_number:   int   = 13000
@@ -40,7 +40,7 @@ var clerks_unit:       Object
 func _init(region = null):
 	var _err = ManagerDay.connect("produce_goods",            produce_goods)
 	_err = ManagerDay.connect("set_based_profit",             set_based_profit)
-	_err = ManagerDay.connect("add_money_in_investment_pool", add_money_in_investment_pool)
+	_err = ManagerDay.connect("add_salary_supplement",        add_salary_supplement)
 	_err = ManagerDay.connect("set_factories_subsidies",      set_factories_subsidies)
 	_err = connect("update_employed_places",                  set_places_for_workers)
 	wage = 2
@@ -79,7 +79,7 @@ func buy_raw():
 	var old_money = money
 	var completed_plan = 0
 	for storage_good in raw_storage:
-		var local_market      = province.player.economy_manager.local_market
+		var local_market      = province.client_owner.economy_manager.local_market
 		var raw_good          = storage_good.good
 		var quantity          = storage_good.get_good_quantity()
 		var required_quantity = storage_good.get_good_required_quantity(self)
@@ -118,12 +118,17 @@ func buy_raw():
 
 
 func set_based_profit():
-	based_profit = economy_manager.prices_goods[good] * get_good_quantity(1, 0)
+	basic_profit = economy_manager.prices_goods[good] * get_good_quantity(100, 0)
 
 
 func set_wage():
-	wage        = min_salary
-	clerks_wage = min_clerks_salary
+	var supplement = 0.0
+	
+	if get_workers_quantity() != 0:
+		supplement = salary_supplement / get_workers_quantity()
+	
+	wage        = min_salary        + supplement
+	clerks_wage = min_clerks_salary + supplement
 
 
 func set_profit():
@@ -136,11 +141,11 @@ func get_workers_quantity():
 
 func get_good_quantity(workers_q, clerks_q):
 	var workers_productivity = (workers_q * craftsmen_labour_productivity) + (clerks_q * clerks_labour_productivity)
-	var quanity              = workers_productivity * get_factory_production_efficiency()
+	var quantity              = workers_productivity * get_factory_production_efficiency()
 	
-	if quanity < 0:
+	if quantity < 0:
 		breakpoint
-	return quanity
+	return quantity
 
 
 func get_factory_production_efficiency():
@@ -164,16 +169,16 @@ func update_places_for_workers():
 	if closed:
 		return
 	
-	if profit < 0:
-		if max_employed_number > 10:
-			if workers_quantity < max_employed_number:
-				max_employed_number = workers_quantity
-			
-			max_employed_number -= 10
-			workers_unit.fire_workers_from_factory(self, "workers_quantity", 10)
-		
-	else:
-		max_employed_number = real_max_employed_number
+#	if profit < 0:
+#		if max_employed_number > 10:
+#			if workers_quantity < max_employed_number:
+#				max_employed_number = workers_quantity
+#
+#			max_employed_number -= 10
+#			workers_unit.fire_workers_from_factory(self, "workers_quantity", 10)
+#
+#	else:
+#		max_employed_number = real_max_employed_number
 
 
 func set_places_for_workers():
@@ -181,16 +186,14 @@ func set_places_for_workers():
 		max_employed_number = 0
 		workers_unit.fire_workers_from_factory(self, "workers_quantity", workers_quantity)
 		clerks_unit.fire_workers_from_factory(self, "clerks_quantity", clerks_quantity)
-	else:
-		max_employed_number = real_max_employed_number
 
 
 func set_factories_subsidies():
 	update_places_for_workers()
 	if profit < 0:
 		if subsidization == true and money < 0:
-			var client    = province.player
-			var sub_money = money * -1
+			var client    = province.client_owner
+			var sub_money = get_expenses()
 			client.economy_manager.budget -= sub_money
 			money                         += sub_money
 		
@@ -201,5 +204,5 @@ func set_factories_subsidies():
 
 func expand_factory(client):
 	if client.economy_manager.budget > expanding_cost and expansion_project == null:
-		expansion_project = ExpansionProject.new(self, province.player.game)
+		expansion_project = ExpansionProject.new(self, province.client_owner.game)
 		expansion_project.start_factory_expansion()

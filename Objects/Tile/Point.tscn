@@ -2,13 +2,13 @@
 
 [ext_resource type="Script" path="res://Objects/Tile/Point.gd" id="2"]
 [ext_resource type="FontFile" uid="uid://dpaiod0xc1xgs" path="res://Graphics/Fonts/pixel_2.ttf" id="2_yvach"]
-
-[sub_resource type="ImageTexture" id="3"]
+[ext_resource type="Script" path="res://Scenes/TileMap/navigation_setter/region_area.gd" id="3_wwn7m"]
 
 [node name="Point" type="TextureButton" groups=["Province"]]
 texture_filter = 1
-texture_normal = SubResource("3")
+stretch_mode = 0
 script = ExtResource("2")
+name_of_tile = "Point"
 
 [node name="Label" type="Label" parent="."]
 layout_direction = 1
@@ -24,3 +24,11 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_yvach")
 theme_override_font_sizes/font_size = 4
 text = "Point"
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(1.05, 1.05)
+script = ExtResource("3_wwn7m")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+
+[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]

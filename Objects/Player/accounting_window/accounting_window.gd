@@ -2,8 +2,8 @@ extends Panel
 
 @onready var container = $ScrollContainer/VBoxContainer
 @onready var state_bank = $MoneyOfStateBank
-@onready var income_in_budget = $ScrollContainer/VBoxContainer/Income
-@onready var spending_in_budget = $ScrollContainer/VBoxContainer/Expenses
+@onready var income_in_budget = $ScrollContainer/VBoxContainer/income
+@onready var spending_in_budget = $ScrollContainer/VBoxContainer/expenses
 @onready var balance = $Balance
 @onready var investment_pool = $investment_pool
 
@@ -27,6 +27,6 @@ func update_information():
 			i.text = i.text_for_update + ": " + str(client.accounting_manager.get(i.variable))
 
 	investment_pool.text = "Инвест. пул: " + str(snappedf(economy_manager.investment_pool, 0.1))
-	balance.text = "Дневное сальдо: " + str(accounting_manager.daily_balance)
+	balance.text = "Дневной баланс: " + str(accounting_manager.daily_balance)
 	income_in_budget.text = "Доходы(" + str(accounting_manager.income) + ")"
 	spending_in_budget.text = "Расходы(" + str(accounting_manager.expenses) + ")"

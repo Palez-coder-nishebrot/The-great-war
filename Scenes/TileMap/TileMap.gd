@@ -7,6 +7,7 @@ extends Node2D
 func create_map():
 	set_clients()
 	SceneStorage.regions_manager.province_loader.create_map(SceneStorage.regions_manager.regions_list)
+	get_node("navigation_setter").start()
 
 
 func set_clients():
@@ -15,7 +16,6 @@ func set_clients():
 			client.state_on_start.player_spawner.spawn_client(client, client.state_on_start)
 			
 			for region in client.get_children():
-				region.player = client
+				region.client_owner = client
 				region.set_new_owner(client)
-				SceneStorage.regions_manager.register_region(region)
 	print("spawning clients and give_tiles_to_players finished")

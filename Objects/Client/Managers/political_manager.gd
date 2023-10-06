@@ -12,7 +12,7 @@ const STARTING_IDEOLOGIES_LIST: Array = [
 	"res://Resources/Parties/Ideologies/Socialists.tres",
 ]
 
-var parties_list: Array = []
+var parties_list: Array[PoliticalParty] = []
 var available_ideologies_for_setting_ruling: Array = []
 var ruling_party: Node
 var supported_party_by_client: Node
@@ -46,11 +46,15 @@ func set_government_form(government_form: Resource):
 	form_of_government = government_form
 	available_ideologies_for_setting_ruling.clear()
 	
-	for id in STARTING_IDEOLOGIES_LIST:
-		var ide = load(id)
-		
-		if ide.available_for_setting_ruling_party.has(form_of_government):
-			available_ideologies_for_setting_ruling.append(ide)
+	update_avaliable_parties(government_form.avaliable_ideologies)
+
+
+func update_avaliable_parties(list: Array[Ideology]):
+	for i in parties_list:
+		if i.ideology in list:
+			i.avaliable = true
+		else:
+			i.avaliable = false
 
 
 func set_ruling_party(party, economy_manager):

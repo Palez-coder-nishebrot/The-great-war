@@ -8,8 +8,8 @@ var province:          Object
 @onready var name_of_tile = $Label
 
 func update_information():
-	$Label.text = province.name_of_tile
-	for i in province.list_of_buildings:
+	$Label.text = province.region_name
+	for i in province.factories_list:
 		if not list_of_factories.has(i):
 			spawn_panel(i)
 	

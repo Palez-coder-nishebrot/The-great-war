@@ -18,3 +18,4 @@ func _ready():
 
 func update():
 	seats.text = str(government.parties_seats[ideology]) + "%"
+	

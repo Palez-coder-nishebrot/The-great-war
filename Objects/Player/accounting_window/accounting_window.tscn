@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bckhubtkbept3"]
+[gd_scene load_steps=9 format=3 uid="uid://bckhubtkbept3"]
 
 [ext_resource type="Script" path="res://Objects/Player/accounting_window/accounting_window.gd" id="1"]
 [ext_resource type="Script" path="res://Objects/Player/accounting_window/AccountingButton.gd" id="2"]
@@ -6,112 +6,8 @@
 [ext_resource type="Script" path="res://Objects/Player/accounting_window/tax_regulator/tax_regulator.gd" id="4_vwp17"]
 [ext_resource type="Script" path="res://Objects/Player/accounting_window/tax_regulator/tax_button.gd" id="5_fuhht"]
 
-[sub_resource type="FontFile" id="4"]
-fallbacks = Array[Font]([ExtResource("2_7j3sh")])
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/32/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/25/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/20/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/26/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/27/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/28/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/29/0 = Vector2(0, 0)
-cache/0/32/0/ascent = 0.0
-cache/0/32/0/descent = 0.0
-cache/0/32/0/underline_position = 0.0
-cache/0/32/0/underline_thickness = 0.0
-cache/0/32/0/scale = 1.0
-cache/0/32/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/32/0/kerning_overrides/32/0 = Vector2(0, 0)
-cache/0/32/0/kerning_overrides/25/0 = Vector2(0, 0)
-cache/0/32/0/kerning_overrides/20/0 = Vector2(0, 0)
-cache/0/32/0/kerning_overrides/26/0 = Vector2(0, 0)
-cache/0/32/0/kerning_overrides/27/0 = Vector2(0, 0)
-cache/0/32/0/kerning_overrides/28/0 = Vector2(0, 0)
-cache/0/32/0/kerning_overrides/29/0 = Vector2(0, 0)
-cache/0/25/0/ascent = 0.0
-cache/0/25/0/descent = 0.0
-cache/0/25/0/underline_position = 0.0
-cache/0/25/0/underline_thickness = 0.0
-cache/0/25/0/scale = 1.0
-cache/0/25/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/25/0/kerning_overrides/32/0 = Vector2(0, 0)
-cache/0/25/0/kerning_overrides/25/0 = Vector2(0, 0)
-cache/0/25/0/kerning_overrides/20/0 = Vector2(0, 0)
-cache/0/25/0/kerning_overrides/26/0 = Vector2(0, 0)
-cache/0/25/0/kerning_overrides/27/0 = Vector2(0, 0)
-cache/0/25/0/kerning_overrides/28/0 = Vector2(0, 0)
-cache/0/25/0/kerning_overrides/29/0 = Vector2(0, 0)
-cache/0/20/0/ascent = 0.0
-cache/0/20/0/descent = 0.0
-cache/0/20/0/underline_position = 0.0
-cache/0/20/0/underline_thickness = 0.0
-cache/0/20/0/scale = 1.0
-cache/0/20/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/20/0/kerning_overrides/32/0 = Vector2(0, 0)
-cache/0/20/0/kerning_overrides/25/0 = Vector2(0, 0)
-cache/0/20/0/kerning_overrides/20/0 = Vector2(0, 0)
-cache/0/20/0/kerning_overrides/26/0 = Vector2(0, 0)
-cache/0/20/0/kerning_overrides/27/0 = Vector2(0, 0)
-cache/0/20/0/kerning_overrides/28/0 = Vector2(0, 0)
-cache/0/20/0/kerning_overrides/29/0 = Vector2(0, 0)
-cache/0/26/0/ascent = 0.0
-cache/0/26/0/descent = 0.0
-cache/0/26/0/underline_position = 0.0
-cache/0/26/0/underline_thickness = 0.0
-cache/0/26/0/scale = 1.0
-cache/0/26/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/26/0/kerning_overrides/32/0 = Vector2(0, 0)
-cache/0/26/0/kerning_overrides/25/0 = Vector2(0, 0)
-cache/0/26/0/kerning_overrides/20/0 = Vector2(0, 0)
-cache/0/26/0/kerning_overrides/26/0 = Vector2(0, 0)
-cache/0/26/0/kerning_overrides/27/0 = Vector2(0, 0)
-cache/0/26/0/kerning_overrides/28/0 = Vector2(0, 0)
-cache/0/26/0/kerning_overrides/29/0 = Vector2(0, 0)
-cache/0/27/0/ascent = 0.0
-cache/0/27/0/descent = 0.0
-cache/0/27/0/underline_position = 0.0
-cache/0/27/0/underline_thickness = 0.0
-cache/0/27/0/scale = 1.0
-cache/0/27/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/27/0/kerning_overrides/32/0 = Vector2(0, 0)
-cache/0/27/0/kerning_overrides/25/0 = Vector2(0, 0)
-cache/0/27/0/kerning_overrides/20/0 = Vector2(0, 0)
-cache/0/27/0/kerning_overrides/26/0 = Vector2(0, 0)
-cache/0/27/0/kerning_overrides/27/0 = Vector2(0, 0)
-cache/0/27/0/kerning_overrides/28/0 = Vector2(0, 0)
-cache/0/27/0/kerning_overrides/29/0 = Vector2(0, 0)
-cache/0/28/0/ascent = 0.0
-cache/0/28/0/descent = 0.0
-cache/0/28/0/underline_position = 0.0
-cache/0/28/0/underline_thickness = 0.0
-cache/0/28/0/scale = 1.0
-cache/0/28/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/28/0/kerning_overrides/32/0 = Vector2(0, 0)
-cache/0/28/0/kerning_overrides/25/0 = Vector2(0, 0)
-cache/0/28/0/kerning_overrides/20/0 = Vector2(0, 0)
-cache/0/28/0/kerning_overrides/26/0 = Vector2(0, 0)
-cache/0/28/0/kerning_overrides/27/0 = Vector2(0, 0)
-cache/0/28/0/kerning_overrides/28/0 = Vector2(0, 0)
-cache/0/28/0/kerning_overrides/29/0 = Vector2(0, 0)
-cache/0/29/0/ascent = 0.0
-cache/0/29/0/descent = 0.0
-cache/0/29/0/underline_position = 0.0
-cache/0/29/0/underline_thickness = 0.0
-cache/0/29/0/scale = 1.0
-cache/0/29/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/29/0/kerning_overrides/32/0 = Vector2(0, 0)
-cache/0/29/0/kerning_overrides/25/0 = Vector2(0, 0)
-cache/0/29/0/kerning_overrides/20/0 = Vector2(0, 0)
-cache/0/29/0/kerning_overrides/26/0 = Vector2(0, 0)
-cache/0/29/0/kerning_overrides/27/0 = Vector2(0, 0)
-cache/0/29/0/kerning_overrides/28/0 = Vector2(0, 0)
-cache/0/29/0/kerning_overrides/29/0 = Vector2(0, 0)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sdwjv"]
+bg_color = Color(0.662745, 0.541176, 0.415686, 1)
 
 [sub_resource type="FontFile" id="3"]
 fallbacks = Array[Font]([ExtResource("2_7j3sh")])
@@ -124,49 +20,13 @@ cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 cache/0/16/0/kerning_overrides/32/0 = Vector2(0, 0)
 cache/0/16/0/kerning_overrides/25/0 = Vector2(0, 0)
 cache/0/16/0/kerning_overrides/20/0 = Vector2(0, 0)
-cache/0/32/0/ascent = 0.0
-cache/0/32/0/descent = 0.0
-cache/0/32/0/underline_position = 0.0
-cache/0/32/0/underline_thickness = 0.0
-cache/0/32/0/scale = 1.0
-cache/0/32/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/32/0/kerning_overrides/32/0 = Vector2(0, 0)
-cache/0/32/0/kerning_overrides/25/0 = Vector2(0, 0)
-cache/0/32/0/kerning_overrides/20/0 = Vector2(0, 0)
-cache/0/25/0/ascent = 0.0
-cache/0/25/0/descent = 0.0
-cache/0/25/0/underline_position = 0.0
-cache/0/25/0/underline_thickness = 0.0
-cache/0/25/0/scale = 1.0
-cache/0/25/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/25/0/kerning_overrides/32/0 = Vector2(0, 0)
-cache/0/25/0/kerning_overrides/25/0 = Vector2(0, 0)
-cache/0/25/0/kerning_overrides/20/0 = Vector2(0, 0)
-cache/0/20/0/ascent = 0.0
-cache/0/20/0/descent = 0.0
-cache/0/20/0/underline_position = 0.0
-cache/0/20/0/underline_thickness = 0.0
-cache/0/20/0/scale = 1.0
-cache/0/20/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/20/0/kerning_overrides/32/0 = Vector2(0, 0)
-cache/0/20/0/kerning_overrides/25/0 = Vector2(0, 0)
-cache/0/20/0/kerning_overrides/20/0 = Vector2(0, 0)
-
-[sub_resource type="FontFile" id="5"]
-fallbacks = Array[Font]([ExtResource("2_7j3sh")])
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/32/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/25/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/24/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/40/0 = Vector2(0, 0)
 cache/0/16/0/kerning_overrides/26/0 = Vector2(0, 0)
 cache/0/16/0/kerning_overrides/27/0 = Vector2(0, 0)
 cache/0/16/0/kerning_overrides/28/0 = Vector2(0, 0)
 cache/0/16/0/kerning_overrides/29/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/30/0 = Vector2(0, 0)
 cache/0/32/0/ascent = 0.0
 cache/0/32/0/descent = 0.0
 cache/0/32/0/underline_position = 0.0
@@ -176,10 +36,13 @@ cache/0/32/0/kerning_overrides/16/0 = Vector2(0, 0)
 cache/0/32/0/kerning_overrides/32/0 = Vector2(0, 0)
 cache/0/32/0/kerning_overrides/25/0 = Vector2(0, 0)
 cache/0/32/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/32/0/kerning_overrides/24/0 = Vector2(0, 0)
+cache/0/32/0/kerning_overrides/40/0 = Vector2(0, 0)
 cache/0/32/0/kerning_overrides/26/0 = Vector2(0, 0)
 cache/0/32/0/kerning_overrides/27/0 = Vector2(0, 0)
 cache/0/32/0/kerning_overrides/28/0 = Vector2(0, 0)
 cache/0/32/0/kerning_overrides/29/0 = Vector2(0, 0)
+cache/0/32/0/kerning_overrides/30/0 = Vector2(0, 0)
 cache/0/25/0/ascent = 0.0
 cache/0/25/0/descent = 0.0
 cache/0/25/0/underline_position = 0.0
@@ -189,10 +52,13 @@ cache/0/25/0/kerning_overrides/16/0 = Vector2(0, 0)
 cache/0/25/0/kerning_overrides/32/0 = Vector2(0, 0)
 cache/0/25/0/kerning_overrides/25/0 = Vector2(0, 0)
 cache/0/25/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/25/0/kerning_overrides/24/0 = Vector2(0, 0)
+cache/0/25/0/kerning_overrides/40/0 = Vector2(0, 0)
 cache/0/25/0/kerning_overrides/26/0 = Vector2(0, 0)
 cache/0/25/0/kerning_overrides/27/0 = Vector2(0, 0)
 cache/0/25/0/kerning_overrides/28/0 = Vector2(0, 0)
 cache/0/25/0/kerning_overrides/29/0 = Vector2(0, 0)
+cache/0/25/0/kerning_overrides/30/0 = Vector2(0, 0)
 cache/0/20/0/ascent = 0.0
 cache/0/20/0/descent = 0.0
 cache/0/20/0/underline_position = 0.0
@@ -202,10 +68,45 @@ cache/0/20/0/kerning_overrides/16/0 = Vector2(0, 0)
 cache/0/20/0/kerning_overrides/32/0 = Vector2(0, 0)
 cache/0/20/0/kerning_overrides/25/0 = Vector2(0, 0)
 cache/0/20/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/20/0/kerning_overrides/24/0 = Vector2(0, 0)
+cache/0/20/0/kerning_overrides/40/0 = Vector2(0, 0)
 cache/0/20/0/kerning_overrides/26/0 = Vector2(0, 0)
 cache/0/20/0/kerning_overrides/27/0 = Vector2(0, 0)
 cache/0/20/0/kerning_overrides/28/0 = Vector2(0, 0)
 cache/0/20/0/kerning_overrides/29/0 = Vector2(0, 0)
+cache/0/20/0/kerning_overrides/30/0 = Vector2(0, 0)
+cache/0/24/0/ascent = 0.0
+cache/0/24/0/descent = 0.0
+cache/0/24/0/underline_position = 0.0
+cache/0/24/0/underline_thickness = 0.0
+cache/0/24/0/scale = 1.0
+cache/0/24/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/24/0/kerning_overrides/32/0 = Vector2(0, 0)
+cache/0/24/0/kerning_overrides/25/0 = Vector2(0, 0)
+cache/0/24/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/24/0/kerning_overrides/24/0 = Vector2(0, 0)
+cache/0/24/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/24/0/kerning_overrides/26/0 = Vector2(0, 0)
+cache/0/24/0/kerning_overrides/27/0 = Vector2(0, 0)
+cache/0/24/0/kerning_overrides/28/0 = Vector2(0, 0)
+cache/0/24/0/kerning_overrides/29/0 = Vector2(0, 0)
+cache/0/24/0/kerning_overrides/30/0 = Vector2(0, 0)
+cache/0/40/0/ascent = 0.0
+cache/0/40/0/descent = 0.0
+cache/0/40/0/underline_position = 0.0
+cache/0/40/0/underline_thickness = 0.0
+cache/0/40/0/scale = 1.0
+cache/0/40/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/32/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/25/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/24/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/26/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/27/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/28/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/29/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/30/0 = Vector2(0, 0)
 cache/0/26/0/ascent = 0.0
 cache/0/26/0/descent = 0.0
 cache/0/26/0/underline_position = 0.0
@@ -215,10 +116,13 @@ cache/0/26/0/kerning_overrides/16/0 = Vector2(0, 0)
 cache/0/26/0/kerning_overrides/32/0 = Vector2(0, 0)
 cache/0/26/0/kerning_overrides/25/0 = Vector2(0, 0)
 cache/0/26/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/26/0/kerning_overrides/24/0 = Vector2(0, 0)
+cache/0/26/0/kerning_overrides/40/0 = Vector2(0, 0)
 cache/0/26/0/kerning_overrides/26/0 = Vector2(0, 0)
 cache/0/26/0/kerning_overrides/27/0 = Vector2(0, 0)
 cache/0/26/0/kerning_overrides/28/0 = Vector2(0, 0)
 cache/0/26/0/kerning_overrides/29/0 = Vector2(0, 0)
+cache/0/26/0/kerning_overrides/30/0 = Vector2(0, 0)
 cache/0/27/0/ascent = 0.0
 cache/0/27/0/descent = 0.0
 cache/0/27/0/underline_position = 0.0
@@ -228,10 +132,13 @@ cache/0/27/0/kerning_overrides/16/0 = Vector2(0, 0)
 cache/0/27/0/kerning_overrides/32/0 = Vector2(0, 0)
 cache/0/27/0/kerning_overrides/25/0 = Vector2(0, 0)
 cache/0/27/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/27/0/kerning_overrides/24/0 = Vector2(0, 0)
+cache/0/27/0/kerning_overrides/40/0 = Vector2(0, 0)
 cache/0/27/0/kerning_overrides/26/0 = Vector2(0, 0)
 cache/0/27/0/kerning_overrides/27/0 = Vector2(0, 0)
 cache/0/27/0/kerning_overrides/28/0 = Vector2(0, 0)
 cache/0/27/0/kerning_overrides/29/0 = Vector2(0, 0)
+cache/0/27/0/kerning_overrides/30/0 = Vector2(0, 0)
 cache/0/28/0/ascent = 0.0
 cache/0/28/0/descent = 0.0
 cache/0/28/0/underline_position = 0.0
@@ -241,10 +148,13 @@ cache/0/28/0/kerning_overrides/16/0 = Vector2(0, 0)
 cache/0/28/0/kerning_overrides/32/0 = Vector2(0, 0)
 cache/0/28/0/kerning_overrides/25/0 = Vector2(0, 0)
 cache/0/28/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/28/0/kerning_overrides/24/0 = Vector2(0, 0)
+cache/0/28/0/kerning_overrides/40/0 = Vector2(0, 0)
 cache/0/28/0/kerning_overrides/26/0 = Vector2(0, 0)
 cache/0/28/0/kerning_overrides/27/0 = Vector2(0, 0)
 cache/0/28/0/kerning_overrides/28/0 = Vector2(0, 0)
 cache/0/28/0/kerning_overrides/29/0 = Vector2(0, 0)
+cache/0/28/0/kerning_overrides/30/0 = Vector2(0, 0)
 cache/0/29/0/ascent = 0.0
 cache/0/29/0/descent = 0.0
 cache/0/29/0/underline_position = 0.0
@@ -254,10 +164,29 @@ cache/0/29/0/kerning_overrides/16/0 = Vector2(0, 0)
 cache/0/29/0/kerning_overrides/32/0 = Vector2(0, 0)
 cache/0/29/0/kerning_overrides/25/0 = Vector2(0, 0)
 cache/0/29/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/29/0/kerning_overrides/24/0 = Vector2(0, 0)
+cache/0/29/0/kerning_overrides/40/0 = Vector2(0, 0)
 cache/0/29/0/kerning_overrides/26/0 = Vector2(0, 0)
 cache/0/29/0/kerning_overrides/27/0 = Vector2(0, 0)
 cache/0/29/0/kerning_overrides/28/0 = Vector2(0, 0)
 cache/0/29/0/kerning_overrides/29/0 = Vector2(0, 0)
+cache/0/29/0/kerning_overrides/30/0 = Vector2(0, 0)
+cache/0/30/0/ascent = 0.0
+cache/0/30/0/descent = 0.0
+cache/0/30/0/underline_position = 0.0
+cache/0/30/0/underline_thickness = 0.0
+cache/0/30/0/scale = 1.0
+cache/0/30/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/32/0 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/25/0 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/24/0 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/26/0 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/27/0 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/28/0 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/29/0 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/30/0 = Vector2(0, 0)
 
 [sub_resource type="FontFile" id="6"]
 fallbacks = Array[Font]([ExtResource("2_7j3sh")])
@@ -301,6 +230,7 @@ cache/0/32/0/kerning_overrides/32/0 = Vector2(0, 0)
 [node name="accounting_window" type="Panel"]
 offset_right = 424.0
 offset_bottom = 794.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_sdwjv")
 script = ExtResource("1")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
@@ -317,20 +247,33 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 0
 
-[node name="Expenses" type="Label" parent="ScrollContainer/VBoxContainer"]
+[node name="EconomyReform8" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.788235, 0, 0, 1)
-theme_override_fonts/font = SubResource("4")
-theme_override_font_sizes/font_size = 28
-text = "Расходы"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("3")
+theme_override_font_sizes/font_size = 40
+text = "Бюджет"
+horizontal_alignment = 1
+vertical_alignment = 1
 script = ExtResource("2")
 
-[node name="EconomyReform7" type="Label" parent="ScrollContainer/VBoxContainer"]
+[node name="expenses" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("3")
+theme_override_font_sizes/font_size = 30
+text = "Расходы"
+script = ExtResource("2")
+variable = "expenses"
+
+[node name="SocReform3" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("3")
 theme_override_font_sizes/font_size = 25
 text = "Образование"
 script = ExtResource("2")
+variable = "education_expenses"
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
@@ -401,55 +344,122 @@ text = "100%"
 script = ExtResource("5_fuhht")
 value = 1.0
 
-[node name="SocReform3" type="Label" parent="ScrollContainer/VBoxContainer"]
+[node name="SocReform7" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("3")
 theme_override_font_sizes/font_size = 25
-text = "Образование"
+text = "Бюр. аппарат"
 script = ExtResource("2")
-variable = "education_expenses"
+variable = "bureaucracy_expenses"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+script = ExtResource("4_vwp17")
+variable = "bureaucracy_cost"
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7j3sh")
+theme_override_font_sizes/font_size = 30
+text = "0%"
+script = ExtResource("5_fuhht")
+
+[node name="Button2" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7j3sh")
+theme_override_font_sizes/font_size = 30
+text = "15%"
+script = ExtResource("5_fuhht")
+value = 0.15
+
+[node name="Button3" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7j3sh")
+theme_override_font_sizes/font_size = 30
+text = "30%"
+script = ExtResource("5_fuhht")
+value = 0.3
+
+[node name="Button4" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7j3sh")
+theme_override_font_sizes/font_size = 30
+text = "45%"
+script = ExtResource("5_fuhht")
+value = 0.45
+
+[node name="Button5" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7j3sh")
+theme_override_font_sizes/font_size = 30
+text = "60%"
+script = ExtResource("5_fuhht")
+value = 0.6
+
+[node name="Button6" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7j3sh")
+theme_override_font_sizes/font_size = 30
+text = "75%"
+script = ExtResource("5_fuhht")
+value = 0.75
+
+[node name="Button7" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7j3sh")
+theme_override_font_sizes/font_size = 30
+text = "90%"
+script = ExtResource("5_fuhht")
+value = 0.9
+
+[node name="Button8" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7j3sh")
+theme_override_font_sizes/font_size = 30
+text = "100%"
+script = ExtResource("5_fuhht")
+value = 1.0
 
 [node name="EconomyReform5" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("3")
 theme_override_font_sizes/font_size = 25
-text = "Субсидирование фабрик"
+text = "Субсидии"
 script = ExtResource("2")
 variable = "subsidies_expenses"
 
 [node name="Railways" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("3")
 theme_override_font_sizes/font_size = 25
-text = "Инфраструктура и ЖД"
+text = "Строительство"
 script = ExtResource("2")
 
 [node name="Debts" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("3")
 theme_override_font_sizes/font_size = 25
-text = "Выплаты по кредитам"
+text = "Кредиты"
 script = ExtResource("2")
 variable = "debts_expenses"
 
 [node name="MilitaryReform3" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("3")
 theme_override_font_sizes/font_size = 25
-text = "Снабжение армии"
+text = "Содержание армии"
 script = ExtResource("2")
 variable = "army_expenses"
 
-[node name="SocReform2" type="Label" parent="ScrollContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = SubResource("3")
-theme_override_font_sizes/font_size = 25
-text = "Здравохранение"
-script = ExtResource("2")
-variable = "healthcare_expenses"
-
 [node name="SocReform4" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("3")
 theme_override_font_sizes/font_size = 25
 text = "Пенсии"
@@ -458,30 +468,34 @@ variable = "pensions_expenses"
 
 [node name="SocReform5" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("3")
 theme_override_font_sizes/font_size = 25
-text = "Пособия по безработице"
+text = "Пособия"
 script = ExtResource("2")
 variable = "unemployment_benefit_expenses"
 
 [node name="SocReform6" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("3")
 theme_override_font_sizes/font_size = 25
 text = "Контрибуции"
 script = ExtResource("2")
 variable = "contributions"
 
-[node name="Income" type="Label" parent="ScrollContainer/VBoxContainer"]
+[node name="income" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0.639216, 0.0431373, 1)
-theme_override_fonts/font = SubResource("5")
-theme_override_font_sizes/font_size = 28
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("3")
+theme_override_font_sizes/font_size = 30
 text = "Доходы"
 script = ExtResource("2")
+variable = "income"
 
 [node name="EconomyReform" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("3")
 theme_override_font_sizes/font_size = 25
 text = "Пошлины"
@@ -543,6 +557,7 @@ value = 0.5
 
 [node name="EconomyReform2" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("3")
 theme_override_font_sizes/font_size = 25
 text = "Налоги на бедных"
@@ -604,6 +619,7 @@ value = 0.5
 
 [node name="EconomyReform6" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("3")
 theme_override_font_sizes/font_size = 25
 text = "Налоги на средний класс"
@@ -665,49 +681,39 @@ value = 0.5
 
 [node name="EconomyReform3" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("3")
 theme_override_font_sizes/font_size = 25
 text = "Налоги на богатых"
 script = ExtResource("2")
 variable = "rich_class_taxes"
 
-[node name="EconomyReform4" type="Label" parent="ScrollContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = SubResource("3")
-theme_override_font_sizes/font_size = 25
-text = "Продажа драгметаллов"
-script = ExtResource("2")
-
-[node name="Economy" type="Label" parent="ScrollContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = SubResource("3")
-theme_override_font_sizes/font_size = 25
-text = "Производство товаров"
-script = ExtResource("2")
-
 [node name="investment_pool" type="Label" parent="."]
 layout_mode = 0
-offset_top = 673.0
-offset_right = 415.0
-offset_bottom = 710.0
+offset_top = 689.0
+offset_right = 424.0
+offset_bottom = 724.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("6")
 theme_override_font_sizes/font_size = 32
 text = "Инвестиционный пул"
 
 [node name="Balance" type="Label" parent="."]
 layout_mode = 0
-offset_top = 710.0
-offset_right = 415.0
-offset_bottom = 747.0
+offset_top = 724.0
+offset_right = 424.0
+offset_bottom = 759.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("6")
 theme_override_font_sizes/font_size = 32
 text = "Дневное сальдо"
 
 [node name="MoneyOfStateBank" type="Label" parent="."]
 layout_mode = 0
-offset_top = 747.0
-offset_right = 415.0
-offset_bottom = 784.0
+offset_top = 759.0
+offset_right = 424.0
+offset_bottom = 794.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("6")
 theme_override_font_sizes/font_size = 32
 text = "Государственный банк"

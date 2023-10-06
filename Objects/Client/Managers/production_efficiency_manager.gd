@@ -16,6 +16,7 @@ var production_goods_efficiency: Dictionary = {
 	load("res://Resources/Good/cars.tres"):        0.0,
 	load("res://Resources/Good/clothes.tres"):     0.0,
 	load("res://Resources/Good/coal.tres"):        0.0,
+	load("res://Resources/Good/coffee.tres"):      0.0,
 	load("res://Resources/Good/cotton.tres"):      0.0,
 	load("res://Resources/Good/el_parts.tres"):    0.0,
 	load("res://Resources/Good/furniture.tres"):   0.0,
@@ -32,9 +33,12 @@ var production_goods_efficiency: Dictionary = {
 	load("res://Resources/Good/rubber.tres"):      0.0,
 	load("res://Resources/Good/saltpeter.tres"):   0.0,
 	load("res://Resources/Good/steel.tres"):       0.0,
+	load("res://Resources/Good/sugar.tres"):       0.0,
 	load("res://Resources/Good/tanks.tres"):       0.0,
+	load("res://Resources/Good/tea.tres"):         0.0,
 	load("res://Resources/Good/textile.tres"):     0.0,
 	load("res://Resources/Good/wood.tres"):        0.0,
+	load("res://Resources/Good/wool.tres"):        0.0,
 }
 
 

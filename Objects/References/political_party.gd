@@ -17,6 +17,8 @@ var trade_policy:       Resource
 var military_policy:    Resource
 var national_issue:     Resource
 
+var avaliable: bool = false
+
 
 func _init(party_ideology):
 	party_name         = party_ideology.names_of_parties[0]

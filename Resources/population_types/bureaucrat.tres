@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="PopulationType" load_steps=11 format=3 uid="uid://beualm4nj8to8"]
+
+[ext_resource type="Script" path="res://Resources/population_types/migration_managers/bureaucrats.gd" id="1_082hi"]
+[ext_resource type="Resource" uid="uid://cclyr12iaek8w" path="res://Resources/population_types/population_type_needs/need_alcohol.tres" id="1_jrclf"]
+[ext_resource type="Resource" uid="uid://cnl4vxolimken" path="res://Resources/population_types/population_type_needs/need_national_drink.tres" id="3_4tf1u"]
+[ext_resource type="Resource" uid="uid://qmx16rcgsjp2" path="res://Resources/population_types/population_type_needs/need_phone.tres" id="3_buhi4"]
+[ext_resource type="Resource" uid="uid://cisoshb4jurtm" path="res://Resources/population_types/population_type_needs/need_sugar.tres" id="4_15j6w"]
+[ext_resource type="Resource" uid="uid://cnc10kyktexgc" path="res://Resources/population_types/population_type_needs/need_radio.tres" id="4_m6p5n"]
+[ext_resource type="Resource" uid="uid://citsgth5x25pr" path="res://Resources/population_types/population_type_needs/need_furniture.tres" id="6_o74sk"]
+[ext_resource type="Script" path="res://Resources/scripts/population_type.gd" id="7_ebpas"]
+[ext_resource type="Resource" uid="uid://bd4g7w8x0rers" path="res://Resources/population_types/population_type_needs/need_gas.tres" id="8_x587x"]
+
+[sub_resource type="Resource" id="Resource_megx0"]
+script = ExtResource("1_082hi")
+
+[resource]
+script = ExtResource("7_ebpas")
+migration_manager = SubResource("Resource_megx0")
+population_growth_modifier = 0.0
+index_in_pop_types_list = 3
+display_name = "bureaucrats"
+workers_variable = ""
+enterprises_list_variable = ""
+tax_variable = "middle_classes_taxes"
+needs = Array[Resource("res://Resources/population_types/population_type_needs/population_type_need.gd")]([ExtResource("1_jrclf"), ExtResource("3_4tf1u"), ExtResource("4_15j6w"), ExtResource("3_buhi4"), ExtResource("6_o74sk"), ExtResource("4_m6p5n"), ExtResource("8_x587x")])
+upgrade_class_paths = Array[String]([])
+downgrade_class_paths = Array[String](["to_craftsmen"])

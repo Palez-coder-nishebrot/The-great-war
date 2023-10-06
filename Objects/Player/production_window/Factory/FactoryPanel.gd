@@ -25,7 +25,7 @@ func Che_za_huinya():
 
 
 func update_information():
-	var player          = province.player
+	var player          = province.client_owner
 	if actions_container != null and income_label != null:
 		if not is_instance_valid(factory):
 			player.list_of_factories.erase(factory)

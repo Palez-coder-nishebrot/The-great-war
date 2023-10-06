@@ -1,17 +1,22 @@
-[gd_scene load_steps=10 format=3 uid="uid://bul6btqnogigu"]
+[gd_scene load_steps=15 format=3 uid="uid://bul6btqnogigu"]
 
 [ext_resource type="Script" path="res://Objects/Player/population_window/pop_unit_panel/pop_unit_panel.gd" id="1_0e5ab"]
 [ext_resource type="Texture2D" uid="uid://bmf06k4n06051" path="res://Graphics/Sprites/GUI/Icons of windows/population_growth.png" id="1_71811"]
 [ext_resource type="Texture2D" uid="uid://dkpf4rv568b4" path="res://Graphics/Sprites/GUI/Icons of windows/welfare.png" id="2_mrvcw"]
 [ext_resource type="Texture2D" uid="uid://bubh8msab4khv" path="res://Graphics/Sprites/GUI/Icons of windows/Cron.png" id="3_a3gfe"]
+[ext_resource type="Texture2D" uid="uid://dxa1pcpc0wj63" path="res://Graphics/Sprites/goods/coffee.png" id="4_ksrmm"]
 [ext_resource type="Texture2D" uid="uid://chmbagyd2lmba" path="res://Graphics/Sprites/GUI/Icons of windows/aggressiveness.png" id="5_8dac1"]
 [ext_resource type="Texture2D" uid="uid://br7np06gtgbn4" path="res://Graphics/Sprites/GUI/Icons of windows/Education.png" id="5_80xqp"]
-[ext_resource type="Texture2D" uid="uid://c2p4aqu8rd1xr" path="res://Graphics/Sprites/GUI/Icons of windows/population_window/pol_reform_desire.png" id="5_m2rkt"]
 [ext_resource type="Texture2D" uid="uid://bomdkgd6mtfui" path="res://Graphics/Sprites/GUI/Icons of windows/Pluralism.png" id="6_a5lrd"]
-[ext_resource type="Texture2D" uid="uid://btpew6bkyltlw" path="res://Graphics/Sprites/GUI/Icons of windows/population_window/soc_reform_desire.png" id="6_jly4w"]
+[ext_resource type="Texture2D" uid="uid://xbhra16x051v" path="res://Graphics/Sprites/GUI/Icons of windows/ideology_icons/liberals_icon.png" id="8_8rav5"]
+[ext_resource type="Texture2D" uid="uid://d1jxmhrwgqu70" path="res://Graphics/Sprites/GUI/Icons of windows/ideology_icons/socialists_icon.png" id="9_w8lly"]
+[ext_resource type="Texture2D" uid="uid://bsp6l6ab412ew" path="res://Graphics/Sprites/GUI/population_window/promotion_desire.png" id="10_w4e74"]
+[ext_resource type="Texture2D" uid="uid://11fcqul58sc1" path="res://Graphics/Sprites/GUI/population_window/demotion_desire.png" id="11_glhuf"]
+[ext_resource type="Texture2D" uid="uid://bgggvqfgovj7b" path="res://Graphics/Sprites/GUI/population_window/soc_migration.png" id="12_7q6a1"]
+[ext_resource type="Texture2D" uid="uid://c2fyt66d5aesc" path="res://Graphics/Sprites/GUI/Icons of windows/Hammer no.png" id="13_x7h3c"]
 
 [node name="pop_unit_panel" type="HBoxContainer"]
-theme_override_constants/separation = 0
+theme_override_constants/separation = 10
 script = ExtResource("1_0e5ab")
 
 [node name="pop_type" type="Label" parent="."]
@@ -53,6 +58,18 @@ texture = ExtResource("2_mrvcw")
 expand_mode = 2
 
 [node name="welfare" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 25
+text = "1"
+vertical_alignment = 1
+
+[node name="luxury_needs_icon" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("4_ksrmm")
+expand_mode = 2
+
+[node name="luxury_needs" type="Label" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 25
@@ -109,7 +126,7 @@ vertical_alignment = 1
 
 [node name="pol_reform_desire_icon" type="TextureRect" parent="."]
 layout_mode = 2
-texture = ExtResource("5_m2rkt")
+texture = ExtResource("8_8rav5")
 expand_mode = 2
 
 [node name="pol_reform_desire" type="Label" parent="."]
@@ -121,10 +138,58 @@ vertical_alignment = 1
 
 [node name="soc_reform_desire_icon" type="TextureRect" parent="."]
 layout_mode = 2
-texture = ExtResource("6_jly4w")
+texture = ExtResource("9_w8lly")
 expand_mode = 2
 
 [node name="soc_reform_desire" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 25
+text = "10.0"
+vertical_alignment = 1
+
+[node name="promotion_desire_icon" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("10_w4e74")
+expand_mode = 2
+
+[node name="promotion_desire" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 25
+text = "10.0"
+vertical_alignment = 1
+
+[node name="demotion_desire_icon" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("11_glhuf")
+expand_mode = 2
+
+[node name="demotion_desire" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 25
+text = "10.0"
+vertical_alignment = 1
+
+[node name="soc_migration_icon" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("12_7q6a1")
+expand_mode = 2
+
+[node name="soc_migration" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 25
+text = "10.0"
+vertical_alignment = 1
+
+[node name="unemployed_quantity_icon" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("13_x7h3c")
+expand_mode = 2
+
+[node name="unemployed_quantity" type="Label" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 25

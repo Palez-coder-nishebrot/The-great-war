@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dmjitjcdnorww"]
+[gd_scene load_steps=16 format=3 uid="uid://kcuag1gv5bte"]
 
 [ext_resource type="Script" path="res://Objects/Player/Player.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://dw71igj2kjacn" path="res://Objects/Player/GUI_panels/menu_panel/menu_panel.tscn" id="3_y861b"]
@@ -25,18 +25,16 @@ script = ExtResource("15")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="menu_panel" parent="CanvasLayer" instance=ExtResource("3_y861b")]
-visible = false
-offset_left = 821.0
-offset_top = 448.0
-offset_right = 1157.0
-offset_bottom = 653.0
-
 [node name="buttons_panel" parent="CanvasLayer" instance=ExtResource("4_0al22")]
 
 [node name="information_panel" parent="CanvasLayer" instance=ExtResource("5_exx7w")]
 offset_top = 86.0
 offset_bottom = 177.0
+
+[node name="province_window" parent="CanvasLayer" instance=ExtResource("11_qw62a")]
+visible = false
+offset_top = 690.0
+offset_bottom = 1080.0
 
 [node name="diplomacy_window" parent="CanvasLayer" instance=ExtResource("16_acj17")]
 visible = false
@@ -52,19 +50,14 @@ offset_top = 86.0
 
 [node name="population_window" parent="CanvasLayer" instance=ExtResource("9_dla8i")]
 visible = false
-offset_left = 415.0
-offset_top = 134.0
-offset_right = 1801.0
-offset_bottom = 1025.0
+offset_left = 416.0
+offset_top = 133.0
+offset_right = 1857.0
+offset_bottom = 1024.0
 
 [node name="production_window" parent="CanvasLayer" instance=ExtResource("10_kdycn")]
 visible = false
 offset_top = 85.0
-
-[node name="province_window" parent="CanvasLayer" instance=ExtResource("11_qw62a")]
-visible = false
-offset_top = 690.0
-offset_bottom = 1080.0
 
 [node name="reforms_window" parent="CanvasLayer" instance=ExtResource("12_hll6u")]
 visible = false
@@ -81,3 +74,10 @@ offset_bottom = 973.0
 
 [node name="building_factory_window" parent="CanvasLayer" instance=ExtResource("15_me7w4")]
 visible = false
+
+[node name="menu_panel" parent="CanvasLayer" instance=ExtResource("3_y861b")]
+visible = false
+offset_left = 821.0
+offset_top = 448.0
+offset_right = 1157.0
+offset_bottom = 653.0

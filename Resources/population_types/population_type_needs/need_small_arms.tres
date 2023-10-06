@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="NeededGood" load_steps=3 format=3 uid="uid://1ag3k7thgr2c"]
+
+[ext_resource type="Resource" uid="uid://daw3fd5pepb3o" path="res://Resources/Good/rifles.tres" id="1_5xx4u"]
+[ext_resource type="Script" path="res://Resources/population_types/population_type_needs/population_type_need.gd" id="1_ts46s"]
+
+[resource]
+script = ExtResource("1_ts46s")
+util = 0.0
+quantity = 1.0
+good_type = ExtResource("1_5xx4u")

@@ -9,12 +9,12 @@
 [sub_resource type="Resource" id="2"]
 script = ExtResource("2")
 good = ExtResource("3")
-quantity = 0.005
+quantity = 0.01
 
 [sub_resource type="Resource" id="3"]
 script = ExtResource("2")
 good = ExtResource("4")
-quantity = 0.01
+quantity = 0.02
 
 [resource]
 script = ExtResource("1")

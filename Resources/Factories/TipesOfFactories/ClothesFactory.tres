@@ -20,5 +20,5 @@ script = ExtResource("1")
 name_of_factory = "clothes_factory"
 raw = Array[ExtResource("2")]([SubResource("1"), SubResource("Resource_d26bq")])
 good = ExtResource("3")
-available_from_start = true
 construction_days = 3
+initial_max_workers = 10000

@@ -1,21 +1,28 @@
 [gd_resource type="Resource" script_class="PopulationType" load_steps=12 format=3 uid="uid://clslyrh6e6386"]
 
-[ext_resource type="Script" path="res://Resources/population_types/population_type.gd" id="1"]
+[ext_resource type="Script" path="res://Resources/scripts/population_type.gd" id="1"]
+[ext_resource type="Script" path="res://Resources/population_types/migration_managers/clerks.gd" id="1_e7jc2"]
 [ext_resource type="Resource" uid="uid://b5sl3q0qogpmn" path="res://Resources/population_types/population_type_needs/need_clothes.tres" id="2"]
 [ext_resource type="Resource" uid="uid://crcsycdlcbeq8" path="res://Resources/population_types/population_type_needs/need_cattle.tres" id="2_ifqb7"]
 [ext_resource type="Resource" uid="uid://dti04wa7gihqo" path="res://Resources/population_types/population_type_needs/need_grain.tres" id="3"]
-[ext_resource type="Resource" uid="uid://di8orn3sm0yi0" path="res://Resources/population_types/population_type_needs/need_cars.tres" id="4"]
 [ext_resource type="Resource" uid="uid://cnc10kyktexgc" path="res://Resources/population_types/population_type_needs/need_radio.tres" id="5"]
-[ext_resource type="Resource" uid="uid://bd4g7w8x0rers" path="res://Resources/population_types/population_type_needs/need_gas.tres" id="6"]
-[ext_resource type="Resource" uid="uid://qmx16rcgsjp2" path="res://Resources/population_types/population_type_needs/need_phone.tres" id="7"]
-[ext_resource type="Resource" uid="uid://bo740whgqwtpm" path="res://Resources/population_types/population_type_needs/need_plane.tres" id="8"]
+[ext_resource type="Resource" uid="uid://cnl4vxolimken" path="res://Resources/population_types/population_type_needs/need_national_drink.tres" id="6_opxsj"]
+[ext_resource type="Resource" uid="uid://cisoshb4jurtm" path="res://Resources/population_types/population_type_needs/need_sugar.tres" id="7_w48q2"]
 [ext_resource type="Resource" uid="uid://cclyr12iaek8w" path="res://Resources/population_types/population_type_needs/need_alcohol.tres" id="10"]
 [ext_resource type="Resource" uid="uid://citsgth5x25pr" path="res://Resources/population_types/population_type_needs/need_furniture.tres" id="11"]
 
+[sub_resource type="Resource" id="Resource_552h0"]
+script = ExtResource("1_e7jc2")
+
 [resource]
 script = ExtResource("1")
+migration_manager = SubResource("Resource_552h0")
+population_growth_modifier = 0.0
 index_in_pop_types_list = 2
 display_name = "clerks"
 workers_variable = "clerks_quantity"
 enterprises_list_variable = "list_of_buildings"
-needs = [ExtResource("3"), ExtResource("2_ifqb7"), ExtResource("10"), ExtResource("2"), ExtResource("11"), ExtResource("5"), ExtResource("7"), ExtResource("4"), ExtResource("6"), ExtResource("8")]
+tax_variable = "middle_classes_taxes"
+needs = Array[Resource("res://Resources/population_types/population_type_needs/population_type_need.gd")]([ExtResource("3"), ExtResource("2_ifqb7"), ExtResource("10"), ExtResource("2"), ExtResource("6_opxsj"), ExtResource("7_w48q2"), ExtResource("11"), ExtResource("5")])
+upgrade_class_paths = Array[String](["to_bureaucrats"])
+downgrade_class_paths = Array[String](["to_craftsmen", "to_soldiers"])

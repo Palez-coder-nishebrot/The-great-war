@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="NeededGood" load_steps=3 format=3 uid="uid://cisoshb4jurtm"]
+
+[ext_resource type="Resource" uid="uid://b0i2iuci15pc3" path="res://Resources/Good/sugar.tres" id="1_b3y0r"]
+[ext_resource type="Script" path="res://Resources/population_types/population_type_needs/population_type_need.gd" id="2_5s7g1"]
+
+[resource]
+script = ExtResource("2_5s7g1")
+is_luxury_need = true
+util = 2.0
+quantity = 1.0
+good_type = ExtResource("1_b3y0r")
